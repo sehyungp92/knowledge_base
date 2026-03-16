@@ -7,8 +7,8 @@ Two modes:
             themes + re-seed, reclassify all sources, remap landscape FKs.
 
 Usage:
-    python -m scripts.regenerate_taxonomy -o taxonomy_v2.json        # generate
-    python -m scripts.regenerate_taxonomy --apply taxonomy_v2.json   # apply
+    python -m scripts.regenerate_taxonomy -o scripts/taxonomy_v2.json        # generate
+    python -m scripts.regenerate_taxonomy --apply scripts/taxonomy_v2.json   # apply
     python -m scripts.regenerate_taxonomy --dry-run                  # preview prompts
 """
 
