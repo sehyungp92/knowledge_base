@@ -433,6 +433,9 @@ def list_contradictions(
     if not topic:
         return []
 
+    escaped = topic.replace("%", r"\%").replace("_", r"\_")
+    pattern = f"%{escaped}%"
+
     with db.get_conn() as conn:
         rows = conn.execute(
             """SELECT c1.id AS claim_a, c2.id AS claim_b,
@@ -447,7 +450,7 @@ def list_contradictions(
                  AND 1 - (c1.embedding <=> c2.embedding) > %s
                ORDER BY similarity DESC
                LIMIT %s""",
-            (f"%{topic}%", f"%{topic}%", threshold, limit),
+            (pattern, pattern, threshold, limit),
         ).fetchall()
 
     return rows

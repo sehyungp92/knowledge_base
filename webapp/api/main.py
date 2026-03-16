@@ -20,6 +20,7 @@ from webapp.api.routers.activity import router as activity_router
 from webapp.api.routers.notifications import router as notifications_router
 from webapp.api.routers.actions import router as actions_router
 from webapp.api.routers.reports import router as reports_router
+from webapp.api.routers.concepts import router as concepts_router
 
 config = Config()
 
@@ -58,6 +59,7 @@ app.include_router(activity_router)
 app.include_router(notifications_router)
 app.include_router(actions_router)
 app.include_router(reports_router)
+app.include_router(concepts_router)
 
 
 @app.get("/api/health")

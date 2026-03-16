@@ -67,6 +67,35 @@ def extract_claims(
    - "historical": describes a past state (e.g., "in 2022, transformers were limited to...")
    - "future_prediction": predicts a future state (e.g., "will likely enable...")
 
+## Claim Type Guidance
+Actively seek all four types -- do not default everything to "finding":
+- **finding**: a specific result, measurement, or observation from THIS source
+- **limitation**: what the approach CANNOT do or where it struggles. Extract BOTH explicit and implicit signals.
+  Explicit: stated in "Limitations", "Future work", caveats, or error analysis sections.
+  Implicit (MORE VALUABLE -- look carefully):
+  - Performance cliffs: where results degrade or fail (e.g., accuracy drops on longer inputs, out-of-distribution)
+  - Controlled conditions: unstated assumptions success depends on (lab vs real-world, specific datasets, hardware)
+  - Conspicuous absences: what is NOT discussed but should be (security, fairness, real-world deployment, contamination)
+  - Hedging language: "preliminary results suggest...", "under certain conditions...", "we leave X to future work"
+  - Scale and cost: training cost, inference latency, data requirements buried in method sections or appendices
+  Limitations are the most valuable signal. A good extraction has at least 10% limitation claims.
+- **method**: how something was done, architectural choices, training procedures, evaluation protocols
+- **assumption**: what must be true for the findings to hold, unstated premises, scope constraints
+
+## Confidence Calibration
+Use the FULL range -- a good extraction has meaningful spread, not everything at 0.9+.
+- 0.95-1.0: Precise quantitative evidence with specific numbers (e.g., "achieves 94.2% on MMLU"). Reserve strictly for hard measurements.
+- 0.85-0.94: Directly stated qualitative claims well-supported by evidence, or quantitative claims with incomplete methodology
+- 0.70-0.84: Requires interpretation, or evidence is indirect/analogical. Includes well-grounded qualitative observations.
+- 0.50-0.69: Author opinion, hedged language ("may", "could", "suggests"), extrapolation, or implicit signals inferred from context
+- Below 0.50: Contradicted by other evidence, highly uncertain, or unsubstantiated
+
+## Quality Filter
+Only extract claims that represent THIS SOURCE's contribution. Skip:
+- Background knowledge or textbook definitions restated for context (BUT keep limitations that constrain this work -- e.g., "current systems still require X" is a valid limitation even if commonly known)
+- Autobiographical trivia unrelated to the technical content
+- Generic truisms or unfalsifiable opinions
+
 ## Source Text
 {text_slice}
 

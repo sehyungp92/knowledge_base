@@ -324,9 +324,10 @@ def _resolve_source_ref(ref: str) -> dict | None:
                 return dict(row)
 
         # Partial title match
+        escaped_ref = ref.replace("%", r"\%").replace("_", r"\_")
         row = conn.execute(
             "SELECT id, title FROM sources WHERE title ILIKE %s LIMIT 1",
-            (f"%{ref}%",),
+            (f"%{escaped_ref}%",),
         ).fetchone()
         if row:
             return dict(row)

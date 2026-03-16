@@ -591,7 +591,8 @@ def theme_synthesis_section(
             ).fetchone()["cnt"]
             items = conn.execute(
                 """SELECT id, description, limitation_type, severity, trajectory,
-                          attribution, bottleneck_id, evidence_sources
+                          attribution, bottleneck_id, evidence_sources,
+                          underlying_reason, signal_type
                    FROM limitations
                    WHERE theme_id = %s
                    ORDER BY confidence DESC NULLS LAST, last_updated DESC NULLS LAST
@@ -606,7 +607,7 @@ def theme_synthesis_section(
             ).fetchone()["cnt"]
             items = conn.execute(
                 """SELECT id, description, resolution_horizon, active_approaches,
-                          attribution, evidence_sources
+                          attribution, evidence_sources, blocking_what
                    FROM bottlenecks
                    WHERE theme_id = %s
                    ORDER BY confidence DESC NULLS LAST, last_updated DESC NULLS LAST
@@ -621,7 +622,9 @@ def theme_synthesis_section(
             ).fetchone()["cnt"]
             items = conn.execute(
                 """SELECT id, description, significance, attribution,
-                          primary_source_id, corroborating_sources, bottlenecks_affected
+                          primary_source_id, corroborating_sources, bottlenecks_affected,
+                          what_was_believed_before, what_is_now_possible,
+                          immediate_implications, downstream_implications
                    FROM breakthroughs
                    WHERE theme_id = %s
                    ORDER BY detected_at DESC
@@ -1132,3 +1135,62 @@ def timeline(
         "ingestion": [dict(r) for r in ingestion],
         "landscape_growth": [dict(r) for r in landscape_growth],
     }
+
+
+# ── Coverage-gap / diagnostic endpoints ─────────────────────────────────
+
+
+@router.get("/health/over-optimistic")
+def over_optimistic_themes():
+    """Themes with many capabilities but few limitations (coverage bias)."""
+    return landscape.get_over_optimistic_themes()
+
+
+@router.get("/health/blind-spots")
+def blind_spot_bottlenecks():
+    """Bottlenecks with no active approaches."""
+    return landscape.get_blind_spot_bottlenecks()
+
+
+@router.get("/health/validation-backlog")
+def validation_backlog():
+    """Unvalidated implicit limitations by theme."""
+    return landscape.get_validation_backlog()
+
+
+@router.get("/health/unlinked-themes")
+def unlinked_themes():
+    """Themes with no cross-theme implications."""
+    return landscape.get_unlinked_themes()
+
+
+@router.get("/health/incomplete-capabilities")
+def incomplete_capabilities():
+    """Research-only capabilities with no linked limitation."""
+    return landscape.get_incomplete_capabilities()
+
+
+@router.get("/health/belief-gaps")
+def belief_coverage_gaps():
+    """Low-confidence + unchallenged beliefs needing attention."""
+    return landscape.get_belief_coverage_gaps()
+
+
+@router.get("/health/summary")
+def health_summary():
+    """Aggregate health check across all diagnostic functions."""
+    checks = {
+        "over_optimistic": landscape.get_over_optimistic_themes,
+        "blind_spots": landscape.get_blind_spot_bottlenecks,
+        "validation_backlog": landscape.get_validation_backlog,
+        "unlinked_themes": landscape.get_unlinked_themes,
+        "incomplete_capabilities": landscape.get_incomplete_capabilities,
+        "belief_gaps": landscape.get_belief_coverage_gaps,
+    }
+    result = {}
+    for key, fn in checks.items():
+        try:
+            result[key] = fn()
+        except Exception:
+            result[key] = {"error": f"{key} check failed"}
+    return result

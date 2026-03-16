@@ -312,8 +312,8 @@ CREATE INDEX IF NOT EXISTS idx_claims_fts ON claims USING gin(fts_vector);
 -- Concept dedup: unique on case-insensitive name + type
 CREATE UNIQUE INDEX IF NOT EXISTS idx_concepts_canonical_name_type
     ON concepts (lower(canonical_name), COALESCE(concept_type, ''));
--- Note: ivfflat index requires data to exist; create after initial data load
--- CREATE INDEX IF NOT EXISTS idx_claims_embedding ON claims USING ivfflat (embedding vector_cosine_ops) WITH (lists = 100);
+-- ivfflat index for vector similarity search (requires data to exist; safe with IF NOT EXISTS)
+CREATE INDEX IF NOT EXISTS idx_claims_embedding ON claims USING ivfflat (embedding vector_cosine_ops) WITH (lists = 100);
 CREATE INDEX IF NOT EXISTS idx_claims_source ON claims(source_id);
 CREATE INDEX IF NOT EXISTS idx_claims_provenance ON claims(provenance_type);
 CREATE INDEX IF NOT EXISTS idx_source_edges_a ON source_edges(source_a);

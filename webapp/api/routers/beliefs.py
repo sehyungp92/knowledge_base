@@ -40,6 +40,36 @@ def list_beliefs(
     return rows
 
 
+# ── Analytics endpoints (MUST be before /{belief_id} catch-all) ──────
+
+
+@router.get("/analytics/stale")
+def stale_beliefs(velocity_threshold: float = Query(0.3)):
+    """Beliefs needing review based on theme velocity."""
+    return db.get_stale_beliefs(velocity_threshold)
+
+
+@router.get("/analytics/unchallenged")
+def unchallenged_beliefs(min_confidence: float = Query(0.8)):
+    """High-confidence beliefs that have never been challenged."""
+    return db.get_unchallenged_beliefs(min_confidence)
+
+
+@router.get("/analytics/low-confidence")
+def low_confidence_beliefs(threshold: float = Query(0.5)):
+    """Beliefs with confidence below the threshold."""
+    return db.get_low_confidence_beliefs(threshold)
+
+
+@router.get("/analytics/consistency")
+def consistency_check(theme_id: str | None = Query(None)):
+    """Potentially contradicting belief pairs within themes."""
+    return db.get_belief_pairs_for_consistency(theme_id)
+
+
+# ── Individual belief endpoints ──────────────────────────────────────
+
+
 @router.get("/{belief_id}")
 def get_belief(belief_id: str):
     """Get a single belief with theme name."""

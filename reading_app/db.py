@@ -528,6 +528,9 @@ def insert_capability(
                ON CONFLICT (id) DO UPDATE SET
                  description = EXCLUDED.description,
                  maturity = COALESCE(EXCLUDED.maturity, capabilities.maturity),
+                 evidence_sources = COALESCE(EXCLUDED.evidence_sources, capabilities.evidence_sources),
+                 first_demonstrated_at = COALESCE(EXCLUDED.first_demonstrated_at, capabilities.first_demonstrated_at),
+                 production_ready_at = COALESCE(EXCLUDED.production_ready_at, capabilities.production_ready_at),
                  confidence = EXCLUDED.confidence,
                  last_updated = NOW()
                RETURNING *""",
@@ -568,6 +571,13 @@ def insert_limitation(
                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
                ON CONFLICT (id) DO UPDATE SET
                  description = EXCLUDED.description,
+                 limitation_type = COALESCE(EXCLUDED.limitation_type, limitations.limitation_type),
+                 signal_type = COALESCE(EXCLUDED.signal_type, limitations.signal_type),
+                 severity = COALESCE(EXCLUDED.severity, limitations.severity),
+                 trajectory = COALESCE(EXCLUDED.trajectory, limitations.trajectory),
+                 underlying_reason = COALESCE(EXCLUDED.underlying_reason, limitations.underlying_reason),
+                 bottleneck_id = COALESCE(EXCLUDED.bottleneck_id, limitations.bottleneck_id),
+                 evidence_sources = COALESCE(EXCLUDED.evidence_sources, limitations.evidence_sources),
                  confidence = EXCLUDED.confidence,
                  last_updated = NOW()
                RETURNING *""",
@@ -606,6 +616,11 @@ def insert_bottleneck(
                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
                ON CONFLICT (id) DO UPDATE SET
                  description = EXCLUDED.description,
+                 blocking_what = COALESCE(EXCLUDED.blocking_what, bottlenecks.blocking_what),
+                 bottleneck_type = COALESCE(EXCLUDED.bottleneck_type, bottlenecks.bottleneck_type),
+                 resolution_horizon = COALESCE(EXCLUDED.resolution_horizon, bottlenecks.resolution_horizon),
+                 active_approaches = COALESCE(EXCLUDED.active_approaches, bottlenecks.active_approaches),
+                 evidence_sources = COALESCE(EXCLUDED.evidence_sources, bottlenecks.evidence_sources),
                  confidence = EXCLUDED.confidence,
                  last_updated = NOW()
                RETURNING *""",
@@ -699,6 +714,13 @@ def insert_breakthrough(
                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
                ON CONFLICT (id) DO UPDATE SET
                  description = EXCLUDED.description,
+                 significance = COALESCE(EXCLUDED.significance, breakthroughs.significance),
+                 what_was_believed_before = COALESCE(EXCLUDED.what_was_believed_before, breakthroughs.what_was_believed_before),
+                 what_is_now_possible = COALESCE(EXCLUDED.what_is_now_possible, breakthroughs.what_is_now_possible),
+                 immediate_implications = COALESCE(EXCLUDED.immediate_implications, breakthroughs.immediate_implications),
+                 downstream_implications = COALESCE(EXCLUDED.downstream_implications, breakthroughs.downstream_implications),
+                 bottlenecks_affected = COALESCE(EXCLUDED.bottlenecks_affected, breakthroughs.bottlenecks_affected),
+                 corroborating_sources = COALESCE(EXCLUDED.corroborating_sources, breakthroughs.corroborating_sources),
                  confidence = EXCLUDED.confidence
                RETURNING *""",
             (id, theme_id, description, significance, what_was_believed_before,
@@ -740,6 +762,11 @@ def insert_anticipation(
                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
                ON CONFLICT (id) DO UPDATE SET
                  prediction = EXCLUDED.prediction,
+                 based_on = COALESCE(EXCLUDED.based_on, anticipations.based_on),
+                 reasoning = COALESCE(EXCLUDED.reasoning, anticipations.reasoning),
+                 timeline = COALESCE(EXCLUDED.timeline, anticipations.timeline),
+                 would_confirm = COALESCE(EXCLUDED.would_confirm, anticipations.would_confirm),
+                 would_invalidate = COALESCE(EXCLUDED.would_invalidate, anticipations.would_invalidate),
                  confidence = EXCLUDED.confidence
                RETURNING *""",
             (id, theme_id, prediction,
