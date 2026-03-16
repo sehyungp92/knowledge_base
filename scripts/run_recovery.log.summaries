@@ -1,0 +1,383 @@
+2026-03-04 20:22:12,249 INFO __main__: Reprocessing summaries for 189 sources
+2026-03-04 20:22:12,292 INFO ingest.deep_summarizer: Generating deep summary for 01KJS48D4HARDHAAK6D1NZ9847: 13775 chars (full text), timeout=480s
+2026-03-04 20:22:12 [info     ] api_semaphore_init             limit=5
+2026-03-04 20:23:51,576 INFO __main__: [1/189] Summary for 01KJS48D4HARDHAAK6D1NZ9847: 13775 chars
+2026-03-04 20:23:54,596 INFO ingest.deep_summarizer: Generating deep summary for 01KJSWNBFMZX2CQ0WH3YSNR905: 88 chars (full text), timeout=480s
+2026-03-04 20:24:15,971 INFO __main__: [2/189] Summary for 01KJSWNBFMZX2CQ0WH3YSNR905: 602 chars
+2026-03-04 20:24:19,003 INFO ingest.deep_summarizer: Generating deep summary for 01KJT6CAK648DAKTSPDWC39MGR: 45954 chars (full text), timeout=480s
+2026-03-04 20:25:31,629 INFO __main__: [3/189] Summary for 01KJT6CAK648DAKTSPDWC39MGR: 9351 chars
+2026-03-04 20:25:34,671 INFO ingest.deep_summarizer: Generating deep summary for 01KJT6H3QAXK80C0930JASQBPF: 34127 chars (full text), timeout=480s
+2026-03-04 20:26:37,915 INFO __main__: [4/189] Summary for 01KJT6H3QAXK80C0930JASQBPF: 8659 chars
+2026-03-04 20:26:40,973 INFO ingest.deep_summarizer: Generating deep summary for 01KJTKM1EWG4GWAA0QWYRY6RJ5: 34016 chars (full text), timeout=480s
+2026-03-04 20:27:45,739 INFO __main__: [5/189] Summary for 01KJTKM1EWG4GWAA0QWYRY6RJ5: 8238 chars
+2026-03-04 20:27:48,822 INFO ingest.deep_summarizer: Generating deep summary for 01KJTKMYHA551GS78K7M808D1V: 49551 chars (full text), timeout=480s
+2026-03-04 20:29:11,691 INFO __main__: [6/189] Summary for 01KJTKMYHA551GS78K7M808D1V: 9392 chars
+2026-03-04 20:29:14,728 INFO ingest.deep_summarizer: Generating deep summary for 01KJTKT231S15HXEVDVGGYJ5PW: 36953 chars (full text), timeout=480s
+2026-03-04 20:30:19,738 INFO __main__: [7/189] Summary for 01KJTKT231S15HXEVDVGGYJ5PW: 8945 chars
+2026-03-04 20:30:22,795 INFO ingest.deep_summarizer: Generating deep summary for 01KJTKVK4Y2PFK1WTGG8AFGW50: 92466 chars (full text), timeout=600s
+2026-03-04 20:31:40,799 INFO __main__: [8/189] Summary for 01KJTKVK4Y2PFK1WTGG8AFGW50: 10290 chars
+2026-03-04 20:31:43,846 INFO ingest.deep_summarizer: Generating deep summary for 01KJTKWSMKJ3SMNHSW8EDA0W5J: 45941 chars (full text), timeout=480s
+2026-03-04 20:32:54,435 INFO __main__: [9/189] Summary for 01KJTKWSMKJ3SMNHSW8EDA0W5J: 9749 chars
+2026-03-04 20:32:57,509 INFO ingest.deep_summarizer: Generating deep summary for 01KJTKZK03YVKP1SXPM67EFTWB: 155516 chars (full text), timeout=600s
+2026-03-04 20:34:07,761 INFO __main__: [10/189] Summary for 01KJTKZK03YVKP1SXPM67EFTWB: 9451 chars
+2026-03-04 20:34:10,802 INFO ingest.deep_summarizer: Generating deep summary for 01KJTM1K7FTHXQE1VVYGNH182B: 47216 chars (full text), timeout=480s
+2026-03-04 20:35:19,500 INFO __main__: [11/189] Summary for 01KJTM1K7FTHXQE1VVYGNH182B: 8345 chars
+2026-03-04 20:35:22,528 INFO ingest.deep_summarizer: Generating deep summary for 01KJTM33JCSNTRYDT4JYQWBZE9: 24099 chars (full text), timeout=480s
+2026-03-04 20:36:23,518 INFO __main__: [12/189] Summary for 01KJTM33JCSNTRYDT4JYQWBZE9: 7101 chars
+2026-03-04 20:36:26,549 INFO ingest.deep_summarizer: Generating deep summary for 01KJTM4P7PSZ9TQ1WJX19JC1TM: 32157 chars (full text), timeout=480s
+2026-03-04 20:37:35,235 INFO __main__: [13/189] Summary for 01KJTM4P7PSZ9TQ1WJX19JC1TM: 8906 chars
+2026-03-04 20:37:38,271 INFO ingest.deep_summarizer: Generating deep summary for 01KJTM7AQBVQ8DCDMHH6B4J318: 43093 chars (full text), timeout=480s
+2026-03-04 20:38:48,792 INFO __main__: [14/189] Summary for 01KJTM7AQBVQ8DCDMHH6B4J318: 8566 chars
+2026-03-04 20:38:51,835 INFO ingest.deep_summarizer: Generating deep summary for 01KJTM994WR8NQRXJYD7Z74EHT: 76959 chars (full text), timeout=540s
+2026-03-04 20:40:22,709 INFO __main__: [15/189] Summary for 01KJTM994WR8NQRXJYD7Z74EHT: 10762 chars
+2026-03-04 20:40:25,817 INFO ingest.deep_summarizer: Generating deep summary for 01KJTMAX0GM8NACZPT9SGWHQ3X: 30617 chars (full text), timeout=480s
+2026-03-04 20:41:37,381 INFO __main__: [16/189] Summary for 01KJTMAX0GM8NACZPT9SGWHQ3X: 7939 chars
+2026-03-04 20:41:40,425 INFO ingest.deep_summarizer: Generating deep summary for 01KJTMCJY1VR7XBK30K79RA9A4: 32550 chars (full text), timeout=480s
+2026-03-04 20:42:37,587 INFO __main__: [17/189] Summary for 01KJTMCJY1VR7XBK30K79RA9A4: 7839 chars
+2026-03-04 20:42:40,637 INFO ingest.deep_summarizer: Generating deep summary for 01KJTME7HTKC015QA0VJG19C8H: 37687 chars (full text), timeout=480s
+2026-03-04 20:43:40,479 INFO __main__: [18/189] Summary for 01KJTME7HTKC015QA0VJG19C8H: 6764 chars
+2026-03-04 20:43:43,535 INFO ingest.deep_summarizer: Generating deep summary for 01KJTMGSTSRJEV5VTV93WVW7P9: 73137 chars (full text), timeout=540s
+2026-03-04 20:45:41,262 INFO __main__: [19/189] Summary for 01KJTMGSTSRJEV5VTV93WVW7P9: 14516 chars
+2026-03-04 20:45:44,318 INFO ingest.deep_summarizer: Generating deep summary for 01KJTMK79EGQTSBGMN1B215EKM: 74357 chars (full text), timeout=540s
+2026-03-04 20:46:57,613 INFO __main__: [20/189] Summary for 01KJTMK79EGQTSBGMN1B215EKM: 8657 chars
+2026-03-04 20:47:00,652 INFO ingest.deep_summarizer: Generating deep summary for 01KJTMKZPAPXSV9XW07NJW9KTR: 13013 chars (full text), timeout=480s
+2026-03-04 20:47:53,760 INFO __main__: [21/189] Summary for 01KJTMKZPAPXSV9XW07NJW9KTR: 7030 chars
+2026-03-04 20:47:56,890 INFO ingest.deep_summarizer: Generating deep summary for 01KJTMPYR9ZD888R6EKRFPSX4J: 56591 chars (full text), timeout=480s
+2026-03-04 20:49:18,283 INFO __main__: [22/189] Summary for 01KJTMPYR9ZD888R6EKRFPSX4J: 9947 chars
+2026-03-04 20:49:21,316 INFO ingest.deep_summarizer: Generating deep summary for 01KJTMRHHGEJAPYKFBPHVV6MCE: 31838 chars (full text), timeout=480s
+2026-03-04 20:50:43,668 INFO __main__: [23/189] Summary for 01KJTMRHHGEJAPYKFBPHVV6MCE: 10947 chars
+2026-03-04 20:50:46,706 INFO ingest.deep_summarizer: Generating deep summary for 01KJTMV92BSG058TX3CFME2BQT: 46177 chars (full text), timeout=480s
+2026-03-04 20:52:05,955 INFO __main__: [24/189] Summary for 01KJTMV92BSG058TX3CFME2BQT: 11325 chars
+2026-03-04 20:52:09,009 INFO ingest.deep_summarizer: Generating deep summary for 01KJTMX34E13AFQZCAJG9KF8JD: 34097 chars (full text), timeout=480s
+2026-03-04 20:53:08,264 INFO __main__: [25/189] Summary for 01KJTMX34E13AFQZCAJG9KF8JD: 7765 chars
+2026-03-04 20:53:11,318 INFO ingest.deep_summarizer: Generating deep summary for 01KJTMXXZGZQAMKDR6N10JMD1M: 53359 chars (full text), timeout=480s
+2026-03-04 20:54:18,205 INFO __main__: [26/189] Summary for 01KJTMXXZGZQAMKDR6N10JMD1M: 8908 chars
+2026-03-04 20:54:21,241 INFO ingest.deep_summarizer: Generating deep summary for 01KJTN04YCTMRTN22442JC56F3: 35666 chars (full text), timeout=480s
+2026-03-04 20:55:25,169 INFO __main__: [27/189] Summary for 01KJTN04YCTMRTN22442JC56F3: 8346 chars
+2026-03-04 20:55:28,200 INFO ingest.deep_summarizer: Generating deep summary for 01KJTN36CP4M8VZYW8BNS2TYDM: 39524 chars (full text), timeout=480s
+2026-03-04 20:56:35,869 INFO __main__: [28/189] Summary for 01KJTN36CP4M8VZYW8BNS2TYDM: 9186 chars
+2026-03-04 20:56:38,893 INFO ingest.deep_summarizer: Generating deep summary for 01KJTN3N0MX4CM4A1ME57J3ME0: 4148 chars (full text), timeout=480s
+2026-03-04 20:57:21,818 INFO __main__: [29/189] Summary for 01KJTN3N0MX4CM4A1ME57J3ME0: 5262 chars
+2026-03-04 20:57:24,864 INFO ingest.deep_summarizer: Generating deep summary for 01KJTN6GH7AG4Y8XWP6J7Y2BTN: 37797 chars (full text), timeout=480s
+2026-03-04 20:58:23,242 INFO __main__: [30/189] Summary for 01KJTN6GH7AG4Y8XWP6J7Y2BTN: 8105 chars
+2026-03-04 20:58:26,304 INFO ingest.deep_summarizer: Generating deep summary for 01KJTN8HBDDB552EK3Q950SYDQ: 55978 chars (full text), timeout=480s
+2026-03-04 20:59:49,947 INFO __main__: [31/189] Summary for 01KJTN8HBDDB552EK3Q950SYDQ: 11580 chars
+2026-03-04 20:59:52,979 INFO ingest.deep_summarizer: Generating deep summary for 01KJTNBKSKJ6ZDQDWY9WHGNQTP: 17654 chars (full text), timeout=480s
+2026-03-04 21:00:54,033 INFO __main__: [32/189] Summary for 01KJTNBKSKJ6ZDQDWY9WHGNQTP: 6980 chars
+2026-03-04 21:00:57,120 INFO ingest.deep_summarizer: Generating deep summary for 01KJTNBZH14TEKXP19FT16W8TY: 18564 chars (full text), timeout=480s
+2026-03-04 21:02:14,681 INFO __main__: [33/189] Summary for 01KJTNBZH14TEKXP19FT16W8TY: 7204 chars
+2026-03-04 21:02:17,740 INFO ingest.deep_summarizer: Generating deep summary for 01KJTNEFKKKGT5BEWNG2W426MV: 32734 chars (full text), timeout=480s
+2026-03-04 21:03:18,208 INFO __main__: [34/189] Summary for 01KJTNEFKKKGT5BEWNG2W426MV: 6895 chars
+2026-03-04 21:03:21,315 INFO ingest.deep_summarizer: Generating deep summary for 01KJTNH60KQN3MFCZCQVRWCQX3: 28042 chars (full text), timeout=480s
+2026-03-04 21:04:30,613 INFO __main__: [35/189] Summary for 01KJTNH60KQN3MFCZCQVRWCQX3: 9505 chars
+2026-03-04 21:04:33,670 INFO ingest.deep_summarizer: Generating deep summary for 01KJTNJCZNRC73ZRS71693XZBS: 38857 chars (full text), timeout=480s
+2026-03-04 21:05:47,494 INFO __main__: [36/189] Summary for 01KJTNJCZNRC73ZRS71693XZBS: 9387 chars
+2026-03-04 21:05:50,574 INFO ingest.deep_summarizer: Generating deep summary for 01KJTNMPQ6X586C0PCRSY62TC5: 29769 chars (full text), timeout=480s
+2026-03-04 21:07:02,001 INFO __main__: [37/189] Summary for 01KJTNMPQ6X586C0PCRSY62TC5: 7713 chars
+2026-03-04 21:07:05,050 INFO ingest.deep_summarizer: Generating deep summary for 01KJTNPY47KBG455VZ4FCZC9FR: 22293 chars (full text), timeout=480s
+2026-03-04 21:08:03,768 INFO __main__: [38/189] Summary for 01KJTNPY47KBG455VZ4FCZC9FR: 7443 chars
+2026-03-04 21:08:06,862 INFO ingest.deep_summarizer: Generating deep summary for 01KJTNQNAG7PQ6JS7X6JENJ7JH: 184320 chars (full text), timeout=600s
+2026-03-04 21:09:21,893 INFO __main__: [39/189] Summary for 01KJTNQNAG7PQ6JS7X6JENJ7JH: 11254 chars
+2026-03-04 21:09:24,930 INFO ingest.deep_summarizer: Generating deep summary for 01KJTNTHTPSNR70SSEDMC3Y2CZ: 16325 chars (full text), timeout=480s
+2026-03-04 21:10:18,890 INFO __main__: [40/189] Summary for 01KJTNTHTPSNR70SSEDMC3Y2CZ: 7196 chars
+2026-03-04 21:10:21,998 INFO ingest.deep_summarizer: Generating deep summary for 01KJTNW0W4JFNXBS89R7JDZG5G: 162219 chars (full text), timeout=600s
+2026-03-04 21:11:39,511 INFO __main__: [41/189] Summary for 01KJTNW0W4JFNXBS89R7JDZG5G: 9334 chars
+2026-03-04 21:11:42,646 INFO ingest.deep_summarizer: Generating deep summary for 01KJTNZS7X36EGSKTVH7B5S18M: 64644 chars (full text), timeout=510s
+2026-03-04 21:12:14,657 INFO __main__: [42/189] Summary for 01KJTNZS7X36EGSKTVH7B5S18M: 51 chars
+2026-03-04 21:12:17,762 INFO ingest.deep_summarizer: Generating deep summary for 01KJTP54EYE9CBWV7A593AFAQP: 42192 chars (full text), timeout=480s
+2026-03-04 21:13:10,400 INFO __main__: [43/189] Summary for 01KJTP54EYE9CBWV7A593AFAQP: 51 chars
+2026-03-04 21:13:13,477 INFO ingest.deep_summarizer: Generating deep summary for 01KJTP56NVHW0GKJH3XQCG4E4V: 37193 chars (full text), timeout=480s
+2026-03-04 21:13:59,303 INFO __main__: [44/189] Summary for 01KJTP56NVHW0GKJH3XQCG4E4V: 51 chars
+2026-03-04 21:14:02,354 INFO ingest.deep_summarizer: Generating deep summary for 01KJTP7WMBW5WAB4NJAB1ESNTJ: 41810 chars (full text), timeout=480s
+2026-03-04 21:14:40,484 INFO __main__: [45/189] Summary for 01KJTP7WMBW5WAB4NJAB1ESNTJ: 51 chars
+2026-03-04 21:14:43,572 INFO ingest.deep_summarizer: Generating deep summary for 01KJTPAM3DXFNX3FEHJJTZ73H3: 32257 chars (full text), timeout=480s
+2026-03-04 21:15:06,110 INFO __main__: [46/189] Summary for 01KJTPAM3DXFNX3FEHJJTZ73H3: 51 chars
+2026-03-04 21:15:09,175 INFO ingest.deep_summarizer: Generating deep summary for 01KJTPB47QAEMCV664AH1X89Y6: 35720 chars (full text), timeout=480s
+2026-03-04 21:15:35,122 INFO __main__: [47/189] Summary for 01KJTPB47QAEMCV664AH1X89Y6: 51 chars
+2026-03-04 21:15:38,363 INFO ingest.deep_summarizer: Generating deep summary for 01KJTPC0T74FVTRCTH3Q6YM2XC: 40543 chars (full text), timeout=480s
+2026-03-04 21:16:28,015 INFO __main__: [48/189] Summary for 01KJTPC0T74FVTRCTH3Q6YM2XC: 51 chars
+2026-03-04 21:16:31,078 INFO ingest.deep_summarizer: Generating deep summary for 01KJTPFD62H29TJN51149EYX48: 63172 chars (full text), timeout=510s
+2026-03-04 21:17:16,516 INFO __main__: [49/189] Summary for 01KJTPFD62H29TJN51149EYX48: 51 chars
+2026-03-04 21:17:19,567 INFO ingest.deep_summarizer: Generating deep summary for 01KJTPFVK63FP9BRNCF5F7XXC2: 38772 chars (full text), timeout=480s
+2026-03-04 21:18:03,516 INFO __main__: [50/189] Summary for 01KJTPFVK63FP9BRNCF5F7XXC2: 51 chars
+2026-03-04 21:18:06,576 INFO ingest.deep_summarizer: Generating deep summary for 01KJTPGRRAEH18W4SK0C0J6SEV: 37067 chars (full text), timeout=480s
+2026-03-04 21:18:24,566 INFO __main__: [51/189] Summary for 01KJTPGRRAEH18W4SK0C0J6SEV: 51 chars
+2026-03-04 21:18:27,732 INFO ingest.deep_summarizer: Generating deep summary for 01KJTPMJBF37SDX28VSNECG0AW: 95154 chars (full text), timeout=600s
+2026-03-04 21:18:50,760 INFO __main__: [52/189] Summary for 01KJTPMJBF37SDX28VSNECG0AW: 51 chars
+2026-03-04 21:18:53,922 INFO ingest.deep_summarizer: Generating deep summary for 01KJTPP3C1RJAVANFKA3HAJKWY: 95154 chars (full text), timeout=600s
+2026-03-04 21:19:16,195 INFO __main__: [53/189] Summary for 01KJTPP3C1RJAVANFKA3HAJKWY: 51 chars
+2026-03-04 21:19:19,345 INFO ingest.deep_summarizer: Generating deep summary for 01KJTPP5WBNZNR9WY0VMZ7TH3T: 60304 chars (full text), timeout=510s
+2026-03-04 21:19:47,375 INFO __main__: [54/189] Summary for 01KJTPP5WBNZNR9WY0VMZ7TH3T: 51 chars
+2026-03-04 21:19:50,546 INFO ingest.deep_summarizer: Generating deep summary for 01KJTPV81QCQHFFQ4QGCPKJ8FY: 41025 chars (full text), timeout=480s
+2026-03-04 21:20:49,857 INFO __main__: [55/189] Summary for 01KJTPV81QCQHFFQ4QGCPKJ8FY: 51 chars
+2026-03-04 21:20:53,044 INFO ingest.deep_summarizer: Generating deep summary for 01KJTPVSWTK7XQS7HT1TQQVXV2: 49397 chars (full text), timeout=480s
+2026-03-04 21:21:45,011 INFO __main__: [56/189] Summary for 01KJTPVSWTK7XQS7HT1TQQVXV2: 51 chars
+2026-03-04 21:21:48,078 INFO ingest.deep_summarizer: Generating deep summary for 01KJTPVV117TGWN29DZEAS90WA: 37135 chars (full text), timeout=480s
+2026-03-04 21:22:37,278 INFO __main__: [57/189] Summary for 01KJTPVV117TGWN29DZEAS90WA: 51 chars
+2026-03-04 21:22:40,452 INFO ingest.deep_summarizer: Generating deep summary for 01KJTQ0EQT3NPZSQAZ4D1D8SJA: 36217 chars (full text), timeout=480s
+2026-03-04 21:23:32,501 INFO __main__: [58/189] Summary for 01KJTQ0EQT3NPZSQAZ4D1D8SJA: 51 chars
+2026-03-04 21:23:35,633 INFO ingest.deep_summarizer: Generating deep summary for 01KJTQ0XQRB50VSN951C5WB06K: 50195 chars (full text), timeout=480s
+2026-03-04 21:24:08,530 INFO __main__: [59/189] Summary for 01KJTQ0XQRB50VSN951C5WB06K: 51 chars
+2026-03-04 21:24:11,868 INFO ingest.deep_summarizer: Generating deep summary for 01KJTQ0YV3DYY4VZD2DA8XQWKX: 40600 chars (full text), timeout=480s
+2026-03-04 21:25:07,711 INFO __main__: [60/189] Summary for 01KJTQ0YV3DYY4VZD2DA8XQWKX: 51 chars
+2026-03-04 21:25:10,793 INFO ingest.deep_summarizer: Generating deep summary for 01KJTQ65VXMV31FEDTS7ZXS8VH: 37990 chars (full text), timeout=480s
+2026-03-04 21:26:01,615 INFO __main__: [61/189] Summary for 01KJTQ65VXMV31FEDTS7ZXS8VH: 51 chars
+2026-03-04 21:26:04,674 INFO ingest.deep_summarizer: Generating deep summary for 01KJTQ6SB0CMGZ7EKYGMYAWPGD: 63044 chars (full text), timeout=510s
+2026-03-04 21:26:29,375 INFO __main__: [62/189] Summary for 01KJTQ6SB0CMGZ7EKYGMYAWPGD: 51 chars
+2026-03-04 21:26:32,512 INFO ingest.deep_summarizer: Generating deep summary for 01KJTQ74E7CE1V0S09YFQEF1Q3: 38272 chars (full text), timeout=480s
+2026-03-04 21:26:54,892 INFO __main__: [63/189] Summary for 01KJTQ74E7CE1V0S09YFQEF1Q3: 51 chars
+2026-03-04 21:26:58,019 INFO ingest.deep_summarizer: Generating deep summary for 01KJTQCEKYJAG3872TW79TNCZ8: 46086 chars (full text), timeout=480s
+2026-03-04 21:27:22,124 INFO __main__: [64/189] Summary for 01KJTQCEKYJAG3872TW79TNCZ8: 51 chars
+2026-03-04 21:27:25,220 INFO ingest.deep_summarizer: Generating deep summary for 01KJTQCH1TD2GP3Y316YC5PX06: 39408 chars (full text), timeout=480s
+2026-03-04 21:27:46,963 INFO __main__: [65/189] Summary for 01KJTQCH1TD2GP3Y316YC5PX06: 51 chars
+2026-03-04 21:27:50,045 INFO ingest.deep_summarizer: Generating deep summary for 01KJTQD302SP6FG6TY60GF5Q1E: 41962 chars (full text), timeout=480s
+2026-03-04 21:28:16,573 INFO __main__: [66/189] Summary for 01KJTQD302SP6FG6TY60GF5Q1E: 51 chars
+2026-03-04 21:28:19,668 INFO ingest.deep_summarizer: Generating deep summary for 01KJTQH65719Z4P50D125AY4H2: 52958 chars (full text), timeout=480s
+2026-03-04 21:28:44,033 INFO __main__: [67/189] Summary for 01KJTQH65719Z4P50D125AY4H2: 51 chars
+2026-03-04 21:28:47,165 INFO ingest.deep_summarizer: Generating deep summary for 01KJTQH6AARJQYQXWEP3E5GY52: 32896 chars (full text), timeout=480s
+2026-03-04 21:29:11,947 INFO __main__: [68/189] Summary for 01KJTQH6AARJQYQXWEP3E5GY52: 51 chars
+2026-03-04 21:29:15,026 INFO ingest.deep_summarizer: Generating deep summary for 01KJTQH85KRGRP02JGFVY2ZZF6: 13731 chars (full text), timeout=480s
+2026-03-04 21:30:13,842 INFO __main__: [69/189] Summary for 01KJTQH85KRGRP02JGFVY2ZZF6: 51 chars
+2026-03-04 21:30:16,873 INFO ingest.deep_summarizer: Generating deep summary for 01KJTQRK4149XWRK6QFSAHABQX: 34850 chars (full text), timeout=480s
+2026-03-04 21:31:02,404 INFO __main__: [70/189] Summary for 01KJTQRK4149XWRK6QFSAHABQX: 51 chars
+2026-03-04 21:31:05,439 INFO ingest.deep_summarizer: Generating deep summary for 01KJTQRXBY5D86ATF1V7EGZ234: 41800 chars (full text), timeout=480s
+2026-03-04 21:31:26,572 INFO __main__: [71/189] Summary for 01KJTQRXBY5D86ATF1V7EGZ234: 51 chars
+2026-03-04 21:31:29,782 INFO ingest.deep_summarizer: Generating deep summary for 01KJTQSWGFZP6G4KFH7FXBA089: 52362 chars (full text), timeout=480s
+2026-03-04 21:32:20,630 INFO __main__: [72/189] Summary for 01KJTQSWGFZP6G4KFH7FXBA089: 51 chars
+2026-03-04 21:32:23,814 INFO ingest.deep_summarizer: Generating deep summary for 01KJV31KSHB04ZMJ4EYSDJBXJ8: 42308 chars (full text), timeout=480s
+2026-03-04 21:32:47,207 INFO __main__: [73/189] Summary for 01KJV31KSHB04ZMJ4EYSDJBXJ8: 51 chars
+2026-03-04 21:32:50,338 INFO ingest.deep_summarizer: Generating deep summary for 01KJV3AME561KWT5RJ1EJ0BTQ3: 64037 chars (full text), timeout=510s
+2026-03-04 21:33:22,046 INFO __main__: [74/189] Summary for 01KJV3AME561KWT5RJ1EJ0BTQ3: 51 chars
+2026-03-04 21:33:25,252 INFO ingest.deep_summarizer: Generating deep summary for 01KJV3DVFC97VTBMSKRB726WDH: 50199 chars (full text), timeout=480s
+2026-03-04 21:33:50,901 INFO __main__: [75/189] Summary for 01KJV3DVFC97VTBMSKRB726WDH: 51 chars
+2026-03-04 21:33:54,202 INFO ingest.deep_summarizer: Generating deep summary for 01KJV3EHT79TRZC43MWGV8AFJ9: 80582 chars (full text), timeout=570s
+2026-03-04 21:34:30,161 INFO __main__: [76/189] Summary for 01KJV3EHT79TRZC43MWGV8AFJ9: 51 chars
+2026-03-04 21:34:33,315 INFO ingest.deep_summarizer: Generating deep summary for 01KJV3G6RYWC5JM8X47AK9AAGE: 32983 chars (full text), timeout=480s
+2026-03-04 21:35:07,741 INFO __main__: [77/189] Summary for 01KJV3G6RYWC5JM8X47AK9AAGE: 51 chars
+2026-03-04 21:35:10,832 INFO ingest.deep_summarizer: Generating deep summary for 01KJV3M3CCRCTJ0M3XV0TM1W6Y: 9381 chars (full text), timeout=480s
+2026-03-04 21:35:41,077 INFO __main__: [78/189] Summary for 01KJV3M3CCRCTJ0M3XV0TM1W6Y: 51 chars
+2026-03-04 21:35:44,142 INFO ingest.deep_summarizer: Generating deep summary for 01KJV3MZFWPT1XMRZ5BZYQ0DMX: 21501 chars (full text), timeout=480s
+2026-03-04 21:36:08,024 INFO __main__: [79/189] Summary for 01KJV3MZFWPT1XMRZ5BZYQ0DMX: 51 chars
+2026-03-04 21:36:11,134 INFO ingest.deep_summarizer: Generating deep summary for 01KJV3PQ9W8J5XF8VBCBBYZEF3: 39456 chars (full text), timeout=480s
+2026-03-04 21:36:30,633 INFO __main__: [80/189] Summary for 01KJV3PQ9W8J5XF8VBCBBYZEF3: 51 chars
+2026-03-04 21:36:33,792 INFO ingest.deep_summarizer: Generating deep summary for 01KJV3VT1CZCW1CH2F11Y2B6ND: 40927 chars (full text), timeout=480s
+2026-03-04 21:37:03,616 INFO __main__: [81/189] Summary for 01KJV3VT1CZCW1CH2F11Y2B6ND: 51 chars
+2026-03-04 21:37:06,754 INFO ingest.deep_summarizer: Generating deep summary for 01KJV3W9QTWHPKY0X75EST48R9: 36155 chars (full text), timeout=480s
+2026-03-04 21:37:38,177 INFO __main__: [82/189] Summary for 01KJV3W9QTWHPKY0X75EST48R9: 51 chars
+2026-03-04 21:37:41,277 INFO ingest.deep_summarizer: Generating deep summary for 01KJV3X90H49CTVN35T1QDQR8V: 48772 chars (full text), timeout=480s
+2026-03-04 21:38:11,383 INFO __main__: [83/189] Summary for 01KJV3X90H49CTVN35T1QDQR8V: 51 chars
+2026-03-04 21:38:14,581 INFO ingest.deep_summarizer: Generating deep summary for 01KJV42M0KB822AY266HGWP4JD: 61041 chars (full text), timeout=510s
+2026-03-04 21:39:14,141 INFO __main__: [84/189] Summary for 01KJV42M0KB822AY266HGWP4JD: 51 chars
+2026-03-04 21:39:17,224 INFO ingest.deep_summarizer: Generating deep summary for 01KJV42RE16RXA64ZVX352JNJ0: 36513 chars (full text), timeout=480s
+2026-03-04 21:40:02,482 INFO __main__: [85/189] Summary for 01KJV42RE16RXA64ZVX352JNJ0: 51 chars
+2026-03-04 21:40:05,628 INFO ingest.deep_summarizer: Generating deep summary for 01KJV44APF5CB8BG6AH8428PA3: 38468 chars (full text), timeout=480s
+2026-03-04 21:40:55,921 INFO __main__: [86/189] Summary for 01KJV44APF5CB8BG6AH8428PA3: 51 chars
+2026-03-04 21:40:58,983 INFO ingest.deep_summarizer: Generating deep summary for 01KJV47G2KX4WPZ9E3Y2JY5AF1: 44374 chars (full text), timeout=480s
+2026-03-04 21:41:17,073 INFO __main__: [87/189] Summary for 01KJV47G2KX4WPZ9E3Y2JY5AF1: 51 chars
+2026-03-04 21:41:20,121 INFO ingest.deep_summarizer: Generating deep summary for 01KJV47KDZ75MQ27779QTQTGET: 33853 chars (full text), timeout=480s
+2026-03-04 21:41:54,452 INFO __main__: [88/189] Summary for 01KJV47KDZ75MQ27779QTQTGET: 51 chars
+2026-03-04 21:41:57,631 INFO ingest.deep_summarizer: Generating deep summary for 01KJV49W0K92F6SQQ3HMJTR25N: 62052 chars (full text), timeout=510s
+2026-03-04 21:42:45,873 INFO __main__: [89/189] Summary for 01KJV49W0K92F6SQQ3HMJTR25N: 51 chars
+2026-03-04 21:42:48,919 INFO ingest.deep_summarizer: Generating deep summary for 01KJV4D04E2B7T3FE86HZTW793: 31265 chars (full text), timeout=480s
+2026-03-04 21:43:32,094 INFO __main__: [90/189] Summary for 01KJV4D04E2B7T3FE86HZTW793: 51 chars
+2026-03-04 21:43:35,144 INFO ingest.deep_summarizer: Generating deep summary for 01KJV4D5YXR99VW5J24NP6VPEV: 49719 chars (full text), timeout=480s
+2026-03-04 21:44:13,187 INFO __main__: [91/189] Summary for 01KJV4D5YXR99VW5J24NP6VPEV: 51 chars
+2026-03-04 21:44:16,254 INFO ingest.deep_summarizer: Generating deep summary for 01KJV4HRBK6JRFK1M5EVM7SWP9: 25988 chars (full text), timeout=480s
+2026-03-04 21:44:41,264 INFO __main__: [92/189] Summary for 01KJV4HRBK6JRFK1M5EVM7SWP9: 51 chars
+2026-03-04 21:44:44,383 INFO ingest.deep_summarizer: Generating deep summary for 01KJV4KX85J6NJAA4F3RAMSYRT: 35209 chars (full text), timeout=480s
+2026-03-04 21:45:04,757 INFO __main__: [93/189] Summary for 01KJV4KX85J6NJAA4F3RAMSYRT: 51 chars
+2026-03-04 21:45:07,829 INFO ingest.deep_summarizer: Generating deep summary for 01KJV4M1H37QFTG0NF996MPAA3: 42872 chars (full text), timeout=480s
+2026-03-04 21:45:54,474 INFO __main__: [94/189] Summary for 01KJV4M1H37QFTG0NF996MPAA3: 51 chars
+2026-03-04 21:45:57,519 INFO ingest.deep_summarizer: Generating deep summary for 01KJV4QZ2D36W4SHVYMB30SQEQ: 36575 chars (full text), timeout=480s
+2026-03-04 21:46:45,178 INFO __main__: [95/189] Summary for 01KJV4QZ2D36W4SHVYMB30SQEQ: 51 chars
+2026-03-04 21:46:48,227 INFO ingest.deep_summarizer: Generating deep summary for 01KJV4T8S3Z42W7X5WDZ4VHT1R: 42212 chars (full text), timeout=480s
+2026-03-04 21:47:32,527 INFO __main__: [96/189] Summary for 01KJV4T8S3Z42W7X5WDZ4VHT1R: 51 chars
+2026-03-04 21:47:35,582 INFO ingest.deep_summarizer: Generating deep summary for 01KJV4TENFJVB1SFDHWQ7S13DB: 41357 chars (full text), timeout=480s
+2026-03-04 21:47:55,659 INFO __main__: [97/189] Summary for 01KJV4TENFJVB1SFDHWQ7S13DB: 51 chars
+2026-03-04 21:47:58,798 INFO ingest.deep_summarizer: Generating deep summary for 01KJV4YYANBM1GBBMZN5JZ41KC: 42043 chars (full text), timeout=480s
+2026-03-04 21:48:26,606 INFO __main__: [98/189] Summary for 01KJV4YYANBM1GBBMZN5JZ41KC: 51 chars
+2026-03-04 21:48:29,692 INFO ingest.deep_summarizer: Generating deep summary for 01KJV50FH1MQXMHQ5PN1HY1V5H: 45601 chars (full text), timeout=480s
+2026-03-04 21:48:46,429 INFO __main__: [99/189] Summary for 01KJV50FH1MQXMHQ5PN1HY1V5H: 51 chars
+2026-03-04 21:48:49,485 INFO ingest.deep_summarizer: Generating deep summary for 01KJV50MCDN3MJA7NSEB9CDW07: 33617 chars (full text), timeout=480s
+2026-03-04 21:49:10,398 INFO __main__: [100/189] Summary for 01KJV50MCDN3MJA7NSEB9CDW07: 51 chars
+2026-03-04 21:49:13,507 INFO ingest.deep_summarizer: Generating deep summary for 01KJV54RZQPDJQRT35JX596THH: 36796 chars (full text), timeout=480s
+2026-03-04 21:49:33,254 INFO __main__: [101/189] Summary for 01KJV54RZQPDJQRT35JX596THH: 51 chars
+2026-03-04 21:49:36,388 INFO ingest.deep_summarizer: Generating deep summary for 01KJV56Z979BYNF24090F4GS3V: 37275 chars (full text), timeout=480s
+2026-03-04 21:50:00,196 INFO __main__: [102/189] Summary for 01KJV56Z979BYNF24090F4GS3V: 51 chars
+2026-03-04 21:50:03,328 INFO ingest.deep_summarizer: Generating deep summary for 01KJV56ZJP3YQ2YAG3JP5SXGQ9: 56935 chars (full text), timeout=480s
+2026-03-04 21:50:28,185 INFO __main__: [103/189] Summary for 01KJV56ZJP3YQ2YAG3JP5SXGQ9: 51 chars
+2026-03-04 21:50:31,269 INFO ingest.deep_summarizer: Generating deep summary for 01KJV5B2QGE5H6X8PHDC4VKPV5: 39259 chars (full text), timeout=480s
+2026-03-04 21:50:56,278 INFO __main__: [104/189] Summary for 01KJV5B2QGE5H6X8PHDC4VKPV5: 51 chars
+2026-03-04 21:50:59,423 INFO ingest.deep_summarizer: Generating deep summary for 01KJV5D2Z7MBVHR0KNHYB9AWNN: 53049 chars (full text), timeout=480s
+2026-03-04 21:51:18,346 INFO __main__: [105/189] Summary for 01KJV5D2Z7MBVHR0KNHYB9AWNN: 51 chars
+2026-03-04 21:51:21,416 INFO ingest.deep_summarizer: Generating deep summary for 01KJV5E1EBTAMS77SPACEPGAMJ: 29939 chars (full text), timeout=480s
+2026-03-04 21:51:47,750 INFO __main__: [106/189] Summary for 01KJV5E1EBTAMS77SPACEPGAMJ: 51 chars
+2026-03-04 21:51:51,065 INFO ingest.deep_summarizer: Generating deep summary for 01KJV5GK45PQ35EM1MKMTW3S3D: 191911 chars (full text), timeout=600s
+2026-03-04 21:52:15,666 INFO __main__: [107/189] Summary for 01KJV5GK45PQ35EM1MKMTW3S3D: 51 chars
+2026-03-04 21:52:18,770 INFO ingest.deep_summarizer: Generating deep summary for 01KJV5HWSHN2WAY8MNS8DJ7GGR: 62906 chars (full text), timeout=510s
+2026-03-04 21:52:43,222 INFO __main__: [108/189] Summary for 01KJV5HWSHN2WAY8MNS8DJ7GGR: 51 chars
+2026-03-04 21:52:46,383 INFO ingest.deep_summarizer: Generating deep summary for 01KJV5MK13QFXGWZX2B14E1256: 42898 chars (full text), timeout=480s
+2026-03-04 21:53:37,030 INFO __main__: [109/189] Summary for 01KJV5MK13QFXGWZX2B14E1256: 51 chars
+2026-03-04 21:53:40,320 INFO ingest.deep_summarizer: Generating deep summary for 01KJV5S7TQ43GW6XHHXNQ6EFCD: 107892 chars (full text), timeout=600s
+2026-03-04 21:54:38,427 INFO __main__: [110/189] Summary for 01KJV5S7TQ43GW6XHHXNQ6EFCD: 51 chars
+2026-03-04 21:54:41,470 INFO ingest.deep_summarizer: Generating deep summary for 01KJV5SBG07KYAVYZW3MP8Q5PK: 38516 chars (full text), timeout=480s
+2026-03-04 21:55:11,243 INFO __main__: [111/189] Summary for 01KJV5SBG07KYAVYZW3MP8Q5PK: 51 chars
+2026-03-04 21:55:14,337 INFO ingest.deep_summarizer: Generating deep summary for 01KJV5VMCP73BDWGE27RDDZF82: 58849 chars (full text), timeout=480s
+2026-03-04 21:55:39,506 INFO __main__: [112/189] Summary for 01KJV5VMCP73BDWGE27RDDZF82: 51 chars
+2026-03-04 21:55:42,618 INFO ingest.deep_summarizer: Generating deep summary for 01KJV5Z0M13PSHR7W5AF96FMPP: 42747 chars (full text), timeout=480s
+2026-03-04 21:56:04,046 INFO __main__: [113/189] Summary for 01KJV5Z0M13PSHR7W5AF96FMPP: 51 chars
+2026-03-04 21:56:07,230 INFO ingest.deep_summarizer: Generating deep summary for 01KJV5Z47180HNS6GWHJ322R11: 120951 chars (full text), timeout=600s
+2026-03-04 21:56:29,360 INFO __main__: [114/189] Summary for 01KJV5Z47180HNS6GWHJ322R11: 51 chars
+2026-03-04 21:56:32,471 INFO ingest.deep_summarizer: Generating deep summary for 01KJV61P523MA947YC2AG7ZZ2Y: 79077 chars (full text), timeout=540s
+2026-03-04 21:56:49,334 INFO __main__: [115/189] Summary for 01KJV61P523MA947YC2AG7ZZ2Y: 51 chars
+2026-03-04 21:56:52,494 INFO ingest.deep_summarizer: Generating deep summary for 01KJV64ZDFQ7S86XPVP6FNANGM: 72054 chars (full text), timeout=540s
+2026-03-04 21:57:17,849 INFO __main__: [116/189] Summary for 01KJV64ZDFQ7S86XPVP6FNANGM: 51 chars
+2026-03-04 21:57:20,918 INFO ingest.deep_summarizer: Generating deep summary for 01KJV65FZDWMAWMC6AV3HP5XFS: 39133 chars (full text), timeout=480s
+2026-03-04 21:57:40,908 INFO __main__: [117/189] Summary for 01KJV65FZDWMAWMC6AV3HP5XFS: 51 chars
+2026-03-04 21:57:44,070 INFO ingest.deep_summarizer: Generating deep summary for 01KJV68FPFQGPKRY2YQEF12W1Z: 34356 chars (full text), timeout=480s
+2026-03-04 21:58:04,911 INFO __main__: [118/189] Summary for 01KJV68FPFQGPKRY2YQEF12W1Z: 51 chars
+2026-03-04 21:58:08,006 INFO ingest.deep_summarizer: Generating deep summary for 01KJV6C0D1QTS98FMWFF8MZ02H: 40209 chars (full text), timeout=480s
+2026-03-04 21:58:31,710 INFO __main__: [119/189] Summary for 01KJV6C0D1QTS98FMWFF8MZ02H: 51 chars
+2026-03-04 21:58:34,853 INFO ingest.deep_summarizer: Generating deep summary for 01KJV6C78WQY03ZNVYQNK4HSNJ: 46258 chars (full text), timeout=480s
+2026-03-04 21:59:09,592 INFO __main__: [120/189] Summary for 01KJV6C78WQY03ZNVYQNK4HSNJ: 51 chars
+2026-03-04 21:59:12,735 INFO ingest.deep_summarizer: Generating deep summary for 01KJV6G030GM66QCNBBZCETGSN: 39767 chars (full text), timeout=480s
+2026-03-04 21:59:33,761 INFO __main__: [121/189] Summary for 01KJV6G030GM66QCNBBZCETGSN: 51 chars
+2026-03-04 21:59:36,872 INFO ingest.deep_summarizer: Generating deep summary for 01KJV6J7A4PJ91RSCRYNM08706: 18147 chars (full text), timeout=480s
+2026-03-04 22:00:08,820 INFO __main__: [122/189] Summary for 01KJV6J7A4PJ91RSCRYNM08706: 51 chars
+2026-03-04 22:00:12,013 INFO ingest.deep_summarizer: Generating deep summary for 01KJV6JNEC6GFA7ADGS68H01C6: 69957 chars (full text), timeout=510s
+2026-03-04 22:01:00,207 INFO __main__: [123/189] Summary for 01KJV6JNEC6GFA7ADGS68H01C6: 51 chars
+2026-03-04 22:01:03,471 INFO ingest.deep_summarizer: Generating deep summary for 01KJV6PJWCZR91CR34XBKX2QC3: 39088 chars (full text), timeout=480s
+2026-03-04 22:01:30,316 INFO __main__: [124/189] Summary for 01KJV6PJWCZR91CR34XBKX2QC3: 51 chars
+2026-03-04 22:01:33,859 INFO ingest.deep_summarizer: Generating deep summary for 01KJV6RRM0P2ZKE7JH4GXYJTWQ: 32145 chars (full text), timeout=480s
+2026-03-04 22:02:31,594 INFO __main__: [125/189] Summary for 01KJV6RRM0P2ZKE7JH4GXYJTWQ: 51 chars
+2026-03-04 22:02:34,705 INFO ingest.deep_summarizer: Generating deep summary for 01KJV6RXXKMVXC5S8G3B55E8Y3: 43746 chars (full text), timeout=480s
+2026-03-04 22:03:01,935 INFO __main__: [126/189] Summary for 01KJV6RXXKMVXC5S8G3B55E8Y3: 51 chars
+2026-03-04 22:03:05,137 INFO ingest.deep_summarizer: Generating deep summary for 01KJV6X74JDVGQFRCVXY0381BG: 38954 chars (full text), timeout=480s
+2026-03-04 22:04:13,125 INFO __main__: [127/189] Summary for 01KJV6X74JDVGQFRCVXY0381BG: 51 chars
+2026-03-04 22:04:16,285 INFO ingest.deep_summarizer: Generating deep summary for 01KJV6YYQP486TG5V2MHN93FJ1: 47093 chars (full text), timeout=480s
+2026-03-04 22:05:12,332 INFO __main__: [128/189] Summary for 01KJV6YYQP486TG5V2MHN93FJ1: 51 chars
+2026-03-04 22:05:15,554 INFO ingest.deep_summarizer: Generating deep summary for 01KJV6ZWE5FB28K6MXQ6G4S161: 37066 chars (full text), timeout=480s
+2026-03-04 22:05:48,593 INFO __main__: [129/189] Summary for 01KJV6ZWE5FB28K6MXQ6G4S161: 51 chars
+2026-03-04 22:05:51,709 INFO ingest.deep_summarizer: Generating deep summary for 01KJV749E6WKMFMYWCX4C8G0XN: 38905 chars (full text), timeout=480s
+2026-03-04 22:06:19,068 INFO __main__: [130/189] Summary for 01KJV749E6WKMFMYWCX4C8G0XN: 51 chars
+2026-03-04 22:06:22,127 INFO ingest.deep_summarizer: Generating deep summary for 01KJV75D184XZYHHEGQC0R3Z9X: 22621 chars (full text), timeout=480s
+2026-03-04 22:06:48,183 INFO __main__: [131/189] Summary for 01KJV75D184XZYHHEGQC0R3Z9X: 51 chars
+2026-03-04 22:06:51,512 INFO ingest.deep_summarizer: Generating deep summary for 01KJV75HGRX7X4V2Y5C4QMP3PR: 32919 chars (full text), timeout=480s
+2026-03-04 22:07:26,922 INFO __main__: [132/189] Summary for 01KJV75HGRX7X4V2Y5C4QMP3PR: 51 chars
+2026-03-04 22:07:30,261 INFO ingest.deep_summarizer: Generating deep summary for 01KJV79X7AQ5A1HM6FJ7H94JEY: 251987 chars (full text), timeout=600s
+2026-03-04 22:07:52,713 INFO __main__: [133/189] Summary for 01KJV79X7AQ5A1HM6FJ7H94JEY: 51 chars
+2026-03-04 22:07:55,796 INFO ingest.deep_summarizer: Generating deep summary for 01KJV7CCFG6EWQVMGT0J196AVQ: 29899 chars (full text), timeout=480s
+2026-03-04 22:08:18,899 INFO __main__: [134/189] Summary for 01KJV7CCFG6EWQVMGT0J196AVQ: 51 chars
+2026-03-04 22:08:21,968 INFO ingest.deep_summarizer: Generating deep summary for 01KJV7DD3SM8YFQ5FA54VAY8AJ: 22322 chars (full text), timeout=480s
+2026-03-04 22:08:52,134 INFO __main__: [135/189] Summary for 01KJV7DD3SM8YFQ5FA54VAY8AJ: 51 chars
+2026-03-04 22:08:55,230 INFO ingest.deep_summarizer: Generating deep summary for 01KJV7N48DXDR5PVV35ZAP2N82: 42075 chars (full text), timeout=480s
+2026-03-04 22:09:17,091 INFO __main__: [136/189] Summary for 01KJV7N48DXDR5PVV35ZAP2N82: 51 chars
+2026-03-04 22:09:20,187 INFO ingest.deep_summarizer: Generating deep summary for 01KJV7NM6AWC5CXT3SRS8DRN77: 46305 chars (full text), timeout=480s
+2026-03-04 22:10:11,912 INFO __main__: [137/189] Summary for 01KJV7NM6AWC5CXT3SRS8DRN77: 51 chars
+2026-03-04 22:10:14,987 INFO ingest.deep_summarizer: Generating deep summary for 01KJV7PXBQFTHEVGHDCGE868Q0: 40289 chars (full text), timeout=480s
+2026-03-04 22:10:46,791 INFO __main__: [138/189] Summary for 01KJV7PXBQFTHEVGHDCGE868Q0: 51 chars
+2026-03-04 22:10:49,821 INFO ingest.deep_summarizer: Generating deep summary for 01KJV7TRY28HAYF81PCXPPZCAW: 14620 chars (full text), timeout=480s
+2026-03-04 22:11:08,731 INFO __main__: [139/189] Summary for 01KJV7TRY28HAYF81PCXPPZCAW: 51 chars
+2026-03-04 22:11:11,771 INFO ingest.deep_summarizer: Generating deep summary for 01KJV7V9DKPNV4479NX1BZSD1S: 38536 chars (full text), timeout=480s
+2026-03-04 22:11:59,243 INFO __main__: [140/189] Summary for 01KJV7V9DKPNV4479NX1BZSD1S: 51 chars
+2026-03-04 22:12:02,343 INFO ingest.deep_summarizer: Generating deep summary for 01KJV7XNNNZZKZQZ5ZYP58GQ2V: 36276 chars (full text), timeout=480s
+2026-03-04 22:12:26,849 INFO __main__: [141/189] Summary for 01KJV7XNNNZZKZQZ5ZYP58GQ2V: 51 chars
+2026-03-04 22:12:30,012 INFO ingest.deep_summarizer: Generating deep summary for 01KJV8271TDJ2R7E09R133E9V0: 47080 chars (full text), timeout=480s
+2026-03-04 22:12:51,432 INFO __main__: [142/189] Summary for 01KJV8271TDJ2R7E09R133E9V0: 51 chars
+2026-03-04 22:12:54,583 INFO ingest.deep_summarizer: Generating deep summary for 01KJV83GN1RMMXTNYQWH3W34F5: 48163 chars (full text), timeout=480s
+2026-03-04 22:13:45,318 INFO __main__: [143/189] Summary for 01KJV83GN1RMMXTNYQWH3W34F5: 51 chars
+2026-03-04 22:13:48,385 INFO ingest.deep_summarizer: Generating deep summary for 01KJV84KVSHNA6GM9MPCTDT8Q5: 35933 chars (full text), timeout=480s
+2026-03-04 22:14:09,718 INFO __main__: [144/189] Summary for 01KJV84KVSHNA6GM9MPCTDT8Q5: 51 chars
+2026-03-04 22:14:12,765 INFO ingest.deep_summarizer: Generating deep summary for 01KJV8790RPPM2TQYQAXJ37F8K: 40201 chars (full text), timeout=480s
+2026-03-04 22:14:36,466 INFO __main__: [145/189] Summary for 01KJV8790RPPM2TQYQAXJ37F8K: 51 chars
+2026-03-04 22:14:39,590 INFO ingest.deep_summarizer: Generating deep summary for 01KJV89Q4XJ3GHGFF55XY78V0D: 131109 chars (full text), timeout=600s
+2026-03-04 22:14:58,826 INFO __main__: [146/189] Summary for 01KJV89Q4XJ3GHGFF55XY78V0D: 51 chars
+2026-03-04 22:15:01,913 INFO ingest.deep_summarizer: Generating deep summary for 01KJV8BD2M08NZNP5XVEDCJ3KC: 95421 chars (full text), timeout=600s
+2026-03-04 22:15:22,337 INFO __main__: [147/189] Summary for 01KJV8BD2M08NZNP5XVEDCJ3KC: 51 chars
+2026-03-04 22:15:25,423 INFO ingest.deep_summarizer: Generating deep summary for 01KJV8DVH3CJGCY00XAEE8YT2P: 36272 chars (full text), timeout=480s
+2026-03-04 22:15:51,859 INFO __main__: [148/189] Summary for 01KJV8DVH3CJGCY00XAEE8YT2P: 51 chars
+2026-03-04 22:15:54,899 INFO ingest.deep_summarizer: Generating deep summary for 01KJV8HGEPZYBJ5JXYBKCNJR3W: 41859 chars (full text), timeout=480s
+2026-03-04 22:16:18,040 INFO __main__: [149/189] Summary for 01KJV8HGEPZYBJ5JXYBKCNJR3W: 51 chars
+2026-03-04 22:16:21,106 INFO ingest.deep_summarizer: Generating deep summary for 01KJV8JK292KN8R7YPV9Y8P533: 30871 chars (full text), timeout=480s
+2026-03-04 22:16:44,195 INFO __main__: [150/189] Summary for 01KJV8JK292KN8R7YPV9Y8P533: 51 chars
+2026-03-04 22:16:47,258 INFO ingest.deep_summarizer: Generating deep summary for 01KJV8MTT26XS883PR5T1B9DDN: 7262 chars (full text), timeout=480s
+2026-03-04 22:17:33,752 INFO __main__: [151/189] Summary for 01KJV8MTT26XS883PR5T1B9DDN: 51 chars
+2026-03-04 22:17:36,847 INFO ingest.deep_summarizer: Generating deep summary for 01KJV8RNT6FBW0VTJM3BEEZ7J9: 19605 chars (full text), timeout=480s
+2026-03-04 22:17:57,096 INFO __main__: [152/189] Summary for 01KJV8RNT6FBW0VTJM3BEEZ7J9: 51 chars
+2026-03-04 22:18:00,169 INFO ingest.deep_summarizer: Generating deep summary for 01KJV8TCC8ZC7V7N7J8K8CYWTX: 20285 chars (full text), timeout=480s
+2026-03-04 22:18:21,419 INFO __main__: [153/189] Summary for 01KJV8TCC8ZC7V7N7J8K8CYWTX: 51 chars
+2026-03-04 22:18:24,531 INFO ingest.deep_summarizer: Generating deep summary for 01KJV8WEM4N2QDRN4NSWYE8XX1: 29323 chars (full text), timeout=480s
+2026-03-04 22:18:49,947 INFO __main__: [154/189] Summary for 01KJV8WEM4N2QDRN4NSWYE8XX1: 51 chars
+2026-03-04 22:18:53,007 INFO ingest.deep_summarizer: Generating deep summary for 01KJV8YY98H1JVRFWY0MPHRY2F: 36020 chars (full text), timeout=480s
+2026-03-04 22:19:11,546 INFO __main__: [155/189] Summary for 01KJV8YY98H1JVRFWY0MPHRY2F: 51 chars
+2026-03-04 22:19:14,641 INFO ingest.deep_summarizer: Generating deep summary for 01KJV8ZDJ2H3FJFSRW52DE18X7: 61771 chars (full text), timeout=510s
+2026-03-04 22:19:33,313 INFO __main__: [156/189] Summary for 01KJV8ZDJ2H3FJFSRW52DE18X7: 51 chars
+2026-03-04 22:19:36,433 INFO ingest.deep_summarizer: Generating deep summary for 01KJVJ4GHWQJ4E9T3EKKD6DZAG: 34230 chars (full text), timeout=480s
+2026-03-04 22:19:59,414 INFO __main__: [157/189] Summary for 01KJVJ4GHWQJ4E9T3EKKD6DZAG: 51 chars
+2026-03-04 22:20:02,598 INFO ingest.deep_summarizer: Generating deep summary for 01KJVJSX48VT7YXSTKZWDHE8PK: 64374 chars (full text), timeout=510s
+2026-03-04 22:20:36,492 INFO __main__: [158/189] Summary for 01KJVJSX48VT7YXSTKZWDHE8PK: 51 chars
+2026-03-04 22:20:39,749 INFO ingest.deep_summarizer: Generating deep summary for 01KJVKAKDJCQKZ7MT9P788V9NE: 89413 chars (full text), timeout=570s
+2026-03-04 22:21:00,812 INFO __main__: [159/189] Summary for 01KJVKAKDJCQKZ7MT9P788V9NE: 51 chars
+2026-03-04 22:21:03,889 INFO ingest.deep_summarizer: Generating deep summary for 01KJVKQCHAW52432VG8DSK3X0Q: 17267 chars (full text), timeout=480s
+2026-03-04 22:21:28,463 INFO __main__: [160/189] Summary for 01KJVKQCHAW52432VG8DSK3X0Q: 51 chars
+2026-03-04 22:21:31,543 INFO ingest.deep_summarizer: Generating deep summary for 01KJVM69GCN7QYSPPE2KFMZ0Y5: 29908 chars (full text), timeout=480s
+2026-03-04 22:22:28,432 INFO __main__: [161/189] Summary for 01KJVM69GCN7QYSPPE2KFMZ0Y5: 51 chars
+2026-03-04 22:22:31,476 INFO ingest.deep_summarizer: Generating deep summary for 01KJVMA9D5RWMZX4M4V63DP5Q5: 29885 chars (full text), timeout=480s
+2026-03-04 22:23:14,609 INFO __main__: [162/189] Summary for 01KJVMA9D5RWMZX4M4V63DP5Q5: 51 chars
+2026-03-04 22:23:17,676 INFO ingest.deep_summarizer: Generating deep summary for 01KJVMZ5JN297P9C62F7TWE66Q: 46788 chars (full text), timeout=480s
+2026-03-04 22:23:46,297 INFO __main__: [163/189] Summary for 01KJVMZ5JN297P9C62F7TWE66Q: 51 chars
+2026-03-04 22:23:49,477 INFO ingest.deep_summarizer: Generating deep summary for 01KJVN12YGX8RAPPKMD78XE889: 86064 chars (full text), timeout=570s
+2026-03-04 22:24:13,623 INFO __main__: [164/189] Summary for 01KJVN12YGX8RAPPKMD78XE889: 51 chars
+2026-03-04 22:24:16,841 INFO ingest.deep_summarizer: Generating deep summary for 01KJVNDJDQGM250BPX1Y2V8GBE: 56915 chars (full text), timeout=480s
+2026-03-04 22:24:38,874 INFO __main__: [165/189] Summary for 01KJVNDJDQGM250BPX1Y2V8GBE: 51 chars
+2026-03-04 22:24:42,077 INFO ingest.deep_summarizer: Generating deep summary for 01KJVNEG9Q5ACG8Q4DVQCMHBBT: 27683 chars (full text), timeout=480s
+2026-03-04 22:25:34,265 INFO __main__: [166/189] Summary for 01KJVNEG9Q5ACG8Q4DVQCMHBBT: 51 chars
+2026-03-04 22:25:37,478 INFO ingest.deep_summarizer: Generating deep summary for 01KJVP2MKSVAYJF4F716NXXEA2: 24485 chars (full text), timeout=480s
+2026-03-04 22:26:10,345 INFO __main__: [167/189] Summary for 01KJVP2MKSVAYJF4F716NXXEA2: 51 chars
+2026-03-04 22:26:13,703 INFO ingest.deep_summarizer: Generating deep summary for 01KJVPQYT8FQG5P4E0Q2C5TQSB: 57742 chars (full text), timeout=480s
+2026-03-04 22:26:55,350 INFO __main__: [168/189] Summary for 01KJVPQYT8FQG5P4E0Q2C5TQSB: 51 chars
+2026-03-04 22:26:59,295 INFO ingest.deep_summarizer: Generating deep summary for 01KJVQ7KAHS4EZYYEFFQR2Q2QR: 122380 chars (full text), timeout=600s
+2026-03-04 22:28:04,801 INFO __main__: [169/189] Summary for 01KJVQ7KAHS4EZYYEFFQR2Q2QR: 51 chars
+2026-03-04 22:28:07,929 INFO ingest.deep_summarizer: Generating deep summary for 01KJVQ9TRDYXW6XS2EBHS2CGS7: 128511 chars (full text), timeout=600s
+2026-03-04 22:28:34,271 INFO __main__: [170/189] Summary for 01KJVQ9TRDYXW6XS2EBHS2CGS7: 51 chars
+2026-03-04 22:28:37,513 INFO ingest.deep_summarizer: Generating deep summary for 01KJVQZ7YX1N9TKVXRTVC768TN: 92169 chars (full text), timeout=600s
+2026-03-04 22:29:17,275 INFO __main__: [171/189] Summary for 01KJVQZ7YX1N9TKVXRTVC768TN: 51 chars
+2026-03-04 22:29:20,371 INFO ingest.deep_summarizer: Generating deep summary for 01KJVR0B99DNB238SCFEE07RYH: 63525 chars (full text), timeout=510s
+2026-03-04 22:29:52,346 INFO __main__: [172/189] Summary for 01KJVR0B99DNB238SCFEE07RYH: 51 chars
+2026-03-04 22:29:55,499 INFO ingest.deep_summarizer: Generating deep summary for 01KJVR2WJ1ZQPBM0QNT2P4DPK0: 46451 chars (full text), timeout=480s
+2026-03-04 22:30:24,469 INFO __main__: [173/189] Summary for 01KJVR2WJ1ZQPBM0QNT2P4DPK0: 51 chars
+2026-03-04 22:30:27,823 INFO ingest.deep_summarizer: Generating deep summary for 01KJVR7GAMPTJ34WZSTP6K1VC1: 59006 chars (full text), timeout=480s
+2026-03-04 22:31:07,006 INFO __main__: [174/189] Summary for 01KJVR7GAMPTJ34WZSTP6K1VC1: 51 chars
+2026-03-04 22:31:10,173 INFO ingest.deep_summarizer: Generating deep summary for 01KJVRC3JX821XQE4V2NJEHFN1: 55108 chars (full text), timeout=480s
+2026-03-04 22:31:46,970 INFO __main__: [175/189] Summary for 01KJVRC3JX821XQE4V2NJEHFN1: 51 chars
+2026-03-04 22:31:50,082 INFO ingest.deep_summarizer: Generating deep summary for 01KJVRMEM42XRWXZK83SHG7C2R: 18268 chars (full text), timeout=480s
+2026-03-04 22:32:23,405 INFO __main__: [176/189] Summary for 01KJVRMEM42XRWXZK83SHG7C2R: 51 chars
+2026-03-04 22:32:26,649 INFO ingest.deep_summarizer: Generating deep summary for 01KJVRQP8RVNXWK6W8H42CAQ4X: 74526 chars (full text), timeout=540s
+2026-03-04 22:33:29,093 INFO __main__: [177/189] Summary for 01KJVRQP8RVNXWK6W8H42CAQ4X: 51 chars
+2026-03-04 22:33:32,371 INFO ingest.deep_summarizer: Generating deep summary for 01KJVRTAEMF1MPY6WT7CJTMG8D: 63889 chars (full text), timeout=510s
+2026-03-04 22:34:56,228 INFO __main__: [178/189] Summary for 01KJVRTAEMF1MPY6WT7CJTMG8D: 51 chars
+2026-03-04 22:34:59,396 INFO ingest.deep_summarizer: Generating deep summary for 01KJVRVSPK1Y9D0ZHTMTTNNXEC: 48895 chars (full text), timeout=480s
+2026-03-04 22:35:35,820 INFO __main__: [179/189] Summary for 01KJVRVSPK1Y9D0ZHTMTTNNXEC: 51 chars
+2026-03-04 22:35:38,981 INFO ingest.deep_summarizer: Generating deep summary for 01KJVS00V26Z39NDSVB07QJT1D: 26735 chars (full text), timeout=480s
+2026-03-04 22:36:49,777 INFO __main__: [180/189] Summary for 01KJVS00V26Z39NDSVB07QJT1D: 51 chars
+2026-03-04 22:36:52,948 INFO ingest.deep_summarizer: Generating deep summary for 01KJVS330Y43TH4W93FNY7NB65: 30150 chars (full text), timeout=480s
+2026-03-04 22:37:35,784 INFO __main__: [181/189] Summary for 01KJVS330Y43TH4W93FNY7NB65: 51 chars
+2026-03-04 22:37:38,912 INFO ingest.deep_summarizer: Generating deep summary for 01KJVS64WBC54M2T10FRNC2E0G: 30610 chars (full text), timeout=480s
+2026-03-04 22:38:13,710 INFO __main__: [182/189] Summary for 01KJVS64WBC54M2T10FRNC2E0G: 51 chars
+2026-03-04 22:38:16,818 INFO ingest.deep_summarizer: Generating deep summary for 01KJVSF4MB346QV6T275HAV1HA: 38791 chars (full text), timeout=480s
+2026-03-04 22:39:04,421 INFO __main__: [183/189] Summary for 01KJVSF4MB346QV6T275HAV1HA: 51 chars
+2026-03-04 22:39:07,661 INFO ingest.deep_summarizer: Generating deep summary for 01KJVSGCXW0PSCS647AEFRRCPS: 41966 chars (full text), timeout=480s
+2026-03-04 22:39:49,352 INFO __main__: [184/189] Summary for 01KJVSGCXW0PSCS647AEFRRCPS: 51 chars
+2026-03-04 22:39:52,498 INFO ingest.deep_summarizer: Generating deep summary for 01KJVSM49BGZ5XDSQ5EBPJ71WE: 66211 chars (full text), timeout=510s
+2026-03-04 22:40:29,109 INFO __main__: [185/189] Summary for 01KJVSM49BGZ5XDSQ5EBPJ71WE: 51 chars
+2026-03-04 22:40:32,307 INFO ingest.deep_summarizer: Generating deep summary for 01KJVV7HTPJHZ7F7Y3VMSAQT45: 11169 chars (full text), timeout=480s
+2026-03-04 22:41:13,507 INFO __main__: [186/189] Summary for 01KJVV7HTPJHZ7F7Y3VMSAQT45: 51 chars
+2026-03-04 22:41:16,769 INFO ingest.deep_summarizer: Generating deep summary for 01KJVVA0Q269HQCAFH3CZYQXE5: 14615 chars (full text), timeout=480s
+2026-03-04 22:41:52,968 INFO __main__: [187/189] Summary for 01KJVVA0Q269HQCAFH3CZYQXE5: 51 chars
+2026-03-04 22:41:56,084 INFO ingest.deep_summarizer: Generating deep summary for 01KJVVDA1FXWKWMM3JTRR2704T: 43646 chars (full text), timeout=480s
+2026-03-04 22:42:21,916 INFO __main__: [188/189] Summary for 01KJVVDA1FXWKWMM3JTRR2704T: 51 chars
+2026-03-04 22:42:24,998 INFO ingest.deep_summarizer: Generating deep summary for 01KJVVDN9728146YK7HQXCNGA0: 38618 chars (full text), timeout=480s
+2026-03-04 22:43:11,022 INFO __main__: [189/189] Summary for 01KJVVDN9728146YK7HQXCNGA0: 51 chars
+2026-03-04 22:43:11,026 INFO __main__: Summary reprocessing complete
+
+Reprocessing complete. Run --scan to verify results.

@@ -1,0 +1,100 @@
+﻿sources:
+  - name: "AINews"
+    delivery: "email"
+    sender: "swyx+ainews@substack.com"
+    category: "ai_tech"
+
+  - name: "Techmeme"
+    delivery: "email"
+    sender: "newsletter@techmeme.com"
+    category: "ai_tech"
+
+  - name: "Sifted"
+    delivery: "email"
+    sender: "sifted@sifted.eu"
+    category: "startups"
+
+  - name: "TechCrunch"
+    delivery: "web"
+    listing_url: "https://techcrunch.com/category/artificial-intelligence/"
+    feed_url: "https://techcrunch.com/category/artificial-intelligence/feed/"
+    lookback_hours: 24
+    max_items: 8
+    include_topics:
+      - "capabilities"
+      - "breakthroughs"
+      - "startups"
+    topic_routes:
+      capabilities: "ai_tech"
+      breakthroughs: "ai_tech"
+      startups: "startups"
+
+  - name: "TwitterX"
+    delivery: "social"
+    platform: "x"
+    queries:
+      - "AI"
+      - "LLM"
+      - "\"artificial intelligence\""
+      - "\"machine learning\""
+      - "\"generative AI\""
+    lookback_hours: 24
+    max_candidates: 30
+    max_items: 6
+    min_score_threshold: 55
+    require_linked_url: true
+    native_discussion_floor: 80
+    topic_routes:
+      capabilities: "ai_tech"
+      breakthroughs: "ai_tech"
+      startups: "startups"
+
+  - name: "Reddit"
+    delivery: "social"
+    platform: "reddit"
+    subreddits:
+      - "ArtificialIntelligence"
+      - "MachineLearning"
+      - "AI_Agents"
+    sorts:
+      - "top_day"
+      - "new"
+    lookback_hours: 24
+    max_candidates: 30
+    max_items: 6
+    min_score_threshold: 50
+    require_linked_url: true
+    native_discussion_floor: 75
+    topic_routes:
+      capabilities: "ai_tech"
+      breakthroughs: "ai_tech"
+      startups: "startups"
+
+  - name: "HackerNews"
+    delivery: "social"
+    platform: "hn"
+    queries:
+      - "AI"
+      - "LLM"
+      - "\"machine learning\""
+      - "\"generative AI\""
+    lookback_hours: 24
+    max_candidates: 20
+    max_items: 4
+    min_score_threshold: 50
+    enrich_top_comments: 3
+    topic_routes:
+      capabilities: "ai_tech"
+      breakthroughs: "ai_tech"
+      startups: "startups"
+
+settings:
+  daily_schedule: "10:00"
+  weekly_schedule: "19:00"
+  weekly_day: "sunday"
+  quiet_hours: "23:00-06:00"
+  fetch_linked_articles: true
+  max_links_per_newsletter: 5
+  social_fetch_enabled: true
+  social_dedupe_threshold: 0.65
+  social_story_merge_window_hours: 48

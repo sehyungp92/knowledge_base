@@ -1,0 +1,244 @@
+skills:
+  save:
+    trigger_pattern: "^/save\\s+(\\S+)"
+    prompt: prompts/save.md
+    description: "Ingest a URL into your library"
+    timeout: 600
+    stream_progress: true
+    tools_allowed: [Read, Write, Bash, Glob, Grep, WebFetch]
+    tools_denied: []
+
+  summarise:
+    trigger_pattern: "^/summarise\\s+(\\S+)"
+    prompt: prompts/summarise.md
+    description: "Preview a source summary before deciding to save"
+    timeout: 600
+    stream_progress: true
+    tools_allowed: []
+    tools_denied: []
+
+  save_confirmed:
+    trigger_pattern: "^/save_confirmed\\s+(\\S+)"
+    prompt: prompts/save_confirmed.md
+    description: "Complete save for a previously summarised source"
+    timeout: 600
+    stream_progress: true
+    tools_allowed: []
+    tools_denied: []
+
+  delete:
+    trigger_pattern: "^/delete\\s+(\\S+)"
+    prompt: prompts/delete.md
+    description: "Delete a source and all its dependent data"
+    timeout: 60
+    tools_allowed: []
+    tools_denied: []
+
+  reflect:
+    trigger_pattern: "^/reflect\\s*(\\w+)?\\s*(\\S+)?"
+    prompt: prompts/reflect.md
+    description: "Generate connections and ideas from a source"
+    timeout: 900
+    stream_progress: true
+    tools_allowed: [Read, Write, Glob, Grep]
+    tools_denied: [Bash, WebFetch]
+
+  ask:
+    trigger_pattern: "^/ask\\s+(.+)"
+    prompt: prompts/ask.md
+    description: "Grounded QA over your library"
+    timeout: 120
+    tools_allowed: [Read, Glob, Grep]
+    tools_denied: [Write, Bash, WebFetch]
+
+  status:
+    trigger_pattern: "^/status\\s*(\\d+)?"
+    prompt: prompts/status.md
+    description: "Check status of a running job"
+    timeout: 60
+    tools_allowed: [Read]
+    tools_denied: []
+
+  beliefs:
+    trigger_pattern: "^/beliefs\\s*(.*)"
+    prompt: prompts/beliefs.md
+    description: "View and update tracked beliefs"
+    tools_allowed: [Read, Write]
+    tools_denied: [Bash]
+
+  map:
+    trigger_pattern: "^/map\\s+(\\S+)"
+    prompt: prompts/map.md
+    description: "Show concept neighborhood in knowledge graph"
+    tools_allowed: [Read, Glob, Grep]
+    tools_denied: []
+
+  path:
+    trigger_pattern: "^/path\\s+(\\S+)\\s+(\\S+)"
+    prompt: prompts/path.md
+    description: "Explain connection path between two sources"
+    tools_allowed: [Read, Glob, Grep]
+    tools_denied: []
+
+  provider:
+    trigger_pattern: "^/provider(?:\\s+(\\S+))?"
+    prompt: prompts/provider.md
+    description: "Show or switch the active coding provider for this chat"
+    timeout: 30
+    tools_allowed: []
+    tools_denied: []
+
+  model:
+    trigger_pattern: "^/model(?:\\s+(\\S+))?"
+    prompt: prompts/model.md
+    description: "Show or switch the global default model tier"
+    timeout: 30
+    tools_allowed: []
+    tools_denied: []
+
+  contradictions:
+    trigger_pattern: "^/contradictions\\s*(.*)"
+    prompt: prompts/contradictions.md
+    description: "Show conflicting claims on a topic"
+    tools_allowed: [Read, Glob, Grep]
+    tools_denied: []
+
+  heartbeat:
+    trigger_pattern: "^heartbeat$"
+    prompt: prompts/heartbeat.md
+    description: "Proactive scheduled check"
+    timeout: 180
+    tools_allowed: [Read, Glob, Grep]
+    tools_denied: [WebFetch, Bash]
+
+  # --- Belief System Skills (Phase 4) ---
+
+  challenge:
+    trigger_pattern: "^/challenge\\s+(\\w+)\\s+(\\S+)(?:\\s+(steelman))?"
+    prompt: prompts/challenge.md
+    description: "Challenge a landscape entity or self-challenge a tracked belief"
+    tools_allowed: [Read, Write, Glob, Grep]
+    tools_denied: [Bash, WebFetch]
+
+  # --- AI Landscape Skills (Phase 3b) ---
+
+  landscape:
+    trigger_pattern: "^/landscape\\s*(.*)"
+    prompt: prompts/landscape.md
+    description: "View current state of AI for a theme or full overview"
+    timeout: 180
+    tools_allowed: [Read, Glob, Grep]
+    tools_denied: [Write, Bash, WebFetch]
+
+  bottlenecks:
+    trigger_pattern: "^/bottlenecks\\s*(.*)"
+    prompt: prompts/bottlenecks.md
+    description: "View bottleneck analysis for a theme or all themes"
+    tools_allowed: [Read, Glob, Grep]
+    tools_denied: [Write, Bash, WebFetch]
+
+  anticipate:
+    trigger_pattern: "^/anticipate\\s*(.*)"
+    prompt: prompts/anticipate.md
+    description: "Generate, review, or calibrate predictions about what comes next"
+    timeout: 300
+    stream_progress: true
+    tools_allowed: [Read, Write, Glob, Grep]
+    tools_denied: [Bash, WebFetch]
+
+  implications:
+    trigger_pattern: "^/implications\\s+(\\S+)(?:\\s+(.*))?"
+    prompt: prompts/implications.md
+    description: "Deep landscape impact analysis"
+    timeout: 600
+    tools_allowed: [Read, Write, Glob, Grep]
+    tools_denied: [Bash, WebFetch]
+
+  enrich:
+    trigger_pattern: "^/enrich\\s+(\\S+)"
+    prompt: prompts/enrich.md
+    description: "Correct, supplement, or reinterpret source extractions"
+    timeout: 300
+    tools_allowed: [Read, Write, Glob, Grep]
+    tools_denied: [Bash, WebFetch]
+
+  gaps:
+    trigger_pattern: "^/gaps\\s*(.*)"
+    prompt: prompts/gaps.md
+    description: "Identify coverage gaps and suggest directed reading"
+    tools_allowed: [Read, Glob, Grep]
+    tools_denied: [Write, Bash, WebFetch]
+
+  themes:
+    trigger_pattern: "^/themes\\s*(.*)"
+    prompt: prompts/themes.md
+    description: "Review and approve proposed new AI research themes"
+    tools_allowed: [Read, Write, Glob, Grep]
+    tools_denied: [Bash, WebFetch]
+
+  # --- Topic Synthesis (Phase 4b) ---
+
+  synthesis:
+    trigger_pattern: "^/synthesis\\s+(.+)"
+    prompt: prompts/synthesis.md
+    description: "Generate a consolidated topic synthesis report across multiple sources"
+    timeout: 300
+    stream_progress: true
+    tools_allowed: [Read, Write, Glob, Grep, Bash]
+    tools_denied: [WebFetch]
+
+  # --- YouTube Monitor (Phase 6) ---
+
+  youtube_monitor:
+    trigger_pattern: "^youtube_monitor$"
+    prompt: prompts/youtube_monitor.md
+    description: "Process a YouTube video detected by the channel monitor"
+    timeout: 600
+    tools_allowed: []
+    tools_denied: []
+
+  # --- News Digest (Phase 7) ---
+
+  news_digest:
+    trigger_pattern: "^news_digest$"
+    prompt: prompts/news_digest.md
+    description: "Generate daily news digest from aggregated source materials"
+    timeout: 600
+    tools_allowed: []
+    tools_denied: []
+
+  news_weekly:
+    trigger_pattern: "^news_weekly$"
+    prompt: prompts/news_weekly.md
+    description: "Generate weekly news roundup from daily digests"
+    timeout: 600
+    tools_allowed: []
+    tools_denied: []
+
+  # --- Lifecycle & Feedback Loop Skills (Phase 5) ---
+
+  changelog:
+    trigger_pattern: "^/changelog\\s*(.*)"
+    prompt: prompts/changelog.md
+    description: "View what changed in the landscape model over time"
+    timeout: 60
+    tools_allowed: [Read, Glob, Grep]
+    tools_denied: [Write, Bash, WebFetch]
+
+  ideas:
+    trigger_pattern: "^/ideas\\s*(.*)"
+    prompt: prompts/ideas.md
+    description: "List, rate, develop, and track ideas from /reflect"
+    timeout: 300
+    stream_progress: true
+    tools_allowed: [Read, Write, Glob, Grep]
+    tools_denied: [Bash, WebFetch]
+
+  next:
+    trigger_pattern: "^/next\\s*(.*)"
+    prompt: prompts/next.md
+    description: "Generate prioritised reading recommendations from coverage gaps"
+    timeout: 120
+    stream_progress: true
+    tools_allowed: [Read, Glob, Grep]
+    tools_denied: [Write, Bash, WebFetch]

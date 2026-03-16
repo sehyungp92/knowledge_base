@@ -1,0 +1,13 @@
+channels:
+  # - name: "Two Minute Papers"
+  #   channel_id: "UCbfYPyITQ-7l4upoX8nvctg"
+  #   keywords: ["AI", "neural", "diffusion"]
+
+  # - name: "Yannic Kilcher"
+  #   channel_id: "UCZHmQk67mSJgfCCTn7xBfew"
+  #   keywords: []  # empty = match all videos
+
+settings:
+  schedule: ["09:00", "21:00"]
+  max_videos_per_tick: 3
+  quiet_hours: "23:00-07:00"

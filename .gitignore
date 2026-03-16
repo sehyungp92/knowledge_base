@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+dist/
+build/
+
+# Virtual environment
+venv/
+
+# Environment variables
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# pytest
+.pytest_cache/
+
+# Runtime data
+var/
+
+# Workspace (agent working directories)
+workspace/
+
+# Claude Code
+.agents/
+.claude/
+.claude_workspaces/
+.claudeignore
+
+# Library (ingested sources)
+library/
+
+# References (source data)
+_references/
+
+# Results (generated output)
+_results/
+
+# Logs and docs
+logs/
+docs/
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store

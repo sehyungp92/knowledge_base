@@ -1,0 +1,1026 @@
+{
+  "nodes": [
+    {
+      "id": "meta_foundations",
+      "name": "Foundations",
+      "description": "Core technical building blocks of AI: architecture, training paradigms, and scaling.",
+      "level": 0
+    },
+    {
+      "id": "meta_intelligence",
+      "name": "Intelligence & Learning",
+      "description": "Cognitive capabilities, reasoning mechanisms, and learning paradigms driving AI intelligence.",
+      "level": 0
+    },
+    {
+      "id": "meta_agency",
+      "name": "Agency & Systems",
+      "description": "Autonomous agent architectures, knowledge infrastructure, and tools enabling AI to act.",
+      "level": 0
+    },
+    {
+      "id": "meta_applications",
+      "name": "Applied Domains",
+      "description": "Domain-specific AI deployments across robotics, software, science, and creative media.",
+      "level": 0
+    },
+    {
+      "id": "meta_reliability",
+      "name": "Reliability & Understanding",
+      "description": "Safety, alignment, interpretability, and evaluation ensuring AI behaves as intended.",
+      "level": 0
+    },
+    {
+      "id": "meta_ecosystem",
+      "name": "AI Ecosystem",
+      "description": "Business models, market dynamics, competitive landscape, and investment context of AI.",
+      "level": 0
+    },
+    {
+      "id": "pretraining_and_scaling",
+      "name": "Pretraining & Scaling",
+      "description": "How foundation models are trained at scale: data curation, compute scaling laws, and pretraining paradigms.",
+      "level": 1
+    },
+    {
+      "id": "model_architecture",
+      "name": "Model Architecture",
+      "description": "Design of neural architectures including attention alternatives, efficiency innovations, and representational structure.",
+      "level": 1
+    },
+    {
+      "id": "post_training_methods",
+      "name": "Post-Training Methods",
+      "description": "Techniques applied after pretraining: finetuning, distillation, synthetic data, and test-time adaptation.",
+      "level": 1
+    },
+    {
+      "id": "reasoning_and_planning",
+      "name": "Reasoning & Planning",
+      "description": "Chain-of-thought, test-time compute scaling, search algorithms, and mathematical problem-solving.",
+      "level": 1
+    },
+    {
+      "id": "reinforcement_learning",
+      "name": "Reinforcement Learning",
+      "description": "RL methods for LLM capability development: RLVR for reasoning, reward modeling, policy optimization, and training dynamics.",
+      "level": 1
+    },
+    {
+      "id": "multimodal_models",
+      "name": "Multimodal Models",
+      "description": "Vision-language, unified multimodal, and audio-speech models enabling cross-modal understanding and generation.",
+      "level": 1
+    },
+    {
+      "id": "agent_systems",
+      "name": "Agent Systems",
+      "description": "Autonomous agent architectures for software engineering, computer use, multi-agent coordination, and self-improvement.",
+      "level": 1
+    },
+    {
+      "id": "knowledge_and_memory",
+      "name": "Knowledge & Memory",
+      "description": "Agent memory architectures, retrieval-augmented generation, and context engineering for knowledge-intensive tasks.",
+      "level": 1
+    },
+    {
+      "id": "generative_media",
+      "name": "Generative Media",
+      "description": "Image, video, and world model generation including interactive environments and creative content production.",
+      "level": 1
+    },
+    {
+      "id": "robotics_and_embodied_ai",
+      "name": "Robotics & Embodied AI",
+      "description": "Vision-language-action models, robot learning, and spatial intelligence for physical-world AI systems.",
+      "level": 1
+    },
+    {
+      "id": "code_and_software_ai",
+      "name": "Code & Software AI",
+      "description": "AI for code generation, software engineering automation, and AI-assisted development workflows.",
+      "level": 1
+    },
+    {
+      "id": "scientific_and_medical_ai",
+      "name": "Scientific & Medical AI",
+      "description": "AI for scientific discovery, hypothesis generation, medical diagnosis, and biological modeling.",
+      "level": 1
+    },
+    {
+      "id": "alignment_and_safety",
+      "name": "Alignment & Safety",
+      "description": "Methods ensuring AI behaves safely: alignment training, hallucination mitigation, and AI governance.",
+      "level": 1
+    },
+    {
+      "id": "interpretability",
+      "name": "Interpretability",
+      "description": "Mechanistic analysis of model internals, behavioral characterization, and understanding of AI computation.",
+      "level": 1
+    },
+    {
+      "id": "evaluation_and_benchmarks",
+      "name": "Evaluation & Benchmarks",
+      "description": "Benchmark design, evaluation methodology, saturation detection, and agent capability assessment.",
+      "level": 1
+    },
+    {
+      "id": "ai_market_dynamics",
+      "name": "AI Market Dynamics",
+      "description": "Competitive landscape, model commoditization, open-source dynamics, and hardware infrastructure economics.",
+      "level": 1
+    },
+    {
+      "id": "ai_business_and_economics",
+      "name": "AI Business & Economics",
+      "description": "Vertical AI products, SaaS disruption, AI pricing models, and the economics of deploying AI at scale.",
+      "level": 1
+    },
+    {
+      "id": "startup_and_investment",
+      "name": "Startup & Investment",
+      "description": "VC funding dynamics, startup formation strategies, competitive moats, and investment frameworks for AI.",
+      "level": 1
+    },
+    {
+      "id": "scaling_laws",
+      "name": "Scaling Laws",
+      "description": "Empirical and theoretical relationships between training compute, data, parameters, and capability including inference-time scaling axes.",
+      "level": 2
+    },
+    {
+      "id": "pretraining_data",
+      "name": "Pretraining Data",
+      "description": "Data curation pipelines, quality filtering, synthetic pretraining corpora, and data scaling strategies for foundation models.",
+      "level": 2
+    },
+    {
+      "id": "continual_learning",
+      "name": "Continual Learning",
+      "description": "Lifelong learning methods, catastrophic forgetting prevention, and approaches for ongoing model adaptation without degradation.",
+      "level": 2
+    },
+    {
+      "id": "transformer_alternatives",
+      "name": "Transformer Alternatives",
+      "description": "SSMs, Mamba, hybrid architectures, and non-transformer sequence models offering alternatives to standard attention.",
+      "level": 2
+    },
+    {
+      "id": "long_context_and_attention",
+      "name": "Long-Context & Attention",
+      "description": "Attention mechanisms and memory-augmented architectures enabling efficient very long context processing.",
+      "level": 2
+    },
+    {
+      "id": "adaptive_computation",
+      "name": "Adaptive Computation",
+      "description": "Mixture-of-experts, conditional compute, and architectures that allocate compute dynamically based on input difficulty.",
+      "level": 2
+    },
+    {
+      "id": "representation_learning",
+      "name": "Representation Learning",
+      "description": "Embedding architectures, JEPA-style joint-embedding predictive models, and theories of universal representational convergence.",
+      "level": 2
+    },
+    {
+      "id": "finetuning_and_distillation",
+      "name": "Finetuning & Distillation",
+      "description": "Supervised finetuning, knowledge distillation, preference learning, and post-training pipelines for capability transfer.",
+      "level": 2
+    },
+    {
+      "id": "synthetic_data_generation",
+      "name": "Synthetic Data Generation",
+      "description": "Automated generation of high-quality training data using models for both pretraining and post-training stages.",
+      "level": 2
+    },
+    {
+      "id": "in_context_and_meta_learning",
+      "name": "In-Context & Meta-Learning",
+      "description": "Mechanics of in-context learning, meta-learning for rapid adaptation, and self-adaptive language model approaches.",
+      "level": 2
+    },
+    {
+      "id": "test_time_learning",
+      "name": "Test-Time Learning",
+      "description": "Inference-time adaptation including TTT, TTRL, and approaches that update model parameters or context on individual inputs.",
+      "level": 2
+    },
+    {
+      "id": "chain_of_thought",
+      "name": "Chain-of-Thought Mechanics",
+      "description": "CoT reasoning mechanics, trace quality, reasoning length effects, and efficient reasoning process generation.",
+      "level": 2
+    },
+    {
+      "id": "test_time_compute_scaling",
+      "name": "Test-Time Compute Scaling",
+      "description": "Scaling inference compute through extended reasoning, repeated sampling, budget forcing, and compute-optimal search.",
+      "level": 2
+    },
+    {
+      "id": "latent_reasoning",
+      "name": "Latent & Continuous Reasoning",
+      "description": "Reasoning in continuous latent space including Coconut, looped transformers, and recurrent depth approaches.",
+      "level": 2
+    },
+    {
+      "id": "search_and_tree_reasoning",
+      "name": "Search & Tree-Based Reasoning",
+      "description": "MCTS, tree-of-thought, language agent tree search, and deliberate planning via structured search over reasoning paths.",
+      "level": 2
+    },
+    {
+      "id": "mathematical_and_formal_reasoning",
+      "name": "Mathematical & Formal Reasoning",
+      "description": "Theorem proving, olympiad-level mathematics, formal verification, and symbolic reasoning with language models.",
+      "level": 2
+    },
+    {
+      "id": "rl_for_llm_reasoning",
+      "name": "RL for LLM Reasoning (RLVR)",
+      "description": "RL with verifiable rewards eliciting reasoning including DeepSeek-R1, Kimi k1.5, self-play, and expert iteration.",
+      "level": 2
+    },
+    {
+      "id": "reward_modeling",
+      "name": "Reward Modeling & Verification",
+      "description": "Process and outcome reward models, generative reward models, critique models, and automated verification systems.",
+      "level": 2
+    },
+    {
+      "id": "policy_optimization",
+      "name": "Policy Optimization Algorithms",
+      "description": "PPO, GRPO, DPO, FlowRL, and algorithmic innovations for stable and efficient LLM policy optimization.",
+      "level": 2
+    },
+    {
+      "id": "rl_theory_and_dynamics",
+      "name": "RL Theory & Training Dynamics",
+      "description": "Theoretical analysis of RL for LLMs covering exploration, entropy dynamics, reward limits, and training stability.",
+      "level": 2
+    },
+    {
+      "id": "vision_language_models",
+      "name": "Vision-Language Models",
+      "description": "Perception-focused VLMs for visual understanding, document analysis, multimodal QA, and visual chain-of-thought reasoning.",
+      "level": 2
+    },
+    {
+      "id": "unified_multimodal_models",
+      "name": "Unified Multimodal Models",
+      "description": "Single architectures integrating both multimodal understanding and generation across images, text, and other modalities.",
+      "level": 2
+    },
+    {
+      "id": "audio_and_speech_models",
+      "name": "Audio & Speech Models",
+      "description": "Real-time voice dialogue, speech synthesis, audio-language models, and multimodal audio-visual understanding.",
+      "level": 2
+    },
+    {
+      "id": "software_engineering_agents",
+      "name": "Software Engineering Agents",
+      "description": "AI agents for code generation, debugging, repository-level tasks, and end-to-end software engineering automation.",
+      "level": 2
+    },
+    {
+      "id": "computer_use_and_gui_agents",
+      "name": "Computer Use & GUI Agents",
+      "description": "Agents operating web browsers, desktop GUIs, and arbitrary computer interfaces through visual grounding and action.",
+      "level": 2
+    },
+    {
+      "id": "multi_agent_coordination",
+      "name": "Multi-Agent Coordination",
+      "description": "Architectures for coordinating multiple AI agents including hierarchical orchestration, peer-to-peer, and role specialization.",
+      "level": 2
+    },
+    {
+      "id": "tool_use_and_agent_protocols",
+      "name": "Tool Use & Agent Protocols",
+      "description": "Function calling, tool-integrated reasoning, MCP, A2A protocol, and infrastructure for agent-world interaction.",
+      "level": 2
+    },
+    {
+      "id": "agent_self_evolution",
+      "name": "Agent Self-Evolution",
+      "description": "Self-improving agents, open-ended skill acquisition, and systems that autonomously expand their own capabilities.",
+      "level": 2
+    },
+    {
+      "id": "agent_memory_systems",
+      "name": "Agent Memory Systems",
+      "description": "Long-term and short-term memory architectures enabling AI agents to retain and retrieve accumulated experience.",
+      "level": 2
+    },
+    {
+      "id": "retrieval_augmented_generation",
+      "name": "Retrieval-Augmented Generation",
+      "description": "RAG architectures, graph-based knowledge retrieval, and knowledge-augmented generation for grounded AI responses.",
+      "level": 2
+    },
+    {
+      "id": "context_engineering",
+      "name": "Context Engineering",
+      "description": "Deliberate shaping of agent context windows, KV-cache optimization, and stateful context management for production agents.",
+      "level": 2
+    },
+    {
+      "id": "image_generation_models",
+      "name": "Image Generation Models",
+      "description": "Autoregressive and diffusion image generation, visual tokenization architectures, and high-resolution synthesis approaches.",
+      "level": 2
+    },
+    {
+      "id": "video_and_world_models",
+      "name": "Video & World Models",
+      "description": "Video generation, interactive world simulators, physics-grounded world foundation models, and game-engine synthesis.",
+      "level": 2
+    },
+    {
+      "id": "creative_content_generation",
+      "name": "Creative Content Generation",
+      "description": "AI for human animation, film production, music, and professional-quality creative media generation.",
+      "level": 2
+    },
+    {
+      "id": "vision_language_action_models",
+      "name": "Vision-Language-Action Models",
+      "description": "VLA models connecting visual perception and language understanding to robot action for generalist control.",
+      "level": 2
+    },
+    {
+      "id": "robot_learning",
+      "name": "Robot Learning",
+      "description": "Imitation learning, sim-to-real transfer, dexterous manipulation, locomotion, and policy learning for physical robots.",
+      "level": 2
+    },
+    {
+      "id": "spatial_and_3d_intelligence",
+      "name": "Spatial & 3D Intelligence",
+      "description": "Spatial reasoning, 3D scene understanding, world-grounded navigation, and geometric intelligence for embodied AI.",
+      "level": 2
+    },
+    {
+      "id": "code_generation",
+      "name": "Code Generation",
+      "description": "LLM-based code synthesis, program generation from natural language, and automated code completion systems.",
+      "level": 2
+    },
+    {
+      "id": "ai_software_engineering",
+      "name": "AI Software Engineering",
+      "description": "AI-driven full software development lifecycle including testing, refactoring, code review, and CI/CD automation.",
+      "level": 2
+    },
+    {
+      "id": "ai_for_scientific_discovery",
+      "name": "AI for Scientific Discovery",
+      "description": "Autonomous hypothesis generation, open mathematical problem solving, and AI-driven end-to-end research workflows.",
+      "level": 2
+    },
+    {
+      "id": "medical_and_biology_ai",
+      "name": "Medical & Biology AI",
+      "description": "AI for medical diagnosis, drug discovery, single-cell biology, protein modeling, and clinical decision support.",
+      "level": 2
+    },
+    {
+      "id": "alignment_methods",
+      "name": "Alignment Methods",
+      "description": "RLHF, constitutional AI, deliberative alignment, and techniques for producing reliably safe and beneficial AI behavior.",
+      "level": 2
+    },
+    {
+      "id": "ai_governance",
+      "name": "AI Governance & Policy",
+      "description": "Regulatory frameworks, existential risk governance, power dynamics, and societal impact of advanced AI systems.",
+      "level": 2
+    },
+    {
+      "id": "hallucination_and_reliability",
+      "name": "Hallucination & Reliability",
+      "description": "Factual calibration, uncertainty quantification, hallucination detection, and reliability mitigation for deployed models.",
+      "level": 2
+    },
+    {
+      "id": "mechanistic_interpretability",
+      "name": "Mechanistic Interpretability",
+      "description": "Circuit-level analysis, feature attribution, thought tracing, and mechanistic understanding of AI model computation.",
+      "level": 2
+    },
+    {
+      "id": "model_behavior_analysis",
+      "name": "Model Behavior Analysis",
+      "description": "Behavioral characterization, capability elicitation, jagged intelligence patterns, and persona analysis in deployed models.",
+      "level": 2
+    },
+    {
+      "id": "benchmark_design",
+      "name": "Benchmark Design & Saturation",
+      "description": "Creating robust evaluation benchmarks, addressing data contamination, saturation dynamics, and evaluation best practices.",
+      "level": 2
+    },
+    {
+      "id": "agent_evaluation",
+      "name": "Agent & Task Evaluation",
+      "description": "Evaluation frameworks for agentic systems, tool use benchmarks, reasoning evals, and long-horizon task assessment.",
+      "level": 2
+    },
+    {
+      "id": "model_commoditization_and_open_source",
+      "name": "Commoditization & Open Source",
+      "description": "Open-source model dynamics, commoditization of frontier capabilities, and competitive implications of releases like DeepSeek.",
+      "level": 2
+    },
+    {
+      "id": "compute_and_hardware",
+      "name": "Compute & Hardware",
+      "description": "GPU market dynamics, semiconductor landscape, data center infrastructure investment, and compute economics.",
+      "level": 2
+    },
+    {
+      "id": "frontier_lab_competition",
+      "name": "Frontier Lab Competition",
+      "description": "Competitive dynamics between leading AI labs, market share shifts, model release timing, and strategic positioning.",
+      "level": 2
+    },
+    {
+      "id": "vertical_ai_and_saas_disruption",
+      "name": "Vertical AI & SaaS Disruption",
+      "description": "Domain-specific AI companies, disruption of incumbent SaaS vendors, and the AI-native product architecture shift.",
+      "level": 2
+    },
+    {
+      "id": "ai_pricing_and_business_models",
+      "name": "AI Pricing & Business Models",
+      "description": "Outcome-based pricing, token economics, unit economics of AI services, and business model innovation in the AI era.",
+      "level": 2
+    },
+    {
+      "id": "vc_and_startup_ecosystem",
+      "name": "VC & Startup Ecosystem",
+      "description": "Venture capital investment patterns, startup formation dynamics, funding rounds, and investor frameworks for AI companies.",
+      "level": 2
+    },
+    {
+      "id": "startup_formation_and_gtm",
+      "name": "Startup Formation & Go-to-Market",
+      "description": "Competitive moat building, go-to-market sequencing, market timing, and early-stage strategy for AI startups.",
+      "level": 2
+    }
+  ],
+  "edges": [
+    {
+      "parent_id": "meta_foundations",
+      "child_id": "pretraining_and_scaling",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "meta_foundations",
+      "child_id": "model_architecture",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "meta_foundations",
+      "child_id": "post_training_methods",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "meta_intelligence",
+      "child_id": "reasoning_and_planning",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "meta_intelligence",
+      "child_id": "reinforcement_learning",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "meta_intelligence",
+      "child_id": "multimodal_models",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "meta_agency",
+      "child_id": "agent_systems",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "meta_agency",
+      "child_id": "knowledge_and_memory",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "meta_applications",
+      "child_id": "generative_media",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "meta_applications",
+      "child_id": "robotics_and_embodied_ai",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "meta_applications",
+      "child_id": "code_and_software_ai",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "meta_applications",
+      "child_id": "scientific_and_medical_ai",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "meta_reliability",
+      "child_id": "alignment_and_safety",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "meta_reliability",
+      "child_id": "interpretability",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "meta_reliability",
+      "child_id": "evaluation_and_benchmarks",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "meta_ecosystem",
+      "child_id": "ai_market_dynamics",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "meta_ecosystem",
+      "child_id": "ai_business_and_economics",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "meta_ecosystem",
+      "child_id": "startup_and_investment",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "pretraining_and_scaling",
+      "child_id": "scaling_laws",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "pretraining_and_scaling",
+      "child_id": "pretraining_data",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "pretraining_and_scaling",
+      "child_id": "continual_learning",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "model_architecture",
+      "child_id": "transformer_alternatives",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "model_architecture",
+      "child_id": "long_context_and_attention",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "model_architecture",
+      "child_id": "adaptive_computation",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "model_architecture",
+      "child_id": "representation_learning",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "post_training_methods",
+      "child_id": "finetuning_and_distillation",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "post_training_methods",
+      "child_id": "synthetic_data_generation",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "post_training_methods",
+      "child_id": "in_context_and_meta_learning",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "post_training_methods",
+      "child_id": "test_time_learning",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "reasoning_and_planning",
+      "child_id": "chain_of_thought",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "reasoning_and_planning",
+      "child_id": "test_time_compute_scaling",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "reasoning_and_planning",
+      "child_id": "latent_reasoning",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "reasoning_and_planning",
+      "child_id": "search_and_tree_reasoning",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "reasoning_and_planning",
+      "child_id": "mathematical_and_formal_reasoning",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "reinforcement_learning",
+      "child_id": "rl_for_llm_reasoning",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "reinforcement_learning",
+      "child_id": "reward_modeling",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "reinforcement_learning",
+      "child_id": "policy_optimization",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "reinforcement_learning",
+      "child_id": "rl_theory_and_dynamics",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "multimodal_models",
+      "child_id": "vision_language_models",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "multimodal_models",
+      "child_id": "unified_multimodal_models",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "multimodal_models",
+      "child_id": "audio_and_speech_models",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "agent_systems",
+      "child_id": "software_engineering_agents",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "agent_systems",
+      "child_id": "computer_use_and_gui_agents",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "agent_systems",
+      "child_id": "multi_agent_coordination",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "agent_systems",
+      "child_id": "tool_use_and_agent_protocols",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "agent_systems",
+      "child_id": "agent_self_evolution",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "knowledge_and_memory",
+      "child_id": "agent_memory_systems",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "knowledge_and_memory",
+      "child_id": "retrieval_augmented_generation",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "knowledge_and_memory",
+      "child_id": "context_engineering",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "generative_media",
+      "child_id": "image_generation_models",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "generative_media",
+      "child_id": "video_and_world_models",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "generative_media",
+      "child_id": "creative_content_generation",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "robotics_and_embodied_ai",
+      "child_id": "vision_language_action_models",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "robotics_and_embodied_ai",
+      "child_id": "robot_learning",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "robotics_and_embodied_ai",
+      "child_id": "spatial_and_3d_intelligence",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "code_and_software_ai",
+      "child_id": "code_generation",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "code_and_software_ai",
+      "child_id": "ai_software_engineering",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "scientific_and_medical_ai",
+      "child_id": "ai_for_scientific_discovery",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "scientific_and_medical_ai",
+      "child_id": "medical_and_biology_ai",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "alignment_and_safety",
+      "child_id": "alignment_methods",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "alignment_and_safety",
+      "child_id": "ai_governance",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "alignment_and_safety",
+      "child_id": "hallucination_and_reliability",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "interpretability",
+      "child_id": "mechanistic_interpretability",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "interpretability",
+      "child_id": "model_behavior_analysis",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "evaluation_and_benchmarks",
+      "child_id": "benchmark_design",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "evaluation_and_benchmarks",
+      "child_id": "agent_evaluation",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "ai_market_dynamics",
+      "child_id": "model_commoditization_and_open_source",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "ai_market_dynamics",
+      "child_id": "compute_and_hardware",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "ai_market_dynamics",
+      "child_id": "frontier_lab_competition",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "ai_business_and_economics",
+      "child_id": "vertical_ai_and_saas_disruption",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "ai_business_and_economics",
+      "child_id": "ai_pricing_and_business_models",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "startup_and_investment",
+      "child_id": "vc_and_startup_ecosystem",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "startup_and_investment",
+      "child_id": "startup_formation_and_gtm",
+      "relationship": "contains",
+      "strength": 1.0
+    },
+    {
+      "parent_id": "reinforcement_learning",
+      "child_id": "reasoning_and_planning",
+      "relationship": "enables",
+      "strength": 0.95
+    },
+    {
+      "parent_id": "reasoning_and_planning",
+      "child_id": "agent_systems",
+      "relationship": "enables",
+      "strength": 0.9
+    },
+    {
+      "parent_id": "knowledge_and_memory",
+      "child_id": "agent_systems",
+      "relationship": "enables",
+      "strength": 0.88
+    },
+    {
+      "parent_id": "multimodal_models",
+      "child_id": "robotics_and_embodied_ai",
+      "relationship": "enables",
+      "strength": 0.9
+    },
+    {
+      "parent_id": "model_architecture",
+      "child_id": "reasoning_and_planning",
+      "relationship": "enables",
+      "strength": 0.8
+    },
+    {
+      "parent_id": "model_architecture",
+      "child_id": "multimodal_models",
+      "relationship": "enables",
+      "strength": 0.82
+    },
+    {
+      "parent_id": "pretraining_and_scaling",
+      "child_id": "reinforcement_learning",
+      "relationship": "related",
+      "strength": 0.8
+    },
+    {
+      "parent_id": "reinforcement_learning",
+      "child_id": "alignment_and_safety",
+      "relationship": "related",
+      "strength": 0.82
+    },
+    {
+      "parent_id": "interpretability",
+      "child_id": "alignment_and_safety",
+      "relationship": "enables",
+      "strength": 0.85
+    },
+    {
+      "parent_id": "evaluation_and_benchmarks",
+      "child_id": "reasoning_and_planning",
+      "relationship": "constrains",
+      "strength": 0.75
+    },
+    {
+      "parent_id": "agent_systems",
+      "child_id": "ai_business_and_economics",
+      "relationship": "enables",
+      "strength": 0.88
+    },
+    {
+      "parent_id": "agent_systems",
+      "child_id": "code_and_software_ai",
+      "relationship": "related",
+      "strength": 0.82
+    },
+    {
+      "parent_id": "generative_media",
+      "child_id": "robotics_and_embodied_ai",
+      "relationship": "enables",
+      "strength": 0.78
+    },
+    {
+      "parent_id": "ai_market_dynamics",
+      "child_id": "ai_business_and_economics",
+      "relationship": "related",
+      "strength": 0.85
+    },
+    {
+      "parent_id": "post_training_methods",
+      "child_id": "reinforcement_learning",
+      "relationship": "related",
+      "strength": 0.78
+    },
+    {
+      "parent_id": "reasoning_and_planning",
+      "child_id": "scientific_and_medical_ai",
+      "relationship": "enables",
+      "strength": 0.8
+    },
+    {
+      "parent_id": "multimodal_models",
+      "child_id": "generative_media",
+      "relationship": "related",
+      "strength": 0.72
+    },
+    {
+      "parent_id": "ai_market_dynamics",
+      "child_id": "pretraining_and_scaling",
+      "relationship": "constrains",
+      "strength": 0.72
+    }
+  ]
+}

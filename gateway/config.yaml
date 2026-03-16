@@ -1,0 +1,7 @@
+gateway:
+  heartbeat:
+    frequency_seconds: 1800
+    quiet_hours: "23:00-07:00"
+    timezone: "America/New_York"
+  debounce_threshold: 0.5
+  max_concurrent_jobs: 1

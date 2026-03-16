@@ -1,0 +1,998 @@
+2026-03-04 20:21:59,415 INFO __main__: Reprocessing claims for 287 sources
+2026-03-04 20:21:59 [info     ] api_semaphore_init             limit=5
+2026-03-04 20:24:13,720 INFO ingest.extractor: Evidence validation for 01KJS121AXT6P054GA6WR7XMSD: 35/35 claims kept, 0 dropped
+2026-03-04 20:24:24,887 INFO httpx: HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-04 20:24:27,378 INFO __main__: [1/287] Claims for 01KJS121AXT6P054GA6WR7XMSD: 35 claims persisted
+2026-03-04 20:24:50,498 INFO ingest.extractor: Evidence validation for 01KJS29W8KWK4R7YDZ99XPPMJ4: 0/0 claims kept, 0 dropped
+2026-03-04 20:24:50,501 INFO __main__: [2/287] Claims for 01KJS29W8KWK4R7YDZ99XPPMJ4: 0 claims persisted
+2026-03-04 20:25:43,451 INFO ingest.extractor: Evidence validation for 01KJS45TP1RNA19CN64D1F6SG9: 11/11 claims kept, 0 dropped
+2026-03-04 20:25:47,652 INFO httpx: HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-04 20:25:48,354 INFO __main__: [3/287] Claims for 01KJS45TP1RNA19CN64D1F6SG9: 11 claims persisted
+2026-03-04 20:27:33,752 INFO ingest.extractor: Evidence validation for 01KJS48D4HARDHAAK6D1NZ9847: 21/21 claims kept, 0 dropped
+2026-03-04 20:27:38,680 INFO httpx: HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-04 20:27:40,026 INFO __main__: [4/287] Claims for 01KJS48D4HARDHAAK6D1NZ9847: 21 claims persisted
+2026-03-04 20:28:05,877 INFO ingest.extractor: Evidence validation for 01KJSXF1PH0SBMWN0EDRQTPEBM: 0/0 claims kept, 0 dropped
+2026-03-04 20:28:05,879 INFO __main__: [5/287] Claims for 01KJSXF1PH0SBMWN0EDRQTPEBM: 0 claims persisted
+2026-03-04 20:30:20,400 INFO ingest.extractor: Evidence validation for 01KJT6CAK648DAKTSPDWC39MGR: 25/30 claims kept, 5 dropped
+2026-03-04 20:30:25,755 INFO httpx: HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-04 20:30:27,566 INFO __main__: [6/287] Claims for 01KJT6CAK648DAKTSPDWC39MGR: 25 claims persisted
+2026-03-04 20:32:20,062 INFO ingest.extractor: Evidence validation for 01KJT6H3QAXK80C0930JASQBPF: 18/20 claims kept, 2 dropped
+2026-03-04 20:32:25,122 INFO httpx: HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-04 20:32:26,349 INFO __main__: [7/287] Claims for 01KJT6H3QAXK80C0930JASQBPF: 18 claims persisted
+2026-03-04 20:35:16,587 INFO ingest.extractor: Evidence validation for 01KJT6M5JKBJ868294SBFCSXDV: 34/39 claims kept, 5 dropped
+2026-03-04 20:35:22,006 INFO httpx: HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-04 20:35:24,162 INFO __main__: [8/287] Claims for 01KJT6M5JKBJ868294SBFCSXDV: 34 claims persisted
+2026-03-04 20:38:14,605 INFO ingest.extractor: Evidence validation for 01KJTKMYHA551GS78K7M808D1V: 32/35 claims kept, 3 dropped
+2026-03-04 20:38:20,377 INFO httpx: HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-04 20:38:22,372 INFO __main__: [9/287] Claims for 01KJTKMYHA551GS78K7M808D1V: 32 claims persisted
+2026-03-04 20:40:14,097 INFO ingest.extractor: Evidence validation for 01KJTKT231S15HXEVDVGGYJ5PW: 18/24 claims kept, 6 dropped
+2026-03-04 20:40:18,487 INFO httpx: HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-04 20:40:19,748 INFO __main__: [10/287] Claims for 01KJTKT231S15HXEVDVGGYJ5PW: 18 claims persisted
+2026-03-04 20:42:51,221 INFO ingest.extractor: Evidence validation for 01KJTKVK4Y2PFK1WTGG8AFGW50: 28/30 claims kept, 2 dropped
+2026-03-04 20:42:58,121 INFO httpx: HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-04 20:42:59,843 INFO __main__: [11/287] Claims for 01KJTKVK4Y2PFK1WTGG8AFGW50: 28 claims persisted
+2026-03-04 20:45:07,412 INFO ingest.extractor: Evidence validation for 01KJTKWSMKJ3SMNHSW8EDA0W5J: 32/32 claims kept, 0 dropped
+2026-03-04 20:45:12,430 INFO httpx: HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-04 20:45:14,447 INFO __main__: [12/287] Claims for 01KJTKWSMKJ3SMNHSW8EDA0W5J: 32 claims persisted
+2026-03-04 20:47:39,928 INFO ingest.extractor: Evidence validation for 01KJTKZK03YVKP1SXPM67EFTWB: 32/33 claims kept, 1 dropped
+2026-03-04 20:47:44,812 INFO httpx: HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-04 20:47:46,997 INFO __main__: [13/287] Claims for 01KJTKZK03YVKP1SXPM67EFTWB: 32 claims persisted
+2026-03-04 20:50:13,308 INFO ingest.extractor: Evidence validation for 01KJTM1K7FTHXQE1VVYGNH182B: 32/34 claims kept, 2 dropped
+2026-03-04 20:50:18,969 INFO httpx: HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-04 20:50:20,903 INFO __main__: [14/287] Claims for 01KJTM1K7FTHXQE1VVYGNH182B: 32 claims persisted
+2026-03-04 20:51:55,087 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 20:51:55,087 INFO ingest.extractor: Evidence validation for 01KJTM33JCSNTRYDT4JYQWBZE9: 0/0 claims kept, 0 dropped
+2026-03-04 20:51:55,090 INFO __main__: [15/287] Claims for 01KJTM33JCSNTRYDT4JYQWBZE9: 0 claims persisted
+2026-03-04 20:53:46,890 INFO ingest.extractor: Evidence validation for 01KJTM4P7PSZ9TQ1WJX19JC1TM: 20/28 claims kept, 8 dropped
+2026-03-04 20:53:51,450 INFO httpx: HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-04 20:53:52,748 INFO __main__: [16/287] Claims for 01KJTM4P7PSZ9TQ1WJX19JC1TM: 20 claims persisted
+2026-03-04 20:55:53,080 INFO ingest.extractor: Evidence validation for 01KJTM7AQBVQ8DCDMHH6B4J318: 25/26 claims kept, 1 dropped
+2026-03-04 20:55:57,890 INFO httpx: HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-04 20:55:59,558 INFO __main__: [17/287] Claims for 01KJTM7AQBVQ8DCDMHH6B4J318: 25 claims persisted
+2026-03-04 20:58:39,538 INFO ingest.extractor: Evidence validation for 01KJTM994WR8NQRXJYD7Z74EHT: 25/28 claims kept, 3 dropped
+2026-03-04 20:58:45,967 INFO httpx: HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-04 20:58:47,618 INFO __main__: [18/287] Claims for 01KJTM994WR8NQRXJYD7Z74EHT: 25 claims persisted
+2026-03-04 21:00:34,928 INFO ingest.extractor: Evidence validation for 01KJTMAX0GM8NACZPT9SGWHQ3X: 22/24 claims kept, 2 dropped
+2026-03-04 21:00:39,984 INFO httpx: HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-04 21:00:41,372 INFO __main__: [19/287] Claims for 01KJTMAX0GM8NACZPT9SGWHQ3X: 22 claims persisted
+2026-03-04 21:02:25,571 INFO ingest.extractor: Evidence validation for 01KJTMCJY1VR7XBK30K79RA9A4: 19/23 claims kept, 4 dropped
+2026-03-04 21:02:33,574 INFO httpx: HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-04 21:02:35,015 INFO __main__: [20/287] Claims for 01KJTMCJY1VR7XBK30K79RA9A4: 19 claims persisted
+2026-03-04 21:04:44,089 INFO ingest.extractor: Evidence validation for 01KJTME7HTKC015QA0VJG19C8H: 16/23 claims kept, 7 dropped
+2026-03-04 21:04:50,086 INFO httpx: HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-04 21:04:51,283 INFO __main__: [21/287] Claims for 01KJTME7HTKC015QA0VJG19C8H: 16 claims persisted
+2026-03-04 21:07:31,347 INFO ingest.extractor: Evidence validation for 01KJTMGSTSRJEV5VTV93WVW7P9: 34/39 claims kept, 5 dropped
+2026-03-04 21:07:38,201 INFO httpx: HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-04 21:07:40,425 INFO __main__: [22/287] Claims for 01KJTMGSTSRJEV5VTV93WVW7P9: 34 claims persisted
+2026-03-04 21:10:34,765 INFO ingest.extractor: Evidence validation for 01KJTMK79EGQTSBGMN1B215EKM: 41/42 claims kept, 1 dropped
+2026-03-04 21:10:41,893 INFO httpx: HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-04 21:10:44,403 INFO __main__: [23/287] Claims for 01KJTMK79EGQTSBGMN1B215EKM: 41 claims persisted
+2026-03-04 21:11:04,101 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:11:04,101 INFO ingest.extractor: Evidence validation for 01KJTMKZPAPXSV9XW07NJW9KTR: 0/0 claims kept, 0 dropped
+2026-03-04 21:11:04,104 INFO __main__: [24/287] Claims for 01KJTMKZPAPXSV9XW07NJW9KTR: 0 claims persisted
+2026-03-04 21:11:24,667 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:11:24,667 INFO ingest.extractor: Evidence validation for 01KJTMPYR9ZD888R6EKRFPSX4J: 0/0 claims kept, 0 dropped
+2026-03-04 21:11:24,670 INFO __main__: [25/287] Claims for 01KJTMPYR9ZD888R6EKRFPSX4J: 0 claims persisted
+2026-03-04 21:11:50,602 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:11:50,603 INFO ingest.extractor: Evidence validation for 01KJTMRHHGEJAPYKFBPHVV6MCE: 0/0 claims kept, 0 dropped
+2026-03-04 21:11:50,607 INFO __main__: [26/287] Claims for 01KJTMRHHGEJAPYKFBPHVV6MCE: 0 claims persisted
+2026-03-04 21:12:51,715 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:12:51,715 INFO ingest.extractor: Evidence validation for 01KJTMV92BSG058TX3CFME2BQT: 0/0 claims kept, 0 dropped
+2026-03-04 21:12:51,718 INFO __main__: [27/287] Claims for 01KJTMV92BSG058TX3CFME2BQT: 0 claims persisted
+2026-03-04 21:13:41,151 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:13:41,151 INFO ingest.extractor: Evidence validation for 01KJTMX34E13AFQZCAJG9KF8JD: 0/0 claims kept, 0 dropped
+2026-03-04 21:13:41,153 INFO __main__: [28/287] Claims for 01KJTMX34E13AFQZCAJG9KF8JD: 0 claims persisted
+2026-03-04 21:14:28,253 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:14:28,253 INFO ingest.extractor: Evidence validation for 01KJTMXXZGZQAMKDR6N10JMD1M: 0/0 claims kept, 0 dropped
+2026-03-04 21:14:28,254 INFO __main__: [29/287] Claims for 01KJTMXXZGZQAMKDR6N10JMD1M: 0 claims persisted
+2026-03-04 21:14:47,643 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:14:47,643 INFO ingest.extractor: Evidence validation for 01KJTN04YCTMRTN22442JC56F3: 0/0 claims kept, 0 dropped
+2026-03-04 21:14:47,646 INFO __main__: [30/287] Claims for 01KJTN04YCTMRTN22442JC56F3: 0 claims persisted
+2026-03-04 21:15:13,126 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:15:13,127 INFO ingest.extractor: Evidence validation for 01KJTN36CP4M8VZYW8BNS2TYDM: 0/0 claims kept, 0 dropped
+2026-03-04 21:15:13,130 INFO __main__: [31/287] Claims for 01KJTN36CP4M8VZYW8BNS2TYDM: 0 claims persisted
+2026-03-04 21:16:10,556 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:16:10,556 INFO ingest.extractor: Evidence validation for 01KJTN3N0MX4CM4A1ME57J3ME0: 0/0 claims kept, 0 dropped
+2026-03-04 21:16:10,558 INFO __main__: [32/287] Claims for 01KJTN3N0MX4CM4A1ME57J3ME0: 0 claims persisted
+2026-03-04 21:16:55,837 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:16:55,837 INFO ingest.extractor: Evidence validation for 01KJTN6GH7AG4Y8XWP6J7Y2BTN: 0/0 claims kept, 0 dropped
+2026-03-04 21:16:55,839 INFO __main__: [33/287] Claims for 01KJTN6GH7AG4Y8XWP6J7Y2BTN: 0 claims persisted
+2026-03-04 21:17:44,386 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:17:44,386 INFO ingest.extractor: Evidence validation for 01KJTN8HBDDB552EK3Q950SYDQ: 0/0 claims kept, 0 dropped
+2026-03-04 21:17:44,389 INFO __main__: [34/287] Claims for 01KJTN8HBDDB552EK3Q950SYDQ: 0 claims persisted
+2026-03-04 21:18:15,377 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:18:15,377 INFO ingest.extractor: Evidence validation for 01KJTNBKSKJ6ZDQDWY9WHGNQTP: 0/0 claims kept, 0 dropped
+2026-03-04 21:18:15,380 INFO __main__: [35/287] Claims for 01KJTNBKSKJ6ZDQDWY9WHGNQTP: 0 claims persisted
+2026-03-04 21:18:44,248 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:18:44,249 INFO ingest.extractor: Evidence validation for 01KJTNBZH14TEKXP19FT16W8TY: 0/0 claims kept, 0 dropped
+2026-03-04 21:18:44,252 INFO __main__: [36/287] Claims for 01KJTNBZH14TEKXP19FT16W8TY: 0 claims persisted
+2026-03-04 21:19:09,728 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:19:09,728 INFO ingest.extractor: Evidence validation for 01KJTNEFKKKGT5BEWNG2W426MV: 0/0 claims kept, 0 dropped
+2026-03-04 21:19:09,731 INFO __main__: [37/287] Claims for 01KJTNEFKKKGT5BEWNG2W426MV: 0 claims persisted
+2026-03-04 21:19:36,110 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:19:36,110 INFO ingest.extractor: Evidence validation for 01KJTNH60KQN3MFCZCQVRWCQX3: 0/0 claims kept, 0 dropped
+2026-03-04 21:19:36,112 INFO __main__: [38/287] Claims for 01KJTNH60KQN3MFCZCQVRWCQX3: 0 claims persisted
+2026-03-04 21:20:37,474 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:20:37,475 INFO ingest.extractor: Evidence validation for 01KJTNJCZNRC73ZRS71693XZBS: 0/0 claims kept, 0 dropped
+2026-03-04 21:20:37,477 INFO __main__: [39/287] Claims for 01KJTNJCZNRC73ZRS71693XZBS: 0 claims persisted
+2026-03-04 21:21:26,517 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:21:26,517 INFO ingest.extractor: Evidence validation for 01KJTNMPQ6X586C0PCRSY62TC5: 0/0 claims kept, 0 dropped
+2026-03-04 21:21:26,519 INFO __main__: [40/287] Claims for 01KJTNMPQ6X586C0PCRSY62TC5: 0 claims persisted
+2026-03-04 21:22:14,640 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:22:14,640 INFO ingest.extractor: Evidence validation for 01KJTNPY47KBG455VZ4FCZC9FR: 0/0 claims kept, 0 dropped
+2026-03-04 21:22:14,642 INFO __main__: [41/287] Claims for 01KJTNPY47KBG455VZ4FCZC9FR: 0 claims persisted
+2026-03-04 21:22:17,675 INFO ingest.extractor: Text exceeds 2x budget (184320 > 160000), using chunked extraction
+2026-03-04 21:22:17,675 INFO ingest.chunked_extractor: Chunked claim extraction for 01KJTNQNAG7PQ6JS7X6JENJ7JH: 4 chunks from 184320 chars
+2026-03-04 21:23:11,823 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:23:11,823 INFO ingest.extractor: Evidence validation for 01KJTNQNAG7PQ6JS7X6JENJ7JH: 0/0 claims kept, 0 dropped
+2026-03-04 21:23:16,714 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:23:16,714 INFO ingest.extractor: Evidence validation for 01KJTNQNAG7PQ6JS7X6JENJ7JH: 0/0 claims kept, 0 dropped
+2026-03-04 21:23:18,377 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:23:18,377 INFO ingest.extractor: Evidence validation for 01KJTNQNAG7PQ6JS7X6JENJ7JH: 0/0 claims kept, 0 dropped
+2026-03-04 21:23:18,923 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:23:18,924 INFO ingest.extractor: Evidence validation for 01KJTNQNAG7PQ6JS7X6JENJ7JH: 0/0 claims kept, 0 dropped
+2026-03-04 21:23:18,929 INFO ingest.chunked_extractor: Chunked extraction merged for 01KJTNQNAG7PQ6JS7X6JENJ7JH: 0 claims, 0 concepts
+2026-03-04 21:23:18,930 INFO __main__: [42/287] Claims for 01KJTNQNAG7PQ6JS7X6JENJ7JH: 0 claims persisted
+2026-03-04 21:23:56,905 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:23:56,906 INFO ingest.extractor: Evidence validation for 01KJTNTHTPSNR70SSEDMC3Y2CZ: 0/0 claims kept, 0 dropped
+2026-03-04 21:23:56,909 INFO __main__: [43/287] Claims for 01KJTNTHTPSNR70SSEDMC3Y2CZ: 0 claims persisted
+2026-03-04 21:23:59,927 INFO ingest.extractor: Text exceeds 2x budget (162219 > 160000), using chunked extraction
+2026-03-04 21:23:59,928 INFO ingest.chunked_extractor: Chunked claim extraction for 01KJTNW0W4JFNXBS89R7JDZG5G: 4 chunks from 162219 chars
+2026-03-04 21:25:02,238 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:25:02,239 INFO ingest.extractor: Evidence validation for 01KJTNW0W4JFNXBS89R7JDZG5G: 0/0 claims kept, 0 dropped
+2026-03-04 21:25:03,343 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:25:03,343 INFO ingest.extractor: Evidence validation for 01KJTNW0W4JFNXBS89R7JDZG5G: 0/0 claims kept, 0 dropped
+2026-03-04 21:25:04,154 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:25:04,154 INFO ingest.extractor: Evidence validation for 01KJTNW0W4JFNXBS89R7JDZG5G: 0/0 claims kept, 0 dropped
+2026-03-04 21:25:07,025 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:25:07,026 INFO ingest.extractor: Evidence validation for 01KJTNW0W4JFNXBS89R7JDZG5G: 0/0 claims kept, 0 dropped
+2026-03-04 21:25:07,030 INFO ingest.chunked_extractor: Chunked extraction merged for 01KJTNW0W4JFNXBS89R7JDZG5G: 0 claims, 0 concepts
+2026-03-04 21:25:07,031 INFO __main__: [44/287] Claims for 01KJTNW0W4JFNXBS89R7JDZG5G: 0 claims persisted
+2026-03-04 21:26:00,635 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:26:00,635 INFO ingest.extractor: Evidence validation for 01KJTNZS7X36EGSKTVH7B5S18M: 0/0 claims kept, 0 dropped
+2026-03-04 21:26:00,637 INFO __main__: [45/287] Claims for 01KJTNZS7X36EGSKTVH7B5S18M: 0 claims persisted
+2026-03-04 21:26:26,476 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:26:26,477 INFO ingest.extractor: Evidence validation for 01KJTP54EYE9CBWV7A593AFAQP: 0/0 claims kept, 0 dropped
+2026-03-04 21:26:26,481 INFO __main__: [46/287] Claims for 01KJTP54EYE9CBWV7A593AFAQP: 0 claims persisted
+2026-03-04 21:26:50,157 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:26:50,157 INFO ingest.extractor: Evidence validation for 01KJTP56NVHW0GKJH3XQCG4E4V: 0/0 claims kept, 0 dropped
+2026-03-04 21:26:50,163 INFO __main__: [47/287] Claims for 01KJTP56NVHW0GKJH3XQCG4E4V: 0 claims persisted
+2026-03-04 21:27:13,649 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:27:13,649 INFO ingest.extractor: Evidence validation for 01KJTP7WMBW5WAB4NJAB1ESNTJ: 0/0 claims kept, 0 dropped
+2026-03-04 21:27:13,651 INFO __main__: [48/287] Claims for 01KJTP7WMBW5WAB4NJAB1ESNTJ: 0 claims persisted
+2026-03-04 21:27:39,212 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:27:39,212 INFO ingest.extractor: Evidence validation for 01KJTPAM3DXFNX3FEHJJTZ73H3: 0/0 claims kept, 0 dropped
+2026-03-04 21:27:39,217 INFO __main__: [49/287] Claims for 01KJTPAM3DXFNX3FEHJJTZ73H3: 0 claims persisted
+2026-03-04 21:28:08,864 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:28:08,864 INFO ingest.extractor: Evidence validation for 01KJTPB47QAEMCV664AH1X89Y6: 0/0 claims kept, 0 dropped
+2026-03-04 21:28:08,868 INFO __main__: [50/287] Claims for 01KJTPB47QAEMCV664AH1X89Y6: 0 claims persisted
+2026-03-04 21:28:35,899 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:28:35,899 INFO ingest.extractor: Evidence validation for 01KJTPC0T74FVTRCTH3Q6YM2XC: 0/0 claims kept, 0 dropped
+2026-03-04 21:28:35,902 INFO __main__: [51/287] Claims for 01KJTPC0T74FVTRCTH3Q6YM2XC: 0 claims persisted
+2026-03-04 21:29:07,248 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:29:07,248 INFO ingest.extractor: Evidence validation for 01KJTPFD62H29TJN51149EYX48: 0/0 claims kept, 0 dropped
+2026-03-04 21:29:07,252 INFO __main__: [52/287] Claims for 01KJTPFD62H29TJN51149EYX48: 0 claims persisted
+2026-03-04 21:29:38,072 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:29:38,072 INFO ingest.extractor: Evidence validation for 01KJTPFVK63FP9BRNCF5F7XXC2: 0/0 claims kept, 0 dropped
+2026-03-04 21:29:38,078 INFO __main__: [53/287] Claims for 01KJTPFVK63FP9BRNCF5F7XXC2: 0 claims persisted
+2026-03-04 21:30:32,618 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:30:32,618 INFO ingest.extractor: Evidence validation for 01KJTPGRRAEH18W4SK0C0J6SEV: 0/0 claims kept, 0 dropped
+2026-03-04 21:30:32,621 INFO __main__: [54/287] Claims for 01KJTPGRRAEH18W4SK0C0J6SEV: 0 claims persisted
+2026-03-04 21:31:08,942 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:31:08,943 INFO ingest.extractor: Evidence validation for 01KJTPMJBF37SDX28VSNECG0AW: 0/0 claims kept, 0 dropped
+2026-03-04 21:31:08,946 INFO __main__: [55/287] Claims for 01KJTPMJBF37SDX28VSNECG0AW: 0 claims persisted
+2026-03-04 21:32:03,843 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:32:03,843 INFO ingest.extractor: Evidence validation for 01KJTPP3C1RJAVANFKA3HAJKWY: 0/0 claims kept, 0 dropped
+2026-03-04 21:32:03,846 INFO __main__: [56/287] Claims for 01KJTPP3C1RJAVANFKA3HAJKWY: 0 claims persisted
+2026-03-04 21:32:39,628 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:32:39,629 INFO ingest.extractor: Evidence validation for 01KJTPP5WBNZNR9WY0VMZ7TH3T: 0/0 claims kept, 0 dropped
+2026-03-04 21:32:39,632 INFO __main__: [57/287] Claims for 01KJTPP5WBNZNR9WY0VMZ7TH3T: 0 claims persisted
+2026-03-04 21:33:13,217 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:33:13,217 INFO ingest.extractor: Evidence validation for 01KJTPV81QCQHFFQ4QGCPKJ8FY: 0/0 claims kept, 0 dropped
+2026-03-04 21:33:13,222 INFO __main__: [58/287] Claims for 01KJTPV81QCQHFFQ4QGCPKJ8FY: 0 claims persisted
+2026-03-04 21:33:44,933 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:33:44,933 INFO ingest.extractor: Evidence validation for 01KJTPVSWTK7XQS7HT1TQQVXV2: 0/0 claims kept, 0 dropped
+2026-03-04 21:33:44,936 INFO __main__: [59/287] Claims for 01KJTPVSWTK7XQS7HT1TQQVXV2: 0 claims persisted
+2026-03-04 21:34:21,942 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:34:21,943 INFO ingest.extractor: Evidence validation for 01KJTPVV117TGWN29DZEAS90WA: 0/0 claims kept, 0 dropped
+2026-03-04 21:34:21,947 INFO __main__: [60/287] Claims for 01KJTPVV117TGWN29DZEAS90WA: 0 claims persisted
+2026-03-04 21:34:58,127 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:34:58,129 INFO ingest.extractor: Evidence validation for 01KJTQ0EQT3NPZSQAZ4D1D8SJA: 0/0 claims kept, 0 dropped
+2026-03-04 21:34:58,133 INFO __main__: [61/287] Claims for 01KJTQ0EQT3NPZSQAZ4D1D8SJA: 0 claims persisted
+2026-03-04 21:35:30,833 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:35:30,833 INFO ingest.extractor: Evidence validation for 01KJTQ0YV3DYY4VZD2DA8XQWKX: 0/0 claims kept, 0 dropped
+2026-03-04 21:35:30,836 INFO __main__: [62/287] Claims for 01KJTQ0YV3DYY4VZD2DA8XQWKX: 0 claims persisted
+2026-03-04 21:36:01,109 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:36:01,109 INFO ingest.extractor: Evidence validation for 01KJTQ0XQRB50VSN951C5WB06K: 0/0 claims kept, 0 dropped
+2026-03-04 21:36:01,113 INFO __main__: [63/287] Claims for 01KJTQ0XQRB50VSN951C5WB06K: 0 claims persisted
+2026-03-04 21:36:24,763 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:36:24,763 INFO ingest.extractor: Evidence validation for 01KJTQ65VXMV31FEDTS7ZXS8VH: 0/0 claims kept, 0 dropped
+2026-03-04 21:36:24,766 INFO __main__: [64/287] Claims for 01KJTQ65VXMV31FEDTS7ZXS8VH: 0 claims persisted
+2026-03-04 21:36:55,080 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:36:55,080 INFO ingest.extractor: Evidence validation for 01KJTQ6SB0CMGZ7EKYGMYAWPGD: 0/0 claims kept, 0 dropped
+2026-03-04 21:36:55,087 INFO __main__: [65/287] Claims for 01KJTQ6SB0CMGZ7EKYGMYAWPGD: 0 claims persisted
+2026-03-04 21:37:29,114 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:37:29,115 INFO ingest.extractor: Evidence validation for 01KJTQ74E7CE1V0S09YFQEF1Q3: 0/0 claims kept, 0 dropped
+2026-03-04 21:37:29,120 INFO __main__: [66/287] Claims for 01KJTQ74E7CE1V0S09YFQEF1Q3: 0 claims persisted
+2026-03-04 21:38:00,167 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:38:00,168 INFO ingest.extractor: Evidence validation for 01KJTQCEKYJAG3872TW79TNCZ8: 0/0 claims kept, 0 dropped
+2026-03-04 21:38:00,171 INFO __main__: [67/287] Claims for 01KJTQCEKYJAG3872TW79TNCZ8: 0 claims persisted
+2026-03-04 21:39:01,442 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:39:01,442 INFO ingest.extractor: Evidence validation for 01KJTQCH1TD2GP3Y316YC5PX06: 0/0 claims kept, 0 dropped
+2026-03-04 21:39:01,444 INFO __main__: [68/287] Claims for 01KJTQCH1TD2GP3Y316YC5PX06: 0 claims persisted
+2026-03-04 21:39:50,543 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:39:50,544 INFO ingest.extractor: Evidence validation for 01KJTQD302SP6FG6TY60GF5Q1E: 0/0 claims kept, 0 dropped
+2026-03-04 21:39:50,547 INFO __main__: [69/287] Claims for 01KJTQD302SP6FG6TY60GF5Q1E: 0 claims persisted
+2026-03-04 21:40:45,847 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:40:45,847 INFO ingest.extractor: Evidence validation for 01KJTQH6AARJQYQXWEP3E5GY52: 0/0 claims kept, 0 dropped
+2026-03-04 21:40:45,849 INFO __main__: [70/287] Claims for 01KJTQH6AARJQYQXWEP3E5GY52: 0 claims persisted
+2026-03-04 21:41:05,035 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:41:05,036 INFO ingest.extractor: Evidence validation for 01KJTQH85KRGRP02JGFVY2ZZF6: 0/0 claims kept, 0 dropped
+2026-03-04 21:41:05,039 INFO __main__: [71/287] Claims for 01KJTQH85KRGRP02JGFVY2ZZF6: 0 claims persisted
+2026-03-04 21:41:32,770 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:41:32,770 INFO ingest.extractor: Evidence validation for 01KJTQH65719Z4P50D125AY4H2: 0/0 claims kept, 0 dropped
+2026-03-04 21:41:32,774 INFO __main__: [72/287] Claims for 01KJTQH65719Z4P50D125AY4H2: 0 claims persisted
+2026-03-04 21:42:31,420 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:42:31,420 INFO ingest.extractor: Evidence validation for 01KJTQRK4149XWRK6QFSAHABQX: 0/0 claims kept, 0 dropped
+2026-03-04 21:42:31,422 INFO __main__: [73/287] Claims for 01KJTQRK4149XWRK6QFSAHABQX: 0 claims persisted
+2026-03-04 21:43:19,645 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:43:19,646 INFO ingest.extractor: Evidence validation for 01KJTQRXBY5D86ATF1V7EGZ234: 0/0 claims kept, 0 dropped
+2026-03-04 21:43:19,647 INFO __main__: [74/287] Claims for 01KJTQRXBY5D86ATF1V7EGZ234: 0 claims persisted
+2026-03-04 21:44:05,979 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:44:05,980 INFO ingest.extractor: Evidence validation for 01KJTQSWGFZP6G4KFH7FXBA089: 0/0 claims kept, 0 dropped
+2026-03-04 21:44:05,981 INFO __main__: [75/287] Claims for 01KJTQSWGFZP6G4KFH7FXBA089: 0 claims persisted
+2026-03-04 21:44:29,381 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:44:29,381 INFO ingest.extractor: Evidence validation for 01KJV3AME561KWT5RJ1EJ0BTQ3: 0/0 claims kept, 0 dropped
+2026-03-04 21:44:29,384 INFO __main__: [76/287] Claims for 01KJV3AME561KWT5RJ1EJ0BTQ3: 0 claims persisted
+2026-03-04 21:44:57,429 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:44:57,430 INFO ingest.extractor: Evidence validation for 01KJV3DVFC97VTBMSKRB726WDH: 0/0 claims kept, 0 dropped
+2026-03-04 21:44:57,433 INFO __main__: [77/287] Claims for 01KJV3DVFC97VTBMSKRB726WDH: 0 claims persisted
+2026-03-04 21:45:19,674 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:45:19,675 INFO ingest.extractor: Evidence validation for 01KJV3EHT79TRZC43MWGV8AFJ9: 0/0 claims kept, 0 dropped
+2026-03-04 21:45:19,678 INFO __main__: [78/287] Claims for 01KJV3EHT79TRZC43MWGV8AFJ9: 0 claims persisted
+2026-03-04 21:46:09,076 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:46:09,077 INFO ingest.extractor: Evidence validation for 01KJV3G6RYWC5JM8X47AK9AAGE: 0/0 claims kept, 0 dropped
+2026-03-04 21:46:09,079 INFO __main__: [79/287] Claims for 01KJV3G6RYWC5JM8X47AK9AAGE: 0 claims persisted
+2026-03-04 21:47:03,632 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:47:03,632 INFO ingest.extractor: Evidence validation for 01KJV3M3CCRCTJ0M3XV0TM1W6Y: 0/0 claims kept, 0 dropped
+2026-03-04 21:47:03,635 INFO __main__: [80/287] Claims for 01KJV3M3CCRCTJ0M3XV0TM1W6Y: 0 claims persisted
+2026-03-04 21:47:51,367 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:47:51,367 INFO ingest.extractor: Evidence validation for 01KJV3MZFWPT1XMRZ5BZYQ0DMX: 0/0 claims kept, 0 dropped
+2026-03-04 21:47:51,369 INFO __main__: [81/287] Claims for 01KJV3MZFWPT1XMRZ5BZYQ0DMX: 0 claims persisted
+2026-03-04 21:48:18,704 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:48:18,704 INFO ingest.extractor: Evidence validation for 01KJV3PQ9W8J5XF8VBCBBYZEF3: 0/0 claims kept, 0 dropped
+2026-03-04 21:48:18,709 INFO __main__: [82/287] Claims for 01KJV3PQ9W8J5XF8VBCBBYZEF3: 0 claims persisted
+2026-03-04 21:48:41,435 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:48:41,435 INFO ingest.extractor: Evidence validation for 01KJV3VT1CZCW1CH2F11Y2B6ND: 0/0 claims kept, 0 dropped
+2026-03-04 21:48:41,438 INFO __main__: [83/287] Claims for 01KJV3VT1CZCW1CH2F11Y2B6ND: 0 claims persisted
+2026-03-04 21:49:03,967 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:49:03,968 INFO ingest.extractor: Evidence validation for 01KJV3W9QTWHPKY0X75EST48R9: 0/0 claims kept, 0 dropped
+2026-03-04 21:49:03,970 INFO __main__: [84/287] Claims for 01KJV3W9QTWHPKY0X75EST48R9: 0 claims persisted
+2026-03-04 21:49:27,703 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:49:27,703 INFO ingest.extractor: Evidence validation for 01KJV3X90H49CTVN35T1QDQR8V: 0/0 claims kept, 0 dropped
+2026-03-04 21:49:27,707 INFO __main__: [85/287] Claims for 01KJV3X90H49CTVN35T1QDQR8V: 0 claims persisted
+2026-03-04 21:49:53,090 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:49:53,090 INFO ingest.extractor: Evidence validation for 01KJV42M0KB822AY266HGWP4JD: 0/0 claims kept, 0 dropped
+2026-03-04 21:49:53,095 INFO __main__: [86/287] Claims for 01KJV42M0KB822AY266HGWP4JD: 0 claims persisted
+2026-03-04 21:50:20,488 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:50:20,489 INFO ingest.extractor: Evidence validation for 01KJV42RE16RXA64ZVX352JNJ0: 0/0 claims kept, 0 dropped
+2026-03-04 21:50:20,492 INFO __main__: [87/287] Claims for 01KJV42RE16RXA64ZVX352JNJ0: 0 claims persisted
+2026-03-04 21:50:48,846 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:50:48,847 INFO ingest.extractor: Evidence validation for 01KJV44APF5CB8BG6AH8428PA3: 0/0 claims kept, 0 dropped
+2026-03-04 21:50:48,851 INFO __main__: [88/287] Claims for 01KJV44APF5CB8BG6AH8428PA3: 0 claims persisted
+2026-03-04 21:51:12,460 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:51:12,460 INFO ingest.extractor: Evidence validation for 01KJV47G2KX4WPZ9E3Y2JY5AF1: 0/0 claims kept, 0 dropped
+2026-03-04 21:51:12,463 INFO __main__: [89/287] Claims for 01KJV47G2KX4WPZ9E3Y2JY5AF1: 0 claims persisted
+2026-03-04 21:51:39,800 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:51:39,800 INFO ingest.extractor: Evidence validation for 01KJV47KDZ75MQ27779QTQTGET: 0/0 claims kept, 0 dropped
+2026-03-04 21:51:39,803 INFO __main__: [90/287] Claims for 01KJV47KDZ75MQ27779QTQTGET: 0 claims persisted
+2026-03-04 21:52:08,008 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:52:08,008 INFO ingest.extractor: Evidence validation for 01KJV49W0K92F6SQQ3HMJTR25N: 0/0 claims kept, 0 dropped
+2026-03-04 21:52:08,011 INFO __main__: [91/287] Claims for 01KJV49W0K92F6SQQ3HMJTR25N: 0 claims persisted
+2026-03-04 21:52:35,912 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:52:35,912 INFO ingest.extractor: Evidence validation for 01KJV4D04E2B7T3FE86HZTW793: 0/0 claims kept, 0 dropped
+2026-03-04 21:52:35,914 INFO __main__: [92/287] Claims for 01KJV4D04E2B7T3FE86HZTW793: 0 claims persisted
+2026-03-04 21:53:28,466 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:53:28,466 INFO ingest.extractor: Evidence validation for 01KJV4D5YXR99VW5J24NP6VPEV: 0/0 claims kept, 0 dropped
+2026-03-04 21:53:28,467 INFO __main__: [93/287] Claims for 01KJV4D5YXR99VW5J24NP6VPEV: 0 claims persisted
+2026-03-04 21:54:24,309 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:54:24,309 INFO ingest.extractor: Evidence validation for 01KJV4HRBK6JRFK1M5EVM7SWP9: 0/0 claims kept, 0 dropped
+2026-03-04 21:54:24,313 INFO __main__: [94/287] Claims for 01KJV4HRBK6JRFK1M5EVM7SWP9: 0 claims persisted
+2026-03-04 21:55:09,305 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:55:09,305 INFO ingest.extractor: Evidence validation for 01KJV4KX85J6NJAA4F3RAMSYRT: 0/0 claims kept, 0 dropped
+2026-03-04 21:55:09,307 INFO __main__: [95/287] Claims for 01KJV4KX85J6NJAA4F3RAMSYRT: 0 claims persisted
+2026-03-04 21:55:31,472 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:55:31,472 INFO ingest.extractor: Evidence validation for 01KJV4M1H37QFTG0NF996MPAA3: 0/0 claims kept, 0 dropped
+2026-03-04 21:55:31,477 INFO __main__: [96/287] Claims for 01KJV4M1H37QFTG0NF996MPAA3: 0 claims persisted
+2026-03-04 21:55:58,103 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:55:58,104 INFO ingest.extractor: Evidence validation for 01KJV4QZ2D36W4SHVYMB30SQEQ: 0/0 claims kept, 0 dropped
+2026-03-04 21:55:58,106 INFO __main__: [97/287] Claims for 01KJV4QZ2D36W4SHVYMB30SQEQ: 0 claims persisted
+2026-03-04 21:56:25,535 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:56:25,535 INFO ingest.extractor: Evidence validation for 01KJV4T8S3Z42W7X5WDZ4VHT1R: 0/0 claims kept, 0 dropped
+2026-03-04 21:56:25,541 INFO __main__: [98/287] Claims for 01KJV4T8S3Z42W7X5WDZ4VHT1R: 0 claims persisted
+2026-03-04 21:56:44,440 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:56:44,440 INFO ingest.extractor: Evidence validation for 01KJV4TENFJVB1SFDHWQ7S13DB: 0/0 claims kept, 0 dropped
+2026-03-04 21:56:44,443 INFO __main__: [99/287] Claims for 01KJV4TENFJVB1SFDHWQ7S13DB: 0 claims persisted
+2026-03-04 21:57:09,878 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:57:09,878 INFO ingest.extractor: Evidence validation for 01KJV4YYANBM1GBBMZN5JZ41KC: 0/0 claims kept, 0 dropped
+2026-03-04 21:57:09,882 INFO __main__: [100/287] Claims for 01KJV4YYANBM1GBBMZN5JZ41KC: 0 claims persisted
+2026-03-04 21:57:33,276 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:57:33,276 INFO ingest.extractor: Evidence validation for 01KJV50FH1MQXMHQ5PN1HY1V5H: 0/0 claims kept, 0 dropped
+2026-03-04 21:57:33,278 INFO __main__: [101/287] Claims for 01KJV50FH1MQXMHQ5PN1HY1V5H: 0 claims persisted
+2026-03-04 21:57:59,536 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:57:59,537 INFO ingest.extractor: Evidence validation for 01KJV50MCDN3MJA7NSEB9CDW07: 0/0 claims kept, 0 dropped
+2026-03-04 21:57:59,540 INFO __main__: [102/287] Claims for 01KJV50MCDN3MJA7NSEB9CDW07: 0 claims persisted
+2026-03-04 21:58:22,576 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:58:22,577 INFO ingest.extractor: Evidence validation for 01KJV54RZQPDJQRT35JX596THH: 0/0 claims kept, 0 dropped
+2026-03-04 21:58:22,580 INFO __main__: [103/287] Claims for 01KJV54RZQPDJQRT35JX596THH: 0 claims persisted
+2026-03-04 21:58:58,747 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:58:58,747 INFO ingest.extractor: Evidence validation for 01KJV56ZJP3YQ2YAG3JP5SXGQ9: 0/0 claims kept, 0 dropped
+2026-03-04 21:58:58,754 INFO __main__: [104/287] Claims for 01KJV56ZJP3YQ2YAG3JP5SXGQ9: 0 claims persisted
+2026-03-04 21:59:27,909 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:59:27,909 INFO ingest.extractor: Evidence validation for 01KJV56Z979BYNF24090F4GS3V: 0/0 claims kept, 0 dropped
+2026-03-04 21:59:27,912 INFO __main__: [105/287] Claims for 01KJV56Z979BYNF24090F4GS3V: 0 claims persisted
+2026-03-04 21:59:54,530 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 21:59:54,531 INFO ingest.extractor: Evidence validation for 01KJV5B2QGE5H6X8PHDC4VKPV5: 0/0 claims kept, 0 dropped
+2026-03-04 21:59:54,536 INFO __main__: [106/287] Claims for 01KJV5B2QGE5H6X8PHDC4VKPV5: 0 claims persisted
+2026-03-04 22:00:45,502 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:00:45,503 INFO ingest.extractor: Evidence validation for 01KJV5D2Z7MBVHR0KNHYB9AWNN: 0/0 claims kept, 0 dropped
+2026-03-04 22:00:45,507 INFO __main__: [107/287] Claims for 01KJV5D2Z7MBVHR0KNHYB9AWNN: 0 claims persisted
+2026-03-04 22:01:21,861 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:01:21,861 INFO ingest.extractor: Evidence validation for 01KJV5E1EBTAMS77SPACEPGAMJ: 0/0 claims kept, 0 dropped
+2026-03-04 22:01:21,863 INFO __main__: [108/287] Claims for 01KJV5E1EBTAMS77SPACEPGAMJ: 0 claims persisted
+2026-03-04 22:01:24,875 INFO ingest.extractor: Text exceeds 2x budget (191911 > 160000), using chunked extraction
+2026-03-04 22:01:24,877 INFO ingest.chunked_extractor: Chunked claim extraction for 01KJV5GK45PQ35EM1MKMTW3S3D: 4 chunks from 191911 chars
+2026-03-04 22:02:27,014 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:02:27,014 INFO ingest.extractor: Evidence validation for 01KJV5GK45PQ35EM1MKMTW3S3D: 0/0 claims kept, 0 dropped
+2026-03-04 22:02:27,590 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:02:27,590 INFO ingest.extractor: Evidence validation for 01KJV5GK45PQ35EM1MKMTW3S3D: 0/0 claims kept, 0 dropped
+2026-03-04 22:02:29,361 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:02:29,361 INFO ingest.extractor: Evidence validation for 01KJV5GK45PQ35EM1MKMTW3S3D: 0/0 claims kept, 0 dropped
+2026-03-04 22:02:30,677 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:02:30,678 INFO ingest.extractor: Evidence validation for 01KJV5GK45PQ35EM1MKMTW3S3D: 0/0 claims kept, 0 dropped
+2026-03-04 22:02:30,683 INFO ingest.chunked_extractor: Chunked extraction merged for 01KJV5GK45PQ35EM1MKMTW3S3D: 0 claims, 0 concepts
+2026-03-04 22:02:30,684 INFO __main__: [109/287] Claims for 01KJV5GK45PQ35EM1MKMTW3S3D: 0 claims persisted
+2026-03-04 22:02:58,893 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:02:58,893 INFO ingest.extractor: Evidence validation for 01KJV5HWSHN2WAY8MNS8DJ7GGR: 0/0 claims kept, 0 dropped
+2026-03-04 22:02:58,897 INFO __main__: [110/287] Claims for 01KJV5HWSHN2WAY8MNS8DJ7GGR: 0 claims persisted
+2026-03-04 22:04:01,399 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:04:01,399 INFO ingest.extractor: Evidence validation for 01KJV5MK13QFXGWZX2B14E1256: 0/0 claims kept, 0 dropped
+2026-03-04 22:04:01,402 INFO __main__: [111/287] Claims for 01KJV5MK13QFXGWZX2B14E1256: 0 claims persisted
+2026-03-04 22:05:05,272 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:05:05,272 INFO ingest.extractor: Evidence validation for 01KJV5S7TQ43GW6XHHXNQ6EFCD: 0/0 claims kept, 0 dropped
+2026-03-04 22:05:05,277 INFO __main__: [112/287] Claims for 01KJV5S7TQ43GW6XHHXNQ6EFCD: 0 claims persisted
+2026-03-04 22:05:39,140 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:05:39,140 INFO ingest.extractor: Evidence validation for 01KJV5SBG07KYAVYZW3MP8Q5PK: 0/0 claims kept, 0 dropped
+2026-03-04 22:05:39,145 INFO __main__: [113/287] Claims for 01KJV5SBG07KYAVYZW3MP8Q5PK: 0 claims persisted
+2026-03-04 22:06:11,155 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:06:11,155 INFO ingest.extractor: Evidence validation for 01KJV5VMCP73BDWGE27RDDZF82: 0/0 claims kept, 0 dropped
+2026-03-04 22:06:11,159 INFO __main__: [114/287] Claims for 01KJV5VMCP73BDWGE27RDDZF82: 0 claims persisted
+2026-03-04 22:06:37,119 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:06:37,120 INFO ingest.extractor: Evidence validation for 01KJV5Z0M13PSHR7W5AF96FMPP: 0/0 claims kept, 0 dropped
+2026-03-04 22:06:37,123 INFO __main__: [115/287] Claims for 01KJV5Z0M13PSHR7W5AF96FMPP: 0 claims persisted
+2026-03-04 22:07:15,911 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:07:15,911 INFO ingest.extractor: Evidence validation for 01KJV5Z47180HNS6GWHJ322R11: 0/0 claims kept, 0 dropped
+2026-03-04 22:07:15,915 INFO __main__: [116/287] Claims for 01KJV5Z47180HNS6GWHJ322R11: 0 claims persisted
+2026-03-04 22:07:46,144 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:07:46,145 INFO ingest.extractor: Evidence validation for 01KJV61P523MA947YC2AG7ZZ2Y: 0/0 claims kept, 0 dropped
+2026-03-04 22:07:46,147 INFO __main__: [117/287] Claims for 01KJV61P523MA947YC2AG7ZZ2Y: 0 claims persisted
+2026-03-04 22:08:11,163 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:08:11,163 INFO ingest.extractor: Evidence validation for 01KJV64ZDFQ7S86XPVP6FNANGM: 0/0 claims kept, 0 dropped
+2026-03-04 22:08:11,166 INFO __main__: [118/287] Claims for 01KJV64ZDFQ7S86XPVP6FNANGM: 0 claims persisted
+2026-03-04 22:08:44,176 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:08:44,176 INFO ingest.extractor: Evidence validation for 01KJV65FZDWMAWMC6AV3HP5XFS: 0/0 claims kept, 0 dropped
+2026-03-04 22:08:44,180 INFO __main__: [119/287] Claims for 01KJV65FZDWMAWMC6AV3HP5XFS: 0 claims persisted
+2026-03-04 22:09:10,738 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:09:10,738 INFO ingest.extractor: Evidence validation for 01KJV68FPFQGPKRY2YQEF12W1Z: 0/0 claims kept, 0 dropped
+2026-03-04 22:09:10,741 INFO __main__: [120/287] Claims for 01KJV68FPFQGPKRY2YQEF12W1Z: 0 claims persisted
+2026-03-04 22:10:01,703 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:10:01,703 INFO ingest.extractor: Evidence validation for 01KJV6C0D1QTS98FMWFF8MZ02H: 0/0 claims kept, 0 dropped
+2026-03-04 22:10:01,706 INFO __main__: [121/287] Claims for 01KJV6C0D1QTS98FMWFF8MZ02H: 0 claims persisted
+2026-03-04 22:10:46,558 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:10:46,558 INFO ingest.extractor: Evidence validation for 01KJV6C78WQY03ZNVYQNK4HSNJ: 0/0 claims kept, 0 dropped
+2026-03-04 22:10:46,561 INFO __main__: [122/287] Claims for 01KJV6C78WQY03ZNVYQNK4HSNJ: 0 claims persisted
+2026-03-04 22:11:06,565 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:11:06,566 INFO ingest.extractor: Evidence validation for 01KJV6G030GM66QCNBBZCETGSN: 0/0 claims kept, 0 dropped
+2026-03-04 22:11:06,569 INFO __main__: [123/287] Claims for 01KJV6G030GM66QCNBBZCETGSN: 0 claims persisted
+2026-03-04 22:11:56,711 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:11:56,711 INFO ingest.extractor: Evidence validation for 01KJV6J7A4PJ91RSCRYNM08706: 0/0 claims kept, 0 dropped
+2026-03-04 22:11:56,713 INFO __main__: [124/287] Claims for 01KJV6J7A4PJ91RSCRYNM08706: 0 claims persisted
+2026-03-04 22:12:23,037 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:12:23,037 INFO ingest.extractor: Evidence validation for 01KJV6JNEC6GFA7ADGS68H01C6: 0/0 claims kept, 0 dropped
+2026-03-04 22:12:23,042 INFO __main__: [125/287] Claims for 01KJV6JNEC6GFA7ADGS68H01C6: 0 claims persisted
+2026-03-04 22:12:44,481 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:12:44,481 INFO ingest.extractor: Evidence validation for 01KJV6PJWCZR91CR34XBKX2QC3: 0/0 claims kept, 0 dropped
+2026-03-04 22:12:44,483 INFO __main__: [126/287] Claims for 01KJV6PJWCZR91CR34XBKX2QC3: 0 claims persisted
+2026-03-04 22:13:36,430 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:13:36,430 INFO ingest.extractor: Evidence validation for 01KJV6RRM0P2ZKE7JH4GXYJTWQ: 0/0 claims kept, 0 dropped
+2026-03-04 22:13:36,431 INFO __main__: [127/287] Claims for 01KJV6RRM0P2ZKE7JH4GXYJTWQ: 0 claims persisted
+2026-03-04 22:14:09,265 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:14:09,265 INFO ingest.extractor: Evidence validation for 01KJV6RXXKMVXC5S8G3B55E8Y3: 0/0 claims kept, 0 dropped
+2026-03-04 22:14:09,267 INFO __main__: [128/287] Claims for 01KJV6RXXKMVXC5S8G3B55E8Y3: 0 claims persisted
+2026-03-04 22:14:34,262 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:14:34,262 INFO ingest.extractor: Evidence validation for 01KJV6X74JDVGQFRCVXY0381BG: 0/0 claims kept, 0 dropped
+2026-03-04 22:14:34,266 INFO __main__: [129/287] Claims for 01KJV6X74JDVGQFRCVXY0381BG: 0 claims persisted
+2026-03-04 22:14:56,779 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:14:56,779 INFO ingest.extractor: Evidence validation for 01KJV6YYQP486TG5V2MHN93FJ1: 0/0 claims kept, 0 dropped
+2026-03-04 22:14:56,782 INFO __main__: [130/287] Claims for 01KJV6YYQP486TG5V2MHN93FJ1: 0 claims persisted
+2026-03-04 22:15:20,853 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:15:20,853 INFO ingest.extractor: Evidence validation for 01KJV6ZWE5FB28K6MXQ6G4S161: 0/0 claims kept, 0 dropped
+2026-03-04 22:15:20,858 INFO __main__: [131/287] Claims for 01KJV6ZWE5FB28K6MXQ6G4S161: 0 claims persisted
+2026-03-04 22:15:51,710 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:15:51,710 INFO ingest.extractor: Evidence validation for 01KJV749E6WKMFMYWCX4C8G0XN: 0/0 claims kept, 0 dropped
+2026-03-04 22:15:51,712 INFO __main__: [132/287] Claims for 01KJV749E6WKMFMYWCX4C8G0XN: 0 claims persisted
+2026-03-04 22:16:15,723 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:16:15,723 INFO ingest.extractor: Evidence validation for 01KJV75D184XZYHHEGQC0R3Z9X: 0/0 claims kept, 0 dropped
+2026-03-04 22:16:15,727 INFO __main__: [133/287] Claims for 01KJV75D184XZYHHEGQC0R3Z9X: 0 claims persisted
+2026-03-04 22:16:40,525 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:16:40,525 INFO ingest.extractor: Evidence validation for 01KJV75HGRX7X4V2Y5C4QMP3PR: 0/0 claims kept, 0 dropped
+2026-03-04 22:16:40,529 INFO __main__: [134/287] Claims for 01KJV75HGRX7X4V2Y5C4QMP3PR: 0 claims persisted
+2026-03-04 22:16:43,546 INFO ingest.extractor: Text exceeds 2x budget (251987 > 160000), using chunked extraction
+2026-03-04 22:16:43,547 INFO ingest.chunked_extractor: Chunked claim extraction for 01KJV79X7AQ5A1HM6FJ7H94JEY: 5 chunks from 251987 chars
+2026-03-04 22:17:29,639 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:17:29,640 INFO ingest.extractor: Evidence validation for 01KJV79X7AQ5A1HM6FJ7H94JEY: 0/0 claims kept, 0 dropped
+2026-03-04 22:17:30,683 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:17:30,684 INFO ingest.extractor: Evidence validation for 01KJV79X7AQ5A1HM6FJ7H94JEY: 0/0 claims kept, 0 dropped
+2026-03-04 22:17:32,078 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:17:32,078 INFO ingest.extractor: Evidence validation for 01KJV79X7AQ5A1HM6FJ7H94JEY: 0/0 claims kept, 0 dropped
+2026-03-04 22:17:32,365 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:17:32,365 INFO ingest.extractor: Evidence validation for 01KJV79X7AQ5A1HM6FJ7H94JEY: 0/0 claims kept, 0 dropped
+2026-03-04 22:17:50,561 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:17:50,562 INFO ingest.extractor: Evidence validation for 01KJV79X7AQ5A1HM6FJ7H94JEY: 0/0 claims kept, 0 dropped
+2026-03-04 22:17:50,565 INFO ingest.chunked_extractor: Chunked extraction merged for 01KJV79X7AQ5A1HM6FJ7H94JEY: 0 claims, 0 concepts
+2026-03-04 22:17:50,566 INFO __main__: [135/287] Claims for 01KJV79X7AQ5A1HM6FJ7H94JEY: 0 claims persisted
+2026-03-04 22:18:13,340 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:18:13,340 INFO ingest.extractor: Evidence validation for 01KJV7CCFG6EWQVMGT0J196AVQ: 0/0 claims kept, 0 dropped
+2026-03-04 22:18:13,344 INFO __main__: [136/287] Claims for 01KJV7CCFG6EWQVMGT0J196AVQ: 0 claims persisted
+2026-03-04 22:18:42,036 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:18:42,037 INFO ingest.extractor: Evidence validation for 01KJV7DD3SM8YFQ5FA54VAY8AJ: 0/0 claims kept, 0 dropped
+2026-03-04 22:18:42,039 INFO __main__: [137/287] Claims for 01KJV7DD3SM8YFQ5FA54VAY8AJ: 0 claims persisted
+2026-03-04 22:19:06,682 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:19:06,682 INFO ingest.extractor: Evidence validation for 01KJV7N48DXDR5PVV35ZAP2N82: 0/0 claims kept, 0 dropped
+2026-03-04 22:19:06,685 INFO __main__: [138/287] Claims for 01KJV7N48DXDR5PVV35ZAP2N82: 0 claims persisted
+2026-03-04 22:19:27,619 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:19:27,619 INFO ingest.extractor: Evidence validation for 01KJV7NM6AWC5CXT3SRS8DRN77: 0/0 claims kept, 0 dropped
+2026-03-04 22:19:27,622 INFO __main__: [139/287] Claims for 01KJV7NM6AWC5CXT3SRS8DRN77: 0 claims persisted
+2026-03-04 22:19:51,322 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:19:51,323 INFO ingest.extractor: Evidence validation for 01KJV7PXBQFTHEVGHDCGE868Q0: 0/0 claims kept, 0 dropped
+2026-03-04 22:19:51,326 INFO __main__: [140/287] Claims for 01KJV7PXBQFTHEVGHDCGE868Q0: 0 claims persisted
+2026-03-04 22:20:21,407 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:20:21,407 INFO ingest.extractor: Evidence validation for 01KJV7TRY28HAYF81PCXPPZCAW: 0/0 claims kept, 0 dropped
+2026-03-04 22:20:21,411 INFO __main__: [141/287] Claims for 01KJV7TRY28HAYF81PCXPPZCAW: 0 claims persisted
+2026-03-04 22:20:55,710 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:20:55,710 INFO ingest.extractor: Evidence validation for 01KJV7V9DKPNV4479NX1BZSD1S: 0/0 claims kept, 0 dropped
+2026-03-04 22:20:55,712 INFO __main__: [142/287] Claims for 01KJV7V9DKPNV4479NX1BZSD1S: 0 claims persisted
+2026-03-04 22:21:20,442 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:21:20,442 INFO ingest.extractor: Evidence validation for 01KJV7XNNNZZKZQZ5ZYP58GQ2V: 0/0 claims kept, 0 dropped
+2026-03-04 22:21:20,445 INFO __main__: [143/287] Claims for 01KJV7XNNNZZKZQZ5ZYP58GQ2V: 0 claims persisted
+2026-03-04 22:21:51,113 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:21:51,114 INFO ingest.extractor: Evidence validation for 01KJV8271TDJ2R7E09R133E9V0: 0/0 claims kept, 0 dropped
+2026-03-04 22:21:51,119 INFO __main__: [144/287] Claims for 01KJV8271TDJ2R7E09R133E9V0: 0 claims persisted
+2026-03-04 22:22:45,441 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:22:45,441 INFO ingest.extractor: Evidence validation for 01KJV83GN1RMMXTNYQWH3W34F5: 0/0 claims kept, 0 dropped
+2026-03-04 22:22:45,443 INFO __main__: [145/287] Claims for 01KJV83GN1RMMXTNYQWH3W34F5: 0 claims persisted
+2026-03-04 22:23:24,008 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:23:24,010 INFO ingest.extractor: Evidence validation for 01KJV84KVSHNA6GM9MPCTDT8Q5: 0/0 claims kept, 0 dropped
+2026-03-04 22:23:24,016 INFO __main__: [146/287] Claims for 01KJV84KVSHNA6GM9MPCTDT8Q5: 0 claims persisted
+2026-03-04 22:23:56,953 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:23:56,953 INFO ingest.extractor: Evidence validation for 01KJV8790RPPM2TQYQAXJ37F8K: 0/0 claims kept, 0 dropped
+2026-03-04 22:23:56,959 INFO __main__: [147/287] Claims for 01KJV8790RPPM2TQYQAXJ37F8K: 0 claims persisted
+2026-03-04 22:24:19,432 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:24:19,433 INFO ingest.extractor: Evidence validation for 01KJV89Q4XJ3GHGFF55XY78V0D: 0/0 claims kept, 0 dropped
+2026-03-04 22:24:19,436 INFO __main__: [148/287] Claims for 01KJV89Q4XJ3GHGFF55XY78V0D: 0 claims persisted
+2026-03-04 22:24:48,758 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:24:48,759 INFO ingest.extractor: Evidence validation for 01KJV8BD2M08NZNP5XVEDCJ3KC: 0/0 claims kept, 0 dropped
+2026-03-04 22:24:48,766 INFO __main__: [149/287] Claims for 01KJV8BD2M08NZNP5XVEDCJ3KC: 0 claims persisted
+2026-03-04 22:25:38,681 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:25:38,683 INFO ingest.extractor: Evidence validation for 01KJV8DVH3CJGCY00XAEE8YT2P: 0/0 claims kept, 0 dropped
+2026-03-04 22:25:38,693 INFO __main__: [150/287] Claims for 01KJV8DVH3CJGCY00XAEE8YT2P: 0 claims persisted
+2026-03-04 22:26:15,482 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:26:15,483 INFO ingest.extractor: Evidence validation for 01KJV8HGEPZYBJ5JXYBKCNJR3W: 0/0 claims kept, 0 dropped
+2026-03-04 22:26:15,494 INFO __main__: [151/287] Claims for 01KJV8HGEPZYBJ5JXYBKCNJR3W: 0 claims persisted
+2026-03-04 22:27:02,384 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:27:02,399 INFO ingest.extractor: Evidence validation for 01KJV8JK292KN8R7YPV9Y8P533: 0/0 claims kept, 0 dropped
+2026-03-04 22:27:02,422 INFO __main__: [152/287] Claims for 01KJV8JK292KN8R7YPV9Y8P533: 0 claims persisted
+2026-03-04 22:28:08,536 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:28:08,536 INFO ingest.extractor: Evidence validation for 01KJV8MTT26XS883PR5T1B9DDN: 0/0 claims kept, 0 dropped
+2026-03-04 22:28:08,541 INFO __main__: [153/287] Claims for 01KJV8MTT26XS883PR5T1B9DDN: 0 claims persisted
+2026-03-04 22:28:35,157 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:28:35,157 INFO ingest.extractor: Evidence validation for 01KJV8RNT6FBW0VTJM3BEEZ7J9: 0/0 claims kept, 0 dropped
+2026-03-04 22:28:35,160 INFO __main__: [154/287] Claims for 01KJV8RNT6FBW0VTJM3BEEZ7J9: 0 claims persisted
+2026-03-04 22:29:19,300 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:29:19,301 INFO ingest.extractor: Evidence validation for 01KJV8TCC8ZC7V7N7J8K8CYWTX: 0/0 claims kept, 0 dropped
+2026-03-04 22:29:19,304 INFO __main__: [155/287] Claims for 01KJV8TCC8ZC7V7N7J8K8CYWTX: 0 claims persisted
+2026-03-04 22:29:56,343 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:29:56,343 INFO ingest.extractor: Evidence validation for 01KJV8WEM4N2QDRN4NSWYE8XX1: 0/0 claims kept, 0 dropped
+2026-03-04 22:29:56,346 INFO __main__: [156/287] Claims for 01KJV8WEM4N2QDRN4NSWYE8XX1: 0 claims persisted
+2026-03-04 22:30:29,259 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:30:29,259 INFO ingest.extractor: Evidence validation for 01KJV8YY98H1JVRFWY0MPHRY2F: 0/0 claims kept, 0 dropped
+2026-03-04 22:30:29,263 INFO __main__: [157/287] Claims for 01KJV8YY98H1JVRFWY0MPHRY2F: 0 claims persisted
+2026-03-04 22:31:18,440 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:31:18,440 INFO ingest.extractor: Evidence validation for 01KJV8ZDJ2H3FJFSRW52DE18X7: 0/0 claims kept, 0 dropped
+2026-03-04 22:31:18,446 INFO __main__: [158/287] Claims for 01KJV8ZDJ2H3FJFSRW52DE18X7: 0 claims persisted
+2026-03-04 22:31:54,339 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:31:54,339 INFO ingest.extractor: Evidence validation for 01KJVDVYWFCKN89G9QS87E4ST5: 0/0 claims kept, 0 dropped
+2026-03-04 22:31:54,342 INFO __main__: [159/287] Claims for 01KJVDVYWFCKN89G9QS87E4ST5: 0 claims persisted
+2026-03-04 22:32:34,558 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:32:34,558 INFO ingest.extractor: Evidence validation for 01KJVGAVH2QZZGJDZYB2Y43W1M: 0/0 claims kept, 0 dropped
+2026-03-04 22:32:34,563 INFO __main__: [160/287] Claims for 01KJVGAVH2QZZGJDZYB2Y43W1M: 0 claims persisted
+2026-03-04 22:32:37,652 INFO ingest.extractor: Text exceeds 2x budget (102947 > 100000), using chunked extraction
+2026-03-04 22:32:37,653 INFO ingest.chunked_extractor: Chunked claim extraction for 01KJVHQGH8HF40T32NJ0ADK404: 4 chunks from 102947 chars
+2026-03-04 22:34:19,978 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:34:19,980 INFO ingest.extractor: Evidence validation for 01KJVHQGH8HF40T32NJ0ADK404: 0/0 claims kept, 0 dropped
+2026-03-04 22:34:23,679 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:34:23,680 INFO ingest.extractor: Evidence validation for 01KJVHQGH8HF40T32NJ0ADK404: 0/0 claims kept, 0 dropped
+2026-03-04 22:34:31,450 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:34:31,451 INFO ingest.extractor: Evidence validation for 01KJVHQGH8HF40T32NJ0ADK404: 0/0 claims kept, 0 dropped
+2026-03-04 22:34:34,381 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:34:34,381 INFO ingest.extractor: Evidence validation for 01KJVHQGH8HF40T32NJ0ADK404: 0/0 claims kept, 0 dropped
+2026-03-04 22:34:34,391 INFO ingest.chunked_extractor: Chunked extraction merged for 01KJVHQGH8HF40T32NJ0ADK404: 0 claims, 0 concepts
+2026-03-04 22:34:34,394 INFO __main__: [161/287] Claims for 01KJVHQGH8HF40T32NJ0ADK404: 0 claims persisted
+2026-03-04 22:35:21,812 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:35:21,812 INFO ingest.extractor: Evidence validation for 01KJVHW24FPVBK88X2RSRAMY6V: 0/0 claims kept, 0 dropped
+2026-03-04 22:35:21,817 INFO __main__: [162/287] Claims for 01KJVHW24FPVBK88X2RSRAMY6V: 0 claims persisted
+2026-03-04 22:36:31,612 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:36:31,613 INFO ingest.extractor: Evidence validation for 01KJVHWJNMSKRJGJF4T97SY0Y4: 0/0 claims kept, 0 dropped
+2026-03-04 22:36:31,616 INFO __main__: [163/287] Claims for 01KJVHWJNMSKRJGJF4T97SY0Y4: 0 claims persisted
+2026-03-04 22:37:26,279 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:37:26,280 INFO ingest.extractor: Evidence validation for 01KJVHZDJPDF3HWHB7Q6Y3J5NP: 0/0 claims kept, 0 dropped
+2026-03-04 22:37:26,283 INFO __main__: [164/287] Claims for 01KJVHZDJPDF3HWHB7Q6Y3J5NP: 0 claims persisted
+2026-03-04 22:37:53,854 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:37:53,855 INFO ingest.extractor: Evidence validation for 01KJVJ4E397Z94YQ9BK8ECKS3K: 0/0 claims kept, 0 dropped
+2026-03-04 22:37:53,861 INFO __main__: [165/287] Claims for 01KJVJ4E397Z94YQ9BK8ECKS3K: 0 claims persisted
+2026-03-04 22:38:41,765 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:38:41,772 INFO ingest.extractor: Evidence validation for 01KJVJ4GHWQJ4E9T3EKKD6DZAG: 0/0 claims kept, 0 dropped
+2026-03-04 22:38:41,796 INFO __main__: [166/287] Claims for 01KJVJ4GHWQJ4E9T3EKKD6DZAG: 0 claims persisted
+2026-03-04 22:39:30,316 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:39:30,317 INFO ingest.extractor: Evidence validation for 01KJVJ6D0CCF5T2WR30GJ4N3ZC: 0/0 claims kept, 0 dropped
+2026-03-04 22:39:30,344 INFO __main__: [167/287] Claims for 01KJVJ6D0CCF5T2WR30GJ4N3ZC: 0 claims persisted
+2026-03-04 22:40:11,900 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:40:11,900 INFO ingest.extractor: Evidence validation for 01KJVJA8X4HWSWGQNWXFFH9NAA: 0/0 claims kept, 0 dropped
+2026-03-04 22:40:11,903 INFO __main__: [168/287] Claims for 01KJVJA8X4HWSWGQNWXFFH9NAA: 0 claims persisted
+2026-03-04 22:41:02,454 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:41:02,454 INFO ingest.extractor: Evidence validation for 01KJVJDB5G5CT52AENVJGX06SP: 0/0 claims kept, 0 dropped
+2026-03-04 22:41:02,458 INFO __main__: [169/287] Claims for 01KJVJDB5G5CT52AENVJGX06SP: 0 claims persisted
+2026-03-04 22:41:45,371 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:41:45,371 INFO ingest.extractor: Evidence validation for 01KJVJEW3EF9XQHV71AYF16DM2: 0/0 claims kept, 0 dropped
+2026-03-04 22:41:45,379 INFO __main__: [170/287] Claims for 01KJVJEW3EF9XQHV71AYF16DM2: 0 claims persisted
+2026-03-04 22:42:15,373 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:42:15,373 INFO ingest.extractor: Evidence validation for 01KJVJGNCYG2K9CQ7QV0ZDJSJR: 0/0 claims kept, 0 dropped
+2026-03-04 22:42:15,377 INFO __main__: [171/287] Claims for 01KJVJGNCYG2K9CQ7QV0ZDJSJR: 0 claims persisted
+2026-03-04 22:42:57,658 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:42:57,658 INFO ingest.extractor: Evidence validation for 01KJVJJDA3WN8TM1Z8YHBJ9PJQ: 0/0 claims kept, 0 dropped
+2026-03-04 22:42:57,663 INFO __main__: [172/287] Claims for 01KJVJJDA3WN8TM1Z8YHBJ9PJQ: 0 claims persisted
+2026-03-04 22:43:33,091 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:43:33,091 INFO ingest.extractor: Evidence validation for 01KJVJPTJY48JVQAX88MX39NQS: 0/0 claims kept, 0 dropped
+2026-03-04 22:43:33,094 INFO __main__: [173/287] Claims for 01KJVJPTJY48JVQAX88MX39NQS: 0 claims persisted
+2026-03-04 22:44:28,197 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:44:28,197 INFO ingest.extractor: Evidence validation for 01KJVJSX48VT7YXSTKZWDHE8PK: 0/0 claims kept, 0 dropped
+2026-03-04 22:44:28,202 INFO __main__: [174/287] Claims for 01KJVJSX48VT7YXSTKZWDHE8PK: 0 claims persisted
+2026-03-04 22:45:23,888 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:45:23,890 INFO ingest.extractor: Evidence validation for 01KJVJSXB77C96F4QVMJ33JV6Y: 0/0 claims kept, 0 dropped
+2026-03-04 22:45:23,892 INFO __main__: [175/287] Claims for 01KJVJSXB77C96F4QVMJ33JV6Y: 0 claims persisted
+2026-03-04 22:46:11,184 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:46:11,184 INFO ingest.extractor: Evidence validation for 01KJVJY5T807HD28DPP1BPKRQY: 0/0 claims kept, 0 dropped
+2026-03-04 22:46:11,188 INFO __main__: [176/287] Claims for 01KJVJY5T807HD28DPP1BPKRQY: 0 claims persisted
+2026-03-04 22:46:31,273 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:46:31,273 INFO ingest.extractor: Evidence validation for 01KJVK1H1AAMMZ39G04CH7AJRV: 0/0 claims kept, 0 dropped
+2026-03-04 22:46:31,276 INFO __main__: [177/287] Claims for 01KJVK1H1AAMMZ39G04CH7AJRV: 0 claims persisted
+2026-03-04 22:46:49,109 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:46:49,109 INFO ingest.extractor: Evidence validation for 01KJVK34BDBNGATEJ1ATCY05MC: 0/0 claims kept, 0 dropped
+2026-03-04 22:46:49,114 INFO __main__: [178/287] Claims for 01KJVK34BDBNGATEJ1ATCY05MC: 0 claims persisted
+2026-03-04 22:47:08,212 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:47:08,212 INFO ingest.extractor: Evidence validation for 01KJVK5SZYSF6XQBZ8SP0HTAT1: 0/0 claims kept, 0 dropped
+2026-03-04 22:47:08,216 INFO __main__: [179/287] Claims for 01KJVK5SZYSF6XQBZ8SP0HTAT1: 0 claims persisted
+2026-03-04 22:47:32,234 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:47:32,234 INFO ingest.extractor: Evidence validation for 01KJVK9P0TD59FFK4CTS15KV0T: 0/0 claims kept, 0 dropped
+2026-03-04 22:47:32,238 INFO __main__: [180/287] Claims for 01KJVK9P0TD59FFK4CTS15KV0T: 0 claims persisted
+2026-03-04 22:47:58,952 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:47:58,952 INFO ingest.extractor: Evidence validation for 01KJVKAKDJCQKZ7MT9P788V9NE: 0/0 claims kept, 0 dropped
+2026-03-04 22:47:58,956 INFO __main__: [181/287] Claims for 01KJVKAKDJCQKZ7MT9P788V9NE: 0 claims persisted
+2026-03-04 22:48:18,156 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:48:18,157 INFO ingest.extractor: Evidence validation for 01KJVKC8GKRBRF3DBE1JEBGXQS: 0/0 claims kept, 0 dropped
+2026-03-04 22:48:18,160 INFO __main__: [182/287] Claims for 01KJVKC8GKRBRF3DBE1JEBGXQS: 0 claims persisted
+2026-03-04 22:48:39,776 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:48:39,776 INFO ingest.extractor: Evidence validation for 01KJVKF0RR0DNTM8BYJ411JGK1: 0/0 claims kept, 0 dropped
+2026-03-04 22:48:39,783 INFO __main__: [183/287] Claims for 01KJVKF0RR0DNTM8BYJ411JGK1: 0 claims persisted
+2026-03-04 22:49:03,744 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:49:03,744 INFO ingest.extractor: Evidence validation for 01KJVKFYWVJ3JBJ3MHQKZJJRPS: 0/0 claims kept, 0 dropped
+2026-03-04 22:49:03,748 INFO __main__: [184/287] Claims for 01KJVKFYWVJ3JBJ3MHQKZJJRPS: 0 claims persisted
+2026-03-04 22:49:21,529 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:49:21,529 INFO ingest.extractor: Evidence validation for 01KJVKHVK6RSDJS4XSS9WY9Y9T: 0/0 claims kept, 0 dropped
+2026-03-04 22:49:21,534 INFO __main__: [185/287] Claims for 01KJVKHVK6RSDJS4XSS9WY9Y9T: 0 claims persisted
+2026-03-04 22:49:24,555 INFO ingest.extractor: Text exceeds 2x budget (110042 > 100000), using chunked extraction
+2026-03-04 22:49:24,555 INFO ingest.chunked_extractor: Chunked claim extraction for 01KJVKPGFREJR1GT05ZV2ZS5AQ: 5 chunks from 110042 chars
+2026-03-04 22:50:02,122 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:50:02,122 INFO ingest.extractor: Evidence validation for 01KJVKPGFREJR1GT05ZV2ZS5AQ: 0/0 claims kept, 0 dropped
+2026-03-04 22:50:03,498 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:50:03,498 INFO ingest.extractor: Evidence validation for 01KJVKPGFREJR1GT05ZV2ZS5AQ: 0/0 claims kept, 0 dropped
+2026-03-04 22:50:06,458 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:50:06,458 INFO ingest.extractor: Evidence validation for 01KJVKPGFREJR1GT05ZV2ZS5AQ: 0/0 claims kept, 0 dropped
+2026-03-04 22:50:07,305 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:50:07,305 INFO ingest.extractor: Evidence validation for 01KJVKPGFREJR1GT05ZV2ZS5AQ: 0/0 claims kept, 0 dropped
+2026-03-04 22:50:51,632 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:50:51,632 INFO ingest.extractor: Evidence validation for 01KJVKPGFREJR1GT05ZV2ZS5AQ: 0/0 claims kept, 0 dropped
+2026-03-04 22:50:51,634 INFO ingest.chunked_extractor: Chunked extraction merged for 01KJVKPGFREJR1GT05ZV2ZS5AQ: 0 claims, 0 concepts
+2026-03-04 22:50:51,634 INFO __main__: [186/287] Claims for 01KJVKPGFREJR1GT05ZV2ZS5AQ: 0 claims persisted
+2026-03-04 22:51:07,104 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:51:07,104 INFO ingest.extractor: Evidence validation for 01KJVKQCHAW52432VG8DSK3X0Q: 0/0 claims kept, 0 dropped
+2026-03-04 22:51:07,108 INFO __main__: [187/287] Claims for 01KJVKQCHAW52432VG8DSK3X0Q: 0 claims persisted
+2026-03-04 22:51:23,722 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:51:23,722 INFO ingest.extractor: Evidence validation for 01KJVKT2TVK6WMW0WAEW1GQAD8: 0/0 claims kept, 0 dropped
+2026-03-04 22:51:23,726 INFO __main__: [188/287] Claims for 01KJVKT2TVK6WMW0WAEW1GQAD8: 0 claims persisted
+2026-03-04 22:51:26,745 INFO ingest.extractor: Text exceeds 2x budget (145500 > 100000), using chunked extraction
+2026-03-04 22:51:26,745 INFO ingest.chunked_extractor: Chunked claim extraction for 01KJVKZAT6SM5YTWQTNMC27MHW: 4 chunks from 145500 chars
+2026-03-04 22:52:04,766 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:52:04,766 INFO ingest.extractor: Evidence validation for 01KJVKZAT6SM5YTWQTNMC27MHW: 0/0 claims kept, 0 dropped
+2026-03-04 22:52:08,342 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:52:08,342 INFO ingest.extractor: Evidence validation for 01KJVKZAT6SM5YTWQTNMC27MHW: 0/0 claims kept, 0 dropped
+2026-03-04 22:52:09,708 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:52:09,708 INFO ingest.extractor: Evidence validation for 01KJVKZAT6SM5YTWQTNMC27MHW: 0/0 claims kept, 0 dropped
+2026-03-04 22:52:10,339 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:52:10,339 INFO ingest.extractor: Evidence validation for 01KJVKZAT6SM5YTWQTNMC27MHW: 0/0 claims kept, 0 dropped
+2026-03-04 22:52:10,344 INFO ingest.chunked_extractor: Chunked extraction merged for 01KJVKZAT6SM5YTWQTNMC27MHW: 0 claims, 0 concepts
+2026-03-04 22:52:10,345 INFO __main__: [189/287] Claims for 01KJVKZAT6SM5YTWQTNMC27MHW: 0 claims persisted
+2026-03-04 22:52:58,826 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:52:58,826 INFO ingest.extractor: Evidence validation for 01KJVKZER837YESWDFX2YYQNH3: 0/0 claims kept, 0 dropped
+2026-03-04 22:52:58,829 INFO __main__: [190/287] Claims for 01KJVKZER837YESWDFX2YYQNH3: 0 claims persisted
+2026-03-04 22:53:15,417 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:53:15,417 INFO ingest.extractor: Evidence validation for 01KJVM69GCN7QYSPPE2KFMZ0Y5: 0/0 claims kept, 0 dropped
+2026-03-04 22:53:15,420 INFO __main__: [191/287] Claims for 01KJVM69GCN7QYSPPE2KFMZ0Y5: 0 claims persisted
+2026-03-04 22:53:34,091 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:53:34,091 INFO ingest.extractor: Evidence validation for 01KJVM8AVMZ6CM9DZQVTYH4B3J: 0/0 claims kept, 0 dropped
+2026-03-04 22:53:34,096 INFO __main__: [192/287] Claims for 01KJVM8AVMZ6CM9DZQVTYH4B3J: 0 claims persisted
+2026-03-04 22:53:54,879 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:53:54,879 INFO ingest.extractor: Evidence validation for 01KJVMA9D5RWMZX4M4V63DP5Q5: 0/0 claims kept, 0 dropped
+2026-03-04 22:53:54,882 INFO __main__: [193/287] Claims for 01KJVMA9D5RWMZX4M4V63DP5Q5: 0 claims persisted
+2026-03-04 22:54:13,828 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:54:13,828 INFO ingest.extractor: Evidence validation for 01KJVMD0J9EW432H5ZNYV7CRA9: 0/0 claims kept, 0 dropped
+2026-03-04 22:54:13,831 INFO __main__: [194/287] Claims for 01KJVMD0J9EW432H5ZNYV7CRA9: 0 claims persisted
+2026-03-04 22:54:30,934 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:54:30,934 INFO ingest.extractor: Evidence validation for 01KJVMEPM5HBXF8TY2HZMMX64W: 0/0 claims kept, 0 dropped
+2026-03-04 22:54:30,937 INFO __main__: [195/287] Claims for 01KJVMEPM5HBXF8TY2HZMMX64W: 0 claims persisted
+2026-03-04 22:54:49,237 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:54:49,238 INFO ingest.extractor: Evidence validation for 01KJVMH7JFEX2PR1P5D2C80B55: 0/0 claims kept, 0 dropped
+2026-03-04 22:54:49,240 INFO __main__: [196/287] Claims for 01KJVMH7JFEX2PR1P5D2C80B55: 0 claims persisted
+2026-03-04 22:55:05,619 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:55:05,619 INFO ingest.extractor: Evidence validation for 01KJVMK38DSVMQMZP6B1W5XF0W: 0/0 claims kept, 0 dropped
+2026-03-04 22:55:05,622 INFO __main__: [197/287] Claims for 01KJVMK38DSVMQMZP6B1W5XF0W: 0 claims persisted
+2026-03-04 22:55:25,538 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:55:25,538 INFO ingest.extractor: Evidence validation for 01KJVMPA780CXJ7HK9S3E6C4M9: 0/0 claims kept, 0 dropped
+2026-03-04 22:55:25,543 INFO __main__: [198/287] Claims for 01KJVMPA780CXJ7HK9S3E6C4M9: 0 claims persisted
+2026-03-04 22:55:44,648 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:55:44,649 INFO ingest.extractor: Evidence validation for 01KJVMRSX6RXBV8Q5KBJRNEADS: 0/0 claims kept, 0 dropped
+2026-03-04 22:55:44,652 INFO __main__: [199/287] Claims for 01KJVMRSX6RXBV8Q5KBJRNEADS: 0 claims persisted
+2026-03-04 22:56:04,818 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:56:04,818 INFO ingest.extractor: Evidence validation for 01KJVMT46QJC8EK7GWXSHVGBX6: 0/0 claims kept, 0 dropped
+2026-03-04 22:56:04,820 INFO __main__: [200/287] Claims for 01KJVMT46QJC8EK7GWXSHVGBX6: 0 claims persisted
+2026-03-04 22:56:21,081 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:56:21,081 INFO ingest.extractor: Evidence validation for 01KJVMXKY98CW1V2AG8P285G44: 0/0 claims kept, 0 dropped
+2026-03-04 22:56:21,083 INFO __main__: [201/287] Claims for 01KJVMXKY98CW1V2AG8P285G44: 0 claims persisted
+2026-03-04 22:56:36,461 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:56:36,461 INFO ingest.extractor: Evidence validation for 01KJVMZ5JN297P9C62F7TWE66Q: 0/0 claims kept, 0 dropped
+2026-03-04 22:56:36,463 INFO __main__: [202/287] Claims for 01KJVMZ5JN297P9C62F7TWE66Q: 0 claims persisted
+2026-03-04 22:56:52,357 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:56:52,358 INFO ingest.extractor: Evidence validation for 01KJVN12YGX8RAPPKMD78XE889: 0/0 claims kept, 0 dropped
+2026-03-04 22:56:52,362 INFO __main__: [203/287] Claims for 01KJVN12YGX8RAPPKMD78XE889: 0 claims persisted
+2026-03-04 22:57:10,154 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:57:10,154 INFO ingest.extractor: Evidence validation for 01KJVN4FS2EA7BM05Z5B83QCMA: 0/0 claims kept, 0 dropped
+2026-03-04 22:57:10,158 INFO __main__: [204/287] Claims for 01KJVN4FS2EA7BM05Z5B83QCMA: 0 claims persisted
+2026-03-04 22:57:32,090 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:57:32,090 INFO ingest.extractor: Evidence validation for 01KJVN5D5FZYEA7BXYF1ENXXNX: 0/0 claims kept, 0 dropped
+2026-03-04 22:57:32,093 INFO __main__: [205/287] Claims for 01KJVN5D5FZYEA7BXYF1ENXXNX: 0 claims persisted
+2026-03-04 22:57:50,913 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:57:50,914 INFO ingest.extractor: Evidence validation for 01KJVN834BRJ47M2W24SZBNBQG: 0/0 claims kept, 0 dropped
+2026-03-04 22:57:50,917 INFO __main__: [206/287] Claims for 01KJVN834BRJ47M2W24SZBNBQG: 0 claims persisted
+2026-03-04 22:58:07,552 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:58:07,552 INFO ingest.extractor: Evidence validation for 01KJVN9ZJX206MA7GP8WJWM6DT: 0/0 claims kept, 0 dropped
+2026-03-04 22:58:07,555 INFO __main__: [207/287] Claims for 01KJVN9ZJX206MA7GP8WJWM6DT: 0 claims persisted
+2026-03-04 22:58:23,239 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:58:23,239 INFO ingest.extractor: Evidence validation for 01KJVNDJDQGM250BPX1Y2V8GBE: 0/0 claims kept, 0 dropped
+2026-03-04 22:58:23,241 INFO __main__: [208/287] Claims for 01KJVNDJDQGM250BPX1Y2V8GBE: 0 claims persisted
+2026-03-04 22:58:40,672 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:58:40,672 INFO ingest.extractor: Evidence validation for 01KJVNEG9Q5ACG8Q4DVQCMHBBT: 0/0 claims kept, 0 dropped
+2026-03-04 22:58:40,674 INFO __main__: [209/287] Claims for 01KJVNEG9Q5ACG8Q4DVQCMHBBT: 0 claims persisted
+2026-03-04 22:58:57,699 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:58:57,700 INFO ingest.extractor: Evidence validation for 01KJVNGK3MFKFSRWK2N5DNGGN7: 0/0 claims kept, 0 dropped
+2026-03-04 22:58:57,703 INFO __main__: [210/287] Claims for 01KJVNGK3MFKFSRWK2N5DNGGN7: 0 claims persisted
+2026-03-04 22:59:14,458 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:59:14,458 INFO ingest.extractor: Evidence validation for 01KJVNKY66M18A2Y58E504SN56: 0/0 claims kept, 0 dropped
+2026-03-04 22:59:14,461 INFO __main__: [211/287] Claims for 01KJVNKY66M18A2Y58E504SN56: 0 claims persisted
+2026-03-04 22:59:33,847 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:59:33,847 INFO ingest.extractor: Evidence validation for 01KJVNQMNSTW6KEZ69N6GDMX73: 0/0 claims kept, 0 dropped
+2026-03-04 22:59:33,850 INFO __main__: [212/287] Claims for 01KJVNQMNSTW6KEZ69N6GDMX73: 0 claims persisted
+2026-03-04 22:59:51,373 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 22:59:51,374 INFO ingest.extractor: Evidence validation for 01KJVNQNBDEW0S74TBEHBM8K6Z: 0/0 claims kept, 0 dropped
+2026-03-04 22:59:51,377 INFO __main__: [213/287] Claims for 01KJVNQNBDEW0S74TBEHBM8K6Z: 0 claims persisted
+2026-03-04 23:00:11,108 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:00:11,109 INFO ingest.extractor: Evidence validation for 01KJVNVKAH2BZK8Y57QC5CAEFY: 0/0 claims kept, 0 dropped
+2026-03-04 23:00:11,113 INFO __main__: [214/287] Claims for 01KJVNVKAH2BZK8Y57QC5CAEFY: 0 claims persisted
+2026-03-04 23:00:27,613 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:00:27,613 INFO ingest.extractor: Evidence validation for 01KJVNYSCTA98CR7E2Q1GR9FY1: 0/0 claims kept, 0 dropped
+2026-03-04 23:00:27,616 INFO __main__: [215/287] Claims for 01KJVNYSCTA98CR7E2Q1GR9FY1: 0 claims persisted
+2026-03-04 23:00:43,527 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:00:43,528 INFO ingest.extractor: Evidence validation for 01KJVP1SYGSWF8HX51C1RDP5TV: 0/0 claims kept, 0 dropped
+2026-03-04 23:00:43,529 INFO __main__: [216/287] Claims for 01KJVP1SYGSWF8HX51C1RDP5TV: 0 claims persisted
+2026-03-04 23:01:02,024 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:01:02,025 INFO ingest.extractor: Evidence validation for 01KJVP2MKSVAYJF4F716NXXEA2: 0/0 claims kept, 0 dropped
+2026-03-04 23:01:02,027 INFO __main__: [217/287] Claims for 01KJVP2MKSVAYJF4F716NXXEA2: 0 claims persisted
+2026-03-04 23:01:21,040 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:01:21,040 INFO ingest.extractor: Evidence validation for 01KJVP51TK37X7T8GTJWH108QE: 0/0 claims kept, 0 dropped
+2026-03-04 23:01:21,043 INFO __main__: [218/287] Claims for 01KJVP51TK37X7T8GTJWH108QE: 0 claims persisted
+2026-03-04 23:01:41,230 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:01:41,231 INFO ingest.extractor: Evidence validation for 01KJVP843VKX3S3CDY4PP7SC8P: 0/0 claims kept, 0 dropped
+2026-03-04 23:01:41,235 INFO __main__: [219/287] Claims for 01KJVP843VKX3S3CDY4PP7SC8P: 0 claims persisted
+2026-03-04 23:01:56,964 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:01:56,964 INFO ingest.extractor: Evidence validation for 01KJVP8YZR7DAPHXBV74Z84G17: 0/0 claims kept, 0 dropped
+2026-03-04 23:01:56,968 INFO __main__: [220/287] Claims for 01KJVP8YZR7DAPHXBV74Z84G17: 0 claims persisted
+2026-03-04 23:02:12,562 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:02:12,562 INFO ingest.extractor: Evidence validation for 01KJVPBFMA1P0Y4WPWTEYM707A: 0/0 claims kept, 0 dropped
+2026-03-04 23:02:12,567 INFO __main__: [221/287] Claims for 01KJVPBFMA1P0Y4WPWTEYM707A: 0 claims persisted
+2026-03-04 23:02:29,353 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:02:29,353 INFO ingest.extractor: Evidence validation for 01KJVPCJJ3HSAX9K59QQ6ME56T: 0/0 claims kept, 0 dropped
+2026-03-04 23:02:29,356 INFO __main__: [222/287] Claims for 01KJVPCJJ3HSAX9K59QQ6ME56T: 0 claims persisted
+2026-03-04 23:02:49,454 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:02:49,454 INFO ingest.extractor: Evidence validation for 01KJVPDX065987GMBNAMHGCYFZ: 0/0 claims kept, 0 dropped
+2026-03-04 23:02:49,458 INFO __main__: [223/287] Claims for 01KJVPDX065987GMBNAMHGCYFZ: 0 claims persisted
+2026-03-04 23:03:09,682 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:03:09,682 INFO ingest.extractor: Evidence validation for 01KJVPHM2ZC1GG5ET8WDPBXKAB: 0/0 claims kept, 0 dropped
+2026-03-04 23:03:09,685 INFO __main__: [224/287] Claims for 01KJVPHM2ZC1GG5ET8WDPBXKAB: 0 claims persisted
+2026-03-04 23:03:25,685 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:03:25,686 INFO ingest.extractor: Evidence validation for 01KJVPJFQDX5H7Q2R3XVYHPD4J: 0/0 claims kept, 0 dropped
+2026-03-04 23:03:25,688 INFO __main__: [225/287] Claims for 01KJVPJFQDX5H7Q2R3XVYHPD4J: 0 claims persisted
+2026-03-04 23:03:41,532 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:03:41,533 INFO ingest.extractor: Evidence validation for 01KJVPKZA72T39K16J5QQDGDX7: 0/0 claims kept, 0 dropped
+2026-03-04 23:03:41,538 INFO __main__: [226/287] Claims for 01KJVPKZA72T39K16J5QQDGDX7: 0 claims persisted
+2026-03-04 23:03:59,753 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:03:59,753 INFO ingest.extractor: Evidence validation for 01KJVPQYT8FQG5P4E0Q2C5TQSB: 0/0 claims kept, 0 dropped
+2026-03-04 23:03:59,757 INFO __main__: [227/287] Claims for 01KJVPQYT8FQG5P4E0Q2C5TQSB: 0 claims persisted
+2026-03-04 23:04:17,665 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:04:17,665 INFO ingest.extractor: Evidence validation for 01KJVPRWQ5YPWQ4PDFNY987WM9: 0/0 claims kept, 0 dropped
+2026-03-04 23:04:17,667 INFO __main__: [228/287] Claims for 01KJVPRWQ5YPWQ4PDFNY987WM9: 0 claims persisted
+2026-03-04 23:04:37,172 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:04:37,172 INFO ingest.extractor: Evidence validation for 01KJVPTVPNS5S5VVKCFRVJZ6FX: 0/0 claims kept, 0 dropped
+2026-03-04 23:04:37,175 INFO __main__: [229/287] Claims for 01KJVPTVPNS5S5VVKCFRVJZ6FX: 0 claims persisted
+2026-03-04 23:04:56,086 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:04:56,087 INFO ingest.extractor: Evidence validation for 01KJVPY38SBSG0FEAEB39SQFCT: 0/0 claims kept, 0 dropped
+2026-03-04 23:04:56,089 INFO __main__: [230/287] Claims for 01KJVPY38SBSG0FEAEB39SQFCT: 0 claims persisted
+2026-03-04 23:04:59,111 INFO ingest.extractor: Text exceeds 2x budget (101785 > 100000), using chunked extraction
+2026-03-04 23:04:59,111 INFO ingest.chunked_extractor: Chunked claim extraction for 01KJVQ18M2HDC3PBS3Q9HRBB63: 4 chunks from 101785 chars
+2026-03-04 23:05:33,644 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:05:33,644 INFO ingest.extractor: Evidence validation for 01KJVQ18M2HDC3PBS3Q9HRBB63: 0/0 claims kept, 0 dropped
+2026-03-04 23:05:37,113 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:05:37,113 INFO ingest.extractor: Evidence validation for 01KJVQ18M2HDC3PBS3Q9HRBB63: 0/0 claims kept, 0 dropped
+2026-03-04 23:05:39,142 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:05:39,142 INFO ingest.extractor: Evidence validation for 01KJVQ18M2HDC3PBS3Q9HRBB63: 0/0 claims kept, 0 dropped
+2026-03-04 23:05:39,557 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:05:39,558 INFO ingest.extractor: Evidence validation for 01KJVQ18M2HDC3PBS3Q9HRBB63: 0/0 claims kept, 0 dropped
+2026-03-04 23:05:39,564 INFO ingest.chunked_extractor: Chunked extraction merged for 01KJVQ18M2HDC3PBS3Q9HRBB63: 0 claims, 0 concepts
+2026-03-04 23:05:39,564 INFO __main__: [231/287] Claims for 01KJVQ18M2HDC3PBS3Q9HRBB63: 0 claims persisted
+2026-03-04 23:06:01,917 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:06:01,917 INFO ingest.extractor: Evidence validation for 01KJVQ21TQK67MFCA1T8FZJDVM: 0/0 claims kept, 0 dropped
+2026-03-04 23:06:01,920 INFO __main__: [232/287] Claims for 01KJVQ21TQK67MFCA1T8FZJDVM: 0 claims persisted
+2026-03-04 23:06:04,938 INFO ingest.extractor: Text exceeds 2x budget (172208 > 100000), using chunked extraction
+2026-03-04 23:06:04,938 INFO ingest.chunked_extractor: Chunked claim extraction for 01KJVQ5NWGHF76T3NCYBH5MPQG: 5 chunks from 172208 chars
+2026-03-04 23:06:40,129 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:06:40,129 INFO ingest.extractor: Evidence validation for 01KJVQ5NWGHF76T3NCYBH5MPQG: 0/0 claims kept, 0 dropped
+2026-03-04 23:06:40,789 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:06:40,790 INFO ingest.extractor: Evidence validation for 01KJVQ5NWGHF76T3NCYBH5MPQG: 0/0 claims kept, 0 dropped
+2026-03-04 23:06:41,805 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:06:41,805 INFO ingest.extractor: Evidence validation for 01KJVQ5NWGHF76T3NCYBH5MPQG: 0/0 claims kept, 0 dropped
+2026-03-04 23:06:43,588 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:06:43,588 INFO ingest.extractor: Evidence validation for 01KJVQ5NWGHF76T3NCYBH5MPQG: 0/0 claims kept, 0 dropped
+2026-03-04 23:06:54,274 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:06:54,274 INFO ingest.extractor: Evidence validation for 01KJVQ5NWGHF76T3NCYBH5MPQG: 0/0 claims kept, 0 dropped
+2026-03-04 23:06:54,278 INFO ingest.chunked_extractor: Chunked extraction merged for 01KJVQ5NWGHF76T3NCYBH5MPQG: 0 claims, 0 concepts
+2026-03-04 23:06:54,278 INFO __main__: [233/287] Claims for 01KJVQ5NWGHF76T3NCYBH5MPQG: 0 claims persisted
+2026-03-04 23:06:57,288 INFO ingest.extractor: Text exceeds 2x budget (122380 > 100000), using chunked extraction
+2026-03-04 23:06:57,288 INFO ingest.chunked_extractor: Chunked claim extraction for 01KJVQ7KAHS4EZYYEFFQR2Q2QR: 4 chunks from 122380 chars
+2026-03-04 23:07:33,578 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:07:33,578 INFO ingest.extractor: Evidence validation for 01KJVQ7KAHS4EZYYEFFQR2Q2QR: 0/0 claims kept, 0 dropped
+2026-03-04 23:07:35,054 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:07:35,055 INFO ingest.extractor: Evidence validation for 01KJVQ7KAHS4EZYYEFFQR2Q2QR: 0/0 claims kept, 0 dropped
+2026-03-04 23:07:36,544 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:07:36,544 INFO ingest.extractor: Evidence validation for 01KJVQ7KAHS4EZYYEFFQR2Q2QR: 0/0 claims kept, 0 dropped
+2026-03-04 23:07:38,358 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:07:38,359 INFO ingest.extractor: Evidence validation for 01KJVQ7KAHS4EZYYEFFQR2Q2QR: 0/0 claims kept, 0 dropped
+2026-03-04 23:07:38,362 INFO ingest.chunked_extractor: Chunked extraction merged for 01KJVQ7KAHS4EZYYEFFQR2Q2QR: 0 claims, 0 concepts
+2026-03-04 23:07:38,363 INFO __main__: [234/287] Claims for 01KJVQ7KAHS4EZYYEFFQR2Q2QR: 0 claims persisted
+2026-03-04 23:07:41,370 INFO ingest.extractor: Text exceeds 2x budget (128511 > 100000), using chunked extraction
+2026-03-04 23:07:41,370 INFO ingest.chunked_extractor: Chunked claim extraction for 01KJVQ9TRDYXW6XS2EBHS2CGS7: 4 chunks from 128511 chars
+2026-03-04 23:08:18,181 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:08:18,181 INFO ingest.extractor: Evidence validation for 01KJVQ9TRDYXW6XS2EBHS2CGS7: 0/0 claims kept, 0 dropped
+2026-03-04 23:08:19,331 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:08:19,331 INFO ingest.extractor: Evidence validation for 01KJVQ9TRDYXW6XS2EBHS2CGS7: 0/0 claims kept, 0 dropped
+2026-03-04 23:08:20,251 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:08:20,252 INFO ingest.extractor: Evidence validation for 01KJVQ9TRDYXW6XS2EBHS2CGS7: 0/0 claims kept, 0 dropped
+2026-03-04 23:08:21,662 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:08:21,662 INFO ingest.extractor: Evidence validation for 01KJVQ9TRDYXW6XS2EBHS2CGS7: 0/0 claims kept, 0 dropped
+2026-03-04 23:08:21,665 INFO ingest.chunked_extractor: Chunked extraction merged for 01KJVQ9TRDYXW6XS2EBHS2CGS7: 0 claims, 0 concepts
+2026-03-04 23:08:21,666 INFO __main__: [235/287] Claims for 01KJVQ9TRDYXW6XS2EBHS2CGS7: 0 claims persisted
+2026-03-04 23:08:24,689 INFO ingest.extractor: Text exceeds 2x budget (121968 > 100000), using chunked extraction
+2026-03-04 23:08:24,689 INFO ingest.chunked_extractor: Chunked claim extraction for 01KJVQJJJW99WMP59QQYXMSPHE: 4 chunks from 121968 chars
+2026-03-04 23:09:04,146 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:09:04,147 INFO ingest.extractor: Evidence validation for 01KJVQJJJW99WMP59QQYXMSPHE: 0/0 claims kept, 0 dropped
+2026-03-04 23:09:05,449 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:09:05,449 INFO ingest.extractor: Evidence validation for 01KJVQJJJW99WMP59QQYXMSPHE: 0/0 claims kept, 0 dropped
+2026-03-04 23:09:06,340 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:09:06,340 INFO ingest.extractor: Evidence validation for 01KJVQJJJW99WMP59QQYXMSPHE: 0/0 claims kept, 0 dropped
+2026-03-04 23:09:07,564 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:09:07,564 INFO ingest.extractor: Evidence validation for 01KJVQJJJW99WMP59QQYXMSPHE: 0/0 claims kept, 0 dropped
+2026-03-04 23:09:07,568 INFO ingest.chunked_extractor: Chunked extraction merged for 01KJVQJJJW99WMP59QQYXMSPHE: 0 claims, 0 concepts
+2026-03-04 23:09:07,569 INFO __main__: [236/287] Claims for 01KJVQJJJW99WMP59QQYXMSPHE: 0 claims persisted
+2026-03-04 23:09:24,175 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:09:24,175 INFO ingest.extractor: Evidence validation for 01KJVQMXH7HB4FQMYEJDJYH7EK: 0/0 claims kept, 0 dropped
+2026-03-04 23:09:24,179 INFO __main__: [237/287] Claims for 01KJVQMXH7HB4FQMYEJDJYH7EK: 0 claims persisted
+2026-03-04 23:09:45,469 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:09:45,469 INFO ingest.extractor: Evidence validation for 01KJVQNAG4GBVNYMZ9V8NC33D7: 0/0 claims kept, 0 dropped
+2026-03-04 23:09:45,474 INFO __main__: [238/287] Claims for 01KJVQNAG4GBVNYMZ9V8NC33D7: 0 claims persisted
+2026-03-04 23:10:05,783 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:10:05,783 INFO ingest.extractor: Evidence validation for 01KJVQSZ1KNXJ5BGYR89W6RCKN: 0/0 claims kept, 0 dropped
+2026-03-04 23:10:05,787 INFO __main__: [239/287] Claims for 01KJVQSZ1KNXJ5BGYR89W6RCKN: 0 claims persisted
+2026-03-04 23:10:25,036 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:10:25,036 INFO ingest.extractor: Evidence validation for 01KJVQXAFNR5TX2XV9RJ4158NM: 0/0 claims kept, 0 dropped
+2026-03-04 23:10:25,039 INFO __main__: [240/287] Claims for 01KJVQXAFNR5TX2XV9RJ4158NM: 0 claims persisted
+2026-03-04 23:10:42,882 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:10:42,882 INFO ingest.extractor: Evidence validation for 01KJVQZ7YX1N9TKVXRTVC768TN: 0/0 claims kept, 0 dropped
+2026-03-04 23:10:42,885 INFO __main__: [241/287] Claims for 01KJVQZ7YX1N9TKVXRTVC768TN: 0 claims persisted
+2026-03-04 23:11:02,075 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:11:02,075 INFO ingest.extractor: Evidence validation for 01KJVR0B99DNB238SCFEE07RYH: 0/0 claims kept, 0 dropped
+2026-03-04 23:11:02,076 INFO __main__: [242/287] Claims for 01KJVR0B99DNB238SCFEE07RYH: 0 claims persisted
+2026-03-04 23:11:22,394 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:11:22,395 INFO ingest.extractor: Evidence validation for 01KJVR2WJ1ZQPBM0QNT2P4DPK0: 0/0 claims kept, 0 dropped
+2026-03-04 23:11:22,398 INFO __main__: [243/287] Claims for 01KJVR2WJ1ZQPBM0QNT2P4DPK0: 0 claims persisted
+2026-03-04 23:11:25,415 INFO ingest.extractor: Text exceeds 2x budget (105305 > 100000), using chunked extraction
+2026-03-04 23:11:25,415 INFO ingest.chunked_extractor: Chunked claim extraction for 01KJVR48TZQRMPK7TYA97Q7CKV: 4 chunks from 105305 chars
+2026-03-04 23:12:16,190 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:12:16,190 INFO ingest.extractor: Evidence validation for 01KJVR48TZQRMPK7TYA97Q7CKV: 0/0 claims kept, 0 dropped
+2026-03-04 23:12:17,579 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:12:17,579 INFO ingest.extractor: Evidence validation for 01KJVR48TZQRMPK7TYA97Q7CKV: 0/0 claims kept, 0 dropped
+2026-03-04 23:12:19,400 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:12:19,400 INFO ingest.extractor: Evidence validation for 01KJVR48TZQRMPK7TYA97Q7CKV: 0/0 claims kept, 0 dropped
+2026-03-04 23:12:21,865 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:12:21,865 INFO ingest.extractor: Evidence validation for 01KJVR48TZQRMPK7TYA97Q7CKV: 0/0 claims kept, 0 dropped
+2026-03-04 23:12:21,868 INFO ingest.chunked_extractor: Chunked extraction merged for 01KJVR48TZQRMPK7TYA97Q7CKV: 0 claims, 0 concepts
+2026-03-04 23:12:21,869 INFO __main__: [244/287] Claims for 01KJVR48TZQRMPK7TYA97Q7CKV: 0 claims persisted
+2026-03-04 23:12:46,606 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:12:46,606 INFO ingest.extractor: Evidence validation for 01KJVR7GAMPTJ34WZSTP6K1VC1: 0/0 claims kept, 0 dropped
+2026-03-04 23:12:46,610 INFO __main__: [245/287] Claims for 01KJVR7GAMPTJ34WZSTP6K1VC1: 0 claims persisted
+2026-03-04 23:13:08,268 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:13:08,269 INFO ingest.extractor: Evidence validation for 01KJVRC3JX821XQE4V2NJEHFN1: 0/0 claims kept, 0 dropped
+2026-03-04 23:13:08,274 INFO __main__: [246/287] Claims for 01KJVRC3JX821XQE4V2NJEHFN1: 0 claims persisted
+2026-03-04 23:14:03,071 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:14:03,071 INFO ingest.extractor: Evidence validation for 01KJVRCA1SGV9NPA52RKG1ZK7H: 0/0 claims kept, 0 dropped
+2026-03-04 23:14:03,074 INFO __main__: [247/287] Claims for 01KJVRCA1SGV9NPA52RKG1ZK7H: 0 claims persisted
+2026-03-04 23:14:50,351 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:14:50,351 INFO ingest.extractor: Evidence validation for 01KJVRG870GG6Z10E67SQTPTHK: 0/0 claims kept, 0 dropped
+2026-03-04 23:14:50,356 INFO __main__: [248/287] Claims for 01KJVRG870GG6Z10E67SQTPTHK: 0 claims persisted
+2026-03-04 23:15:22,386 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:15:22,387 INFO ingest.extractor: Evidence validation for 01KJVRMEM42XRWXZK83SHG7C2R: 0/0 claims kept, 0 dropped
+2026-03-04 23:15:22,389 INFO __main__: [249/287] Claims for 01KJVRMEM42XRWXZK83SHG7C2R: 0 claims persisted
+2026-03-04 23:15:39,502 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:15:39,502 INFO ingest.extractor: Evidence validation for 01KJVRMEQFED9A5NCRZHQCDB2J: 0/0 claims kept, 0 dropped
+2026-03-04 23:15:39,505 INFO __main__: [250/287] Claims for 01KJVRMEQFED9A5NCRZHQCDB2J: 0 claims persisted
+2026-03-04 23:15:55,575 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:15:55,575 INFO ingest.extractor: Evidence validation for 01KJVRQP8RVNXWK6W8H42CAQ4X: 0/0 claims kept, 0 dropped
+2026-03-04 23:15:55,577 INFO __main__: [251/287] Claims for 01KJVRQP8RVNXWK6W8H42CAQ4X: 0 claims persisted
+2026-03-04 23:16:11,715 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:16:11,715 INFO ingest.extractor: Evidence validation for 01KJVRTAEMF1MPY6WT7CJTMG8D: 0/0 claims kept, 0 dropped
+2026-03-04 23:16:11,717 INFO __main__: [252/287] Claims for 01KJVRTAEMF1MPY6WT7CJTMG8D: 0 claims persisted
+2026-03-04 23:16:31,972 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:16:31,972 INFO ingest.extractor: Evidence validation for 01KJVRVSPK1Y9D0ZHTMTTNNXEC: 0/0 claims kept, 0 dropped
+2026-03-04 23:16:31,976 INFO __main__: [253/287] Claims for 01KJVRVSPK1Y9D0ZHTMTTNNXEC: 0 claims persisted
+2026-03-04 23:16:51,802 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:16:51,802 INFO ingest.extractor: Evidence validation for 01KJVRYH2G2SJKBGSPB92C9HW9: 0/0 claims kept, 0 dropped
+2026-03-04 23:16:51,807 INFO __main__: [254/287] Claims for 01KJVRYH2G2SJKBGSPB92C9HW9: 0 claims persisted
+2026-03-04 23:17:08,514 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:17:08,514 INFO ingest.extractor: Evidence validation for 01KJVS00V26Z39NDSVB07QJT1D: 0/0 claims kept, 0 dropped
+2026-03-04 23:17:08,516 INFO __main__: [255/287] Claims for 01KJVS00V26Z39NDSVB07QJT1D: 0 claims persisted
+2026-03-04 23:17:24,029 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:17:24,030 INFO ingest.extractor: Evidence validation for 01KJVS330Y43TH4W93FNY7NB65: 0/0 claims kept, 0 dropped
+2026-03-04 23:17:24,033 INFO __main__: [256/287] Claims for 01KJVS330Y43TH4W93FNY7NB65: 0 claims persisted
+2026-03-04 23:17:43,610 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:17:43,610 INFO ingest.extractor: Evidence validation for 01KJVS64WBC54M2T10FRNC2E0G: 0/0 claims kept, 0 dropped
+2026-03-04 23:17:43,612 INFO __main__: [257/287] Claims for 01KJVS64WBC54M2T10FRNC2E0G: 0 claims persisted
+2026-03-04 23:18:03,009 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:18:03,010 INFO ingest.extractor: Evidence validation for 01KJVS72MYZ359MY0N8QHDWDAW: 0/0 claims kept, 0 dropped
+2026-03-04 23:18:03,013 INFO __main__: [258/287] Claims for 01KJVS72MYZ359MY0N8QHDWDAW: 0 claims persisted
+2026-03-04 23:18:20,730 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:18:20,731 INFO ingest.extractor: Evidence validation for 01KJVS9B1Y2BJXB5XD37Y2HSQT: 0/0 claims kept, 0 dropped
+2026-03-04 23:18:20,733 INFO __main__: [259/287] Claims for 01KJVS9B1Y2BJXB5XD37Y2HSQT: 0 claims persisted
+2026-03-04 23:18:36,981 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:18:36,981 INFO ingest.extractor: Evidence validation for 01KJVSCDADQB46AAJ2EKGY7QJE: 0/0 claims kept, 0 dropped
+2026-03-04 23:18:36,983 INFO __main__: [260/287] Claims for 01KJVSCDADQB46AAJ2EKGY7QJE: 0 claims persisted
+2026-03-04 23:18:54,342 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:18:54,343 INFO ingest.extractor: Evidence validation for 01KJVSF4MB346QV6T275HAV1HA: 0/0 claims kept, 0 dropped
+2026-03-04 23:18:54,345 INFO __main__: [261/287] Claims for 01KJVSF4MB346QV6T275HAV1HA: 0 claims persisted
+2026-03-04 23:19:15,626 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:19:15,626 INFO ingest.extractor: Evidence validation for 01KJVSGCXW0PSCS647AEFRRCPS: 0/0 claims kept, 0 dropped
+2026-03-04 23:19:15,629 INFO __main__: [262/287] Claims for 01KJVSGCXW0PSCS647AEFRRCPS: 0 claims persisted
+2026-03-04 23:19:34,576 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:19:34,576 INFO ingest.extractor: Evidence validation for 01KJVSK9YY0GCQERJDPVFG7GP6: 0/0 claims kept, 0 dropped
+2026-03-04 23:19:34,580 INFO __main__: [263/287] Claims for 01KJVSK9YY0GCQERJDPVFG7GP6: 0 claims persisted
+2026-03-04 23:19:51,285 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:19:51,285 INFO ingest.extractor: Evidence validation for 01KJVSM49BGZ5XDSQ5EBPJ71WE: 0/0 claims kept, 0 dropped
+2026-03-04 23:19:51,287 INFO __main__: [264/287] Claims for 01KJVSM49BGZ5XDSQ5EBPJ71WE: 0 claims persisted
+2026-03-04 23:20:09,373 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:20:09,373 INFO ingest.extractor: Evidence validation for 01KJVSP7HTV1W80HD21RED09GC: 0/0 claims kept, 0 dropped
+2026-03-04 23:20:09,377 INFO __main__: [265/287] Claims for 01KJVSP7HTV1W80HD21RED09GC: 0 claims persisted
+2026-03-04 23:20:25,683 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:20:25,683 INFO ingest.extractor: Evidence validation for 01KJVSSWSXZKBS0FR7T256NE0Q: 0/0 claims kept, 0 dropped
+2026-03-04 23:20:25,686 INFO __main__: [266/287] Claims for 01KJVSSWSXZKBS0FR7T256NE0Q: 0 claims persisted
+2026-03-04 23:20:43,047 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:20:43,047 INFO ingest.extractor: Evidence validation for 01KJVSTFCBD9P1NRX381JCEJ2Y: 0/0 claims kept, 0 dropped
+2026-03-04 23:20:43,049 INFO __main__: [267/287] Claims for 01KJVSTFCBD9P1NRX381JCEJ2Y: 0 claims persisted
+2026-03-04 23:20:46,075 INFO ingest.extractor: Text exceeds 2x budget (116224 > 100000), using chunked extraction
+2026-03-04 23:20:46,076 INFO ingest.chunked_extractor: Chunked claim extraction for 01KJVT1PHDJ7MR0QWEC9KYKTMV: 5 chunks from 116224 chars
+2026-03-04 23:21:26,321 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:21:26,321 INFO ingest.extractor: Evidence validation for 01KJVT1PHDJ7MR0QWEC9KYKTMV: 0/0 claims kept, 0 dropped
+2026-03-04 23:21:29,482 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:21:29,482 INFO ingest.extractor: Evidence validation for 01KJVT1PHDJ7MR0QWEC9KYKTMV: 0/0 claims kept, 0 dropped
+2026-03-04 23:21:29,969 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:21:29,969 INFO ingest.extractor: Evidence validation for 01KJVT1PHDJ7MR0QWEC9KYKTMV: 0/0 claims kept, 0 dropped
+2026-03-04 23:21:30,909 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:21:30,909 INFO ingest.extractor: Evidence validation for 01KJVT1PHDJ7MR0QWEC9KYKTMV: 0/0 claims kept, 0 dropped
+2026-03-04 23:21:52,214 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:21:52,215 INFO ingest.extractor: Evidence validation for 01KJVT1PHDJ7MR0QWEC9KYKTMV: 0/0 claims kept, 0 dropped
+2026-03-04 23:21:52,217 INFO ingest.chunked_extractor: Chunked extraction merged for 01KJVT1PHDJ7MR0QWEC9KYKTMV: 0 claims, 0 concepts
+2026-03-04 23:21:52,217 INFO __main__: [268/287] Claims for 01KJVT1PHDJ7MR0QWEC9KYKTMV: 0 claims persisted
+2026-03-04 23:22:12,273 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:22:12,275 INFO ingest.extractor: Evidence validation for 01KJVT1PQCFK94WXDZC2D03YXD: 0/0 claims kept, 0 dropped
+2026-03-04 23:22:12,277 INFO __main__: [269/287] Claims for 01KJVT1PQCFK94WXDZC2D03YXD: 0 claims persisted
+2026-03-04 23:22:29,442 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:22:29,442 INFO ingest.extractor: Evidence validation for 01KJVT4GRYRRCCQMVXA879SR86: 0/0 claims kept, 0 dropped
+2026-03-04 23:22:29,444 INFO __main__: [270/287] Claims for 01KJVT4GRYRRCCQMVXA879SR86: 0 claims persisted
+2026-03-04 23:22:48,670 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:22:48,670 INFO ingest.extractor: Evidence validation for 01KJVT9KJKNHTZQMRDTR46QG4K: 0/0 claims kept, 0 dropped
+2026-03-04 23:22:48,672 INFO __main__: [271/287] Claims for 01KJVT9KJKNHTZQMRDTR46QG4K: 0 claims persisted
+2026-03-04 23:23:09,423 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:23:09,424 INFO ingest.extractor: Evidence validation for 01KJVTBKXPF88J5RA7WKPM8E8D: 0/0 claims kept, 0 dropped
+2026-03-04 23:23:09,427 INFO __main__: [272/287] Claims for 01KJVTBKXPF88J5RA7WKPM8E8D: 0 claims persisted
+2026-03-04 23:23:32,269 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:23:32,270 INFO ingest.extractor: Evidence validation for 01KJVTECVD9692N9X8TS45JKXQ: 0/0 claims kept, 0 dropped
+2026-03-04 23:23:32,272 INFO __main__: [273/287] Claims for 01KJVTECVD9692N9X8TS45JKXQ: 0 claims persisted
+2026-03-04 23:23:54,761 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:23:54,761 INFO ingest.extractor: Evidence validation for 01KJVTFS46G1H87RVABKPNS7E9: 0/0 claims kept, 0 dropped
+2026-03-04 23:23:54,763 INFO __main__: [274/287] Claims for 01KJVTFS46G1H87RVABKPNS7E9: 0 claims persisted
+2026-03-04 23:24:10,895 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:24:10,895 INFO ingest.extractor: Evidence validation for 01KJVTHEDFHEP9QXAWVYP0H1VZ: 0/0 claims kept, 0 dropped
+2026-03-04 23:24:10,897 INFO __main__: [275/287] Claims for 01KJVTHEDFHEP9QXAWVYP0H1VZ: 0 claims persisted
+2026-03-04 23:24:28,174 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:24:28,174 INFO ingest.extractor: Evidence validation for 01KJVTN6C7Z8MWFBKEBA05ZF9K: 0/0 claims kept, 0 dropped
+2026-03-04 23:24:28,178 INFO __main__: [276/287] Claims for 01KJVTN6C7Z8MWFBKEBA05ZF9K: 0 claims persisted
+2026-03-04 23:24:48,105 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:24:48,106 INFO ingest.extractor: Evidence validation for 01KJVTQQ0E450NP7F2M2EJ0Z4D: 0/0 claims kept, 0 dropped
+2026-03-04 23:24:48,109 INFO __main__: [277/287] Claims for 01KJVTQQ0E450NP7F2M2EJ0Z4D: 0 claims persisted
+2026-03-04 23:25:07,482 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:25:07,482 INFO ingest.extractor: Evidence validation for 01KJVTRDK87KVXAJ52BG35RMJ1: 0/0 claims kept, 0 dropped
+2026-03-04 23:25:07,485 INFO __main__: [278/287] Claims for 01KJVTRDK87KVXAJ52BG35RMJ1: 0 claims persisted
+2026-03-04 23:25:29,478 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:25:29,478 INFO ingest.extractor: Evidence validation for 01KJVTXQWN3HRZAS9RHB3X3NK0: 0/0 claims kept, 0 dropped
+2026-03-04 23:25:29,481 INFO __main__: [279/287] Claims for 01KJVTXQWN3HRZAS9RHB3X3NK0: 0 claims persisted
+2026-03-04 23:25:52,791 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:25:52,792 INFO ingest.extractor: Evidence validation for 01KJVTY7JY0MEKFWN0T3J276MT: 0/0 claims kept, 0 dropped
+2026-03-04 23:25:52,796 INFO __main__: [280/287] Claims for 01KJVTY7JY0MEKFWN0T3J276MT: 0 claims persisted
+2026-03-04 23:26:16,757 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:26:16,757 INFO ingest.extractor: Evidence validation for 01KJVV0PNMHV3X43F3SXA1BSP9: 0/0 claims kept, 0 dropped
+2026-03-04 23:26:16,760 INFO __main__: [281/287] Claims for 01KJVV0PNMHV3X43F3SXA1BSP9: 0 claims persisted
+2026-03-04 23:27:03,444 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:27:03,444 INFO ingest.extractor: Evidence validation for 01KJVV469S2T4WJESN0K6D3NAD: 0/0 claims kept, 0 dropped
+2026-03-04 23:27:03,446 INFO __main__: [282/287] Claims for 01KJVV469S2T4WJESN0K6D3NAD: 0 claims persisted
+2026-03-04 23:27:48,401 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:27:48,401 INFO ingest.extractor: Evidence validation for 01KJVV5P22K2RWD9VZFEB99HKB: 0/0 claims kept, 0 dropped
+2026-03-04 23:27:48,404 INFO __main__: [283/287] Claims for 01KJVV5P22K2RWD9VZFEB99HKB: 0 claims persisted
+2026-03-04 23:28:05,754 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:28:05,754 INFO ingest.extractor: Evidence validation for 01KJVV7HTPJHZ7F7Y3VMSAQT45: 0/0 claims kept, 0 dropped
+2026-03-04 23:28:05,756 INFO __main__: [284/287] Claims for 01KJVV7HTPJHZ7F7Y3VMSAQT45: 0 claims persisted
+2026-03-04 23:28:21,904 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:28:21,904 INFO ingest.extractor: Evidence validation for 01KJVVA0Q269HQCAFH3CZYQXE5: 0/0 claims kept, 0 dropped
+2026-03-04 23:28:21,907 INFO __main__: [285/287] Claims for 01KJVVA0Q269HQCAFH3CZYQXE5: 0 claims persisted
+2026-03-04 23:28:41,616 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:28:41,616 INFO ingest.extractor: Evidence validation for 01KJVVDA1FXWKWMM3JTRR2704T: 0/0 claims kept, 0 dropped
+2026-03-04 23:28:41,619 INFO __main__: [286/287] Claims for 01KJVVDA1FXWKWMM3JTRR2704T: 0 claims persisted
+2026-03-04 23:29:06,391 WARNING ingest.extractor: Could not parse extractions output
+2026-03-04 23:29:06,392 INFO ingest.extractor: Evidence validation for 01KJVVDN9728146YK7HQXCNGA0: 0/0 claims kept, 0 dropped
+2026-03-04 23:29:06,398 INFO __main__: [287/287] Claims for 01KJVVDN9728146YK7HQXCNGA0: 0 claims persisted
+2026-03-04 23:29:06,402 INFO __main__: Claims reprocessing complete: 520 total claims extracted
+
+Reprocessing complete. Run --scan to verify results.
