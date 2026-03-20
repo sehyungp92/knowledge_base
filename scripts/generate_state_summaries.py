@@ -8,7 +8,11 @@ from __future__ import annotations
 
 import argparse
 import logging
+import sys
 import time
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 logger = logging.getLogger(__name__)
 
@@ -37,12 +41,12 @@ def main():
     # Get all L1 themes with source counts
     with get_conn() as conn:
         themes = conn.execute("""
-            SELECT t.id, t.name, t.level, t.state_summary,
+            SELECT t.id, t.name, t.level, t.state_summary, t.state_summary_updated_at,
                    count(DISTINCT st.source_id) AS source_count
             FROM themes t
             LEFT JOIN source_themes st ON st.theme_id = t.id
             WHERE t.level = 1
-            GROUP BY t.id, t.name, t.level, t.state_summary
+            GROUP BY t.id, t.name, t.level, t.state_summary, t.state_summary_updated_at
             ORDER BY t.name
         """).fetchall()
 

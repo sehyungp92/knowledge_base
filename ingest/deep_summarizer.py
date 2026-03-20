@@ -500,9 +500,23 @@ def generate_deep_summary(
 
     if result.is_timeout:
         logger.warning(
-            "Summary generation timed out for %s (%ds on %d chars), no fallback — returning partial or failed",
+            "Summary generation timed out for %s (%ds on %d chars), falling back to chunked summary",
             source_id, summary_timeout, text_len,
         )
+        try:
+            from ingest.chunked_extractor import chunked_deep_summary
+            from ingest.section_slicer import budget_for_source_type
+            return chunked_deep_summary(
+                source_id, clean_text, title, source_type,
+                url=url, authors=authors, published_at=published_at,
+                executor=executor, library_path=library_path,
+                budget=budget_for_source_type(source_type),
+                themes=themes, show_name=show_name,
+            )
+        except Exception:
+            logger.warning(
+                "Chunked summary fallback also failed for %s", source_id, exc_info=True,
+            )
 
     summary = result.text.strip() if result.text else f"# {title}\n\nSummary generation failed."
 

@@ -33,6 +33,9 @@ def handle_next_job(
     on_progress: Callable[[str], None] | None = None,
 ) -> str:
     """Run /next directly."""
+    if executor is None:
+        return "Error: This skill requires an LLM executor. Check your configuration."
+
     text = event.payload.get("text", "")
     log = logger.bind(job_id=job.id)
     log.info("next_handler_start")
@@ -245,8 +248,26 @@ def _generate_reading_queue(
             seen_descriptions.add(desc_key)
             unique_signals.append(s)
 
-    # Take top N
-    top = unique_signals[:count]
+    # Diversify: cap each signal type so no single source dominates.
+    # Allow at most ceil(count/2) from any one type, then backfill.
+    max_per_type = -(-count // 2)  # ceil division
+    type_counts: dict[str, int] = {}
+    top = []
+    deferred = []
+    for s in unique_signals:
+        stype = s["type"]
+        if type_counts.get(stype, 0) < max_per_type:
+            top.append(s)
+            type_counts[stype] = type_counts.get(stype, 0) + 1
+        else:
+            deferred.append(s)
+        if len(top) >= count:
+            break
+    # Backfill if we haven't reached count yet
+    for s in deferred:
+        if len(top) >= count:
+            break
+        top.append(s)
 
     # Use LLM to generate search queries if executor available
     if executor:
@@ -266,36 +287,65 @@ def _generate_reading_queue(
 # ---------------------------------------------------------------------------
 
 def _refine_search_terms(signals: list[dict], executor, log) -> list[dict]:
-    """Use LLM to generate better search queries for each recommendation."""
+    """Use LLM to generate narrative rationale and search queries per recommendation."""
+    import re
+
     descriptions = "\n".join(
-        f"{i+1}. {s['theme']}: {truncate(s['description'], 175)}"
+        f"{i+1}. [{s['type']}] {s['theme']}: {truncate(s['description'], 200)}\n"
+        f"   Reason: {s.get('reason', '')}\n"
+        f"   Priority: {s.get('priority', 0):.1f}"
         for i, s in enumerate(signals)
     )
 
-    prompt = (
-        "Generate 1-2 search queries per item for Google Scholar/arXiv.\n\n"
-        f"{descriptions}\n\n"
-        'JSON array: [{"index": 1, "queries": ["query"]}]'
-    )
+    prompt = f"""You are a research reading advisor for a personal AI knowledge engine.
+
+## Recommendations to enrich
+{descriptions}
+
+## Instructions
+
+For each recommendation, generate:
+1. A 2-3 sentence **narrative rationale** ("why now") explaining why this reading matters right now — what gap it fills, what it connects to in the user's existing knowledge, and what temporal urgency exists (is this area accelerating? is a window closing? is evidence accumulating?).
+2. 1-2 **search queries** optimised for Google Scholar or arXiv.
+
+Return a JSON array:
+```json
+[
+  {{
+    "index": 1,
+    "narrative": "This matters now because...",
+    "temporal_urgency": "accelerating|stable|emerging|stale",
+    "queries": ["search query 1", "search query 2"]
+  }}
+]
+```
+"""
 
     result = executor.run_raw(
         prompt,
         session_id="next_search",
-        timeout=60,
+        timeout=90,
     )
 
-    # Parse
-    import re
     json_match = re.search(r"```(?:json)?\s*\n(.*?)\n```", result.text, re.DOTALL)
+    if not json_match:
+        json_match = re.search(r"\[.*\]", result.text, re.DOTALL)
     if json_match:
         try:
-            items = json.loads(json_match.group(1))
+            raw = json_match.group(1) if json_match.lastindex else json_match.group(0)
+            items = json.loads(raw)
             for item in items:
                 idx = item.get("index", 0) - 1
                 if 0 <= idx < len(signals):
                     queries = item.get("queries", [])
                     if queries:
                         signals[idx]["search_queries"] = queries
+                    narrative = item.get("narrative", "")
+                    if narrative:
+                        signals[idx]["narrative"] = narrative
+                    urgency = item.get("temporal_urgency", "")
+                    if urgency:
+                        signals[idx]["temporal_urgency"] = urgency
         except (json.JSONDecodeError, KeyError):
             pass
 
@@ -381,10 +431,26 @@ def _format_queue(signals: list[dict], count: int, focus_theme: str | None) -> s
         "low_coverage_theme": "📭",
     }
 
+    urgency_icons = {
+        "accelerating": "🔥",
+        "emerging": "🌱",
+        "stable": "—",
+        "stale": "⏳",
+    }
+
     for i, s in enumerate(signals, 1):
         icon = type_icons.get(s["type"], "📖")
-        lines.append(f"### {i}. {icon} {s['theme']}")
-        lines.append(f"**Why:** {s['reason']}")
+        urgency = s.get("temporal_urgency", "")
+        urgency_badge = f" {urgency_icons.get(urgency, '')} {urgency}" if urgency else ""
+        lines.append(f"### {i}. {icon} {s['theme']}{urgency_badge}")
+
+        # Narrative rationale (LLM-generated "why now")
+        narrative = s.get("narrative")
+        if narrative:
+            lines.append(f"{narrative}")
+        else:
+            lines.append(f"**Why:** {s['reason']}")
+
         lines.append(f"**Gap:** {s['description']}")
 
         # Search suggestions

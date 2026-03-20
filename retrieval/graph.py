@@ -128,7 +128,11 @@ class GraphRetriever:
         return rows
 
     def find_contradictions(self, topic: str | None = None, threshold: float = 0.85) -> list[dict]:
-        """Find potentially contradicting claims via high embedding similarity across sources."""
+        """Find potentially contradicting claims via high embedding similarity across sources.
+
+        Returns temporal metadata (source dates) so callers can assess whether
+        a disagreement is narrowing or widening over time.
+        """
         if not topic:
             return []
 
@@ -137,11 +141,17 @@ class GraphRetriever:
                 rows = conn.execute("""
                     SELECT c1.id AS claim_a_id, c1.claim_text AS claim_a_text,
                            c1.source_id AS source_a_id,
+                           s1.published_at AS source_a_date,
+                           s1.title AS source_a_title,
                            c2.id AS claim_b_id, c2.claim_text AS claim_b_text,
                            c2.source_id AS source_b_id,
+                           s2.published_at AS source_b_date,
+                           s2.title AS source_b_title,
                            1 - (c1.embedding <=> c2.embedding) AS similarity
                     FROM claims c1
                     JOIN claims c2 ON c1.id < c2.id
+                    JOIN sources s1 ON c1.source_id = s1.id
+                    JOIN sources s2 ON c2.source_id = s2.id
                     WHERE c1.embedding IS NOT NULL AND c2.embedding IS NOT NULL
                       AND c1.source_id != c2.source_id
                       AND (c1.claim_text ILIKE %s OR c2.claim_text ILIKE %s)

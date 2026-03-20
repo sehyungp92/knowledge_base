@@ -19,11 +19,11 @@ from reading_app.text_utils import truncate_sentences as _truncate_sentences
 # ---------------------------------------------------------------------------
 
 _SOURCE_TYPE_BUDGETS = {
-    "paper": 80_000,
-    "arxiv": 80_000,
-    "article": 70_000,
-    "video": 50_000,
-    "podcast": 50_000,
+    "paper": 200_000,
+    "arxiv": 200_000,
+    "article": 180_000,
+    "video": 150_000,
+    "podcast": 150_000,
 }
 
 
@@ -36,13 +36,16 @@ def budget_for_source_type(source_type: str | None, default: int = 80_000) -> in
 
 def timeout_for_text(
     text_len: int,
-    base: int = 270,
-    per_10k: int = 30,
-    ceiling: int = 480,
+    base: int = 180,
+    per_10k: int = 15,
+    ceiling: int = 600,
 ) -> int:
-    """Dynamic timeout: 270s base + 30s per 10K chars, clamped to ceiling.
+    """Dynamic timeout: 180s base + 15s per 10K chars, clamped to ceiling.
 
-    Examples: 50K → 420s, 80K → 480s, 10K → 300s.
+    Lower base (small texts are fast), gentler slope (not linear with size),
+    higher ceiling (larger budgets need more time).
+
+    Examples: 10K → 195s, 50K → 255s, 100K → 330s, 200K → 480s.
     """
     return min(base + (text_len // 10_000) * per_10k, ceiling)
 

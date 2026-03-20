@@ -29,6 +29,8 @@ import sys
 import time
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
 # Ensure UTF-8 on Windows
 os.environ.setdefault("PYTHONUTF8", "1")
 import io

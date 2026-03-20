@@ -14,6 +14,13 @@ from ingest.json_parser import parse_json_from_llm
 
 logger = logging.getLogger(__name__)
 
+# ── Thresholds ──────────────────────────────────────────────────────────────
+MATCH_CONFIDENCE_FLOOR = 0.5    # Minimum confidence for a match to survive filtering
+NOTIFY_CONFIDENCE_FLOOR = 0.7   # Minimum confidence to emit a Telegram notification
+AUTO_CONFIRM_EVIDENCE_COUNT = 3 # Minimum evidence items to auto-transition status
+AUTO_CONFIRM_AVG_CONFIDENCE = 0.7  # Minimum avg confidence for auto-transition
+MATCH_TIMEOUT_SECONDS = 180     # LLM call timeout for matching
+
 MATCH_PROMPT = """You are checking whether newly extracted AI landscape signals match any open predictions (anticipations).
 
 **Source publication date: {published_at}**
@@ -117,6 +124,11 @@ def match_anticipations(
         signals_parts.append(f"[Bottleneck] {bn['description']} (horizon: {bn.get('resolution_horizon', '?')})")
     for bt in extracted_signals.get("breakthroughs", []):
         signals_parts.append(f"[Breakthrough] {bt['description']} (significance: {bt.get('significance', '?')})")
+
+    # Fallback: use raw claims text when no structured landscape signals exist
+    if not signals_parts and extracted_signals.get("claims_text"):
+        signals_parts.append(f"[Claims from source]\n{extracted_signals['claims_text']}")
+
     signals_text = "\n".join(signals_parts)
 
     if not signals_text.strip():
@@ -146,23 +158,34 @@ def match_anticipations(
         result = executor.run_raw(
             prompt,
             session_id=f"anticipation_match_{source_id}",
-            timeout=180,
+            timeout=MATCH_TIMEOUT_SECONDS,
         )
         matches = _parse_matches(result.text)
     except Exception:
         logger.warning("LLM anticipation matching failed for %s", source_id, exc_info=True)
         return []
 
-    # Filter low-confidence matches
-    valid_matches = [m for m in matches if m.get("confidence", 0) >= 0.5]
-
-    # Validate anticipation IDs exist
+    # Filter low-confidence matches (log what gets dropped for diagnosability)
     valid_ids = {a["id"] for a in anticipations}
-    valid_matches = [m for m in valid_matches if m.get("anticipation_id") in valid_ids]
+    valid_matches = []
+    for m in matches:
+        conf = m.get("confidence", 0)
+        ant_id = m.get("anticipation_id")
+        if ant_id not in valid_ids:
+            logger.debug("Dropping match with unknown anticipation_id=%s", ant_id)
+            continue
+        if conf < MATCH_CONFIDENCE_FLOOR:
+            logger.info(
+                "Filtered sub-threshold match for %s: ant=%s type=%s conf=%.2f evidence=%.60s",
+                source_id, ant_id, m.get("match_type"), conf, m.get("evidence", ""),
+            )
+            continue
+        valid_matches.append(m)
 
+    raw_count = len(matches)
     logger.info(
-        "Anticipation matching for %s: %d matches from %d anticipations",
-        source_id, len(valid_matches), len(anticipations),
+        "Anticipation matching for %s: %d/%d matches survived filtering (%d anticipations checked)",
+        source_id, len(valid_matches), raw_count, len(anticipations),
     )
     return valid_matches
 
@@ -183,11 +206,37 @@ def persist_anticipation_matches(
     if not matches:
         return 0
 
-    from reading_app.db import append_anticipation_evidence
+    from reading_app.db import append_anticipation_evidence, get_conn
     persisted = 0
+    skipped_dup = 0
+
+    # Pre-fetch existing evidence to guard against duplicate appends
+    existing_evidence: dict[str, set[str]] = {}  # ant_id -> {source_ids already matched}
+    try:
+        ant_ids = {m["anticipation_id"] for m in matches if m.get("anticipation_id")}
+        if ant_ids:
+            with get_conn() as conn:
+                for ant_id in ant_ids:
+                    row = conn.execute(
+                        "SELECT status_evidence FROM anticipations WHERE id = %s",
+                        (ant_id,),
+                    ).fetchone()
+                    if row and isinstance(row["status_evidence"], list):
+                        existing_evidence[ant_id] = {
+                            e.get("source_id") for e in row["status_evidence"] if e.get("source_id")
+                        }
+    except Exception:
+        logger.debug("Failed to pre-fetch evidence for idempotency check", exc_info=True)
 
     for match in matches:
+        ant_id = match.get("anticipation_id", "?")
         try:
+            # Idempotency: skip if this source already has evidence on this anticipation
+            if source_id in existing_evidence.get(ant_id, set()):
+                skipped_dup += 1
+                logger.debug("Skipping duplicate evidence: source %s already on anticipation %s", source_id, ant_id)
+                continue
+
             evidence = {
                 "source_id": source_id,
                 "match_type": match["match_type"],
@@ -196,24 +245,29 @@ def persist_anticipation_matches(
                 "confidence": match.get("confidence", 0.5),
                 "matched_at": datetime.now(timezone.utc).isoformat(),
             }
-            append_anticipation_evidence(match["anticipation_id"], evidence)
+            append_anticipation_evidence(ant_id, evidence)
             persisted += 1
         except Exception:
             logger.warning(
                 "Failed to persist anticipation match for %s",
-                match.get("anticipation_id", "?"), exc_info=True,
+                ant_id, exc_info=True,
             )
 
-    # Emit notifications for high-confidence matches
+    # Emit notifications only for actually persisted matches (not skipped duplicates)
+    persisted_ant_ids = set()
     for match in matches:
-        if match.get("confidence", 0) >= 0.7 and match.get("anticipation_id"):
+        ant_id = match.get("anticipation_id")
+        if not ant_id or source_id in existing_evidence.get(ant_id, set()):
+            continue  # Skip duplicates — same logic as persist loop above
+        persisted_ant_ids.add(ant_id)
+        if match.get("confidence", 0) >= NOTIFY_CONFIDENCE_FLOOR:
             try:
                 from ingest.notification_emitter import emit_notification
                 prediction_text = match.get("evidence", match.get("reasoning", ""))[:80]
                 emit_notification(
                     type="anticipation_match",
                     entity_type="anticipation",
-                    entity_id=match["anticipation_id"],
+                    entity_id=ant_id,
                     title=f"Evidence found for prediction: {prediction_text}",
                     detail={"match_type": match["match_type"], "confidence": match["confidence"]},
                     source_id=source_id,
@@ -222,9 +276,16 @@ def persist_anticipation_matches(
                 logger.debug("Failed to emit anticipation notification", exc_info=True)
 
     # Auto-transition anticipation status based on accumulated evidence
-    _auto_update_anticipation_statuses(matches, source_id)
+    # Only check anticipations that actually received new evidence
+    if persisted_ant_ids:
+        persisted_matches = [m for m in matches if m.get("anticipation_id") in persisted_ant_ids]
+        _auto_update_anticipation_statuses(persisted_matches, source_id)
 
-    logger.info("Persisted %d/%d anticipation matches for source %s", persisted, len(matches), source_id)
+    if skipped_dup:
+        logger.info("Persisted %d/%d anticipation matches for source %s (%d skipped as duplicates)",
+                     persisted, len(matches), source_id, skipped_dup)
+    else:
+        logger.info("Persisted %d/%d anticipation matches for source %s", persisted, len(matches), source_id)
     return persisted
 
 
@@ -232,7 +293,8 @@ def _auto_update_anticipation_statuses(matches: list[dict], source_id: str) -> N
     """Auto-transition anticipation status when evidence accumulates.
 
     Rules:
-    - If evidence_count >= 3 and avg confidence > 0.7: -> partially_confirmed
+    - If evidence_count >= AUTO_CONFIRM_EVIDENCE_COUNT and avg confidence > AUTO_CONFIRM_AVG_CONFIDENCE:
+      transition to partially_confirmed
     - Only transitions from 'open' to 'partially_confirmed' (never auto-confirms fully)
     - Emits notification for human review
     """
@@ -254,11 +316,11 @@ def _auto_update_anticipation_statuses(matches: list[dict], source_id: str) -> N
                     continue
 
                 evidence = row["status_evidence"]
-                if not isinstance(evidence, list) or len(evidence) < 3:
+                if not isinstance(evidence, list) or len(evidence) < AUTO_CONFIRM_EVIDENCE_COUNT:
                     continue
 
                 avg_conf = sum(e.get("confidence", 0) for e in evidence) / len(evidence)
-                if avg_conf < 0.7:
+                if avg_conf < AUTO_CONFIRM_AVG_CONFIDENCE:
                     continue
 
                 update_anticipation_status(ant_id, "partially_confirmed")

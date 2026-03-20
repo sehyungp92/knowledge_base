@@ -149,37 +149,38 @@ def _load_source_context(source_id: str, source_dir: Path, log) -> dict:
     except Exception as e:
         log.debug("enrich_claims_load_failed", error=str(e)[:100])
 
-    # Landscape entities linked to this source
+    # Landscape entities linked to this source (with theme-based fallback)
+    _LANDSCAPE_TABLES = {
+        "capabilities": ("c", "capabilities"),
+        "limitations": ("l", "limitations"),
+        "bottlenecks": ("b", "bottlenecks"),
+    }
     with get_conn() as conn:
-        try:
-            ctx["capabilities"] = conn.execute(
-                """SELECT c.*, t.name AS theme_name FROM capabilities c
-                   LEFT JOIN themes t ON c.theme_id = t.id
-                   WHERE c.evidence_sources::text LIKE %s""",
-                (f"%{source_id}%",),
-            ).fetchall()
-        except Exception:
-            pass
+        for ctx_key, (alias, table) in _LANDSCAPE_TABLES.items():
+            try:
+                ctx[ctx_key] = conn.execute(
+                    f"""SELECT {alias}.*, t.name AS theme_name FROM {table} {alias}
+                        LEFT JOIN themes t ON {alias}.theme_id = t.id
+                        WHERE {alias}.evidence_sources::text LIKE %s""",
+                    (f"%{source_id}%",),
+                ).fetchall()
+            except Exception:
+                pass
 
-        try:
-            ctx["limitations"] = conn.execute(
-                """SELECT l.*, t.name AS theme_name FROM limitations l
-                   LEFT JOIN themes t ON l.theme_id = t.id
-                   WHERE l.evidence_sources::text LIKE %s""",
-                (f"%{source_id}%",),
-            ).fetchall()
-        except Exception:
-            pass
-
-        try:
-            ctx["bottlenecks"] = conn.execute(
-                """SELECT b.*, t.name AS theme_name FROM bottlenecks b
-                   LEFT JOIN themes t ON b.theme_id = t.id
-                   WHERE b.evidence_sources::text LIKE %s""",
-                (f"%{source_id}%",),
-            ).fetchall()
-        except Exception:
-            pass
+            if not ctx[ctx_key]:
+                try:
+                    ctx[ctx_key] = conn.execute(
+                        f"""SELECT {alias}.*, t.name AS theme_name FROM {table} {alias}
+                            LEFT JOIN themes t ON {alias}.theme_id = t.id
+                            WHERE {alias}.theme_id IN (
+                                SELECT theme_id FROM source_themes WHERE source_id = %s
+                            ) ORDER BY {alias}.created_at DESC LIMIT 20""",
+                        (source_id,),
+                    ).fetchall()
+                    if ctx[ctx_key]:
+                        ctx[f"_{ctx_key}_via_theme"] = True
+                except Exception:
+                    pass
 
         try:
             ctx["breakthroughs"] = conn.execute(
@@ -235,7 +236,8 @@ def _format_current_state(title: str, source_id: str, ctx: dict) -> str:
 
     # Capabilities
     caps = ctx["capabilities"]
-    lines.append(f"**Capabilities:** {len(caps)} extracted")
+    cap_label = "extracted" if not ctx.get("_capabilities_via_theme") else "from related themes"
+    lines.append(f"**Capabilities:** {len(caps)} {cap_label}")
     for c in caps[:8]:
         lines.append(f"- {c['description']} (maturity: {c.get('maturity', '?')})")
 
@@ -249,7 +251,8 @@ def _format_current_state(title: str, source_id: str, ctx: dict) -> str:
         1 for l in lims
         if (l.get("signal_type") or "").startswith("implicit") and l.get("validated") is None
     )
-    lines.append(f"\n**Limitations:** {len(lims)} ({implicit_count} implicit, {unvalidated} unvalidated)")
+    lim_scope = " _(theme-level)_" if ctx.get("_limitations_via_theme") else ""
+    lines.append(f"\n**Limitations:** {len(lims)} ({implicit_count} implicit, {unvalidated} unvalidated){lim_scope}")
     for l in lims[:8]:
         validated_mark = ""
         if l.get("validated") is True:
@@ -265,7 +268,8 @@ def _format_current_state(title: str, source_id: str, ctx: dict) -> str:
 
     # Bottlenecks
     bns = ctx["bottlenecks"]
-    lines.append(f"\n**Bottlenecks linked:** {len(bns)}")
+    bn_scope = " _(theme-level)_" if ctx.get("_bottlenecks_via_theme") else ""
+    lines.append(f"\n**Bottlenecks linked:** {len(bns)}{bn_scope}")
     for b in bns[:5]:
         lines.append(f"- {b['description']} (horizon: {b.get('resolution_horizon', '?')})")
 

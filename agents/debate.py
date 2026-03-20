@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import logging
+import random
 import re
 
 from agents.base import BaseAgent
@@ -17,11 +18,11 @@ DEBATE_PROMPT = """You are judging a debate between two research ideas.
 
 ## Idea A
 {idea_a}
-Critique scores: novelty={a_novelty:.2f}, testability={a_testability:.2f}, impact={a_impact:.2f}
+Overall score: {a_score:.2f} | Critique scores: novelty={a_novelty:.2f}, testability={a_testability:.2f}, impact={a_impact:.2f}
 
 ## Idea B
 {idea_b}
-Critique scores: novelty={b_novelty:.2f}, testability={b_testability:.2f}, impact={b_impact:.2f}
+Overall score: {b_score:.2f} | Critique scores: novelty={b_novelty:.2f}, testability={b_testability:.2f}, impact={b_impact:.2f}
 
 ## Instructions
 Compare these ideas head-to-head. Consider:
@@ -34,8 +35,12 @@ Return JSON:
 {{
   "winner": "A" or "B",
   "reasoning": "...",
-  "loser_weaknesses": "Key weakness of the losing idea"
+  "loser_weaknesses": "Key weakness of the losing idea",
+  "winner_score_delta": 0.0 to 0.1,
+  "loser_score_delta": -0.1 to 0.0
 }}
+
+Score deltas: How much should the winner's score increase and loser's decrease based on debate performance? Use 0.0 if the debate didn't reveal anything new beyond the critique scores.
 """
 
 DEEP_DEBATE_PROMPT = """You are a panel of 3 experts debating the top research ideas from a tournament.
@@ -48,18 +53,26 @@ DEEP_DEBATE_PROMPT = """You are a panel of 3 experts debating the top research i
 ## Round {round_num} of 3
 
 ## Instructions
-Each panelist should:
-1. Argue for their preferred idea
-2. Identify critical flaws in other ideas
-3. Suggest improvements
+
+The panel has three distinct roles:
+1. **Advocate**: Argues for the strongest idea, highlighting its unique strengths and potential impact.
+2. **Skeptic**: Plays devil's advocate — actively tries to KILL each idea by finding fatal flaws, questioning assumptions, identifying gaps in grounding, and exposing testability problems. The skeptic should be rigorous and adversarial.
+3. **Synthesiser**: Identifies ways ideas could be combined or improved, and judges which ideas survive the skeptic's attacks.
+
+Discussion structure:
+- Advocate presents the case for each surviving idea
+- Skeptic attacks each idea's weakest point
+- Synthesiser assesses whether the attack was fatal or survivable
 
 After discussion, vote on ranking. Return JSON:
 {{
-  "discussion": "...",
-  "rankings": [{{"idea_index": 0, "rank": 1, "justification": "..."}}],
+  "discussion": "Full panel discussion with labeled speaker roles",
+  "rankings": [{{"idea_index": 0, "rank": 1, "score_delta": 0.0, "justification": "..."}}],
   "eliminated_indices": [indices of ideas to eliminate this round],
   "loser_weaknesses": "Weaknesses of eliminated ideas"
 }}
+
+score_delta: How much should each idea's score change based on debate performance (-0.15 to +0.15). Ideas that survived skeptic attacks get positive deltas. Ideas with exposed fatal flaws get negative deltas.
 """
 
 
@@ -81,9 +94,11 @@ class DebateAgent(BaseAgent):
         prompt = DEBATE_PROMPT.format(
             idea_a=idea_a.get("idea_text", ""),
             idea_b=idea_b.get("idea_text", ""),
+            a_score=idea_a.get("overall_score", 0.5),
             a_novelty=idea_a.get("novelty_score", 0.5),
             a_testability=idea_a.get("feasibility_score", 0.5),
             a_impact=idea_a.get("impact_score", 0.5),
+            b_score=idea_b.get("overall_score", 0.5),
             b_novelty=idea_b.get("novelty_score", 0.5),
             b_testability=idea_b.get("feasibility_score", 0.5),
             b_impact=idea_b.get("impact_score", 0.5),
@@ -96,6 +111,29 @@ class DebateAgent(BaseAgent):
         winner_key = parsed.get("winner", "A")
         winner = idea_a if winner_key == "A" else idea_b
         loser = idea_b if winner_key == "A" else idea_a
+
+        # Apply score deltas from debate
+        winner_delta = parsed.get("winner_score_delta", 0.0)
+        loser_delta = parsed.get("loser_score_delta", 0.0)
+        try:
+            winner_delta = max(0.0, min(0.1, float(winner_delta)))
+            loser_delta = max(-0.1, min(0.0, float(loser_delta)))
+        except (TypeError, ValueError):
+            winner_delta, loser_delta = 0.0, 0.0
+
+        if winner_delta:
+            old_score = winner.get("overall_score", 0.5)
+            winner["overall_score"] = min(1.0, old_score + winner_delta)
+            meta = winner.setdefault("tournament_metadata", {})
+            meta.setdefault("pre_debate_score", old_score)
+            meta["debate_score_delta"] = meta.get("debate_score_delta", 0.0) + winner_delta
+
+        if loser_delta:
+            old_score = loser.get("overall_score", 0.5)
+            loser["overall_score"] = max(0.0, old_score + loser_delta)
+            meta = loser.setdefault("tournament_metadata", {})
+            meta.setdefault("pre_debate_score", old_score)
+            meta["debate_score_delta"] = meta.get("debate_score_delta", 0.0) + loser_delta
 
         return {
             "winner": winner,
@@ -144,23 +182,40 @@ class DebateAgent(BaseAgent):
             result = self._run(prompt, session_id=f"deep_debate_r{round_num}")
             parsed = _parse_deep_debate(result.text)
 
+            # Apply score deltas from rankings
+            rankings = parsed.get("rankings", [])
+            for r in rankings:
+                idx = r.get("idea_index", -1)
+                delta = r.get("score_delta", 0.0)
+                if 0 <= idx < len(remaining) and delta:
+                    try:
+                        delta = max(-0.15, min(0.15, float(delta)))
+                    except (TypeError, ValueError):
+                        delta = 0.0
+                    if delta:
+                        idea = remaining[idx]
+                        old_score = idea.get("overall_score", 0.5)
+                        idea["overall_score"] = max(0.0, min(1.0, old_score + delta))
+                        meta = idea.setdefault("tournament_metadata", {})
+                        meta.setdefault("pre_debate_score", old_score)
+                        meta["debate_score_delta"] = meta.get("debate_score_delta", 0.0) + delta
+
             # Eliminate bottom 30%
             eliminated = set(parsed.get("eliminated_indices", []))
             if not eliminated:
-                # If no explicit elimination, remove bottom 30% by ranking
-                rankings = parsed.get("rankings", [])
                 if rankings:
                     rankings.sort(key=lambda r: r.get("rank", 999))
                     n_elim = max(1, len(remaining) * 30 // 100)
                     for r in rankings[-n_elim:]:
                         eliminated.add(r.get("idea_index", -1))
 
+            eliminated_ideas = [idea for i, idea in enumerate(remaining) if i in eliminated]
             remaining = [idea for i, idea in enumerate(remaining) if i not in eliminated]
 
-            # Append loser weaknesses to reviews
+            # Append loser weaknesses to eliminated ideas (not survivors)
             loser_weaknesses = parsed.get("loser_weaknesses", "")
             if loser_weaknesses:
-                for idea in remaining:
+                for idea in eliminated_ideas:
                     idea.setdefault("debate_notes", "")
                     idea["debate_notes"] += f"\nRound {round_num}: {loser_weaknesses}"
 
@@ -174,7 +229,7 @@ def _parse_debate_result(text: str) -> dict:
             return json.loads(json_match.group(0))
         except json.JSONDecodeError:
             pass
-    return {"winner": "A", "reasoning": "Parse failed"}
+    return {"winner": random.choice(["A", "B"]), "reasoning": "Parse failed"}
 
 
 def _parse_deep_debate(text: str) -> dict:

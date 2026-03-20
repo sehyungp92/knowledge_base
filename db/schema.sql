@@ -38,6 +38,7 @@ CREATE TABLE IF NOT EXISTS claims (
     evidence_type TEXT,
     temporal_scope TEXT,  -- current_state, historical, future_prediction
     provenance_type TEXT DEFAULT 'extracted',  -- extracted, generated, synthesis
+    evidence_validation TEXT,  -- NULL=strict, 'relaxed'=passed relaxed threshold only
     embedding VECTOR(768),
     fts_vector TSVECTOR GENERATED ALWAYS AS (
         to_tsvector('english', claim_text)
@@ -300,7 +301,9 @@ CREATE TABLE IF NOT EXISTS landscape_history (
     new_value TEXT,
     changed_at TIMESTAMPTZ DEFAULT NOW(),
     source_id TEXT,
-    attribution TEXT
+    attribution TEXT,
+    source_published_at TIMESTAMPTZ,
+    note TEXT
 );
 
 -- ============================================================

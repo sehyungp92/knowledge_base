@@ -344,19 +344,47 @@ def contradiction_lens(
     evidence_items = []
     citations = set()
 
-    # Find contradictions via graph retriever
+    # Find contradictions via graph retriever (includes temporal metadata)
     try:
         gr = GraphRetriever(get_conn_fn)
         contradictions = gr.find_contradictions(topic=query, threshold=0.82)
         for c in contradictions[:10]:
             citations.add(c.get("source_a_id", ""))
             citations.add(c.get("source_b_id", ""))
+
+            # Temporal trajectory: which claim is newer? Is the disagreement recent?
+            date_a = c.get("source_a_date")
+            date_b = c.get("source_b_date")
+            newer_source = None
+            temporal_note = ""
+            if date_a and date_b:
+                if date_a > date_b:
+                    newer_source = "a"
+                    temporal_note = (
+                        f"Newer source ({str(date_a)[:10]}) contradicts older ({str(date_b)[:10]}) "
+                        f"— disagreement may be widening"
+                    )
+                elif date_b > date_a:
+                    newer_source = "b"
+                    temporal_note = (
+                        f"Newer source ({str(date_b)[:10]}) contradicts older ({str(date_a)[:10]}) "
+                        f"— disagreement may be widening"
+                    )
+                else:
+                    temporal_note = f"Same period ({str(date_a)[:10]}) — contemporaneous disagreement"
+
             evidence_items.append({
                 "type": "potential_contradiction",
                 "claim_a": c.get("claim_a_text", ""),
                 "claim_b": c.get("claim_b_text", ""),
                 "source_a": c.get("source_a_id", ""),
                 "source_b": c.get("source_b_id", ""),
+                "source_a_title": c.get("source_a_title", ""),
+                "source_b_title": c.get("source_b_title", ""),
+                "source_a_date": str(date_a)[:10] if date_a else None,
+                "source_b_date": str(date_b)[:10] if date_b else None,
+                "newer_source": newer_source,
+                "temporal_note": temporal_note,
                 "similarity": c.get("similarity", 0),
             })
     except Exception:
@@ -385,9 +413,10 @@ def contradiction_lens(
     if contradictions_found:
         summary_parts.append(f"Found {len(contradictions_found)} potential contradictions:")
         for c in contradictions_found[:3]:
+            temporal = f" | {c['temporal_note']}" if c.get("temporal_note") else ""
             summary_parts.append(
                 f"- \"{c['claim_a'][:60]}\" vs \"{c['claim_b'][:60]}\" "
-                f"(similarity: {c['similarity']:.2f})"
+                f"(similarity: {c['similarity']:.2f}{temporal})"
             )
     if gaps_found:
         summary_parts.append(f"Found {len(gaps_found)} coverage gaps:")

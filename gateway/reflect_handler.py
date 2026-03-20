@@ -561,7 +561,94 @@ def _run_topic_mode(
         log.warning("report_generator_failed_fallback_to_legacy", exc_info=True)
 
     # Fallback: legacy single-pass synthesis
-    return _run_topic_mode_legacy(topic, config, executor, log, on_progress)
+    result = _run_topic_mode_legacy(topic, config, executor, log, on_progress)
+
+    # Persist synthesis claims even from the legacy path
+    _persist_synthesis_claims(topic, result, get_conn, executor, log)
+
+    return result
+
+
+def _persist_synthesis_claims(
+    topic: str,
+    text: str,
+    get_conn_fn,
+    executor,
+    log,
+) -> None:
+    """Extract key conclusions from legacy topic synthesis and persist as synthesis claims."""
+    if not text or len(text) < 200:
+        return
+
+    try:
+        from reading_app.db import insert_claim, ensure_pool
+        from reading_app.embeddings import embed_batch
+        from ulid import ULID
+
+        ensure_pool()
+
+        prompt = f"""Extract 3-5 key conclusions from this report. Each conclusion should be
+a standalone claim that captures a non-obvious insight from the analysis.
+
+Report:
+{text[:6000]}
+
+Return ONLY a JSON array of objects with "claim" and "evidence" fields.
+Example: [{{"claim": "...", "evidence": "..."}}]"""
+
+        result = executor.run_raw(prompt, session_id="legacy_conclusions", timeout=60)
+        if not result.text:
+            return
+
+        json_match = re.search(r"\[.*\]", result.text, re.DOTALL)
+        if not json_match:
+            return
+
+        conclusions = json.loads(json_match.group(0))
+        if not isinstance(conclusions, list):
+            return
+
+        report_source_id = f"report_{topic.lower().replace(' ', '_')[:30]}"
+
+        with get_conn_fn() as conn:
+            existing = conn.execute(
+                "SELECT id FROM sources WHERE id = %s", (report_source_id,)
+            ).fetchone()
+            if not existing:
+                conn.execute(
+                    """INSERT INTO sources (id, source_type, title, processing_status)
+                       VALUES (%s, 'synthesis', %s, 'complete')
+                       ON CONFLICT (id) DO NOTHING""",
+                    (report_source_id, f"Report: {topic}"),
+                )
+                conn.commit()
+
+        valid_conclusions = [
+            c for c in conclusions[:5]
+            if c.get("claim") and len(c.get("claim", "")) >= 10
+        ]
+        texts = [c["claim"] for c in valid_conclusions]
+        embeddings = embed_batch(texts) if texts else []
+
+        for i, conclusion in enumerate(valid_conclusions):
+            claim_text = conclusion["claim"]
+            emb = embeddings[i] if i < len(embeddings) and embeddings[i] else None
+            insert_claim(
+                id=f"syn_{ULID()}",
+                source_id=report_source_id,
+                claim_text=claim_text,
+                claim_type="synthesis_conclusion",
+                section=f"report:{topic}",
+                confidence=0.6,
+                evidence_snippet=conclusion.get("evidence", "")[:500],
+                evidence_type="synthesis",
+                embedding=emb,
+                provenance_type="synthesis",
+            )
+
+        log.info("legacy_synthesis_claims_persisted", count=len(valid_conclusions), topic=topic)
+    except Exception:
+        log.warning("legacy_synthesis_claims_failed", exc_info=True)
 
 
 def _run_topic_mode_legacy(

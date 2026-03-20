@@ -843,7 +843,10 @@ def persist_landscape_signals(
                         bt_with_id = {**bt, "id": bt_id, "primary_source_id": source_id}
                         bn_updates = propagate_breakthrough_to_bottlenecks(bt_with_id, source_id)
                         if bn_updates:
-                            persist_bottleneck_updates(bn_updates, source_id)
+                            persist_bottleneck_updates(
+                                bn_updates, source_id,
+                                breakthrough_description=bt.get("description", ""),
+                            )
                             delta.bottleneck_propagations.extend(bn_updates)
                             # Also invalidate themes for any bottlenecks whose horizons shifted
                             for upd in bn_updates:

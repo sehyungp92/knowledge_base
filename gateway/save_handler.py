@@ -253,6 +253,19 @@ def handle_save_job(event: Event, job: Job, config, executor, *, on_progress=Non
     lines.append(f"Claims extracted: {claims_count}")
     if result.get("summary"):
         lines.append(f"Summary: {len(result['summary'])} chars")
+
+    # Surface anticipation matches prominently
+    ant_matches = result.get("anticipation_matches", [])
+    if ant_matches:
+        lines.append(f"\n**Anticipation matches: {len(ant_matches)}**")
+        for m in ant_matches[:5]:
+            ant_id = m.get("anticipation_id", "?")
+            match_type = m.get("match_type", "?")
+            prediction = m.get("prediction", m.get("evidence_text", ""))[:100]
+            lines.append(f"  - `{ant_id}` [{match_type}]: {prediction}")
+        if len(ant_matches) > 5:
+            lines.append(f"  ... and {len(ant_matches) - 5} more")
+
     if errors:
         lines.append(f"Warnings: {len(errors)} non-critical errors")
     lines.append(f"Completed in {elapsed:.0f}s")

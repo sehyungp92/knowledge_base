@@ -69,8 +69,10 @@
 
 ## Last Run State
 <!-- Updated by heartbeat skill after each run -->
-- Last velocity computation: [never]
-- Last anticipation review: [never]
+- Last velocity computation: 2026-03-19
+- Last anticipation review: 2026-03-19 (10 open, 0 evidence — flagged)
 - Last belief formation scan: [never]
-- Last consistency check: [never]
+- Last consistency check: [never] (skipped — only 1 active belief)
 - Last epistemic digest: [never]
+- Last staleness decay: 2026-03-19 (0 stale entities)
+- Last coverage gap scan: 2026-03-19 (50 themes with gaps, 3 over-optimistic)

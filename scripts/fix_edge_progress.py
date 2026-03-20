@@ -15,7 +15,10 @@ Usage:
 
 import json
 import shutil
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 PROGRESS_FILE = PROJECT_ROOT / "scripts" / "edge_progress.json"

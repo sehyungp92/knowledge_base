@@ -143,28 +143,16 @@ Return ONLY the JSON object, no other text."""
             source_id, budget, reduced_budget,
         )
         sliced_text = prioritized_slice(clean_text, budget=reduced_budget)
+        dynamic_timeout = timeout_for_text(len(sliced_text))
         prompt = _build_prompt(sliced_text)
         result = executor.run_raw(prompt, session_id=f"extract_{source_id}_retry", timeout=dynamic_timeout)
 
     extractions = _parse_extractions(result.text)
 
     # Validate evidence snippets exist in source text
-    validated_claims = []
-    total_claims = len(extractions.get("claims", []))
-    for claim in extractions.get("claims", []):
-        snippet = claim.get("evidence_snippet", "")
-        if snippet and _validate_evidence(snippet, clean_text):
-            validated_claims.append(claim)
-        elif not snippet:
-            logger.debug("Dropping claim without evidence: %s", claim.get("claim_text", "")[:50])
-        else:
-            logger.debug("Evidence snippet not found in source: %s", snippet[:50])
-    dropped = total_claims - len(validated_claims)
-    logger.info(
-        "Evidence validation for %s: %d/%d claims kept, %d dropped",
-        source_id, len(validated_claims), total_claims, dropped,
+    extractions["claims"] = validate_claims_evidence(
+        extractions.get("claims", []), clean_text, source_id,
     )
-    extractions["claims"] = validated_claims
 
     # Save extractions to library
     if library_path:
@@ -213,7 +201,10 @@ def _parse_extractions(text: str) -> dict:
                     except json.JSONDecodeError:
                         break
 
-    logger.warning("Could not parse extractions output")
+    logger.warning(
+        "Could not parse extractions output (len=%d, has_json_start=%s, has_codeblock=%s): %.500s",
+        len(text), cleaned.startswith("{"), "```" in text, text[:500],
+    )
     return {"claims": [], "concepts": []}
 
 
@@ -238,11 +229,14 @@ def _normalize_extractions(payload: object) -> dict:
     return {"claims": [], "concepts": []}
 
 
-def _validate_evidence(snippet: str, source_text: str) -> bool:
+def _validate_evidence(snippet: str, source_text: str, relaxed: bool = False) -> bool:
     """Check that evidence snippet exists in source text.
 
     Uses fuzzy matching: checks if a substantial portion of the snippet
     words appear in sequence in the source.
+
+    When relaxed=True (for degraded PDF text), lowers the word-order
+    threshold and adds character trigram similarity as a fallback.
     """
     # Normalize whitespace
     snippet_lower = " ".join(snippet.lower().split())
@@ -252,7 +246,7 @@ def _validate_evidence(snippet: str, source_text: str) -> bool:
     if snippet_lower in source_lower:
         return True
 
-    # Fuzzy: check if 80% of words appear in order
+    # Fuzzy: check if words appear in order
     snippet_words = snippet_lower.split()
     if len(snippet_words) < 3:
         return snippet_lower in source_lower
@@ -260,10 +254,93 @@ def _validate_evidence(snippet: str, source_text: str) -> bool:
     # Check for substantial overlap
     match_count = 0
     search_start = 0
+    first_match_pos = -1
+    last_match_pos = 0
     for word in snippet_words:
         idx = source_lower.find(word, search_start)
         if idx >= 0:
+            if first_match_pos < 0:
+                first_match_pos = idx
+            last_match_pos = idx
             match_count += 1
             search_start = idx + len(word)
 
-    return match_count / len(snippet_words) >= 0.8
+    threshold = 0.55 if relaxed else 0.8
+    if match_count / len(snippet_words) >= threshold:
+        return True
+
+    # Character trigram fallback (only in relaxed mode)
+    if relaxed:
+        hint = (first_match_pos + last_match_pos) // 2 if first_match_pos >= 0 else 0
+        return _trigram_similarity(snippet_lower, source_lower, hint) >= 0.6
+
+    return False
+
+
+def _trigram_similarity(snippet: str, source: str, hint_pos: int = 0) -> float:
+    """Character-level trigram Jaccard similarity over a local window.
+
+    To avoid O(n^2) on large texts, computes trigrams only over a window
+    of 3 * len(snippet) chars centered at hint_pos in the source.
+    """
+    if len(snippet) < 3:
+        return 0.0
+
+    snippet_trigrams = set()
+    for i in range(len(snippet) - 2):
+        snippet_trigrams.add(snippet[i:i + 3])
+
+    if not snippet_trigrams:
+        return 0.0
+
+    # Window around the best word-match region (ensure full window at boundaries)
+    window_size = len(snippet) * 3
+    win_end = min(len(source), hint_pos + window_size // 2)
+    win_start = max(0, win_end - window_size)
+    window = source[win_start:win_end]
+
+    window_trigrams = set()
+    for i in range(len(window) - 2):
+        window_trigrams.add(window[i:i + 3])
+
+    if not window_trigrams:
+        return 0.0
+
+    intersection = snippet_trigrams & window_trigrams
+    union = snippet_trigrams | window_trigrams
+    return len(intersection) / len(union)
+
+
+def validate_claims_evidence(
+    claims: list[dict], source_text: str, source_id: str,
+) -> list[dict]:
+    """Validate evidence snippets, auto-retrying with relaxed matching if all fail."""
+    validated = []
+    for claim in claims:
+        snippet = claim.get("evidence_snippet", "")
+        if snippet and _validate_evidence(snippet, source_text):
+            validated.append(claim)
+        elif not snippet:
+            logger.debug("Dropping claim without evidence: %s", claim.get("claim_text", "")[:50])
+        else:
+            logger.debug("Evidence not found in source: %s", snippet[:50])
+
+    total = len(claims)
+    if not validated and total > 0:
+        logger.warning(
+            "All %d claims failed evidence validation for %s, retrying with relaxed matching",
+            total, source_id,
+        )
+        for claim in claims:
+            snippet = claim.get("evidence_snippet", "")
+            if snippet and _validate_evidence(snippet, source_text, relaxed=True):
+                claim["evidence_validation"] = "relaxed"
+                validated.append(claim)
+        logger.info("Relaxed validation recovered %d/%d claims for %s",
+                     len(validated), total, source_id)
+
+    dropped = total - len(validated)
+    if dropped:
+        logger.info("Evidence validation for %s: %d/%d kept, %d dropped",
+                     source_id, len(validated), total, dropped)
+    return validated

@@ -100,6 +100,20 @@ def should_regenerate(theme: dict, source_count: int) -> bool:
     if updated_at.tzinfo is None:
         updated_at = updated_at.replace(tzinfo=timezone.utc)
 
+    # Source-count staleness: regenerate if many new sources since last summary
+    try:
+        with db.get_conn() as conn:
+            new_sources = conn.execute(
+                """SELECT COUNT(*) AS c FROM source_themes st
+                   JOIN sources s ON s.id = st.source_id
+                   WHERE st.theme_id = %s AND s.created_at > %s""",
+                (theme.get("id"), updated_at),
+            ).fetchone()["c"]
+        if new_sources >= 5:
+            return True
+    except Exception:
+        pass  # Fall through to age-based check
+
     age = datetime.now(timezone.utc) - updated_at
     return age > timedelta(days=STALENESS_DAYS)
 

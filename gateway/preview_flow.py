@@ -57,7 +57,7 @@ def _write_staging_file(staging_path: Path, staging: dict) -> None:
     """Write staging JSON atomically to reduce partial-file corruption."""
     staging_path.parent.mkdir(parents=True, exist_ok=True)
     tmp_path = staging_path.with_suffix(f"{staging_path.suffix}.tmp")
-    tmp_path.write_text(json.dumps(staging, indent=2), encoding="utf-8")
+    tmp_path.write_text(json.dumps(staging, indent=2, default=str), encoding="utf-8")
     tmp_path.replace(staging_path)
 
 

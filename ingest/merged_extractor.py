@@ -47,30 +47,17 @@ def extract_claims_and_summary(
     # Merged call generates BOTH claims JSON + full summary in one response.
     # For text > 15K chars the combined output exceeds what Claude CLI subprocess
     # can reliably produce within timeout. Fall back to parallel individual calls.
-    # For long texts, cap the budget to avoid timeout-then-retry cycles: the
-    # original budget (e.g. 50K for video) produces prompts that push against
-    # the CLI timeout, wasting ~300s before retrying at half budget anyway.
-    # The cap must also avoid accidentally triggering chunked extraction
-    # (which fires when text_len > 2*budget), so we ensure the budget stays
-    # at least ceil(text_len/2) when text is near that boundary.
+    # Individual calls use their own timeout management via timeout_for_text(),
+    # so the full budget is passed through — extract_claims will route to
+    # chunked extraction if text exceeds 2x budget.
     if len(clean_text) > 15_000:
-        cap = 35_000
-        # Don't let the cap push us into chunked extraction unnecessarily
-        min_for_single_call = (len(clean_text) + 1) // 2 + 1
-        long_text_budget = min(budget, max(cap, min_for_single_call))
-        if long_text_budget != budget:
-            logger.info(
-                "Text too long for merged call (%d chars > 15K), using individual calls for %s (budget %d -> %d)",
-                len(clean_text), source_id, budget, long_text_budget,
-            )
-        else:
-            logger.info(
-                "Text too long for merged call (%d chars > 15K), using individual calls for %s",
-                len(clean_text), source_id,
-            )
+        logger.info(
+            "Text too long for merged call (%d chars > 15K), using individual calls for %s",
+            len(clean_text), source_id,
+        )
         return _fallback_individual(
             source_id, clean_text, source_type, title, url, authors,
-            published_at, themes, show_name, executor, library_path, long_text_budget,
+            published_at, themes, show_name, executor, library_path, budget,
         )
 
     if executor is None:
@@ -188,23 +175,10 @@ Begin your response with the JSON object for Task 1, followed by the delimiter, 
             claims_data, summary_text = parsed
 
             # Validate evidence snippets
-            from ingest.extractor import _validate_evidence
-            validated_claims = []
-            total_claims = len(claims_data.get("claims", []))
-            for claim in claims_data.get("claims", []):
-                snippet = claim.get("evidence_snippet", "")
-                if snippet and _validate_evidence(snippet, clean_text):
-                    validated_claims.append(claim)
-                elif not snippet:
-                    logger.debug("Dropping claim without evidence: %s", claim.get("claim_text", "")[:50])
-                else:
-                    logger.debug("Evidence snippet not found in source: %s", snippet[:50])
-            dropped = total_claims - len(validated_claims)
-            logger.info(
-                "Evidence validation (merged) for %s: %d/%d claims kept, %d dropped",
-                source_id, len(validated_claims), total_claims, dropped,
+            from ingest.extractor import validate_claims_evidence
+            claims_data["claims"] = validate_claims_evidence(
+                claims_data.get("claims", []), clean_text, source_id,
             )
-            claims_data["claims"] = validated_claims
 
             # Save artifacts to library
             if library_path:

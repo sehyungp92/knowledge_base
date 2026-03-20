@@ -633,7 +633,7 @@ def run_save_pipeline(
     has_beliefs = False
     needs_implications = not merge_prompts and bool(source_themes)
 
-    if landscape_signals and source_themes and get_conn_fn:
+    if source_themes and get_conn_fn:
         try:
             from reading_app.db import get_open_anticipations_for_themes
             has_anticipations = bool(get_open_anticipations_for_themes(source_themes))
@@ -648,14 +648,23 @@ def run_save_pipeline(
             pass
 
     def _match_anticipations():
-        if not landscape_signals:
-            return []
         from ingest.anticipation_matcher import (
             match_anticipations,
             persist_anticipation_matches,
         )
+        # Use landscape signals if available, else build minimal signals from claims
+        signals = landscape_signals
+        if not signals:
+            claims = claims_result.get("claims", [])
+            if not claims:
+                return []
+            signals = {
+                "claims_text": "\n".join(
+                    c.get("claim_text", "")[:200] for c in claims[:20]
+                ),
+            }
         matches = match_anticipations(
-            extracted_signals=landscape_signals,
+            extracted_signals=signals,
             source_themes=source_themes,
             source_id=source_id,
             published_at=published_at,

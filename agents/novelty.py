@@ -1,9 +1,19 @@
-"""NoveltyGate: cosine similarity hard gate for idea deduplication."""
+"""NoveltyGate: cosine similarity hard gate for idea deduplication.
+
+Three-stage filtering:
+1. Embedding cosine similarity (primary) — catches paraphrases and near-duplicates.
+2. Jaccard word-overlap (fallback) — when embeddings unavailable.
+3. LLM-judged trivial implication check — catches intellectually obvious ideas
+   that are semantically distant from existing ideas but follow as direct
+   implications of concepts already in the library.
+"""
 
 from __future__ import annotations
 
+import json
 import logging
 import math
+import re
 
 logger = logging.getLogger(__name__)
 
@@ -78,18 +88,37 @@ class NoveltyGate:
         self,
         ideas: list[dict],
         existing_texts: list[str],
+        executor=None,
+        library_claims: list[str] | None = None,
     ) -> list[dict]:
         """Filter a batch of ideas, keeping only novel ones.
 
-        Uses embedding-based cosine similarity when available (more accurate
-        semantic dedup), falling back to Jaccard word overlap if embeddings
-        fail.
+        Three stages:
+        1. Embedding-based cosine similarity (or Jaccard fallback)
+        2. LLM-judged trivial implication filter (if executor provided)
+
+        Args:
+            ideas: Candidate ideas with 'idea_text' key.
+            existing_texts: Texts of existing ideas for dedup.
+            executor: Optional ClaudeExecutor for LLM trivial-implication check.
+            library_claims: Optional list of claim texts from the library
+                for the LLM to judge obviousness against.
         """
         try:
-            return self._filter_batch_embedded(ideas, existing_texts)
+            stage1 = self._filter_batch_embedded(ideas, existing_texts)
         except Exception:
             logger.warning("Embedding-based novelty gate failed, falling back to Jaccard", exc_info=True)
-            return self._filter_batch_jaccard(ideas, existing_texts)
+            stage1 = self._filter_batch_jaccard(ideas, existing_texts)
+
+        if not stage1 or not executor:
+            return stage1
+
+        # Stage 2: LLM trivial-implication filter
+        try:
+            return self._filter_trivial_implications(stage1, executor, library_claims or existing_texts)
+        except Exception:
+            logger.warning("LLM trivial-implication filter failed, returning stage-1 results", exc_info=True)
+            return stage1
 
     def _filter_batch_embedded(
         self,
@@ -129,6 +158,98 @@ class NoveltyGate:
                 existing_embs.append((text, emb))
             else:
                 logger.info("Idea rejected (sim=%.2f): %s", sim, text[:80])
+        return novel
+
+    def _filter_trivial_implications(
+        self,
+        ideas: list[dict],
+        executor,
+        reference_texts: list[str],
+    ) -> list[dict]:
+        """LLM-judged filter: reject ideas that are trivially obvious implications.
+
+        For each batch of ideas, ask the LLM whether each follows as a direct,
+        trivially obvious implication from concepts already in the library.
+        """
+        if not ideas:
+            return ideas
+
+        # Build concise reference context (top claims the LLM can judge against)
+        ref_sample = reference_texts[:30]
+        ref_block = "\n".join(f"- {t[:200]}" for t in ref_sample)
+
+        ideas_block = "\n".join(
+            f"{i+1}. {idea.get('idea_text', '')[:300]}"
+            for i, idea in enumerate(ideas)
+        )
+
+        prompt = f"""You are a novelty judge for a research idea tournament.
+
+## Existing knowledge in the library
+{ref_block}
+
+## Candidate ideas
+{ideas_block}
+
+## Task
+For each candidate idea, determine whether it is a **trivially obvious implication** \
+of the existing knowledge above — something anyone reading those claims would \
+immediately infer without creative thought.
+
+Return ONLY a JSON array. For each idea, output:
+- "id": the idea number (1-indexed)
+- "trivial": true if the idea is an obvious/direct implication, false if it requires genuine creative connection
+- "reason": brief explanation (1 sentence)
+
+```json
+[{{"id": 1, "trivial": false, "reason": "Connects two unrelated domains in a non-obvious way"}}]
+```
+"""
+
+        result = executor.run_raw(
+            prompt,
+            session_id="novelty_trivial_check",
+            timeout=90,
+        )
+
+        # Parse response
+        json_match = re.search(r"\[.*\]", result.text, re.DOTALL)
+        if not json_match:
+            logger.warning("Trivial-implication filter: no JSON parsed, keeping all ideas")
+            return ideas
+
+        try:
+            judgments = json.loads(json_match.group(0))
+        except json.JSONDecodeError:
+            logger.warning("Trivial-implication filter: JSON parse failed, keeping all ideas")
+            return ideas
+
+        trivial_ids = set()
+        for j in judgments:
+            if j.get("trivial") is True:
+                trivial_ids.add(j.get("id", 0))
+
+        novel = []
+        for i, idea in enumerate(ideas):
+            if (i + 1) in trivial_ids:
+                reason = next(
+                    (j.get("reason", "") for j in judgments if j.get("id") == i + 1),
+                    "",
+                )
+                logger.info(
+                    "Idea rejected (trivial implication): %s — %s",
+                    idea.get("idea_text", "")[:80],
+                    reason,
+                )
+                idea["novelty_trivial_rejected"] = True
+                idea["novelty_trivial_reason"] = reason
+            else:
+                novel.append(idea)
+
+        logger.info(
+            "Trivial-implication filter: %d/%d ideas passed",
+            len(novel), len(ideas),
+        )
         return novel
 
     def _filter_batch_jaccard(

@@ -126,6 +126,7 @@ def propagate_breakthrough_to_bottlenecks(
 def persist_bottleneck_updates(
     updates: list[BottleneckUpdate],
     source_id: str,
+    breakthrough_description: str = "",
 ) -> int:
     """Apply bottleneck updates to database with change tracking.
 
@@ -138,6 +139,7 @@ def persist_bottleneck_updates(
     Args:
         updates: List of BottleneckUpdate objects from propagate_breakthrough_to_bottlenecks().
         source_id: Source ID for attribution.
+        breakthrough_description: Description of the triggering breakthrough (for history note).
 
     Returns:
         Count of successfully applied updates.
@@ -183,6 +185,10 @@ def persist_bottleneck_updates(
                 )
 
                 # Record in landscape_history
+                _note = (
+                    f"Triggered by breakthrough: {breakthrough_description[:120]}"
+                    if breakthrough_description else None
+                )
                 insert_landscape_history(
                     entity_type="bottleneck",
                     entity_id=update.bottleneck_id,
@@ -191,6 +197,7 @@ def persist_bottleneck_updates(
                     new_value=update.new_horizon,
                     source_id=source_id,
                     attribution=update.attribution,
+                    note=_note,
                 )
 
             applied += 1

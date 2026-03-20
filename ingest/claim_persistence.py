@@ -54,6 +54,7 @@ def persist_extractions_to_db(
                 evidence_type=claim.get("evidence_type"),
                 embedding=embedding,
                 temporal_scope=claim.get("temporal_scope"),
+                evidence_validation=claim.get("evidence_validation"),
             )
             claims_count += 1
         except Exception:

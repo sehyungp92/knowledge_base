@@ -173,6 +173,7 @@ def insert_claim(
     embedding: list[float] | None = None,
     temporal_scope: str | None = None,
     provenance_type: str = "extracted",
+    evidence_validation: str | None = None,
 ) -> dict:
     # Validate temporal_scope
     valid_scopes = {"current_state", "historical", "future_prediction"}
@@ -187,18 +188,19 @@ def insert_claim(
         row = conn.execute(
             """INSERT INTO claims (id, source_id, claim_text, claim_type, section,
                confidence, evidence_snippet, evidence_location, evidence_type,
-               embedding, temporal_scope, provenance_type)
-               VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+               embedding, temporal_scope, provenance_type, evidence_validation)
+               VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
                ON CONFLICT (id) DO UPDATE SET
                  claim_text = EXCLUDED.claim_text,
                  confidence = EXCLUDED.confidence,
                  embedding = EXCLUDED.embedding,
                  temporal_scope = EXCLUDED.temporal_scope,
-                 provenance_type = EXCLUDED.provenance_type
+                 provenance_type = EXCLUDED.provenance_type,
+                 evidence_validation = EXCLUDED.evidence_validation
                RETURNING *""",
             (id, source_id, claim_text, claim_type, section,
              confidence, evidence_snippet, evidence_location, evidence_type,
-             emb_str, temporal_scope, provenance_type),
+             emb_str, temporal_scope, provenance_type, evidence_validation),
         ).fetchone()
         conn.commit()
         return row
@@ -1167,12 +1169,14 @@ def insert_landscape_history(
     source_id: str | None = None,
     attribution: str | None = None,
     source_published_at=None,
+    note: str | None = None,
 ) -> dict:
     """Record a landscape entity field change for temporal tracking.
 
     Args:
         source_published_at: Publication date of the source that triggered this
             change. If None and source_id is provided, looked up automatically.
+        note: Optional contextual note (e.g., breakthrough that triggered change).
     """
     # Auto-lookup source_published_at if not provided
     if source_published_at is None and source_id:
@@ -1190,10 +1194,10 @@ def insert_landscape_history(
     with get_conn() as conn:
         row = conn.execute(
             """INSERT INTO landscape_history
-               (entity_type, entity_id, field, old_value, new_value, source_id, attribution, source_published_at)
-               VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+               (entity_type, entity_id, field, old_value, new_value, source_id, attribution, source_published_at, note)
+               VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
                RETURNING *""",
-            (entity_type, entity_id, field, old_value, new_value, source_id, attribution, source_published_at),
+            (entity_type, entity_id, field, old_value, new_value, source_id, attribution, source_published_at, note),
         ).fetchone()
         conn.commit()
         return row

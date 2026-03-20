@@ -226,11 +226,15 @@ def _format_changelog(scope_name: str, days: int, history: list[dict]) -> str:
             theme = h.get("theme_name", "")
             theme_str = f" [{theme}]" if theme else ""
 
-            lines.append(
+            line = (
                 f"- **{entity_type}**{theme_str} `{entity_id[:12]}…` "
                 f"— {field}: {old_val} → {new_val} "
                 f"*(by {attr})*"
             )
+            note = h.get("note", "")
+            if note:
+                line += f"\n  _{note}_"
+            lines.append(line)
 
         lines.append("")
 

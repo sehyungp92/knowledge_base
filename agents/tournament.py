@@ -186,8 +186,18 @@ class TournamentPipeline:
             result.steps_completed = 4
 
             # Step 5: Embed + novelty gate (critical, fast)
+            # Stage 1: embedding/Jaccard dedup. Stage 2: LLM trivial-implication filter.
             _notify_step(5, "Running novelty gate")
-            novel = self.novelty_gate.filter_batch(validated, existing_texts)
+            # Gather library claims as reference for LLM trivial-implication check
+            library_claims = [
+                line.lstrip("- ").split(" [section:")[0]
+                for line in claims_context.split("\n") if line.strip()
+            ][:30]
+            novel = self.novelty_gate.filter_batch(
+                validated, existing_texts,
+                executor=self.executor,
+                library_claims=library_claims,
+            )
             # Record novelty scores
             for idea in novel:
                 meta = idea.setdefault("tournament_metadata", {})
@@ -231,11 +241,15 @@ class TournamentPipeline:
             top_ideas = sorted_ideas[:top_40_pct]
             bottom_ideas = sorted_ideas[top_40_pct:]
 
-            # Tag debate tier
+            # Record pre-debate scores and tag debate tier
             for idea in top_ideas:
-                idea.setdefault("tournament_metadata", {})["debate_tier"] = "deep_panel"
+                meta = idea.setdefault("tournament_metadata", {})
+                meta["debate_tier"] = "deep_panel"
+                meta["pre_debate_score"] = idea.get("overall_score", 0)
             for idea in bottom_ideas:
-                idea.setdefault("tournament_metadata", {})["debate_tier"] = "single_turn"
+                meta = idea.setdefault("tournament_metadata", {})
+                meta["debate_tier"] = "single_turn"
+                meta["pre_debate_score"] = idea.get("overall_score", 0)
 
             if not _check_deadline("debate"):
                 # Pairwise debate for bottom ideas — parallelized
@@ -251,7 +265,11 @@ class TournamentPipeline:
                         loser_weaknesses = debate_result.get("loser_weaknesses", "")
                         # Record debate outcome on winner
                         meta = winner.setdefault("tournament_metadata", {})
-                        meta["debate_outcome"] = f"Won pairwise debate. Loser weakness: {loser_weaknesses[:150]}"
+                        delta = meta.get("debate_score_delta", 0.0)
+                        meta["debate_outcome"] = (
+                            f"Won pairwise debate (score delta: {delta:+.2f}). "
+                            f"Loser weakness: {loser_weaknesses[:150]}"
+                        )
                         return winner, loser_weaknesses
                     except Exception:
                         return a, ""  # Keep first on failure
@@ -274,7 +292,10 @@ class TournamentPipeline:
                         top_ideas = self.debater.deep_debate(top_ideas, rounds=3, goal=goal)
                         for idea in top_ideas:
                             meta = idea.setdefault("tournament_metadata", {})
-                            meta["debate_outcome"] = "Survived deep panel debate (3 rounds)"
+                            delta = meta.get("debate_score_delta", 0.0)
+                            meta["debate_outcome"] = (
+                                f"Survived deep panel debate (3 rounds, score delta: {delta:+.2f})"
+                            )
                         survivors = list(top_ideas) + [s for s in survivors if s not in top_ideas]
                     except Exception:
                         logger.warning("Deep debate failed", exc_info=True)
@@ -299,9 +320,14 @@ class TournamentPipeline:
                 to_evolve = deduped[:top_k]
                 try:
                     evolved = self.evolver.evolve_batch(to_evolve, goal=goal, deadline=deadline)
+                    # Median parent score as fallback for unscored evolved ideas
+                    parent_scores = [p.get("overall_score", 0.5) for p in to_evolve if p.get("overall_score")]
+                    fallback_score = sorted(parent_scores)[len(parent_scores) // 2] if parent_scores else 0.5
                     for idea in evolved:
                         meta = idea.setdefault("tournament_metadata", {})
                         meta["evolution_delta"] = "Evolved from weaker candidate"
+                        if not idea.get("overall_score"):
+                            idea["overall_score"] = fallback_score
                     deduped = deduped + evolved
                 except (DeadlineExceeded, Exception):
                     logger.warning("Evolution step failed or deadline exceeded", exc_info=True)
@@ -686,6 +712,10 @@ Return JSON array:
             from ulid import ULID
             ideas_as_claims = []
             for idea in ideas:
+                # Skip ideas with effectively zero scores (scoring failures)
+                score = idea.get("overall_score") or 0
+                if score < 0.1:
+                    continue
                 idea_id = idea.get("id") or f"idea_{ULID()}"
                 tournament_meta = idea.get("tournament_metadata", {})
                 generation_context = {

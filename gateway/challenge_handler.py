@@ -420,9 +420,11 @@ def _handle_landscape_challenge(
             except Exception as e:
                 log.warning("challenge_change_failed", field=field, error=str(e)[:200])
 
-    # Check for linked beliefs and stale implications when landscape entity was updated
+    # Check for linked beliefs, stale implications, anticipations, and dependent bottlenecks
     belief_warnings = []
     implication_warnings = []
+    anticipation_warnings = []
+    bottleneck_cascade_warnings = []
     if verdict == "system_updated" and applied_changes:
         belief_warnings = _check_beliefs_for_landscape_entity(
             entity_type, entity_id, entity, changes, log,
@@ -430,6 +432,13 @@ def _handle_landscape_challenge(
         implication_warnings = _check_stale_implications(
             entity_type, entity_id, entity, log,
         )
+        anticipation_warnings = _cascade_to_anticipations(
+            entity_type, entity_id, entity, changes, log,
+        )
+        if entity_type == "bottleneck":
+            bottleneck_cascade_warnings = _cascade_to_dependent_bottlenecks(
+                entity_id, entity, changes, log,
+            )
 
     # Build response
     response_lines = [llm_text, "\n---\n"]
@@ -446,6 +455,14 @@ def _handle_landscape_challenge(
     if implication_warnings:
         response_lines.append("\n**Potentially stale implications:**")
         for w in implication_warnings:
+            response_lines.append(f"- {w}")
+    if anticipation_warnings:
+        response_lines.append("\n**Anticipations re-evaluated:**")
+        for w in anticipation_warnings:
+            response_lines.append(f"- {w}")
+    if bottleneck_cascade_warnings:
+        response_lines.append("\n**Dependent bottlenecks flagged for review:**")
+        for w in bottleneck_cascade_warnings:
             response_lines.append(f"- {w}")
     if verdict == "ambiguous_flagged":
         response_lines.append("\nFlagged for future review when more evidence arrives.")
@@ -846,6 +863,148 @@ def _check_beliefs_for_landscape_entity(
         return warnings
     except Exception as e:
         log.debug("landscape_belief_check_failed", error=str(e)[:100])
+        return []
+
+
+# ---------------------------------------------------------------------------
+# Challenge cascade: anticipations
+# ---------------------------------------------------------------------------
+
+def _cascade_to_anticipations(
+    entity_type: str,
+    entity_id: str,
+    entity: dict,
+    changes: dict,
+    log,
+) -> list[str]:
+    """After a landscape entity changes, find and flag anticipations in the same theme."""
+    from reading_app.db import get_conn, insert_landscape_history
+
+    theme_id = entity.get("theme_id")
+    if not theme_id:
+        return []
+
+    try:
+        with get_conn() as conn:
+            anticipations = conn.execute(
+                """SELECT id, prediction, confidence, timeline, status
+                   FROM anticipations
+                   WHERE theme_id = %s AND status = 'open'
+                   ORDER BY confidence DESC
+                   LIMIT 10""",
+                (theme_id,),
+            ).fetchall()
+
+        if not anticipations:
+            return []
+
+        warnings = []
+        # Determine what changed (particularly resolution_horizon or confidence)
+        changed_fields = ", ".join(f"{k}={v}" for k, v in changes.items())
+
+        for ant in anticipations:
+            # Log the cascade event
+            try:
+                insert_landscape_history(
+                    entity_type="anticipation",
+                    entity_id=ant["id"],
+                    field="cascade_review",
+                    old_value=None,
+                    new_value=f"Triggered by {entity_type} {entity_id} change: {changed_fields[:200]}",
+                    attribution="challenge_cascade",
+                )
+            except Exception:
+                pass
+
+            warnings.append(
+                f"Anticipation `{ant['id']}` (\"{ant['prediction'][:60]}…\", "
+                f"conf: {ant.get('confidence', '?')}) — may need re-evaluation "
+                f"after {entity_type} {changed_fields[:80]}"
+            )
+            log.info(
+                "challenge_cascade_anticipation",
+                anticipation_id=ant["id"],
+                entity_type=entity_type,
+                entity_id=entity_id,
+            )
+
+        return warnings[:5]
+    except Exception as e:
+        log.debug("cascade_anticipation_failed", error=str(e)[:100])
+        return []
+
+
+# ---------------------------------------------------------------------------
+# Challenge cascade: dependent bottlenecks
+# ---------------------------------------------------------------------------
+
+def _cascade_to_dependent_bottlenecks(
+    bottleneck_id: str,
+    entity: dict,
+    changes: dict,
+    log,
+) -> list[str]:
+    """If a bottleneck's horizon or confidence shifted, flag related bottlenecks."""
+    from reading_app.db import get_conn, insert_landscape_history
+
+    # Only cascade if resolution_horizon or confidence changed
+    if not any(k in changes for k in ("resolution_horizon", "confidence")):
+        return []
+
+    theme_id = entity.get("theme_id")
+    description = entity.get("description", "")
+    if not theme_id:
+        return []
+
+    try:
+        with get_conn() as conn:
+            # Find other bottlenecks in the same theme (potential dependents)
+            related = conn.execute(
+                """SELECT id, description, resolution_horizon, confidence,
+                          blocking_what
+                   FROM bottlenecks
+                   WHERE theme_id = %s AND id != %s
+                   ORDER BY confidence DESC
+                   LIMIT 10""",
+                (theme_id, bottleneck_id),
+            ).fetchall()
+
+        if not related:
+            return []
+
+        warnings = []
+        changed_fields = ", ".join(f"{k}={v}" for k, v in changes.items())
+
+        for bn in related:
+            # Log cascade review
+            try:
+                insert_landscape_history(
+                    entity_type="bottleneck",
+                    entity_id=bn["id"],
+                    field="cascade_review",
+                    old_value=None,
+                    new_value=(
+                        f"Related bottleneck {bottleneck_id} changed: {changed_fields[:200]}. "
+                        f"Review whether this affects dependent bottleneck."
+                    ),
+                    attribution="challenge_cascade",
+                )
+            except Exception:
+                pass
+
+            warnings.append(
+                f"Bottleneck `{bn['id']}` (\"{bn['description'][:60]}…\", "
+                f"horizon: {bn.get('resolution_horizon', '?')}) — review for cascade effect"
+            )
+            log.info(
+                "challenge_cascade_bottleneck",
+                dependent_id=bn["id"],
+                trigger_id=bottleneck_id,
+            )
+
+        return warnings[:5]
+    except Exception as e:
+        log.debug("cascade_bottleneck_failed", error=str(e)[:100])
         return []
 
 

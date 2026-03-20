@@ -22,6 +22,10 @@ from reading_app.text_utils import truncate, truncate_sentences
 
 logger = structlog.get_logger(__name__)
 
+# Categories that count as "diverse" for belief suggestion diversity enforcement.
+# Matches the category enum in _SUGGEST_PROMPT.
+_DIVERSITY_CATEGORIES = {"limitation", "risk", "architectural", "methodological"}
+
 
 # ---------------------------------------------------------------------------
 # Entry point
@@ -650,8 +654,14 @@ Identify claim clusters where multiple sources converge on a pattern that could 
 Only propose beliefs that:
 1. Are supported by claims from 3+ different sources
 2. Are NOT already tracked (check existing beliefs above)
-3. Are specific and falsifiable, not generic truisms
+3. Are specific and falsifiable — not generic truisms. Each belief MUST have a clear falsification criterion.
 4. Fall into one of: factual, predictive, methodological, or meta
+
+**IMPORTANT — diversity requirement:** You MUST include at least one belief about:
+- A **limitation, risk, or constraint** (e.g., "Current RLHF methods cannot align models on distribution-shifted inputs")
+- An **architectural or methodological constraint** (e.g., "Transformer attention is fundamentally O(n²) and no proven sub-quadratic alternative maintains quality")
+
+Do NOT only suggest capability-expansion claims. The most valuable beliefs to track are about what AI *cannot* do or where it is stuck.
 
 Output a JSON block:
 ```json
@@ -660,7 +670,9 @@ Output a JSON block:
     {{
       "claim": "The belief statement",
       "belief_type": "factual|predictive|methodological|meta",
+      "category": "capability|limitation|risk|architectural|methodological",
       "confidence": 0.0-1.0,
+      "falsifiable_by": "Describe the specific evidence that would disprove this belief",
       "supporting_claim_ids": ["claim_id_1", "claim_id_2", "claim_id_3"],
       "source_count": 3,
       "reasoning": "Why this pattern warrants tracking as a belief"
@@ -674,7 +686,12 @@ Output a JSON block:
 def _handle_suggest(topic_filter: str, executor, on_progress, log) -> str:
     """Suggest beliefs from claim convergence patterns."""
     from reading_app.db import get_conn, get_active_beliefs, find_similar_belief
-    from retrieval.hybrid import hybrid_retrieve
+
+    if executor is None:
+        return (
+            "**Belief suggestion requires an LLM executor.**\n\n"
+            "Check your configuration — the executor was not initialised."
+        )
 
     if on_progress:
         on_progress("Identifying claim convergence patterns...")
@@ -778,6 +795,12 @@ def _handle_suggest(topic_filter: str, executor, on_progress, log) -> str:
     parsed = _parse_json(llm_text)
     suggestions = parsed.get("suggestions", [])
 
+    # Clamp confidence values for consistency with _handle_add
+    for s in suggestions:
+        conf = s.get("confidence", 0.5)
+        if not isinstance(conf, (int, float)) or conf < 0 or conf > 1:
+            s["confidence"] = 0.5
+
     if not suggestions:
         return _format_cluster_fallback(clusters)
 
@@ -793,8 +816,25 @@ def _handle_suggest(topic_filter: str, executor, on_progress, log) -> str:
             pass
         filtered.append(s)
 
+    # Enforce diversity: at least one limitation/risk/architectural/methodological belief
+    has_diverse = any(
+        (s.get("category") or "").lower() in _DIVERSITY_CATEGORIES
+        or (s.get("belief_type") or "").lower() in _DIVERSITY_CATEGORIES
+        for s in filtered
+    )
+    diversity_warning = ""
+    if filtered and not has_diverse:
+        diversity_warning = (
+            "\n> **Note:** All suggestions are capability-focused. "
+            "Consider manually adding a limitation or risk belief "
+            "(`/beliefs add <claim>`) for balanced coverage.\n"
+        )
+        log.warning("beliefs_suggest_no_diversity", count=len(filtered))
+
     # Format response
     lines = [f"**Belief Candidates** ({len(filtered)} suggestions)\n"]
+    if diversity_warning:
+        lines.append(diversity_warning)
 
     # Show narrative
     json_start = llm_text.find("```json")
@@ -803,13 +843,17 @@ def _handle_suggest(topic_filter: str, executor, on_progress, log) -> str:
         lines.append("")
 
     for i, s in enumerate(filtered, 1):
+        category = s.get("category", "")
+        cat_badge = f" [{category}]" if category else ""
         lines.append(
-            f"### {i}. [{s.get('belief_type', '?')}] (conf: {s.get('confidence', '?')}, "
+            f"### {i}. [{s.get('belief_type', '?')}]{cat_badge} (conf: {s.get('confidence', '?')}, "
             f"{s.get('source_count', '?')} sources)"
         )
         lines.append(f"**{s['claim']}**")
+        if s.get("falsifiable_by"):
+            lines.append(f"Falsifiable by: _{s['falsifiable_by']}_")
         if s.get("reasoning"):
-            lines.append(f"_{s['reasoning']}_")
+            lines.append(f"Reasoning: _{s['reasoning']}_")
         lines.append(
             f"\nTo track: `/beliefs add {s['claim']}`"
         )
@@ -826,19 +870,43 @@ def _handle_suggest(topic_filter: str, executor, on_progress, log) -> str:
 # ---------------------------------------------------------------------------
 
 def _format_cluster_fallback(clusters: list[dict]) -> str:
-    """Format cluster stats when LLM analysis is unavailable."""
+    """Format cluster stats with top claims when LLM analysis is unavailable."""
+    from reading_app.db import get_conn
+
     lines = [
         "**Belief Candidates — Cluster Analysis**\n",
         f"Found {len(clusters)} theme clusters with 3+ converging sources.\n",
     ]
-    for c in clusters[:8]:
-        lines.append(
-            f"- **{c['theme_name']}**: {c['source_count']} sources, "
-            f"{c['claim_count']} claims"
-        )
+
+    try:
+        with get_conn() as conn:
+            for c in clusters[:5]:
+                lines.append(
+                    f"### {c['theme_name']} ({c['source_count']} sources, "
+                    f"{c['claim_count']} claims)"
+                )
+                source_ids = c.get("source_ids", [])
+                if source_ids:
+                    top_claims = conn.execute(
+                        """SELECT claim_text, confidence FROM claims
+                           WHERE source_id = ANY(%s) AND confidence >= 0.8
+                           ORDER BY confidence DESC LIMIT 3""",
+                        (source_ids,),
+                    ).fetchall()
+                    if top_claims:
+                        lines.append("Potential beliefs worth tracking:")
+                        for cl in top_claims:
+                            lines.append(
+                                f"  - {cl['claim_text'][:150]} "
+                                f"(conf: {cl['confidence']:.2f})"
+                            )
+                lines.append("")
+    except Exception:
+        logger.debug("Failed to fetch claims for cluster fallback", exc_info=True)
+
     lines.append(
-        "\nLLM analysis was unavailable. Review these clusters manually "
-        "and use `/beliefs add <statement>` to track beliefs you identify."
+        "LLM analysis was unavailable. Use `/beliefs add <statement>` "
+        "to track beliefs you identify from the claims above."
     )
     return "\n".join(lines)
 

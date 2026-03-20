@@ -449,6 +449,9 @@ def _handle_generate(theme_filter: str, executor, on_progress, log) -> str:
         get_bottleneck_ranking, get_consolidated_implications,
     )
 
+    if executor is None:
+        return "Error: This skill requires an LLM executor. Check your configuration."
+
     if not theme_filter:
         return "Usage: `/anticipate generate <theme>`"
 
@@ -500,7 +503,7 @@ def _handle_generate(theme_filter: str, executor, on_progress, log) -> str:
     # Fetch top claims for this theme by confidence
     with get_conn() as conn:
         top_claims = conn.execute(
-            """SELECT c.claim, c.confidence, s.title
+            """SELECT c.claim_text, c.confidence, s.title
                FROM claims c
                JOIN source_themes st ON c.source_id = st.source_id
                JOIN sources s ON c.source_id = s.id
@@ -511,7 +514,7 @@ def _handle_generate(theme_filter: str, executor, on_progress, log) -> str:
         ).fetchall()
 
     claims_text = "\n".join(
-        f"- [{c.get('title', '?')[:40]}] {truncate_sentences(c['claim'], 200)} "
+        f"- [{c.get('title', '?')[:40]}] {truncate_sentences(c['claim_text'], 200)} "
         f"(conf: {c.get('confidence', '?')})"
         for c in top_claims
     ) or "(no claims available)"

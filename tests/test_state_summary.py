@@ -60,6 +60,45 @@ def test_should_regenerate_exactly_at_threshold():
     assert should_regenerate(theme, source_count=MIN_SOURCE_THRESHOLD) is True
 
 
+def test_should_regenerate_source_count_staleness():
+    """Fresh summary should regenerate if >= 5 new sources arrived since last update."""
+    now = datetime.now(timezone.utc)
+    theme = {
+        "id": "test_theme",
+        "state_summary": "existing summary",
+        "state_summary_updated_at": now,  # fresh (not age-stale)
+        "velocity": 0.5,
+    }
+    # Mock db.get_conn to return 5 new sources
+    mock_conn = MagicMock()
+    mock_conn.__enter__ = MagicMock(return_value=mock_conn)
+    mock_conn.__exit__ = MagicMock(return_value=False)
+    mock_conn.execute.return_value.fetchone.return_value = {"c": 5}
+
+    with patch("retrieval.state_summary.db") as mock_db:
+        mock_db.get_conn.return_value = mock_conn
+        assert should_regenerate(theme, source_count=10) is True
+
+
+def test_should_regenerate_few_new_sources_stays_fresh():
+    """Fresh summary with < 5 new sources should NOT regenerate."""
+    now = datetime.now(timezone.utc)
+    theme = {
+        "id": "test_theme",
+        "state_summary": "existing summary",
+        "state_summary_updated_at": now,
+        "velocity": 0.5,
+    }
+    mock_conn = MagicMock()
+    mock_conn.__enter__ = MagicMock(return_value=mock_conn)
+    mock_conn.__exit__ = MagicMock(return_value=False)
+    mock_conn.execute.return_value.fetchone.return_value = {"c": 2}
+
+    with patch("retrieval.state_summary.db") as mock_db:
+        mock_db.get_conn.return_value = mock_conn
+        assert should_regenerate(theme, source_count=10) is False
+
+
 # --- generate_theme_state_summary ---
 
 def test_generate_returns_summary():
@@ -78,7 +117,7 @@ def test_generate_returns_summary():
             "anticipations": [],
             "cross_theme_implications": [],
         }
-        mock_db.get_landscape_history.return_value = []
+        mock_db.get_landscape_history_for_theme.return_value = []
 
         result = generate_theme_state_summary("robotics", executor=mock_executor)
         assert result is not None
@@ -103,7 +142,7 @@ def test_generate_returns_none_for_short_summary():
             "capabilities": [], "limitations": [], "bottlenecks": [],
             "breakthroughs": [], "anticipations": [], "cross_theme_implications": [],
         }
-        mock_db.get_landscape_history.return_value = []
+        mock_db.get_landscape_history_for_theme.return_value = []
 
         result = generate_theme_state_summary("robotics", executor=mock_executor)
         assert result is None
@@ -120,7 +159,7 @@ def test_generate_handles_executor_failure():
             "capabilities": [], "limitations": [], "bottlenecks": [],
             "breakthroughs": [], "anticipations": [], "cross_theme_implications": [],
         }
-        mock_db.get_landscape_history.return_value = []
+        mock_db.get_landscape_history_for_theme.return_value = []
 
         result = generate_theme_state_summary("robotics", executor=mock_executor)
         assert result is None
@@ -139,7 +178,7 @@ def test_generate_includes_previous_summary_in_prompt():
             "limitations": [], "bottlenecks": [], "breakthroughs": [],
             "anticipations": [], "cross_theme_implications": [],
         }
-        mock_db.get_landscape_history.return_value = []
+        mock_db.get_landscape_history_for_theme.return_value = []
 
         generate_theme_state_summary("robotics", executor=mock_executor)
         # Check that the prompt sent to executor includes the old summary

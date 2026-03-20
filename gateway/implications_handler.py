@@ -58,11 +58,16 @@ Write a narrative analysis, then output a JSON block:
       "trigger_type": "breakthrough|bottleneck_resolved|capability_matured|convergence|analogy",
       "implication": "...",
       "confidence": 0.0-1.0,
+      "strength": "strong|moderate|speculative",
+      "temporal_projection": "If this trend continues, within [timeframe]...",
       "evidence_sources": ["{source_id}"]
     }}
   ]
 }}
 ```
+
+- **strength**: "strong" = multiple sources with direct evidence; "moderate" = single source but clear mechanism; "speculative" = plausible but thin evidence.
+- **temporal_projection**: What happens if this implication plays out? Be specific about timeframe and concrete effects.
 
 Only output implications with genuine evidence. Do not pad the list.
 """
@@ -198,11 +203,16 @@ Write a narrative analysis, then output a JSON block:
       "trigger_type": "breakthrough|bottleneck_resolved|capability_matured|convergence|analogy",
       "implication": "...",
       "confidence": 0.0-1.0,
+      "strength": "strong|moderate|speculative",
+      "temporal_projection": "If this trend continues, within [timeframe]...",
       "evidence_sources": ["{source_id}"]
     }}
   ]
 }}
 ```
+
+- **strength**: "strong" = multiple sources with direct evidence; "moderate" = single source but clear mechanism; "speculative" = plausible but thin evidence.
+- **temporal_projection**: What happens if this implication plays out? Be specific about timeframe and concrete effects.
 
 Only output genuinely non-obvious implications grounded in this source.
 """
@@ -262,6 +272,8 @@ Then output a JSON block:
       "trigger_type": "...",
       "implication": "...",
       "confidence": 0.0-1.0,
+      "strength": "strong|moderate|speculative",
+      "temporal_projection": "If this trend continues, within [timeframe]...",
       "evidence_sources": ["{source_id}"]
     }}
   ],
@@ -283,6 +295,9 @@ Then output a JSON block:
   ]
 }}
 ```
+
+- **strength**: "strong" = multiple sources with direct evidence; "moderate" = single source but clear mechanism; "speculative" = plausible but thin evidence.
+- **temporal_projection**: What happens if this implication plays out? Be specific about timeframe and concrete effects.
 
 Every entry must be grounded in specific claims from the context.
 """
@@ -755,18 +770,44 @@ def _persist_entries(
             continue
         try:
             impl_id = f"impl_{ULID()}"
+            # Build extended implication text with strength and temporal projection
+            implication_text = imp["implication"]
+            strength = imp.get("strength", "")
+            temporal_projection = imp.get("temporal_projection", "")
+
             insert_cross_theme_implication(
                 id=impl_id,
                 source_theme_id=src_tid,
                 target_theme_id=tgt_tid,
                 trigger_type=imp.get("trigger_type", "convergence"),
                 trigger_id=source_id,
-                implication=imp["implication"],
+                implication=implication_text,
                 confidence=imp.get("confidence"),
                 evidence_sources=imp.get("evidence_sources", [source_id]),
                 attribution=attribution,
                 attributed_reasoning=user_thesis,
             )
+
+            # Store strength and temporal projection as landscape_history metadata
+            if strength or temporal_projection:
+                try:
+                    meta_value = ""
+                    if strength:
+                        meta_value += f"strength={strength}"
+                    if temporal_projection:
+                        meta_value += f"; projection={temporal_projection[:200]}"
+                    insert_landscape_history(
+                        entity_type="implication",
+                        entity_id=impl_id,
+                        field="strength_and_projection",
+                        old_value=None,
+                        new_value=meta_value[:400],
+                        source_id=source_id,
+                        attribution=attribution,
+                    )
+                except Exception:
+                    pass  # Non-critical metadata
+
             summary["implications"] += 1
         except Exception as e:
             log.warning("implications_persist_failed", entry_type="implication", error=str(e)[:200])
