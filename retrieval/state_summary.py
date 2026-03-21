@@ -8,6 +8,7 @@ Called by heartbeat for periodic regeneration.
 from __future__ import annotations
 
 import logging
+import re
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -53,7 +54,7 @@ Do NOT write a static inventory. Frame everything with trajectory: "was X, shift
 ## Previous Summary (if any)
 {previous_summary}
 
----
+{analysis_section}---
 
 Write a 3-5 paragraph narrative summary (200-400 words) that:
 1. Opens with the theme's current trajectory in one sentence
@@ -69,6 +70,82 @@ When history entries show source_published_at, use that to establish when change
 
 Write in present tense. Be specific — name concrete capabilities, bottlenecks, and breakthroughs.
 Do NOT list items — synthesize them into a narrative.
+"""
+
+
+ANALYSIS_PROMPT = """You are pre-digesting landscape data for the AI theme "{theme_name}" to guide a narrative synthesis.
+
+## Current Landscape Data
+
+**Capabilities ({n_caps} total):**
+{capabilities_text}
+
+**Limitations ({n_lims} total):**
+{limitations_text}
+
+**Bottlenecks ({n_bns} total):**
+{bottlenecks_text}
+
+**Recent Breakthroughs:**
+{breakthroughs_text}
+
+**Active Anticipations:**
+{anticipations_text}
+
+**Cross-Theme Implications:**
+{implications_text}
+
+## Recent Changes (landscape_history)
+{history_text}
+
+## Delta Since Last Summary
+{delta_text}
+
+## Previous Summary
+{previous_summary}
+
+---
+
+Produce a structured analysis with these sections (use plain text, not JSON):
+
+KEY MOVEMENTS: 3-5 most significant trajectory shifts — not just listing entities, but describing what moved and why. Focus on changes since the last summary.
+
+TENSIONS: Signals that conflict — e.g. a capability advancing while a related limitation worsens, or a breakthrough that doesn't resolve the expected bottleneck. If none, say so.
+
+WHAT CHANGED: Explicit comparison to the previous summary — what's new, what shifted, what's no longer relevant. If this is the first summary, describe the current state instead.
+
+COVERAGE ASSESSMENT: Where evidence is thin/stale (few sources, old dates) vs rich/fresh. Flag entities with no source dates or only pre-2025 dates.
+
+NARRATIVE FOCUS: What should the summary emphasize? What's the most important story to tell about this theme right now?
+
+Be specific — name concrete entities. Keep each section to 2-4 sentences.
+"""
+
+QUALITY_CHECK_PROMPT = """Rate this state summary for the AI theme "{theme_name}" on three criteria.
+
+## Summary
+{summary}
+{ground_truth_section}
+---
+
+Score each 1-5 (1=poor, 5=excellent):
+
+TEMPORAL_LANGUAGE: Does it describe trajectories, shifts, and momentum — or does it read like a static inventory?
+  Score 2: "The field has capabilities in X and limitations in Y." (static inventory)
+  Score 4: "Since Q3 2025, X shifted from demo-stage to narrow production as Y limitation eased." (trajectory)
+
+SPECIFICITY: Does it name concrete capabilities, bottlenecks, and breakthroughs — or use vague generalities?
+  Score 2: "Several models show improved performance on benchmarks." (vague)
+  Score 4: "GPT-4o scores 88.7% on MMLU while Gemini Ultra reaches 90.0%, though both plateau on ARC-AGI." (concrete)
+{specificity_guidance}
+NARRATIVE_FLOW: Does it tell a coherent story with cause-and-effect — or just list items in paragraph form?
+  Score 2: "There are capabilities. There are also limitations. Bottlenecks exist." (list-as-paragraphs)
+  Score 4: "The breakthrough in X alleviated bottleneck Y, but this exposed a new limitation Z that now gates further progress." (cause-and-effect)
+
+Return ONLY three lines:
+TEMPORAL_LANGUAGE: N
+SPECIFICITY: N
+NARRATIVE_FLOW: N
 """
 
 
@@ -116,6 +193,193 @@ def should_regenerate(theme: dict, source_count: int) -> bool:
 
     age = datetime.now(timezone.utc) - updated_at
     return age > timedelta(days=STALENESS_DAYS)
+
+
+def _compute_temporal_delta(theme_id: str, last_updated: datetime | None) -> str:
+    """Compute what changed since the last state summary generation.
+
+    Queries for new entities, status changes, new sources, and anticipation
+    updates since the last summary was written.
+    """
+    if not last_updated:
+        return "First summary generation — no prior baseline."
+
+    if isinstance(last_updated, str):
+        last_updated = datetime.fromisoformat(last_updated)
+    if last_updated.tzinfo is None:
+        last_updated = last_updated.replace(tzinfo=timezone.utc)
+
+    parts = []
+    try:
+        with db.get_conn() as conn:
+            # New capabilities since last summary
+            new_caps = conn.execute(
+                """SELECT COUNT(*) AS c FROM capabilities
+                   WHERE theme_id = %s AND created_at > %s""",
+                (theme_id, last_updated),
+            ).fetchone()["c"]
+            if new_caps:
+                parts.append(f"{new_caps} new capabilities added")
+
+            # New limitations
+            new_lims = conn.execute(
+                """SELECT COUNT(*) AS c FROM limitations
+                   WHERE theme_id = %s AND created_at > %s""",
+                (theme_id, last_updated),
+            ).fetchone()["c"]
+            if new_lims:
+                parts.append(f"{new_lims} new limitations recorded")
+
+            # New bottlenecks
+            new_bns = conn.execute(
+                """SELECT COUNT(*) AS c FROM bottlenecks
+                   WHERE theme_id = %s AND created_at > %s""",
+                (theme_id, last_updated),
+            ).fetchone()["c"]
+            if new_bns:
+                parts.append(f"{new_bns} new bottlenecks identified")
+
+            # New breakthroughs
+            new_bts = conn.execute(
+                """SELECT COUNT(*) AS c FROM breakthroughs
+                   WHERE theme_id = %s AND created_at > %s""",
+                (theme_id, last_updated),
+            ).fetchone()["c"]
+            if new_bts:
+                parts.append(f"{new_bts} new breakthroughs detected")
+
+            # Landscape history changes (field updates on existing entities)
+            # Exclude anticipations — counted separately below
+            field_changes = conn.execute(
+                """SELECT entity_type, field, COUNT(*) AS c
+                   FROM landscape_history
+                   WHERE theme_id = %s AND changed_at > %s
+                     AND entity_type != 'anticipation'
+                   GROUP BY entity_type, field""",
+                (theme_id, last_updated),
+            ).fetchall()
+            for fc in field_changes:
+                parts.append(
+                    f"{fc['c']} {fc['entity_type']}.{fc['field']} update(s)"
+                )
+
+            # New sources ingested for this theme
+            new_sources = conn.execute(
+                """SELECT COUNT(*) AS c FROM source_themes st
+                   JOIN sources s ON s.id = st.source_id
+                   WHERE st.theme_id = %s AND s.created_at > %s""",
+                (theme_id, last_updated),
+            ).fetchone()["c"]
+            if new_sources:
+                parts.append(f"{new_sources} new sources ingested")
+
+            # Anticipation status changes
+            ant_changes = conn.execute(
+                """SELECT COUNT(*) AS c FROM landscape_history
+                   WHERE theme_id = %s AND entity_type = 'anticipation'
+                     AND changed_at > %s""",
+                (theme_id, last_updated),
+            ).fetchone()["c"]
+            if ant_changes:
+                parts.append(f"{ant_changes} anticipation status change(s)")
+
+    except Exception:
+        logger.debug("Failed to compute temporal delta for %s", theme_id, exc_info=True)
+        return "Delta computation unavailable."
+
+    if not parts:
+        return f"No recorded changes since last summary ({str(last_updated)[:10]})."
+
+    return f"Since last summary ({str(last_updated)[:10]}): " + ", ".join(parts) + "."
+
+
+def _score_summary(
+    summary: str,
+    theme_name: str,
+    theme_id: str,
+    executor,
+    entity_names: list[str] | None = None,
+) -> float | None:
+    """Score a summary on quality dimensions. Returns average score (1-5) or None on parse failure."""
+    ground_truth_section = ""
+    specificity_guidance = ""
+    if entity_names:
+        ground_truth_section = (
+            "\n## Ground Truth Entities\n"
+            + ", ".join(entity_names[:30])
+            + "\n"
+        )
+        specificity_guidance = (
+            "  Score 4-5 only if the summary references entities from the ground truth list. "
+            "Score 1-2 if it uses vague generalities or names entities not in the list.\n"
+        )
+
+    prompt = QUALITY_CHECK_PROMPT.format(
+        theme_name=theme_name,
+        summary=summary,
+        ground_truth_section=ground_truth_section,
+        specificity_guidance=specificity_guidance,
+    )
+    session_id = f"state_quality_check_{theme_id}"
+    try:
+        result = executor.run_raw(
+            prompt,
+            session_id=session_id,
+            model="haiku",
+            timeout=15,
+        )
+        text = result.text.strip()
+
+        scores = {}
+        for line in text.splitlines():
+            for key in ("TEMPORAL_LANGUAGE", "SPECIFICITY", "NARRATIVE_FLOW"):
+                if line.strip().startswith(key):
+                    m = re.search(r"(\d)", line.split(":", 1)[-1])
+                    if m:
+                        val = int(m.group(1))
+                        if 1 <= val <= 5:
+                            scores[key] = val
+
+        if len(scores) < 3:
+            logger.debug("Quality check parse incomplete for %s: %s", theme_id, scores)
+            return None
+
+        return sum(scores.values()) / len(scores)
+    except Exception:
+        logger.debug("Quality check failed for %s", theme_name, exc_info=True)
+        return None
+    finally:
+        try:
+            executor.cleanup_session(session_id)
+        except Exception:
+            pass
+
+
+def _validate_summary_quality(
+    summary: str,
+    theme_name: str,
+    theme_id: str,
+    executor,
+    entity_names: list[str] | None = None,
+) -> tuple[bool, str, float | None]:
+    """Check if summary meets trajectory narrative standards.
+
+    Returns (passes, feedback, avg_score). A summary passes if average score >= 3.
+    """
+    avg = _score_summary(summary, theme_name, theme_id, executor, entity_names)
+    if avg is None:
+        return True, "", None  # Can't parse — accept
+
+    if avg >= 3:
+        return True, "", avg
+
+    feedback = (
+        f"Quality scores averaged {avg:.1f}/5. "
+        "The summary reads too much like a static inventory. "
+        "Rewrite with stronger temporal language (trajectories, shifts, momentum), "
+        "more specific entity references, and cause-and-effect narrative flow."
+    )
+    return False, feedback, avg
 
 
 def generate_theme_state_summary(
@@ -226,7 +490,7 @@ def generate_theme_state_summary(
     except Exception:
         impls_text = "\n".join(
             f"- {i['implication']} ({i.get('source_theme', '?')} -> {i.get('target_theme', '?')})"
-            for i in state["cross_theme_implications"]
+            for i in state.get("cross_theme_implications", [])
         ) or "None recorded."
 
     def _history_date_label(h: dict) -> str:
@@ -242,8 +506,21 @@ def generate_theme_state_summary(
         for h in recent_history
     ) or "No recent changes."
 
-    prompt = STATE_SUMMARY_PROMPT.format(
-        theme_name=theme.get("name", theme_id),
+    if executor is None:
+        from agents.executor import ClaudeExecutor, DEFAULT_WORKSPACE
+        executor = ClaudeExecutor(DEFAULT_WORKSPACE)
+
+    theme_name = theme.get("name", theme_id)
+    previous_summary = theme.get("state_summary") or "None — first generation."
+
+    # Compute temporal delta (what changed since last summary)
+    delta_text = _compute_temporal_delta(
+        theme_id, theme.get("state_summary_updated_at")
+    )
+
+    # Phase 1: Structured analysis (Haiku — fast, cheap)
+    analysis_prompt = ANALYSIS_PROMPT.format(
+        theme_name=theme_name,
         n_caps=len(state["capabilities"]),
         capabilities_text=caps_text,
         n_lims=len(state["limitations"]),
@@ -254,12 +531,52 @@ def generate_theme_state_summary(
         anticipations_text=ants_text,
         implications_text=impls_text,
         history_text=history_text,
-        previous_summary=theme.get("state_summary") or "None — first generation.",
+        delta_text=delta_text,
+        previous_summary=previous_summary,
     )
 
-    if executor is None:
-        from agents.executor import ClaudeExecutor, DEFAULT_WORKSPACE
-        executor = ClaudeExecutor(DEFAULT_WORKSPACE)
+    analysis_text = ""
+    analysis_session = f"state_analysis_{theme_id}"
+    try:
+        analysis_result = executor.run_raw(
+            analysis_prompt,
+            session_id=analysis_session,
+            model="haiku",
+            timeout=30,
+        )
+        analysis_text = analysis_result.text.strip()
+        logger.info("Phase 1 analysis for %s: %d chars", theme_id, len(analysis_text))
+    except Exception:
+        logger.warning("Phase 1 analysis failed for %s, proceeding without", theme_id, exc_info=True)
+    finally:
+        try:
+            executor.cleanup_session(analysis_session)
+        except Exception:
+            pass
+
+    # Phase 2: Narrative synthesis (Sonnet)
+    analysis_section = ""
+    if analysis_text:
+        analysis_section = (
+            f"## Pre-Analysis (editorial direction)\n{analysis_text}\n\n"
+            "Use this pre-analysis to guide your narrative focus and emphasis.\n\n"
+        )
+
+    prompt = STATE_SUMMARY_PROMPT.format(
+        theme_name=theme_name,
+        n_caps=len(state["capabilities"]),
+        capabilities_text=caps_text,
+        n_lims=len(state["limitations"]),
+        limitations_text=lims_text,
+        n_bns=len(state["bottlenecks"]),
+        bottlenecks_text=bns_text,
+        breakthroughs_text=bts_text,
+        anticipations_text=ants_text,
+        implications_text=impls_text,
+        history_text=history_text,
+        previous_summary=previous_summary,
+        analysis_section=analysis_section,
+    )
 
     session_id = f"state_summary_{theme_id}"
     try:
@@ -269,11 +586,63 @@ def generate_theme_state_summary(
             model="sonnet",
             timeout=90,
         )
-        executor.cleanup_session(session_id)
         summary = result.text.strip()
         if not summary or len(summary) < 50:
             logger.warning("State summary too short for %s: %d chars", theme_id, len(summary))
             return None
+
+        # Extract entity names for quality gate ground truth
+        entity_names = [
+            entity.get("description", "")[:60]
+            for key in ("capabilities", "limitations", "bottlenecks")
+            for entity in state[key]
+            if entity.get("description")
+        ]
+
+        # Quality gate: check if the summary meets narrative standards
+        passes, feedback, original_score = _validate_summary_quality(
+            summary, theme_name, theme_id, executor, entity_names=entity_names
+        )
+        if not passes:
+            logger.info("Quality gate failed for %s (score: %s), retrying with feedback",
+                        theme_id, original_score)
+            retry_prompt = prompt + f"\n\nIMPORTANT CORRECTION: {feedback}"
+            retry_session = f"state_summary_retry_{theme_id}"
+            try:
+                retry_result = executor.run_raw(
+                    retry_prompt,
+                    session_id=retry_session,
+                    model="sonnet",
+                    timeout=90,
+                )
+                retry_text = retry_result.text.strip()
+                if retry_text and len(retry_text) >= 50:
+                    # Re-score the retry to verify improvement
+                    retry_score = _score_summary(
+                        retry_text, theme_name, theme_id, executor,
+                        entity_names=entity_names,
+                    )
+                    if retry_score is not None and (
+                        retry_score >= 3
+                        or (original_score is not None and retry_score > original_score)
+                    ):
+                        summary = retry_text
+                        logger.info("Retry improved summary for %s (score: %.1f -> %.1f)",
+                                    theme_id, original_score or 0, retry_score)
+                    elif original_score is not None and retry_score is not None and retry_score <= original_score:
+                        logger.info("Retry did not improve for %s (score: %.1f -> %.1f), keeping original",
+                                    theme_id, original_score, retry_score)
+                    else:
+                        # Can't score retry — accept it if it's long enough
+                        summary = retry_text
+                        logger.info("Retry accepted without scoring for %s", theme_id)
+            except Exception:
+                logger.debug("Quality retry failed for %s, using original", theme_id, exc_info=True)
+            finally:
+                try:
+                    executor.cleanup_session(retry_session)
+                except Exception:
+                    pass
 
         db.update_theme_state_summary(theme_id, summary)
         logger.info("Generated state summary for %s (%d chars)", theme_id, len(summary))
@@ -282,3 +651,8 @@ def generate_theme_state_summary(
     except Exception:
         logger.error("Failed to generate state summary for %s", theme_id, exc_info=True)
         return None
+    finally:
+        try:
+            executor.cleanup_session(session_id)
+        except Exception:
+            pass

@@ -192,11 +192,7 @@ class Dispatcher:
         chat_session_key = build_chat_session_key(chat_id)
         provider_id = self._resolve_provider_id(event, job, chat_session_key)
         if provider_id != normalize_provider_id(job.provider_id or ""):
-            self.queue._conn.execute(
-                "UPDATE jobs SET provider_id = ?, updated_at = ? WHERE id = ?",
-                (provider_id, time.time(), job.id),
-            )
-            self.queue._conn.commit()
+            self.queue.update_job_provider(job.id, provider_id)
             job.provider_id = provider_id
 
         self._send_typing(event.source, chat_id)
@@ -267,6 +263,7 @@ class Dispatcher:
         if match_result is not None and skill_name == "synthesis":
             try:
                 from retrieval.topic_synthesis import (
+                    analyze_synthesis_context,
                     check_merge_cache,
                     format_merge_context,
                     format_synthesis_context,
@@ -326,7 +323,8 @@ class Dispatcher:
                     else:
                         ctx = gather_synthesis_context(raw_topic)
                         if ctx is not None:
-                            formatted = format_synthesis_context(ctx)
+                            analysis = analyze_synthesis_context(ctx)
+                            formatted = format_synthesis_context(ctx, analysis=analysis)
                             skill_text += (
                                 "\n\n---\n\n"
                                 "## Pre-Fetched Synthesis Data\n\n"
@@ -359,11 +357,7 @@ class Dispatcher:
                 )
 
         if skill_name != job.skill:
-            self.queue._conn.execute(
-                "UPDATE jobs SET skill = ? WHERE id = ?",
-                (skill_name, job.id),
-            )
-            self.queue._conn.commit()
+            self.queue.update_job_skill(job.id, skill_name)
 
         log = log.bind(skill=skill_name, timeout=timeout, provider_id=provider_id)
         log.info("job_started")

@@ -19,6 +19,9 @@ venv/
 # pytest
 .pytest_cache/
 
+# SQLite databases
+*.db
+
 # Runtime data
 var/
 

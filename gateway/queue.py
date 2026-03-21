@@ -3,7 +3,9 @@
 from __future__ import annotations
 
 import json
+import os
 import sqlite3
+import threading
 import time
 from pathlib import Path
 
@@ -14,7 +16,7 @@ from gateway.model_preferences import (
 )
 from gateway.providers import get_default_provider_id, normalize_provider_id
 
-DEFAULT_QUEUE_DB_PATH = Path(__file__).resolve().parent / "queue.db"
+DEFAULT_QUEUE_DB_PATH = Path(__file__).resolve().parents[1] / "var" / "queue.db"
 
 
 class Queue:
@@ -22,8 +24,14 @@ class Queue:
 
     def __init__(self, db_path: Path | str = DEFAULT_QUEUE_DB_PATH):
         self.db_path = str(db_path)
+        parent = os.path.dirname(self.db_path)
+        if parent and self.db_path != ":memory:":
+            os.makedirs(parent, exist_ok=True)
         self._conn = sqlite3.connect(self.db_path, check_same_thread=False)
         self._conn.row_factory = sqlite3.Row
+        self._conn.execute("PRAGMA journal_mode=WAL")
+        self._conn.execute("PRAGMA busy_timeout=5000")
+        self._lock = threading.Lock()
         self.create_tables()
 
     def create_tables(self):
@@ -173,89 +181,104 @@ class Queue:
         """)
         self._conn.commit()
 
+    def close(self):
+        """Close the underlying database connection."""
+        self._conn.close()
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        self.close()
+
     def insert_event(self, event: Event) -> int:
-        cur = self._conn.execute(
-            "INSERT INTO events (type, payload, source, chat_id, created_at, status) VALUES (?, ?, ?, ?, ?, ?)",
-            (event.type, json.dumps(event.payload), event.source, event.chat_id, time.time(), event.status),
-        )
-        self._conn.commit()
-        return cur.lastrowid
+        with self._lock:
+            cur = self._conn.execute(
+                "INSERT INTO events (type, payload, source, chat_id, created_at, status) VALUES (?, ?, ?, ?, ?, ?)",
+                (event.type, json.dumps(event.payload), event.source, event.chat_id, time.time(), event.status),
+            )
+            self._conn.commit()
+            return cur.lastrowid
 
     def insert_job(self, job: Job) -> int:
-        now = time.time()
-        provider_id = normalize_provider_id(job.provider_id or get_default_provider_id())
-        cur = self._conn.execute(
-            "INSERT INTO jobs (event_id, skill, status, logs_path, result, created_at, updated_at, retry_count, max_retries, provider_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-            (
-                job.event_id,
-                job.skill,
-                job.status,
-                job.logs_path,
-                json.dumps(job.result or {}),
-                now,
-                now,
-                job.retry_count,
-                job.max_retries,
-                provider_id,
-            ),
-        )
-        self._conn.commit()
-        return cur.lastrowid
+        with self._lock:
+            now = time.time()
+            provider_id = normalize_provider_id(job.provider_id or get_default_provider_id())
+            cur = self._conn.execute(
+                "INSERT INTO jobs (event_id, skill, status, logs_path, result, created_at, updated_at, retry_count, max_retries, provider_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+                (
+                    job.event_id,
+                    job.skill,
+                    job.status,
+                    job.logs_path,
+                    json.dumps(job.result or {}),
+                    now,
+                    now,
+                    job.retry_count,
+                    job.max_retries,
+                    provider_id,
+                ),
+            )
+            self._conn.commit()
+            return cur.lastrowid
 
     def claim_next_job(self) -> Job | None:
         """Atomically claim the next pending job (excludes post_process jobs)."""
-        cur = self._conn.execute(
-            "SELECT * FROM jobs WHERE status = 'pending' AND skill != 'post_process' ORDER BY created_at ASC LIMIT 1"
-        )
-        row = cur.fetchone()
-        if row is None:
-            return None
-        now = time.time()
-        self._conn.execute(
-            "UPDATE jobs SET status = 'running', updated_at = ? WHERE id = ? AND status = 'pending'",
-            (now, row["id"]),
-        )
-        self._conn.commit()
-        cur2 = self._conn.execute("SELECT * FROM jobs WHERE id = ? AND status = 'running'", (row["id"],))
-        row2 = cur2.fetchone()
-        if row2 is None:
-            return None
-        return self._row_to_job(row2)
+        with self._lock:
+            cur = self._conn.execute(
+                "SELECT * FROM jobs WHERE status = 'pending' AND skill != 'post_process' ORDER BY created_at ASC LIMIT 1"
+            )
+            row = cur.fetchone()
+            if row is None:
+                return None
+            now = time.time()
+            self._conn.execute(
+                "UPDATE jobs SET status = 'running', updated_at = ? WHERE id = ? AND status = 'pending'",
+                (now, row["id"]),
+            )
+            self._conn.commit()
+            cur2 = self._conn.execute("SELECT * FROM jobs WHERE id = ? AND status = 'running'", (row["id"],))
+            row2 = cur2.fetchone()
+            if row2 is None:
+                return None
+            return self._row_to_job(row2)
 
     def claim_next_job_by_skill(self, skill: str) -> Job | None:
         """Atomically claim the next pending job matching a specific skill."""
-        cur = self._conn.execute(
-            "SELECT * FROM jobs WHERE status = 'pending' AND skill = ? ORDER BY created_at ASC LIMIT 1",
-            (skill,),
-        )
-        row = cur.fetchone()
-        if row is None:
-            return None
-        now = time.time()
-        self._conn.execute(
-            "UPDATE jobs SET status = 'running', updated_at = ? WHERE id = ? AND status = 'pending'",
-            (now, row["id"]),
-        )
-        self._conn.commit()
-        cur2 = self._conn.execute("SELECT * FROM jobs WHERE id = ? AND status = 'running'", (row["id"],))
-        row2 = cur2.fetchone()
-        if row2 is None:
-            return None
-        return self._row_to_job(row2)
+        with self._lock:
+            cur = self._conn.execute(
+                "SELECT * FROM jobs WHERE status = 'pending' AND skill = ? ORDER BY created_at ASC LIMIT 1",
+                (skill,),
+            )
+            row = cur.fetchone()
+            if row is None:
+                return None
+            now = time.time()
+            self._conn.execute(
+                "UPDATE jobs SET status = 'running', updated_at = ? WHERE id = ? AND status = 'pending'",
+                (now, row["id"]),
+            )
+            self._conn.commit()
+            cur2 = self._conn.execute("SELECT * FROM jobs WHERE id = ? AND status = 'running'", (row["id"],))
+            row2 = cur2.fetchone()
+            if row2 is None:
+                return None
+            return self._row_to_job(row2)
 
     def update_job_status(self, job_id: int, status: str, result: dict | None = None):
-        now = time.time()
-        if result is not None:
-            self._conn.execute(
-                "UPDATE jobs SET status = ?, result = ?, updated_at = ? WHERE id = ?",
-                (status, json.dumps(result), now, job_id),
-            )
-        else:
-            self._conn.execute(
-                "UPDATE jobs SET status = ?, updated_at = ? WHERE id = ?",
-                (status, now, job_id),
-            )
-        self._conn.commit()
+        with self._lock:
+            now = time.time()
+            if result is not None:
+                self._conn.execute(
+                    "UPDATE jobs SET status = ?, result = ?, updated_at = ? WHERE id = ?",
+                    (status, json.dumps(result), now, job_id),
+                )
+            else:
+                self._conn.execute(
+                    "UPDATE jobs SET status = ?, updated_at = ? WHERE id = ?",
+                    (status, now, job_id),
+                )
+            self._conn.commit()
 
     def update_job_progress(
         self,
@@ -272,27 +295,28 @@ class Queue:
         Args:
             stages: Optional list of RunStage dicts for structured stage tracking.
         """
-        job = self.get_job(job_id)
-        if job is None:
-            return
+        with self._lock:
+            job = self.get_job(job_id)
+            if job is None:
+                return
 
-        result = dict(job.result or {})
-        result["progress"] = str(progress).strip()
-        if provider_id:
-            result["provider_id"] = normalize_provider_id(provider_id)
-        if skill:
-            result["skill"] = skill
-        if extra:
-            result.update(extra)
-        if stages is not None:
-            result["stages"] = stages
+            result = dict(job.result or {})
+            result["progress"] = str(progress).strip()
+            if provider_id:
+                result["provider_id"] = normalize_provider_id(provider_id)
+            if skill:
+                result["skill"] = skill
+            if extra:
+                result.update(extra)
+            if stages is not None:
+                result["stages"] = stages
 
-        now = time.time()
-        self._conn.execute(
-            "UPDATE jobs SET status = 'running', result = ?, updated_at = ? WHERE id = ?",
-            (json.dumps(result), now, job_id),
-        )
-        self._conn.commit()
+            now = time.time()
+            self._conn.execute(
+                "UPDATE jobs SET status = 'running', result = ?, updated_at = ? WHERE id = ?",
+                (json.dumps(result), now, job_id),
+            )
+            self._conn.commit()
 
     def get_job(self, job_id: int) -> Job | None:
         cur = self._conn.execute("SELECT * FROM jobs WHERE id = ?", (job_id,))
@@ -309,50 +333,53 @@ class Queue:
 
         Returns the new status: 'pending' (retrying) or 'dead_letter'.
         """
-        job = self.get_job(job_id)
-        if job is None:
-            return "dead_letter"
+        with self._lock:
+            job = self.get_job(job_id)
+            if job is None:
+                return "dead_letter"
 
-        now = time.time()
-        if job.retry_count < job.max_retries:
-            delay = 5 * (2 ** job.retry_count)
+            now = time.time()
+            if job.retry_count < job.max_retries:
+                delay = 5 * (2 ** job.retry_count)
+                self._conn.execute(
+                    "UPDATE jobs SET status = 'pending', retry_count = retry_count + 1, "
+                    "created_at = ?, updated_at = ?, result = ? WHERE id = ?",
+                    (now + delay, now, json.dumps({"last_error": error}), job_id),
+                )
+                self._conn.commit()
+                return "pending"
+
             self._conn.execute(
-                "UPDATE jobs SET status = 'pending', retry_count = retry_count + 1, "
-                "created_at = ?, updated_at = ?, result = ? WHERE id = ?",
-                (now + delay, now, json.dumps({"last_error": error}), job_id),
+                "UPDATE jobs SET status = 'dead_letter', updated_at = ?, result = ? WHERE id = ?",
+                (now, json.dumps({"error": error, "retries_exhausted": True}), job_id),
             )
             self._conn.commit()
-            return "pending"
-
-        self._conn.execute(
-            "UPDATE jobs SET status = 'dead_letter', updated_at = ?, result = ? WHERE id = ?",
-            (now, json.dumps({"error": error, "retries_exhausted": True}), job_id),
-        )
-        self._conn.commit()
-        return "dead_letter"
+            return "dead_letter"
 
     def retry_job(self, job_id: int) -> bool:
         """Manually re-queue a dead_letter job. Returns True if successful."""
-        job = self.get_job(job_id)
-        if job is None or job.status != "dead_letter":
-            return False
-        now = time.time()
-        self._conn.execute(
-            "UPDATE jobs SET status = 'pending', retry_count = 0, "
-            "created_at = ?, updated_at = ? WHERE id = ?",
-            (now, now, job_id),
-        )
-        self._conn.commit()
-        return True
+        with self._lock:
+            job = self.get_job(job_id)
+            if job is None or job.status != "dead_letter":
+                return False
+            now = time.time()
+            self._conn.execute(
+                "UPDATE jobs SET status = 'pending', retry_count = 0, "
+                "created_at = ?, updated_at = ? WHERE id = ?",
+                (now, now, job_id),
+            )
+            self._conn.commit()
+            return True
 
     def mark_running_interrupted(self):
         """Mark all currently running jobs as interrupted (used during forced shutdown)."""
-        now = time.time()
-        self._conn.execute(
-            "UPDATE jobs SET status = 'interrupted', updated_at = ? WHERE status = 'running'",
-            (now,),
-        )
-        self._conn.commit()
+        with self._lock:
+            now = time.time()
+            self._conn.execute(
+                "UPDATE jobs SET status = 'interrupted', updated_at = ? WHERE status = 'running'",
+                (now,),
+            )
+            self._conn.commit()
 
     def count_pending_user_jobs(self) -> int:
         """Count pending/running jobs from non-heartbeat sources."""
@@ -383,19 +410,20 @@ class Queue:
         skill: str = "",
     ):
         """Create or update a provider-specific session mapping."""
-        now = time.time()
-        normalized_backend = normalize_provider_id(backend_id)
-        self._conn.execute(
-            "INSERT INTO sessions (session_key, backend_id, backend_session_id, chat_id, skill, last_active_at) "
-            "VALUES (?, ?, ?, ?, ?, ?) "
-            "ON CONFLICT(session_key, backend_id) DO UPDATE SET "
-            "backend_session_id = excluded.backend_session_id, "
-            "chat_id = excluded.chat_id, "
-            "skill = excluded.skill, "
-            "last_active_at = excluded.last_active_at",
-            (session_key, normalized_backend, backend_session_id, chat_id, skill, now),
-        )
-        self._conn.commit()
+        with self._lock:
+            now = time.time()
+            normalized_backend = normalize_provider_id(backend_id)
+            self._conn.execute(
+                "INSERT INTO sessions (session_key, backend_id, backend_session_id, chat_id, skill, last_active_at) "
+                "VALUES (?, ?, ?, ?, ?, ?) "
+                "ON CONFLICT(session_key, backend_id) DO UPDATE SET "
+                "backend_session_id = excluded.backend_session_id, "
+                "chat_id = excluded.chat_id, "
+                "skill = excluded.skill, "
+                "last_active_at = excluded.last_active_at",
+                (session_key, normalized_backend, backend_session_id, chat_id, skill, now),
+            )
+            self._conn.commit()
 
     def get_chat_provider(self, session_key: str) -> str | None:
         """Return the sticky provider for a chat, if one was chosen."""
@@ -408,15 +436,16 @@ class Queue:
 
     def set_chat_provider(self, session_key: str, provider_id: str) -> str:
         """Persist a chat-scoped provider choice."""
-        normalized = normalize_provider_id(provider_id)
-        now = time.time()
-        self._conn.execute(
-            "INSERT INTO chat_runtime_preferences (session_key, provider_id, updated_at) VALUES (?, ?, ?) "
-            "ON CONFLICT(session_key) DO UPDATE SET provider_id = excluded.provider_id, updated_at = excluded.updated_at",
-            (session_key, normalized, now),
-        )
-        self._conn.commit()
-        return normalized
+        with self._lock:
+            normalized = normalize_provider_id(provider_id)
+            now = time.time()
+            self._conn.execute(
+                "INSERT INTO chat_runtime_preferences (session_key, provider_id, updated_at) VALUES (?, ?, ?) "
+                "ON CONFLICT(session_key) DO UPDATE SET provider_id = excluded.provider_id, updated_at = excluded.updated_at",
+                (session_key, normalized, now),
+            )
+            self._conn.commit()
+            return normalized
 
     def get_global_preference(self, key: str) -> str | None:
         """Return a global runtime preference value, if one was set."""
@@ -429,15 +458,16 @@ class Queue:
 
     def set_global_preference(self, key: str, value: str) -> str:
         """Persist a global runtime preference value."""
-        normalized = str(value).strip()
-        now = time.time()
-        self._conn.execute(
-            "INSERT INTO global_runtime_preferences (key, value, updated_at) VALUES (?, ?, ?) "
-            "ON CONFLICT(key) DO UPDATE SET value = excluded.value, updated_at = excluded.updated_at",
-            (key, normalized, now),
-        )
-        self._conn.commit()
-        return normalized
+        with self._lock:
+            normalized = str(value).strip()
+            now = time.time()
+            self._conn.execute(
+                "INSERT INTO global_runtime_preferences (key, value, updated_at) VALUES (?, ?, ?) "
+                "ON CONFLICT(key) DO UPDATE SET value = excluded.value, updated_at = excluded.updated_at",
+                (key, normalized, now),
+            )
+            self._conn.commit()
+            return normalized
 
     def get_global_model(self) -> str | None:
         """Return the persisted global default model tier, if one was set."""
@@ -454,9 +484,10 @@ class Queue:
 
     def cleanup_stale_sessions(self, max_age_hours: int = 24):
         """Remove sessions older than max_age_hours."""
-        cutoff = time.time() - (max_age_hours * 3600)
-        self._conn.execute("DELETE FROM sessions WHERE last_active_at < ?", (cutoff,))
-        self._conn.commit()
+        with self._lock:
+            cutoff = time.time() - (max_age_hours * 3600)
+            self._conn.execute("DELETE FROM sessions WHERE last_active_at < ?", (cutoff,))
+            self._conn.commit()
 
     def _row_to_job(self, row: sqlite3.Row) -> Job:
         return Job(
@@ -487,21 +518,22 @@ class Queue:
         """Record a cost entry for provider spend tracking."""
         if cost_usd is None and input_tokens is None and output_tokens is None:
             return
-        self._conn.execute(
-            "INSERT INTO cost_log (provider_id, model, cost_usd, input_tokens, output_tokens, skill, job_id, created_at) "
-            "VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
-            (
-                normalize_provider_id(provider_id),
-                model or "",
-                cost_usd,
-                input_tokens,
-                output_tokens,
-                skill or "",
-                job_id,
-                time.time(),
-            ),
-        )
-        self._conn.commit()
+        with self._lock:
+            self._conn.execute(
+                "INSERT INTO cost_log (provider_id, model, cost_usd, input_tokens, output_tokens, skill, job_id, created_at) "
+                "VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+                (
+                    normalize_provider_id(provider_id),
+                    model or "",
+                    cost_usd,
+                    input_tokens,
+                    output_tokens,
+                    skill or "",
+                    job_id,
+                    time.time(),
+                ),
+            )
+            self._conn.commit()
 
     def get_cost_summary(self, *, days: int = 1) -> list[dict]:
         """Aggregate cost data by provider for the last N days."""
@@ -522,6 +554,34 @@ class Queue:
             (cutoff,),
         )
         return [dict(row) for row in cur.fetchall()]
+
+    def update_job_provider(self, job_id: int, provider_id: str) -> None:
+        """Update the provider_id on a job."""
+        with self._lock:
+            self._conn.execute(
+                "UPDATE jobs SET provider_id = ?, updated_at = ? WHERE id = ?",
+                (provider_id, time.time(), job_id),
+            )
+            self._conn.commit()
+
+    def update_job_skill(self, job_id: int, skill: str) -> None:
+        """Update the skill on a job."""
+        with self._lock:
+            self._conn.execute(
+                "UPDATE jobs SET skill = ?, updated_at = ? WHERE id = ?",
+                (skill, time.time(), job_id),
+            )
+            self._conn.commit()
+
+    def get_last_heartbeat_time(self) -> float | None:
+        """Return the updated_at timestamp of the most recent heartbeat job, or None."""
+        cur = self._conn.execute(
+            "SELECT max(updated_at) AS t FROM jobs WHERE skill = 'heartbeat'"
+        )
+        row = cur.fetchone()
+        if row and row["t"]:
+            return row["t"]
+        return None
 
     def _row_to_event(self, row: sqlite3.Row) -> Event:
         return Event(

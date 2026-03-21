@@ -1,12 +1,20 @@
-"""Tests for the email notification module (AgentMail)."""
+"""Tests for all notification subsystems: email, emitter, and transports."""
 
 from __future__ import annotations
 
+from types import SimpleNamespace
 from unittest.mock import MagicMock, patch
 
 import pytest
 
+from ingest.notification_emitter import emit_notification
+from notify.discord import send_discord_message
 from notify.email import send_email, send_summary_email
+from notify.monitor_preview import build_monitor_preview_text
+from notify.telegram import send_telegram_message
+
+
+# --- Email tests ---
 
 
 class TestSendEmail:
@@ -156,3 +164,145 @@ class TestSendSummaryEmail:
         )
 
         assert result is False
+
+
+# --- Emitter tests ---
+
+
+def test_emit_notification_inserts():
+    with patch("ingest.notification_emitter.db") as mock_db:
+        conn = MagicMock()
+        conn.__enter__ = MagicMock(return_value=conn)
+        conn.__exit__ = MagicMock(return_value=False)
+        mock_db.get_conn.return_value = conn
+
+        emit_notification("test_type", "source", "s1", "Test notification")
+
+        conn.execute.assert_called_once()
+        call_args = conn.execute.call_args
+        assert "INSERT INTO notifications" in call_args[0][0]
+        assert call_args[0][1][0] == "test_type"
+        assert call_args[0][1][2] == "s1"
+        conn.commit.assert_called_once()
+
+
+def test_emit_notification_with_detail():
+    with patch("ingest.notification_emitter.db") as mock_db:
+        conn = MagicMock()
+        conn.__enter__ = MagicMock(return_value=conn)
+        conn.__exit__ = MagicMock(return_value=False)
+        mock_db.get_conn.return_value = conn
+
+        emit_notification(
+            "anticipation_match", "anticipation", "a1",
+            "Evidence found for prediction",
+            detail={"match_confidence": 0.85},
+            source_id="src_123",
+        )
+
+        call_args = conn.execute.call_args[0][1]
+        assert call_args[0] == "anticipation_match"
+        assert '"match_confidence": 0.85' in call_args[4]
+        assert call_args[5] == "src_123"
+
+
+def test_emit_notification_swallows_errors():
+    with patch("ingest.notification_emitter.db") as mock_db:
+        mock_db.get_conn.side_effect = RuntimeError("no pool")
+        # Should not raise
+        emit_notification("test", "source", "s1", "Test notification")
+
+
+# --- Transport tests ---
+
+
+class FakeResponse:
+    def __init__(self, status_code: int, payload: dict | None = None, text: str = "ok"):
+        self.status_code = status_code
+        self._payload = payload or {}
+        self.text = text
+
+    def json(self):
+        return self._payload
+
+
+def test_send_telegram_message_chunks_without_parse_mode(monkeypatch):
+    import reading_app.config
+    import notify.telegram
+
+    monkeypatch.setattr(
+        reading_app.config,
+        "Config",
+        lambda: SimpleNamespace(
+            telegram_bot_token="token",
+            telegram_allowed_chat_id="chat",
+        ),
+    )
+
+    calls = []
+
+    def fake_post(url, json=None, timeout=None):
+        calls.append((url, json))
+        return FakeResponse(200)
+
+    monkeypatch.setattr(notify.telegram.httpx, "post", fake_post)
+
+    assert send_telegram_message("x" * 9000, parse_mode=None) is True
+    assert len(calls) == 3
+    assert all("parse_mode" not in payload for _, payload in calls)
+
+
+def test_send_discord_message_chunks(monkeypatch):
+    import notify.discord
+    import reading_app.config
+
+    monkeypatch.setattr(
+        reading_app.config,
+        "Config",
+        lambda: SimpleNamespace(
+            discord_bot_token="token",
+            discord_allowed_user_id="user123",
+        ),
+    )
+
+    calls = []
+
+    def fake_post(url, headers=None, json=None, timeout=None):
+        calls.append((url, json))
+        if url.endswith("/users/@me/channels"):
+            return FakeResponse(200, {"id": "dm123"})
+        return FakeResponse(200, {"id": "msg123"})
+
+    monkeypatch.setattr(notify.discord.httpx, "post", fake_post)
+
+    assert send_discord_message("y" * 5000) is True
+    assert calls[0][0].endswith("/users/@me/channels")
+    assert len(calls[1:]) == 3
+
+
+def test_send_discord_message_skips_without_config(monkeypatch):
+    import reading_app.config
+
+    monkeypatch.setattr(
+        reading_app.config,
+        "Config",
+        lambda: SimpleNamespace(
+            discord_bot_token="",
+            discord_allowed_user_id="",
+        ),
+    )
+
+    assert send_discord_message("hello") is False
+
+
+def test_monitor_preview_text_ends_with_save_confirmed():
+    text = build_monitor_preview_text(
+        title="Video",
+        channel="Tracked Channel",
+        url="https://www.youtube.com/watch?v=test123",
+        theme_names=["autonomous_agents"],
+        summary_markdown="# Summary\n\nDetails",
+        source_id="01KABCDE1234567890FGHIJKLM",
+    )
+
+    assert text.endswith("/save_confirmed 01KABCDE1234567890FGHIJKLM")

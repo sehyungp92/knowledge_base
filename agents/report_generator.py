@@ -70,10 +70,15 @@ def generate_report_outline(topic: str, context_summary: str, executor) -> list[
 
 Topic: {topic}
 
-Available context: {context_summary[:500]}
+Available context: {context_summary[:1000]}
 
-Return ONLY a JSON array of section title strings, no other text.
-Example: ["Introduction", "Key Findings", "Limitations", "Implications", "Open Questions"]"""
+Tailor sections to the topic. For research/technical topics, consider:
+Architecture & Design, Experimental Results, Limitations & Failure Modes, Open Problems.
+For trend/landscape topics, consider:
+Current State, Evidence For & Against, Key Tensions, What's Next.
+Avoid generic headings like "Introduction" or "Key Findings" — be specific to {topic}.
+
+Return ONLY a JSON array of section title strings, no other text."""
 
     try:
         result = executor.run_raw(
@@ -89,6 +94,11 @@ Example: ["Introduction", "Key Findings", "Limitations", "Implications", "Open Q
                 return sections[:6]
     except Exception:
         logger.warning("report_outline generation failed", exc_info=True)
+    finally:
+        try:
+            executor.cleanup_session("report_outline")
+        except Exception:
+            pass
 
     # Fallback outline
     return [
@@ -109,6 +119,7 @@ def react_generate_section(
     embedding: list[float] | None = None,
     max_rounds: int = 3,
     min_lens_calls: int = 2,
+    prior_summaries: str = "",
 ) -> tuple[str, list["LensEvent"]]:
     """ReACT-style section generation: plan lenses → gather evidence → write.
 
@@ -125,12 +136,14 @@ def react_generate_section(
     lens_events: list[LensEvent] = []
     available_lenses = ["evidence", "theme_panorama", "bridge", "contradiction"]
 
+    prior_context = f"\n## Prior Sections\n{prior_summaries}\n" if prior_summaries else ""
+
     # Round 1: Ask LLM which lenses to call for this section
     plan_prompt = f"""You are planning evidence gathering for a report section.
 
 Section title: "{title}"
 Report topic: {topic}
-Available lenses: {json.dumps(available_lenses)}
+{prior_context}Available lenses: {json.dumps(available_lenses)}
 
 Lens descriptions:
 - evidence: Direct claim and snippet retrieval from the knowledge base
@@ -144,9 +157,13 @@ For sections about implications/connections, include "bridge".
 
 Return ONLY a JSON array: [{{"lens": "evidence", "query": "specific query"}}]"""
 
+    # Use title slug for unique session IDs to avoid cross-section collisions
+    _title_slug = re.sub(r"[^a-z0-9]+", "_", title.lower())[:30]
+
     planned_calls = []
+    plan_sid = f"react_plan_{_title_slug}"
     try:
-        result = executor.run_raw(plan_prompt, session_id="react_plan", timeout=30)
+        result = executor.run_raw(plan_prompt, session_id=plan_sid, timeout=30)
         if result.text:
             json_match = re.search(r"\[.*\]", result.text, re.DOTALL)
             if json_match:
@@ -158,6 +175,11 @@ Return ONLY a JSON array: [{{"lens": "evidence", "query": "specific query"}}]"""
                     ]
     except Exception:
         logger.debug("react_plan failed, using defaults", exc_info=True)
+    finally:
+        try:
+            executor.cleanup_session(plan_sid)
+        except Exception:
+            pass
 
     # Fallback: ensure minimum lens calls
     if len(planned_calls) < min_lens_calls:
@@ -212,8 +234,9 @@ Unused lenses: {unused}
 
 Suggest 1-2 additional lens calls to fill gaps. Return JSON: [{{"lens": "...", "query": "..."}}]"""
 
+        refine_sid = f"react_refine_{_title_slug}_{rounds_used}"
         try:
-            result = executor.run_raw(refine_prompt, session_id="react_refine", timeout=20)
+            result = executor.run_raw(refine_prompt, session_id=refine_sid, timeout=20)
             if result.text:
                 json_match = re.search(r"\[.*\]", result.text, re.DOTALL)
                 if json_match:
@@ -236,6 +259,11 @@ Suggest 1-2 additional lens calls to fill gaps. Return JSON: [{{"lens": "...", "
         except Exception:
             logger.debug("react refinement round %d failed", rounds_used, exc_info=True)
             break
+        finally:
+            try:
+                executor.cleanup_session(refine_sid)
+            except Exception:
+                pass
 
     # Guard: if zero lens calls succeeded, fall back to a minimal evidence_lens call
     if not all_lens_results or all(not lr.evidence_items for lr in all_lens_results):
@@ -256,30 +284,115 @@ Suggest 1-2 additional lens calls to fill gaps. Return JSON: [{{"lens": "...", "
     # Generate section with full (untruncated) lens context
     full_context = format_lens_results_for_prompt(all_lens_results)
 
+    prior_ref = f"\n## Prior Sections\nDo not repeat findings already covered:\n{prior_summaries}\n" if prior_summaries else ""
+
     write_prompt = f"""Write the "{title}" section for a research report on: {topic}
 
 Use ONLY the evidence provided below. Cite sources using [source_id] inline.
 
 ## Evidence
 {full_context}
-
+{prior_ref}
 ## Instructions
-- Write 2-4 paragraphs for this section
-- Be specific and grounded in the evidence
-- Integrate findings from multiple lenses where relevant
-- Note contradictions, gaps, or uncertainty where relevant
+- Write 2-4 paragraphs of analytical prose for this section
+- State findings as facts. Never reference sources meta-textually
+- FORBIDDEN phrases: "according to", "one study found", "the authors argue", "research suggests"
+- Name specific models, benchmarks, metrics, and timelines — not vague categories
+- Do NOT defer to generic conclusions. When sources disagree, say so explicitly
+- Limitations are the most valuable signal: foreground gaps, controlled conditions, and conspicuous absences
+- For limitation/gap sections: lead with what doesn't work and why
+- For implication/connection sections: surface non-obvious cross-domain connections
+- Integrate findings from multiple lenses. Note contradictions and uncertainty where they exist
 - Use markdown formatting
 
 Write the section content now (no section heading needed):"""
 
+    write_sid = f"react_write_{_title_slug}"
     try:
-        result = executor.run_raw(write_prompt, session_id="react_write", timeout=90)
+        result = executor.run_raw(write_prompt, session_id=write_sid, timeout=90)
         if result.text and len(result.text) > 20:
             return result.text, lens_events
     except Exception:
         logger.warning("react_write failed for %s", title, exc_info=True)
+    finally:
+        try:
+            executor.cleanup_session(write_sid)
+        except Exception:
+            pass
 
     return f"*Section generation failed for: {title}*", lens_events
+
+
+def _synthesize_across_sections(
+    topic: str,
+    section_content: dict[str, str],
+    lens_events: list[LensEvent],
+    executor,
+    landscape_summary: str = "",
+) -> str | None:
+    """Generate a synthesis section that identifies cross-cutting themes.
+
+    Reads all generated sections and produces 2-3 paragraphs identifying
+    themes spanning multiple sections, contradictions, and emergent insights.
+
+    Returns synthesis markdown, or None on failure.
+    """
+    section_summaries = []
+    for title, content in section_content.items():
+        if content and not content.startswith("*Section generation failed"):
+            # Truncate long sections for the synthesis prompt
+            truncated = content[:2000]
+            if len(content) > 2000:
+                truncated += "\n[...truncated]"
+            section_summaries.append(f"### {title}\n{truncated}")
+
+    if len(section_summaries) < 2:
+        return None  # Not enough sections to synthesize across
+
+    sections_text = "\n\n".join(section_summaries)
+
+    lens_summary = ""
+    if lens_events:
+        lens_counts: dict[str, int] = {}
+        for le in lens_events:
+            lens_counts[le.lens_id] = lens_counts.get(le.lens_id, 0) + 1
+        lens_summary = ", ".join(f"{lid}: {c} calls" for lid, c in lens_counts.items())
+
+    landscape_block = f"\n## Landscape Context\n{landscape_summary}\n" if landscape_summary else ""
+
+    prompt = f"""You've read a research report on "{topic}" with these sections:
+
+{sections_text}
+
+Lenses used: {lens_summary or "N/A"}
+{landscape_block}
+Write a "Synthesis" section (2-3 paragraphs) that:
+1. Identifies themes that span multiple sections but weren't explicitly connected
+2. Notes contradictions between sections — where one section's findings tension with another's
+3. Surfaces emergent insights that no single section captures on its own
+4. States the single most important takeaway from the entire report
+5. Notes where section findings confirm, contradict, or extend active anticipations or bottleneck assessments
+
+Be specific — reference findings from named sections. Do not repeat what sections already say.
+Write the synthesis content now (no section heading needed):"""
+
+    try:
+        result = executor.run_raw(
+            prompt,
+            session_id="report_synthesis",
+            timeout=60,
+        )
+        if result.text and len(result.text) > 50:
+            return result.text.strip()
+    except Exception:
+        logger.warning("Cross-section synthesis failed for %s", topic, exc_info=True)
+    finally:
+        try:
+            executor.cleanup_session("report_synthesis")
+        except Exception:
+            pass
+
+    return None
 
 
 def run_report(
@@ -330,27 +443,57 @@ def run_report(
     if on_progress:
         on_progress(f"Outline: {len(state.outline)} sections planned")
 
+    # Build landscape summary for cross-section synthesis
+    landscape_summary = panorama_result.summary[:1500] if panorama_result.summary else ""
+
     # Step 3: Generate each section using ReACT agent
+    prior_section_summaries: list[str] = []
     for i, section_title in enumerate(state.outline):
         state.section_states[section_title] = "generating"
         if on_progress:
             on_progress(f"Writing section {i+1}/{len(state.outline)}: {section_title}")
 
+        prior_text = "\n".join(prior_section_summaries) if prior_section_summaries else ""
         content, section_lens_events = react_generate_section(
             title=section_title,
             topic=topic,
             get_conn_fn=get_conn_fn,
             executor=executor,
             embedding=embedding,
+            prior_summaries=prior_text,
         )
         state.lens_events.extend(section_lens_events)
 
         state.section_content[section_title] = content
         state.section_states[section_title] = "complete"
 
+        # Extract a brief summary for subsequent sections
+        if content and not content.startswith("*Section generation failed"):
+            sentences = content.split(". ")
+            brief = ". ".join(sentences[:2]).strip()
+            if brief and not brief.endswith("."):
+                brief += "."
+            prior_section_summaries.append(f"- {section_title}: {brief[:200]}")
+
         # Emit section content for progressive delivery (bold heading for Telegram)
         if on_progress and content and not content.startswith("*Section generation failed"):
             on_progress(f"**{section_title}**\n\n{content}")
+
+    # Step 3.5: Cross-section synthesis
+    synthesis_content = None
+    if len(state.outline) >= 2:
+        if on_progress:
+            on_progress("Synthesizing across sections...")
+        synthesis_content = _synthesize_across_sections(
+            topic=topic,
+            section_content=state.section_content,
+            lens_events=state.lens_events,
+            executor=executor,
+            landscape_summary=landscape_summary,
+        )
+        if synthesis_content:
+            if on_progress:
+                on_progress(f"**Synthesis**\n\n{synthesis_content}")
 
     # Step 4: Assemble final markdown
     if on_progress:
@@ -364,6 +507,11 @@ def run_report(
     for title in state.outline:
         parts.append(f"## {title}\n")
         parts.append(state.section_content.get(title, ""))
+        parts.append("")
+
+    if synthesis_content:
+        parts.append("## Synthesis\n")
+        parts.append(synthesis_content)
         parts.append("")
 
     state.final_markdown = "\n".join(parts)
@@ -415,17 +563,32 @@ def _persist_report_conclusions(
 
         ensure_pool()
 
+        # Prefer the synthesis section for conclusion extraction (higher signal density)
+        source_text = state.final_markdown[:6000]
+        if "## Synthesis\n" in state.final_markdown:
+            synth_start = state.final_markdown.index("## Synthesis\n")
+            synth_text = state.final_markdown[synth_start:synth_start + 3000]
+            # Include synthesis + non-overlapping earlier content
+            pre_synth = state.final_markdown[:min(synth_start, 3000)]
+            source_text = synth_text + "\n\n---\n\n" + pre_synth
+
         # Ask LLM to extract key conclusions
         prompt = f"""Extract 3-5 key conclusions from this report. Each conclusion should be
 a standalone claim that captures a non-obvious insight from the analysis.
+Prioritize insights from the Synthesis section if present.
 
 Report:
-{state.final_markdown[:6000]}
+{source_text}
 
 Return ONLY a JSON array of objects with "claim" and "evidence" fields.
 Example: [{{"claim": "...", "evidence": "..."}}]"""
 
-        result = executor.run_raw(prompt, session_id="report_conclusions", timeout=60)
+        conclusions_sid = "report_conclusions"
+        result = executor.run_raw(prompt, session_id=conclusions_sid, timeout=60)
+        try:
+            executor.cleanup_session(conclusions_sid)
+        except Exception:
+            pass
         if not result.text:
             return
 
@@ -478,6 +641,6 @@ Example: [{{"claim": "...", "evidence": "..."}}]"""
                 provenance_type="synthesis",
             )
 
-        logger.info("Persisted %d report conclusions as synthesis claims", min(len(conclusions), 5))
+        logger.info("Persisted %d report conclusions as synthesis claims", len(valid_conclusions))
     except Exception:
         logger.warning("Failed to persist report conclusions", exc_info=True)

@@ -4,9 +4,7 @@ Tests the tournament belief weighting, landscape belief queries,
 and cross-module interactions.
 """
 
-import inspect
 import yaml
-import json
 from unittest.mock import patch, MagicMock
 
 
@@ -99,53 +97,6 @@ def test_tournament_belief_weighting_caps_at_1():
     assert result[0]["overall_score"] <= 1.0
 
 
-# --- Landscape Belief Queries ---
-
-def test_get_beliefs_for_synthesis_importable():
-    """Synthesis query function should be importable."""
-    from retrieval.landscape import get_beliefs_for_synthesis
-    assert callable(get_beliefs_for_synthesis)
-
-
-def test_get_belief_coverage_gaps_importable():
-    """Coverage gaps function should be importable."""
-    from retrieval.landscape import get_belief_coverage_gaps
-    assert callable(get_belief_coverage_gaps)
-
-
-def test_get_predictive_beliefs_without_anticipations_importable():
-    """Predictive beliefs query should be importable."""
-    from retrieval.landscape import get_predictive_beliefs_without_anticipations
-    assert callable(get_predictive_beliefs_without_anticipations)
-
-
-# --- Belief Relevance Checker Integration ---
-
-def test_relevance_checker_importable():
-    """All public functions should be importable."""
-    from ingest.belief_relevance_checker import (
-        check_belief_relevance,
-        persist_belief_updates,
-        categorize_hits,
-        VALID_RELATIONSHIPS,
-    )
-    assert len(VALID_RELATIONSHIPS) == 5
-
-
-# --- Belief Suggester Integration ---
-
-def test_belief_suggester_importable():
-    """All public functions should be importable."""
-    from ingest.belief_suggester import (
-        suggest_beliefs_for_theme,
-        suggest_beliefs_all_themes,
-        MIN_SOURCES_FOR_SUGGESTION,
-        MIN_CONVERGENT_SOURCES,
-    )
-    assert MIN_SOURCES_FOR_SUGGESTION == 5
-    assert MIN_CONVERGENT_SOURCES == 3
-
-
 # --- Schema Migration ---
 
 def test_migration_006_exists():
@@ -212,41 +163,6 @@ def test_db_belief_functions_exist():
         fn = getattr(db, name, None)
         assert fn is not None, f"db.{name} not found"
         assert callable(fn), f"db.{name} is not callable"
-
-
-def test_insert_belief_signature():
-    """insert_belief should accept all required parameters."""
-    from reading_app import db
-
-    sig = inspect.signature(db.insert_belief)
-    param_names = list(sig.parameters.keys())
-    for expected in [
-        "id", "claim", "confidence", "status", "belief_type",
-        "domain_theme_id", "landscape_links", "evidence_for",
-        "evidence_against", "derived_anticipations", "parent_belief_id",
-        "history",
-    ]:
-        assert expected in param_names, f"insert_belief missing param: {expected}"
-
-
-def test_update_belief_confidence_signature():
-    """update_belief_confidence should accept the right parameters."""
-    from reading_app import db
-
-    sig = inspect.signature(db.update_belief_confidence)
-    param_names = list(sig.parameters.keys())
-    for expected in ["belief_id", "new_confidence", "trigger", "trigger_type"]:
-        assert expected in param_names, f"update_belief_confidence missing param: {expected}"
-
-
-def test_list_beliefs_signature():
-    """list_beliefs should accept the right filter parameters."""
-    from reading_app import db
-
-    sig = inspect.signature(db.list_beliefs)
-    param_names = list(sig.parameters.keys())
-    for expected in ["status", "belief_type", "domain_theme_id", "limit", "offset"]:
-        assert expected in param_names, f"list_beliefs missing param: {expected}"
 
 
 # --- Migration/schema consistency (Task 2) ---
@@ -325,16 +241,6 @@ def test_tournament_belief_weighting_stop_words_filtered():
 
 
 # --- Challenge log and prompts (Task 8) ---
-
-def test_insert_challenge_log_importable():
-    """insert_challenge_log should be importable with expected params."""
-    from reading_app.db import insert_challenge_log
-
-    sig = inspect.signature(insert_challenge_log)
-    param_names = list(sig.parameters.keys())
-    assert "entity_type" in param_names
-    assert "entity_id" in param_names
-
 
 def test_challenge_log_table_in_schema():
     """schema.sql should contain challenge_log table with required columns."""

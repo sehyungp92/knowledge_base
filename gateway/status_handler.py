@@ -99,11 +99,9 @@ def _system_overview(q: Queue) -> str:
     # Last heartbeat
     last_hb = "unknown"
     try:
-        hb_row = q.db.execute(
-            "SELECT max(updated_at) AS t FROM jobs WHERE skill = 'heartbeat'"
-        ).fetchone()
-        if hb_row and hb_row["t"]:
-            ts = datetime.fromtimestamp(hb_row["t"], tz=timezone.utc)
+        hb_time = q.get_last_heartbeat_time()
+        if hb_time is not None:
+            ts = datetime.fromtimestamp(hb_time, tz=timezone.utc)
             ago = int((datetime.now(timezone.utc) - ts).total_seconds())
             last_hb = f"{ago}s ago" if ago < 120 else f"{ago // 60}m ago"
     except Exception:

@@ -3,7 +3,7 @@ skills:
     trigger_pattern: "^/save\\s+(\\S+)"
     prompt: prompts/save.md
     description: "Ingest a URL into your library"
-    timeout: 600
+    timeout: 900
     stream_progress: true
     tools_allowed: [Read, Write, Bash, Glob, Grep, WebFetch]
     tools_denied: []

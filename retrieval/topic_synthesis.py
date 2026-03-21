@@ -98,7 +98,7 @@ Your role is that of an expert research analyst specialising in AI. You must det
 
 ## Topic: {topic}
 
-## Sources ({source_count} total)
+{analysis_section}## Sources ({source_count} total)
 
 {sources_block}
 
@@ -171,17 +171,135 @@ Based on {{count}} sources ingested between {{date_range}}.
 
 ---
 
+VOICE AND ATTRIBUTION — these are absolute:
+- State findings as direct facts, results, and open questions.
+- NEVER reference sources meta-textually. Forbidden patterns: "according to", "one study found", "the authors argue", "Source A claims", "the paper shows", "research suggests".
+- Where contradictions exist, present them as open tensions in the field — not as source disagreements. Example: "Whether X scales beyond Y remains unresolved — results at 7B parameters show Z [Source 1: "Title"], while larger-scale experiments suggest the opposite [Source 2: "Title"]."
+
 CRITICAL RULES:
 - Synthesize ACROSS sources. Do NOT write sequential source summaries.
 - Cite specific sources inline: [Source N: "Title"]
 - Include concrete facts, numbers, statistics, and quotes wherever available.
 - Separate obvious from non-obvious implications — explain the reasoning for non-obvious ones.
-- If sources disagree, note the disagreement explicitly with your assessment.
 - Limitations and open questions are MORE valuable than capabilities — invest depth there.
 - Form your own concrete opinion based on the evidence. Do NOT defer to vague conclusions.
 - Identify gaps — what questions remain unanswered? What's suspiciously absent?
 - Keep the report focused and specific — no generic statements.
 """
+
+
+SYNTHESIS_QUALITY_CHECK_PROMPT = """Rate this topic synthesis report on "{topic}" on three criteria.
+
+## Report
+{report}
+{ground_truth_section}
+---
+
+Score each 1-5 (1=poor, 5=excellent):
+
+SOURCE_INTEGRATION: Does it synthesize across sources into unified analysis — or read like sequential source summaries?
+  Score 2: "Source A found X. Source B found Y. Source C argues Z." (sequential)
+  Score 4: "X is well-established [1][2], though Y remains contested — 7B-scale results diverge from larger experiments [3]." (integrated)
+
+SPECIFICITY: Does it name concrete capabilities, benchmarks, and results — or use vague generalities?
+  Score 2: "Several models show improved performance on benchmarks." (vague)
+  Score 4: "GPT-4o scores 88.7% on MMLU while Gemini Ultra reaches 90.0%, though both plateau on ARC-AGI." (concrete)
+{specificity_guidance}
+ANALYTICAL_DEPTH: Does it form original assessments, surface contradictions, and identify gaps — or just restate source claims?
+  Score 2: "The technology has strengths and weaknesses. More research is needed." (surface)
+  Score 4: "The 7B-scale results are promising but the absence of any evaluation beyond English is conspicuous — the claimed 'multilingual capability' rests on architecture similarity, not demonstrated performance." (original analysis)
+
+Return ONLY three lines:
+SOURCE_INTEGRATION: N
+SPECIFICITY: N
+ANALYTICAL_DEPTH: N
+"""
+
+
+def _score_synthesis(
+    report: str,
+    topic: str,
+    executor,
+    entity_names: list[str] | None = None,
+) -> float | None:
+    """Score a synthesis report on quality dimensions. Returns average score (1-5) or None on parse failure."""
+    ground_truth_section = ""
+    specificity_guidance = ""
+    if entity_names:
+        ground_truth_section = (
+            "\n## Ground Truth Entities\n"
+            + ", ".join(entity_names[:30])
+            + "\n"
+        )
+        specificity_guidance = (
+            "  Score 4-5 only if the report references entities from the ground truth list. "
+            "Score 1-2 if it uses vague generalities or names entities not in the list.\n"
+        )
+
+    prompt = SYNTHESIS_QUALITY_CHECK_PROMPT.format(
+        topic=topic,
+        report=report,
+        ground_truth_section=ground_truth_section,
+        specificity_guidance=specificity_guidance,
+    )
+    session_id = f"synthesis_quality_{hashlib.md5(topic.encode()).hexdigest()[:8]}"
+    try:
+        result = executor.run_raw(
+            prompt,
+            session_id=session_id,
+            model="haiku",
+            timeout=15,
+        )
+        text = result.text.strip()
+
+        scores = {}
+        for line in text.splitlines():
+            for key in ("SOURCE_INTEGRATION", "SPECIFICITY", "ANALYTICAL_DEPTH"):
+                if line.strip().startswith(key):
+                    m = re.search(r"(\d)", line.split(":", 1)[-1])
+                    if m:
+                        val = int(m.group(1))
+                        if 1 <= val <= 5:
+                            scores[key] = val
+
+        if len(scores) < 3:
+            logger.debug("Synthesis quality check parse incomplete for %s: %s", topic, scores)
+            return None
+
+        return sum(scores.values()) / len(scores)
+    except Exception:
+        logger.debug("Synthesis quality check failed for %s", topic, exc_info=True)
+        return None
+    finally:
+        try:
+            executor.cleanup_session(session_id)
+        except Exception:
+            pass
+
+
+def _validate_synthesis_quality(
+    report: str,
+    topic: str,
+    executor,
+    entity_names: list[str] | None = None,
+) -> tuple[bool, str, float | None]:
+    """Check if synthesis report meets quality standards.
+
+    Returns (passes, feedback, avg_score). Passes if average score >= 3.
+    """
+    avg = _score_synthesis(report, topic, executor, entity_names)
+    if avg is None:
+        return True, "", None  # Can't parse — accept
+
+    if avg >= 3:
+        return True, "", avg
+
+    feedback = (
+        f"Quality scores averaged {avg:.1f}/5. "
+        "Rewrite by integrating across sources rather than summarizing sequentially, "
+        "using concrete facts, and forming original analytical assessments."
+    )
+    return False, feedback, avg
 
 
 MERGE_PROMPT = """You are writing a standalone professional knowledge report that integrates information from {source_count} sources into a unified narrative.
@@ -575,6 +693,121 @@ def _load_consolidated_implications(theme_ids: list[str]) -> list[dict]:
     return results
 
 
+SYNTHESIS_ANALYSIS_PROMPT = """You are pre-digesting research context for a synthesis report on "{topic}".
+
+You have {source_count} sources with deep summaries, {evidence_count} evidence snippets, and landscape signals across {theme_count} themes.
+
+## Source Titles
+{source_titles}
+
+## Evidence Sample (top claims by confidence)
+{evidence_sample}
+
+## Landscape Signals
+Capabilities: {n_caps} | Limitations: {n_lims} | Bottlenecks: {n_bns}
+Implications: {n_impls}
+
+## Anticipations
+{anticipations_text}
+
+---
+
+Produce a structured analysis to guide the synthesis LLM:
+
+KEY TENSIONS: Contradictions or conflicts across the sources — where do they disagree or frame things differently? Be specific about which sources.
+
+MOST IMPORTANT CONNECTIONS: Non-obvious links between findings from different sources. What patterns emerge when you look across all sources together?
+
+CONVERGENCE VS DIVERGENCE: Where do sources strongly agree? Where do they diverge? Is the convergence meaningful or just shared assumptions?
+
+COVERAGE GAPS: What's missing from the evidence? What questions remain unanswered? What would you expect to see but don't?
+
+RECOMMENDED EMPHASIS: What deserves the most depth in the synthesis? What's the single most important insight across all these sources?
+
+Keep each section to 2-4 sentences. Be specific — reference concrete findings.
+"""
+
+
+def analyze_synthesis_context(ctx: dict, executor=None) -> str:
+    """Pre-digest gathered synthesis context to guide the synthesis LLM.
+
+    Runs a fast Haiku call to identify tensions, connections, gaps,
+    and recommended emphasis before the expensive synthesis call.
+
+    Args:
+        ctx: Output of gather_synthesis_context().
+        executor: ClaudeExecutor instance.
+
+    Returns:
+        Analysis text, or empty string on failure.
+    """
+    if executor is None:
+        from agents.executor import ClaudeExecutor, DEFAULT_WORKSPACE
+        executor = ClaudeExecutor(DEFAULT_WORKSPACE)
+
+    sources = ctx.get("indexed_sources") or ctx.get("sources", [])
+    summaries = ctx.get("summaries", {})
+    evidence = ctx.get("evidence", {})
+    landscape = ctx.get("landscape", {})
+    implications = ctx.get("implications", [])
+
+    # Build evidence sample (top snippets across all sources)
+    all_evidence = []
+    for sid, snippets in evidence.items():
+        for ev in snippets[:3]:
+            all_evidence.append(ev)
+    all_evidence.sort(key=lambda e: e.get("confidence", 0), reverse=True)
+    evidence_sample = "\n".join(
+        f"- {(ev.get('claim') or '')[:150]}" for ev in all_evidence[:10]
+    ) or "No evidence snippets."
+
+    source_titles = "\n".join(
+        f"- {s.get('title', s.get('source_id', '?'))}" for s in sources
+    )
+
+    anticipations_text = "\n".join(
+        f"- {a['prediction']} (confidence: {a.get('confidence', '?')})"
+        for a in landscape.get("anticipations", [])
+    ) or "None active."
+
+    total_evidence = sum(len(v) for v in evidence.values())
+    prompt = SYNTHESIS_ANALYSIS_PROMPT.format(
+        topic=ctx["topic"],
+        source_count=len(summaries),
+        evidence_count=total_evidence,
+        theme_count=len(ctx.get("theme_ids", [])),
+        source_titles=source_titles,
+        evidence_sample=evidence_sample,
+        n_caps=len(landscape.get("capabilities", [])),
+        n_lims=len(landscape.get("limitations", [])),
+        n_bns=len(landscape.get("bottlenecks", [])),
+        n_impls=len(implications),
+        anticipations_text=anticipations_text,
+    )
+
+    session_id = f"synthesis_analysis_{_slugify(ctx['topic'])}"
+    try:
+        result = executor.run_raw(
+            prompt,
+            session_id=session_id,
+            model="haiku",
+            timeout=30,
+        )
+        analysis = result.text.strip()
+        if analysis and len(analysis) > 50:
+            logger.info("Pre-analysis for '%s': %d chars", ctx["topic"], len(analysis))
+            return analysis
+    except Exception:
+        logger.warning("Pre-analysis failed for '%s'", ctx["topic"], exc_info=True)
+    finally:
+        try:
+            executor.cleanup_session(session_id)
+        except Exception:
+            pass
+
+    return ""
+
+
 def gather_synthesis_context(query: str) -> dict | None:
     """Gather all data needed for a synthesis report — no LLM calls.
 
@@ -618,8 +851,13 @@ def gather_synthesis_context(query: str) -> dict | None:
     }
 
 
-def format_synthesis_context(ctx: dict) -> str:
-    """Format a gathered synthesis context dict into prompt-injectable text."""
+def format_synthesis_context(ctx: dict, analysis: str = "") -> str:
+    """Format a gathered synthesis context dict into prompt-injectable text.
+
+    Args:
+        ctx: Output of gather_synthesis_context().
+        analysis: Optional pre-analysis text from analyze_synthesis_context().
+    """
     query = ctx["topic"]
     sources = ctx["sources"]
     indexed_sources = ctx["indexed_sources"]
@@ -686,8 +924,17 @@ def format_synthesis_context(ctx: dict) -> str:
         for a in landscape.get("anticipations", [])
     ) or "None active."
 
-    return SYNTHESIS_PROMPT.format(
+    analysis_section = ""
+    if analysis:
+        analysis_section = (
+            "## Pre-Analysis (editorial direction — use this to guide emphasis)\n\n"
+            + analysis
+            + "\n\n---\n\n"
+        )
+
+    formatted = SYNTHESIS_PROMPT.format(
         topic=query,
+        analysis_section=analysis_section,
         source_count=len(summaries),
         sources_block=sources_block,
         summaries_block=summaries_block,
@@ -698,6 +945,8 @@ def format_synthesis_context(ctx: dict) -> str:
         implications_block=implications_block,
         anticipations_block=anticipations_block,
     )
+
+    return formatted
 
 
 def generate_topic_synthesis(query: str, executor=None) -> str | None:
@@ -721,12 +970,14 @@ def generate_topic_synthesis(query: str, executor=None) -> str | None:
     if ctx is None:
         return None
 
-    prompt = format_synthesis_context(ctx)
+    analysis = analyze_synthesis_context(ctx, executor)
+    prompt = format_synthesis_context(ctx, analysis=analysis)
 
+    session_id = f"synthesis_{_slugify(query)}"
     try:
         result = executor.run_raw(
             prompt,
-            session_id=f"synthesis_{_slugify(query)}",
+            session_id=session_id,
             model="sonnet",
             timeout=180,
         )
@@ -734,6 +985,60 @@ def generate_topic_synthesis(query: str, executor=None) -> str | None:
         if not report or len(report) < 100:
             logger.warning("Synthesis report too short for %s: %d chars", query, len(report))
             return None
+
+        # Extract entity names for quality gate ground truth
+        landscape = ctx.get("landscape") or {}
+        entity_names = [
+            entity.get("description", "")[:60]
+            for key in ("capabilities", "limitations", "bottlenecks")
+            for entity in landscape.get(key, [])
+            if entity.get("description")
+        ]
+
+        # Quality gate: check if the report meets synthesis standards
+        passes, feedback, original_score = _validate_synthesis_quality(
+            report, query, executor, entity_names=entity_names
+        )
+        if not passes:
+            logger.info("Synthesis quality gate failed for %s (score: %s), retrying with feedback",
+                        query, original_score)
+            retry_prompt = prompt + f"\n\nIMPORTANT CORRECTION: {feedback}"
+            retry_session = f"synthesis_retry_{_slugify(query)}"
+            try:
+                retry_result = executor.run_raw(
+                    retry_prompt,
+                    session_id=retry_session,
+                    model="sonnet",
+                    timeout=180,
+                )
+                retry_text = retry_result.text.strip()
+                if retry_text and len(retry_text) >= 100:
+                    # Re-score the retry to verify improvement
+                    retry_score = _score_synthesis(
+                        retry_text, query, executor,
+                        entity_names=entity_names,
+                    )
+                    if retry_score is not None and (
+                        retry_score >= 3
+                        or (original_score is not None and retry_score > original_score)
+                    ):
+                        report = retry_text
+                        logger.info("Retry improved synthesis for %s (score: %.1f -> %.1f)",
+                                    query, original_score or 0, retry_score)
+                    elif original_score is not None and retry_score is not None and retry_score <= original_score:
+                        logger.info("Retry did not improve for %s (score: %.1f -> %.1f), keeping original",
+                                    query, original_score, retry_score)
+                    else:
+                        # Can't score retry — accept it if it's long enough
+                        report = retry_text
+                        logger.info("Retry accepted without scoring for %s", query)
+            except Exception:
+                logger.debug("Quality retry failed for %s, using original", query, exc_info=True)
+            finally:
+                try:
+                    executor.cleanup_session(retry_session)
+                except Exception:
+                    pass
 
         # Cache the report
         SYNTHESES_DIR.mkdir(parents=True, exist_ok=True)
@@ -747,6 +1052,11 @@ def generate_topic_synthesis(query: str, executor=None) -> str | None:
     except Exception:
         logger.error("Failed to generate synthesis for %s", query, exc_info=True)
         return None
+    finally:
+        try:
+            executor.cleanup_session(session_id)
+        except Exception:
+            pass
 
 
 # ---------------------------------------------------------------------------

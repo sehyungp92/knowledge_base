@@ -9,44 +9,12 @@ from retrieval.graph_algorithms import KnowledgeGraphAnalyzer
 
 
 # ---------------------------------------------------------------------------
-# Helper: mock connection factory (same pattern as test_graph.py)
-# ---------------------------------------------------------------------------
-
-def _mock_conn():
-    """Create a mock connection context manager and raw conn mock."""
-    conn = MagicMock()
-    conn.execute.return_value.fetchall.return_value = []
-
-    @contextmanager
-    def get_conn():
-        yield conn
-
-    return get_conn, conn
-
-
-def _mock_conn_multi(call_results: list[list[dict]]):
-    """Create a mock conn whose successive fetchall() calls return different data.
-
-    *call_results* is a list of lists — one per expected execute().fetchall() call.
-    """
-    conn = MagicMock()
-    side_effects = [MagicMock(fetchall=MagicMock(return_value=rows)) for rows in call_results]
-    conn.execute.side_effect = side_effects
-
-    @contextmanager
-    def get_conn():
-        yield conn
-
-    return get_conn, conn
-
-
-# ---------------------------------------------------------------------------
 # 1. _build_source_graph
 # ---------------------------------------------------------------------------
 
-def test_build_graph_from_edges():
+def test_build_graph_from_edges(mock_conn):
     """Mock source_edges rows, verify graph has correct nodes and edges."""
-    get_conn, conn = _mock_conn()
+    get_conn, conn = mock_conn
     conn.execute.return_value.fetchall.return_value = [
         {"source_a": "s1", "source_b": "s2", "edge_type": "extends", "confidence": 0.9},
         {"source_a": "s2", "source_b": "s3", "edge_type": "supports", "confidence": 0.8},
@@ -64,9 +32,9 @@ def test_build_graph_from_edges():
 # 2. compute_pagerank
 # ---------------------------------------------------------------------------
 
-def test_pagerank_returns_ranked_sources():
+def test_pagerank_returns_ranked_sources(mock_conn):
     """3-node cycle — verify 3 results with scores summing to ~1.0."""
-    get_conn, conn = _mock_conn()
+    get_conn, conn = mock_conn
     conn.execute.return_value.fetchall.return_value = [
         {"source_a": "s1", "source_b": "s2", "edge_type": "extends", "confidence": 0.9},
         {"source_a": "s2", "source_b": "s3", "edge_type": "extends", "confidence": 0.9},
@@ -87,9 +55,9 @@ def test_pagerank_returns_ranked_sources():
 # 3. compute_communities
 # ---------------------------------------------------------------------------
 
-def test_communities_returns_clusters():
+def test_communities_returns_clusters(mock_conn):
     """Verify all results have metadata with community_id."""
-    get_conn, conn = _mock_conn()
+    get_conn, conn = mock_conn
     conn.execute.return_value.fetchall.return_value = [
         {"source_a": "s1", "source_b": "s2", "edge_type": "extends", "confidence": 0.9},
         {"source_a": "s2", "source_b": "s3", "edge_type": "extends", "confidence": 0.9},
@@ -108,11 +76,11 @@ def test_communities_returns_clusters():
 # 4. compute_betweenness
 # ---------------------------------------------------------------------------
 
-def test_betweenness_returns_bridge_concepts():
+def test_betweenness_returns_bridge_concepts(mock_conn):
     """Mock source_concepts so one concept bridges two groups; verify results have scores."""
     # Source s1 has concepts c1, c2; source s2 has concepts c2, c3.
     # c2 is the bridge node and should have betweenness > 0.
-    get_conn, conn = _mock_conn()
+    get_conn, conn = mock_conn
     conn.execute.return_value.fetchall.return_value = [
         {"source_id": "s1", "concept_id": "c1"},
         {"source_id": "s1", "concept_id": "c2"},
@@ -136,9 +104,9 @@ def test_betweenness_returns_bridge_concepts():
 # 5. materialize
 # ---------------------------------------------------------------------------
 
-def test_materialize_writes_to_db():
+def test_materialize_writes_to_db(mock_conn):
     """Stub compute methods, verify upsert calls reference graph_metrics."""
-    get_conn, conn = _mock_conn()
+    get_conn, conn = mock_conn
     analyzer = KnowledgeGraphAnalyzer(get_conn)
 
     # Stub all four compute methods to return fixed results
@@ -178,9 +146,9 @@ def test_materialize_writes_to_db():
 # 6. Empty graph
 # ---------------------------------------------------------------------------
 
-def test_empty_graph_returns_empty_results():
+def test_empty_graph_returns_empty_results(mock_conn):
     """Empty fetchall → empty list from compute methods."""
-    get_conn, conn = _mock_conn()
+    get_conn, conn = mock_conn
     conn.execute.return_value.fetchall.return_value = []
 
     analyzer = KnowledgeGraphAnalyzer(get_conn)
@@ -193,9 +161,9 @@ def test_empty_graph_returns_empty_results():
 # Additional: materialize continues on failure
 # ---------------------------------------------------------------------------
 
-def test_materialize_continues_on_failure():
+def test_materialize_continues_on_failure(mock_conn):
     """If one compute method raises, others still run."""
-    get_conn, conn = _mock_conn()
+    get_conn, conn = mock_conn
     analyzer = KnowledgeGraphAnalyzer(get_conn)
 
     analyzer.compute_pagerank = MagicMock(side_effect=RuntimeError("boom"))

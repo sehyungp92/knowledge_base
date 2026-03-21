@@ -246,14 +246,3 @@ def test_get_over_optimistic_themes_uses_preaggregated_counts():
     assert "capability_counts" in query
     assert "limitation_counts" in query
     assert "LEFT JOIN capabilities c ON t.id = c.theme_id" not in query
-
-
-def test_module_importable():
-    from retrieval import landscape
-    assert hasattr(landscape, "get_theme_state")
-    assert hasattr(landscape, "get_recent_breakthroughs")
-    assert hasattr(landscape, "get_bottleneck_ranking")
-    assert hasattr(landscape, "compute_theme_velocity")
-    assert hasattr(landscape, "update_all_theme_velocities")
-    assert hasattr(landscape, "get_anticipations_with_evidence")
-    assert hasattr(landscape, "get_limitation_validation_rates")

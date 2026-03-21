@@ -36,18 +36,20 @@ def budget_for_source_type(source_type: str | None, default: int = 80_000) -> in
 
 def timeout_for_text(
     text_len: int,
-    base: int = 180,
-    per_10k: int = 15,
-    ceiling: int = 600,
+    base: int = 120,
+    scale: int = 50,
+    ceiling: int = 720,
 ) -> int:
-    """Dynamic timeout: 180s base + 15s per 10K chars, clamped to ceiling.
+    """Dynamic timeout: sub-linear power-law scaling with content length.
 
-    Lower base (small texts are fast), gentler slope (not linear with size),
-    higher ceiling (larger budgets need more time).
+    Uses exponent 0.65 so small texts get tight timeouts (faster retries)
+    while large texts get proportionally more headroom (avoiding premature
+    fallback to chunked extraction).
 
-    Examples: 10K → 195s, 50K → 255s, 100K → 330s, 200K → 480s.
+    Examples: 5K → 152s, 10K → 170s, 50K → 262s, 100K → 344s, 200K → 474s.
     """
-    return min(base + (text_len // 10_000) * per_10k, ceiling)
+    units = max(0, text_len) / 10_000
+    return min(base + int(scale * units ** 0.65), ceiling)
 
 
 SECTION_PRIORITIES = {

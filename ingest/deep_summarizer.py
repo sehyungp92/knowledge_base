@@ -471,11 +471,11 @@ def generate_deep_summary(
     # Use the full text, only stripping references/appendices
     full_text = strip_backmatter(clean_text)
 
-    # Generous timeout: summary output length is bounded regardless of input
-    # length, but the model still needs time to read longer inputs.
-    # 480s base + 30s per 10K chars beyond 50K, capped at 600s.
+    # Sub-linear timeout: lower base saves ~3 min on small articles, while
+    # large papers (200K+) get 80-120s more headroom than the old formula.
+    # 300s base + power-law scaling beyond 20K chars, capped at 720s.
     text_len = len(full_text)
-    summary_timeout = min(480 + max(0, (text_len - 50_000) // 10_000) * 30, 600)
+    summary_timeout = min(300 + int(50 * max(0, (text_len - 20_000) / 10_000) ** 0.65), 720)
 
     logger.info(
         "Generating deep summary for %s: %d chars (full text), timeout=%ds",

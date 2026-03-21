@@ -141,6 +141,23 @@ def sqlite_db(tmp_path):
 
 
 @pytest.fixture
+def mock_conn():
+    """Provide a mock database connection context manager.
+
+    Returns (get_conn, conn) tuple where get_conn is a context manager
+    and conn is the underlying MagicMock connection.
+    """
+    conn = MagicMock()
+    conn.execute.return_value.fetchall.return_value = []
+
+    @contextmanager
+    def get_conn():
+        yield conn
+
+    return get_conn, conn
+
+
+@pytest.fixture
 def mock_executor():
     """Provide a mock ClaudeExecutor."""
     executor = MagicMock()

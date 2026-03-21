@@ -40,9 +40,9 @@ def test_config_defaults(tmp_path, monkeypatch):
     assert cfg.zai_model_deep == "GLM-4.7"
     assert cfg.openrouter_api_key == ""
     assert cfg.openrouter_base_url == "https://openrouter.ai/api"
-    assert cfg.openrouter_model_fast == "openrouter/anthropic/claude-3.5-haiku"
-    assert cfg.openrouter_model_balanced == "openrouter/anthropic/claude-sonnet-4.5"
-    assert cfg.openrouter_model_deep == "openrouter/anthropic/claude-sonnet-4.5"
+    assert cfg.openrouter_model_fast == "minimax/minimax-m2.5"
+    assert cfg.openrouter_model_balanced == "minimax/minimax-m2.5"
+    assert cfg.openrouter_model_deep == "minimax/minimax-m2.5"
     assert cfg.runtime_log_dir == Path("./var/runtime/logs")
     assert cfg.runtime_db_path == Path("./var/runtime/runtime.db")
     assert cfg.runtime_db_wait_seconds == 60
