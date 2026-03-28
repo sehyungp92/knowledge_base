@@ -417,6 +417,18 @@ def _handle_landscape_challenge(
                     attribution="user_challenge",
                 )
                 applied_changes.append(f"{field}: {old_value[:50]} → {str(new_value)[:50]}")
+                try:
+                    from ingest.correction_store import store_correction
+                    store_correction(
+                        entity_type, "reclassified",
+                        {"field": field, "value": old_value[:200]},
+                        {"field": field, "value": str(new_value)[:200]},
+                        source_id=entity.get("source_id"),
+                        theme_id=entity.get("theme_id"),
+                        skill_origin="challenge",
+                    )
+                except Exception:
+                    pass
             except Exception as e:
                 log.warning("challenge_change_failed", field=field, error=str(e)[:200])
 

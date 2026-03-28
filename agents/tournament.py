@@ -748,6 +748,36 @@ Return JSON array:
             if ideas_as_claims:
                 self._persist_ideas_as_claims(ideas_as_claims, source_id)
 
+            # Log per-strategy quality metrics
+            try:
+                from reading_app.quality_store import log_quality_metric
+                strategy_stats: dict[str, dict] = {}
+                for idea in ideas:
+                    strat = (idea.get("tournament_metadata") or {}).get("generation_strategy", "unknown")
+                    if strat not in strategy_stats:
+                        strategy_stats[strat] = {"ideas_generated": 0, "scores": [], "novelty_passed": 0}
+                    strategy_stats[strat]["ideas_generated"] += 1
+                    score = idea.get("overall_score") or 0
+                    if score >= 0.1:
+                        strategy_stats[strat]["scores"].append(score)
+                    if idea.get("novelty_check_passed"):
+                        strategy_stats[strat]["novelty_passed"] += 1
+                for strat, stats in strategy_stats.items():
+                    avg_score = sum(stats["scores"]) / len(stats["scores"]) if stats["scores"] else 0
+                    n_gen = stats["ideas_generated"]
+                    log_quality_metric(
+                        "tournament_strategy", "strategy", strat,
+                        {
+                            "ideas_generated": n_gen,
+                            "avg_score": round(avg_score, 3),
+                            "novelty_pass_rate": round(stats["novelty_passed"] / n_gen, 3) if n_gen else 0,
+                        },
+                        aggregate_score=avg_score,
+                        skill="reflect",
+                    )
+            except Exception:
+                logger.debug("Failed to log tournament strategy metrics", exc_info=True)
+
         except Exception:
             logger.error("Failed to persist ideas", exc_info=True)
 

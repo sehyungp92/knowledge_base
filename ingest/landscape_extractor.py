@@ -190,7 +190,7 @@ Return a JSON object with four arrays:
 
 Be thorough but precise. Only include signals with genuine evidence in the text.
 Limitations are the most valuable signal — extract ALL implicit ones you can find.
-
+{correction_examples}
 SOURCE TEXT (truncated):
 {text}
 """
@@ -357,9 +357,23 @@ def extract_landscape_signals(
     except Exception:
         theme_block = get_available_themes(None)
 
+    # Build correction examples for few-shot calibration
+    correction_block = ""
+    try:
+        from ingest.correction_store import get_few_shot_examples, format_few_shot_block
+        for tid in (source_themes or []):
+            examples = get_few_shot_examples("limitation", limit=2, theme_id=tid)
+            examples += get_few_shot_examples("capability", limit=1, theme_id=tid)
+            if examples:
+                correction_block = format_few_shot_block(examples)
+                break
+    except Exception:
+        logger.debug("Failed to load correction examples for landscape extraction", exc_info=True)
+
     def _build_prompt(text_slice: str) -> str:
         p = LANDSCAPE_EXTRACTION_PROMPT.format(
-            text=text_slice, temporal_context=temporal_context, theme_block=theme_block,
+            text=text_slice, temporal_context=temporal_context,
+            theme_block=theme_block, correction_examples=correction_block,
         )
         if source_themes:
             landscape_context = _build_landscape_context(source_themes)

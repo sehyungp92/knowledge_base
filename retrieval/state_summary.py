@@ -344,7 +344,18 @@ def _score_summary(
             logger.debug("Quality check parse incomplete for %s: %s", theme_id, scores)
             return None
 
-        return sum(scores.values()) / len(scores)
+        avg = sum(scores.values()) / len(scores)
+
+        # Persist quality scores for trend analysis
+        try:
+            from reading_app.quality_store import log_quality_metric
+            log_quality_metric(
+                "state_summary", "theme", theme_id, scores, aggregate_score=avg,
+            )
+        except Exception:
+            logger.debug("Failed to persist quality metric for %s", theme_id, exc_info=True)
+
+        return avg
     except Exception:
         logger.debug("Quality check failed for %s", theme_name, exc_info=True)
         return None
@@ -454,18 +465,22 @@ def generate_theme_state_summary(
         return ""
 
     # Format data for prompt
+    def _staleness_tag(entity: dict) -> str:
+        s = entity.get("staleness_score") or 0
+        return f" [stale: {s:.1f}]" if s > 0.3 else ""
+
     caps_text = "\n".join(
-        f"- {_source_date_tag(c)}{c['description']} (maturity: {c.get('maturity', '?')})"
+        f"- {_source_date_tag(c)}{c['description']} (maturity: {c.get('maturity', '?')}){_staleness_tag(c)}"
         for c in state["capabilities"]
     ) or "None recorded."
 
     lims_text = "\n".join(
-        f"- {_source_date_tag(l)}{l['description']} (type: {l.get('limitation_type', '?')}, severity: {l.get('severity', '?')}, trajectory: {l.get('trajectory', '?')})"
+        f"- {_source_date_tag(l)}{l['description']} (type: {l.get('limitation_type', '?')}, severity: {l.get('severity', '?')}, trajectory: {l.get('trajectory', '?')}){_staleness_tag(l)}"
         for l in state["limitations"]
     ) or "None recorded."
 
     bns_text = "\n".join(
-        f"- {_source_date_tag(b)}{b['description']} (type: {b.get('bottleneck_type', '?')}, horizon: {b.get('resolution_horizon', '?')}, blocking: {b.get('blocking_what', '?')})"
+        f"- {_source_date_tag(b)}{b['description']} (type: {b.get('bottleneck_type', '?')}, horizon: {b.get('resolution_horizon', '?')}, blocking: {b.get('blocking_what', '?')}){_staleness_tag(b)}"
         for b in state["bottlenecks"]
     ) or "None recorded."
 

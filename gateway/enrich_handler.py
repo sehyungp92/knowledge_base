@@ -694,6 +694,17 @@ def _apply_enrichment(
                 f"(maturity: {cap.get('maturity', '?')})"
             )
             log.info("enrich_capability_added", cap_id=cap_id)
+            try:
+                from ingest.correction_store import store_correction
+                store_correction(
+                    "capability", "missed", None,
+                    {"description": cap["description"], "maturity": cap.get("maturity")},
+                    source_id=source_id,
+                    theme_id=theme_id or (ctx["themes"][0]["id"] if ctx["themes"] else None),
+                    skill_origin="enrich",
+                )
+            except Exception:
+                pass
         except Exception as e:
             log.warning("enrich_capability_failed", error=str(e)[:200])
             summary["errors"] += 1
@@ -723,6 +734,18 @@ def _apply_enrichment(
                 f"(type: {lim.get('limitation_type', '?')}, severity: {lim.get('severity', '?')})"
             )
             log.info("enrich_limitation_added", lim_id=lim_id)
+            try:
+                from ingest.correction_store import store_correction
+                store_correction(
+                    "limitation", "missed", None,
+                    {"description": lim["description"], "limitation_type": lim.get("limitation_type"),
+                     "severity": lim.get("severity")},
+                    source_id=source_id,
+                    theme_id=theme_id or (ctx["themes"][0]["id"] if ctx["themes"] else None),
+                    skill_origin="enrich",
+                )
+            except Exception:
+                pass
         except Exception as e:
             log.warning("enrich_limitation_failed", error=str(e)[:200])
             summary["errors"] += 1
@@ -752,6 +775,18 @@ def _apply_enrichment(
                 f"horizon: {bn.get('resolution_horizon', '?')})"
             )
             log.info("enrich_bottleneck_added", bn_id=bn_id)
+            try:
+                from ingest.correction_store import store_correction
+                store_correction(
+                    "bottleneck", "missed", None,
+                    {"description": bn["description"], "bottleneck_type": bn.get("bottleneck_type"),
+                     "blocking_what": bn.get("blocking_what")},
+                    source_id=source_id,
+                    theme_id=theme_id or (ctx["themes"][0]["id"] if ctx["themes"] else None),
+                    skill_origin="enrich",
+                )
+            except Exception:
+                pass
         except Exception as e:
             log.warning("enrich_bottleneck_failed", error=str(e)[:200])
             summary["errors"] += 1
@@ -839,6 +874,18 @@ def _apply_enrichment(
                 f"{field}: {str(old_value)[:40]} → {str(new_value)[:40]}"
             )
             log.info("enrich_reclass_applied", entity_id=entity_id, field=field)
+            try:
+                from ingest.correction_store import store_correction
+                store_correction(
+                    entity_type, "reclassified",
+                    {"field": field, "value": str(old_value)[:200]},
+                    {"field": field, "value": str(new_value)[:200]},
+                    source_id=source_id,
+                    theme_id=reclass.get("theme_id"),
+                    skill_origin="enrich",
+                )
+            except Exception:
+                pass
         except Exception as e:
             log.warning("enrich_reclass_failed", error=str(e)[:200])
             summary["errors"] += 1
@@ -862,6 +909,27 @@ def _apply_enrichment(
                 f"  ✓ Limitation `{lim_id}` {mark}"
             )
             log.info("enrich_validation_applied", lim_id=lim_id, validated=validated)
+            if not validated:
+                try:
+                    from ingest.correction_store import store_correction
+                    # Look up actual description from loaded limitations
+                    lim_desc = ""
+                    lim_theme = None
+                    for l in ctx.get("limitations", []):
+                        if l.get("id") == lim_id:
+                            lim_desc = l.get("description", "")
+                            lim_theme = l.get("theme_id")
+                            break
+                    store_correction(
+                        "limitation", "spurious",
+                        {"description": lim_desc, "limitation_id": lim_id},
+                        None,
+                        source_id=source_id,
+                        theme_id=lim_theme,
+                        skill_origin="enrich",
+                    )
+                except Exception:
+                    pass
         except Exception as e:
             log.warning("enrich_validation_failed", error=str(e)[:200])
             summary["errors"] += 1

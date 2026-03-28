@@ -853,6 +853,20 @@ def run_save_pipeline(
             if quality_assessment["status"] != "complete":
                 logger.warning("Source %s marked incomplete: %s", source_id, quality_assessment["issues"])
 
+            # Persist extraction quality for trend analysis
+            try:
+                from reading_app.quality_store import log_quality_metric
+                log_quality_metric(
+                    "source_extraction", "source", source_id,
+                    {
+                        k: v for k, v in quality_assessment.items()
+                        if k not in ("issues", "status")
+                    },
+                    skill="save",
+                )
+            except Exception:
+                logger.debug("Failed to log extraction quality metric", exc_info=True)
+
         except Exception:
             logger.debug("Failed to update source status", exc_info=True)
 

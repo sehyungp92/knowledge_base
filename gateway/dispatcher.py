@@ -442,6 +442,7 @@ class Dispatcher:
                     log.warning("empty_response", skill=skill_name)
 
                 self._send_reply(event.source, chat_id, response_text)
+                self._fire_memory_signals(skill_name, text, response_text)
                 log.info("job_complete", duration_ms=duration_ms, handler=f"{skill_name}_direct")
                 self.queue.update_job_status(
                     job.id,
@@ -553,6 +554,7 @@ class Dispatcher:
                 log.warning("empty_response", skill=skill_name)
 
             self._send_reply(event.source, chat_id, response_text)
+            self._fire_memory_signals(skill_name, text, response_text)
 
             log.info("job_complete", cost_usd=result.cost_usd, duration_ms=duration_ms)
             self.queue.update_job_status(
@@ -583,6 +585,26 @@ class Dispatcher:
                 self._send_reply(event.source, chat_id, f"/{skill_name} failed: {str(exc)[:200]}")
 
         return True
+
+    _MEMORY_SKILLS = frozenset({
+        "save", "enrich", "challenge", "ask", "reflect", "landscape", "implications",
+    })
+
+    def _fire_memory_signals(self, skill_name: str, user_input: str, response_text: str) -> None:
+        """Fire-and-forget: extract memory signals from this interaction in a daemon thread."""
+        if skill_name not in self._MEMORY_SKILLS:
+            return
+        try:
+            import threading
+            from reading_app.memory_signals import extract_and_persist_signals
+            memory_path = self.memory.memory_path / "memory.md"
+            threading.Thread(
+                target=extract_and_persist_signals,
+                args=(skill_name, user_input, response_text, memory_path, self.executor),
+                daemon=True,
+            ).start()
+        except Exception:
+            logger.debug("memory_signal_extraction_failed", exc_info=True)
 
 
 def _is_heartbeat_ok(text: str) -> bool:

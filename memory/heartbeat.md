@@ -56,6 +56,14 @@
 - Write to themes.velocity via `update_all_theme_velocities()`
 - Categories: high (>5 sources/month), medium (2-5), low (<2), dormant (0)
 
+### Staleness Decay (weekly, Sundays)
+- Run `retrieval.staleness.update_all_staleness_scores()` to compute decay for all capabilities, limitations, and bottlenecks
+- Decay is exponential from last corroboration date; more evidence sources slow the decay
+- Log results: how many entities updated, how many are stale (>0.3), how many are retirement candidates
+- If retirement candidates exist (staleness > threshold), report them: call `retrieval.staleness.get_retirement_candidates()` and list the top 5 with descriptions
+- Retirement thresholds: capabilities 0.8, limitations 0.85, bottlenecks 0.9
+- Entities are automatically refreshed (staleness reset to 0) when re-corroborated during `/save` pipeline
+
 ### Staleness Detection
 - Flag themes that have recent source activity but no landscape updates
 - Flag themes where state_summary_updated_at is > 30 days old but velocity > 0
