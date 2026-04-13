@@ -235,6 +235,41 @@ def handle_save_job(event: Event, job: Job, config, executor, *, on_progress=Non
 
     _emit_stages(job, tracker, on_progress)
 
+    # Stage 8: Wiki (background, best-effort)
+    tracker.start("wiki", "Updating wiki pages...")
+    _emit_stages(job, tracker, on_progress)
+
+    try:
+        from retrieval.wiki_writer import update_wiki_for_source
+        import threading
+
+        def _wiki_update():
+            try:
+                update_wiki_for_source(
+                    source_id=source_id,
+                    title=title,
+                    theme_ids=theme_ids,
+                    published_at=published_at,
+                    claims=result.get("claims", []),
+                    landscape_signals=result.get("landscape_signals"),
+                    implications=result.get("implications", []),
+                    summary=result.get("summary", ""),
+                    executor=executor,
+                )
+                if on_progress:
+                    on_progress("_Wiki updated: source and theme pages filed._")
+            except Exception:
+                log.warning("wiki_update_failed", exc_info=True)
+
+        t = threading.Thread(target=_wiki_update, name=f"wiki-{source_id}")
+        t.start()
+        tracker.complete("wiki", "Wiki update started")
+    except Exception:
+        tracker.fail("wiki", "Wiki update failed to start")
+        log.debug("wiki_update_start_failed", exc_info=True)
+
+    _emit_stages(job, tracker, on_progress)
+
     elapsed = time.monotonic() - t0
     claims_count = len(result.get("claims", []))
     errors = result.get("errors", [])

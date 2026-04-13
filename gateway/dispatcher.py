@@ -208,6 +208,16 @@ class Dispatcher:
             match_result = self.skill_registry.match(text)
 
         if event.type == "heartbeat":
+            # Pre-heartbeat: incremental wiki lint (deterministic, <5s)
+            try:
+                from reading_app.db import ensure_pool
+                ensure_pool()
+                from retrieval.wiki_lint import run_lint_incremental
+                run_lint_incremental()
+                from retrieval.wiki_writer import populate_overview
+                populate_overview()
+            except Exception:
+                logger.debug("heartbeat_lint_failed", exc_info=True)
             match_result = self.skill_registry.match("heartbeat")
         if event.type == "youtube_monitor":
             match_result = self.skill_registry.match("youtube_monitor")
@@ -386,6 +396,7 @@ class Dispatcher:
             direct_handlers["path"] = ("gateway.path_handler", "handle_path_job")
             direct_handlers["provider"] = ("gateway.provider_handler", "handle_provider_job")
             direct_handlers["model"] = ("gateway.model_handler", "handle_model_job")
+            direct_handlers["lint"] = ("gateway.lint_handler", "handle_lint_job")
 
         provider_status = self._provider_status_map().get(provider_id, {})
         if skill_name not in ("provider", "model") and not provider_status.get("available", True):
@@ -555,6 +566,7 @@ class Dispatcher:
 
             self._send_reply(event.source, chat_id, response_text)
             self._fire_memory_signals(skill_name, text, response_text)
+            self._fire_wiki_filing(skill_name, text, response_text)
 
             log.info("job_complete", cost_usd=result.cost_usd, duration_ms=duration_ms)
             self.queue.update_job_status(
@@ -601,10 +613,29 @@ class Dispatcher:
             threading.Thread(
                 target=extract_and_persist_signals,
                 args=(skill_name, user_input, response_text, memory_path, self.executor),
-                daemon=True,
             ).start()
         except Exception:
             logger.debug("memory_signal_extraction_failed", exc_info=True)
+
+    _WIKI_SKILLS = frozenset({"synthesis", "contradictions", "bottlenecks"})
+
+    def _fire_wiki_filing(self, skill_name: str, text: str, response_text: str) -> None:
+        """Best-effort wiki auto-filing for executor-routed skills that produce wiki-ready output."""
+        if skill_name not in self._WIKI_SKILLS:
+            return
+        try:
+            import threading
+
+            def _file():
+                try:
+                    from retrieval.wiki_writer import auto_file_skill_output
+                    auto_file_skill_output(skill_name, text, response_text)
+                except Exception:
+                    logger.debug("wiki_filing_thread_failed", skill=skill_name, exc_info=True)
+
+            threading.Thread(target=_file, name=f"wiki-file-{skill_name}").start()
+        except Exception:
+            logger.debug("wiki_filing_failed", exc_info=True)
 
 
 def _is_heartbeat_ok(text: str) -> bool:

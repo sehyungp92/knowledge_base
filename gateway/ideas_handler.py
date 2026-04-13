@@ -271,11 +271,39 @@ def _handle_rate(args: str, log) -> str:
         conn.commit()
 
     log.info("idea_rated", idea_id=idea_id, rating=rating)
+
+    # --- Wiki promotion (best-effort, rating >= 4) ---
+    _wiki_promoted = False
+    if rating >= 4:
+        try:
+            from retrieval.wiki_writer import file_idea_to_wiki
+            ctx = idea.get("generation_context")
+            if isinstance(ctx, str):
+                import json as _json
+                ctx = _json.loads(ctx)
+            theme_ids = []
+            if isinstance(ctx, dict) and ctx.get("source_id"):
+                from reading_app.db import get_conn
+                with get_conn() as conn:
+                    rows = conn.execute(
+                        "SELECT theme_id FROM source_themes WHERE source_id = %s LIMIT 3",
+                        (ctx["source_id"],),
+                    ).fetchall()
+                    theme_ids = [r["theme_id"] for r in rows]
+            if theme_ids:
+                file_idea_to_wiki(idea_id, idea.get("idea_text", ""), idea.get("idea_type"), rating, theme_ids)
+                _wiki_promoted = True
+        except Exception:
+            log.debug("ideas_wiki_promote_failed", exc_info=True)
+
     idea_preview = (idea.get("idea_text") or "")[:80]
-    return (
+    result = (
         f"**Rated idea** `{idea_id}` {'★' * rating}{'☆' * (5 - rating)}\n"
         f"_{idea_preview}…_"
     )
+    if _wiki_promoted:
+        result += "\n\n_Wiki updated: idea promoted to wiki._"
+    return result
 
 
 def _handle_note(args: str, log) -> str:

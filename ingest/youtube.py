@@ -270,8 +270,10 @@ def _provider3_whisper(video_id: str, tmp_dir: Path) -> tuple[str | None, bool]:
                 return None, False
 
         from faster_whisper import WhisperModel
+        from ingest.podcast import _build_whisper_prompt
         model = WhisperModel("base", compute_type="int8")
-        segments, _ = model.transcribe(str(audio_path))
+        initial_prompt = _build_whisper_prompt()
+        segments, _ = model.transcribe(str(audio_path), initial_prompt=initial_prompt)
         text = " ".join(seg.text.strip() for seg in segments)
         return text, True
     except Exception as e:

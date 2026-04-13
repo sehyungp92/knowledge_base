@@ -30,7 +30,16 @@ description: Review theme proposals, view taxonomy hierarchy, and manage edge pr
    - INSERT suggested_edges
    - UPDATE proposal status to 'approved'
 4. Call `ingest.theme_classifier.refresh_static_theme_block(get_conn)` to update classifier
-5. Confirm: "Theme **{name}** (`{id}`) added at level {level}."
+5. Create wiki page for the new theme (best-effort, do not abort on failure):
+   ```python
+   from retrieval.wiki_migration import migrate_theme_new
+   from retrieval.landscape import get_theme_state
+   theme_data = get_theme_state(theme_id)
+   theme_data["source_count"] = 0
+   theme_data["theme_edges"] = {"parent_id": parent_id or "", "child_ids": []}
+   migrate_theme_new(theme_id, theme_data, executor)
+   ```
+6. Confirm: "Theme **{name}** (`{id}`) added at level {level}."
 
 ### Reject mode (/themes reject {id})
 1. Mark proposal rejected (reviewed_at = NOW())
@@ -102,7 +111,19 @@ Review and approve/reject pending taxonomy evolution proposals.
    - Proposed changes details
    - Rationale and evidence
 3. For each proposal, user can:
-   - **Approve**: Call `scripts.taxonomy_health.apply_evolution_proposal(dsn, id)` — this
-     executes the change, marks the proposal approved, and refreshes the theme classifier
+   - **Approve**:
+     1. Call `scripts.taxonomy_health.apply_evolution_proposal(dsn, id)` — DB changes
+     2. Execute wiki migration (best-effort, do not abort on failure):
+        ```python
+        from retrieval.wiki_migration import execute_wiki_migration
+        result = execute_wiki_migration(
+            {"change_type": proposal["change_type"],
+             "target_theme_id": proposal["target_theme_id"],
+             "proposed_changes": proposal["proposed_changes"]},
+            executor,
+        )
+        ```
+     3. Report wiki changes: "{pages_created} pages created, {pages_deleted} deleted"
+        If result has errors, log them but do not fail the approval.
    - **Reject**: Call `reading_app.db.resolve_evolution_proposal(id, 'rejected')`
 4. Confirm: "Applied {n} proposals, rejected {m}. Taxonomy updated."

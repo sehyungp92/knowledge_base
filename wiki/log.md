@@ -1,0 +1,3697 @@
+---
+type: log
+title: "Wiki Change Log"
+created: 2026-04-07
+updated: 2026-04-07
+---
+
+# Wiki Change Log
+
+Chronological record of wiki changes. Append-only. Complements the `landscape_history` DB table — this log is human/LLM-readable narrative, landscape_history is structured DB records.
+
+---
+
+## 2026-04-07
+
+- **Wiki initialized.** Created directory structure, CONVENTIONS.md, index.md, log.md, overview.md. Phase 0 foundation complete.
+
+## 2026-04-08
+
+- Created theme page: [[themes/meta_agency|Agency & Systems]]
+- Created source page: [[sources/01KJVT1PHD-2024-year-in-review-the-big-scaling-debate-the-four-wars-of-ai-top-themes-and-th|2024 Year in Review: The Big Scaling Debate, the Four Wars of AI, Top Themes and the Rise of Agents]]
+- Created theme page: [[themes/meta_applications|Applied Domains]]
+- Created entity page: [[entities/grpo|GRPO]]
+- Created theme page: [[themes/meta_agency|Agency & Systems]]
+- Created theme page: [[themes/meta_ecosystem|AI Ecosystem]]
+- Created entity page: [[entities/retrieval-augmented-generation|Retrieval-Augmented Generation]]
+- Created theme page: [[themes/meta_applications|Applied Domains]]
+- Created entity page: [[entities/group-relative-policy-optimization|Group Relative Policy Optimization]]
+- Created theme page: [[themes/meta_ecosystem|AI Ecosystem]]
+- Created theme page: [[themes/meta_foundations|Foundations]]
+- Created theme page: [[themes/meta_intelligence|Intelligence & Learning]]
+- Created theme page: [[themes/meta_foundations|Foundations]]
+- Created theme page: [[themes/meta_reliability|Reliability & Understanding]]
+- Created theme page: [[themes/meta_intelligence|Intelligence & Learning]]
+- Created theme page: [[themes/meta_reliability|Reliability & Understanding]]
+- Created theme page: [[themes/ai_business_and_economics|AI Business & Economics]]
+- Created theme page: [[themes/ai_market_dynamics|AI Market Dynamics]]
+- Created theme page: [[themes/ai_market_dynamics|AI Market Dynamics]]
+- Created theme page: [[themes/alignment_and_safety|Alignment & Safety]]
+- Created theme page: [[themes/alignment_and_safety|Alignment & Safety]]
+- Created theme page: [[themes/code_and_software_ai|Code & Software AI]]
+- Created theme page: [[themes/code_and_software_ai|Code & Software AI]]
+- Created theme page: [[themes/evaluation_and_benchmarks|Evaluation & Benchmarks]]
+- Created theme page: [[themes/evaluation_and_benchmarks|Evaluation & Benchmarks]]
+- Created theme page: [[themes/interpretability|Interpretability]]
+- Created theme page: [[themes/interpretability|Interpretability]]
+- Created theme page: [[themes/knowledge_and_memory|Knowledge & Memory]]
+- Created theme page: [[themes/knowledge_and_memory|Knowledge & Memory]]
+- Created theme page: [[themes/model_architecture|Model Architecture]]
+- Created theme page: [[themes/model_architecture|Model Architecture]]
+- Created theme page: [[themes/multimodal_models|Multimodal Models]]
+- Created theme page: [[themes/multimodal_models|Multimodal Models]]
+- Created theme page: [[themes/post_training_methods|Post-Training Methods]]
+- Created theme page: [[themes/pretraining_and_scaling|Pretraining & Scaling]]
+- Created theme page: [[themes/pretraining_and_scaling|Pretraining & Scaling]]
+- Created theme page: [[themes/reinforcement_learning|Reinforcement Learning]]
+- Created theme page: [[themes/robotics_and_embodied_ai|Robotics & Embodied AI]]
+- Created theme page: [[themes/scientific_and_medical_ai|Scientific & Medical AI]]
+- Created theme page: [[themes/startup_and_investment|Startup & Investment]]
+- Created theme page: [[themes/robotics_and_embodied_ai|Robotics & Embodied AI]]
+- Created theme page: [[themes/scientific_and_medical_ai|Scientific & Medical AI]]
+- Created theme page: [[themes/startup_and_investment|Startup & Investment]]
+- Created theme page: [[themes/agent_evaluation|Agent & Task Evaluation]]
+- Created theme page: [[themes/adaptive_computation|Adaptive Computation]]
+- Created theme page: [[themes/agent_memory_systems|Agent Memory Systems]]
+- Created theme page: [[themes/agent_evaluation|Agent & Task Evaluation]]
+- Created theme page: [[themes/agent_memory_systems|Agent Memory Systems]]
+- Created theme page: [[themes/agent_self_evolution|Agent Self-Evolution]]
+- Created theme page: [[themes/agent_self_evolution|Agent Self-Evolution]]
+- Created theme page: [[themes/ai_for_scientific_discovery|AI for Scientific Discovery]]
+- Created theme page: [[themes/ai_for_scientific_discovery|AI for Scientific Discovery]]
+- Created theme page: [[themes/ai_governance|AI Governance & Policy]]
+- Created theme page: [[themes/ai_governance|AI Governance & Policy]]
+- Created theme page: [[themes/ai_software_engineering|AI Software Engineering]]
+- Created theme page: [[themes/ai_software_engineering|AI Software Engineering]]
+- Created theme page: [[themes/alignment_methods|Alignment Methods]]
+- Created theme page: [[themes/audio_and_speech_models|Audio & Speech Models]]
+- Created theme page: [[themes/audio_and_speech_models|Audio & Speech Models]]
+- Created theme page: [[themes/benchmark_design|Benchmark Design & Saturation]]
+- Created theme page: [[themes/chain_of_thought|Chain-of-Thought Mechanics]]
+- Created theme page: [[themes/benchmark_design|Benchmark Design & Saturation]]
+- Created theme page: [[themes/chain_of_thought|Chain-of-Thought Mechanics]]
+- Created theme page: [[themes/code_generation|Code Generation]]
+- Created theme page: [[themes/compute_and_hardware|Compute & Hardware]]
+- Created theme page: [[themes/code_generation|Code Generation]]
+- Created theme page: [[themes/compute_and_hardware|Compute & Hardware]]
+- Created theme page: [[themes/computer_use_and_gui_agents|Computer Use & GUI Agents]]
+- Created theme page: [[themes/context_engineering|Context Engineering]]
+- Created theme page: [[themes/context_engineering|Context Engineering]]
+- Created theme page: [[themes/continual_learning|Continual Learning]]
+- Created theme page: [[themes/continual_learning|Continual Learning]]
+- Created theme page: [[themes/creative_content_generation|Creative Content Generation]]
+- Created theme page: [[themes/creative_content_generation|Creative Content Generation]]
+- Created theme page: [[themes/finetuning_and_distillation|Finetuning & Distillation]]
+- Created theme page: [[themes/finetuning_and_distillation|Finetuning & Distillation]]
+- Created theme page: [[themes/frontier_lab_competition|Frontier Lab Competition]]
+- Created theme page: [[themes/frontier_lab_competition|Frontier Lab Competition]]
+- Created theme page: [[themes/hallucination_and_reliability|Hallucination & Reliability]]
+- Created theme page: [[themes/hallucination_and_reliability|Hallucination & Reliability]]
+- Created theme page: [[themes/image_generation_models|Image Generation Models]]
+- Created theme page: [[themes/image_generation_models|Image Generation Models]]
+- Created theme page: [[themes/in_context_and_meta_learning|In-Context & Meta-Learning]]
+- Created theme page: [[themes/latent_reasoning|Latent & Continuous Reasoning]]
+- Created theme page: [[themes/in_context_and_meta_learning|In-Context & Meta-Learning]]
+- Created theme page: [[themes/latent_reasoning|Latent & Continuous Reasoning]]
+- Created theme page: [[themes/long_context_and_attention|Long-Context & Attention]]
+- Created theme page: [[themes/mathematical_and_formal_reasoning|Mathematical & Formal Reasoning]]
+- Created theme page: [[themes/mechanistic_interpretability|Mechanistic Interpretability]]
+- Created theme page: [[themes/agent_systems|Agent Systems]]
+- Created theme page: [[themes/model_behavior_analysis|Model Behavior Analysis]]
+- Created theme page: [[themes/test_time_compute|Test Time Compute]]
+- Created theme page: [[themes/model_commoditization_and_open_source|Commoditization & Open Source]]
+- Created theme page: [[themes/multi_agent_coordination|Multi-Agent Coordination]]
+- Created theme page: [[themes/policy_optimization|Policy Optimization Algorithms]]
+- Created theme page: [[themes/ai_pricing_and_business_models|AI Pricing & Business Models]]
+- Created theme page: [[themes/pretraining_data|Pretraining Data]]
+- Created theme page: [[themes/representation_learning|Representation Learning]]
+- Created theme page: [[themes/medical_and_biology_ai|Medical & Biology AI]]
+- Created theme page: [[themes/retrieval_augmented_generation|Retrieval-Augmented Generation]]
+- Created theme page: [[themes/reward_modeling|Reward Modeling & Verification]]
+- Created theme page: [[themes/reward_modeling|Reward Modeling & Verification]]
+- Created theme page: [[themes/rl_for_llm_reasoning|RL for LLM Reasoning (RLVR)]]
+- Created theme page: [[themes/rl_theory_and_dynamics|RL Theory & Training Dynamics]]
+- Created theme page: [[themes/rl_theory_and_dynamics|RL Theory & Training Dynamics]]
+- Created theme page: [[themes/robot_learning|Robot Learning]]
+- Created theme page: [[themes/scaling_laws|Scaling Laws]]
+- Created theme page: [[themes/robot_learning|Robot Learning]]
+- Created theme page: [[themes/search_and_tree_reasoning|Search & Tree-Based Reasoning]]
+- Created theme page: [[themes/scaling_laws|Scaling Laws]]
+- Created theme page: [[themes/search_and_tree_reasoning|Search & Tree-Based Reasoning]]
+- Created theme page: [[themes/software_engineering_agents|Software Engineering Agents]]
+- Created theme page: [[themes/spatial_and_3d_intelligence|Spatial & 3D Intelligence]]
+- Created theme page: [[themes/startup_formation_and_gtm|Startup Formation & Go-to-Market]]
+- Created theme page: [[themes/spatial_and_3d_intelligence|Spatial & 3D Intelligence]]
+- Created theme page: [[themes/startup_formation_and_gtm|Startup Formation & Go-to-Market]]
+- Created theme page: [[themes/synthetic_data_generation|Synthetic Data Generation]]
+- Created theme page: [[themes/test_time_compute_scaling|Test-Time Compute Scaling]]
+- Created theme page: [[themes/test_time_compute_scaling|Test-Time Compute Scaling]]
+- Created theme page: [[themes/test_time_learning|Test-Time Learning]]
+- Created theme page: [[themes/test_time_learning|Test-Time Learning]]
+- Created theme page: [[themes/tool_use_and_agent_protocols|Tool Use & Agent Protocols]]
+- Created theme page: [[themes/transformer_alternatives|Transformer Alternatives]]
+- Created theme page: [[themes/unified_multimodal_models|Unified Multimodal Models]]
+- Created theme page: [[themes/transformer_alternatives|Transformer Alternatives]]
+- Created theme page: [[themes/vc_and_startup_ecosystem|VC & Startup Ecosystem]]
+- Created theme page: [[themes/unified_multimodal_models|Unified Multimodal Models]]
+- Created theme page: [[themes/vc_and_startup_ecosystem|VC & Startup Ecosystem]]
+- Created theme page: [[themes/vertical_ai_and_saas_disruption|Vertical AI & SaaS Disruption]]
+- Created theme page: [[themes/vision_language_action_models|Vision-Language-Action Models]]
+- Created theme page: [[themes/video_and_world_models|Video & World Models]]
+- Created theme page: [[themes/vision_language_models|Vision-Language Models]]
+- Created source page: [[sources/01KJV79X7A-movie-gen-a-cast-of-media-foundation-models|Movie Gen: A Cast of Media Foundation Models]]
+- Created source page: [[sources/01KJVQ5NWG-iconic-investor-in-pinterest-linkedin-and-shopify-reflects-on-state-of-vc-indust|Iconic Investor in Pinterest, LinkedIn and Shopify Reflects on State of VC Industry]]
+- Created source page: [[sources/01KJVKZAT6-training-zamba-a-hybrid-model-master-class-with-zyphras-quentin-anthony|Training Zamba: A Hybrid Model Master Class with Zyphra's Quentin Anthony]]
+- Created source page: [[sources/01KJVQ7KAH-the-legendary-mike-maples-what-makes-startups-win-the-future-of-venture-capital|The Legendary Mike Maples: What Makes Startups Win & The Future of Venture Capital]]
+- Created source page: [[sources/01KJVT1PHD-2024-year-in-review-the-big-scaling-debate-the-four-wars-of-ai-top-themes-and-th|2024 Year in Review: The Big Scaling Debate, the Four Wars of AI, Top Themes and the Rise of Agents]]
+- Created source page: [[sources/01KJVQ9TRD-josh-wolfe-lux-capital-predictions-on-emerging-technologies-ai-and-the-future-of|Josh Wolfe (Lux Capital): Predictions on Emerging Technologies, AI, and the Future of VC]]
+- Created source page: [[sources/01KJVKZAT6-training-zamba-a-hybrid-model-master-class-with-zyphras-quentin-anthony|Training Zamba: A Hybrid Model Master Class with Zyphra's Quentin Anthony]]
+- Created source page: [[sources/01KJV5GK45-cosmos-world-foundation-model-platform-for-physical-ai|Cosmos World Foundation Model Platform for Physical AI]]
+- Created source page: [[sources/01KJVQ7KAH-the-legendary-mike-maples-what-makes-startups-win-the-future-of-venture-capital|The Legendary Mike Maples: What Makes Startups Win & The Future of Venture Capital]]
+- Created source page: [[sources/01KJVQ9TRD-josh-wolfe-lux-capital-predictions-on-emerging-technologies-ai-and-the-future-of|Josh Wolfe (Lux Capital): Predictions on Emerging Technologies, AI, and the Future of VC]]
+- Created source page: [[sources/01KJVQ18M2-top-ai-investor-predicts-how-the-ai-wave-will-play-out|Top AI Investor Predicts How The AI Wave Will Play Out]]
+- Created source page: [[sources/01KJVQJJJW-legendary-investor-bill-gurley-on-investing-rules-insights-from-jeff-bezos-must-|Legendary Investor Bill Gurley on Investing Rules, Insights from Jeff Bezos, Must-Read Books, & More]]
+- Created source page: [[sources/01KJV5GK45-cosmos-world-foundation-model-platform-for-physical-ai|Cosmos World Foundation Model Platform for Physical AI]]
+- Created source page: [[sources/01KJVQ18M2-top-ai-investor-predicts-how-the-ai-wave-will-play-out|Top AI Investor Predicts How The AI Wave Will Play Out]]
+- Created source page: [[sources/01KJVKPGFR-everything-you-wanted-to-know-about-llm-post-training-with-nathan-lambert-of-all|Everything You Wanted to Know About LLM Post-Training, with Nathan Lambert of Allen Institute for AI]]
+- Created source page: [[sources/01KJVQJJJW-legendary-investor-bill-gurley-on-investing-rules-insights-from-jeff-bezos-must-|Legendary Investor Bill Gurley on Investing Rules, Insights from Jeff Bezos, Must-Read Books, & More]]
+- Created source page: [[sources/01KJVKPGFR-everything-you-wanted-to-know-about-llm-post-training-with-nathan-lambert-of-all|Everything You Wanted to Know About LLM Post-Training, with Nathan Lambert of Allen Institute for AI]]
+- Created source page: [[sources/01KJT4T18T-memory-in-the-age-of-ai-agents|Memory in the Age of AI Agents]]
+- Created source page: [[sources/01KJVR48TZ-miles-grimshaw-the-5-pillars-of-venture-capital-why-co-pilot-is-an-incumbent-str|Miles Grimshaw: The 5 Pillars of Venture Capital & Why Co-Pilot is an Incumbent Strategy | E1061]]
+- Created source page: [[sources/01KJT4T18T-memory-in-the-age-of-ai-agents|Memory in the Age of AI Agents]]
+- Created source page: [[sources/01KJVR48TZ-miles-grimshaw-the-5-pillars-of-venture-capital-why-co-pilot-is-an-incumbent-str|Miles Grimshaw: The 5 Pillars of Venture Capital & Why Co-Pilot is an Incumbent Strategy | E1061]]
+- Created source page: [[sources/01KJVHQGH8-emergency-pod-reinforcement-learning-works-reflecting-on-chinese-models-deepseek|Emergency Pod: Reinforcement Learning Works! Reflecting on Chinese Models DeepSeek-R1 and Kimi k1.5]]
+- Created source page: [[sources/01KJVHQGH8-emergency-pod-reinforcement-learning-works-reflecting-on-chinese-models-deepseek|Emergency Pod: Reinforcement Learning Works! Reflecting on Chinese Models DeepSeek-R1 and Kimi k1.5]]
+- Created source page: [[sources/01KJTHH7D3-a-survey-of-reinforcement-learning-for-large-reasoning-models|A Survey of Reinforcement Learning for Large Reasoning Models]]
+- Created source page: [[sources/01KJTHH7D3-a-survey-of-reinforcement-learning-for-large-reasoning-models|A Survey of Reinforcement Learning for Large Reasoning Models]]
+- Created source page: [[sources/01KJT8B0BV-on-the-fundamental-limits-of-llms-at-scale|On the Fundamental Limits of LLMs at Scale]]
+- Created source page: [[sources/01KJT8B0BV-on-the-fundamental-limits-of-llms-at-scale|On the Fundamental Limits of LLMs at Scale]]
+- Created source page: [[sources/01KJTNW0W4-thinking-with-images-for-multimodal-reasoning-foundations-methods-and-future-fro|Thinking with Images for Multimodal Reasoning: Foundations, Methods, and Future Frontiers]]
+- Created source page: [[sources/01KJTNW0W4-thinking-with-images-for-multimodal-reasoning-foundations-methods-and-future-fro|Thinking with Images for Multimodal Reasoning: Foundations, Methods, and Future Frontiers]]
+- Created source page: [[sources/01KJVCZ1FE-yann-lecun-meta-ai-open-source-limits-of-llms-agi-the-future-of-ai-lex-fridman-p|Yann Lecun: Meta AI, Open Source, Limits of LLMs, AGI & the Future of AI | Lex Fridman Podcast #416]]
+- Created source page: [[sources/01KJVCZ1FE-yann-lecun-meta-ai-open-source-limits-of-llms-agi-the-future-of-ai-lex-fridman-p|Yann Lecun: Meta AI, Open Source, Limits of LLMs, AGI & the Future of AI | Lex Fridman Podcast #416]]
+- Created source page: [[sources/01KKT3NJ4Y-nested-learning-the-illusion-of-deep-learning-architecture|Nested Learning: The Illusion of Deep Learning Architecture]]
+- Created source page: [[sources/01KKT3NJ4Y-nested-learning-the-illusion-of-deep-learning-architecture|Nested Learning: The Illusion of Deep Learning Architecture]]
+- Created source page: [[sources/01KJVSSWSX-superintelligence-bubbles-and-big-bets-ai-investing-in-2024-matt-turck-aman-kabe|Superintelligence, Bubbles And Big Bets: AI Investing in 2024 | Matt Turck & Aman Kabeer, FirstMark]]
+- Created source page: [[sources/01KJVSSWSX-superintelligence-bubbles-and-big-bets-ai-investing-in-2024-matt-turck-aman-kabe|Superintelligence, Bubbles And Big Bets: AI Investing in 2024 | Matt Turck & Aman Kabeer, FirstMark]]
+- Created source page: [[sources/01KJT38XNY-adaptation-of-agentic-ai|Adaptation of Agentic AI]]
+- Created source page: [[sources/01KJVPRWQ5-ai-semiconductor-landscape-feat-dylan-patel-bg2-w-bill-gurley-brad-gerstner|AI Semiconductor Landscape feat. Dylan Patel | BG2 w/ Bill Gurley & Brad Gerstner]]
+- Created source page: [[sources/01KJVDZXXQ-andrej-karpathy-were-summoning-ghosts-not-building-animals|Andrej Karpathy — “We’re summoning ghosts, not building animals”]]
+- Created source page: [[sources/01KJV5S7TQ-deepseek-v3-technical-report|DeepSeek-V3 Technical Report]]
+- Created source page: [[sources/01KJV5S7TQ-deepseek-v3-technical-report|DeepSeek-V3 Technical Report]]
+- Created source page: [[sources/01KJVRMEQF-shardul-shah-how-index-makes-decisions-why-benchmarks-averages-in-vc-are-bs-e120|Shardul Shah: How Index Makes Decisions & Why Benchmarks & Averages in VC are BS  | E1202]]
+- Created source page: [[sources/01KJVRMEQF-shardul-shah-how-index-makes-decisions-why-benchmarks-averages-in-vc-are-bs-e120|Shardul Shah: How Index Makes Decisions & Why Benchmarks & Averages in VC are BS  | E1202]]
+- Created source page: [[sources/01KJVTECVD-2024-the-year-the-gpt-wrapper-myth-proved-wrong|2024: The Year the GPT Wrapper Myth Proved Wrong]]
+- Created source page: [[sources/01KJVTECVD-2024-the-year-the-gpt-wrapper-myth-proved-wrong|2024: The Year the GPT Wrapper Myth Proved Wrong]]
+- Created source page: [[sources/01KJTNQNAG-perception-reason-think-and-plan-a-survey-on-large-multimodal-reasoning-models|Perception, Reason, Think, and Plan: A Survey on Large Multimodal Reasoning Models]]
+- Created source page: [[sources/01KJVGAVH2-best-of-2024-synthetic-data-smol-models-loubna-ben-allal-huggingface-ls-live-neu|Best of 2024: Synthetic Data / Smol Models, Loubna Ben Allal, HuggingFace [LS Live! @ NeurIPS 2024]]]
+- Created source page: [[sources/01KJVKHVK6-josh-woodward-google-labs-is-rapidly-building-ai-products-from-0-to-1|Josh Woodward: Google Labs is Rapidly Building AI Products from 0-to-1]]
+- Created source page: [[sources/01KJVTFS46-startup-ideas-you-can-now-build-with-ai|Startup Ideas You Can Now Build With AI]]
+- Created source page: [[sources/01KJVPY38S-coatues-laffont-brothers-ai-public-vc-mkts-macro-us-debt-crypto-ipos-more-bg2|Coatue’s Laffont Brothers. AI, Public & VC Mkts, Macro, US Debt, Crypto, IPO's, & more | BG2]]
+- Created source page: [[sources/01KJVT1PQC-what-has-pmf-today-google-is-cooking-gpt-wrappers-are-winning-with-latent-space|What has PMF Today, Google is Cooking & GPT Wrappers are Winning | With Latent Space]]
+- Created source page: [[sources/01KJVJJDA3-david-luan-deepseeks-significance-whats-next-for-agents-lessons-from-openai|David Luan: DeepSeek’s Significance, What’s Next for Agents & Lessons from OpenAI]]
+- Created source page: [[sources/01KJVNQNBD-ai-at-the-intersection-of-bio-vijay-pande-surya-ganguli-bowen-liu|AI at the Intersection of Bio | Vijay Pande, Surya Ganguli & Bowen Liu]]
+- Created source page: [[sources/01KKT5HWA5-genome-modeling-and-design|Genome modeling and design]]
+- Created source page: [[sources/01KJVTHEDF-deal-velocity-not-billable-hours-how-crosby-uses-ai-to-redefine-legal-contractin|Deal Velocity, Not Billable Hours: How Crosby Uses AI to Redefine Legal Contracting]]
+- Created source page: [[sources/01KJVT4GRY-ai-talent-wars-xais-200b-valuation-googles-comeback|AI Talent Wars, xAI’s $200B Valuation, & Google’s Comeback]]
+- Created source page: [[sources/01KJVRVSPK-a16zs-anish-acharya-on-consumer-ai|a16z's Anish Acharya on Consumer AI]]
+- Created source page: [[sources/01KJV64ZDF-byte-latent-transformer-patches-scale-better-than-tokens|Byte Latent Transformer: Patches Scale Better Than Tokens]]
+- Created source page: [[sources/01KJVTN6C7-a-masterclass-in-building-ai-applications-from-legoras-ceo|A Masterclass in Building AI Applications From Legora's CEO]]
+- Created source page: [[sources/01KJVNGK3M-grand-challenges-in-healthcare-ai-with-vijay-pande-and-julie-yoo|Grand Challenges in Healthcare AI with Vijay Pande and Julie Yoo]]
+- Created source page: [[sources/01KJVSTFCB-4-ai-investors-on-what-separates-enduring-ai-companies-from-the-hype|4 AI Investors on What Separates Enduring AI Companies from the Hype]]
+- Created source page: [[sources/01KJVTQQ0E-mercor-ceo-evals-will-replace-knowledge-work-ai-x-hiring-today-the-future-of-dat|Mercor CEO: Evals Will Replace Knowledge Work, AI x Hiring Today & the Future of Data Labeling]]
+- Created source page: [[sources/01KJVRYH2G-legendary-consumer-vc-predicts-the-future-of-ai-products|Legendary Consumer VC Predicts The Future Of AI Products]]
+- Created source page: [[sources/01KJVV0PNM-getting-the-most-from-ai-with-multiple-custom-agents-ft-dusts-gabriel-hubert-and|Getting the Most From AI With Multiple Custom Agents ft Dust’s Gabriel Hubert and Stanislas Polu]]
+- Created source page: [[sources/01KJVS330Y-no-priors-ep-63-with-sarah-guo-and-elad-gil|No Priors Ep. 63 | With Sarah Guo and Elad Gil]]
+- Created source page: [[sources/01KJV6C0D1-combining-induction-and-transduction-for-abstract-reasoning|Combining Induction and Transduction for Abstract Reasoning]]
+- Created source page: [[sources/01KJVR2WJ1-identifying-high-value-use-cases-for-ai-tomasz-tunguz-founder-of-theory-ventures|Identifying high-value use cases for AI | Tomasz Tunguz (Founder of Theory Ventures)]]
+- Created source page: [[sources/01KJVTBKXP-vertical-ai-agents-could-be-10x-bigger-than-saas|Vertical AI Agents Could Be 10X Bigger Than SaaS]]
+- Created source page: [[sources/01KJVP2MKS-ai-cant-cross-this-line-and-we-dont-know-why|AI can't cross this line and we don't know why.]]
+- Created source page: [[sources/01KJVQZ7YX-elad-gil-acting-on-conviction-future-of-ai-biotech-ambition-speed-non-obvious-st|Elad Gil | Acting on Conviction, Future of AI, Biotech, Ambition, Speed, Non-Obvious Startup Advice]]
+- Created source page: [[sources/01KJVN834B-robotics-in-the-age-of-generative-ai-with-vincent-vanhoucke-google-deepmind-nvid|Robotics in the Age of Generative AI with Vincent Vanhoucke, Google DeepMind | NVIDIA GTC 2024]]
+- Created source page: [[sources/01KJVTXQWN-deepl-ceo-on-specialized-vs-general-models-beating-google-and-a-synchronous-tran|DeepL CEO on Specialized vs. General Models, Beating Google and a Synchronous Translation Future]]
+- Created source page: [[sources/01KJVPQYT8-ep20-ai-scaling-laws-doge-fsd-13-trump-markets-bg2-w-bill-gurley-brad-gerstner|Ep20. AI Scaling Laws, DOGE, FSD 13, Trump Markets | BG2 w/ Bill Gurley & Brad Gerstner]]
+- Created source page: [[sources/01KJVPJFQD-ep18-jensen-recap-competitive-moat-xai-smart-assistant-bg2-w-bill-gurley-brad-ge|Ep18. Jensen Recap - Competitive Moat, X.AI, Smart Assistant | BG2 w/ Bill Gurley & Brad Gerstner]]
+- Created source page: [[sources/01KJVJEW3E-greg-brockman-on-openais-road-to-agi|Greg Brockman on OpenAI's Road to AGI]]
+- Created source page: [[sources/01KKT4FGMX-2025-5-6|2025-5-6]]
+- Created source page: [[sources/01KJVJGNCY-claude-4-next-phase-for-ai-coding-and-the-path-to-ai-coworkers|Claude 4, Next Phase for AI Coding, and the Path to AI Coworkers]]
+- Created source page: [[sources/01KJVPTVPN-grok-3-ai-memory-voice-china-doge-public-market-pull-back-bg2-w-bill-gurley-brad|Grok 3, AI Memory & Voice, China, DOGE, Public Market Pull Back | BG2 w/ Bill Gurley & Brad Gerstner]]
+- Created source page: [[sources/01KJVNVKAH-arc-institutes-patrick-hsu-on-building-an-app-store-for-biology-with-ai|Arc Institute's Patrick Hsu on Building an App Store for Biology with AI]]
+- Created source page: [[sources/01KJVR0B99-sarah-guo-and-elad-gil-the-future-of-ai-investing|Sarah Guo and Elad Gil: The Future of AI Investing]]
+- Created source page: [[sources/01KJV50MCD-kimi-k15-scaling-reinforcement-learning-with-llms|Kimi k1.5: Scaling Reinforcement Learning with LLMs]]
+- Created source page: [[sources/01KJVSP7HT-pricing-in-the-ai-era-from-inputs-to-outcomes-with-paid-ceo-manny-medina|Pricing in the AI Era: From Inputs to Outcomes, with Paid CEO Manny Medina]]
+- Created source page: [[sources/01KJVQ21TQ-behind-the-scenes-of-benchmarks-boldest-bets|Behind The Scenes of Benchmark’s Boldest Bets]]
+- Created source page: [[sources/01KJVNDJDQ-no-priors-ep-80-with-andrej-karpathy-from-openai-and-tesla|No Priors Ep. 80 | With Andrej Karpathy from OpenAI and Tesla]]
+- Created source page: [[sources/01KJVN9ZJX-robotics-research-update-with-keerthana-gopalakrishnan-and-ted-xiao-of-google-de|Robotics Research Update, with Keerthana Gopalakrishnan and Ted Xiao of Google DeepMind]]
+- Created source page: [[sources/01KJVK34BD-claude-code-anthropics-cli-agent|Claude Code: Anthropic's CLI Agent]]
+- Created source page: [[sources/01KJVSK9YY-lightcone-consumer-is-back-whats-getting-funded-now-the-vibes-immaculate|Lightcone: Consumer is back, What’s getting funded now, The vibes immaculate]]
+- Created source page: [[sources/01KJV5HWSH-titans-learning-to-memorize-at-test-time|Titans: Learning to Memorize at Test Time]]
+- Created source page: [[sources/01KJVS72MY-no-priors-ep-81-with-sarah-guo-elad-gil|No Priors Ep. 81 | With Sarah Guo & Elad Gil]]
+- Created source page: [[sources/01KJVQXAFN-elad-gil-on-ai-crypto-and-whats-next|Elad Gil on AI, Crypto, and What’s Next]]
+- Created source page: [[sources/01KJV6RRM0-the-zamba2-suite-technical-report|The Zamba2 Suite: Technical Report]]
+- Created source page: [[sources/01KJVPBFMA-openai-tests-if-gpt-5-can-automate-your-job-4-unexpected-findings|OpenAI Tests if GPT-5 Can Automate Your Job - 4 Unexpected Findings]]
+- Created source page: [[sources/01KJVP1SYG-the-quest-to-solve-all-diseases-with-ai-isomorphic-labs-max-jaderberg|The Quest to ‘Solve All Diseases’ with AI: Isomorphic Labs’ Max Jaderberg]]
+- Created source page: [[sources/01KJV89Q4X-moshi-a-speech-text-foundation-model-for-real-time-dialogue|Moshi: a speech-text foundation model for real-time dialogue]]
+- Created source page: [[sources/01KJVN4FS2-2-robotics-pioneers-unpack-the-path-to-generalist-robots|2 Robotics Pioneers Unpack the Path to Generalist Robots]]
+- Created source page: [[sources/01KJVM8AVM-google-titans-learning-to-memorize-at-test-time|Google Titans: Learning to Memorize at Test Time]]
+- Created source page: [[sources/01KJVPKZA7-ep19-state-of-venture-ai-scaling-elections-bg2-w-bill-gurley-brad-gerstner-jamin|Ep19. State of Venture, AI Scaling, Elections | BG2 w/ Bill Gurley, Brad Gerstner, & Jamin Ball]]
+- Created source page: [[sources/01KJVJPTJY-expert-ai-researcher-reacts-to-o1-and-shares-whats-next-in-reasoning-and-post-tr|Expert AI Researcher Reacts to o1 and Shares What's Next in Reasoning and Post-Training]]
+- Created source page: [[sources/01KJV50FH1-deepseek-r1-incentivizing-reasoning-capability-in-llms-via-reinforcement-learnin|DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning]]
+- Created source page: [[sources/01KJVSCDAD-state-of-startups-and-ai-2025-sarah-guo-conviction|State of Startups and AI 2025 - Sarah Guo, Conviction]]
+- Created source page: [[sources/01KJVTY7JY-building-the-easy-button-for-generative-ai-may-habib-ceo-writer|Building the Easy Button for Generative AI | May Habib, CEO, Writer]]
+- Created source page: [[sources/01KJVKF0RR-building-agents-with-model-context-protocol-full-workshop-with-mahesh-murag-of-a|Building Agents with Model Context Protocol - Full Workshop with Mahesh Murag of Anthropic]]
+- Created source page: [[sources/01KJVRQP8R-saam-motamedi-why-series-b-wont-make-money-why-1m-arr-is-a-bs-milestone-for-seri|Saam Motamedi: Why Series B Won’t Make Money & Why $1M ARR is a BS Milestone for Series A | E1177]]
+- Created source page: [[sources/01KJVS64WB-no-priors-ep-72-with-sarah-guo-and-elad-gil|No Priors Ep. 72 | With Sarah Guo and Elad Gil]]
+- Created source page: [[sources/01KJVNKY66-implementation-data-impact-of-healthcare-ai-with-julie-and-vijay|Implementation, Data, Impact of Healthcare AI with Julie and Vijay]]
+- Created source page: [[sources/01KJVMEPM5-world-models-general-intuition-khoslas-largest-bet-since-llms-openai|World Models & General Intuition: Khosla's largest bet since LLMs & OpenAI]]
+- Created source page: [[sources/01KJVQNAG4-vinods-advice-for-entrepreneurs-innovating-with-ai-vinod-khosla-founder-of-khosl|Vinod’s advice for entrepreneurs innovating with AI | Vinod Khosla (Founder of Khosla Ventures)]]
+- Created source page: [[sources/01KJVQMXH7-the-gift-and-the-curse-of-staying-private-with-bill-gurley|The Gift and The Curse of Staying Private with Bill Gurley]]
+- Created source page: [[sources/01KJVSGCXW-better-ai-models-better-startups|Better AI Models, Better Startups]]
+- Created source page: [[sources/01KJVJSX48-stanford-ai-researcher-on-whats-next-in-research-reaction-to-o1-and-how-ai-will-|Stanford AI Researcher on What’s Next in Research, Reaction to o1 and How AI will Change Simulation]]
+- Created source page: [[sources/01KJVNQMNS-ai-in-pharmaceutical-rd-with-kim-branson|AI in Pharmaceutical R&D with Kim Branson]]
+- Created source page: [[sources/01KJV5D2Z7-rstar-math-small-llms-can-master-math-reasoning-with-self-evolved-deep-thinking|rStar-Math: Small LLMs Can Master Math Reasoning with Self-Evolved Deep Thinking]]
+- Created source page: [[sources/01KJVNYSCT-no-priors-ep-103-with-vevo-therapeutics-and-the-arc-institute|No Priors Ep. 103 | With Vevo Therapeutics and the Arc Institute]]
+- Created source page: [[sources/01KJVN5D5F-self-driving-expert-unpacks-the-biggest-breakthroughs-and-bottlenecks|Self-Driving Expert Unpacks the Biggest Breakthroughs and Bottlenecks]]
+- Created source page: [[sources/01KJVJY5T8-context-engineering-for-agents-lance-martin-langchain|Context Engineering for Agents - Lance Martin, LangChain]]
+- Created source page: [[sources/01KJVS9B1Y-no-priors-ep-116-with-sarah-and-elad|No Priors Ep. 116 | With Sarah and Elad]]
+- Created source page: [[sources/01KJVMZ5JN-jim-fan-on-nvidias-embodied-ai-lab-and-jensen-huangs-prediction-that-all-robots-|Jim Fan on Nvidia’s Embodied AI Lab and Jensen Huang’s Prediction that All Robots will be Autonomous]]
+- Created source page: [[sources/01KJVK9P0T-no-priors-ep-85-ceo-of-braintrust-ankur-goyal|No Priors Ep. 85 | CEO of Braintrust Ankur Goyal]]
+- Created source page: [[sources/01KJV61P52-large-concept-models-language-modeling-in-a-sentence-representation-space|Large Concept Models: Language Modeling in a Sentence Representation Space]]
+- Created source page: [[sources/01KJVQSZ1K-the-vinod-khosla-interview-turpentine-vc|The Vinod Khosla Interview | Turpentine VC]]
+- Created source page: [[sources/01KJVTRDK8-a-deep-dive-into-the-future-of-voice-in-ai|A Deep Dive into the Future of Voice in AI]]
+- Created source page: [[sources/01KJVHZDJP-openai-o1-the-biggest-black-box-of-all-lets-break-it-open|OpenAI o1 - the biggest black box of all. Let’s break it open.]]
+- Created source page: [[sources/01KJVRTAEM-eric-vishria-where-is-the-value-in-ai-chips-models-or-apps-e1206|Eric Vishria: Where is the Value in AI - Chips, Models or Apps? | E1206]]
+- Created source page: [[sources/01KJVKZER8-llm-attention-that-expands-at-inference-test-time-training-explained|LLM Attention That Expands At Inference? Test Time Training Explained]]
+- Created source page: [[sources/01KKT5MA2X-towards-robust-agentic-cuda-kernel|Towards Robust Agentic CUDA Kernel]]
+- Created source page: [[sources/01KJVJSXB7-why-every-agent-needs-open-source-cloud-sandboxes|Why Every Agent needs Open Source Cloud Sandboxes]]
+- Created source page: [[sources/01KJVJ4GHW-why-the-next-ai-breakthroughs-will-be-in-reasoning-not-scaling|Why The Next AI Breakthroughs Will Be In Reasoning, Not Scaling]]
+- Created source page: [[sources/01KJVMPA78-google-deepmind-lead-researchers-on-genie-3-the-future-of-world-building|Google DeepMind Lead Researchers on Genie 3 & the Future of World-Building]]
+- Created source page: [[sources/01KJVSF4MB-10-people-ai-billion-dollar-company|10 People + AI = Billion Dollar Company?]]
+- Created source page: [[sources/01KJVHW24F-o1-what-is-going-on-why-o1-is-a-3rd-paradigm-of-model-10-things-you-might-not-kn|o1 - What is Going On? Why o1 is a 3rd Paradigm of Model + 10 Things You Might Not Know]]
+- Created source page: [[sources/01KJTMV92B-persona-vectors-monitoring-and-controlling-character-traits-in-language-models|Persona Vectors: Monitoring and Controlling Character Traits in Language Models]]
+- Created source page: [[sources/01KJV6JNEC-o1-replication-journey-part-2-surpassing-o1-preview-through-simple-distillation-|O1 Replication Journey -- Part 2: Surpassing O1-preview through Simple Distillation, Big Progress or Bitter Lesson?]]
+- Created source page: [[sources/01KJV6ZWE5-autoregressive-image-generation-without-vector-quantization|Autoregressive Image Generation without Vector Quantization]]
+- Created source page: [[sources/01KJV6C78W-o1-coder-an-o1-replication-for-coding|o1-Coder: an o1 Replication for Coding]]
+- Created source page: [[sources/01KJTMPYR9-hierarchical-reasoning-model|Hierarchical Reasoning Model]]
+- Created source page: [[sources/01KJV56Z97-hipporag-neurobiologically-inspired-long-term-memory-for-large-language-models|HippoRAG: Neurobiologically Inspired Long-Term Memory for Large Language Models]]
+- Created source page: [[sources/01KJVS00V2-no-priors-ep-59-with-sarah-guo-elad-gil|No Priors Ep. 59 | With Sarah Guo & Elad Gil]]
+- Created source page: [[sources/01KJV7TRY2-pixtral-12b|Pixtral 12B]]
+- Created source page: [[sources/01KJVNEG9Q-the-future-of-robotics|The future of robotics]]
+- Created source page: [[sources/01KJV8JK29-openvla-an-open-source-vision-language-action-model|OpenVLA: An Open-Source Vision-Language-Action Model]]
+- Created source page: [[sources/01KJVMRSX6-runways-video-revolution-empowering-creators-with-general-world-models-with-cto-|Runway's Video Revolution: Empowering Creators with General World Models, with CTO Anastasis]]
+- Created source page: [[sources/01KJV68FPF-smoothie-label-free-language-model-routing|Smoothie: Label Free Language Model Routing]]
+- Created source page: [[sources/01KJVPCJJ3-how-openclaw-works-the-real-magic|How OpenClaw Works: The Real "Magic"]]
+- Created source page: [[sources/01KJV84KVS-vineppo-refining-credit-assignment-in-rl-training-of-llms|VinePPO: Refining Credit Assignment in RL Training of LLMs]]
+- Created source page: [[sources/01KJVK5SZY-self-improving-ai-agents-architecting-llm-memory-with-ace-voyager-and-claude-ski|Self-Improving AI Agents: Architecting LLM Memory with ACE, Voyager, and Claude Skills [AIA Nov 7]]]
+- Created source page: [[sources/01KJVPHM2Z-the-100x-ai-breakthrough-no-one-is-talking-about|The 100x AI Breakthrough No One is Talking About]]
+- Created source page: [[sources/01KJV7NM6A-generative-verifiers-reward-modeling-as-next-token-prediction|Generative Verifiers: Reward Modeling as Next-Token Prediction]]
+- Created source page: [[sources/01KJV8BD2M-kag-boosting-llms-in-professional-domains-via-knowledge-augmented-generation|KAG: Boosting LLMs in Professional Domains via Knowledge Augmented Generation]]
+- Created source page: [[sources/01KJV7XNNN-differential-transformer|Differential Transformer]]
+- Created source page: [[sources/01KJV6X74J-janusflow-harmonizing-autoregression-and-rectified-flow-for-unified-multimodal-u|JanusFlow: Harmonizing Autoregression and Rectified Flow for Unified Multimodal Understanding and Generation]]
+- Created source page: [[sources/01KJV5VMCP-deliberative-alignment-reasoning-enables-safer-language-models|Deliberative Alignment: Reasoning Enables Safer Language Models]]
+- Created source page: [[sources/01KJV7DD3S-latent-action-pretraining-from-videos|Latent Action Pretraining from Videos]]
+- Created source page: [[sources/01KJVK1H1A-long-live-context-engineering-with-jeff-huber-of-chroma|Long Live Context Engineering - with Jeff Huber of Chroma]]
+- Created source page: [[sources/01KJV8HGEP-agent-workflow-memory|Agent Workflow Memory]]
+- Created source page: [[sources/01KJVKT2TV-mamba-linear-time-sequence-modeling-with-selective-state-spaces-colm-oral-2024|Mamba: Linear-Time Sequence Modeling with Selective State Spaces (COLM Oral 2024)]]
+- Created source page: [[sources/01KJVT9KJK-why-vertical-llm-agents-are-the-new-1-billion-saas-opportunities|Why Vertical LLM Agents Are The New $1 Billion SaaS Opportunities]]
+- Created source page: [[sources/01KJV7PXBQ-agent-s-an-open-agentic-framework-that-uses-computers-like-a-human|Agent S: An Open Agentic Framework that Uses Computers Like a Human]]
+- Created source page: [[sources/01KJV54RZQ-zep-a-temporal-knowledge-graph-architecture-for-agent-memory|Zep: A Temporal Knowledge Graph Architecture for Agent Memory]]
+- Created source page: [[sources/01KJV8TCC8-diffusion-models-are-real-time-game-engines|Diffusion Models Are Real-Time Game Engines]]
+- Created source page: [[sources/01KJV8DVH3-to-cot-or-not-to-cot-chain-of-thought-helps-mainly-on-math-and-symbolic-reasonin|To CoT or not to CoT? Chain-of-thought helps mainly on math and symbolic reasoning]]
+- Created source page: [[sources/01KJV6RXXK-hymba-a-hybrid-head-architecture-for-small-language-models|Hymba: A Hybrid-head Architecture for Small Language Models]]
+- Created source page: [[sources/01KJVRC3JX-investing-in-ai-for-hard-tech-with-eric-vishria-of-benchmark-and-sergiy-nesteren|Investing in AI for Hard Tech, with Eric Vishria of Benchmark and Sergiy Nesterenko of Quilter]]
+- Created source page: [[sources/01KJVR7GAM-sarah-tavel-will-foundation-models-be-commoditised-e1149|Sarah Tavel: Will Foundation Models Be Commoditised? | E1149]]
+- Created source page: [[sources/01KJVMD0J9-alphageometry-solving-olympiad-geometry-without-human-demonstrations-paper-expla|AlphaGeometry: Solving olympiad geometry without human demonstrations (Paper Explained)]]
+- Created source page: [[sources/01KJV75D18-system-2-reasoning-capabilities-are-nigh|System 2 Reasoning Capabilities Are Nigh]]
+- Created source page: [[sources/01KJV83GN1-training-language-models-to-self-correct-via-reinforcement-learning|Training Language Models to Self-Correct via Reinforcement Learning]]
+- Created source page: [[sources/01KJV5MK13-large-language-monkeys-scaling-inference-compute-with-repeated-sampling|Large Language Monkeys: Scaling Inference Compute with Repeated Sampling]]
+- Created source page: [[sources/01KJVM69GC-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states|Learning to (Learn at Test Time): RNNs with Expressive Hidden States]]
+- Created source page: [[sources/01KJV75HGR-alr2-a-retrieve-then-reason-framework-for-long-context-question-answering|ALR$^2$: A Retrieve-then-Reason Framework for Long-context Question Answering]]
+- Created source page: [[sources/01KJVMXKY9-lumas-dream-machine-and-reasoning-in-video-models|Luma's Dream Machine and Reasoning in Video Models]]
+- Created source page: [[sources/01KJVMT46Q-no-priors-ep61-openais-sora-leaders-aditya-ramesh-tim-brooks-and-bill-peebles|No Priors Ep.61 | OpenAI's Sora Leaders Aditya Ramesh, Tim Brooks and Bill Peebles]]
+- Created source page: [[sources/01KJVRCA1S-vertical-ai-shows-potential-to-dwarf-legacy-saas-state-of-the-cloud-2024|Vertical AI shows potential to dwarf legacy SaaS | State of the Cloud 2024]]
+- Created source page: [[sources/01KJV7N48D-thinking-llms-general-instruction-following-with-thought-generation|Thinking LLMs: General Instruction Following with Thought Generation]]
+- Created source page: [[sources/01KJV56ZJP-transformer-squared-self-adaptive-llms|Transformer-Squared: Self-adaptive LLMs]]
+- Created source page: [[sources/01KJV8WEM4-llm-pruning-and-distillation-in-practice-the-minitron-approach|LLM Pruning and Distillation in Practice: The Minitron Approach]]
+- Created source page: [[sources/01KJV5SBG0-lmfusion-adapting-pretrained-language-models-for-multimodal-generation|LMFusion: Adapting Pretrained Language Models for Multimodal Generation]]
+- Created source page: [[sources/01KJV6PJWC-tulu-3-pushing-frontiers-in-open-language-model-post-training|Tulu 3: Pushing Frontiers in Open Language Model Post-Training]]
+- Created source page: [[sources/01KM247D7R-can-world-models-unlock-general-purpose-robotics|Can world models unlock general purpose robotics?]]
+- Created source page: [[sources/01KJV8790R-generative-reward-models|Generative Reward Models]]
+- Created source page: [[sources/01KJV749E6-tokenformer-rethinking-transformer-scaling-with-tokenized-model-parameters|TokenFormer: Rethinking Transformer Scaling with Tokenized Model Parameters]]
+- Created source page: [[sources/01KJV7V9DK-intelligence-at-the-edge-of-chaos|Intelligence at the Edge of Chaos]]
+- Created source page: [[sources/01KJV8271T-kgarevion-an-ai-agent-for-knowledge-intensive-biomedical-qa|KGARevion: An AI Agent for Knowledge-Intensive Biomedical QA]]
+- Created source page: [[sources/01KJVRG870-ai-foundation-models-set-the-stage-for-big-techs-battle-of-the-century-state-of-|AI foundation models set the stage for Big Tech‘s battle-of-the-century |  State of the Cloud 2024]]
+- Created source page: [[sources/01KJVKAKDJ-how-the-smartest-companies-use-ai-ankur-goyal-braintrust|How the Smartest Companies Use AI | Ankur Goyal, Braintrust]]
+- Created source page: [[sources/01KJVJA8X4-no-priors-ep-86-with-sarah-guo-elad-gil|No Priors Ep. 86 | With Sarah Guo & Elad Gil]]
+- Created source page: [[sources/01KJV5Z471-scaling-of-search-and-learning-a-roadmap-to-reproduce-o1-from-reinforcement-lear|Scaling of Search and Learning: A Roadmap to Reproduce o1 from Reinforcement Learning Perspective]]
+- Created source page: [[sources/01KJV65FZD-training-large-language-models-to-reason-in-a-continuous-latent-space|Training Large Language Models to Reason in a Continuous Latent Space]]
+- Created source page: [[sources/01KJVHGZW3-how-deepseek-changes-the-llm-story|How DeepSeek Changes the LLM Story]]
+- Created source page: [[sources/01KJV4TENF-genarm-reward-guided-generation-with-autoregressive-reward-model-for-test-time-a|GenARM: Reward Guided Generation with Autoregressive Reward Model for Test-time Alignment]]
+- Created source page: [[sources/01KJV4YYAN-test-time-preference-optimization-on-the-fly-alignment-via-iterative-textual-fee|Test-Time Preference Optimization: On-the-Fly Alignment via Iterative Textual Feedback]]
+- Created source page: [[sources/01KJV5B2QG-search-o1-agentic-search-enhanced-large-reasoning-models|Search-o1: Agentic Search-Enhanced Large Reasoning Models]]
+- Created source page: [[sources/01KJV6YYQP-lightrag-simple-and-fast-retrieval-augmented-generation|LightRAG: Simple and Fast Retrieval-Augmented Generation]]
+- Created source page: [[sources/01KJVJ4E39-openai-o1s-new-paradigm-test-time-compute-explained|OpenAI o1's New Paradigm: Test-Time Compute Explained]]
+- Created source page: [[sources/01KJVVDA1F-why-ai-voice-feels-more-human-than-ever|Why AI Voice Feels More Human Than Ever]]
+- Created source page: [[sources/01KJVFCWXJ-ex-openai-chief-research-officer-what-comes-next-for-ai|Ex-OpenAI Chief Research Officer: What Comes Next for AI?]]
+- Created source page: [[sources/01KJV5Z0M1-inference-aware-fine-tuning-for-best-of-n-sampling-in-large-language-models|Inference-Aware Fine-Tuning for Best-of-N Sampling in Large Language Models]]
+- Created source page: [[sources/01KKTF1D6E-2025-the-state-of-consumer-ai-menlo-ventures|2025: The State of Consumer AI | Menlo Ventures]]
+- Created source page: [[sources/01KJVKQCHA-graphrag-llm-derived-knowledge-graphs-for-rag|GraphRAG: LLM-Derived Knowledge Graphs for RAG]]
+- Created source page: [[sources/01KJT9BRN1-lumine-an-open-recipe-for-building-generalist-agents-in-3d-open-worlds|Lumine: An Open Recipe for Building Generalist Agents in 3D Open Worlds]]
+- Created source page: [[sources/01KJV8YY98-critique-out-loud-reward-models|Critique-out-Loud Reward Models]]
+- Created source page: [[sources/01KJRZT83B-2025-the-year-in-llms|2025: The year in LLMs]]
+- Created source page: [[sources/01KJV6G030-llava-cot-let-vision-language-models-reason-step-by-step|LLaVA-CoT: Let Vision Language Models Reason Step-by-Step]]
+- Created source page: [[sources/01KJVMA9D5-gsm-symbolic-understanding-the-limitations-of-mathematical-reasoning-in-large-la|GSM-Symbolic: Understanding the Limitations of Mathematical Reasoning in Large Language Models]]
+- Created source page: [[sources/01KJV7CCFG-janus-decoupling-visual-encoding-for-unified-multimodal-understanding-and-genera|Janus: Decoupling Visual Encoding for Unified Multimodal Understanding and Generation]]
+- Created source page: [[sources/01KJVCAP5K-google-deepmind-ceo-demis-hassabis-the-path-to-agi-deceptive-ais-building-a-virt|Google DeepMind CEO Demis Hassabis: The Path To AGI, Deceptive AIs, Building a Virtual Cell]]
+- Created source page: [[sources/01KJT1Y2H0-toward-efficient-agents-memory-tool-learning-and-planning|Toward Efficient Agents: Memory, Tool learning, and Planning]]
+- Created source page: [[sources/01KJTMK79E-chain-of-agents-end-to-end-agent-foundation-models-via-multi-agent-distillation-|Chain-of-Agents: End-to-End Agent Foundation Models via Multi-Agent Distillation and Agentic RL]]
+- Created source page: [[sources/01KJVPDX06-the-rise-of-webmcp|The Rise of WebMCP]]
+- Created source page: [[sources/01KJTNZS7X-energy-based-transformers-are-scalable-learners-and-thinkers|Energy-Based Transformers are Scalable Learners and Thinkers]]
+- Created source page: [[sources/01KJV8RNT6-the-ai-scientist-towards-fully-automated-open-ended-scientific-discovery|The AI Scientist: Towards Fully Automated Open-Ended Scientific Discovery]]
+- Created source page: [[sources/01KKT5AKA5-gemini-robotics-bringing-ai-into-the-physical|Gemini Robotics: Bringing AI into the Physical]]
+- Created source page: [[sources/01KJVFMTTF-the-agent-network-dharmesh-shah-agentai-cto-of-hubspot|The Agent Network — Dharmesh Shah, Agent.ai + CTO of HubSpot]]
+- Created source page: [[sources/01KKT2YJGW-where-ai-is-headed-in-2026-foundation-capital|Where AI is headed in 2026 - Foundation Capital]]
+- Created source page: [[sources/01KJV47G2K-can-1b-llm-surpass-405b-llm-rethinking-compute-optimal-test-time-scaling|Can 1B LLM Surpass 405B LLM? Rethinking Compute-Optimal Test-Time Scaling]]
+- Created source page: [[sources/01KJVN12YG-fully-autonomous-robots-are-much-closer-than-you-think-sergey-levine|Fully autonomous robots are much closer than you think – Sergey Levine]]
+- Created source page: [[sources/01KJVC2MPT-voyager-an-open-ended-embodied-agent-with-large-language-models|Voyager: An Open-Ended Embodied Agent with Large Language Models]]
+- Created source page: [[sources/01KJVDVYWF-françois-chollet-on-openai-o-models-and-arc|François Chollet on OpenAI o-models and ARC]]
+- Created source page: [[sources/01KJVMH7JF-after-llms-spatial-intelligence-and-world-models-fei-fei-li-justin-johnson-world|After LLMs: Spatial Intelligence and World Models — Fei-Fei Li & Justin Johnson, World Labs]]
+- Created source page: [[sources/01KJV42M0K-qwen25-vl-technical-report|Qwen2.5-VL Technical Report]]
+- Created source page: [[sources/01KJVMK38D-the-future-of-ai-is-here-fei-fei-li-unveils-the-next-frontier-of-ai|“The Future of AI is Here” — Fei-Fei Li Unveils the Next Frontier of AI]]
+- Created source page: [[sources/01KKT42HFY-kimi-k2-open-agentic-intelligence|KIMI K2: OPEN AGENTIC INTELLIGENCE]]
+- Created source page: [[sources/01KJVP8YZR-andrej-karpathy-and-dwarkesh-patel-popping-the-agi-bubble-building-the-ai-aristo|Andrej Karpathy and Dwarkesh Patel – Popping the AGI Bubble, Building the AI Aristocracy]]
+- Created source page: [[sources/01KJVCSNWX-from-alphago-to-agi-ft-reflectionai-founder-ioannis-antonoglou|From AlphaGo to AGI ft ReflectionAI Founder Ioannis Antonoglou]]
+- Created source page: [[sources/01KJVJ6D0C-math-olympiad-gold-medalist-explains-openai-and-google-deepmind-imo-gold-perform|⚡️Math Olympiad gold medalist explains OpenAI and Google DeepMind IMO Gold Performances]]
+- Created source page: [[sources/01KJVJDB5G-reinforcement-fine-tuning12-days-of-openai-day-2|Reinforcement Fine-Tuning—12 Days of OpenAI: Day 2]]
+- Created source page: [[sources/01KJV5E1EB-arc-prize-2024-technical-report|ARC Prize 2024: Technical Report]]
+- Created source page: [[sources/01KJVP843V-richard-sutton-and-dwarkesh-patel-speaking-two-different-languages|Richard Sutton and Dwarkesh Patel – speaking two different languages]]
+- Created source page: [[sources/01KJVKFYWV-anthropics-claude-computer-use-is-a-game-changer-yc-decoded|Anthropic’s Claude Computer Use Is A Game Changer | YC Decoded]]
+- Created source page: [[sources/01KJVKFYWV-anthropics-claude-computer-use-is-a-game-changer-yc-decoded|Anthropic’s Claude Computer Use Is A Game Changer | YC Decoded]]
+- Created source page: [[sources/01KJSWNT7B-agents|Agents]]
+- Created source page: [[sources/01KJSWNT7B-agents|Agents]]
+- Created source page: [[sources/01KJTC6DXZ-supervised-reinforcement-learning-from-expert-trajectories-to-step-wise-reasonin|Supervised Reinforcement Learning: From Expert Trajectories to Step-wise Reasoning]]
+- Created source page: [[sources/01KJTC6DXZ-supervised-reinforcement-learning-from-expert-trajectories-to-step-wise-reasonin|Supervised Reinforcement Learning: From Expert Trajectories to Step-wise Reasoning]]
+- Created source page: [[sources/01KJVP51TK-before-you-call-manus-ai-agent-a-gpt-wrapper|Before you call Manus AI Agent, a GPT Wrapper!]]
+- Created source page: [[sources/01KJVP51TK-before-you-call-manus-ai-agent-a-gpt-wrapper|Before you call Manus AI Agent, a GPT Wrapper!]]
+- Created source page: [[sources/01KJVF7136-are-we-misreading-the-ai-exponential-julian-schrittwieser-on-move-37-scaling-rl-|Are We Misreading the AI Exponential? Julian Schrittwieser on Move 37 & Scaling RL (Anthropic)]]
+- Created source page: [[sources/01KJVF7136-are-we-misreading-the-ai-exponential-julian-schrittwieser-on-move-37-scaling-rl-|Are We Misreading the AI Exponential? Julian Schrittwieser on Move 37 & Scaling RL (Anthropic)]]
+- Created source page: [[sources/01KJV3AME5-optimizing-test-time-compute-via-meta-reinforcement-fine-tuning|Optimizing Test-Time Compute via Meta Reinforcement Fine-Tuning]]
+- Created source page: [[sources/01KJV6J7A4-marco-o1-towards-open-reasoning-models-for-open-ended-solutions|Marco-o1: Towards Open Reasoning Models for Open-Ended Solutions]]
+- Created source page: [[sources/01KJV3AME5-optimizing-test-time-compute-via-meta-reinforcement-fine-tuning|Optimizing Test-Time Compute via Meta Reinforcement Fine-Tuning]]
+- Created source page: [[sources/01KJTPP5WB-vision-as-a-dialect-unifying-visual-understanding-and-generation-via-text-aligne|Vision as a Dialect: Unifying Visual Understanding and Generation via Text-Aligned Representations]]
+- Created source page: [[sources/01KJTPP5WB-vision-as-a-dialect-unifying-visual-understanding-and-generation-via-text-aligne|Vision as a Dialect: Unifying Visual Understanding and Generation via Text-Aligned Representations]]
+- Created source page: [[sources/01KJV0MQH7-transfer-between-modalities-with-metaqueries|Transfer between Modalities with MetaQueries]]
+- Created source page: [[sources/01KJV0MQH7-transfer-between-modalities-with-metaqueries|Transfer between Modalities with MetaQueries]]
+- Created source page: [[sources/01KJVGFHX6-andrej-karpathy-software-is-changing-again|Andrej Karpathy: Software Is Changing (Again)]]
+- Created source page: [[sources/01KJVGFHX6-andrej-karpathy-software-is-changing-again|Andrej Karpathy: Software Is Changing (Again)]]
+- Created source page: [[sources/01KJV8ZDJ2-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model|Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters]]
+- Created source page: [[sources/01KJV8ZDJ2-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model|Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters]]
+- Created source page: [[sources/01KKT56P61-2025-3-18|2025-3-18]]
+- Created source page: [[sources/01KKT56P61-2025-3-18|2025-3-18]]
+- Created source page: [[sources/01KJVCGGY0-demis-hassabis-scaling-superhuman-ais-alphazero-atop-llms-alphafold|Demis Hassabis — Scaling, superhuman AIs, AlphaZero atop LLMs, AlphaFold]]
+- Created source page: [[sources/01KJTAPFA4-diffusion-language-models-are-super-data-learners|Diffusion Language Models are Super Data Learners]]
+- Created source page: [[sources/01KJTAPFA4-diffusion-language-models-are-super-data-learners|Diffusion Language Models are Super Data Learners]]
+- Created source page: [[sources/01KJTPMJBF-kimi-vl-technical-report|Kimi-VL Technical Report]]
+- Created source page: [[sources/01KJTFFNZY-cwm-an-open-weights-llm-for-research-on-code-generation-with-world-models|CWM: An Open-Weights LLM for Research on Code Generation with World Models]]
+- Created source page: [[sources/01KJTPMJBF-kimi-vl-technical-report|Kimi-VL Technical Report]]
+- Created source page: [[sources/01KJVDK1KQ-294-arc-agi-2-top-score-jeremy-berman|29.4% ARC-AGI-2 🤯 (TOP SCORE!) - Jeremy Berman]]
+- Created source page: [[sources/01KJTMRHHG-seed-prover-deep-and-broad-reasoning-for-automated-theorem-proving|Seed-Prover: Deep and Broad Reasoning for Automated Theorem Proving]]
+- Created source page: [[sources/01KJVV469S-rip-to-rpa-how-ai-makes-operations-work|RIP to RPA: How AI Makes Operations Work]]
+- Created source page: [[sources/01KJTMRHHG-seed-prover-deep-and-broad-reasoning-for-automated-theorem-proving|Seed-Prover: Deep and Broad Reasoning for Automated Theorem Proving]]
+- Created source page: [[sources/01KJTPVSWT-show-o2-improved-native-unified-multimodal-models|Show-o2: Improved Native Unified Multimodal Models]]
+- Created source page: [[sources/01KJTPVSWT-show-o2-improved-native-unified-multimodal-models|Show-o2: Improved Native Unified Multimodal Models]]
+- Created source page: [[sources/01KJTMKZPA-search-r1-training-llms-to-reason-and-leverage-search-engines-with-reinforcement|Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning]]
+- Created source page: [[sources/01KJTMKZPA-search-r1-training-llms-to-reason-and-leverage-search-engines-with-reinforcement|Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning]]
+- Created source page: [[sources/01KKTE8FZZ-untitled-article|Untitled Article]]
+- Created source page: [[sources/01KKTE8FZZ-untitled-article|Untitled Article]]
+- Created source page: [[sources/01KKT3SS8Q-deepseek-ocr-contexts-optical-compression|DeepSeek-OCR: Contexts Optical Compression]]
+- Created source page: [[sources/01KKT3SS8Q-deepseek-ocr-contexts-optical-compression|DeepSeek-OCR: Contexts Optical Compression]]
+- Created source page: [[sources/01KJVFQM7C-best-of-2024-in-agents-from-1-on-swe-bench-full-prof-graham-neubig-of-openhandsa|Best of 2024 in Agents (from #1 on SWE-Bench Full, Prof. Graham Neubig of OpenHands/AllHands)]]
+- Created source page: [[sources/01KJVFQM7C-best-of-2024-in-agents-from-1-on-swe-bench-full-prof-graham-neubig-of-openhandsa|Best of 2024 in Agents (from #1 on SWE-Bench Full, Prof. Graham Neubig of OpenHands/AllHands)]]
+- Created source page: [[sources/01KJTQRK41-small-language-models-are-the-future-of-agentic-ai|Small Language Models are the Future of Agentic AI]]
+- Created source page: [[sources/01KJTQRK41-small-language-models-are-the-future-of-agentic-ai|Small Language Models are the Future of Agentic AI]]
+- Created source page: [[sources/01KJS121AX-ai-101-what-is-lejepa-the-theory-upgrade-jepa-has-been-missing|AI 101: What is LeJEPA? The Theory Upgrade JEPA Has Been Missing]]
+- Created source page: [[sources/01KJS121AX-ai-101-what-is-lejepa-the-theory-upgrade-jepa-has-been-missing|AI 101: What is LeJEPA? The Theory Upgrade JEPA Has Been Missing]]
+- Created source page: [[sources/01KJSZ9SXV-the-state-of-ai-2025|The State of AI 2025]]
+- Created source page: [[sources/01KJSZ9SXV-the-state-of-ai-2025|The State of AI 2025]]
+- Created source page: [[sources/01KJTWFJBZ-on-path-to-multimodal-generalist-general-level-and-general-bench|On Path to Multimodal Generalist: General-Level and General-Bench]]
+- Created source page: [[sources/01KJTWFJBZ-on-path-to-multimodal-generalist-general-level-and-general-bench|On Path to Multimodal Generalist: General-Level and General-Bench]]
+- Created source page: [[sources/01KJTD7NB3-continual-learning-via-sparse-memory-finetuning|Continual Learning via Sparse Memory Finetuning]]
+- Created source page: [[sources/01KJVHHPD9-the-rlvr-revolution-with-nathan-lambert-ai2-interconnectsai|The RLVR Revolution — with Nathan Lambert (AI2, Interconnects.ai)]]
+- Created source page: [[sources/01KJTQ0XQR-revisiting-reinforcement-learning-for-llm-reasoning-from-a-cross-domain-perspect|Revisiting Reinforcement Learning for LLM Reasoning from A Cross-Domain Perspective]]
+- Created source page: [[sources/01KJT2PY1B-end-to-end-test-time-training-for-long-context|End-to-End Test-Time Training for Long Context]]
+- Created source page: [[sources/01KJTQ0XQR-revisiting-reinforcement-learning-for-llm-reasoning-from-a-cross-domain-perspect|Revisiting Reinforcement Learning for LLM Reasoning from A Cross-Domain Perspective]]
+- Created source page: [[sources/01KJT9KDWV-tidar-think-in-diffusion-talk-in-autoregression|TiDAR: Think in Diffusion, Talk in Autoregression]]
+- Created source page: [[sources/01KJT9KDWV-tidar-think-in-diffusion-talk-in-autoregression|TiDAR: Think in Diffusion, Talk in Autoregression]]
+- Created source page: [[sources/01KJTN8HBD-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-token-level|Mixture-of-Recursions: Learning Dynamic Recursive Depths for Adaptive Token-Level Computation]]
+- Created source page: [[sources/01KJTN8HBD-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-token-level|Mixture-of-Recursions: Learning Dynamic Recursive Depths for Adaptive Token-Level Computation]]
+- Created source page: [[sources/01KJTMGSTS-glm-45-agentic-reasoning-and-coding-arc-foundation-models|GLM-4.5: Agentic, Reasoning, and Coding (ARC) Foundation Models]]
+- Created source page: [[sources/01KJTMGSTS-glm-45-agentic-reasoning-and-coding-arc-foundation-models|GLM-4.5: Agentic, Reasoning, and Coding (ARC) Foundation Models]]
+- Created source page: [[sources/01KJVHWJNM-why-o1-is-a-big-deal|Why o1 is a BIG deal]]
+- Created source page: [[sources/01KJVHWJNM-why-o1-is-a-big-deal|Why o1 is a BIG deal]]
+- Created source page: [[sources/01KJT6M5JK-deepseek-v32-pushing-the-frontier-of-open-large-language-models|DeepSeek-V3.2: Pushing the Frontier of Open Large Language Models]]
+- Created source page: [[sources/01KJT6M5JK-deepseek-v32-pushing-the-frontier-of-open-large-language-models|DeepSeek-V3.2: Pushing the Frontier of Open Large Language Models]]
+- Created source page: [[sources/01KJTJNWNW-deepdive-advancing-deep-search-agents-with-knowledge-graphs-and-multi-turn-rl|DeepDive: Advancing Deep Search Agents with Knowledge Graphs and Multi-Turn RL]]
+- Created source page: [[sources/01KJVEVAZF-edwin-chen-why-frontier-labs-are-diverging-rl-environments-developing-model-tast|Edwin Chen: Why Frontier Labs Are Diverging, RL Environments & Developing Model Taste]]
+- Created source page: [[sources/01KJTJNWNW-deepdive-advancing-deep-search-agents-with-knowledge-graphs-and-multi-turn-rl|DeepDive: Advancing Deep Search Agents with Knowledge Graphs and Multi-Turn RL]]
+- Created source page: [[sources/01KJTPVV11-from-bytes-to-ideas-language-modeling-with-autoregressive-u-nets|From Bytes to Ideas: Language Modeling with Autoregressive U-Nets]]
+- Created source page: [[sources/01KJVEVAZF-edwin-chen-why-frontier-labs-are-diverging-rl-environments-developing-model-tast|Edwin Chen: Why Frontier Labs Are Diverging, RL Environments & Developing Model Taste]]
+- Created source page: [[sources/01KJVEQ1YV-ilya-sutskever-were-moving-from-the-age-of-scaling-to-the-age-of-research|Ilya Sutskever – We're moving from the age of scaling to the age of research]]
+- Created source page: [[sources/01KJTPVV11-from-bytes-to-ideas-language-modeling-with-autoregressive-u-nets|From Bytes to Ideas: Language Modeling with Autoregressive U-Nets]]
+- Created source page: [[sources/01KJV95THR-kan-kolmogorov-arnold-networks|KAN: Kolmogorov-Arnold Networks]]
+- Created source page: [[sources/01KJV95THR-kan-kolmogorov-arnold-networks|KAN: Kolmogorov-Arnold Networks]]
+- Created source page: [[sources/01KJTMXXZG-gepa-reflective-prompt-evolution-can-outperform-reinforcement-learning|GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning]]
+- Created source page: [[sources/01KJTMXXZG-gepa-reflective-prompt-evolution-can-outperform-reinforcement-learning|GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning]]
+- Created source page: [[sources/01KJVKC8GK-hallucination-free-assessing-the-reliability-of-leading-ai-legal-research-tools-|Hallucination-Free? Assessing the Reliability of Leading AI Legal Research Tools (Paper Explained)]]
+- Created source page: [[sources/01KJVKC8GK-hallucination-free-assessing-the-reliability-of-leading-ai-legal-research-tools-|Hallucination-Free? Assessing the Reliability of Leading AI Legal Research Tools (Paper Explained)]]
+- Created source page: [[sources/01KJTVJC6B-continuous-thought-machines|Continuous Thought Machines]]
+- Created source page: [[sources/01KJTVJC6B-continuous-thought-machines|Continuous Thought Machines]]
+- Created source page: [[sources/01KJVCZDP7-gemini-20-and-the-evolution-of-agentic-ai-oriol-vinyals|Gemini 2.0 and the evolution of agentic AI | Oriol Vinyals]]
+- Created source page: [[sources/01KJVCZDP7-gemini-20-and-the-evolution-of-agentic-ai-oriol-vinyals|Gemini 2.0 and the evolution of agentic AI | Oriol Vinyals]]
+- Created source page: [[sources/01KJVGWEGP-openais-noam-brown-ilge-akkaya-and-hunter-lightman-on-o1-and-teaching-llms-to-re|OpenAI's Noam Brown, Ilge Akkaya and Hunter Lightman on o1 and Teaching LLMs to Reason Better]]
+- Created source page: [[sources/01KJVGWEGP-openais-noam-brown-ilge-akkaya-and-hunter-lightman-on-o1-and-teaching-llms-to-re|OpenAI's Noam Brown, Ilge Akkaya and Hunter Lightman on o1 and Teaching LLMs to Reason Better]]
+- Created source page: [[sources/01KJTQXNA5-prorl-prolonged-reinforcement-learning-expands-reasoning-boundaries-in-large-lan|ProRL: Prolonged Reinforcement Learning Expands Reasoning Boundaries in Large Language Models]]
+- Created source page: [[sources/01KJTQXNA5-prorl-prolonged-reinforcement-learning-expands-reasoning-boundaries-in-large-lan|ProRL: Prolonged Reinforcement Learning Expands Reasoning Boundaries in Large Language Models]]
+- Created source page: [[sources/01KJSSFMZ0-how-we-built-our-multi-agent-research-system|How we built our multi-agent research system]]
+- Created source page: [[sources/01KJSSFMZ0-how-we-built-our-multi-agent-research-system|How we built our multi-agent research system]]
+- Created source page: [[sources/01KJTQZ7NZ-continual-learning-in-vision-language-models-via-aligned-model-merging|Continual Learning in Vision-Language Models via Aligned Model Merging]]
+- Created source page: [[sources/01KJTQZ7NZ-continual-learning-in-vision-language-models-via-aligned-model-merging|Continual Learning in Vision-Language Models via Aligned Model Merging]]
+- Created source page: [[sources/01KJV3X90H-sample-scrutinize-and-scale-effective-inference-time-search-by-scaling-verificat|Sample, Scrutinize and Scale: Effective Inference-Time Search by Scaling Verification]]
+- Created source page: [[sources/01KJV3X90H-sample-scrutinize-and-scale-effective-inference-time-search-by-scaling-verificat|Sample, Scrutinize and Scale: Effective Inference-Time Search by Scaling Verification]]
+- Created source page: [[sources/01KKT2RD0V-welcome-to-the-era-of-experience|Welcome to the Era of Experience]]
+- Created source page: [[sources/01KKT2RD0V-welcome-to-the-era-of-experience|Welcome to the Era of Experience]]
+- Created source page: [[sources/01KJTHGA5B-atoken-a-unified-tokenizer-for-vision|AToken: A Unified Tokenizer for Vision]]
+- Created source page: [[sources/01KJTHGA5B-atoken-a-unified-tokenizer-for-vision|AToken: A Unified Tokenizer for Vision]]
+- Created source page: [[sources/01KJTM1K7F-parathinker-native-parallel-thinking-as-a-new-paradigm-to-scale-llm-test-time-co|ParaThinker: Native Parallel Thinking as a New Paradigm to Scale LLM Test-time Compute]]
+- Created source page: [[sources/01KJTM1K7F-parathinker-native-parallel-thinking-as-a-new-paradigm-to-scale-llm-test-time-co|ParaThinker: Native Parallel Thinking as a New Paradigm to Scale LLM Test-time Compute]]
+- Created source page: [[sources/01KKT3D2HY-the-46t-services-as-software-opportunity-lessons-from-the-first-year-foundation-|The $4.6T Services-as-Software opportunity: Lessons from the first year - Foundation Capital]]
+- Created source page: [[sources/01KKT3D2HY-the-46t-services-as-software-opportunity-lessons-from-the-first-year-foundation-|The $4.6T Services-as-Software opportunity: Lessons from the first year - Foundation Capital]]
+- Created source page: [[sources/01KJT367PQ-universal-reasoning-model|Universal Reasoning Model]]
+- Created source page: [[sources/01KJT367PQ-universal-reasoning-model|Universal Reasoning Model]]
+- Created source page: [[sources/01KJTPFD62-omnigen2-exploration-to-advanced-multimodal-generation|OmniGen2: Exploration to Advanced Multimodal Generation]]
+- Created source page: [[sources/01KJTPFD62-omnigen2-exploration-to-advanced-multimodal-generation|OmniGen2: Exploration to Advanced Multimodal Generation]]
+- Created source page: [[sources/01KJTG79VB-video-models-are-zero-shot-learners-and-reasoners|Video models are zero-shot learners and reasoners]]
+- Created source page: [[sources/01KJTG79VB-video-models-are-zero-shot-learners-and-reasoners|Video models are zero-shot learners and reasoners]]
+- Created source page: [[sources/01KJT4HR3T-justrl-scaling-a-15b-llm-with-a-simple-rl-recipe|JustRL: Scaling a 1.5B LLM with a Simple RL Recipe]]
+- Created source page: [[sources/01KJT4HR3T-justrl-scaling-a-15b-llm-with-a-simple-rl-recipe|JustRL: Scaling a 1.5B LLM with a Simple RL Recipe]]
+- Created source page: [[sources/01KJTKWSMK-refrag-rethinking-rag-based-decoding|REFRAG: Rethinking RAG based Decoding]]
+- Created source page: [[sources/01KJTKWSMK-refrag-rethinking-rag-based-decoding|REFRAG: Rethinking RAG based Decoding]]
+- Created source page: [[sources/01KM251Q7Y-openclaw-the-viral-ai-agent-that-broke-the-internet-peter-steinberger-lex-fridma|OpenClaw: The Viral AI Agent that Broke the Internet - Peter Steinberger | Lex Fridman Podcast #491 [8:55-27:04, 2:34:58-2:46:17]]]
+- Created source page: [[sources/01KJTASF4S-scaling-agent-learning-via-experience-synthesis|Scaling Agent Learning via Experience Synthesis]]
+- Created source page: [[sources/01KM251Q7Y-openclaw-the-viral-ai-agent-that-broke-the-internet-peter-steinberger-lex-fridma|OpenClaw: The Viral AI Agent that Broke the Internet - Peter Steinberger | Lex Fridman Podcast #491 [8:55-27:04, 2:34:58-2:46:17]]]
+- Created source page: [[sources/01KJTX3SHM-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory|Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory]]
+- Created source page: [[sources/01KJTX3SHM-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory|Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory]]
+- Created source page: [[sources/01KJTQH657-thinking-vs-doing-agents-that-reason-by-scaling-test-time-interaction|Thinking vs. Doing: Agents that Reason by Scaling Test-Time Interaction]]
+- Created source page: [[sources/01KJTQH657-thinking-vs-doing-agents-that-reason-by-scaling-test-time-interaction|Thinking vs. Doing: Agents that Reason by Scaling Test-Time Interaction]]
+- Created source page: [[sources/01KJT838Q9-π-06-a-vla-that-learns-from-experience|$π^{*}_{0.6}$: a VLA That Learns From Experience]]
+- Created source page: [[sources/01KJT838Q9-π-06-a-vla-that-learns-from-experience|$π^{*}_{0.6}$: a VLA That Learns From Experience]]
+- Created source page: [[sources/01KJTKZK03-a-comprehensive-survey-of-self-evolving-ai-agents-a-new-paradigm-bridging-founda|A Comprehensive Survey of Self-Evolving AI Agents: A New Paradigm Bridging Foundation Models and Lifelong Agentic Systems]]
+- Created source page: [[sources/01KJTKZK03-a-comprehensive-survey-of-self-evolving-ai-agents-a-new-paradigm-bridging-founda|A Comprehensive Survey of Self-Evolving AI Agents: A New Paradigm Bridging Foundation Models and Lifelong Agentic Systems]]
+- Created source page: [[sources/01KJTZZW1M-dynamic-cheatsheet-test-time-learning-with-adaptive-memory|Dynamic Cheatsheet: Test-Time Learning with Adaptive Memory]]
+- Created source page: [[sources/01KJTZZW1M-dynamic-cheatsheet-test-time-learning-with-adaptive-memory|Dynamic Cheatsheet: Test-Time Learning with Adaptive Memory]]
+- Created source page: [[sources/01KJS2NG3H-deep-learning-with-python-third-edition|Deep Learning with Python, Third Edition]]
+- Created source page: [[sources/01KJTH9GV7-are-scaling-up-agent-environments-and-evaluations|ARE: Scaling Up Agent Environments and Evaluations]]
+- Created source page: [[sources/01KJTKMYHA-why-language-models-hallucinate|Why Language Models Hallucinate]]
+- Created source page: [[sources/01KJTDQZXF-the-markovian-thinker-architecture-agnostic-linear-scaling-of-reasoning|The Markovian Thinker: Architecture-Agnostic Linear Scaling of Reasoning]]
+- Created source page: [[sources/01KJSXWFP2-reverse-engineering-openais-o1|Reverse engineering OpenAI’s o1]]
+- Created source page: [[sources/01KJVFH11E-inside-openais-new-agent-development-tools|Inside OpenAI's New Agent Development Tools]]
+- Created source page: [[sources/01KJTBPFB9-scaling-latent-reasoning-via-looped-language-models|Scaling Latent Reasoning via Looped Language Models]]
+- Created source page: [[sources/01KJTYN6R6-π-05-a-vision-language-action-model-with-open-world-generalization|$π_{0.5}$: a Vision-Language-Action Model with Open-World Generalization]]
+- Created source page: [[sources/01KJV3DVFC-agent-models-internalizing-chain-of-action-generation-into-reasoning-models|Agent models: Internalizing Chain-of-Action Generation into Reasoning models]]
+- Created source page: [[sources/01KJT7VEK3-evolution-strategies-at-the-hyperscale|Evolution Strategies at the Hyperscale]]
+- Created source page: [[sources/01KJTRVBMF-atlas-learning-to-optimally-memorize-the-context-at-test-time|ATLAS: Learning to Optimally Memorize the Context at Test Time]]
+- Created source page: [[sources/01KJT0NENF-generative-ais-act-o1|Generative AI’s Act o1]]
+- Created source page: [[sources/01KJSRXVCS-context-engineering|Context Engineering]]
+- Created source page: [[sources/01KJTRC2KS-darwin-godel-machine-open-ended-evolution-of-self-improving-agents|Darwin Godel Machine: Open-Ended Evolution of Self-Improving Agents]]
+- Created source page: [[sources/01KKT4EFFY-healthbench-evaluating-large-language-models|HealthBench: Evaluating Large Language Models]]
+- Created source page: [[sources/01KJTFJMJZ-reasoningbank-scaling-agent-self-evolving-with-reasoning-memory|ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory]]
+- Created source page: [[sources/01KJTDMNGQ-agent-learning-via-early-experience|Agent Learning via Early Experience]]
+- Created source page: [[sources/01KJTQ6SB0-e3-learning-to-explore-enables-extrapolation-of-test-time-compute-for-llms|e3: Learning to Explore Enables Extrapolation of Test-Time Compute for LLMs]]
+- Created source page: [[sources/01KJTVG7CE-qwen3-technical-report|Qwen3 Technical Report]]
+- Created source page: [[sources/01KJS34J20-thinking-searching-and-acting|Thinking, Searching, and Acting]]
+- Created source page: [[sources/01KJVB7Y3J-genie-generative-interactive-environments|Genie: Generative Interactive Environments]]
+- Created source page: [[sources/01KJT5MN24-the-universal-weight-subspace-hypothesis|The Universal Weight Subspace Hypothesis]]
+- Created source page: [[sources/01KKT532F3-2025-3-18|2025-3-18]]
+- Created source page: [[sources/01KJVFB1EV-agi-the-future-of-ai-agents-and-the-next-wave-of-opportunities-in-ai-richard-soc|AGI, The Future of AI Agents And The Next Wave of Opportunities in AI | Richard Socher, CEO, You.com]]
+- Created source page: [[sources/01KJVAWHZ0-quiet-star-language-models-can-teach-themselves-to-think-before-speaking|Quiet-STaR: Language Models Can Teach Themselves to Think Before Speaking]]
+- Created source page: [[sources/01KJVC4T8C-reflexion-language-agents-with-verbal-reinforcement-learning|Reflexion: Language Agents with Verbal Reinforcement Learning]]
+- Created source page: [[sources/01KJSYGVN2-building-a-generative-ai-platform|Building A Generative AI Platform]]
+- Created source page: [[sources/01KJTR8Z78-writing-zero-bridge-the-gap-between-non-verifiable-tasks-and-verifiable-rewards|Writing-Zero: Bridge the Gap Between Non-verifiable Tasks and Verifiable Rewards]]
+- Created source page: [[sources/01KJVBPHHT-towards-conversational-ai-for-disease-management|Towards Conversational AI for Disease Management]]
+- Created source page: [[sources/01KJTN6GH7-beyond-binary-rewards-training-lms-to-reason-about-their-uncertainty|Beyond Binary Rewards: Training LMs to Reason About Their Uncertainty]]
+- Created source page: [[sources/01KJV3VT1C-colpali-efficient-document-retrieval-with-vision-language-models|ColPali: Efficient Document Retrieval with Vision Language Models]]
+- Created source page: [[sources/01KJTNJCZN-mem1-learning-to-synergize-memory-and-reasoning-for-efficient-long-horizon-agent|MEM1: Learning to Synergize Memory and Reasoning for Efficient Long-Horizon Agents]]
+- Created source page: [[sources/01KJV4QZ2D-omnihuman-1-rethinking-the-scaling-up-of-one-stage-conditioned-human-animation-m|OmniHuman-1: Rethinking the Scaling-Up of One-Stage Conditioned Human Animation Models]]
+- Created source page: [[sources/01KJTG66GD-training-agents-inside-of-scalable-world-models|Training Agents Inside of Scalable World Models]]
+- Created source page: [[sources/01KJS14CD8-from-words-to-worlds-spatial-intelligence-is-ais-next-frontier|From Words to Worlds: Spatial Intelligence is AI’s Next Frontier]]
+- Created source page: [[sources/01KJTTJRKW-the-unreasonable-effectiveness-of-entropy-minimization-in-llm-reasoning|The Unreasonable Effectiveness of Entropy Minimization in LLM Reasoning]]
+- Created source page: [[sources/01KJT636TN-sima-2-a-generalist-embodied-agent-for-virtual-worlds|SIMA 2: A Generalist Embodied Agent for Virtual Worlds]]
+- Created source page: [[sources/01KJVH25VE-speculations-on-test-time-scaling-o1|Speculations on Test-Time Scaling (o1)]]
+- Created source page: [[sources/01KKTEX3N2-what-it-takes-to-build-ai-agents-that-actually-work-foundation-capital|What it takes to build AI agents that actually work - Foundation Capital]]
+- Created source page: [[sources/01KJV2A0J3-qwen25-omni-technical-report|Qwen2.5-Omni Technical Report]]
+- Created source page: [[sources/01KJV4KX85-process-reinforcement-through-implicit-rewards|Process Reinforcement through Implicit Rewards]]
+- Created source page: [[sources/01KJTPGRRA-unified-vision-language-action-model|Unified Vision-Language-Action Model]]
+- Created source page: [[sources/01KJVCP8BF-reflection-ais-misha-laskin-on-the-alphago-moment-for-llms-training-data|Reflection AI’s Misha Laskin on the AlphaGo Moment for LLMs | Training Data]]
+- Created source page: [[sources/01KJVFZ54E-new-in-nature-google-agents-beat-human-doctors-make-scientific-discoveries-with-|New in Nature: Google Agents Beat Human Doctors, Make Scientific Discoveries – With Vivek and Anil]]
+- Created source page: [[sources/01KJVDXNW6-he-co-invented-the-transformer-now-continuous-thought-machines-llion-jones-luke-|He Co-Invented the Transformer. Now: Continuous Thought Machines [Llion Jones / Luke Darlow]]]
+- Created source page: [[sources/01KJSSZ2RA-what-comes-next-with-reinforcement-learning|What comes next with reinforcement learning]]
+- Created source page: [[sources/01KJVB9Y21-math-shepherd-verify-and-reinforce-llms-step-by-step-without-human-annotations|Math-Shepherd: Verify and Reinforce LLMs Step-by-step without Human Annotations]]
+- Created source page: [[sources/01KJTP54EY-naturalthoughts-selecting-and-distilling-reasoning-traces-for-general-reasoning-|NaturalThoughts: Selecting and Distilling Reasoning Traces for General Reasoning Tasks]]
+- Created source page: [[sources/01KJT9Y5SJ-the-path-not-taken-rlvr-provably-learns-off-the-principals|The Path Not Taken: RLVR Provably Learns Off the Principals]]
+- Created source page: [[sources/01KJT8GR21-pan-a-world-model-for-general-interactable-and-long-horizon-world-simulation|PAN: A World Model for General, Interactable, and Long-Horizon World Simulation]]
+- Created source page: [[sources/01KJTJSM72-llm-jepa-large-language-models-meet-joint-embedding-predictive-architectures|LLM-JEPA: Large Language Models Meet Joint Embedding Predictive Architectures]]
+- Created source page: [[sources/01KKT490MT-alphaevolve-a-coding-agent-for-scientific-and|AlphaEvolve: A coding agent for scientific and]]
+- Created source page: [[sources/01KJTE0Y5S-h1-bootstrapping-llms-to-reason-over-longer-horizons-via-reinforcement-learning|h1: Bootstrapping LLMs to Reason over Longer Horizons via Reinforcement Learning]]
+- Created source page: [[sources/01KJTAD742-reinforcement-learning-improves-traversal-of-hierarchical-knowledge-in-llms|Reinforcement Learning Improves Traversal of Hierarchical Knowledge in LLMs]]
+- Created source page: [[sources/01KJTEBGCX-agentic-context-engineering-evolving-contexts-for-self-improving-language-models|Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models]]
+- Created source page: [[sources/01KJTVCEFH-parallel-scaling-law-for-language-models|Parallel Scaling Law for Language Models]]
+- Created source page: [[sources/01KJTPFVK6-log-linear-attention|Log-Linear Attention]]
+- Created source page: [[sources/01KJSWHZY2-helix-a-vision-language-action-model-for-generalist-humanoid-control|Helix: A Vision-Language-Action Model for Generalist Humanoid Control]]
+- Created source page: [[sources/01KKT61YC7-world-and-human-action-models-towards-gameplay-ideation-nature|World and Human Action Models towards gameplay ideation - Nature]]
+- Created source page: [[sources/01KJTGT235-thinking-augmented-pre-training|Thinking Augmented Pre-training]]
+- Created source page: [[sources/01KJTY5P1V-process-reward-models-that-think|Process Reward Models That Think]]
+- Created source page: [[sources/01KJTWJ62T-voila-voice-language-foundation-models-for-real-time-autonomous-interaction-and-|Voila: Voice-Language Foundation Models for Real-Time Autonomous Interaction and Voice Role-Play]]
+- Created source page: [[sources/01KJTPC0T7-diffucoder-understanding-and-improving-masked-diffusion-models-for-code-generati|DiffuCoder: Understanding and Improving Masked Diffusion Models for Code Generation]]
+- Created source page: [[sources/01KJTKVK4Y-general-agents-contain-world-models|General agents contain world models]]
+- Created source page: [[sources/01KJV2VB8A-proc4gem-foundation-models-for-physical-agency-through-procedural-generation|Proc4Gem: Foundation models for physical agency through procedural generation]]
+- Created source page: [[sources/01KJSSZ6FW-a-taxonomy-for-next-generation-reasoning-models|A taxonomy for next-generation reasoning models]]
+- Created source page: [[sources/01KJTYPXYC-a-mem-agentic-memory-for-llm-agents|A-MEM: Agentic Memory for LLM Agents]]
+- Created source page: [[sources/01KJTQXH92-reflect-retry-reward-self-improving-llms-via-reinforcement-learning|Reflect, Retry, Reward: Self-Improving LLMs via Reinforcement Learning]]
+- Created source page: [[sources/01KJT7RXXT-agent0-unleashing-self-evolving-agents-from-zero-data-via-tool-integrated-reason|Agent0: Unleashing Self-Evolving Agents from Zero Data via Tool-Integrated Reasoning]]
+- Created source page: [[sources/01KJSZ6JB0-roadmap-developer-tooling-for-software-30|Roadmap: Developer Tooling for Software 3.0]]
+- Created source page: [[sources/01KJTQCEKY-the-diffusion-duality|The Diffusion Duality]]
+- Created source page: [[sources/01KJVAT3JD-stream-of-search-sos-learning-to-search-in-language|Stream of Search (SoS): Learning to Search in Language]]
+- Created source page: [[sources/01KJTRB1VP-test-time-training-done-right|Test-Time Training Done Right]]
+- Created source page: [[sources/01KJTCC049-open-o3-video-grounded-video-reasoning-with-explicit-spatio-temporal-evidence|Open-o3 Video: Grounded Video Reasoning with Explicit Spatio-Temporal Evidence]]
+- Created source page: [[sources/01KJSX4F4C-building-effective-ai-agents|Building Effective AI Agents]]
+- Created source page: [[sources/01KJS2NG3H-deep-learning-with-python-third-edition|Deep Learning with Python, Third Edition]]
+- Created source page: [[sources/01KJTVQTFF-ming-lite-uni-advancements-in-unified-architecture-for-natural-multimodal-intera|Ming-Lite-Uni: Advancements in Unified Architecture for Natural Multimodal Interaction]]
+- Created source page: [[sources/01KJTK2Z9A-robix-a-unified-model-for-robot-interaction-reasoning-and-planning|Robix: A Unified Model for Robot Interaction, Reasoning and Planning]]
+- Created source page: [[sources/01KJTFKNRP-evolution-strategies-at-scale-llm-fine-tuning-beyond-reinforcement-learning|Evolution Strategies at Scale: LLM Fine-Tuning Beyond Reinforcement Learning]]
+- Created source page: [[sources/01KJTCHAPG-loongrl-reinforcement-learning-for-advanced-reasoning-over-long-contexts|LoongRL: Reinforcement Learning for Advanced Reasoning over Long Contexts]]
+- Created source page: [[sources/01KJSYJP6K-getting-50-sota-on-arc-agi-with-gpt-4o|Getting 50% (SoTA) on ARC-AGI with GPT-4o]]
+- Created source page: [[sources/01KJVV7HTP-the-2025-ai-search-race|The 2025 AI Search Race]]
+- Created source page: [[sources/01KJSZWA0G-roadmap-data-30-in-the-lakehouse-era|Roadmap: Data 3.0 in the Lakehouse Era]]
+- Created source page: [[sources/01KJV8MTT2-rlaif-vs-rlhf-scaling-reinforcement-learning-from-human-feedback-with-ai-feedbac|RLAIF vs. RLHF: Scaling Reinforcement Learning from Human Feedback with AI Feedback]]
+- Created source page: [[sources/01KJV26GZX-cot-vla-visual-chain-of-thought-reasoning-for-vision-language-action-models|CoT-VLA: Visual Chain-of-Thought Reasoning for Vision-Language-Action Models]]
+- Created source page: [[sources/01KJS3BJW4-the-hidden-drivers-of-hrms-performance-on-arc-agi|The Hidden Drivers of HRM's Performance on ARC-AGI]]
+- Created source page: [[sources/01KJTMX34E-diffusion-beats-autoregressive-in-data-constrained-settings|Diffusion Beats Autoregressive in Data-Constrained Settings]]
+- Created source page: [[sources/01KJTQCH1T-self-adapting-language-models|Self-Adapting Language Models]]
+- Created source page: [[sources/01KJT3Z974-toward-training-superintelligent-software-agents-through-self-play-swe-rl|Toward Training Superintelligent Software Agents through Self-Play SWE-RL]]
+- Created source page: [[sources/01KJSW87NX-claudes-extended-thinking|Claude's extended thinking]]
+- Created source page: [[sources/01KJTA8224-tiny-model-big-logic-diversity-driven-optimization-elicits-large-model-reasoning|Tiny Model, Big Logic: Diversity-Driven Optimization Elicits Large-Model Reasoning Ability in VibeThinker-1.5B]]
+- Created source page: [[sources/01KJT1VZTM-reinforcement-learning-via-self-distillation|Reinforcement Learning via Self-Distillation]]
+- Created source page: [[sources/01KJTQD302-build-the-web-for-agents-not-agents-for-the-web|Build the web for agents, not agents for the web]]
+- Created source page: [[sources/01KJSSCZFW-some-ideas-for-what-comes-next|Some ideas for what comes next]]
+- Created source page: [[sources/01KJTERZ79-arcmemo-abstract-reasoning-composition-with-lifelong-llm-memory|ArcMemo: Abstract Reasoning Composition with Lifelong LLM Memory]]
+- Created source page: [[sources/01KJSTSTMC-openais-o3-over-optimization-is-back-and-weirder-than-ever|OpenAI's o3: Over-optimization is back and weirder than ever]]
+- Created source page: [[sources/01KJT148KQ-part-i-the-future-of-ai-is-vertical|Part I: The future of AI is vertical]]
+- Created source page: [[sources/01KJV943BV-q-improving-multi-step-reasoning-for-llms-with-deliberative-planning|Q*: Improving Multi-step Reasoning for LLMs with Deliberative Planning]]
+- Created source page: [[sources/01KJTPB47Q-worldvla-towards-autoregressive-action-world-model|WorldVLA: Towards Autoregressive Action World Model]]
+- Created source page: [[sources/01KJSTGBK2-reinforcement-learning-with-random-rewards-actually-works-with-qwen-25|Reinforcement learning with random rewards actually works with Qwen 2.5]]
+- Created source page: [[sources/01KJTT03GZ-emerging-properties-in-unified-multimodal-pretraining|Emerging Properties in Unified Multimodal Pretraining]]
+- Created source page: [[sources/01KJTCTNJH-multi-agent-collaboration-via-evolving-orchestration|Multi-Agent Collaboration via Evolving Orchestration]]
+- Created source page: [[sources/01KJVHDMY1-inference-time-compute|Inference Time Compute]]
+- Created source page: [[sources/01KJTGTVN3-reinforcement-learning-on-pre-training-data|Reinforcement Learning on Pre-Training Data]]
+- Created source page: [[sources/01KJTKM1EW-rls-razor-why-online-reinforcement-learning-forgets-less|RL's Razor: Why Online Reinforcement Learning Forgets Less]]
+- Created source page: [[sources/01KJVV5P22-virtual-worlds-mean-real-business-how-games-power-the-future|Virtual Worlds Mean Real Business: How Games Power the Future]]
+- Created source page: [[sources/01KKT3E0TN-how-systems-of-agents-will-collapse-the-enterprise-stack-foundation-capital|How Systems of Agents will collapse the enterprise stack - Foundation Capital]]
+- Created source page: [[sources/01KJV0HFJ8-skillweaver-web-agents-can-self-improve-by-discovering-and-honing-skills|SkillWeaver: Web Agents can Self-Improve by Discovering and Honing Skills]]
+- Created source page: [[sources/01KKT4ZV99-dont-throw-the-baby-out-with-the-bathwater-how|DON’T THROW THE BABY OUT WITH THE BATHWATER: HOW]]
+- Created source page: [[sources/01KJTM33JC-universal-deep-research-bring-your-own-model-and-strategy|Universal Deep Research: Bring Your Own Model and Strategy]]
+- Created source page: [[sources/01KJT1PH9D-learning-to-discover-at-test-time|Learning to Discover at Test Time]]
+- Created source page: [[sources/01KJTP7WMB-the-automated-llm-speedrunning-benchmark-reproducing-nanogpt-improvements|The Automated LLM Speedrunning Benchmark: Reproducing NanoGPT Improvements]]
+- Created source page: [[sources/01KJS1QQ4Y-rl-environments-and-the-hierarchy-of-agentic-capabilities|RL Environments and the Hierarchy of Agentic Capabilities]]
+- Created source page: [[sources/01KJTZYPKZ-reasoning-models-can-be-effective-without-thinking|Reasoning Models Can Be Effective Without Thinking]]
+- Created source page: [[sources/01KJSVB9E8-rl-backlog-openais-many-rls-clarifying-distillation-and-latent-reasoning|RL backlog: OpenAI's many RLs, clarifying distillation, and latent reasoning]]
+- Created source page: [[sources/01KJSS5RHX-project-vend-can-claude-run-a-small-shop-and-why-does-that-matter|Project Vend: Can Claude run a small shop? (And why does that matter?)]]
+- Created source page: [[sources/01KJVAT1TP-eureka-human-level-reward-design-via-coding-large-language-models|Eureka: Human-Level Reward Design via Coding Large Language Models]]
+- Created source page: [[sources/01KJT9K4DJ-wmpo-world-model-based-policy-optimization-for-vision-language-action-models|WMPO: World Model-based Policy Optimization for Vision-Language-Action Models]]
+- Created source page: [[sources/01KJTQH6AA-general-reasoner-advancing-llm-reasoning-across-all-domains|General-Reasoner: Advancing LLM Reasoning Across All Domains]]
+- Created source page: [[sources/01KJS0KVBY-thoughts-on-ai-progress-dec-2025|Thoughts on AI progress (Dec 2025)]]
+- Created source page: [[sources/01KJT7HATA-worldgen-from-text-to-traversable-and-interactive-3d-worlds|WorldGen: From Text to Traversable and Interactive 3D Worlds]]
+- Created source page: [[sources/01KJTTV05K-beyond-semantics-the-unreasonable-effectiveness-of-reasonless-intermediate-token|Beyond Semantics: The Unreasonable Effectiveness of Reasonless Intermediate Tokens]]
+- Created source page: [[sources/01KJTQRXBY-how-much-do-language-models-memorize|How much do language models memorize?]]
+- Created source page: [[sources/01KJVA6TAA-dreureka-language-model-guided-sim-to-real-transfer|DrEureka: Language Model Guided Sim-To-Real Transfer]]
+- Created source page: [[sources/01KKT5EC5T-monitoring-reasoning-models-for-misbehavior-and-the-risks-of|Monitoring Reasoning Models for Misbehavior and the Risks of]]
+- Created source page: [[sources/01KJTP56NV-does-math-reasoning-improve-general-llm-capabilities-understanding-transferabili|Does Math Reasoning Improve General LLM Capabilities? Understanding Transferability of LLM Reasoning]]
+- Created source page: [[sources/01KJV91QH9-the-platonic-representation-hypothesis|The Platonic Representation Hypothesis]]
+- Created source page: [[sources/01KJSXHZ75-how-i-came-in-first-on-arc-agi-pub-using-sonnet-35-with-evolutionary-test-time-c|How I came in first on ARC-AGI-Pub using Sonnet 3.5 with Evolutionary Test-time Compute]]
+- Created source page: [[sources/01KJV4HRBK-qlass-boosting-language-agent-inference-via-q-guided-stepwise-search|QLASS: Boosting Language Agent Inference via Q-Guided Stepwise Search]]
+- Created source page: [[sources/01KJTD9WCB-demystifying-reinforcement-learning-in-agentic-reasoning|Demystifying Reinforcement Learning in Agentic Reasoning]]
+- Created source page: [[sources/01KJV2XQ8N-vision-r1-incentivizing-reasoning-capability-in-multimodal-large-language-models|Vision-R1: Incentivizing Reasoning Capability in Multimodal Large Language Models]]
+- Created source page: [[sources/01KJVAAKMA-chain-of-thought-reasoning-without-prompting|Chain-of-Thought Reasoning Without Prompting]]
+- Created source page: [[sources/01KJTNEFKK-acebench-who-wins-the-match-point-in-tool-usage|ACEBench: Who Wins the Match Point in Tool Usage?]]
+- Created source page: [[sources/01KJTQ74E7-spurious-rewards-rethinking-training-signals-in-rlvr|Spurious Rewards: Rethinking Training Signals in RLVR]]
+- Created source page: [[sources/01KJTZD9X5-retool-reinforcement-learning-for-strategic-tool-use-in-llms|ReTool: Reinforcement Learning for Strategic Tool Use in LLMs]]
+- Created source page: [[sources/01KJSW30MX-where-inference-time-scaling-pushes-the-market-for-ai-companies|Where inference-time scaling pushes the market for AI companies]]
+- Created source page: [[sources/01KJV9HBMY-visual-autoregressive-modeling-scalable-image-generation-via-next-scale-predicti|Visual Autoregressive Modeling: Scalable Image Generation via Next-Scale Prediction]]
+- Created source page: [[sources/01KJT2Q145-recursive-language-models|Recursive Language Models]]
+- Created source page: [[sources/01KJTM994W-rstar2-agent-agentic-reasoning-technical-report|rStar2-Agent: Agentic Reasoning Technical Report]]
+- Created source page: [[sources/01KJTK49M5-the-majority-is-not-always-right-rl-training-for-solution-aggregation|The Majority is not always right: RL training for solution aggregation]]
+- Created source page: [[sources/01KJTM7AQB-on-the-theoretical-limitations-of-embedding-based-retrieval|On the Theoretical Limitations of Embedding-Based Retrieval]]
+- Created source page: [[sources/01KJTRR26F-grounded-reinforcement-learning-for-visual-reasoning|Grounded Reinforcement Learning for Visual Reasoning]]
+- Created source page: [[sources/01KJTSHBZT-reinforcement-learning-for-reasoning-in-large-language-models-with-one-training-|Reinforcement Learning for Reasoning in Large Language Models with One Training Example]]
+- Created source page: [[sources/01KJS2K6B1-chatgpt-the-agentic-app|ChatGPT: The Agentic App]]
+- Created source page: [[sources/01KJS3EDSQ-contra-dwarkesh-on-continual-learning|Contra Dwarkesh on Continual Learning]]
+- Created source page: [[sources/01KKTEN0B4-new-tools-for-building-agents|New tools for building agents]]
+- Created source page: [[sources/01KJTPAM3D-roboscape-physics-informed-embodied-world-model|RoboScape: Physics-informed Embodied World Model]]
+- Created source page: [[sources/01KJS0J2A8-2025-llm-year-in-review|2025 LLM Year in Review]]
+- Created source page: [[sources/01KJTXS7VE-skywork-r1v2-multimodal-hybrid-reinforcement-learning-for-reasoning|Skywork R1V2: Multimodal Hybrid Reinforcement Learning for Reasoning]]
+- Created source page: [[sources/01KJTXQNR0-paper2code-automating-code-generation-from-scientific-papers-in-machine-learning|Paper2Code: Automating Code Generation from Scientific Papers in Machine Learning]]
+- Created source page: [[sources/01KJSY403H-on-the-arc-agi-1-million-reasoning-challenge|On the “ARC-AGI” $1 Million Reasoning Challenge]]
+- Created source page: [[sources/01KJT6CAK6-thinking-with-programming-vision-towards-a-unified-view-for-thinking-with-images|Thinking with Programming Vision: Towards a Unified View for Thinking with Images]]
+- Created source page: [[sources/01KJRZT83A-gemini-deep-think-redefining-the-future-of-scientific-research|Gemini Deep Think: Redefining the Future of Scientific Research]]
+- Created source page: [[sources/01KJTV54QV-thinkless-llm-learns-when-to-think|Thinkless: LLM Learns When to Think]]
+- Created source page: [[sources/01KJTY7ADE-tina-tiny-reasoning-models-via-lora|Tina: Tiny Reasoning Models via LoRA]]
+- Created source page: [[sources/01KKT2QRQX-gpt-5-hands-on-welcome-to-the-stone-age|GPT-5 Hands-On: Welcome to the Stone Age]]
+- Created source page: [[sources/01KJS0KV75-titans-miras-helping-ai-have-long-term-memory|Titans + MIRAS: Helping AI have long-term memory]]
+- Created source page: [[sources/01KKT30MNE-how-ai-agents-will-redefine-market-research-foundation-capital|How AI agents will redefine market research - Foundation Capital]]
+- Created source page: [[sources/01KKT361GZ-when-model-providers-eat-everything-a-survival-guide-for-service-as-software-sta|When model providers eat everything: A survival guide for Service-as-Software startups - Foundation Capital]]
+- Created source page: [[sources/01KJV1PA03-torl-scaling-tool-integrated-rl|ToRL: Scaling Tool-Integrated RL]]
+- Created source page: [[sources/01KKTFEAY1-beyond-bots-how-ai-agents-are-driving-the-next-wave-of-enterprise-automation-men|Beyond Bots: How AI Agents Are Driving the Next Wave of Enterprise Automation | Menlo Ventures]]
+- Created source page: [[sources/01KJV181HF-inference-time-scaling-for-generalist-reward-modeling|Inference-Time Scaling for Generalist Reward Modeling]]
+- Created source page: [[sources/01KJVA39KX-language-agent-tree-search-unifies-reasoning-acting-and-planning-in-language-mod|Language Agent Tree Search Unifies Reasoning Acting and Planning in Language Models]]
+- Created source page: [[sources/01KJTXK7YZ-token-shuffle-towards-high-resolution-image-generation-with-autoregressive-model|Token-Shuffle: Towards High-Resolution Image Generation with Autoregressive Models]]
+- Created source page: [[sources/01KJT4G8AA-meta-rl-induces-exploration-in-language-agents|Meta-RL Induces Exploration in Language Agents]]
+- Created source page: [[sources/01KJTAMFNJ-v-thinker-interactive-thinking-with-images|V-Thinker: Interactive Thinking with Images]]
+- Created source page: [[sources/01KJTH6DPN-what-characterizes-effective-reasoning-revisiting-length-review-and-structure-of|What Characterizes Effective Reasoning? Revisiting Length, Review, and Structure of CoT]]
+- Created source page: [[sources/01KJVDMXGT-can-latent-program-networks-solve-abstract-reasoning-clement-bonnet|Can Latent Program Networks Solve Abstract Reasoning? [Clement Bonnet]]]
+- Created source page: [[sources/01KKTE8J95-kimi-k2-open-agentic-intelligence|Kimi K2: Open Agentic Intelligence]]
+- Created source page: [[sources/01KJVBR6K0-ring-attention-with-blockwise-transformers-for-near-infinite-context|Ring Attention with Blockwise Transformers for Near-Infinite Context]]
+- Created source page: [[sources/01KJV3W9QT-swe-rl-advancing-llm-reasoning-via-reinforcement-learning-on-open-software-evolu|SWE-RL: Advancing LLM Reasoning via Reinforcement Learning on Open Software Evolution]]
+- Created source page: [[sources/01KJTTRBRJ-mmada-multimodal-large-diffusion-language-models|MMaDA: Multimodal Large Diffusion Language Models]]
+- Created source page: [[sources/01KJTZ9VS7-sleep-time-compute-beyond-inference-scaling-at-test-time|Sleep-time Compute: Beyond Inference Scaling at Test-time]]
+- Created source page: [[sources/01KJV0GSYV-the-ai-scientist-v2-workshop-level-automated-scientific-discovery-via-agentic-tr|The AI Scientist-v2: Workshop-Level Automated Scientific Discovery via Agentic Tree Search]]
+- Created source page: [[sources/01KJTQSWGF-beyond-the-8020-rule-high-entropy-minority-tokens-drive-effective-reinforcement-|Beyond the 80/20 Rule: High-Entropy Minority Tokens Drive Effective Reinforcement Learning for LLM Reasoning]]
+- Created source page: [[sources/01KJV44APF-llm-pretraining-with-continuous-concepts|LLM Pretraining with Continuous Concepts]]
+- Created source page: [[sources/01KJSTZKY2-the-second-half|The Second Half]]
+- Created source page: [[sources/01KJSZ22MD-vision-native-ai-opportunities-a-precursor-to-intelligent-robotics|Vision-native AI opportunities: a precursor to intelligent robotics]]
+- Created source page: [[sources/01KJTNBZH1-learning-without-training-the-implicit-dynamics-of-in-context-learning|Learning without training: The implicit dynamics of in-context learning]]
+- Created source page: [[sources/01KJSX6AQ1-openai-o3-breakthrough-high-score-on-arc-agi-pub|OpenAI o3 Breakthrough High Score on ARC-AGI-Pub]]
+- Created source page: [[sources/01KJV168T2-synthetic-data-generation-multi-step-rl-for-reasoning-tool-use|Synthetic Data Generation & Multi-Step RL for Reasoning & Tool Use]]
+- Created source page: [[sources/01KJSXQAC8-when-you-give-a-claude-a-mouse|When you give a Claude a mouse]]
+- Created source page: [[sources/01KJTJ3WVG-towards-general-agentic-intelligence-via-environment-scaling|Towards General Agentic Intelligence via Environment Scaling]]
+- Created source page: [[sources/01KJV4T8S3-zebralogic-on-the-scaling-limits-of-llms-for-logical-reasoning|ZebraLogic: On the Scaling Limits of LLMs for Logical Reasoning]]
+- Created source page: [[sources/01KJTB00NQ-unlocking-the-power-of-multi-agent-llm-for-reasoning-from-lazy-agents-to-deliber|Unlocking the Power of Multi-Agent LLM for Reasoning: From Lazy Agents to Deliberation]]
+- Created source page: [[sources/01KJTF5EP6-mobilellm-r1-exploring-the-limits-of-sub-billion-language-model-reasoners-with-o|MobileLLM-R1: Exploring the Limits of Sub-Billion Language Model Reasoners with Open Training Recipes]]
+- Created source page: [[sources/01KJT4XPFE-on-the-interplay-of-pre-training-mid-training-and-rl-on-reasoning-language-model|On the Interplay of Pre-Training, Mid-Training, and RL on Reasoning Language Models]]
+- Created source page: [[sources/01KJTCAH65-coloragent-building-a-robust-personalized-and-interactive-os-agent|ColorAgent: Building A Robust, Personalized, and Interactive OS Agent]]
+- Created source page: [[sources/01KJSZBNSP-the-api-battleground-a-new-era-of-platform-wars-andreessen-horowitz|The API Battleground: A New Era of Platform Wars | Andreessen Horowitz]]
+- Created source page: [[sources/01KJV49W0K-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-approach|Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach]]
+- Created source page: [[sources/01KJT0GCSN-part-ii-multimodal-capabilities-unlock-new-opportunities-in-vertical-ai|Part II: Multimodal capabilities unlock new opportunities in Vertical AI]]
+- Created source page: [[sources/01KJTQ65VX-videoexplorer-think-with-videos-for-agentic-long-video-understanding|VideoExplorer: Think With Videos For Agentic Long-Video Understanding]]
+- Created source page: [[sources/01KJT2BQDA-agentic-memory-learning-unified-long-term-and-short-term-memory-management-for-l|Agentic Memory: Learning Unified Long-Term and Short-Term Memory Management for Large Language Model Agents]]
+- Created source page: [[sources/01KJT1G6YC-skillrl-evolving-agents-via-recursive-skill-augmented-reinforcement-learning|SkillRL: Evolving Agents via Recursive Skill-Augmented Reinforcement Learning]]
+- Created source page: [[sources/01KJST86K2-why-i-dont-think-agi-is-right-around-the-corner|Why I don’t think AGI is right around the corner]]
+- Created source page: [[sources/01KJT37Q1W-t5gemma-2-seeing-reading-and-understanding-longer|T5Gemma 2: Seeing, Reading, and Understanding Longer]]
+- Created source page: [[sources/01KJSRWREB-kimi-k2-and-when-deepseek-moments-become-normal|Kimi K2 and when "DeepSeek Moments" become normal]]
+- Created source page: [[sources/01KJV4D04E-agentic-reasoning-a-streamlined-framework-for-enhancing-llm-reasoning-with-agent|Agentic Reasoning: A Streamlined Framework for Enhancing LLM Reasoning with Agentic Tools]]
+- Created source page: [[sources/01KKTF4RJ4-the-paradox-of-self-building-agents-teaching-ai-to-teach-itself-foundation-capit|The paradox of self-building agents: teaching AI to teach itself - Foundation Capital]]
+- Created source page: [[sources/01KJTT48H0-model-merging-in-pre-training-of-large-language-models|Model Merging in Pre-training of Large Language Models]]
+- Created source page: [[sources/01KJTGWJGM-language-models-that-think-chat-better|Language Models that Think, Chat Better]]
+- Created source page: [[sources/01KJS3SRMJ-gpt-5-and-the-arc-of-progress|GPT-5 and the arc of progress]]
+- Created source page: [[sources/01KJV47KDZ-tree-attention-topology-aware-decoding-for-long-context-attention-on-gpu-cluster|Tree Attention: Topology-aware Decoding for Long-Context Attention on GPU clusters]]
+- Created source page: [[sources/01KJV1DNKJ-crossing-the-reward-bridge-expanding-rl-with-verifiable-rewards-across-diverse-d|Crossing the Reward Bridge: Expanding RL with Verifiable Rewards Across Diverse Domains]]
+- Created source page: [[sources/01KJT7B6T7-latent-collaboration-in-multi-agent-systems|Latent Collaboration in Multi-Agent Systems]]
+- Created source page: [[sources/01KJTN36CP-checklists-are-better-than-reward-models-for-aligning-language-models|Checklists Are Better Than Reward Models For Aligning Language Models]]
+- Created source page: [[sources/01KJTEH94B-less-is-more-recursive-reasoning-with-tiny-networks|Less is More: Recursive Reasoning with Tiny Networks]]
+- Created source page: [[sources/01KJSVFS87-tracing-the-thoughts-of-a-large-language-model|Tracing the thoughts of a large language model]]
+- Created source page: [[sources/01KJTYK6PA-ttrl-test-time-reinforcement-learning|TTRL: Test-Time Reinforcement Learning]]
+- Created source page: [[sources/01KJTEKYPY-multi-agent-tool-integrated-policy-optimization|Multi-Agent Tool-Integrated Policy Optimization]]
+- Created source page: [[sources/01KJTK494K-agentgym-rl-training-llm-agents-for-long-horizon-decision-making-through-multi-t|AgentGym-RL: Training LLM Agents for Long-Horizon Decision Making through Multi-Turn Reinforcement Learning]]
+- Created source page: [[sources/01KJT2D42H-nextflow-unified-sequential-modeling-activates-multimodal-understanding-and-gene|NextFlow: Unified Sequential Modeling Activates Multimodal Understanding and Generation]]
+- Created source page: [[sources/01KJV9RNVZ-webvoyager-building-an-end-to-end-web-agent-with-large-multimodal-models|WebVoyager: Building an End-to-End Web Agent with Large Multimodal Models]]
+- Created source page: [[sources/01KJTC07QH-continuous-autoregressive-language-models|Continuous Autoregressive Language Models]]
+- Created source page: [[sources/01KJTNMPQ6-mindjourney-test-time-scaling-with-world-models-for-spatial-reasoning|MindJourney: Test-Time Scaling with World Models for Spatial Reasoning]]
+- Created source page: [[sources/01KJTBCK7K-thinkmorph-emergent-properties-in-multimodal-interleaved-chain-of-thought-reason|ThinkMorph: Emergent Properties in Multimodal Interleaved Chain-of-Thought Reasoning]]
+- Created source page: [[sources/01KJVVA0Q2-how-ai-will-transform-accounting-a-100b-opportunity-explained|How AI Will Transform Accounting: A $100B Opportunity Explained]]
+- Created source page: [[sources/01KJV4M1H3-s1-simple-test-time-scaling|s1: Simple test-time scaling]]
+- Created source page: [[sources/01KJT1KMA1-generative-modeling-via-drifting|Generative Modeling via Drifting]]
+- Created source page: [[sources/01KJSZPWHN-roadmap-ai-systems-of-action|Roadmap: AI systems of action]]
+- Created source page: [[sources/01KJT2MNGQ-mhc-manifold-constrained-hyper-connections|mHC: Manifold-Constrained Hyper-Connections]]
+- Created source page: [[sources/01KJSXKC7D-openais-o1-using-search-was-a-psyop|OpenAI's o1 using "search" was a PSYOP]]
+- Created source page: [[sources/01KJTC0P7P-the-era-of-agentic-organization-learning-to-organize-with-language-models|The Era of Agentic Organization: Learning to Organize with Language Models]]
+- Created source page: [[sources/01KKT4WS4T-adaworld-learning-adaptable-world-models-with-latent-actions|AdaWorld: Learning Adaptable World Models with Latent Actions]]
+- Created source page: [[sources/01KJT71V4Q-evo-memory-benchmarking-llm-agent-test-time-learning-with-self-evolving-memory|Evo-Memory: Benchmarking LLM Agent Test-time Learning with Self-Evolving Memory]]
+- Created source page: [[sources/01KJTE6RW1-in-the-flow-agentic-system-optimization-for-effective-planning-and-tool-use|In-the-Flow Agentic System Optimization for Effective Planning and Tool Use]]
+- Created source page: [[sources/01KJT5XWMY-the-missing-layer-of-agi-from-pattern-alchemy-to-coordination-physics|The Missing Layer of AGI: From Pattern Alchemy to Coordination Physics]]
+- Created source page: [[sources/01KJTMAX0G-reinforcement-learning-with-rubric-anchors|Reinforcement Learning with Rubric Anchors]]
+- Created source page: [[sources/01KJSW6SGQ-crossing-the-uncanny-valley-of-conversational-voice|Crossing the uncanny valley of conversational voice]]
+- Created source page: [[sources/01KJTGJW0T-trustjudge-inconsistencies-of-llm-as-a-judge-and-how-to-alleviate-them|TrustJudge: Inconsistencies of LLM-as-a-Judge and How to Alleviate Them]]
+- Created source page: [[sources/01KJTTZHX6-adaptthink-reasoning-models-can-learn-when-to-think|AdaptThink: Reasoning Models Can Learn When to Think]]
+- Created source page: [[sources/01KJV31KSH-gtr-guided-thought-reinforcement-prevents-thought-collapse-in-rl-based-vlm-agent|GTR: Guided Thought Reinforcement Prevents Thought Collapse in RL-based VLM Agent Training]]
+- Created source page: [[sources/01KJS390ZN-how-i-got-the-highest-score-on-arc-agi-again-swapping-python-for-english|How I got the highest score on ARC-AGI again swapping Python for English]]
+- Created source page: [[sources/01KJT0E4FT-rip-to-rpa-the-rise-of-intelligent-automation-andreessen-horowitz|RIP to RPA: The Rise of Intelligent Automation | Andreessen Horowitz]]
+- Created source page: [[sources/01KJTX3RQ3-x-fusion-introducing-new-modality-to-frozen-large-language-models|X-Fusion: Introducing New Modality to Frozen Large Language Models]]
+- Created source page: [[sources/01KKT43AHT-the-illusion-of-thinking|The Illusion of Thinking:]]
+- Created source page: [[sources/01KJTTA22M-gui-g1-understanding-r1-zero-like-training-for-visual-grounding-in-gui-agents|GUI-G1: Understanding R1-Zero-Like Training for Visual Grounding in GUI Agents]]
+- Created source page: [[sources/01KKT3N28G-ai-leads-a-service-as-software-paradigm-shift-foundation-capital|AI leads a service as software paradigm shift - Foundation Capital]]
+- Created source page: [[sources/01KJSTNBZM-ai-horseless-carriages-koomendev|AI Horseless Carriages | koomen.dev]]
+- Created source page: [[sources/01KJS48D4H-context-engineering-for-ai-agents-lessons-from-building-manus|Context Engineering for AI Agents: Lessons from Building Manus]]
+- Created source page: [[sources/01KJTRVD3A-the-entropy-mechanism-of-reinforcement-learning-for-reasoning-language-models|The Entropy Mechanism of Reinforcement Learning for Reasoning Language Models]]
+- Created source page: [[sources/01KKTF8ZRH-ai-agents-a-new-architecture-for-enterprise-automation-menlo-ventures|AI Agents: A New Architecture for Enterprise Automation | Menlo Ventures]]
+- Created source page: [[sources/01KJT8TG9R-mixture-of-states-routing-token-level-dynamics-for-multimodal-generation|Mixture of States: Routing Token-Level Dynamics for Multimodal Generation]]
+- Created source page: [[sources/01KJTSAGB6-learning-to-reason-without-external-rewards|Learning to Reason without External Rewards]]
+- Created source page: [[sources/01KJSZYXRP-consumer-ais-tipping-point|Consumer AI's tipping point]]
+- Created source page: [[sources/01KJTQ0EQT-reinforcement-learning-with-verifiable-rewards-implicitly-incentivizes-correct-r|Reinforcement Learning with Verifiable Rewards Implicitly Incentivizes Correct Reasoning in Base LLMs]]
+- Created source page: [[sources/01KJTCZ50C-the-free-transformer|The Free Transformer]]
+- Created source page: [[sources/01KJSTZNFF-announcing-the-agent2agent-protocol-a2a-google-developers-blog|Announcing the Agent2Agent Protocol (A2A)- Google Developers Blog]]
+- Created source page: [[sources/01KJTNTHTP-memagent-reshaping-long-context-llm-with-multi-conv-rl-based-memory-agent|MemAgent: Reshaping Long-Context LLM with Multi-Conv RL-based Memory Agent]]
+- Created source page: [[sources/01KJT4T78E-lets-not-just-put-things-in-context-test-time-training-for-long-context-llms|Let's (not) just put things in Context: Test-Time Training for Long-Context LLMs]]
+- Created source page: [[sources/01KJS40HGR-gpt-5s-vision-checkup-a-frontier-vision-reasoning-model-but-not-a-new-sota|GPT-5's Vision Checkup: a frontier Vision Reasoning Model, but -not- a new SOTA]]
+- Created source page: [[sources/01KJT0DMPQ-part-iii-business-model-invention-in-the-ai-era|Part III: Business model invention in the AI era]]
+- Created source page: [[sources/01KJTNBKSK-deep-researcher-with-test-time-diffusion|Deep Researcher with Test-Time Diffusion]]
+- Created source page: [[sources/01KKT4PNZT-the-surprising-effectiveness-of-test-time-training-for-few-shot-learning|The Surprising Effectiveness of Test-Time Training for Few-Shot Learning]]
+- Created source page: [[sources/01KJTD0659-hybrid-reinforcement-when-reward-is-sparse-its-better-to-be-dense|Hybrid Reinforcement: When Reward Is Sparse, It's Better to Be Dense]]
+- Created source page: [[sources/01KJTN04YC-winning-gold-at-imo-2025-with-a-model-agnostic-verification-and-refinement-pipel|Winning Gold at IMO 2025 with a Model-Agnostic Verification-and-Refinement Pipeline]]
+- Created source page: [[sources/01KJV3G6RY-start-self-taught-reasoner-with-tools|START: Self-taught Reasoner with Tools]]
+- Created source page: [[sources/01KJTKFTJ0-emergent-hierarchical-reasoning-in-llms-through-reinforcement-learning|Emergent Hierarchical Reasoning in LLMs through Reinforcement Learning]]
+- Created source page: [[sources/01KJT19HSX-ais-600b-question|AI’s $600B Question]]
+- Created source page: [[sources/01KJTNPY47-optimas-optimizing-compound-ai-systems-with-globally-aligned-local-rewards|Optimas: Optimizing Compound AI Systems with Globally Aligned Local Rewards]]
+- Created source page: [[sources/01KJTZV5JK-climbing-the-ladder-of-reasoning-what-llms-can-and-still-cant-solve-after-sft|Climbing the Ladder of Reasoning: What LLMs Can-and Still Can't-Solve after SFT?]]
+- Created source page: [[sources/01KJTNH60K-the-invisible-leash-why-rlvr-may-or-may-not-escape-its-origin|The Invisible Leash: Why RLVR May or May Not Escape Its Origin]]
+- Created source page: [[sources/01KJTM4P7P-memory-r1-enhancing-large-language-model-agents-to-manage-and-utilize-memories-v|Memory-R1: Enhancing Large Language Model Agents to Manage and Utilize Memories via Reinforcement Learning]]
+- Created source page: [[sources/01KJT62ZGZ-nex-n1-agentic-models-trained-via-a-unified-ecosystem-for-large-scale-environmen|Nex-N1: Agentic Models Trained via a Unified Ecosystem for Large-Scale Environment Construction]]
+- Created source page: [[sources/01KJS173VZ-5-thoughts-on-kimi-k2-thinking|5 Thoughts on Kimi K2 Thinking]]
+- Created source page: [[sources/01KJTV56AP-rm-r1-reward-modeling-as-reasoning|RM-R1: Reward Modeling as Reasoning]]
+- Created source page: [[sources/01KJS276S8-equipping-agents-for-the-real-world-with-agent-skills-anthropic-claude|Equipping agents for the real world with Agent Skills \ Anthropic | Claude]]
+- Created source page: [[sources/01KJTN3N0M-rubrics-as-rewards-reinforcement-learning-beyond-verifiable-domains|Rubrics as Rewards: Reinforcement Learning Beyond Verifiable Domains]]
+- Created source page: [[sources/01KJTS8HZG-reinforcing-general-reasoning-without-verifiers|Reinforcing General Reasoning without Verifiers]]
+- Created source page: [[sources/01KJTX2G5P-deepseek-prover-v2-advancing-formal-mathematical-reasoning-via-reinforcement-lea|DeepSeek-Prover-V2: Advancing Formal Mathematical Reasoning via Reinforcement Learning for Subgoal Decomposition]]
+- Created source page: [[sources/01KJT3ZXPZ-from-fx-and-gx-to-fgx-llms-learn-new-skills-in-rl-by-composing-old-ones|From $f(x)$ and $g(x)$ to $f(g(x))$: LLMs Learn New Skills in RL by Composing Old Ones]]
+- Created source page: [[sources/01KJT1CPWR-improving-interactive-in-context-learning-from-natural-language-feedback|Improving Interactive In-Context Learning from Natural Language Feedback]]
+- Created source page: [[sources/01KJT6ZBSZ-toolorchestra-elevating-intelligence-via-efficient-model-and-tool-orchestration|ToolOrchestra: Elevating Intelligence via Efficient Model and Tool Orchestration]]
+- Created source page: [[sources/01KJTJQZ8Y-maestro-self-improving-text-to-image-generation-via-agent-orchestration|Maestro: Self-Improving Text-to-Image Generation via Agent Orchestration]]
+- Created source page: [[sources/01KJTPV81Q-rlpr-extrapolating-rlvr-to-general-domains-without-verifiers|RLPR: Extrapolating RLVR to General Domains without Verifiers]]
+- Created source page: [[sources/01KJTG8SPD-seeing-listening-remembering-and-reasoning-a-multimodal-agent-with-long-term-mem|Seeing, Listening, Remembering, and Reasoning: A Multimodal Agent with Long-Term Memory]]
+- Created source page: [[sources/01KJTBCNKD-memsearcher-training-llms-to-reason-search-and-manage-memory-via-end-to-end-rein|MemSearcher: Training LLMs to Reason, Search and Manage Memory via End-to-End Reinforcement Learning]]
+- Created source page: [[sources/01KJTWFMSP-absolute-zero-reinforced-self-play-reasoning-with-zero-data|Absolute Zero: Reinforced Self-play Reasoning with Zero Data]]
+- Created source page: [[sources/01KM34H24Z-quantum-mechanics-of-inverted-potential-well-hermitian-hamiltonian-with-imaginar|Quantum mechanics of inverted potential well -- Hermitian Hamiltonian with imaginary eigenvalues, quantum-classical correspondence]]
+- Created source page: [[sources/01KJT28Q4K-memrl-self-evolving-agents-via-runtime-reinforcement-learning-on-episodic-memory|MemRL: Self-Evolving Agents via Runtime Reinforcement Learning on Episodic Memory]]
+- Created source page: [[sources/01KJSYMQZH-the-bitter-lesson|The Bitter Lesson]]
+- Created source page: [[sources/01KKT37T1M-reasoning-rl-a-new-recipe-for-ai-apps-foundation-capital|Reasoning + RL: A new recipe for AI apps - Foundation Capital]]
+- Created source page: [[sources/01KJS1Q5DT-code-execution-with-mcp-building-more-efficient-ai-agents|Code execution with MCP: building more efficient AI agents]]
+- Created source page: [[sources/01KJTMCJY1-memp-exploring-agent-procedural-memory|Memp: Exploring Agent Procedural Memory]]
+- Created source page: [[sources/01KJTQH85K-reinforcement-pre-training|Reinforcement Pre-Training]]
+- Created source page: [[sources/01KJTA1YHZ-iterresearch-rethinking-long-horizon-agents-with-interaction-scaling|IterResearch: Rethinking Long-Horizon Agents with Interaction Scaling]]
+- Created source page: [[sources/01KJV3MZFW-chain-of-draft-thinking-faster-by-writing-less|Chain of Draft: Thinking Faster by Writing Less]]
+- Created source page: [[sources/01KJT9Y980-rlve-scaling-up-reinforcement-learning-for-language-models-with-adaptive-verifia|RLVE: Scaling Up Reinforcement Learning for Language Models with Adaptive Verifiable Environments]]
+- Created source page: [[sources/01KJTBFGVH-training-proactive-and-personalized-llm-agents|Training Proactive and Personalized LLM Agents]]
+- Created source page: [[sources/01KJS2RTHW-failing-to-understand-the-exponential-again|Failing to Understand the Exponential, Again]]
+- Created source page: [[sources/01KJTKT231-why-do-mllms-struggle-with-spatial-understanding-a-systematic-analysis-from-data|Why Do MLLMs Struggle with Spatial Understanding? A Systematic Analysis from Data to Architecture]]
+- Created source page: [[sources/01KJSWNHA7-stateful-agents-the-missing-link-in-llm-intelligence-letta|Stateful Agents: The Missing Link in LLM Intelligence  | Letta]]
+- Created source page: [[sources/01KJSVPQDA-the-think-tool-enabling-claude-to-stop-and-think|The "think" tool: Enabling Claude to stop and think]]
+- Created source page: [[sources/01KJSSFZW8-cognition-dont-build-multi-agents|Cognition | Don’t Build Multi-Agents]]
+- Created source page: [[sources/01KJV4D5YX-demystifying-long-chain-of-thought-reasoning-in-llms|Demystifying Long Chain-of-Thought Reasoning in LLMs]]
+- Created source page: [[sources/01KJTZ7B1J-does-reinforcement-learning-really-incentivize-reasoning-capacity-in-llms-beyond|Does Reinforcement Learning Really Incentivize Reasoning Capacity in LLMs Beyond the Base Model?]]
+- Created source page: [[sources/01KJTQ0YV3-direct-reasoning-optimization-constrained-rl-with-token-level-dense-reward-and-r|Direct Reasoning Optimization: Constrained RL with Token-Level Dense Reward and Rubric-Gated Constraints for Open-ended Tasks]]
+- Created source page: [[sources/01KJT6H3QA-stabilizing-reinforcement-learning-with-llms-formulation-and-practices|Stabilizing Reinforcement Learning with LLMs: Formulation and Practices]]
+- Created source page: [[sources/01KKTEGC13-openpipe-rl-for-agents|OpenPipe | RL For Agents]]
+- Created source page: [[sources/01KJV42RE1-pathrag-pruning-graph-based-retrieval-augmented-generation-with-relational-paths|PathRAG: Pruning Graph-based Retrieval Augmented Generation with Relational Paths]]
+- Created source page: [[sources/01KJTSBRDC-reasoning-llms-are-wandering-solution-explorers|Reasoning LLMs are Wandering Solution Explorers]]
+- Created source page: [[sources/01KJS27HS4-how-a-gemma-model-helped-discover-a-new-potential-cancer-therapy-pathway|How a Gemma model helped discover a new potential cancer therapy pathway]]
+- Created source page: [[sources/01KJV9HBN6-executable-code-actions-elicit-better-llm-agents|Executable Code Actions Elicit Better LLM Agents]]
+- Created source page: [[sources/01KJV25ADE-meminsight-autonomous-memory-augmentation-for-llm-agents|MemInsight: Autonomous Memory Augmentation for LLM Agents]]
+- Created source page: [[sources/01KJT6V2CT-monet-reasoning-in-latent-visual-space-beyond-images-and-language|Monet: Reasoning in Latent Visual Space Beyond Images and Language]]
+- Created source page: [[sources/01KJTDB22B-mitigating-overthinking-through-reasoning-shaping|Mitigating Overthinking through Reasoning Shaping]]
+- Created source page: [[sources/01KJT89YD6-agent-r1-training-powerful-llm-agents-with-end-to-end-reinforcement-learning|Agent-R1: Training Powerful LLM Agents with End-to-End Reinforcement Learning]]
+- Created source page: [[sources/01KJSVYBCE-advances-in-generative-ai-latent-space-reasoning-comparing-continuous-chain-of-t|Advances in Generative AI Latent Space Reasoning: Comparing Continuous Chain of Thought and Recurrent Depth Models]]
+- Created source page: [[sources/01KKT4SWNY-reasoning-to-learn-from-latent-thoughts|Reasoning to Learn from Latent Thoughts]]
+- Created source page: [[sources/01KJTF5CHP-flowrl-matching-reward-distributions-for-llm-reasoning|FlowRL: Matching Reward Distributions for LLM Reasoning]]
+- Created source page: [[sources/01KJV1PKTA-research-learning-to-reason-with-search-for-llms-via-reinforcement-learning|ReSearch: Learning to Reason with Search for LLMs via Reinforcement Learning]]
+- Created source page: [[sources/01KJTAFQQB-real-time-reasoning-agents-in-evolving-environments|Real-Time Reasoning Agents in Evolving Environments]]
+- Created source page: [[sources/01KJT06VE2-part-iv-ten-principles-for-building-strong-vertical-ai-businesses|Part IV: Ten principles for building strong vertical AI businesses]]
+- Created source page: [[sources/01KJTME7HT-reasoning-with-exploration-an-entropy-perspective|Reasoning with Exploration: An Entropy Perspective]]
+- Created source page: [[sources/01KJS34DRS-what-is-power-retention-manifest-ai|What Is Power Retention? - Manifest AI]]
+- Created source page: [[sources/01KJV3PQ9W-a-law-reasoning-benchmark-for-llm-with-tree-organized-structures-including-factu|A Law Reasoning Benchmark for LLM with Tree-Organized Structures including Factum Probandum, Evidence and Experiences]]
+- Created source page: [[sources/01KJT9AAYD-agentevolver-towards-efficient-self-evolving-agent-system|AgentEvolver: Towards Efficient Self-Evolving Agent System]]
+- Created source page: [[sources/01KJTCRE26-lightmem-lightweight-and-efficient-memory-augmented-generation|LightMem: Lightweight and Efficient Memory-Augmented Generation]]
+- Created source page: [[sources/01KJV3M3CC-visual-rft-visual-reinforcement-fine-tuning|Visual-RFT: Visual Reinforcement Fine-Tuning]]
+- Created source page: [[sources/01KJTBNSX3-simulating-environments-with-reasoning-models-for-agent-training|Simulating Environments with Reasoning Models for Agent Training]]
+- Created source page: [[sources/01KJT0S5JH-vertical-saas-now-with-ai-inside-andreessen-horowitz|Vertical SaaS: Now with AI Inside | Andreessen Horowitz]]
+- Created source page: [[sources/01KJSY2CEB-scaling-test-time-compute-a-new-paradigm-in-llm-performance|Scaling Test-Time Compute: A New Paradigm in LLM Performance]]
+- Created source page: [[sources/01KJTF2CYX-rlad-training-llms-to-discover-abstractions-for-solving-reasoning-problems|RLAD: Training LLMs to Discover Abstractions for Solving Reasoning Problems]]
+- Created source page: [[sources/01KJTE28KR-base-models-know-how-to-reason-thinking-models-learn-when|Base Models Know How to Reason, Thinking Models Learn When]]
+- Created source page: [[sources/01KJV2JYHE-in-prospect-and-retrospect-reflective-memory-management-for-long-term-personaliz|In Prospect and Retrospect: Reflective Memory Management for Long-term Personalized Dialogue Agents]]
+- Created source page: [[sources/01KJT6RXNS-thetaevolve-test-time-learning-on-open-problems|ThetaEvolve: Test-time Learning on Open Problems]]
+- Created source page: [[sources/01KJT7H2D2-downscaling-intelligence-exploring-perception-and-reasoning-bottlenecks-in-small|Downscaling Intelligence: Exploring Perception and Reasoning Bottlenecks in Small Multimodal Models]]
+- Created source page: [[sources/01KJS1WVEB-interleaved-thinking-unlocks-reliable-minimax-m2-agentic-capability|Interleaved Thinking Unlocks Reliable MiniMax-M2 Agentic Capability]]
+- Created source page: [[sources/01KJTHM1GB-compute-as-teacher-turning-inference-compute-into-reference-free-supervision|Compute as Teacher: Turning Inference Compute Into Reference-Free Supervision]]
+- Created source page: [[sources/01KJSZ5CFK-video-the-10-trillion-ai-revolution|Video: The $10 Trillion AI Revolution]]
+- Created source page: [[sources/report_aut-report-autonomous-agents|Report: autonomous agents]]
+- Created source page: [[sources/01KJT16GQ7-sarah-tavels-newsletter-substack|Sarah Tavel's Newsletter | Substack]]
+- Created entity page: [[entities/grpo|GRPO]]
+- Created entity page: [[entities/retrieval-augmented-generation|Retrieval-Augmented Generation]]
+- Created entity page: [[entities/group-relative-policy-optimization|Group Relative Policy Optimization]]
+- Created entity page: [[entities/openai-o1|OpenAI o1]]
+- Created entity page: [[entities/test-time-compute-scaling|Test-Time Compute Scaling]]
+- Created entity page: [[entities/catastrophic-forgetting|Catastrophic Forgetting]]
+- Created entity page: [[entities/scaling-laws|Scaling Laws]]
+- Created entity page: [[entities/gsm8k|GSM8K]]
+- Created entity page: [[entities/reinforcement-learning-from-human-feedback|Reinforcement Learning from Human Feedback]]
+- Created entity page: [[entities/chain-of-thought-prompting|Chain-of-Thought Prompting]]
+- Created entity page: [[entities/passk|pass@k]]
+- Created entity page: [[entities/model-context-protocol|Model Context Protocol]]
+- Created entity page: [[entities/direct-preference-optimization|Direct Preference Optimization]]
+- Created entity page: [[entities/model-context-protocol-mcp|Model Context Protocol (MCP)]]
+- Created entity page: [[entities/reward-hacking|Reward Hacking]]
+- Created entity page: [[entities/deepseek-r1|DeepSeek R1]]
+- Created entity page: [[entities/chain-of-thought-reasoning|chain-of-thought reasoning]]
+- Created entity page: [[entities/deepseek-r1|DeepSeek-R1]]
+- Created entity page: [[entities/vision-language-action-model|Vision-Language-Action model]]
+- Created entity page: [[entities/llama|LLaMA]]
+- Created entity page: [[entities/world-model|World Model]]
+- Created entity page: [[entities/swe-bench|SWE-bench]]
+- Created entity page: [[entities/arc-agi|ARC-AGI]]
+- Created entity page: [[entities/lora|LoRA]]
+- Created entity page: [[entities/test-time-compute-scaling|Test-Time Compute Scaling]]
+- Created entity page: [[entities/group-relative-policy-optimization-grpo|Group Relative Policy Optimization (GRPO)]]
+- Created entity page: [[entities/proximal-policy-optimization|Proximal Policy Optimization]]
+- Created entity page: [[entities/retrieval-augmented-generation-rag|Retrieval-Augmented Generation (RAG)]]
+- Created entity page: [[entities/inference-time-compute-scaling|Inference-Time Compute Scaling]]
+- Created entity page: [[entities/mixture-of-experts|Mixture of Experts]]
+- Created entity page: [[entities/long-context-window|Long Context Window]]
+- Created entity page: [[entities/webarena|WebArena]]
+- Created entity page: [[entities/reflexion|Reflexion]]
+- Created entity page: [[entities/hotpotqa|HotpotQA]]
+- Created entity page: [[entities/harvey|Harvey]]
+- Created entity page: [[entities/post-training|Post-training]]
+- Created entity page: [[entities/scale-ai|Scale AI]]
+- Created entity page: [[entities/knowledge-distillation|Knowledge Distillation]]
+- Created entity page: [[entities/perplexity|Perplexity]]
+- Created entity page: [[entities/react|ReAct]]
+- Created entity page: [[entities/fineweb-edu|FineWeb-Edu]]
+- Created entity page: [[entities/grokking|grokking]]
+- Created entity page: [[entities/hybrid-search|Hybrid Search]]
+- Created entity page: [[entities/classifier-free-guidance|Classifier-Free Guidance]]
+- Created entity page: [[entities/humaneval|HumanEval]]
+- Created entity page: [[entities/supervised-fine-tuning|Supervised Fine-Tuning]]
+- Created entity page: [[entities/genie|Genie]]
+- Created entity page: [[entities/chain-of-thought|Chain-of-Thought]]
+- Created entity page: [[entities/kv-cache|KV Cache]]
+- Created entity page: [[entities/inner-monologue|Inner Monologue]]
+- Created entity page: [[entities/monte-carlo-tree-search|Monte Carlo Tree Search]]
+- Created entity page: [[entities/proximal-policy-optimization-ppo|Proximal Policy Optimization (PPO)]]
+- Created entity page: [[entities/flow-matching|Flow Matching]]
+- Created entity page: [[entities/openai|OpenAI]]
+- Created entity page: [[entities/transformer-architecture|transformer architecture]]
+- Created entity page: [[entities/aime|AIME]]
+- Created entity page: [[entities/mmlu|MMLU]]
+- Created entity page: [[entities/applied-intuition|Applied Intuition]]
+- Created entity page: [[entities/self-play|self-play]]
+- Created entity page: [[entities/linear-attention|Linear Attention]]
+- Created entity page: [[entities/livecodebench|LiveCodeBench]]
+- Created entity page: [[entities/reinforcement-learning-with-verifiable-rewards-rlvr|Reinforcement Learning with Verifiable Rewards (RLVR)]]
+- Created entity page: [[entities/chain-of-thought-cot|Chain-of-Thought (CoT)]]
+- Created entity page: [[entities/qwen25-vl|Qwen2.5-VL]]
+- Created entity page: [[entities/prompt-injection|Prompt Injection]]
+- Created entity page: [[entities/reinforcement-learning-from-verifiable-rewards-rlvr|Reinforcement Learning from Verifiable Rewards (RLVR)]]
+- Created entity page: [[entities/process-reward-model|Process Reward Model]]
+- Created entity page: [[entities/osworld|OSWorld]]
+- Created entity page: [[entities/tensor-parallelism|Tensor Parallelism]]
+- Created entity page: [[entities/aurora|Aurora]]
+- Created entity page: [[entities/muon-optimizer|Muon Optimizer]]
+- Created entity page: [[entities/gpqa|GPQA]]
+- Created entity page: [[entities/cuda|CUDA]]
+- Created entity page: [[entities/test-time-compute|Test-time compute]]
+- Created entity page: [[entities/prompt-injection|Prompt Injection]]
+- Created entity page: [[entities/abstraction-and-reasoning-corpus|Abstraction and Reasoning Corpus]]
+- Created entity page: [[entities/flashattention|FlashAttention]]
+- Created entity page: [[entities/bitter-lesson|Bitter Lesson]]
+- Created entity page: [[entities/mmmu|MMMU]]
+- Created entity page: [[entities/ppo|PPO]]
+- Created entity page: [[entities/active-learning|Active Learning]]
+- Created entity page: [[entities/best-of-n-sampling|Best-of-N Sampling]]
+- Created entity page: [[entities/reinforcement-learning-with-verifiable-rewards|Reinforcement Learning with Verifiable Rewards]]
+- Created entity page: [[entities/majority-voting|Majority Voting]]
+- Created entity page: [[entities/supervised-fine-tuning-sft|Supervised Fine-Tuning (SFT)]]
+- Created entity page: [[entities/llm-as-judge|LLM-as-Judge]]
+- Created entity page: [[entities/inference-time-scaling|inference-time scaling]]
+- Created entity page: [[entities/mixture-of-experts-moe|Mixture of Experts (MoE)]]
+- Created entity page: [[entities/dclm|DCLM]]
+- Created entity page: [[entities/monte-carlo-tree-search-mcts|Monte Carlo Tree Search (MCTS)]]
+- Created entity page: [[entities/agentic-ai|Agentic AI]]
+- Created entity page: [[entities/physical-intelligence|Physical Intelligence]]
+- Created entity page: [[entities/prime|PRIME]]
+- Created entity page: [[entities/gpt-4|GPT-4]]
+- Created entity page: [[entities/o1|o1]]
+- Created entity page: [[entities/inference-time-compute-scaling|Inference-Time Compute Scaling]]
+- Created entity page: [[entities/rlhf|RLHF]]
+- Created entity page: [[entities/claude-code|Claude Code]]
+- Created entity page: [[entities/hugging-face|Hugging Face]]
+- Created entity page: [[entities/generative-ai|Generative AI]]
+- Created entity page: [[entities/meaningful-use|Meaningful Use]]
+- Created entity page: [[entities/longbench|LongBench]]
+- Created entity page: [[entities/grpo-group-relative-policy-optimization|GRPO (Group Relative Policy Optimization)]]
+- Created entity page: [[entities/context-engineering|Context engineering]]
+- Created entity page: [[entities/yarn|YARN]]
+- Created entity page: [[entities/direct-preference-optimization-dpo|Direct Preference Optimization (DPO)]]
+- Created entity page: [[entities/amie-articulate-medical-intelligence-explorer|AMIE (Articulate Medical Intelligence Explorer)]]
+- Created entity page: [[entities/dapo|DAPO]]
+- Created entity page: [[entities/alphago|AlphaGo]]
+- Created entity page: [[entities/reinforcement-learning|Reinforcement Learning]]
+- Created entity page: [[entities/diffusion-transformer-dit|Diffusion Transformer (DiT)]]
+- Created entity page: [[entities/platform-shift|Platform Shift]]
+- Created entity page: [[entities/self-consistency|Self-Consistency]]
+- Created entity page: [[entities/hallucination|Hallucination]]
+- Created entity page: [[entities/alfworld|ALFWorld]]
+- Created entity page: [[entities/reinforcement-learning-from-human-feedback-rlhf|Reinforcement Learning from Human Feedback (RLHF)]]
+- Created entity page: [[entities/diffusion-transformer|Diffusion Transformer]]
+- Created entity page: [[entities/state-space-models|State Space Models]]
+- Created entity page: [[entities/innovators-dilemma|Innovator's Dilemma]]
+- Created entity page: [[entities/sora|Sora]]
+- Created entity page: [[entities/math500|MATH500]]
+- Created entity page: [[entities/geneval|GenEval]]
+- Created entity page: [[entities/math-500|MATH-500]]
+- Created entity page: [[entities/llm-as-a-judge|LLM-as-a-Judge]]
+- Created entity page: [[entities/qwen25|Qwen2.5]]
+- Created entity page: [[entities/vibe-coding|Vibe Coding]]
+- Created entity page: [[entities/distillation|Distillation]]
+- Created entity page: [[entities/product-market-fit|Product-Market Fit]]
+- Created entity page: [[entities/reward-shaping|Reward Shaping]]
+- Created entity page: [[entities/self-refine|Self-Refine]]
+- Created entity page: [[entities/inference-time-scaling|Inference-time scaling]]
+- Created entity page: [[entities/graphrag|GraphRAG]]
+- Created entity page: [[entities/speculative-decoding|Speculative Decoding]]
+- Created entity page: [[entities/vector-database|Vector Database]]
+- Created entity page: [[entities/genie-3|Genie 3]]
+- Created entity page: [[entities/sierra|Sierra]]
+- Created entity page: [[entities/reinforce|REINFORCE++]]
+- Created entity page: [[entities/gemini-25-pro|Gemini 2.5 Pro]]
+- Created entity page: [[entities/test-time-training-ttt|Test-Time Training (TTT)]]
+- Created entity page: [[entities/openai-o3|OpenAI o3]]
+- Created entity page: [[entities/rlvr|RLVR]]
+- Created entity page: [[entities/clip|CLIP]]
+- Created entity page: [[entities/fully-sharded-data-parallelism|Fully Sharded Data Parallelism]]
+- Created entity page: [[entities/star|STaR]]
+- Created entity page: [[entities/o3|o3]]
+- Created entity page: [[entities/prompt-engineering|Prompt Engineering]]
+- Created entity page: [[entities/synthetic-data|Synthetic Data]]
+- Created entity page: [[entities/value-function|value function]]
+- Created entity page: [[entities/mamba|Mamba]]
+- Created entity page: [[entities/a-mem|A-MEM]]
+- Created entity page: [[entities/gsm8k|GSM8K]]
+- Created entity page: [[entities/imagenet|ImageNet]]
+- Created entity page: [[entities/titans|Titans]]
+- Created entity page: [[entities/github-copilot|GitHub Copilot]]
+- Created entity page: [[entities/verl|verl]]
+- Created entity page: [[entities/foundation-model|Foundation Model]]
+- Created entity page: [[entities/musique|MuSiQue]]
+- Created entity page: [[entities/openhands|OpenHands]]
+- Created entity page: [[entities/process-reward-model-prm|Process Reward Model (PRM)]]
+- Created entity page: [[entities/parametric-memory|Parametric Memory]]
+- Created entity page: [[entities/stability-plasticity-dilemma|Stability-Plasticity Dilemma]]
+- Created entity page: [[entities/frontier-math|Frontier Math]]
+- Created entity page: [[entities/bm25|BM25]]
+- Created entity page: [[entities/alphago|AlphaGo]]
+- Created entity page: [[entities/outcome-based-reward|Outcome-Based Reward]]
+- Created entity page: [[entities/test-time-training|Test-Time Training]]
+- Created entity page: [[entities/context-engineering|Context Engineering]]
+- Created entity page: [[entities/the-bitter-lesson|The Bitter Lesson]]
+- Created entity page: [[entities/alphafold|AlphaFold]]
+- Created entity page: [[entities/benchmark-capital|Benchmark Capital]]
+- Created entity page: [[entities/character-ai|Character AI]]
+- Created entity page: [[entities/blackwell-gpu|Blackwell GPU]]
+- Created entity page: [[entities/system-1-system-2-reasoning|System 1 / System 2 Reasoning]]
+- Created entity page: [[entities/codeact|CodeAct]]
+- Created entity page: [[entities/simpleqa|SimpleQA]]
+- Created entity page: [[entities/qwen3|Qwen3]]
+- Created entity page: [[entities/kv-cache-reuse|KV Cache Reuse]]
+- Created entity page: [[entities/hellaswag|HellaSwag]]
+- Created entity page: [[entities/ruler|RULER]]
+- Created entity page: [[entities/teleoperation|teleoperation]]
+- Created entity page: [[entities/paces-practical-assessment-of-clinical-examination-skills|PACES (Practical Assessment of Clinical Examination Skills)]]
+- Created entity page: [[entities/braintrust|BrainTrust]]
+- Created entity page: [[entities/fineweb|FineWeb]]
+- Created entity page: [[entities/mathvista|MathVista]]
+- Created entity page: [[entities/lora-low-rank-adaptation|LoRA (Low-Rank Adaptation)]]
+- Created entity page: [[entities/inference-time-compute|Inference-Time Compute]]
+- Created entity page: [[entities/webshop|WebShop]]
+- Created entity page: [[entities/in-context-learning|in-context learning]]
+- Created entity page: [[entities/scienceqa|ScienceQA]]
+- Created entity page: [[entities/computer-use|Computer Use]]
+- Created entity page: [[entities/shopify|Shopify]]
+- Created source page: [[sources/01KJVGT3EJ-arc-agi-3-the-interactive-reasoning-benchmark|⚡️ARC-AGI-3: The Interactive Reasoning Benchmark]]
+- Created source page: [[sources/01KJVH03BZ-scaling-test-time-compute-to-multi-agent-civilizations-noam-brown-openai|Scaling Test Time Compute to Multi-Agent Civilizations — Noam Brown, OpenAI]]
+- Created source page: [[sources/01KJVF0TDN-how-gpt-5-thinks-openai-vp-of-research-jerry-tworek|How GPT-5 Thinks — OpenAI VP of Research Jerry Tworek]]
+- Created source page: [[sources/01KJVERVWW-why-rl-won-kyle-corbitt-openpipe-acq-coreweave|Why RL Won — Kyle Corbitt, OpenPipe (acq. CoreWeave)]]
+- Created source page: [[sources/01KJSVWTEZ-14-what-is-mcp-and-why-is-everyone-suddenly-talking-about-it|🦸🏻#14: What Is MCP, and Why Is Everyone – Suddenly!– Talking About It?]]
+- Created source page: [[sources/01KJSVF89A-how-hugging-face-is-using-e2b-to-replicate-deepseek-r1-e2b-blog|How Hugging Face Is Using E2B to Replicate DeepSeek-R1 — E2B Blog]]
+- Created entity page: [[entities/tobi-lütke|Tobi Lütke]]
+- Created entity page: [[entities/tobi-lütke|Tobi Lütke]]
+- Created entity page: [[entities/entropy-regularization|Entropy Regularization]]
+- Created entity page: [[entities/entropy-regularization|Entropy Regularization]]
+- Created entity page: [[entities/react-framework|ReAct Framework]]
+- Created entity page: [[entities/react-framework|ReAct Framework]]
+- Created entity page: [[entities/swe-bench-verified|SWE-bench Verified]]
+- Created entity page: [[entities/swe-bench-verified|SWE-bench Verified]]
+- Created entity page: [[entities/humanitys-last-exam|Humanity's Last Exam]]
+- Created entity page: [[entities/humanitys-last-exam|Humanity's Last Exam]]
+- Created entity page: [[entities/alphaevolve|AlphaEvolve]]
+- Created entity page: [[entities/alphaevolve|AlphaEvolve]]
+- Created entity page: [[entities/behavior-cloning|Behavior Cloning]]
+- Created entity page: [[entities/behavior-cloning|Behavior Cloning]]
+- Created entity page: [[entities/rlvr-reinforcement-learning-with-verifiable-rewards|RLVR (Reinforcement Learning with Verifiable Rewards)]]
+- Created entity page: [[entities/rlvr-reinforcement-learning-with-verifiable-rewards|RLVR (Reinforcement Learning with Verifiable Rewards)]]
+- Created entity page: [[entities/fineweb-dataset|FineWeb Dataset]]
+- Created entity page: [[entities/fineweb-dataset|FineWeb Dataset]]
+- Created entity page: [[entities/mechanistic-interpretability|Mechanistic Interpretability]]
+- Created entity page: [[entities/mechanistic-interpretability|Mechanistic Interpretability]]
+- Created entity page: [[entities/cursor|Cursor]]
+- Created entity page: [[entities/cursor|Cursor]]
+- Created entity page: [[entities/continual-learning|Continual learning]]
+- Created entity page: [[entities/continual-learning|Continual learning]]
+- Created entity page: [[entities/aime-2024|AIME 2024]]
+- Created entity page: [[entities/aime-2024|AIME 2024]]
+- Created entity page: [[entities/human-in-the-loop|Human-in-the-Loop]]
+- Created entity page: [[entities/human-in-the-loop|Human-in-the-Loop]]
+- Created entity page: [[entities/test-time-scaling|Test-time Scaling]]
+- Created entity page: [[entities/test-time-scaling|Test-time Scaling]]
+- Created entity page: [[entities/nvlink|NVLink]]
+- Created entity page: [[entities/nvlink|NVLink]]
+- Created entity page: [[entities/diffusion-policy|Diffusion Policy]]
+- Created entity page: [[entities/diffusion-policy|Diffusion Policy]]
+- Created entity page: [[entities/vllm|vLLM]]
+- Created entity page: [[entities/vllm|vLLM]]
+- Created entity page: [[entities/langchain|LangChain]]
+- Created entity page: [[entities/langchain|LangChain]]
+- Created entity page: [[entities/context-parallelism|context parallelism]]
+- Created entity page: [[entities/context-parallelism|context parallelism]]
+- Created entity page: [[entities/vertical-ai|Vertical AI]]
+- Created entity page: [[entities/vertical-ai|Vertical AI]]
+- Created entity page: [[entities/gpt-5|GPT-5]]
+- Created entity page: [[entities/veo-2|Veo 2]]
+- Created entity page: [[entities/gpt-5|GPT-5]]
+- Created entity page: [[entities/residual-vector-quantization-rvq|Residual Vector Quantization (RVQ)]]
+- Created entity page: [[entities/residual-vector-quantization-rvq|Residual Vector Quantization (RVQ)]]
+- Created entity page: [[entities/passk-metric|pass@k metric]]
+- Created entity page: [[entities/passk-metric|pass@k metric]]
+- Created entity page: [[entities/browsecomp|BrowseComp]]
+- Created entity page: [[entities/browsecomp|BrowseComp]]
+- Created entity page: [[entities/gpt-4o|GPT-4o]]
+- Created entity page: [[entities/gpt-4o|GPT-4o]]
+- Created entity page: [[entities/pass1|Pass@1]]
+- Created entity page: [[entities/pass1|Pass@1]]
+- Created entity page: [[entities/out-of-distribution-generalization|Out-of-Distribution Generalization]]
+- Created entity page: [[entities/out-of-distribution-generalization|Out-of-Distribution Generalization]]
+- Created entity page: [[entities/supervised-learning|Supervised Learning]]
+- Created entity page: [[entities/supervised-learning|Supervised Learning]]
+- Created entity page: [[entities/behavioral-cloning|behavioral cloning]]
+- Created entity page: [[entities/behavioral-cloning|behavioral cloning]]
+- Created entity page: [[entities/reference-model|Reference Model]]
+- Created entity page: [[entities/reference-model|Reference Model]]
+- Created entity page: [[entities/gpqa-diamond|GPQA-Diamond]]
+- Created entity page: [[entities/gpqa-diamond|GPQA-Diamond]]
+- Created entity page: [[entities/mem0|Mem0]]
+- Created entity page: [[entities/mem0|Mem0]]
+- Created entity page: [[entities/memorybank|MemoryBank]]
+- Created entity page: [[entities/memorybank|MemoryBank]]
+- Created entity page: [[entities/constitutional-ai|Constitutional AI]]
+- Created entity page: [[entities/constitutional-ai|Constitutional AI]]
+- Created entity page: [[entities/deep-research|Deep Research]]
+- Created entity page: [[entities/deep-research|Deep Research]]
+- Created entity page: [[entities/synthetic-data-generation|Synthetic Data Generation]]
+- Created entity page: [[entities/synthetic-data-generation|Synthetic Data Generation]]
+- Created entity page: [[entities/reinforcement-fine-tuning|Reinforcement Fine-Tuning]]
+- Created entity page: [[entities/reinforcement-fine-tuning|Reinforcement Fine-Tuning]]
+- Created entity page: [[entities/deepseek|DeepSeek]]
+- Created entity page: [[entities/deepseek|DeepSeek]]
+- Created entity page: [[entities/reinforcement-learning-from-verifiable-rewards|Reinforcement Learning from Verifiable Rewards]]
+- Created entity page: [[entities/reinforcement-learning-from-verifiable-rewards|Reinforcement Learning from Verifiable Rewards]]
+- Created entity page: [[entities/low-rank-adaptation|Low-Rank Adaptation]]
+- Created entity page: [[entities/low-rank-adaptation|Low-Rank Adaptation]]
+- Created entity page: [[entities/outcome-reward-model|Outcome Reward Model]]
+- Created entity page: [[entities/outcome-reward-model|Outcome Reward Model]]
+- Created entity page: [[entities/intuitive-physics|Intuitive Physics]]
+- Created entity page: [[entities/intuitive-physics|Intuitive Physics]]
+- Created entity page: [[entities/zep|Zep]]
+- Created entity page: [[entities/zep|Zep]]
+- Created entity page: [[entities/large-reasoning-model-lrm|Large Reasoning Model (LRM)]]
+- Created entity page: [[entities/runway|Runway]]
+- Created entity page: [[entities/large-reasoning-model-lrm|Large Reasoning Model (LRM)]]
+- Created entity page: [[entities/logan-bartlett-show|Logan Bartlett Show]]
+- Created entity page: [[entities/logan-bartlett-show|Logan Bartlett Show]]
+- Created entity page: [[entities/artificial-superintelligence-asi|Artificial Superintelligence (ASI)]]
+- Created entity page: [[entities/artificial-superintelligence-asi|Artificial Superintelligence (ASI)]]
+- Created entity page: [[entities/model-collapse|Model Collapse]]
+- Created entity page: [[entities/model-collapse|Model Collapse]]
+- Created entity page: [[entities/mmlu-pro|MMLU-Pro]]
+- Created entity page: [[entities/mmlu-pro|MMLU-Pro]]
+- Created entity page: [[entities/state-space-model|State Space Model]]
+- Created entity page: [[entities/state-space-model|State Space Model]]
+- Created entity page: [[entities/psnr|PSNR]]
+- Created entity page: [[entities/psnr|PSNR]]
+- Created entity page: [[entities/llama-3|Llama-3]]
+- Created entity page: [[entities/llama-3|Llama-3]]
+- Created entity page: [[entities/semdedup|SemDedup]]
+- Created entity page: [[entities/semdedup|SemDedup]]
+- Created entity page: [[entities/system-2-thinking|System 2 thinking]]
+- Created entity page: [[entities/system-2-thinking|System 2 thinking]]
+- Created entity page: [[entities/variational-autoencoder|Variational Autoencoder]]
+- Created entity page: [[entities/variational-autoencoder|Variational Autoencoder]]
+- Created entity page: [[entities/textgrad|TextGrad]]
+- Created entity page: [[entities/textgrad|TextGrad]]
+- Created entity page: [[entities/datacomp|DataComp]]
+- Created entity page: [[entities/datacomp|DataComp]]
+- Created entity page: [[entities/episodic-memory|Episodic Memory]]
+- Created entity page: [[entities/episodic-memory|Episodic Memory]]
+- Created entity page: [[entities/bridgedata-v2|BridgeData V2]]
+- Created entity page: [[entities/bridgedata-v2|BridgeData V2]]
+- Created entity page: [[entities/teacher-forcing|teacher forcing]]
+- Created entity page: [[entities/teacher-forcing|teacher forcing]]
+- Created entity page: [[entities/total-addressable-market-tam|Total Addressable Market (TAM)]]
+- Created entity page: [[entities/total-addressable-market-tam|Total Addressable Market (TAM)]]
+- Created entity page: [[entities/self-supervised-learning|Self-Supervised Learning]]
+- Created entity page: [[entities/self-supervised-learning|Self-Supervised Learning]]
+- Created entity page: [[entities/memgpt|MemGPT]]
+- Created entity page: [[entities/memgpt|MemGPT]]
+- Created entity page: [[entities/diffusion-models|Diffusion Models]]
+- Created entity page: [[entities/diffusion-models|Diffusion Models]]
+- Created entity page: [[entities/alphaproof|AlphaProof]]
+- Created entity page: [[entities/alphaproof|AlphaProof]]
+- Created entity page: [[entities/ai-engineer|AI Engineer]]
+- Created entity page: [[entities/ai-engineer|AI Engineer]]
+- Created entity page: [[entities/vlmevalkit|VLMEvalKit]]
+- Created entity page: [[entities/vlmevalkit|VLMEvalKit]]
+- Created entity page: [[entities/mbpp|MBPP]]
+- Created entity page: [[entities/mbpp|MBPP]]
+- Created entity page: [[entities/context-window|Context Window]]
+- Created entity page: [[entities/context-window|Context Window]]
+- Created entity page: [[entities/sequence-parallelism|Sequence Parallelism]]
+- Created entity page: [[entities/sequence-parallelism|Sequence Parallelism]]
+- Created entity page: [[entities/gaussian-splatting|Gaussian Splatting]]
+- Created entity page: [[entities/gaussian-splatting|Gaussian Splatting]]
+- Created entity page: [[entities/chartqa|ChartQA]]
+- Created entity page: [[entities/chartqa|ChartQA]]
+- Created entity page: [[entities/flux|FLUX]]
+- Created entity page: [[entities/flux|FLUX]]
+- Created entity page: [[entities/siglip|SigLIP]]
+- Created entity page: [[entities/siglip|SigLIP]]
+- Created entity page: [[entities/snowflake|Snowflake]]
+- Created entity page: [[entities/snowflake|Snowflake]]
+- Created entity page: [[entities/apple-intelligence|Apple Intelligence]]
+- Created entity page: [[entities/apple-intelligence|Apple Intelligence]]
+- Created entity page: [[entities/model-commoditization|Model Commoditization]]
+- Created entity page: [[entities/model-commoditization|Model Commoditization]]
+- Created entity page: [[entities/chameleon|Chameleon]]
+- Created entity page: [[entities/chameleon|Chameleon]]
+- Created entity page: [[entities/world-models|World Models]]
+- Created entity page: [[entities/world-models|World Models]]
+- Created entity page: [[entities/isomorphic-labs|Isomorphic Labs]]
+- Created entity page: [[entities/isomorphic-labs|Isomorphic Labs]]
+- Created entity page: [[entities/platonic-representation-hypothesis|Platonic Representation Hypothesis]]
+- Created entity page: [[entities/platonic-representation-hypothesis|Platonic Representation Hypothesis]]
+- Created entity page: [[entities/sim-to-real-transfer|Sim-to-Real Transfer]]
+- Created entity page: [[entities/sim-to-real-transfer|Sim-to-Real Transfer]]
+- Created entity page: [[entities/abridge|Abridge]]
+- Created entity page: [[entities/devin|Devin]]
+- Created entity page: [[entities/abridge|Abridge]]
+- Created entity page: [[entities/multimodal-ai|Multimodal AI]]
+- Created entity page: [[entities/multimodal-ai|Multimodal AI]]
+- Created entity page: [[entities/generator-verifier-gap|generator-verifier gap]]
+- Created entity page: [[entities/generator-verifier-gap|generator-verifier gap]]
+- Created entity page: [[entities/characterai|Character.AI]]
+- Created entity page: [[entities/characterai|Character.AI]]
+- Created entity page: [[entities/gaia|GAIA]]
+- Created entity page: [[entities/gaia|GAIA]]
+- Created entity page: [[entities/hallucination-rate|Hallucination Rate]]
+- Created entity page: [[entities/hallucination-rate|Hallucination Rate]]
+- Created entity page: [[entities/data-flywheel|data flywheel]]
+- Created entity page: [[entities/data-flywheel|data flywheel]]
+- Created entity page: [[entities/voyager|Voyager]]
+- Created entity page: [[entities/voyager|Voyager]]
+- Created entity page: [[entities/2wikimultihopqa|2WikiMultihopQA]]
+- Created entity page: [[entities/2wikimultihopqa|2WikiMultihopQA]]
+- Created entity page: [[entities/figma|Figma]]
+- Created entity page: [[entities/figma|Figma]]
+- Created entity page: [[entities/y-combinator|Y Combinator]]
+- Created entity page: [[entities/y-combinator|Y Combinator]]
+- Created entity page: [[entities/working-memory|Working Memory]]
+- Created entity page: [[entities/working-memory|Working Memory]]
+- Created entity page: [[entities/diffusion-language-model|Diffusion language model]]
+- Created entity page: [[entities/diffusion-language-model|Diffusion language model]]
+- Created entity page: [[entities/test-time-learning|Test-Time Learning]]
+- Created entity page: [[entities/test-time-learning|Test-Time Learning]]
+- Created entity page: [[entities/waymo|Waymo]]
+- Created entity page: [[entities/mamba-2|Mamba 2]]
+- Created entity page: [[entities/waymo|Waymo]]
+- Created entity page: [[entities/adaptive-layer-normalization-adaln|Adaptive Layer Normalization (AdaLN)]]
+- Created entity page: [[entities/adaptive-layer-normalization-adaln|Adaptive Layer Normalization (AdaLN)]]
+- Created entity page: [[entities/mvot|MVoT]]
+- Created entity page: [[entities/mvot|MVoT]]
+- Created entity page: [[entities/system-1-system-2-thinking|System 1 / System 2 Thinking]]
+- Created entity page: [[entities/system-1-system-2-thinking|System 1 / System 2 Thinking]]
+- Created entity page: [[entities/gemini-15-flash|Gemini 1.5 Flash]]
+- Created entity page: [[entities/gemini-15-flash|Gemini 1.5 Flash]]
+- Created entity page: [[entities/slimpajama|SlimPajama]]
+- Created entity page: [[entities/slimpajama|SlimPajama]]
+- Created entity page: [[entities/grouped-query-attention|Grouped Query Attention]]
+- Created entity page: [[entities/grouped-query-attention|Grouped Query Attention]]
+- Created entity page: [[entities/chinchilla-scaling-laws|Chinchilla Scaling Laws]]
+- Created entity page: [[entities/claude-35-haiku|Claude 3.5 Haiku]]
+- Created entity page: [[entities/gross-margin|Gross margin]]
+- Created entity page: [[entities/aime24|AIME24]]
+- Created entity page: [[entities/idea-maze|Idea Maze]]
+- Created entity page: [[entities/credit-assignment-problem|Credit Assignment Problem]]
+- Created entity page: [[entities/alphazero|AlphaZero]]
+- Created entity page: [[entities/diffusion-model|Diffusion Model]]
+- Created entity page: [[entities/alphacode|AlphaCode]]
+- Created entity page: [[entities/gemini|Gemini]]
+- Created entity page: [[entities/continual-adaptation|Continual Adaptation]]
+- Created entity page: [[entities/mem-α|Mem-α]]
+- Created entity page: [[entities/langgraph|LangGraph]]
+- Created entity page: [[entities/clip-score|CLIP Score]]
+- Created entity page: [[entities/win-rate|Win Rate]]
+- Created entity page: [[entities/olympiadbench|OlympiadBench]]
+- Created entity page: [[entities/frontier-model|Frontier Model]]
+- Created entity page: [[entities/reinforcement-learning-rl|reinforcement learning (RL)]]
+- Created entity page: [[entities/multi-stage-rl-training|Multi-Stage RL Training]]
+- Created entity page: [[entities/alpacaeval|AlpacaEval]]
+- Created entity page: [[entities/jagged-intelligence|Jagged Intelligence]]
+- Created entity page: [[entities/objective-structured-clinical-examination-osce|Objective Structured Clinical Examination (OSCE)]]
+- Created entity page: [[entities/mlops|MLOps]]
+- Created entity page: [[entities/thrive-capital|Thrive Capital]]
+- Created entity page: [[entities/agentforce|Agentforce]]
+- Created entity page: [[entities/openai-deep-research|OpenAI Deep Research]]
+- Created entity page: [[entities/z-loss|z-loss]]
+- Created entity page: [[entities/gpt-35|GPT-3.5]]
+- Created entity page: [[entities/deliberative-alignment|Deliberative Alignment]]
+- Created entity page: [[entities/kl-divergence-penalty|KL divergence penalty]]
+- Created entity page: [[entities/jasper|Jasper]]
+- Created entity page: [[entities/mem1|MEM1]]
+- Created entity page: [[entities/rloo|RLOO]]
+- Created entity page: [[entities/cosmopedia|Cosmopedia]]
+- Created entity page: [[entities/ultrafeedback|UltraFeedback]]
+- Created entity page: [[entities/gemma|Gemma]]
+- Created entity page: [[entities/deepseek-v3|DeepSeek V3]]
+- Created entity page: [[entities/conformal-prediction|Conformal Prediction]]
+- Created entity page: [[entities/context-rot|Context rot]]
+- Created entity page: [[entities/llava|LLaVA]]
+- Created entity page: [[entities/action-chunking|Action Chunking]]
+- Created entity page: [[entities/τ-bench|τ-Bench]]
+- Created entity page: [[entities/math|MATH]]
+- Created entity page: [[entities/latent-reasoning|Latent Reasoning]]
+- Created entity page: [[entities/annual-recurring-revenue-arr|Annual Recurring Revenue (ARR)]]
+- Created entity page: [[entities/score|SCoRe]]
+- Created entity page: [[entities/benchmark|Benchmark]]
+- Created entity page: [[entities/bagel|Bagel]]
+- Created entity page: [[entities/curriculum-learning|Curriculum Learning]]
+- Created entity page: [[entities/ifeval|IFEval]]
+- Created entity page: [[entities/qwen25-7b-instruct|Qwen2.5-7B-Instruct]]
+- Created entity page: [[entities/qk-norm|QK-Norm]]
+- Created entity page: [[entities/elevenlabs|ElevenLabs]]
+- Created entity page: [[entities/multi-agent-system|Multi-Agent System]]
+- Created entity page: [[entities/andreessen-horowitz|Andreessen Horowitz]]
+- Created entity page: [[entities/large-language-model|Large Language Model]]
+- Created entity page: [[entities/deep-learning|Deep Learning]]
+- Created entity page: [[entities/anthropic|Anthropic]]
+- Created entity page: [[entities/rippling|Rippling]]
+- Created entity page: [[entities/outset|Outset]]
+- Created entity page: [[entities/application-layer|Application layer]]
+- Created entity page: [[entities/llama-2|LLaMA 2]]
+- Created entity page: [[entities/sample-efficiency|Sample Efficiency]]
+- Created entity page: [[entities/markov-decision-process|Markov Decision Process]]
+- Created entity page: [[entities/operator|Operator]]
+- Created entity page: [[entities/bradley-terry-model|Bradley-Terry model]]
+- Created entity page: [[entities/math-dataset|MATH Dataset]]
+- Created entity page: [[entities/vqav2|VQAV2]]
+- Created entity page: [[entities/index-ventures|Index Ventures]]
+- Created entity page: [[entities/chinchilla-scaling-law|Chinchilla Scaling Law]]
+- Created entity page: [[entities/suno|Suno]]
+- Created entity page: [[entities/model-router|model router]]
+- Created entity page: [[entities/infiniband|InfiniBand]]
+- Created entity page: [[entities/cerebras|Cerebras]]
+- Created entity page: [[entities/set-of-mark-prompting|Set-of-Mark Prompting]]
+- Created entity page: [[entities/longmemeval|LongMemEval]]
+- Created entity page: [[entities/exact-match-em|Exact Match (EM)]]
+- Created entity page: [[entities/hierarchical-reasoning-model|Hierarchical Reasoning Model]]
+- Created entity page: [[entities/neural-scaling-laws|Neural Scaling Laws]]
+- Created entity page: [[entities/lpips|LPIPS]]
+- Created entity page: [[entities/agentic-workflow|Agentic Workflow]]
+- Created entity page: [[entities/ai-platform-shift|AI Platform Shift]]
+- Created entity page: [[entities/cot-passk|CoT-Pass@k]]
+- Created entity page: [[entities/pipeline-parallelism|Pipeline Parallelism]]
+- Created entity page: [[entities/model-predictive-control|Model Predictive Control]]
+- Created entity page: [[entities/livekit|LiveKit]]
+- Created entity page: [[entities/spac|SPAC]]
+- Created entity page: [[entities/rotary-position-embedding|Rotary Position Embedding]]
+- Created entity page: [[entities/hierarchical-planning|Hierarchical Planning]]
+- Created entity page: [[entities/dynamic-sampling|dynamic sampling]]
+- Created entity page: [[entities/ircot|IRCoT]]
+- Created entity page: [[entities/alphafold-3|AlphaFold 3]]
+- Created entity page: [[entities/self-taught-reasoner-star|Self-Taught Reasoner (STaR)]]
+- Created entity page: [[entities/ollama|Ollama]]
+- Created entity page: [[entities/classifier-free-guidance-cfg|Classifier-Free Guidance (CFG)]]
+- Created entity page: [[entities/ai-agent|AI Agent]]
+- Created entity page: [[entities/pre-training-plus-rl-paradigm|Pre-training plus RL paradigm]]
+- Created entity page: [[entities/tree-of-thoughts|Tree-of-Thoughts]]
+- Created entity page: [[entities/rewardbench|RewardBench]]
+- Created entity page: [[entities/imagenet-1k|ImageNet-1K]]
+- Created entity page: [[entities/metr|METR]]
+- Created entity page: [[entities/swe-rl|SWE-RL]]
+- Created entity page: [[entities/evolutionary-test-time-compute|Evolutionary Test-Time Compute]]
+- Created entity page: [[entities/tool-integrated-reasoning|Tool-Integrated Reasoning]]
+- Created entity page: [[entities/deepseek-r1-distill-qwen-15b|DeepSeek-R1-Distill-Qwen-1.5B]]
+- Created entity page: [[entities/llama-31-8b|Llama-3.1-8B]]
+- Created entity page: [[entities/llama-31|Llama 3.1]]
+- Created entity page: [[entities/o4-mini|o4-mini]]
+- Created entity page: [[entities/agent-workflow-memory-awm|Agent Workflow Memory (AWM)]]
+- Created entity page: [[entities/fvd|FVD]]
+- Created entity page: [[entities/claude-35-sonnet|Claude 3.5 Sonnet]]
+- Created entity page: [[entities/openai-operator|OpenAI Operator]]
+- Created entity page: [[entities/arc-prize|ARC Prize]]
+- Created entity page: [[entities/codex|Codex]]
+- Created entity page: [[entities/needle-in-a-haystack|Needle in a Haystack]]
+- Created entity page: [[entities/flex-attention|Flex Attention]]
+- Created entity page: [[entities/function-calling|Function Calling]]
+- Created entity page: [[entities/replay-buffer|Replay Buffer]]
+- Created entity page: [[entities/acebench|ACEBench]]
+- Created entity page: [[entities/generative-agents|Generative Agents]]
+- Created entity page: [[entities/rejection-sampling-fine-tuning|Rejection Sampling Fine-Tuning]]
+- Created entity page: [[entities/autoregressive-language-model|Autoregressive Language Model]]
+- Created entity page: [[entities/heartbeat|Heartbeat]]
+- Created entity page: [[entities/openclaw|OpenClaw]]
+- Created entity page: [[entities/vipergpt|ViperGPT]]
+- Created entity page: [[entities/virtual-cell|Virtual Cell]]
+- Created entity page: [[entities/text-embedding-3-small|text-embedding-3-small]]
+- Created entity page: [[entities/casetext|CaseText]]
+- Created entity page: [[entities/era-of-experience|Era of Experience]]
+- Created entity page: [[entities/fully-sharded-data-parallelism-fsdp|Fully Sharded Data Parallelism (FSDP)]]
+- Created entity page: [[entities/knowledge-distillation-llm|Knowledge Distillation (LLM)]]
+- Created entity page: [[entities/aws-amazon-web-services|AWS (Amazon Web Services)]]
+- Created entity page: [[entities/moravecs-paradox|Moravec's Paradox]]
+- Created entity page: [[entities/robotic-process-automation-rpa|Robotic Process Automation (RPA)]]
+- Created entity page: [[entities/model-merging|Model Merging]]
+- Created entity page: [[entities/position-bias|Position Bias]]
+- Created entity page: [[entities/notebooklm|NotebookLM]]
+- Created entity page: [[entities/squad|SQuAD]]
+- Created entity page: [[entities/self-verification|Self-Verification]]
+- Created entity page: [[entities/hallucination-llm|Hallucination (LLM)]]
+- Created entity page: [[entities/goodharts-law|Goodhart's Law]]
+- Created entity page: [[entities/locomo|LoCoMo]]
+- Created entity page: [[entities/overthinking|Overthinking]]
+- Created entity page: [[entities/generative-reward-model|Generative Reward Model]]
+- Created entity page: [[entities/rope-rotary-position-embedding|RoPE (Rotary Position Embedding)]]
+- Created entity page: [[entities/policy-gradient|Policy Gradient]]
+- Created entity page: [[entities/gemini-15|Gemini 1.5]]
+- Created entity page: [[entities/vertical-ai-agent|Vertical AI agent]]
+- Created entity page: [[entities/interleaved-thinking|Interleaved thinking]]
+- Created entity page: [[entities/meta-llama|Meta Llama]]
+- Created entity page: [[entities/appworld|AppWorld]]
+- Created entity page: [[entities/minerva-math|Minerva Math]]
+- Created entity page: [[entities/expert-iteration|Expert Iteration]]
+- Created entity page: [[entities/imitation-learning|Imitation Learning]]
+- Created entity page: [[entities/brca1|BRCA1]]
+- Created entity page: [[entities/model-flops-utilization|Model Flops Utilization]]
+- Created entity page: [[entities/computational-irreducibility|Computational Irreducibility]]
+- Created entity page: [[entities/large-reasoning-models-lrms|Large Reasoning Models (LRMs)]]
+- Created entity page: [[entities/fréchet-video-distance-fvd|Fréchet Video Distance (FVD)]]
+- Created entity page: [[entities/pagerank|PageRank]]
+- Created entity page: [[entities/accessibility-tree|Accessibility Tree]]
+- Created entity page: [[entities/transfusion|Transfusion]]
+- Created entity page: [[entities/agent-workflow-memory|Agent Workflow Memory]]
+- Created entity page: [[entities/physical-intelligence-pi|Physical Intelligence (PI)]]
+- Created entity page: [[entities/steering-vectors|Steering Vectors]]
+- Created entity page: [[entities/fine-tuning|Fine-tuning]]
+- Created entity page: [[entities/large-language-models-llms|Large Language Models (LLMs)]]
+- Created entity page: [[entities/large-language-models|Large Language Models]]
+- Created entity page: [[entities/tau-bench|tau-bench]]
+- Created entity page: [[entities/babyagi|BabyAGI]]
+- Created entity page: [[entities/hipporag|HippoRAG]]
+- Created entity page: [[entities/system-1-thinking|System 1 thinking]]
+- Created entity page: [[entities/xlstm|xLSTM]]
+- Created entity page: [[entities/qwq-32b|QwQ-32B]]
+- Created entity page: [[entities/blink|BLINK]]
+- Created entity page: [[entities/diversity|DIVERSITY]]
+- Created entity page: [[entities/in-context-learning-icl|in-context learning (ICL)]]
+- Created entity page: [[entities/expel|ExpeL]]
+- Created entity page: [[entities/prompt-caching|Prompt Caching]]
+- Created entity page: [[entities/feynman-technique|Feynman technique]]
+- Created entity page: [[entities/heygen|HeyGen]]
+- Created entity page: [[entities/prm800k|PRM800K]]
+- Created entity page: [[entities/transformer|Transformer]]
+- Created entity page: [[entities/llm-evaluation|LLM Evaluation]]
+- Created entity page: [[entities/best-of-n|Best-of-N]]
+- Created entity page: [[entities/legora|Legora]]
+- Created entity page: [[entities/drug-repurposing|Drug Repurposing]]
+- Created entity page: [[entities/neural-turing-machine|neural Turing machine]]
+- Created entity page: [[entities/abstraction-and-reasoning-corpus-arc-agi|Abstraction and Reasoning Corpus (ARC-AGI)]]
+- Created entity page: [[entities/open-r1|Open R1]]
+- Created entity page: [[entities/on-device-inference|On-Device Inference]]
+- Created entity page: [[entities/skill-library|Skill Library]]
+- Created entity page: [[entities/dspy|DSPy]]
+- Created entity page: [[entities/math-shepherd|Math-Shepherd]]
+- Created entity page: [[entities/quiet-star|Quiet-STaR]]
+- Created entity page: [[entities/livebench|LiveBench]]
+- Created entity page: [[entities/coreweave|CoreWeave]]
+- Created entity page: [[entities/openwebmath|OpenWebMath]]
+- Created entity page: [[entities/on-policy-training|On-Policy Training]]
+- Created entity page: [[entities/memagent|MemAgent]]
+- Created entity page: [[entities/libero|LIBERO]]
+- Created entity page: [[entities/cold-start-sft|Cold-Start SFT]]
+- Created entity page: [[entities/annual-contract-value-acv|Annual Contract Value (ACV)]]
+- Created entity page: [[entities/parallel-test-time-compute|Parallel Test-Time Compute]]
+- Created entity page: [[entities/sliding-window-attention|Sliding Window Attention]]
+- Created entity page: [[entities/latentmas|LatentMAS]]
+- Created entity page: [[entities/veeva-systems|Veeva Systems]]
+- Created entity page: [[entities/extended-thinking|extended thinking]]
+- Created entity page: [[entities/autogpt|AutoGPT]]
+- Created entity page: [[entities/vertical-saas|Vertical SaaS]]
+- Created entity page: [[entities/search-r1|Search-R1]]
+- Created entity page: [[entities/mobile-manipulator|Mobile Manipulator]]
+- Created entity page: [[entities/experience-replay|Experience Replay]]
+- Created entity page: [[entities/hyde|HyDE]]
+- Created entity page: [[entities/bigcodebench|BigCodeBench]]
+- Created entity page: [[entities/partially-observable-markov-decision-process|Partially Observable Markov Decision Process]]
+- Created entity page: [[entities/masked-autoencoder|Masked Autoencoder]]
+- Created entity page: [[entities/process-supervision|Process Supervision]]
+- Created entity page: [[entities/aime25|AIME25]]
+- Created entity page: [[entities/lmfusion|LMFusion]]
+- Created entity page: [[entities/copilot-mode|Copilot Mode]]
+- Created entity page: [[entities/action-expert|Action expert]]
+- Created entity page: [[entities/multi-agent-architecture|Multi-Agent Architecture]]
+- Created entity page: [[entities/webinstruct|WebInstruct]]
+- Created entity page: [[entities/adafactor-optimizer|Adafactor Optimizer]]
+- Created entity page: [[entities/grok-4|Grok-4]]
+- Created entity page: [[entities/e2b|E2B]]
+- Created entity page: [[entities/jevons-paradox|Jevons paradox]]
+- Created entity page: [[entities/sequoia-capital|Sequoia Capital]]
+- Created entity page: [[entities/cogvideox|CogVideoX]]
+- Created entity page: [[entities/agent-computer-interface-aci|Agent-Computer Interface (ACI)]]
+- Created entity page: [[entities/llmlingua|LLMLingua]]
+- Created entity page: [[entities/compositional-generalization|Compositional Generalization]]
+- Created entity page: [[entities/androidworld|AndroidWorld]]
+- Created entity page: [[entities/artificial-general-intelligence-agi|Artificial General Intelligence (AGI)]]
+- Created entity page: [[entities/retroformer|Retroformer]]
+- Created entity page: [[entities/aime-2025|AIME 2025]]
+- Created entity page: [[entities/anduril|Anduril]]
+- Created entity page: [[entities/multi-head-latent-attention|Multi-Head Latent Attention]]
+- Created entity page: [[entities/lost-in-the-middle|Lost in the Middle]]
+- Created entity page: [[entities/llmtxt|llm.txt]]
+- Created entity page: [[entities/babilong|BABILong]]
+- Created entity page: [[entities/reward-model|Reward Model]]
+- Created entity page: [[entities/tensor-processing-unit|Tensor Processing Unit]]
+- Created entity page: [[entities/instruction-tuning|instruction tuning]]
+- Created entity page: [[entities/sakana-ai|Sakana AI]]
+- Created entity page: [[entities/block-causal-attention-mask|block-causal attention mask]]
+- Created entity page: [[entities/playwright|Playwright]]
+- Created entity page: [[entities/meta-learning|Meta-learning]]
+- Created entity page: [[entities/decoder-only-transformer|Decoder-only Transformer]]
+- Created entity page: [[entities/crispr|CRISPR]]
+- Created entity page: [[entities/rejection-sampling|Rejection Sampling]]
+- Created entity page: [[entities/long-context|long context]]
+- Created entity page: [[entities/generalized-advantage-estimation|Generalized Advantage Estimation]]
+- Created entity page: [[entities/reinforcement-learning-for-reasoning|Reinforcement Learning for Reasoning]]
+- Created entity page: [[entities/open-deep-research|Open Deep Research]]
+- Created entity page: [[entities/business-process-outsourcing-bpo|Business Process Outsourcing (BPO)]]
+- Created entity page: [[entities/needle-in-a-haystack-test|Needle-in-a-Haystack Test]]
+- Created entity page: [[entities/pika|Pika]]
+- Created entity page: [[entities/neural-radiance-fields|Neural Radiance Fields]]
+- Created entity page: [[entities/kernelbench|KernelBench]]
+- Created entity page: [[entities/decagon|Decagon]]
+- Created entity page: [[entities/2d-rotary-positional-embedding|2D Rotary Positional Embedding]]
+- Created entity page: [[entities/safe-superintelligence-ssi|Safe Superintelligence (SSI)]]
+- Created entity page: [[entities/openwebtext|OpenWebText]]
+- Created entity page: [[entities/rmsnorm|RMSNorm]]
+- Created entity page: [[entities/gemini-20|Gemini 2.0]]
+- Created entity page: [[entities/no-priors-podcast|No Priors Podcast]]
+- Created entity page: [[entities/out-of-distribution-ood-generalization|Out-of-Distribution (OOD) Generalization]]
+- Created entity page: [[entities/llava-onevision|LLaVA-OneVision]]
+- Created entity page: [[entities/star-self-taught-reasoner|STaR (Self-Taught Reasoner)]]
+- Created entity page: [[entities/triviaqa|TriviaQA]]
+- Created entity page: [[entities/mujoco|MuJoCo]]
+- Created entity page: [[entities/vineppo|VinePPO]]
+- Created entity page: [[entities/toolformer|Toolformer]]
+- Created entity page: [[entities/inference-time-reasoning|Inference-Time Reasoning]]
+- Created entity page: [[entities/on-device-ai|On-Device AI]]
+- Created entity page: [[entities/omnidocbench|OmniDocBench]]
+- Created entity page: [[entities/sglang|SGLang]]
+- Created entity page: [[entities/self-consistency-decoding|Self-Consistency Decoding]]
+- Created entity page: [[entities/protein-data-bank|Protein Data Bank]]
+- Created entity page: [[entities/swe-rebench|SWE-rebench]]
+- Created entity page: [[entities/natural-questions|Natural Questions]]
+- Created entity page: [[entities/inverse-reinforcement-learning|Inverse Reinforcement Learning]]
+- Created entity page: [[entities/rt2|RT2]]
+- Created entity page: [[entities/power-law-venture-returns|Power Law (Venture Returns)]]
+- Created entity page: [[entities/wiz|Wiz]]
+- Created entity page: [[entities/agentic-rag|agentic RAG]]
+- Created entity page: [[entities/socratic-models|Socratic Models]]
+- Created entity page: [[entities/curse-of-dimensionality|Curse of Dimensionality]]
+- Created entity page: [[entities/gemini-20-flash|Gemini 2.0 Flash]]
+- Created entity page: [[entities/physical-ai|Physical AI]]
+- Created entity page: [[entities/qlora|QLoRA]]
+- Created entity page: [[entities/brain-trust|Brain Trust]]
+- Created entity page: [[entities/multi-token-prediction|Multi-Token Prediction]]
+- Created entity page: [[entities/services-as-software|Services as Software]]
+- Created entity page: [[entities/deepscaler|DeepScaleR]]
+- Created entity page: [[entities/chatgpt|ChatGPT]]
+- Created entity page: [[entities/fréchet-video-distance|Fréchet Video Distance]]
+- Created entity page: [[entities/bamboogle|Bamboogle]]
+- Created entity page: [[entities/nano-banana|Nano Banana]]
+- Created entity page: [[entities/qwen|Qwen]]
+- Created entity page: [[entities/vqgan|VQGAN]]
+- Created entity page: [[entities/midjourney|Midjourney]]
+- Created entity page: [[entities/context-compaction|context compaction]]
+- Created entity page: [[entities/arc-agi-2|ARC-AGI-2]]
+- Created entity page: [[entities/contrastive-decoding|Contrastive Decoding]]
+- Created entity page: [[entities/nucleus-sampling|Nucleus Sampling]]
+- Created entity page: [[entities/humanoid-robot|Humanoid Robot]]
+- Created entity page: [[entities/flexattention|FlexAttention]]
+- Created entity page: [[entities/benchmark-saturation|Benchmark Saturation]]
+- Created entity page: [[entities/naive-rag|Naive RAG]]
+- Created entity page: [[entities/megabyte|MegaByte]]
+- Created entity page: [[entities/spacebyte|SpaceByte]]
+- Created entity page: [[entities/network-effects|Network Effects]]
+- Created entity page: [[entities/kl-regularization|KL Regularization]]
+- Created entity page: [[entities/thinking-with-images|thinking with images]]
+- Created entity page: [[entities/shampoo-optimizer|Shampoo Optimizer]]
+- Created entity page: [[entities/benchmark-contamination|Benchmark Contamination]]
+- Created entity page: [[entities/sparse-autoencoder-sae|Sparse Autoencoder (SAE)]]
+- Created entity page: [[entities/spatial-intelligence|Spatial Intelligence]]
+- Created entity page: [[entities/vq-vae|VQ-VAE]]
+- Created entity page: [[entities/sana|Sana]]
+- Created entity page: [[entities/video-prediction-model|Video Prediction Model]]
+- Created entity page: [[entities/r1|R1]]
+- Created entity page: [[entities/adaln|AdaLN]]
+- Created entity page: [[entities/mistral-7b|Mistral-7B]]
+- Created entity page: [[entities/elastic-weight-consolidation|Elastic Weight Consolidation]]
+- Created entity page: [[entities/swiglu|SwiGLU]]
+- Created entity page: [[entities/sim-to-real-gap|sim-to-real gap]]
+- Created entity page: [[entities/system-2-reasoning|System 2 Reasoning]]
+- Created entity page: [[entities/robotic-foundation-model|Robotic Foundation Model]]
+- Created entity page: [[entities/manifold-hypothesis|Manifold Hypothesis]]
+- Created entity page: [[entities/open-x-embodiment-dataset|Open X-Embodiment Dataset]]
+- Created entity page: [[entities/spiking-neural-network|Spiking Neural Network]]
+- Created entity page: [[entities/plaid|Plaid]]
+- Created entity page: [[entities/data-wall|Data Wall]]
+- Created entity page: [[entities/vbench|VBench]]
+- Created entity page: [[entities/ai-engineering|AI Engineering]]
+- Created entity page: [[entities/ring-attention|Ring Attention]]
+- Created entity page: [[entities/joint-embedding-predictive-architecture|Joint Embedding Predictive Architecture]]
+- Created entity page: [[entities/clip-higher|Clip-higher]]
+- Created entity page: [[entities/chain-of-thought-cot-reasoning|Chain-of-Thought (CoT) Reasoning]]
+- Created entity page: [[entities/worldsense|WorldSense]]
+- Created entity page: [[entities/dynamic-cheatsheet|Dynamic Cheatsheet]]
+- Created entity page: [[entities/graph-based-rag|Graph-based RAG]]
+- Created entity page: [[entities/visualwebarena|VisualWebArena]]
+- Created entity page: [[entities/τ2-bench|τ2-bench]]
+- Created entity page: [[entities/arc-agi-benchmark|ARC-AGI Benchmark]]
+- Created entity page: [[entities/m-rope|M-RoPE]]
+- Created entity page: [[entities/write-actions|Write Actions]]
+- Created entity page: [[entities/intent-classifier|Intent Classifier]]
+- Created entity page: [[entities/pre-training-scaling-laws|Pre-training Scaling Laws]]
+- Created entity page: [[entities/vibe-check|Vibe Check]]
+- Created entity page: [[entities/credit-assignment|Credit Assignment]]
+- Created entity page: [[entities/rule-based-verifier|Rule-based Verifier]]
+- Created entity page: [[entities/skillweaver|SkillWeaver]]
+- Created entity page: [[entities/vector-quantization|Vector Quantization]]
+- Created entity page: [[entities/capital-efficiency|Capital Efficiency]]
+- Created entity page: [[entities/amc23|AMC23]]
+- Created entity page: [[entities/meta-ray-ban-smart-glasses|Meta Ray-Ban smart glasses]]
+- Created entity page: [[entities/outreach|Outreach]]
+- Created entity page: [[entities/demo-to-product-gap|Demo-to-Product Gap]]
+- Created entity page: [[entities/irasim|IRASim]]
+- Created entity page: [[entities/transnetv2|TransNetV2]]
+- Created entity page: [[entities/memory-r1|Memory-R1]]
+- Created entity page: [[entities/autonomy-slider|Autonomy Slider]]
+- Created entity page: [[entities/emergent-reasoning-behavior|Emergent Reasoning Behavior]]
+- Created entity page: [[entities/long-data-collections|Long-Data-Collections]]
+- Created entity page: [[entities/deepl|DeepL]]
+- Created entity page: [[entities/sparse-autoencoder|sparse autoencoder]]
+- Created entity page: [[entities/gemini-25|Gemini 2.5]]
+- Created entity page: [[entities/mmbench|MMBench]]
+- Created entity page: [[entities/aha-moment|Aha Moment]]
+- Created entity page: [[entities/wav2vec|Wav2Vec]]
+- Created entity page: [[entities/rlhf-reinforcement-learning-from-human-feedback|RLHF (Reinforcement Learning from Human Feedback)]]
+- Created entity page: [[entities/task-success-rate|Task Success Rate]]
+- Created entity page: [[entities/magicbrush|MagicBrush]]
+- Created entity page: [[entities/minedojo|MineDojo]]
+- Created entity page: [[entities/supergpqa|SuperGPQA]]
+- Created entity page: [[entities/buffer-of-thoughts|Buffer of Thoughts]]
+- Created entity page: [[entities/think-in-memory|Think-in-Memory]]
+- Created entity page: [[entities/moonlight|Moonlight]]
+- Created entity page: [[entities/backtracking|backtracking]]
+- Created entity page: [[entities/cot-vla|CoT-VLA]]
+- Created entity page: [[entities/monte-carlo-tree-search-mcts-for-llm-reasoning|Monte Carlo Tree Search (MCTS) for LLM Reasoning]]
+- Created entity page: [[entities/minerva|Minerva]]
+- Created entity page: [[entities/slime|slime]]
+- Created entity page: [[entities/umap|UMAP]]
+- Created entity page: [[entities/universal-transformer|Universal Transformer]]
+- Created entity page: [[entities/memos|MemOS]]
+- Created entity page: [[entities/confluent|Confluent]]
+- Created entity page: [[entities/sleeptime-compute|Sleeptime Compute]]
+- Created entity page: [[entities/ntk-aware-rope-scaling|NTK-aware RoPE Scaling]]
+- Created entity page: [[entities/process-based-supervision|Process-Based Supervision]]
+- Created entity page: [[entities/swe-agent|SWE-agent]]
+- Created entity page: [[entities/vpt|VPT]]
+- Created entity page: [[entities/restem|ReSTEM]]
+- Created entity page: [[entities/rwkv|RWKV]]
+- Created entity page: [[entities/evoprompt|EvoPrompt]]
+- Created entity page: [[entities/warmup-stable-decay-wsd-learning-rate-schedule|Warmup-Stable-Decay (WSD) Learning Rate Schedule]]
+- Created entity page: [[entities/clinvar|ClinVar]]
+- Created entity page: [[entities/search-o1|Search-O1]]
+- Created entity page: [[entities/beam-search|Beam Search]]
+- Created entity page: [[entities/exact-match|Exact Match]]
+- Created entity page: [[entities/game-of-24|Game of 24]]
+- Created entity page: [[entities/open-x-embodiment|Open X-Embodiment]]
+- Created entity page: [[entities/benchling|Benchling]]
+- Created entity page: [[entities/o1-style-reasoning-model|O1-style reasoning model]]
+- Created entity page: [[entities/compound-ai-systems|Compound AI Systems]]
+- Created entity page: [[entities/ppo-proximal-policy-optimization|PPO (Proximal Policy Optimization)]]
+- Created entity page: [[entities/3d-gaussian-splatting|3D Gaussian Splatting]]
+- Created entity page: [[entities/horizon-length|Horizon Length]]
+- Created entity page: [[entities/pika-labs|Pika Labs]]
+- Created entity page: [[entities/meror|Meror]]
+- Created entity page: [[entities/self-certainty|Self-Certainty]]
+- Created entity page: [[entities/reasoningbank|ReasoningBank]]
+- Created entity page: [[entities/something-something-v2|Something-Something V2]]
+- Created entity page: [[entities/llama-4|Llama 4]]
+- Created entity page: [[entities/fluid-intelligence|Fluid Intelligence]]
+- Created entity page: [[entities/xstest|XSTest]]
+- Created entity page: [[entities/wildchat|WildChat]]
+- Created entity page: [[entities/hallusionbench|HallusionBench]]
+- Created entity page: [[entities/absolute-zero|Absolute Zero]]
+- Created entity page: [[entities/magvit-v2|MAGVIT-v2]]
+- Created entity page: [[entities/fréchet-inception-distance-fid|Fréchet Inception Distance (FID)]]
+- Created entity page: [[entities/prorl|ProRL]]
+- Created entity page: [[entities/reward-model-rm|Reward Model (RM)]]
+- Created entity page: [[entities/codeit|CodeIt]]
+- Created entity page: [[entities/window-attention|window attention]]
+- Created entity page: [[entities/videomme|VideoMME]]
+- Created entity page: [[entities/cognition|Cognition]]
+- Created entity page: [[entities/math-benchmark|MATH Benchmark]]
+- Created entity page: [[entities/degrees-of-freedom|degrees of freedom]]
+- Created entity page: [[entities/inflection-ai|Inflection AI]]
+- Created entity page: [[entities/deepseek-r1-distill-qwen-7b|DeepSeek-R1-Distill-Qwen-7B]]
+- Created entity page: [[entities/ai-observability|AI Observability]]
+- Created entity page: [[entities/length-controlled-win-rate|Length-Controlled Win Rate]]
+- Created entity page: [[entities/aime2024|AIME2024]]
+- Created entity page: [[entities/healthbench|HealthBench]]
+- Created entity page: [[entities/format-reward|format reward]]
+- Created entity page: [[entities/textvqa|TextVQA]]
+- Created entity page: [[entities/test-time-fine-tuning|Test-Time Fine-Tuning]]
+- Created entity page: [[entities/outcome-reward-model-orm|Outcome Reward Model (ORM)]]
+- Created entity page: [[entities/thinkless|Thinkless]]
+- Created entity page: [[entities/test-time-search|Test-Time Search]]
+- Created entity page: [[entities/reinforce-algorithm|REINFORCE Algorithm]]
+- Created entity page: [[entities/c4|C4]]
+- Created entity page: [[entities/move-37|Move 37]]
+- Created entity page: [[entities/curriculum-sampling|Curriculum Sampling]]
+- Created entity page: [[entities/prioritized-sampling|Prioritized Sampling]]
+- Created entity page: [[entities/vila-u|VILA-U]]
+- Created entity page: [[entities/codecontests|CodeContests]]
+- Created entity page: [[entities/bolt|Bolt]]
+- Created entity page: [[entities/claude-37-sonnet|Claude 3.7 Sonnet]]
+- Created entity page: [[entities/apache-iceberg|Apache Iceberg]]
+- Created entity page: [[entities/modern-data-stack|Modern Data Stack]]
+- Created entity page: [[entities/arc-agi-1|ARC-AGI-1]]
+- Created entity page: [[entities/data-contamination|Data Contamination]]
+- Created entity page: [[entities/context-folding|Context Folding]]
+- Created entity page: [[entities/denoising-diffusion-probabilistic-model|Denoising Diffusion Probabilistic Model]]
+- Created entity page: [[entities/evals|Evals]]
+- Created entity page: [[entities/vlm-r1|VLM-R1]]
+- Created entity page: [[entities/objaverse|Objaverse]]
+- Created entity page: [[entities/agi-artificial-general-intelligence|AGI (Artificial General Intelligence)]]
+- Created entity page: [[entities/retool|ReTool]]
+- Created entity page: [[entities/figure-robot|Figure robot]]
+- Created entity page: [[entities/aider|Aider]]
+- Created entity page: [[entities/llada|LLaDA]]
+- Created entity page: [[entities/silu-activation|SiLU Activation]]
+- Created entity page: [[entities/synthetic-reasoning-traces|synthetic reasoning traces]]
+- Created entity page: [[entities/reinforce-policy-gradient|REINFORCE Policy Gradient]]
+- Created entity page: [[entities/nemotron-cc|Nemotron-CC]]
+- Created entity page: [[entities/screenspot|ScreenSpot]]
+- Created entity page: [[entities/skill-acquisition-efficiency|Skill Acquisition Efficiency]]
+- Created entity page: [[entities/dinov2|DINOv2]]
+- Created entity page: [[entities/veo|Veo]]
+- Created entity page: [[entities/mixture-of-models|Mixture of Models]]
+- Created entity page: [[entities/outcome-based-pricing|outcome-based pricing]]
+- Created entity page: [[entities/hai-llm|HAI-LLM]]
+- Created entity page: [[entities/llm-judge|LLM judge]]
+- Created entity page: [[entities/tensor-cores|Tensor Cores]]
+- Created entity page: [[entities/adaptive-computation-time|Adaptive Computation Time]]
+- Created entity page: [[entities/state-space-models-ssm|State Space Models (SSM)]]
+- Created entity page: [[entities/emergent-capabilities|Emergent capabilities]]
+- Created entity page: [[entities/sparse-reward-problem|Sparse Reward Problem]]
+- Created entity page: [[entities/verifiable-rewards|Verifiable Rewards]]
+- Created entity page: [[entities/budget-forcing|Budget Forcing]]
+- Created entity page: [[entities/language-agent-tree-search-lats|Language Agent Tree Search (LATS)]]
+- Created entity page: [[entities/lightmem|LightMem]]
+- Created entity page: [[entities/siglip2|SigLIP2]]
+- Created entity page: [[entities/lvis|LVIS]]
+- Created entity page: [[entities/llama-405b|Llama 405B]]
+- Created entity page: [[entities/personalized-pagerank|personalized PageRank]]
+- Created entity page: [[entities/hyperscaler|Hyperscaler]]
+- Created entity page: [[entities/self-rag|Self-RAG]]
+- Created entity page: [[entities/alexnet|AlexNet]]
+- Created entity page: [[entities/ssim|SSIM]]
+- Created entity page: [[entities/opus-clip|Opus Clip]]
+- Created entity page: [[entities/thinking-tokens|Thinking Tokens]]
+- Created entity page: [[entities/contrastive-learning|Contrastive Learning]]
+- Created entity page: [[entities/context-window-management|Context Window Management]]
+- Created entity page: [[entities/vertical-ai-moat|Vertical AI moat]]
+- Created entity page: [[entities/bfcl-v3|BFCL v3]]
+- Created entity page: [[entities/cross-embodiment-generalization|Cross-Embodiment Generalization]]
+- Created entity page: [[entities/generative-reward-model-genrm|Generative Reward Model (GenRM)]]
+- Created entity page: [[entities/deltanet|DeltaNet]]
+- Created entity page: [[entities/embodied-reasoning|Embodied Reasoning]]
+- Created entity page: [[entities/agi|AGI]]
+- Created entity page: [[entities/arenahard|ArenaHard]]
+- Created entity page: [[entities/step|SteP]]
+- Created entity page: [[entities/pythia|Pythia]]
+- Created entity page: [[entities/gpt-4v|GPT-4V]]
+- Created entity page: [[entities/dpg-bench|DPG-Bench]]
+- Created entity page: [[entities/andrej-karpathy|Andrej Karpathy]]
+- Created entity page: [[entities/decade-of-agents|Decade of Agents]]
+- Created entity page: [[entities/march-of-nines|March of Nines]]
+- Created entity page: [[entities/mid-training|Mid-training]]
+- Created entity page: [[entities/simclr|SimCLR]]
+- Created entity page: [[entities/groq|Groq]]
+- Created entity page: [[entities/gated-deltanet|Gated DeltaNet]]
+- Created entity page: [[entities/parameter-efficient-fine-tuning-peft|Parameter-Efficient Fine-Tuning (PEFT)]]
+- Created entity page: [[entities/dclm-baseline|DCLM-Baseline]]
+- Created entity page: [[entities/openmathreasoning|OpenMathReasoning]]
+- Created entity page: [[entities/gemini-flash|Gemini Flash]]
+- Created entity page: [[entities/shared-attention-block|Shared Attention Block]]
+- Created entity page: [[entities/jamba|Jamba]]
+- Created entity page: [[entities/stargate|Stargate]]
+- Created entity page: [[entities/memsearcher|MemSearcher]]
+- Created entity page: [[entities/cross-embodiment-transfer|Cross-Embodiment Transfer]]
+- Created entity page: [[entities/llm-as-judge-evaluation|LLM-as-judge evaluation]]
+- Created entity page: [[entities/inference-time-scaling-law|inference-time scaling law]]
+- Created entity page: [[entities/conceptarc|ConceptARC]]
+- Created entity page: [[entities/environment-scaling|Environment Scaling]]
+- Created entity page: [[entities/mistral|Mistral]]
+- Created entity page: [[entities/latent-space-reasoning|Latent Space Reasoning]]
+- Created entity page: [[entities/dreamcoder|DreamCoder]]
+- Created entity page: [[entities/arc-abstraction-and-reasoning-corpus|ARC (Abstraction and Reasoning Corpus)]]
+- Created entity page: [[entities/dl3dv-10k|DL3DV-10K]]
+- Created entity page: [[entities/arc-abstraction-and-reasoning-corpus|ARC (Abstraction and Reasoning Corpus)]]
+- Created entity page: [[entities/deepscaler-dataset|DeepScaleR Dataset]]
+- Created entity page: [[entities/deepscaler-dataset|DeepScaleR Dataset]]
+- Created entity page: [[entities/tpu|TPU]]
+- Created entity page: [[entities/tpu|TPU]]
+- Created entity page: [[entities/pre-training-scaling|Pre-training scaling]]
+- Created entity page: [[entities/pre-training-scaling|Pre-training scaling]]
+- Created entity page: [[entities/refinecode|RefineCode]]
+- Created entity page: [[entities/refinecode|RefineCode]]
+- Created entity page: [[entities/toolbench|ToolBench]]
+- Created entity page: [[entities/toolbench|ToolBench]]
+- Created entity page: [[entities/evenup|EvenUp]]
+- Created entity page: [[entities/evenup|EvenUp]]
+- Created entity page: [[entities/text-to-video-generation|Text-to-Video Generation]]
+- Created entity page: [[entities/text-to-video-generation|Text-to-Video Generation]]
+- Created entity page: [[entities/mind2web|Mind2Web]]
+- Created entity page: [[entities/mind2web|Mind2Web]]
+- Created entity page: [[entities/computer-using-agent-cua|Computer-Using Agent (CUA)]]
+- Created entity page: [[entities/browsergym|BrowserGym]]
+- Created entity page: [[entities/cohens-kappa|Cohen's Kappa]]
+- Created entity page: [[entities/computer-using-agent-cua|Computer-Using Agent (CUA)]]
+- Created entity page: [[entities/cohens-kappa|Cohen's Kappa]]
+- Created entity page: [[entities/next-token-prediction|Next Token Prediction]]
+- Created entity page: [[entities/next-token-prediction|Next Token Prediction]]
+- Created entity page: [[entities/next-token-prediction|Next Token Prediction]]
+- Created entity page: [[entities/fid|FID]]
+- Created entity page: [[entities/fid|FID]]
+- Created entity page: [[entities/fid|FID]]
+- Created entity page: [[entities/model-routing|Model Routing]]
+- Created entity page: [[entities/model-routing|Model Routing]]
+- Created entity page: [[entities/model-routing|Model Routing]]
+- Created entity page: [[entities/expert-parallelism|Expert Parallelism]]
+- Created entity page: [[entities/expert-parallelism|Expert Parallelism]]
+- Created entity page: [[entities/expert-parallelism|Expert Parallelism]]
+- Created entity page: [[entities/rotary-positional-embeddings|Rotary Positional Embeddings]]
+- Created entity page: [[entities/rotary-positional-embeddings|Rotary Positional Embeddings]]
+- Created entity page: [[entities/rotary-positional-embeddings|Rotary Positional Embeddings]]
+- Created entity page: [[entities/browsecomp-plus|BrowseComp-Plus]]
+- Created entity page: [[entities/browsecomp-plus|BrowseComp-Plus]]
+- Created entity page: [[entities/browsecomp-plus|BrowseComp-Plus]]
+- Created entity page: [[entities/knowledge-distillation-for-reasoning|knowledge distillation for reasoning]]
+- Created entity page: [[entities/knowledge-distillation-for-reasoning|knowledge distillation for reasoning]]
+- Created entity page: [[entities/knowledge-distillation-for-reasoning|knowledge distillation for reasoning]]
+- Created entity page: [[entities/knowledge-graph|Knowledge Graph]]
+- Created entity page: [[entities/knowledge-graph|Knowledge Graph]]
+- Created entity page: [[entities/knowledge-graph|Knowledge Graph]]
+- Created entity page: [[entities/rlaif|RLAIF]]
+- Created entity page: [[entities/continuous-thought-machine|Continuous Thought Machine]]
+- Created entity page: [[entities/rlaif|RLAIF]]
+- Created entity page: [[entities/samba|Samba]]
+- Created entity page: [[entities/rlaif|RLAIF]]
+- Created entity page: [[entities/samba|Samba]]
+- Created entity page: [[entities/arc-easy|ARC-Easy]]
+- Created entity page: [[entities/arc-easy|ARC-Easy]]
+- Created entity page: [[entities/arc-easy|ARC-Easy]]
+- Created entity page: [[entities/parscale|PARSCALE]]
+- Created entity page: [[entities/parscale|PARSCALE]]
+- Created entity page: [[entities/delta-rule|Delta Rule]]
+- Created entity page: [[entities/parscale|PARSCALE]]
+- Created entity page: [[entities/delta-rule|Delta Rule]]
+- Created entity page: [[entities/gaia-benchmark|GAIA benchmark]]
+- Created entity page: [[entities/gaia-benchmark|GAIA benchmark]]
+- Created entity page: [[entities/gaia-benchmark|GAIA benchmark]]
+- Created entity page: [[entities/atrium|Atrium]]
+- Created entity page: [[entities/atrium|Atrium]]
+- Created entity page: [[entities/atrium|Atrium]]
+- Created entity page: [[entities/visual-grounding|visual grounding]]
+- Created entity page: [[entities/visual-grounding|visual grounding]]
+- Created entity page: [[entities/visual-grounding|visual grounding]]
+- Created entity page: [[entities/recursive-self-improvement|Recursive Self-Improvement]]
+- Created entity page: [[entities/recursive-self-improvement|Recursive Self-Improvement]]
+- Created entity page: [[entities/recursive-self-improvement|Recursive Self-Improvement]]
+- Created entity page: [[entities/exponential-moving-average|Exponential Moving Average]]
+- Created entity page: [[entities/exponential-moving-average|Exponential Moving Average]]
+- Created entity page: [[entities/mt-bench|MT-Bench]]
+- Created entity page: [[entities/exponential-moving-average|Exponential Moving Average]]
+- Created entity page: [[entities/mt-bench|MT-Bench]]
+- Created entity page: [[entities/z-score-reward-normalization|Z-Score Reward Normalization]]
+- Created entity page: [[entities/z-score-reward-normalization|Z-Score Reward Normalization]]
+- Created entity page: [[entities/z-score-reward-normalization|Z-Score Reward Normalization]]
+- Created entity page: [[entities/memrl|MemRL]]
+- Created entity page: [[entities/memrl|MemRL]]
+- Created entity page: [[entities/memrl|MemRL]]
+- Created entity page: [[entities/manus|Manus]]
+- Created entity page: [[entities/manus|Manus]]
+- Created entity page: [[entities/manus|Manus]]
+- Created entity page: [[entities/vision-language-action-vla-model|Vision-Language-Action (VLA) Model]]
+- Created entity page: [[entities/vision-language-action-vla-model|Vision-Language-Action (VLA) Model]]
+- Created entity page: [[entities/vision-language-action-vla-model|Vision-Language-Action (VLA) Model]]
+- Created entity page: [[entities/replicate|Replicate]]
+- Created entity page: [[entities/replicate|Replicate]]
+- Created entity page: [[entities/replicate|Replicate]]
+- Created entity page: [[entities/amd-mi300x|AMD MI300X]]
+- Created entity page: [[entities/amd-mi300x|AMD MI300X]]
+- Created entity page: [[entities/amd-mi300x|AMD MI300X]]
+- Created entity page: [[entities/vertical-search|Vertical Search]]
+- Created entity page: [[entities/vertical-search|Vertical Search]]
+- Created entity page: [[entities/vertical-search|Vertical Search]]
+- Created entity page: [[entities/kernel-fusion|Kernel Fusion]]
+- Created entity page: [[entities/kernel-fusion|Kernel Fusion]]
+- Created entity page: [[entities/kernel-fusion|Kernel Fusion]]
+- Created entity page: [[entities/o1-openai|O1 (OpenAI)]]
+- Created entity page: [[entities/o1-openai|O1 (OpenAI)]]
+- Created entity page: [[entities/o1-openai|O1 (OpenAI)]]
+- Created entity page: [[entities/overthinking-phenomenon|Overthinking Phenomenon]]
+- Created entity page: [[entities/overthinking-phenomenon|Overthinking Phenomenon]]
+- Created entity page: [[entities/overthinking-phenomenon|Overthinking Phenomenon]]
+- Created entity page: [[entities/task-arithmetic|Task Arithmetic]]
+- Created entity page: [[entities/task-arithmetic|Task Arithmetic]]
+- Created entity page: [[entities/task-arithmetic|Task Arithmetic]]
+- Created entity page: [[entities/tennr|Tennr]]
+- Created entity page: [[entities/tennr|Tennr]]
+- Created entity page: [[entities/tennr|Tennr]]
+- Created entity page: [[entities/ai-driven-buyout|AI-Driven Buyout]]
+- Created entity page: [[entities/ai-driven-buyout|AI-Driven Buyout]]
+- Created entity page: [[entities/ai-driven-buyout|AI-Driven Buyout]]
+- Created entity page: [[entities/gpt-41|GPT-4.1]]
+- Created entity page: [[entities/gpt-41|GPT-4.1]]
+- Created entity page: [[entities/gpt-41|GPT-4.1]]
+- Created entity page: [[entities/strategyqa|StrategyQA]]
+- Created entity page: [[entities/strategyqa|StrategyQA]]
+- Created entity page: [[entities/strategyqa|StrategyQA]]
+- Created entity page: [[entities/direct-answering|Direct Answering]]
+- Created entity page: [[entities/direct-answering|Direct Answering]]
+- Created entity page: [[entities/direct-answering|Direct Answering]]
+- Created entity page: [[entities/semantic-memory|Semantic Memory]]
+- Created entity page: [[entities/semantic-memory|Semantic Memory]]
+- Created entity page: [[entities/semantic-memory|Semantic Memory]]
+- Created entity page: [[entities/descript|Descript]]
+- Created entity page: [[entities/descript|Descript]]
+- Created entity page: [[entities/show-o|Show-o]]
+- Created entity page: [[entities/descript|Descript]]
+- Created entity page: [[entities/show-o|Show-o]]
+- Created entity page: [[entities/pope|POPE]]
+- Created entity page: [[entities/pope|POPE]]
+- Created entity page: [[entities/pope|POPE]]
+- Created entity page: [[entities/mamba2|Mamba2]]
+- Created entity page: [[entities/mamba2|Mamba2]]
+- Created entity page: [[entities/mamba2|Mamba2]]
+- Created entity page: [[entities/calibration|Calibration]]
+- Created entity page: [[entities/calibration|Calibration]]
+- Created entity page: [[entities/calibration|Calibration]]
+- Created entity page: [[entities/parallel-thinking|Parallel Thinking]]
+- Created entity page: [[entities/parallel-thinking|Parallel Thinking]]
+- Created entity page: [[entities/parallel-thinking|Parallel Thinking]]
+- Created entity page: [[entities/tokenbench|TokenBench]]
+- Created entity page: [[entities/tokenbench|TokenBench]]
+- Created entity page: [[entities/tokenbench|TokenBench]]
+- Created entity page: [[entities/finite-scalar-quantization|Finite Scalar Quantization]]
+- Created entity page: [[entities/finite-scalar-quantization|Finite Scalar Quantization]]
+- Created entity page: [[entities/finite-scalar-quantization|Finite Scalar Quantization]]
+- Created entity page: [[entities/raptor|RAPTOR]]
+- Created entity page: [[entities/raptor|RAPTOR]]
+- Created entity page: [[entities/raptor|RAPTOR]]
+- Created entity page: [[entities/zero-1|ZeRO-1]]
+- Created entity page: [[entities/zero-1|ZeRO-1]]
+- Created entity page: [[entities/zero-1|ZeRO-1]]
+- Created entity page: [[entities/multimodality|Multimodality]]
+- Created entity page: [[entities/multimodality|Multimodality]]
+- Created entity page: [[entities/self-refinement|Self-Refinement]]
+- Created entity page: [[entities/multimodality|Multimodality]]
+- Created entity page: [[entities/self-refinement|Self-Refinement]]
+- Created entity page: [[entities/numinamath|NuminaMATH]]
+- Created entity page: [[entities/numinamath|NuminaMATH]]
+- Created entity page: [[entities/numinamath|NuminaMATH]]
+- Created entity page: [[entities/ocrbench|OCRBench]]
+- Created entity page: [[entities/ocrbench|OCRBench]]
+- Created entity page: [[entities/ocrbench|OCRBench]]
+- Created entity page: [[entities/openrouter|OpenRouter]]
+- Created entity page: [[entities/openrouter|OpenRouter]]
+- Created entity page: [[entities/multi-model-orchestration|Multi-Model Orchestration]]
+- Created entity page: [[entities/multi-model-orchestration|Multi-Model Orchestration]]
+- Created entity page: [[entities/llava-cot-100k|LLaVA-CoT-100K]]
+- Created entity page: [[entities/llava-cot-100k|LLaVA-CoT-100K]]
+- Created entity page: [[entities/simplerenv|SimplerEnv]]
+- Created entity page: [[entities/simplerenv|SimplerEnv]]
+- Created entity page: [[entities/cold-start-phase|Cold-Start Phase]]
+- Created entity page: [[entities/cold-start-phase|Cold-Start Phase]]
+- Created entity page: [[entities/cold-start-initialization|Cold-Start Initialization]]
+- Created entity page: [[entities/cold-start-initialization|Cold-Start Initialization]]
+- Created entity page: [[entities/flops|FLOPs]]
+- Created entity page: [[entities/flops|FLOPs]]
+- Created entity page: [[entities/udio|Udio]]
+- Created entity page: [[entities/udio|Udio]]
+- Created entity page: [[entities/unitree-g1|Unitree G1]]
+- Created entity page: [[entities/unitree-g1|Unitree G1]]
+- Created entity page: [[entities/amc-2023|AMC 2023]]
+- Created entity page: [[entities/amc-2023|AMC 2023]]
+- Created entity page: [[entities/windsurf|Windsurf]]
+- Created entity page: [[entities/windsurf|Windsurf]]
+- Created entity page: [[entities/ttt-test-time-training|TTT (Test-Time Training)]]
+- Created entity page: [[entities/ttt-test-time-training|TTT (Test-Time Training)]]
+- Created entity page: [[entities/large-reasoning-models|Large Reasoning Models]]
+- Created entity page: [[entities/large-reasoning-models|Large Reasoning Models]]
+- Created entity page: [[entities/jules|Jules]]
+- Created entity page: [[entities/jules|Jules]]
+- Created entity page: [[entities/streamingllm|StreamingLLM]]
+- Created entity page: [[entities/streamingllm|StreamingLLM]]
+- Created entity page: [[entities/qwen25-vl-7b|Qwen2.5-VL-7B]]
+- Created entity page: [[entities/qwen25-vl-7b|Qwen2.5-VL-7B]]
+- Created entity page: [[entities/xai|xAI]]
+- Created entity page: [[entities/xai|xAI]]
+- Created entity page: [[entities/software-30|Software 3.0]]
+- Created entity page: [[entities/software-30|Software 3.0]]
+- Created entity page: [[entities/chatml-format|ChatML Format]]
+- Created entity page: [[entities/chatml-format|ChatML Format]]
+- Created entity page: [[entities/thinking-mode|Thinking Mode]]
+- Created entity page: [[entities/thinking-mode|Thinking Mode]]
+- Created entity page: [[entities/research|ReSearch]]
+- Created entity page: [[entities/research|ReSearch]]
+- Created entity page: [[entities/reasoning-gym|Reasoning Gym]]
+- Created entity page: [[entities/reasoning-gym|Reasoning Gym]]
+- Created entity page: [[entities/mlvu|MLVU]]
+- Created entity page: [[entities/mlvu|MLVU]]
+- Created entity page: [[entities/lvbench|LVBench]]
+- Created entity page: [[entities/lvbench|LVBench]]
+- Created entity page: [[entities/aflow|AFlow]]
+- Created entity page: [[entities/aflow|AFlow]]
+- Created entity page: [[entities/kg-rag|KG-RAG]]
+- Created entity page: [[entities/kg-rag|KG-RAG]]
+- Created entity page: [[entities/jaccard-similarity|Jaccard Similarity]]
+- Created entity page: [[entities/jaccard-similarity|Jaccard Similarity]]
+- Created entity page: [[entities/chain-of-reasoning|Chain-of-Reasoning]]
+- Created entity page: [[entities/chain-of-reasoning|Chain-of-Reasoning]]
+- Created entity page: [[entities/simulated-multi-visit-dialogue-generator|Simulated Multi-Visit Dialogue Generator]]
+- Created entity page: [[entities/simulated-multi-visit-dialogue-generator|Simulated Multi-Visit Dialogue Generator]]
+- Created entity page: [[entities/dual-process-theory-of-cognition|Dual-Process Theory of Cognition]]
+- Created entity page: [[entities/dual-process-theory-of-cognition|Dual-Process Theory of Cognition]]
+- Created entity page: [[entities/structured-generation-with-decoding-constraints|Structured Generation with Decoding Constraints]]
+- Created entity page: [[entities/structured-generation-with-decoding-constraints|Structured Generation with Decoding Constraints]]
+- Created entity page: [[entities/dialogue-agent|Dialogue Agent]]
+- Created entity page: [[entities/dialogue-agent|Dialogue Agent]]
+- Created entity page: [[entities/agent-state|Agent State]]
+- Created entity page: [[entities/agent-state|Agent State]]
+- Created entity page: [[entities/rxqa|RxQA]]
+- Created entity page: [[entities/rxqa|RxQA]]
+- Created entity page: [[entities/memoryos|MemoryOS]]
+- Created entity page: [[entities/memoryos|MemoryOS]]
+- Created entity page: [[entities/weak-to-strong-supervision|Weak-to-Strong Supervision]]
+- Created entity page: [[entities/weak-to-strong-supervision|Weak-to-Strong Supervision]]
+- Created entity page: [[entities/deepseek-r1-distill-qwen-32b|DeepSeek-R1-Distill-Qwen-32B]]
+- Created entity page: [[entities/domain-randomization|domain randomization]]
+- Created entity page: [[entities/deepseek-r1-distill-qwen-32b|DeepSeek-R1-Distill-Qwen-32B]]
+- Created entity page: [[entities/associative-memory|Associative memory]]
+- Created entity page: [[entities/acqui-hire|Acqui-hire]]
+- Created entity page: [[entities/associative-memory|Associative memory]]
+- Created entity page: [[entities/claude-opus-41|Claude Opus 4.1]]
+- Created entity page: [[entities/claude-opus-41|Claude Opus 4.1]]
+- Created entity page: [[entities/self-reflection|Self-Reflection]]
+- Created entity page: [[entities/self-reflection|Self-Reflection]]
+- Created entity page: [[entities/chat-completions-api|Chat Completions API]]
+- Created entity page: [[entities/chat-completions-api|Chat Completions API]]
+- Created entity page: [[entities/reinforcement-learning-from-ai-feedback|Reinforcement Learning from AI Feedback]]
+- Created entity page: [[entities/reinforcement-learning-from-ai-feedback|Reinforcement Learning from AI Feedback]]
+- Created entity page: [[entities/unity|Unity]]
+- Created entity page: [[entities/unity|Unity]]
+- Created entity page: [[entities/sima-deepmind|SIMA (DeepMind)]]
+- Created entity page: [[entities/openvla|OpenVLA]]
+- Created entity page: [[entities/sima-deepmind|SIMA (DeepMind)]]
+- Created entity page: [[entities/esm3|ESM3]]
+- Created entity page: [[entities/esm3|ESM3]]
+- Created entity page: [[entities/single-cell-rna-sequencing|Single-cell RNA sequencing]]
+- Created entity page: [[entities/single-cell-rna-sequencing|Single-cell RNA sequencing]]
+- Created entity page: [[entities/diffusion-forcing|Diffusion Forcing]]
+- Created entity page: [[entities/diffusion-forcing|Diffusion Forcing]]
+- Created entity page: [[entities/bleu-1|BLEU-1]]
+- Created entity page: [[entities/bleu-1|BLEU-1]]
+- Created entity page: [[entities/deepseek-r1-distill|DeepSeek-R1-Distill]]
+- Created entity page: [[entities/deepseek-r1-distill|DeepSeek-R1-Distill]]
+- Created entity page: [[entities/funsearch|FunSearch]]
+- Created entity page: [[entities/funsearch|FunSearch]]
+- Created entity page: [[entities/qwen25-math-15b|Qwen2.5-Math-1.5B]]
+- Created entity page: [[entities/qwen25-math-15b|Qwen2.5-Math-1.5B]]
+- Created entity page: [[entities/fume|Fume]]
+- Created entity page: [[entities/fume|Fume]]
+- Created entity page: [[entities/service-as-software|Service as Software]]
+- Created entity page: [[entities/service-as-software|Service as Software]]
+- Created entity page: [[entities/bge-m3|BGE-M3]]
+- Created entity page: [[entities/bge-m3|BGE-M3]]
+- Created entity page: [[entities/llamacpp|llama.cpp]]
+- Created entity page: [[entities/llamacpp|llama.cpp]]
+- Created entity page: [[entities/hybrid-ssm-transformer-architecture|Hybrid SSM-Transformer architecture]]
+- Created entity page: [[entities/hybrid-ssm-transformer-architecture|Hybrid SSM-Transformer architecture]]
+- Created entity page: [[entities/o-series-models|o-series models]]
+- Created entity page: [[entities/libero-benchmark|LIBERO Benchmark]]
+- Created entity page: [[entities/think-tool|think tool]]
+- Created entity page: [[entities/o-series-models|o-series models]]
+- Created entity page: [[entities/synapse|Synapse]]
+- Created entity page: [[entities/synapse|Synapse]]
+- Created entity page: [[entities/optimus|OPTIMUS]]
+- Created entity page: [[entities/optimus|OPTIMUS]]
+- Created entity page: [[entities/reasoning-models|reasoning models]]
+- Created entity page: [[entities/reasoning-models|reasoning models]]
+- Created entity page: [[entities/needle-in-a-haystack-niah|Needle-In-A-Haystack (NIAH)]]
+- Created entity page: [[entities/needle-in-a-haystack-niah|Needle-In-A-Haystack (NIAH)]]
+- Created entity page: [[entities/artificial-general-intelligence|Artificial General Intelligence]]
+- Created entity page: [[entities/terminal-bench|Terminal-Bench]]
+- Created entity page: [[entities/artificial-general-intelligence|Artificial General Intelligence]]
+- Created entity page: [[entities/off-policy-training|Off-policy Training]]
+- Created entity page: [[entities/off-policy-training|Off-policy Training]]
+- Created entity page: [[entities/fréchet-inception-distance|Fréchet Inception Distance]]
+- Created entity page: [[entities/fréchet-inception-distance|Fréchet Inception Distance]]
+- Created entity page: [[entities/sandwich-normalization|Sandwich Normalization]]
+- Created entity page: [[entities/sandwich-normalization|Sandwich Normalization]]
+- Created entity page: [[entities/masked-diffusion-language-model|Masked Diffusion Language Model]]
+- Created entity page: [[entities/masked-diffusion-language-model|Masked Diffusion Language Model]]
+- Created entity page: [[entities/pondernet|PonderNet]]
+- Created entity page: [[entities/pondernet|PonderNet]]
+- Created entity page: [[entities/advanced-voice-mode|Advanced Voice Mode]]
+- Created entity page: [[entities/advanced-voice-mode|Advanced Voice Mode]]
+- Created entity page: [[entities/evo2|EVO2]]
+- Created entity page: [[entities/evo2|EVO2]]
+- Created entity page: [[entities/arc-institute|ARC Institute]]
+- Created entity page: [[entities/arc-institute|ARC Institute]]
+- Created entity page: [[entities/multi-agent-systems|multi-agent systems]]
+- Created entity page: [[entities/multi-agent-systems|multi-agent systems]]
+- Created entity page: [[entities/lean-proof-assistant|Lean proof assistant]]
+- Created entity page: [[entities/lean-proof-assistant|Lean proof assistant]]
+- Created entity page: [[entities/rectified-flow|Rectified Flow]]
+- Created entity page: [[entities/rectified-flow|Rectified Flow]]
+- Created entity page: [[entities/dora|DoRA]]
+- Created entity page: [[entities/dora|DoRA]]
+- Created entity page: [[entities/compute-multiplier|Compute Multiplier]]
+- Created entity page: [[entities/compute-multiplier|Compute Multiplier]]
+- Created entity page: [[entities/multi-token-prediction-mtp|Multi-Token Prediction (MTP)]]
+- Created entity page: [[entities/multi-token-prediction-mtp|Multi-Token Prediction (MTP)]]
+- Created entity page: [[entities/alphageometry-2|AlphaGeometry 2]]
+- Created entity page: [[entities/alphageometry-2|AlphaGeometry 2]]
+- Created entity page: [[entities/reconstruction-fid|Reconstruction FID]]
+- Created entity page: [[entities/reconstruction-fid|Reconstruction FID]]
+- Created entity page: [[entities/omnibench|OmniBench]]
+- Created entity page: [[entities/omnibench|OmniBench]]
+- Created entity page: [[entities/entropy-collapse|Entropy Collapse]]
+- Created entity page: [[entities/entropy-collapse|Entropy Collapse]]
+- Created entity page: [[entities/fsdp|FSDP]]
+- Created entity page: [[entities/fsdp|FSDP]]
+- Created entity page: [[entities/reinforcement-learning-from-ai-feedback-rlaif|Reinforcement Learning from AI Feedback (RLAIF)]]
+- Created entity page: [[entities/reinforcement-learning-from-ai-feedback-rlaif|Reinforcement Learning from AI Feedback (RLAIF)]]
+- Created entity page: [[entities/gsm-symbolic|GSM-Symbolic]]
+- Created entity page: [[entities/gsm-symbolic|GSM-Symbolic]]
+- Created entity page: [[entities/lm-arena|LM Arena]]
+- Created entity page: [[entities/lm-arena|LM Arena]]
+- Created entity page: [[entities/notebook-lm|Notebook LM]]
+- Created entity page: [[entities/notebook-lm|Notebook LM]]
+- Created entity page: [[entities/llama-31-8b-instruct|Llama-3.1-8B-Instruct]]
+- Created entity page: [[entities/llama-31-8b-instruct|Llama-3.1-8B-Instruct]]
+- Created entity page: [[entities/interaction-horizon|Interaction horizon]]
+- Created entity page: [[entities/interaction-horizon|Interaction horizon]]
+- Created entity page: [[entities/test-time-reinforcement-learning-ttrl|Test-Time Reinforcement Learning (TTRL)]]
+- Created entity page: [[entities/test-time-reinforcement-learning-ttrl|Test-Time Reinforcement Learning (TTRL)]]
+- Created entity page: [[entities/amc|AMC]]
+- Created entity page: [[entities/amc|AMC]]
+- Created entity page: [[entities/linear-representation-hypothesis|Linear Representation Hypothesis]]
+- Created entity page: [[entities/linear-representation-hypothesis|Linear Representation Hypothesis]]
+- Created entity page: [[entities/eureka|Eureka]]
+- Created entity page: [[entities/eureka|Eureka]]
+- Created entity page: [[entities/electronic-health-record-ehr|Electronic Health Record (EHR)]]
+- Created entity page: [[entities/electronic-health-record-ehr|Electronic Health Record (EHR)]]
+- Created entity page: [[entities/parallel-tool-calling|Parallel Tool Calling]]
+- Created entity page: [[entities/santa-fe-institute|Santa Fe Institute]]
+- Created entity page: [[entities/parallel-tool-calling|Parallel Tool Calling]]
+- Created entity page: [[entities/babilong-benchmark|BABILong benchmark]]
+- Created entity page: [[entities/babilong-benchmark|BABILong benchmark]]
+- Created entity page: [[entities/agentflow|AgentFlow]]
+- Created entity page: [[entities/agentflow|AgentFlow]]
+- Created entity page: [[entities/ai-durable-companies|AI-Durable Companies]]
+- Created entity page: [[entities/ai-durable-companies|AI-Durable Companies]]
+- Created entity page: [[entities/hle-humanitys-last-exam|HLE (Humanity's Last Exam)]]
+- Created entity page: [[entities/hle-humanitys-last-exam|HLE (Humanity's Last Exam)]]
+- Created entity page: [[entities/world-labs|World Labs]]
+- Created entity page: [[entities/world-labs|World Labs]]
+- Created entity page: [[entities/generative-adversarial-network|Generative Adversarial Network]]
+- Created entity page: [[entities/generative-adversarial-network|Generative Adversarial Network]]
+- Created entity page: [[entities/representation-learning|Representation Learning]]
+- Created entity page: [[entities/representation-learning|Representation Learning]]
+- Created entity page: [[entities/ui-tars|UI-TARS]]
+- Created entity page: [[entities/ui-tars|UI-TARS]]
+- Created entity page: [[entities/mcp-server|MCP server]]
+- Created entity page: [[entities/mcp-server|MCP server]]
+- Created entity page: [[entities/dualpipe|DualPipe]]
+- Created entity page: [[entities/dualpipe|DualPipe]]
+- Created entity page: [[entities/kimi-k15|Kimi k1.5]]
+- Created entity page: [[entities/kimi-k15|Kimi k1.5]]
+- Created entity page: [[entities/chain-of-thought-reward-model|Chain-of-Thought Reward Model]]
+- Created entity page: [[entities/chain-of-thought-reward-model|Chain-of-Thought Reward Model]]
+- Created entity page: [[entities/fast-weights|Fast weights]]
+- Created entity page: [[entities/fast-weights|Fast weights]]
+- Created entity page: [[entities/tree-attention|Tree Attention]]
+- Created entity page: [[entities/tree-attention|Tree Attention]]
+- Created entity page: [[entities/sequence-packing|Sequence Packing]]
+- Created entity page: [[entities/sequence-packing|Sequence Packing]]
+- Created entity page: [[entities/robotic-process-automation|Robotic Process Automation]]
+- Created entity page: [[entities/robotic-process-automation|Robotic Process Automation]]
+- Created entity page: [[entities/behavior-collapse|Behavior Collapse]]
+- Created entity page: [[entities/behavior-collapse|Behavior Collapse]]
+- Created entity page: [[entities/maskgit|MaskGIT]]
+- Created entity page: [[entities/markov-decision-process-mdp|Markov Decision Process (MDP)]]
+- Created entity page: [[entities/maskgit|MaskGIT]]
+- Created entity page: [[entities/o1-preview|o1-Preview]]
+- Created entity page: [[entities/o1-preview|o1-Preview]]
+- Created entity page: [[entities/zombie-unicorn|Zombie Unicorn]]
+- Created entity page: [[entities/zombie-unicorn|Zombie Unicorn]]
+- Created entity page: [[entities/gemma-3|Gemma 3]]
+- Created entity page: [[entities/gemma-3|Gemma 3]]
+- Created entity page: [[entities/voice-cloning|Voice Cloning]]
+- Created entity page: [[entities/voice-cloning|Voice Cloning]]
+- Created entity page: [[entities/protein-folding|Protein Folding]]
+- Created entity page: [[entities/protein-folding|Protein Folding]]
+- Created entity page: [[entities/compute-scaling|Compute Scaling]]
+- Created entity page: [[entities/compute-scaling|Compute Scaling]]
+- Created entity page: [[entities/rls-razor|RL's Razor]]
+- Created entity page: [[entities/rls-razor|RL's Razor]]
+- Created entity page: [[entities/greedy-decoding|greedy decoding]]
+- Created entity page: [[entities/greedy-decoding|greedy decoding]]
+- Created entity page: [[entities/arithmetic-intensity|Arithmetic Intensity]]
+- Created entity page: [[entities/arithmetic-intensity|Arithmetic Intensity]]
+- Created entity page: [[entities/sciworld|SciWorld]]
+- Created entity page: [[entities/sciworld|SciWorld]]
+- Created entity page: [[entities/travelplanner|TravelPlanner]]
+- Created entity page: [[entities/travelplanner|TravelPlanner]]
+- Created entity page: [[entities/off-policy-rl|Off-Policy RL]]
+- Created entity page: [[entities/off-policy-rl|Off-Policy RL]]
+- Created entity page: [[entities/alpacaeval-2|AlpacaEval 2]]
+- Created entity page: [[entities/alpacaeval-2|AlpacaEval 2]]
+- Created entity page: [[entities/readagent|ReadAgent]]
+- Created entity page: [[entities/readagent|ReadAgent]]
+- Created entity page: [[entities/mathvision|MathVision]]
+
+## 2026-04-09
+
+- Created entity page: [[entities/mathvision|MathVision]]
+- Created entity page: [[entities/abstraction-and-reasoning-corpus-arc|Abstraction and Reasoning Corpus (ARC)]]
+- Created entity page: [[entities/abstraction-and-reasoning-corpus-arc|Abstraction and Reasoning Corpus (ARC)]]
+- Created entity page: [[entities/thinking-machines|Thinking Machines]]
+- Created entity page: [[entities/thinking-machines|Thinking Machines]]
+- Created entity page: [[entities/armorm-llama3-8b-v01|ArmoRM-Llama3-8B-v0.1]]
+- Created entity page: [[entities/armorm-llama3-8b-v01|ArmoRM-Llama3-8B-v0.1]]
+- Created entity page: [[entities/sandbox-persistence|Sandbox Persistence]]
+- Created entity page: [[entities/sandbox-persistence|Sandbox Persistence]]
+- Created entity page: [[entities/d-smart|D-SMART]]
+- Created entity page: [[entities/d-smart|D-SMART]]
+- Created entity page: [[entities/rmm|RMM]]
+- Created entity page: [[entities/rmm|RMM]]
+- Created entity page: [[entities/latent-memory|Latent Memory]]
+- Created entity page: [[entities/latent-memory|Latent Memory]]
+- Created entity page: [[entities/arigraph|AriGraph]]
+- Created entity page: [[entities/arigraph|AriGraph]]
+- Created entity page: [[entities/g-memory|G-Memory]]
+- Created entity page: [[entities/g-memory|G-Memory]]
+- Created entity page: [[entities/memorag|MemoRAG]]
+- Created entity page: [[entities/memorag|MemoRAG]]
+- Created entity page: [[entities/agent-kb|Agent KB]]
+- Created entity page: [[entities/agent-kb|Agent KB]]
+- Created entity page: [[entities/hiagent|HiAgent]]
+- Created entity page: [[entities/hiagent|HiAgent]]
+- Created entity page: [[entities/mirix|MIRIX]]
+- Created entity page: [[entities/mirix|MIRIX]]
+- Created entity page: [[entities/rcr-router|RCR-Router]]
+- Created entity page: [[entities/rcr-router|RCR-Router]]
+- Created entity page: [[entities/memoryllm|MemoryLLM]]
+- Created entity page: [[entities/memoryllm|MemoryLLM]]
+- Created entity page: [[entities/m|M+]]
+- Created entity page: [[entities/memgen|MemGen]]
+- Created entity page: [[entities/m|M+]]
+- Created entity page: [[entities/memento|Memento]]
+- Created entity page: [[entities/memento|Memento]]
+- Created entity page: [[entities/cold-start-fine-tuning|Cold-Start Fine-tuning]]
+- Created entity page: [[entities/cold-start-fine-tuning|Cold-Start Fine-tuning]]
+- Created entity page: [[entities/finemath|FineMath]]
+- Created entity page: [[entities/finemath|FineMath]]
+- Created entity page: [[entities/transduction|Transduction]]
+- Created entity page: [[entities/transduction|Transduction]]
+- Created entity page: [[entities/swe-gym|SWE-Gym]]
+- Created entity page: [[entities/swe-gym|SWE-Gym]]
+- Created entity page: [[entities/visual-instruction-tuning|Visual Instruction Tuning]]
+- Created entity page: [[entities/visual-instruction-tuning|Visual Instruction Tuning]]
+- Created entity page: [[entities/msc|MSC]]
+- Created entity page: [[entities/msc|MSC]]
+- Created entity page: [[entities/vision-language-action-model-vla|Vision-Language-Action Model (VLA)]]
+- Created entity page: [[entities/vision-language-action-model-vla|Vision-Language-Action Model (VLA)]]
+- Created entity page: [[entities/deepseek-coder-v2-instruct|DeepSeek-Coder-V2-Instruct]]
+- Created entity page: [[entities/deepseek-coder-v2-instruct|DeepSeek-Coder-V2-Instruct]]
+- Created entity page: [[entities/classic-reward-model|Classic Reward Model]]
+- Created entity page: [[entities/classic-reward-model|Classic Reward Model]]
+- Created entity page: [[entities/wrap|WRAP]]
+- Created entity page: [[entities/wrap|WRAP]]
+- Created entity page: [[entities/model-spec|Model spec]]
+- Created entity page: [[entities/model-spec|Model spec]]
+- Created entity page: [[entities/awm|AWM]]
+- Created entity page: [[entities/awm|AWM]]
+- Created entity page: [[entities/evaluator-model|evaluator model]]
+- Created entity page: [[entities/evaluator-model|evaluator model]]
+- Created entity page: [[entities/multimodal-large-language-model|Multimodal Large Language Model]]
+- Created entity page: [[entities/multimodal-large-language-model|Multimodal Large Language Model]]
+- Created entity page: [[entities/value-model|value model]]
+- Created entity page: [[entities/value-model|value model]]
+- Created entity page: [[entities/langmem|LangMem]]
+- Created entity page: [[entities/langmem|LangMem]]
+- Created entity page: [[entities/image-captioning|Image Captioning]]
+- Created entity page: [[entities/image-captioning|Image Captioning]]
+- Created entity page: [[entities/mindbody|Mindbody]]
+- Created entity page: [[entities/mindbody|Mindbody]]
+- Created entity page: [[entities/toast|Toast]]
+- Created entity page: [[entities/toast|Toast]]
+- Created entity page: [[entities/majk|maj@k]]
+- Created entity page: [[entities/majk|maj@k]]
+- Created entity page: [[entities/distribution-shift-in-self-correction|distribution shift in self-correction]]
+- Created entity page: [[entities/distribution-shift-in-self-correction|distribution shift in self-correction]]
+- Created entity page: [[entities/reducto|Reducto]]
+- Created entity page: [[entities/temporal-difference-learning|Temporal Difference Learning]]
+- Created entity page: [[entities/reducto|Reducto]]
+- Created entity page: [[entities/isaac-sim|Isaac Sim]]
+- Created entity page: [[entities/isaac-sim|Isaac Sim]]
+- Created entity page: [[entities/inference-aware-fine-tuning|Inference-Aware Fine-Tuning]]
+- Created entity page: [[entities/inference-aware-fine-tuning|Inference-Aware Fine-Tuning]]
+- Created entity page: [[entities/pile|Pile]]
+- Created entity page: [[entities/pile|Pile]]
+- Created entity page: [[entities/flash-attention|Flash Attention]]
+- Created entity page: [[entities/flash-attention|Flash Attention]]
+- Created entity page: [[entities/dream|Dream]]
+- Created entity page: [[entities/dream|Dream]]
+- Created entity page: [[entities/llama-32-1b-instruct|Llama-3.2-1B-Instruct]]
+- Created entity page: [[entities/llama-32-1b-instruct|Llama-3.2-1B-Instruct]]
+- Created entity page: [[entities/recurrent-depth-approach|Recurrent Depth Approach]]
+- Created entity page: [[entities/recurrent-depth-approach|Recurrent Depth Approach]]
+- Created entity page: [[entities/value-network|Value Network]]
+- Created entity page: [[entities/value-network|Value Network]]
+- Created entity page: [[entities/ivideogpt|iVideoGPT]]
+- Created entity page: [[entities/ivideogpt|iVideoGPT]]
+- Created entity page: [[entities/llm-os|LLM OS]]
+- Created entity page: [[entities/llm-os|LLM OS]]
+- Created entity page: [[entities/mastra|Mastra]]
+- Created entity page: [[entities/mastra|Mastra]]
+- Created entity page: [[entities/resum|ReSum]]
+- Created entity page: [[entities/resum|ReSum]]
+- Created entity page: [[entities/videommmu|VideoMMMU]]
+- Created entity page: [[entities/videommmu|VideoMMMU]]
+- Created entity page: [[entities/video-r1|Video-R1]]
+- Created entity page: [[entities/video-r1|Video-R1]]
+- Created entity page: [[entities/mixture-of-recursions|Mixture-of-Recursions]]
+- Created entity page: [[entities/mixture-of-recursions|Mixture-of-Recursions]]
+- Created entity page: [[entities/openrlhf|OpenRLHF]]
+- Created entity page: [[entities/openrlhf|OpenRLHF]]
+- Created entity page: [[entities/jepa-joint-embedding-predictive-architecture|JEPA (Joint Embedding Predictive Architecture)]]
+- Created entity page: [[entities/jepa-joint-embedding-predictive-architecture|JEPA (Joint Embedding Predictive Architecture)]]
+- Created entity page: [[entities/context-poisoning|Context Poisoning]]
+- Created entity page: [[entities/context-poisoning|Context Poisoning]]
+- Created entity page: [[entities/smollm2|SmolLM2]]
+- Created entity page: [[entities/smollm2|SmolLM2]]
+- Created entity page: [[entities/lightrag|LightRAG]]
+- Created entity page: [[entities/lightrag|LightRAG]]
+- Created entity page: [[entities/value-based-care|Value-Based Care]]
+- Created entity page: [[entities/value-based-care|Value-Based Care]]
+- Created entity page: [[entities/fee-for-service|Fee-for-Service]]
+- Created entity page: [[entities/fee-for-service|Fee-for-Service]]
+- Created entity page: [[entities/qwen25-math-7b|Qwen2.5-Math-7B]]
+- Created entity page: [[entities/qwen25-math-7b|Qwen2.5-Math-7B]]
+- Created entity page: [[entities/claude-4|Claude 4]]
+- Created entity page: [[entities/claude-4|Claude 4]]
+- Created entity page: [[entities/cognitive-core|Cognitive core]]
+- Created entity page: [[entities/cognitive-core|Cognitive core]]
+- Created entity page: [[entities/janus|Janus]]
+- Created entity page: [[entities/llamagen|LlamaGen]]
+- Created entity page: [[entities/janus|Janus]]
+- Created entity page: [[entities/system-of-record|System of Record]]
+- Created entity page: [[entities/system-of-record|System of Record]]
+- Created entity page: [[entities/qwen3-4b|Qwen3-4B]]
+- Created entity page: [[entities/qwen3-4b|Qwen3-4B]]
+- Created entity page: [[entities/qwq-32b-preview|QwQ-32B-Preview]]
+- Created entity page: [[entities/qwq-32b-preview|QwQ-32B-Preview]]
+- Created entity page: [[entities/qwen3-30b-a3b|Qwen3-30B-A3B]]
+- Created entity page: [[entities/qwen3-30b-a3b|Qwen3-30B-A3B]]
+- Created entity page: [[entities/emu3|EMU3]]
+- Created entity page: [[entities/emu3|EMU3]]
+- Created entity page: [[entities/program-synthesis|Program Synthesis]]
+- Created entity page: [[entities/program-synthesis|Program Synthesis]]
+- Created entity page: [[entities/block-diffusion|Block Diffusion]]
+- Created entity page: [[entities/block-diffusion|Block Diffusion]]
+- Created entity page: [[entities/miprov2|MIPROv2]]
+- Created entity page: [[entities/miprov2|MIPROv2]]
+- Created entity page: [[entities/sycophancy|Sycophancy]]
+- Created entity page: [[entities/sycophancy|Sycophancy]]
+- Created entity page: [[entities/pause-token|Pause Token]]
+- Created entity page: [[entities/pause-token|Pause Token]]
+- Created entity page: [[entities/frames|FRAMES]]
+- Created entity page: [[entities/frames|FRAMES]]
+- Created entity page: [[entities/s1k|S1K]]
+- Created entity page: [[entities/s1k|S1K]]
+- Created entity page: [[entities/length-penalty|Length Penalty]]
+- Created entity page: [[entities/length-penalty|Length Penalty]]
+- Created entity page: [[entities/converzai|ConverzAI]]
+- Created entity page: [[entities/converzai|ConverzAI]]
+- Created entity page: [[entities/memory-as-context|Memory as Context]]
+- Created entity page: [[entities/memory-as-context|Memory as Context]]
+- Created entity page: [[entities/persistent-memory|Persistent Memory]]
+- Created entity page: [[entities/persistent-memory|Persistent Memory]]
+- Created entity page: [[entities/memory-as-layer|Memory as Layer]]
+- Created entity page: [[entities/memory-as-layer|Memory as Layer]]
+- Created entity page: [[entities/qwen25-7b|Qwen2.5-7B]]
+- Created entity page: [[entities/qwen25-7b|Qwen2.5-7B]]
+- Created entity page: [[entities/deepseek-r1-zero|DeepSeek R1-Zero]]
+- Created entity page: [[entities/deepseek-r1-zero|DeepSeek R1-Zero]]
+- Created entity page: [[entities/qwen3-17b|Qwen3-1.7B]]
+- Created entity page: [[entities/qwen3-17b|Qwen3-1.7B]]
+- Created entity page: [[entities/seed-bench|SEED-Bench]]
+- Created entity page: [[entities/seed-bench|SEED-Bench]]
+- Created entity page: [[entities/rl-environment|RL Environment]]
+- Created entity page: [[entities/rl-environment|RL Environment]]
+- Created entity page: [[entities/mcp-client|MCP Client]]
+- Created entity page: [[entities/mcp-client|MCP Client]]
+- Created entity page: [[entities/mcp-registry|MCP Registry]]
+- Created entity page: [[entities/mcp-registry|MCP Registry]]
+- Created entity page: [[entities/naturalreasoning|NaturalReasoning]]
+- Created entity page: [[entities/naturalreasoning|NaturalReasoning]]
+- Created entity page: [[entities/rt1|RT1]]
+- Created entity page: [[entities/rt1|RT1]]
+- Created entity page: [[entities/robot-scaling-laws|Robot Scaling Laws]]
+- Created entity page: [[entities/robot-scaling-laws|Robot Scaling Laws]]
+- Created entity page: [[entities/palm-e|PaLM-E]]
+- Created entity page: [[entities/palm-e|PaLM-E]]
+- Created entity page: [[entities/code-as-policies|Code-as-Policies]]
+- Created entity page: [[entities/code-as-policies|Code-as-Policies]]
+- Created entity page: [[entities/tulu-3|Tulu 3]]
+- Created entity page: [[entities/tulu-3|Tulu 3]]
+- Created entity page: [[entities/olympiad-bench|Olympiad Bench]]
+- Created entity page: [[entities/olympiad-bench|Olympiad Bench]]
+- Created entity page: [[entities/ms-coco|MS-COCO]]
+- Created entity page: [[entities/ms-coco|MS-COCO]]
+- Created entity page: [[entities/computer-use-agents|computer use agents]]
+- Created entity page: [[entities/computer-use-agents|computer use agents]]
+- Created entity page: [[entities/outcome-supervision|Outcome Supervision]]
+- Created entity page: [[entities/outcome-supervision|Outcome Supervision]]
+- Created entity page: [[entities/image-to-video-generation|Image-to-Video Generation]]
+- Created entity page: [[entities/image-to-video-generation|Image-to-Video Generation]]
+- Created entity page: [[entities/knowledge-insulation|Knowledge Insulation]]
+- Created entity page: [[entities/knowledge-insulation|Knowledge Insulation]]
+- Created entity page: [[entities/linear-probing|Linear Probing]]
+- Created entity page: [[entities/linear-probing|Linear Probing]]
+- Created entity page: [[entities/em-rl|EM-RL]]
+- Created entity page: [[entities/dpo|DPO]]
+- Created entity page: [[entities/em-rl|EM-RL]]
+- Created entity page: [[entities/ai-memory|AI Memory]]
+- Created entity page: [[entities/ai-memory|AI Memory]]
+- Created entity page: [[entities/chatgpt-pulse|ChatGPT Pulse]]
+- Created entity page: [[entities/chatgpt-pulse|ChatGPT Pulse]]
+- Created entity page: [[entities/photogrammetry|Photogrammetry]]
+- Created entity page: [[entities/photogrammetry|Photogrammetry]]
+- Created entity page: [[entities/rtfm|RTFM]]
+- Created entity page: [[entities/rtfm|RTFM]]
+- Created entity page: [[entities/marble|Marble]]
+- Created entity page: [[entities/marble|Marble]]
+- Created entity page: [[entities/openr1|OpenR1]]
+- Created entity page: [[entities/openr1|OpenR1]]
+- Created entity page: [[entities/qwen3-4b-base|Qwen3-4B-Base]]
+- Created entity page: [[entities/qwen3-4b-base|Qwen3-4B-Base]]
+- Created entity page: [[entities/qwen3-8b-base|Qwen3-8B-Base]]
+- Created entity page: [[entities/qwen3-8b-base|Qwen3-8B-Base]]
+- Created entity page: [[entities/solution-generator|Solution Generator]]
+- Created entity page: [[entities/solution-generator|Solution Generator]]
+- Created entity page: [[entities/arc-challenge|ARC-Challenge]]
+- Created entity page: [[entities/arc-challenge|ARC-Challenge]]
+- Created entity page: [[entities/semantic-tokens|Semantic Tokens]]
+- Created entity page: [[entities/semantic-tokens|Semantic Tokens]]
+- Created entity page: [[entities/acoustic-tokens|Acoustic Tokens]]
+- Created entity page: [[entities/acoustic-tokens|Acoustic Tokens]]
+- Created entity page: [[entities/webinstruct-verified|WebInstruct-Verified]]
+- Created entity page: [[entities/webinstruct-verified|WebInstruct-Verified]]
+- Created entity page: [[entities/3d-causal-vae|3D causal VAE]]
+- Created entity page: [[entities/3d-causal-vae|3D causal VAE]]
+- Created entity page: [[entities/voice-agent|Voice Agent]]
+- Created entity page: [[entities/voice-agent|Voice Agent]]
+- Created entity page: [[entities/semantic-entropy|Semantic Entropy]]
+- Created entity page: [[entities/semantic-entropy|Semantic Entropy]]
+- Created entity page: [[entities/xlam-2|xLAM-2]]
+- Created entity page: [[entities/xlam-2|xLAM-2]]
+- Created entity page: [[entities/ssi|SSI]]
+- Created entity page: [[entities/ssi|SSI]]
+- Created entity page: [[entities/neural-long-term-memory-module|Neural long-term memory module]]
+- Created entity page: [[entities/neural-long-term-memory-module|Neural long-term memory module]]
+- Created entity page: [[entities/hmmt|HMMT]]
+- Created entity page: [[entities/hmmt|HMMT]]
+- Created entity page: [[entities/alignment-tax|Alignment Tax]]
+- Created entity page: [[entities/alignment-tax|Alignment Tax]]
+- Created entity page: [[entities/reinforcement-learning-rl-for-language-models|Reinforcement Learning (RL) for language models]]
+- Created entity page: [[entities/reinforcement-learning-rl-for-language-models|Reinforcement Learning (RL) for language models]]
+- Created entity page: [[entities/rockmelt|Rockmelt]]
+- Created entity page: [[entities/rockmelt|Rockmelt]]
+- Created entity page: [[entities/c-vivit|C-ViViT]]
+- Created entity page: [[entities/c-vivit|C-ViViT]]
+- Created entity page: [[entities/brevity-bias|brevity bias]]
+- Created entity page: [[entities/brevity-bias|brevity bias]]
+- Created entity page: [[entities/context-collapse|context collapse]]
+- Created entity page: [[entities/context-collapse|context collapse]]
+- Created entity page: [[entities/incremental-delta-updates|incremental delta updates]]
+- Created entity page: [[entities/incremental-delta-updates|incremental delta updates]]
+- Created entity page: [[entities/reinforcement-fine-tuning-rft|Reinforcement Fine-Tuning (RFT)]]
+- Created entity page: [[entities/reinforcement-fine-tuning-rft|Reinforcement Fine-Tuning (RFT)]]
+- Created entity page: [[entities/context-compression|Context compression]]
+- Created entity page: [[entities/context-compression|Context compression]]
+- Created entity page: [[entities/diffusion-loss|Diffusion Loss]]
+- Created entity page: [[entities/diffusion-loss|Diffusion Loss]]
+- Created entity page: [[entities/action-tokenization|action tokenization]]
+- Created entity page: [[entities/action-tokenization|action tokenization]]
+- Created entity page: [[entities/aide|AIDE]]
+- Created entity page: [[entities/aide|AIDE]]
+- Created entity page: [[entities/qwen3-14b|Qwen3-14B]]
+- Created entity page: [[entities/qwen3-14b|Qwen3-14B]]
+- Created entity page: [[entities/mimi|Mimi]]
+- Created entity page: [[entities/mimi|Mimi]]
+- Created entity page: [[entities/rq-transformer|RQ-Transformer]]
+- Created entity page: [[entities/rq-transformer|RQ-Transformer]]
+- Created entity page: [[entities/minif2f|MiniF2F]]
+- Created entity page: [[entities/minif2f|MiniF2F]]
+- Created entity page: [[entities/vision-transformer|Vision Transformer]]
+- Created entity page: [[entities/cruxeval|CRUXEval]]
+- Created entity page: [[entities/vision-transformer|Vision Transformer]]
+- Created entity page: [[entities/hybrid-reasoning-model|Hybrid reasoning model]]
+- Created entity page: [[entities/hybrid-reasoning-model|Hybrid reasoning model]]
+- Created entity page: [[entities/flowrl|FlowRL]]
+- Created entity page: [[entities/flowrl|FlowRL]]
+- Created entity page: [[entities/step-level-advantage|Step-level advantage]]
+- Created entity page: [[entities/step-level-advantage|Step-level advantage]]
+- Created entity page: [[entities/janus-pro|Janus-Pro]]
+- Created entity page: [[entities/janus-pro|Janus-Pro]]
+- Created entity page: [[entities/sequential-test-time-scaling|sequential test-time scaling]]
+- Created entity page: [[entities/sequential-test-time-scaling|sequential test-time scaling]]
+- Created entity page: [[entities/hierarchical-reasoning-model-hrm|Hierarchical Reasoning Model (HRM)]]
+- Created entity page: [[entities/hierarchical-reasoning-model-hrm|Hierarchical Reasoning Model (HRM)]]
+- Created entity page: [[entities/babyai|BabyAI]]
+- Created entity page: [[entities/babyai|BabyAI]]
+- Created entity page: [[entities/react-prompting|ReAct Prompting]]
+- Created entity page: [[entities/react-prompting|ReAct Prompting]]
+- Created entity page: [[entities/navit|NaViT]]
+- Created entity page: [[entities/navit|NaViT]]
+- Created entity page: [[entities/agentic-reinforcement-learning|Agentic Reinforcement Learning]]
+- Created entity page: [[entities/agentic-reinforcement-learning|Agentic Reinforcement Learning]]
+- Created entity page: [[entities/moonshot-ai|Moonshot AI]]
+- Created entity page: [[entities/moonshot-ai|Moonshot AI]]
+- Created entity page: [[entities/gpt-45|GPT-4.5]]
+- Created entity page: [[entities/gpt-45|GPT-4.5]]
+- Created entity page: [[entities/multi-turn-grpo|Multi-turn GRPO]]
+- Created entity page: [[entities/multi-turn-grpo|Multi-turn GRPO]]
+- Created entity page: [[entities/best-of-n-bon|Best-of-N (BoN)]]
+- Created entity page: [[entities/medqa|MedQA]]
+- Created entity page: [[entities/best-of-n-bon|Best-of-N (BoN)]]
+- Created entity page: [[entities/rema|ReMA]]
+- Created entity page: [[entities/rema|ReMA]]
+- Created entity page: [[entities/token-entropy|Token Entropy]]
+- Created entity page: [[entities/mmdit|MMDiT]]
+- Created entity page: [[entities/token-entropy|Token Entropy]]
+- Created entity page: [[entities/qwen25-3b-instruct|Qwen2.5-3B-Instruct]]
+- Created entity page: [[entities/qwen25-3b-instruct|Qwen2.5-3B-Instruct]]
+- Created entity page: [[entities/validation-negative-log-likelihood|Validation Negative Log-Likelihood]]
+- Created entity page: [[entities/validation-negative-log-likelihood|Validation Negative Log-Likelihood]]
+- Created entity page: [[entities/happy-robot|Happy Robot]]
+- Created entity page: [[entities/happy-robot|Happy Robot]]
+- Created entity page: [[entities/arena-hard|Arena-Hard]]
+- Created entity page: [[entities/arena-hard|Arena-Hard]]
+- Created entity page: [[entities/mjhq-30k|MJHQ-30K]]
+- Created entity page: [[entities/mjhq-30k|MJHQ-30K]]
+- Created entity page: [[entities/interaction-scaling|Interaction Scaling]]
+- Created entity page: [[entities/interaction-scaling|Interaction Scaling]]
+- Created entity page: [[entities/o1-mini|O1 mini]]
+- Created entity page: [[entities/o1-mini|O1 mini]]
+- Created entity page: [[entities/task-augmentation|Task Augmentation]]
+- Created entity page: [[entities/task-augmentation|Task Augmentation]]
+- Created entity page: [[entities/majority-voting-program-synthesis|Majority Voting (program synthesis)]]
+- Created entity page: [[entities/majority-voting-program-synthesis|Majority Voting (program synthesis)]]
+- Created entity page: [[entities/metamath|MetaMath]]
+- Created entity page: [[entities/metamath|MetaMath]]
+- Created entity page: [[entities/armorm|ArmoRM]]
+- Created entity page: [[entities/armorm|ArmoRM]]
+- Created entity page: [[entities/long-chain-of-thought|Long Chain-of-Thought]]
+- Created entity page: [[entities/long-chain-of-thought|Long Chain-of-Thought]]
+- Created entity page: [[entities/franka-emika-panda|Franka Emika Panda]]
+- Created entity page: [[entities/franka-emika-panda|Franka Emika Panda]]
+- Created entity page: [[entities/xbench-deepsearch|Xbench-DeepSearch]]
+- Created entity page: [[entities/xbench-deepsearch|Xbench-DeepSearch]]
+- Created entity page: [[entities/browsecomp-zh|BrowseComp-zh]]
+- Created entity page: [[entities/browsecomp-zh|BrowseComp-zh]]
+- Created entity page: [[entities/seal-0|SEAL-0]]
+- Created entity page: [[entities/seal-0|SEAL-0]]
+- Created entity page: [[entities/cma-es|CMA-ES]]
+- Created entity page: [[entities/cma-es|CMA-ES]]
+- Created entity page: [[entities/ultrainteract|UltraInteract]]
+- Created entity page: [[entities/ultrainteract|UltraInteract]]
+- Created entity page: [[entities/omni-math|Omni-MATH]]
+- Created entity page: [[entities/omni-math|Omni-MATH]]
+- Created entity page: [[entities/filler-tokens|Filler Tokens]]
+- Created entity page: [[entities/filler-tokens|Filler Tokens]]
+- Created entity page: [[entities/sima|SIMA]]
+- Created entity page: [[entities/sima|SIMA]]
+- Created entity page: [[entities/toolalpaca|ToolAlpaca]]
+- Created entity page: [[entities/toolalpaca|ToolAlpaca]]
+- Created entity page: [[entities/sciknoweval|SciKnowEval]]
+- Created entity page: [[entities/sciknoweval|SciKnowEval]]
+- Created entity page: [[entities/longbench-v2|LongBench-v2]]
+- Created entity page: [[entities/longbench-v2|LongBench-v2]]
+- Created entity page: [[entities/passn|pass@N]]
+- Created entity page: [[entities/passn|pass@N]]
+- Created entity page: [[entities/swe-bench-multilingual|SWE-Bench Multilingual]]
+- Created entity page: [[entities/swe-bench-multilingual|SWE-Bench Multilingual]]
+- Created entity page: [[entities/qk-clip|QK-Clip]]
+- Created entity page: [[entities/qk-clip|QK-Clip]]
+- Created entity page: [[entities/muonclip|MuonClip]]
+- Created entity page: [[entities/muonclip|MuonClip]]
+- Created entity page: [[entities/tau2-bench|Tau2-Bench]]
+- Created entity page: [[entities/tau2-bench|Tau2-Bench]]
+- Created entity page: [[entities/lookahead-search|Lookahead Search]]
+- Created entity page: [[entities/lookahead-search|Lookahead Search]]
+- Created entity page: [[entities/latent-variable|Latent Variable]]
+- Created entity page: [[entities/latent-variable|Latent Variable]]
+- Created entity page: [[entities/i-jepa|I-JEPA]]
+- Created entity page: [[entities/i-jepa|I-JEPA]]
+- Created entity page: [[entities/v-jepa|V-JEPA]]
+- Created entity page: [[entities/v-jepa|V-JEPA]]
+- Created entity page: [[entities/easy-to-hard-generalization|Easy-to-Hard Generalization]]
+- Created entity page: [[entities/easy-to-hard-generalization|Easy-to-Hard Generalization]]
+- Created entity page: [[entities/moores-law|Moore's Law]]
+- Created entity page: [[entities/moores-law|Moore's Law]]
+- Created entity page: [[entities/fieldguide|Fieldguide]]
+- Created entity page: [[entities/fieldguide|Fieldguide]]
+- Created entity page: [[entities/gigpo|GiGPO]]
+- Created entity page: [[entities/gigpo|GiGPO]]
+- Created entity page: [[entities/genie-2|Genie 2]]
+- Created entity page: [[entities/genie-2|Genie 2]]
+- Created entity page: [[entities/rejection-sampling-finetuning|Rejection Sampling Finetuning]]
+- Created entity page: [[entities/rejection-sampling-finetuning|Rejection Sampling Finetuning]]
+- Created entity page: [[entities/overoptimization|Overoptimization]]
+- Created entity page: [[entities/overoptimization|Overoptimization]]
+- Created entity page: [[entities/webvoyager|WebVoyager]]
+- Created entity page: [[entities/webvoyager|WebVoyager]]
+- Created entity page: [[entities/arc-agi-pub|ARC-AGI-Pub]]
+- Created entity page: [[entities/arc-agi-pub|ARC-AGI-Pub]]
+- Created entity page: [[entities/procedural-memory|Procedural Memory]]
+- Created entity page: [[entities/procedural-memory|Procedural Memory]]
+- Created entity page: [[entities/tool-integrated-reasoning-tir|Tool-Integrated Reasoning (TIR)]]
+- Created entity page: [[entities/tool-integrated-reasoning-tir|Tool-Integrated Reasoning (TIR)]]
+- Created entity page: [[entities/pass1-accuracy|pass@1 accuracy]]
+- Created entity page: [[entities/pass1-accuracy|pass@1 accuracy]]
+- Created entity page: [[entities/pre-training|Pre-training]]
+- Created entity page: [[entities/pre-training|Pre-training]]
+- Created entity page: [[entities/alphastar|AlphaStar]]
+- Created entity page: [[entities/alphastar|AlphaStar]]
+- Created entity page: [[entities/commonsenseqa|CommonsenseQA]]
+- Created entity page: [[entities/commonsenseqa|CommonsenseQA]]
+- Created entity page: [[entities/coin-flip-task|coin flip task]]
+- Created entity page: [[entities/coin-flip-task|coin flip task]]
+- Created entity page: [[entities/simpo|SimPO]]
+- Created entity page: [[entities/simpo|SimPO]]
+- Created entity page: [[entities/tokenflow|TokenFlow]]
+- Created entity page: [[entities/tokenflow|TokenFlow]]
+- Created entity page: [[entities/latent-program-space-search|Latent Program Space Search]]
+- Created entity page: [[entities/retnet|RetNet]]
+- Created entity page: [[entities/latent-program-space-search|Latent Program Space Search]]
+- Created entity page: [[entities/omega-rule|Omega Rule]]
+- Created entity page: [[entities/omega-rule|Omega Rule]]
+- Created entity page: [[entities/π0|π0]]
+- Created entity page: [[entities/π0|π0]]
+- Created entity page: [[entities/fast-action-tokenizer|FAST Action Tokenizer]]
+- Created entity page: [[entities/fast-action-tokenizer|FAST Action Tokenizer]]
+- Created entity page: [[entities/reasoning-distillation|Reasoning Distillation]]
+- Created entity page: [[entities/reasoning-distillation|Reasoning Distillation]]
+- Created entity page: [[entities/aime-24|AIME-24]]
+- Created entity page: [[entities/aime-24|AIME-24]]
+- Created entity page: [[entities/mme|MME]]
+- Created entity page: [[entities/mme|MME]]
+- Created entity page: [[entities/few-shot-prompting|Few-shot Prompting]]
+- Created entity page: [[entities/few-shot-prompting|Few-shot Prompting]]
+- Created entity page: [[entities/barc|BARC]]
+- Created entity page: [[entities/barc|BARC]]
+- Created entity page: [[entities/multimodal-pretraining-corpus|multimodal pretraining corpus]]
+- Created entity page: [[entities/multimodal-pretraining-corpus|multimodal pretraining corpus]]
+- Created entity page: [[entities/broadly-deployed-intelligence-explosion|broadly deployed intelligence explosion]]
+- Created entity page: [[entities/broadly-deployed-intelligence-explosion|broadly deployed intelligence explosion]]
+- Created entity page: [[entities/dreambench|DreamBench]]
+- Created entity page: [[entities/dreambench|DreamBench]]
+- Created entity page: [[entities/spatiotemporal-transformer|Spatiotemporal Transformer]]
+- Created entity page: [[entities/spatiotemporal-transformer|Spatiotemporal Transformer]]
+- Created entity page: [[entities/q|Q*]]
+- Created entity page: [[entities/q|Q*]]
+- Created entity page: [[entities/group-sequence-policy-optimization|Group Sequence Policy Optimization]]
+- Created entity page: [[entities/group-sequence-policy-optimization|Group Sequence Policy Optimization]]
+- Created entity page: [[entities/parallel-test-time-scaling|parallel test-time scaling]]
+- Created entity page: [[entities/parallel-test-time-scaling|parallel test-time scaling]]
+- Created entity page: [[entities/conviction|Conviction]]
+- Created entity page: [[entities/conviction|Conviction]]
+- Created entity page: [[entities/computer-use-agent|Computer Use Agent]]
+- Created entity page: [[entities/computer-use-agent|Computer Use Agent]]
+- Created entity page: [[entities/qwen25-32b-instruct|Qwen2.5-32B-Instruct]]
+- Created entity page: [[entities/qwen25-32b-instruct|Qwen2.5-32B-Instruct]]
+- Created entity page: [[entities/code-world-model-cwm|Code World Model (CWM)]]
+- Created entity page: [[entities/code-world-model-cwm|Code World Model (CWM)]]
+- Created entity page: [[entities/autoeval|AutoEval]]
+- Created entity page: [[entities/autoeval|AutoEval]]
+- Created entity page: [[entities/forking-tokens|Forking Tokens]]
+- Created entity page: [[entities/forking-tokens|Forking Tokens]]
+- Created entity page: [[entities/countdown-task|Countdown Task]]
+- Created entity page: [[entities/countdown-task|Countdown Task]]
+- Created entity page: [[entities/world-simulator|World Simulator]]
+- Created entity page: [[entities/world-simulator|World Simulator]]
+- Created entity page: [[entities/policy-entropy|policy entropy]]
+- Created entity page: [[entities/policy-entropy|policy entropy]]
+- Created entity page: [[entities/omnimath|OmniMath]]
+- Created entity page: [[entities/omnimath|OmniMath]]
+- Created entity page: [[entities/clip-higher-strategy|Clip-Higher Strategy]]
+- Created entity page: [[entities/clip-higher-strategy|Clip-Higher Strategy]]
+- Created entity page: [[entities/self-debugging|Self-debugging]]
+- Created entity page: [[entities/self-debugging|Self-debugging]]
+- Created entity page: [[entities/sudoku-extreme|Sudoku-Extreme]]
+- Created entity page: [[entities/sudoku-extreme|Sudoku-Extreme]]
+- Created entity page: [[entities/implicit-function-theorem|Implicit Function Theorem]]
+- Created entity page: [[entities/implicit-function-theorem|Implicit Function Theorem]]
+- Created entity page: [[entities/backpropagation-through-time|Backpropagation Through Time]]
+- Created entity page: [[entities/backpropagation-through-time|Backpropagation Through Time]]
+- Created entity page: [[entities/maze-hard|Maze-Hard]]
+- Created entity page: [[entities/maze-hard|Maze-Hard]]
+- Created entity page: [[entities/deep-supervision|Deep Supervision]]
+- Created entity page: [[entities/deep-supervision|Deep Supervision]]
+- Created entity page: [[entities/adaptive-computational-time|Adaptive Computational Time]]
+- Created entity page: [[entities/adaptive-computational-time|Adaptive Computational Time]]
+- Created entity page: [[entities/rubric-based-evaluation|Rubric-based evaluation]]
+- Created entity page: [[entities/rubric-based-evaluation|Rubric-based evaluation]]
+- Created entity page: [[entities/on-policy-dpo|on-policy DPO]]
+- Created entity page: [[entities/on-policy-dpo|on-policy DPO]]
+- Created entity page: [[entities/kimi-k2|Kimi K2]]
+- Created entity page: [[entities/kimi-k2|Kimi K2]]
+- Created entity page: [[entities/avgk|avg@k]]
+- Created entity page: [[entities/avgk|avg@k]]
+- Created entity page: [[entities/putnambench|PutnamBench]]
+- Created entity page: [[entities/putnambench|PutnamBench]]
+- Created entity page: [[entities/deepseek-prover-v2|DeepSeek-Prover-V2]]
+- Created entity page: [[entities/deepseek-prover-v2|DeepSeek-Prover-V2]]
+- Created entity page: [[entities/code-ratio|Code Ratio]]
+- Created entity page: [[entities/code-ratio|Code Ratio]]
+- Created entity page: [[entities/rl-with-verifiable-rewards|RL with Verifiable Rewards]]
+- Created entity page: [[entities/rl-with-verifiable-rewards|RL with Verifiable Rewards]]
+- Created entity page: [[entities/system-of-agents|System of Agents]]
+- Created entity page: [[entities/system-of-agents|System of Agents]]
+- Created entity page: [[entities/muzero|MuZero]]
+- Created entity page: [[entities/muzero|MuZero]]
+- Created entity page: [[entities/ebbinghaus-forgetting-curve|Ebbinghaus Forgetting Curve]]
+- Created entity page: [[entities/ebbinghaus-forgetting-curve|Ebbinghaus Forgetting Curve]]
+- Created entity page: [[entities/drgrpo|Dr.GRPO]]
+- Created entity page: [[entities/drgrpo|Dr.GRPO]]
+- Created entity page: [[entities/if-eval|IF-Eval]]
+- Created entity page: [[entities/if-eval|IF-Eval]]
+- Created entity page: [[entities/success-rate|success rate]]
+- Created entity page: [[entities/success-rate|success rate]]
+- Created entity page: [[entities/nothinking|NoThinking]]
+- Created entity page: [[entities/nothinking|NoThinking]]
+- Created entity page: [[entities/dr-grpo|Dr. GRPO]]
+- Created entity page: [[entities/dr-grpo|Dr. GRPO]]
+- Created entity page: [[entities/pre-training-compute-scaling|Pre-Training Compute Scaling]]
+- Created entity page: [[entities/pre-training-compute-scaling|Pre-Training Compute Scaling]]
+- Created entity page: [[entities/f1-score|F1 score]]
+- Created entity page: [[entities/f1-score|F1 score]]
+- Created entity page: [[entities/test-time-scaling-tts|Test-Time Scaling (TTS)]]
+- Created entity page: [[entities/test-time-scaling-tts|Test-Time Scaling (TTS)]]
+- Created entity page: [[entities/glm-45|GLM-4.5]]
+- Created entity page: [[entities/glm-45|GLM-4.5]]
+- Created entity page: [[entities/loss-free-balance-routing|Loss-free Balance Routing]]
+- Created entity page: [[entities/loss-free-balance-routing|Loss-free Balance Routing]]
+- Created entity page: [[entities/glm-45-air|GLM-4.5-Air]]
+- Created entity page: [[entities/glm-45-air|GLM-4.5-Air]]
+- Created entity page: [[entities/best-of-n-selection|Best-of-N selection]]
+- Created entity page: [[entities/best-of-n-selection|Best-of-N selection]]
+- Created entity page: [[entities/multi-hop-question-answering|Multi-hop Question Answering]]
+- Created entity page: [[entities/multi-hop-question-answering|Multi-hop Question Answering]]
+- Created entity page: [[entities/ai-enabled-services|AI-Enabled Services]]
+- Created entity page: [[entities/ai-enabled-services|AI-Enabled Services]]
+- Created entity page: [[entities/hmmt-2025|HMMT 2025]]
+- Created entity page: [[entities/hmmt-2025|HMMT 2025]]
+- Created entity page: [[entities/model-based-verifier|Model-Based Verifier]]
+- Created entity page: [[entities/model-based-verifier|Model-Based Verifier]]
+- Created entity page: [[entities/simcse|SimCSE]]
+- Created entity page: [[entities/simcse|SimCSE]]
+- Created entity page: [[entities/alpacaeval-20|AlpacaEval 2.0]]
+- Created entity page: [[entities/alpacaeval-20|AlpacaEval 2.0]]
+- Created entity page: [[entities/long-chain-of-thought-long-cot|Long Chain-of-Thought (Long CoT)]]
+- Created entity page: [[entities/long-chain-of-thought-long-cot|Long Chain-of-Thought (Long CoT)]]
+- Created entity page: [[entities/meminsight|MemInsight]]
+- Created entity page: [[entities/meminsight|MemInsight]]
+- Created entity page: [[entities/theoremqa|TheoremQA]]
+- Created entity page: [[entities/theoremqa|TheoremQA]]
+- Created entity page: [[entities/ttrl|TTRL]]
+- Created entity page: [[entities/ttrl|TTRL]]
+- Created entity page: [[entities/tiny-recursive-model|Tiny Recursive Model]]
+- Created entity page: [[entities/tiny-recursive-model|Tiny Recursive Model]]
+- Created entity page: [[entities/processbench|ProcessBench]]
+- Created entity page: [[entities/processbench|ProcessBench]]
+- Created entity page: [[entities/next-token-prediction-ntp|Next-Token Prediction (NTP)]]
+- Created entity page: [[entities/next-token-prediction-ntp|Next-Token Prediction (NTP)]]
+- Created entity page: [[entities/qwen-25|Qwen 2.5]]
+- Created entity page: [[entities/qwen-25|Qwen 2.5]]
+- Created entity page: [[entities/deepseek-llm|DeepSeek-LLM]]
+- Created entity page: [[entities/deepseek-llm|DeepSeek-LLM]]
+- Created entity page: [[entities/gqa|GQA]]
+- Created entity page: [[entities/gqa|GQA]]
+- Created entity page: [[entities/verifree|VeriFree]]
+- Created entity page: [[entities/verifree|VeriFree]]
+- Created entity page: [[entities/ultradomain|UltraDomain]]
+- Created entity page: [[entities/ultradomain|UltraDomain]]
+- Created entity page: [[entities/naiverag|NaiveRAG]]
+- Created entity page: [[entities/naiverag|NaiveRAG]]
+- Created entity page: [[entities/comprehensiveness|Comprehensiveness]]
+- Created entity page: [[entities/comprehensiveness|Comprehensiveness]]
+- Created entity page: [[entities/agent-skills|Agent skills]]
+- Created entity page: [[entities/agent-skills|Agent skills]]
+- Created entity page: [[entities/vertical-automation-solution|Vertical Automation Solution]]
+- Created entity page: [[entities/vertical-automation-solution|Vertical Automation Solution]]
+- Created entity page: [[entities/intelligent-automation|Intelligent Automation]]
+- Created entity page: [[entities/intelligent-automation|Intelligent Automation]]
+- Created entity page: [[entities/horizontal-ai-enabler|Horizontal AI Enabler]]
+- Created entity page: [[entities/one-shot-rl|One-Shot RL]]
+- Created entity page: [[entities/horizontal-ai-enabler|Horizontal AI Enabler]]
+- Created entity page: [[entities/generative-verifier|Generative Verifier]]
+- Created entity page: [[entities/generative-verifier|Generative Verifier]]
+- Created entity page: [[entities/deepeyes|Deepeyes]]
+- Created entity page: [[entities/deepeyes|Deepeyes]]
+- Created entity page: [[entities/qwen25-math|Qwen2.5-Math]]
+- Created entity page: [[entities/qwen25-math|Qwen2.5-Math]]
+- Created entity page: [[entities/intelligence-pareto-frontier|Intelligence Pareto Frontier]]
+- Created entity page: [[entities/intelligence-pareto-frontier|Intelligence Pareto Frontier]]
+- Created entity page: [[entities/agentic-loop|Agentic Loop]]
+- Created entity page: [[entities/windowsagentarena|WindowsAgentArena]]
+- Created entity page: [[entities/infovqa|InfoVQA]]
+- Created entity page: [[entities/agentic-loop|Agentic Loop]]
+- Created entity page: [[entities/vsi-bench|VSI-Bench]]
+- Created entity page: [[entities/vsi-bench|VSI-Bench]]
+- Created entity page: [[entities/longvideobench|LongVideoBench]]
+- Created entity page: [[entities/longvideobench|LongVideoBench]]
+- Created entity page: [[entities/mmlongbench-doc|MMLongBench-Doc]]
+- Created entity page: [[entities/mmlongbench-doc|MMLongBench-Doc]]
+- Created entity page: [[entities/pixel-shuffle|Pixel Shuffle]]
+- Created entity page: [[entities/pixel-shuffle|Pixel Shuffle]]
+- Created entity page: [[entities/4d-parallelism|4D Parallelism]]
+- Created entity page: [[entities/4d-parallelism|4D Parallelism]]
+- Created entity page: [[entities/online-policy-mirror-descent|Online Policy Mirror Descent]]
+- Created entity page: [[entities/online-policy-mirror-descent|Online Policy Mirror Descent]]
+- Created entity page: [[entities/navit-packing|NaViT packing]]
+- Created entity page: [[entities/navit-packing|NaViT packing]]
+- Created entity page: [[entities/moonvit|MoonViT]]
+- Created entity page: [[entities/moonvit|MoonViT]]
+- Created entity page: [[entities/kimi-vl|Kimi-VL]]
+- Created entity page: [[entities/kimi-vl|Kimi-VL]]
+- Created entity page: [[entities/egoschema|EgoSchema]]
+- Created entity page: [[entities/egoschema|EgoSchema]]
+- Created entity page: [[entities/siglip-so-400m|SigLIP-SO-400M]]
+- Created entity page: [[entities/screenspot-pro|ScreenSpot-Pro]]
+- Created entity page: [[entities/siglip-so-400m|SigLIP-SO-400M]]
+- Created entity page: [[entities/speechtokenizer|SpeechTokenizer]]
+- Created entity page: [[entities/speechtokenizer|SpeechTokenizer]]
+- Created entity page: [[entities/spirit-lm|Spirit-LM]]
+- Created entity page: [[entities/spirit-lm|Spirit-LM]]
+- Created entity page: [[entities/chain-of-modality|Chain-of-Modality]]
+- Created entity page: [[entities/chain-of-modality|Chain-of-Modality]]
+- Created entity page: [[entities/backchanneling|Backchanneling]]
+- Created entity page: [[entities/backchanneling|Backchanneling]]
+- Created entity page: [[entities/residual-vector-quantization|Residual Vector Quantization]]
+- Created entity page: [[entities/residual-vector-quantization|Residual Vector Quantization]]
+- Created entity page: [[entities/moshi|Moshi]]
+- Created entity page: [[entities/moshi|Moshi]]
+- Created entity page: [[entities/recallk|Recall@k]]
+- Created entity page: [[entities/recallk|Recall@k]]
+- Created entity page: [[entities/colbertv2|ColBERTv2]]
+- Created entity page: [[entities/colbertv2|ColBERTv2]]
+
+## 2026-04-11
+
+- Deleted entity page: 2d-rotary-positional-embedding
+- Deleted entity page: 3d-causal-vae
+- Deleted entity page: 3d-gaussian-splatting
+- Deleted entity page: 4d-parallelism
+- Deleted entity page: absolute-zero
+- Deleted entity page: abstraction-and-reasoning-corpus-arc-agi
+- Deleted entity page: abstraction-and-reasoning-corpus
+- Deleted entity page: accessibility-tree
+- Deleted entity page: acebench
+- Deleted entity page: acqui-hire
+- Deleted entity page: action-tokenization
+- Deleted entity page: active-learning
+- Deleted entity page: adafactor-optimizer
+- Deleted entity page: adaln
+- Deleted entity page: adaptive-computation-time
+- Deleted entity page: adaptive-computational-time
+- Deleted entity page: advanced-voice-mode
+- Deleted entity page: aflow
+- Deleted entity page: agent-computer-interface-aci
+- Deleted entity page: agent-kb
+- Deleted entity page: agent-skills
+- Deleted entity page: agent-state
+- Deleted entity page: agent-workflow-memory-awm
+- Deleted entity page: agentflow
+- Deleted entity page: agentic-loop
+- Deleted entity page: agentic-reinforcement-learning
+- Deleted entity page: agi-artificial-general-intelligence
+- Deleted entity page: agi
+- Deleted entity page: aha-moment
+- Deleted entity page: ai-driven-buyout
+- Deleted entity page: ai-durable-companies
+- Deleted entity page: ai-enabled-services
+- Deleted entity page: ai-engineer
+- Deleted entity page: ai-engineering
+- Deleted entity page: ai-memory
+- Deleted entity page: ai-observability
+- Deleted entity page: ai-platform-shift
+- Deleted entity page: aide
+- Deleted entity page: aime-2024
+- Deleted entity page: aime-2025
+- Deleted entity page: aime-24
+- Deleted entity page: aime2024
+- Deleted entity page: aime24
+- Deleted entity page: aime25
+- Deleted entity page: alexnet
+- Deleted entity page: alignment-tax
+- Deleted entity page: alpacaeval-2
+- Deleted entity page: alpacaeval-20
+- Deleted entity page: alphacode
+- Deleted entity page: alphaevolve
+- Deleted entity page: alphafold-3
+- Deleted entity page: alphageometry-2
+- Deleted entity page: alphago
+- Deleted entity page: alphastar
+- Deleted entity page: alphazero
+- Deleted entity page: amc23
+- Deleted entity page: amd-mi300x
+- Deleted entity page: andreessen-horowitz
+- Deleted entity page: andrej-karpathy
+- Deleted entity page: androidworld
+- Deleted entity page: anduril
+- Deleted entity page: apache-iceberg
+- Deleted entity page: arc-abstraction-and-reasoning-corpus
+- Deleted entity page: arc-agi-2
+- Deleted entity page: arc-agi-benchmark
+- Deleted entity page: arc-agi-pub
+- Deleted entity page: arc-challenge
+- Deleted entity page: arc-institute
+- Deleted entity page: arc-prize
+- Deleted entity page: arena-hard
+- Deleted entity page: arigraph
+- Deleted entity page: arithmetic-intensity
+- Deleted entity page: armorm-llama3-8b-v01
+- Deleted entity page: armorm
+- Deleted entity page: artificial-general-intelligence
+- Deleted entity page: atrium
+- Deleted entity page: aurora
+- Deleted entity page: autoeval
+- Deleted entity page: autonomy-slider
+- Deleted entity page: avgk
+- Deleted entity page: awm
+- Deleted entity page: aws-amazon-web-services
+- Deleted entity page: babilong
+- Deleted entity page: babyagi
+- Deleted entity page: babyai
+- Deleted entity page: backchanneling
+- Deleted entity page: backpropagation-through-time
+- Deleted entity page: backtracking
+- Deleted entity page: barc
+- Deleted entity page: beam-search
+- Deleted entity page: behavior-collapse
+- Deleted entity page: benchling
+- Deleted entity page: best-of-n-bon
+- Deleted entity page: best-of-n-selection
+- Deleted entity page: best-of-n
+- Deleted entity page: bfcl-v3
+- Deleted entity page: bge-m3
+- Deleted entity page: blackwell-gpu
+- Deleted entity page: blink
+- Deleted entity page: block-causal-attention-mask
+- Deleted entity page: block-diffusion
+- Deleted entity page: bolt
+- Deleted entity page: brain-trust
+- Deleted entity page: brevity-bias
+- Deleted entity page: broadly-deployed-intelligence-explosion
+- Deleted entity page: browsecomp-plus
+- Deleted entity page: browsecomp-zh
+- Deleted entity page: browsecomp
+- Deleted entity page: browsergym
+- Deleted entity page: buffer-of-thoughts
+- Deleted entity page: c-vivit
+- Deleted entity page: c4
+- Deleted entity page: calibration
+- Deleted entity page: capital-efficiency
+- Deleted entity page: casetext
+- Deleted entity page: chain-of-modality
+- Deleted entity page: chain-of-reasoning
+- Deleted entity page: chain-of-thought-reward-model
+- Deleted entity page: chameleon
+- Deleted entity page: chartqa
+- Deleted entity page: chat-completions-api
+- Deleted entity page: chatgpt-pulse
+- Deleted entity page: chatml-format
+- Deleted entity page: classic-reward-model
+- Deleted entity page: claude-37-sonnet
+- Deleted entity page: clinvar
+- Deleted entity page: clip-higher-strategy
+- Deleted entity page: clip-higher
+- Deleted entity page: clip
+- Deleted entity page: cma-es
+- Deleted entity page: code-as-policies
+- Deleted entity page: code-ratio
+- Deleted entity page: code-world-model-cwm
+- Deleted entity page: codeit
+- Deleted entity page: cognitive-core
+- Deleted entity page: cogvideox
+- Deleted entity page: cohens-kappa
+- Deleted entity page: coin-flip-task
+- Deleted entity page: colbertv2
+- Deleted entity page: cold-start-fine-tuning
+- Deleted entity page: commonsenseqa
+- Deleted entity page: compositional-generalization
+- Deleted entity page: compound-ai-systems
+- Deleted entity page: comprehensiveness
+- Deleted entity page: computational-irreducibility
+- Deleted entity page: compute-multiplier
+- Deleted entity page: compute-scaling
+- Deleted entity page: computer-use-agent
+- Deleted entity page: computer-use-agents
+- Deleted entity page: computer-using-agent-cua
+- Deleted entity page: conformal-prediction
+- Deleted entity page: context-collapse
+- Deleted entity page: context-compression
+- Deleted entity page: context-folding
+- Deleted entity page: context-poisoning
+- Deleted entity page: context-window-management
+- Deleted entity page: continual-adaptation
+- Deleted entity page: continuous-thought-machine
+- Deleted entity page: contrastive-decoding
+- Deleted entity page: converzai
+- Deleted entity page: conviction
+- Deleted entity page: copilot-mode
+- Deleted entity page: cot-vla
+- Deleted entity page: countdown-task
+- Deleted entity page: crispr
+- Deleted entity page: cross-embodiment-generalization
+- Deleted entity page: cross-embodiment-transfer
+- Deleted entity page: cruxeval
+- Deleted entity page: cuda
+- Deleted entity page: curriculum-sampling
+- Deleted entity page: curse-of-dimensionality
+- Deleted entity page: d-smart
+- Deleted entity page: dapo
+- Deleted entity page: data-contamination
+- Deleted entity page: data-wall
+- Deleted entity page: datacomp
+- Deleted entity page: dclm-baseline
+- Deleted entity page: decade-of-agents
+- Deleted entity page: decoder-only-transformer
+- Deleted entity page: deep-learning
+- Deleted entity page: deep-supervision
+- Deleted entity page: deepeyes
+- Deleted entity page: deepl
+- Deleted entity page: deepscaler
+- Deleted entity page: deepseek-coder-v2-instruct
+- Deleted entity page: deepseek-llm
+- Deleted entity page: deepseek-prover-v2
+- Deleted entity page: deepseek-r1-zero
+- Deleted entity page: deepseek-r1
+- Deleted entity page: deepseek-v3
+- Deleted entity page: degrees-of-freedom
+- Deleted entity page: deliberative-alignment
+- Deleted entity page: deltanet
+- Deleted entity page: demo-to-product-gap
+- Deleted entity page: denoising-diffusion-probabilistic-model
+- Deleted entity page: descript
+- Deleted entity page: dialogue-agent
+- Deleted entity page: diffusion-forcing
+- Deleted entity page: diffusion-loss
+- Deleted entity page: dinov2
+- Deleted entity page: direct-answering
+- Deleted entity page: distribution-shift-in-self-correction
+- Deleted entity page: dl3dv-10k
+- Deleted entity page: dora
+- Deleted entity page: dpg-bench
+- Deleted entity page: dpo
+- Deleted entity page: dr-grpo
+- Deleted entity page: dream
+- Deleted entity page: dreambench
+- Deleted entity page: dreamcoder
+- Deleted entity page: drgrpo
+- Deleted entity page: drug-repurposing
+- Deleted entity page: dual-process-theory-of-cognition
+- Deleted entity page: dualpipe
+- Deleted entity page: e2b
+- Deleted entity page: easy-to-hard-generalization
+- Deleted entity page: ebbinghaus-forgetting-curve
+- Deleted entity page: egoschema
+- Deleted entity page: electronic-health-record-ehr
+- Deleted entity page: em-rl
+- Deleted entity page: embodied-reasoning
+- Deleted entity page: emergent-capabilities
+- Deleted entity page: emergent-reasoning-behavior
+- Deleted entity page: emu3
+- Deleted entity page: environment-scaling
+- Deleted entity page: episodic-memory
+- Deleted entity page: esm3
+- Deleted entity page: evals
+- Deleted entity page: evaluator-model
+- Deleted entity page: evo2
+- Deleted entity page: evoprompt
+- Deleted entity page: experience-replay
+- Deleted entity page: expert-parallelism
+- Deleted entity page: exponential-moving-average
+- Deleted entity page: f1-score
+- Deleted entity page: fast-action-tokenizer
+- Deleted entity page: fast-weights
+- Deleted entity page: fee-for-service
+- Deleted entity page: few-shot-prompting
+- Deleted entity page: feynman-technique
+- Deleted entity page: fieldguide
+- Deleted entity page: figure-robot
+- Deleted entity page: filler-tokens
+- Deleted entity page: fineweb-dataset
+- Deleted entity page: finite-scalar-quantization
+- Deleted entity page: flex-attention
+- Deleted entity page: flops
+- Deleted entity page: flowrl
+- Deleted entity page: forking-tokens
+- Deleted entity page: format-reward
+- Deleted entity page: frames
+- Deleted entity page: franka-emika-panda
+- Deleted entity page: frontier-math
+- Deleted entity page: frontier-model
+- Deleted entity page: fréchet-inception-distance-fid
+- Deleted entity page: fsdp
+- Deleted entity page: fully-sharded-data-parallelism-fsdp
+- Deleted entity page: fully-sharded-data-parallelism
+- Deleted entity page: fume
+- Deleted entity page: function-calling
+- Deleted entity page: funsearch
+- Deleted entity page: g-memory
+- Deleted entity page: gaia-benchmark
+- Deleted entity page: gated-deltanet
+- Deleted entity page: gemini-15-flash
+- Deleted entity page: gemini-20-flash
+- Deleted entity page: gemini-20
+- Deleted entity page: gemini-25
+- Deleted entity page: gemini-flash
+- Deleted entity page: gemma
+- Deleted entity page: generative-adversarial-network
+- Deleted entity page: generative-verifier
+- Deleted entity page: genie-2
+- Deleted entity page: gigpo
+- Deleted entity page: glm-45-air
+- Deleted entity page: glm-45
+- Deleted entity page: gpqa-diamond
+- Deleted entity page: gpt-41
+- Deleted entity page: gpt-4v
+- Deleted entity page: gqa
+- Deleted entity page: greedy-decoding
+- Deleted entity page: grok-4
+- Deleted entity page: groq
+- Deleted entity page: group-relative-policy-optimization
+- Deleted entity page: group-sequence-policy-optimization
+- Deleted entity page: hai-llm
+- Deleted entity page: hallucination
+- Deleted entity page: hallusionbench
+- Deleted entity page: happy-robot
+- Deleted entity page: heartbeat
+- Deleted entity page: hiagent
+- Deleted entity page: hierarchical-reasoning-model-hrm
+- Deleted entity page: hierarchical-reasoning-model
+- Deleted entity page: hmmt-2025
+- Deleted entity page: hmmt
+- Deleted entity page: horizon-length
+- Deleted entity page: horizontal-ai-enabler
+- Deleted entity page: human-in-the-loop
+- Deleted entity page: humaneval
+- Deleted entity page: humanoid-robot
+- Deleted entity page: hybrid-reasoning-model
+- Deleted entity page: hybrid-ssm-transformer-architecture
+- Deleted entity page: i-jepa
+- Deleted entity page: if-eval
+- Deleted entity page: image-captioning
+- Deleted entity page: image-to-video-generation
+- Deleted entity page: implicit-function-theorem
+- Deleted entity page: in-context-learning
+- Deleted entity page: incremental-delta-updates
+- Deleted entity page: index-ventures
+- Deleted entity page: inference-aware-fine-tuning
+- Deleted entity page: inference-time-compute
+- Deleted entity page: inference-time-scaling-law
+- Deleted entity page: inference-time-scaling
+- Deleted entity page: inflection-ai
+- Deleted entity page: infovqa
+- Deleted entity page: inner-monologue
+- Deleted entity page: intelligence-pareto-frontier
+- Deleted entity page: intelligent-automation
+- Deleted entity page: intent-classifier
+- Deleted entity page: interaction-horizon
+- Deleted entity page: interaction-scaling
+- Deleted entity page: interleaved-thinking
+- Deleted entity page: intuitive-physics
+- Deleted entity page: irasim
+- Deleted entity page: isaac-sim
+- Deleted entity page: isomorphic-labs
+- Deleted entity page: ivideogpt
+- Deleted entity page: jaccard-similarity
+- Deleted entity page: jamba
+- Deleted entity page: janus-pro
+- Deleted entity page: janus
+- Deleted entity page: jepa-joint-embedding-predictive-architecture
+- Deleted entity page: joint-embedding-predictive-architecture
+- Deleted entity page: jules
+- Deleted entity page: kernel-fusion
+- Deleted entity page: kernelbench
+- Deleted entity page: kg-rag
+- Deleted entity page: kimi-k15
+- Deleted entity page: kimi-k2
+- Deleted entity page: kimi-vl
+- Deleted entity page: kl-regularization
+- Deleted entity page: knowledge-distillation-llm
+- Deleted entity page: knowledge-graph
+- Deleted entity page: knowledge-insulation
+- Deleted entity page: kv-cache-reuse
+- Deleted entity page: langchain
+- Deleted entity page: langgraph
+- Deleted entity page: langmem
+- Deleted entity page: language-agent-tree-search-lats
+- Deleted entity page: large-language-models-llms
+- Deleted entity page: large-language-models
+- Deleted entity page: large-reasoning-model
+- Deleted entity page: large-reasoning-models-lrms
+- Deleted entity page: latent-memory
+- Deleted entity page: latent-program-space-search
+- Deleted entity page: latent-reasoning
+- Deleted entity page: latent-space-reasoning
+- Deleted entity page: latent-variable
+- Deleted entity page: latentmas
+- Deleted entity page: lean-proof-assistant
+- Deleted entity page: legora
+- Deleted entity page: length-penalty
+- Deleted entity page: lightrag
+- Deleted entity page: linear-probing
+- Deleted entity page: linear-representation-hypothesis
+- Deleted entity page: livecodebench
+- Deleted entity page: llama-2
+- Deleted entity page: llama-3-1
+- Deleted entity page: llama-3
+- Deleted entity page: llama-31-8b-instruct
+- Deleted entity page: llama-32-1b-instruct
+- Deleted entity page: llama-4
+- Deleted entity page: llama-405b
+- Deleted entity page: llamacpp
+- Deleted entity page: llamagen
+- Deleted entity page: llava-cot-100k
+- Deleted entity page: llava
+- Deleted entity page: llm-as-judge-evaluation
+- Deleted entity page: llm-as-judge
+- Deleted entity page: llm-evaluation
+- Deleted entity page: llm-judge
+- Deleted entity page: llm-os
+- Deleted entity page: llmlingua
+- Deleted entity page: lm-arena
+- Deleted entity page: lmfusion
+- Deleted entity page: long-chain-of-thought-long-cot
+- Deleted entity page: long-data-collections
+- Deleted entity page: longbench-v2
+- Deleted entity page: longvideobench
+- Deleted entity page: lookahead-search
+- Deleted entity page: loss-free-balance-routing
+- Deleted entity page: lost-in-the-middle
+- Deleted entity page: lvbench
+- Deleted entity page: lvis
+- Deleted entity page: m
+- Deleted entity page: magicbrush
+- Deleted entity page: magvit-v2
+- Deleted entity page: majk
+- Deleted entity page: majority-voting-program-synthesis
+- Deleted entity page: mamba-2
+- Deleted entity page: mamba
+- Deleted entity page: mamba2
+- Deleted entity page: manifold-hypothesis
+- Deleted entity page: manus
+- Deleted entity page: marble
+- Deleted entity page: march-of-nines
+- Deleted entity page: markov-decision-process-mdp
+- Deleted entity page: masked-diffusion-language-model
+- Deleted entity page: maskgit
+- Deleted entity page: mastra
+- Deleted entity page: math-500
+- Deleted entity page: math-benchmark
+- Deleted entity page: math-shepherd
+- Deleted entity page: math
+- Deleted entity page: mathvision
+- Deleted entity page: mathvista
+- Deleted entity page: maze-hard
+- Deleted entity page: mbpp
+- Deleted entity page: mcp-client
+- Deleted entity page: mcp-registry
+- Deleted entity page: meaningful-use
+- Deleted entity page: mechanistic-interpretability
+- Deleted entity page: medqa
+- Deleted entity page: megabyte
+- Deleted entity page: mem-α
+- Deleted entity page: memagent
+- Deleted entity page: memento
+- Deleted entity page: memgen
+- Deleted entity page: memgpt
+- Deleted entity page: meminsight
+- Deleted entity page: memorag
+- Deleted entity page: memory-as-context
+- Deleted entity page: memory-as-layer
+- Deleted entity page: memoryllm
+- Deleted entity page: memoryos
+- Deleted entity page: memrl
+- Deleted entity page: memsearcher
+- Deleted entity page: meror
+- Deleted entity page: meta-learning
+- Deleted entity page: meta-ray-ban-smart-glasses
+- Deleted entity page: mimi
+- Deleted entity page: mindbody
+- Deleted entity page: minif2f
+- Deleted entity page: miprov2
+- Deleted entity page: mirix
+- Deleted entity page: mistral-7b
+- Deleted entity page: mixture-of-experts-moe
+- Deleted entity page: mixture-of-experts
+- Deleted entity page: mixture-of-models
+- Deleted entity page: mixture-of-recursions
+- Deleted entity page: mjhq-30k
+- Deleted entity page: mlvu
+- Deleted entity page: mmdit
+- Deleted entity page: mme
+- Deleted entity page: mmlongbench-doc
+- Deleted entity page: mmlu-pro
+- Deleted entity page: mmmu
+- Deleted entity page: mobile-manipulator
+- Deleted entity page: model-based-verifier
+- Deleted entity page: model-context-protocol
+- Deleted entity page: model-flops-utilization
+- Deleted entity page: model-router
+- Deleted entity page: model-routing
+- Deleted entity page: model-spec
+- Deleted entity page: modern-data-stack
+- Deleted entity page: monte-carlo-tree-search-mcts-for-llm-reasoning
+- Deleted entity page: monte-carlo-tree-search
+- Deleted entity page: moonlight
+- Deleted entity page: moonshot-ai
+- Deleted entity page: moonvit
+- Deleted entity page: moores-law
+- Deleted entity page: moshi
+- Deleted entity page: move-37
+- Deleted entity page: ms-coco
+- Deleted entity page: msc
+- Deleted entity page: mujoco
+- Deleted entity page: multi-hop-question-answering
+- Deleted entity page: multi-model-orchestration
+- Deleted entity page: multi-stage-rl-training
+- Deleted entity page: multi-turn-grpo
+- Deleted entity page: multimodal-large-language-model
+- Deleted entity page: multimodal-pretraining-corpus
+- Deleted entity page: multimodality
+- Deleted entity page: muonclip
+- Deleted entity page: muzero
+- Deleted entity page: mvot
+- Deleted entity page: naive-rag
+- Deleted entity page: naiverag
+- Deleted entity page: nano-banana
+- Deleted entity page: natural-questions
+- Deleted entity page: naturalreasoning
+- Deleted entity page: navit-packing
+- Deleted entity page: navit
+- Deleted entity page: needle-in-a-haystack-niah
+- Deleted entity page: needle-in-a-haystack-test
+- Deleted entity page: needle-in-a-haystack
+- Deleted entity page: nemotron-cc
+- Deleted entity page: neural-long-term-memory-module
+- Deleted entity page: neural-turing-machine
+- Deleted entity page: next-token-prediction-ntp
+- Deleted entity page: next-token-prediction
+- Deleted entity page: notebook-lm
+- Deleted entity page: nothinking
+- Deleted entity page: ntk-aware-rope-scaling
+- Deleted entity page: nucleus-sampling
+- Deleted entity page: o-series-models
+- Deleted entity page: o1-mini
+- Deleted entity page: o1-openai
+- Deleted entity page: o1-preview
+- Deleted entity page: o1-style-reasoning-model
+- Deleted entity page: objaverse
+- Deleted entity page: objective-structured-clinical-examination-osce
+- Deleted entity page: ocrbench
+- Deleted entity page: off-policy-rl
+- Deleted entity page: off-policy-training
+- Deleted entity page: olympiad-bench
+- Deleted entity page: omega-rule
+- Deleted entity page: omni-math
+- Deleted entity page: omnibench
+- Deleted entity page: omnidocbench
+- Deleted entity page: on-device-ai
+- Deleted entity page: on-policy-dpo
+- Deleted entity page: on-policy-training
+- Deleted entity page: one-shot-rl
+- Deleted entity page: online-policy-mirror-descent
+- Deleted entity page: open-deep-research
+- Deleted entity page: open-r1
+- Deleted entity page: open-x-embodiment
+- Deleted entity page: openai-deep-research
+- Deleted entity page: openai-o1
+- Deleted entity page: openclaw
+- Deleted entity page: openhands
+- Deleted entity page: openmathReasoning
+- Deleted entity page: openr1
+- Deleted entity page: openrlhf
+- Deleted entity page: openrouter
+- Deleted entity page: openvla
+- Deleted entity page: openwebtext
+- Deleted entity page: optimus
+- Deleted entity page: opus-clip
+- Deleted entity page: osworld
+- Deleted entity page: out-of-distribution-generalization
+- Deleted entity page: out-of-distribution-ood-generalization
+- Deleted entity page: outcome-supervision
+- Deleted entity page: outreach
+- Deleted entity page: outset
+- Deleted entity page: overoptimization
+- Deleted entity page: overthinking-phenomenon
+- Deleted entity page: paces-practical-assessment-of-clinical-examination-skills
+- Deleted entity page: pagerank
+- Deleted entity page: palm-e
+- Deleted entity page: parallel-thinking
+- Deleted entity page: parallel-tool-calling
+- Deleted entity page: parameter-efficient-fine-tuning-peft
+- Deleted entity page: parscale
+- Deleted entity page: partially-observable-markov-decision-process
+- Deleted entity page: pass1-accuracy
+- Deleted entity page: passn
+- Deleted entity page: pause-token
+- Deleted entity page: persistent-memory
+- Deleted entity page: photogrammetry
+- Deleted entity page: physical-ai
+- Deleted entity page: physical-intelligence-pi
+- Deleted entity page: pika-labs
+- Deleted entity page: pile
+- Deleted entity page: pipeline-parallelism
+- Deleted entity page: pixel-shuffle
+- Deleted entity page: plaid
+- Deleted entity page: playwright
+- Deleted entity page: pondernet
+- Deleted entity page: pope
+- Deleted entity page: power-law-venture-returns
+- Deleted entity page: ppo-proximal-policy-optimization
+- Deleted entity page: pre-training-compute-scaling
+- Deleted entity page: pre-training-plus-rl-paradigm
+- Deleted entity page: pre-training
+- Deleted entity page: prioritized-sampling
+- Deleted entity page: procedural-memory
+- Deleted entity page: process-based-supervision
+- Deleted entity page: process-reward-model
+- Deleted entity page: process-supervision
+- Deleted entity page: processbench
+- Deleted entity page: product-market-fit
+- Deleted entity page: program-synthesis
+- Deleted entity page: prompt-caching
+- Deleted entity page: prompt-engineering
+- Deleted entity page: prorl
+- Deleted entity page: protein-folding
+- Deleted entity page: putnambench
+- Deleted entity page: pythia
+- Deleted entity page: q
+- Deleted entity page: qk-clip
+- Deleted entity page: qwen-25
+- Deleted entity page: qwen25-32b-instruct
+- Deleted entity page: qwen25-7b
+- Deleted entity page: qwen25-math-15b
+- Deleted entity page: qwen25-math
+- Deleted entity page: qwen3-14b
+- Deleted entity page: qwen3-17b
+- Deleted entity page: qwen3-30b-a3b
+- Deleted entity page: qwen3-4b-base
+- Deleted entity page: qwen3-4b
+- Deleted entity page: qwen3-8b-base
+- Deleted entity page: r1
+- Deleted entity page: raptor
+- Deleted entity page: rcr-router
+- Deleted entity page: react-framework
+- Deleted entity page: react-prompting
+- Deleted entity page: reasoning-distillation
+- Deleted entity page: reasoning-models
+- Deleted entity page: reasoningbank
+- Deleted entity page: recallk
+- Deleted entity page: reconstruction-fid
+- Deleted entity page: recurrent-depth-approach
+- Deleted entity page: recursive-self-improvement
+- Deleted entity page: reducto
+- Deleted entity page: reference-model
+- Deleted entity page: refinecode
+- Deleted entity page: reinforce-algorithm
+- Deleted entity page: reinforce-policy-gradient
+- Deleted entity page: reinforcement-fine-tuning-rft
+- Deleted entity page: reinforcement-learning-from-ai-feedback
+- Deleted entity page: reinforcement-learning-rl-for-language-models
+- Deleted entity page: rejection-sampling-finetuning
+- Deleted entity page: rema
+- Deleted entity page: replicate
+- Deleted entity page: representation-learning
+- Deleted entity page: research
+- Deleted entity page: residual-vector-quantization-rvq
+- Deleted entity page: residual-vector-quantization
+- Deleted entity page: resum
+- Deleted entity page: retnet
+- Deleted entity page: retrieval-augmented-generation-rag
+- Deleted entity page: retroformer
+- Deleted entity page: reward-model-rm
+- Deleted entity page: reward-model
+- Deleted entity page: reward-shaping
+- Deleted entity page: rewardbench
+- Deleted entity page: rl-environment
+- Deleted entity page: rl-with-verifiable-rewards
+- Deleted entity page: rlaif
+- Deleted entity page: rls-razor
+- Deleted entity page: rmm
+- Deleted entity page: robot-scaling-laws
+- Deleted entity page: robotic-foundation-model
+- Deleted entity page: robotic-process-automation
+- Deleted entity page: rockmelt
+- Deleted entity page: rotary-positional-embeddings
+- Deleted entity page: rq-transformer
+- Deleted entity page: rt1
+- Deleted entity page: rtfm
+- Deleted entity page: rubric-based-evaluation
+- Deleted entity page: ruler
+- Deleted entity page: runway
+- Deleted entity page: rwkv
+- Deleted entity page: rxqa
+- Deleted entity page: s1k
+- Deleted entity page: safe-superintelligence-ssi
+- Deleted entity page: sakana-ai
+- Deleted entity page: samba
+- Deleted entity page: sana
+- Deleted entity page: sandbox-persistence
+- Deleted entity page: sandwich-normalization
+- Deleted entity page: santa-fe-institute
+- Deleted entity page: sciknoweval
+- Deleted entity page: screenspot-pro
+- Deleted entity page: seal-0
+- Deleted entity page: search-o1
+- Deleted entity page: search-r1
+- Deleted entity page: seed-bench
+- Deleted entity page: self-consistency
+- Deleted entity page: self-debugging
+- Deleted entity page: self-rag
+- Deleted entity page: self-refinement
+- Deleted entity page: self-reflection
+- Deleted entity page: semantic-entropy
+- Deleted entity page: semantic-memory
+- Deleted entity page: semdedup
+- Deleted entity page: sequence-packing
+- Deleted entity page: sequoia-capital
+- Deleted entity page: service-as-software
+- Deleted entity page: shampoo-optimizer
+- Deleted entity page: shared-attention-block
+- Deleted entity page: shopify
+- Deleted entity page: siglip-so-400m
+- Deleted entity page: siglip2
+- Deleted entity page: silu-activation
+- Deleted entity page: sim-to-real-transfer
+- Deleted entity page: sima-deepmind
+- Deleted entity page: sima
+- Deleted entity page: simclr
+- Deleted entity page: simcse
+- Deleted entity page: simpleqa
+- Deleted entity page: simplerenv
+- Deleted entity page: simpo
+- Deleted entity page: simulated-multi-visit-dialogue-generator
+- Deleted entity page: single-cell-rna-sequencing
+- Deleted entity page: skill-acquisition-efficiency
+- Deleted entity page: sleeptime-compute
+- Deleted entity page: slime
+- Deleted entity page: slimpajama
+- Deleted entity page: smollm2
+- Deleted entity page: socratic-models
+- Deleted entity page: software-30
+- Deleted entity page: solution-generator
+- Deleted entity page: something-something-v2
+- Deleted entity page: spac
+- Deleted entity page: spacebyte
+- Deleted entity page: sparse-autoencoder-sae
+- Deleted entity page: sparse-reward-problem
+- Deleted entity page: spatiotemporal-transformer
+- Deleted entity page: speechtokenizer
+- Deleted entity page: spiking-neural-network
+- Deleted entity page: spirit-lm
+- Deleted entity page: ssi
+- Deleted entity page: ssim
+- Deleted entity page: state-space-models-ssm
+- Deleted entity page: steering-vectors
+- Deleted entity page: step-level-advantage
+- Deleted entity page: step
+- Deleted entity page: strategyqa
+- Deleted entity page: streamingllm
+- Deleted entity page: structured-generation-with-decoding-constraints
+- Deleted entity page: success-rate
+- Deleted entity page: sudoku-extreme
+- Deleted entity page: suno
+- Deleted entity page: supergpqa
+- Deleted entity page: swe-agent
+- Deleted entity page: swe-bench-multilingual
+- Deleted entity page: swe-bench-verified
+- Deleted entity page: swe-bench
+- Deleted entity page: swe-gym
+- Deleted entity page: swe-rebench
+- Deleted entity page: sycophancy
+- Deleted entity page: synapse
+- Deleted entity page: synthetic-data
+- Deleted entity page: synthetic-reasoning-traces
+- Deleted entity page: system-2-thinking
+- Deleted entity page: system-of-agents
+- Deleted entity page: system-of-record
+- Deleted entity page: task-arithmetic
+- Deleted entity page: task-augmentation
+- Deleted entity page: tau2-bench
+- Deleted entity page: temporal-difference-learning
+- Deleted entity page: tensor-cores
+- Deleted entity page: terminal-bench
+- Deleted entity page: test-time-fine-tuning
+- Deleted entity page: test-time-learning
+- Deleted entity page: test-time-scaling-tts
+- Deleted entity page: test-time-search
+- Deleted entity page: test-time-training-ttt
+- Deleted entity page: text-embedding-3-small
+- Deleted entity page: textvqa
+- Deleted entity page: theoremqa
+- Deleted entity page: think-in-memory
+- Deleted entity page: think-tool
+- Deleted entity page: thinking-machines
+- Deleted entity page: thinking-tokens
+- Deleted entity page: thinking-with-images
+- Deleted entity page: thinkless
+- Deleted entity page: thrive-capital
+- Deleted entity page: tiny-recursive-model
+- Deleted entity page: titans
+- Deleted entity page: toast
+- Deleted entity page: tobi-lütke
+- Deleted entity page: token-entropy
+- Deleted entity page: tokenbench
+- Deleted entity page: tokenflow
+- Deleted entity page: toolalpaca
+- Deleted entity page: toolbench
+- Deleted entity page: toolformer
+- Deleted entity page: tpu
+- Deleted entity page: transduction
+- Deleted entity page: transformer-architecture
+- Deleted entity page: transfusion
+- Deleted entity page: transnetv2
+- Deleted entity page: travelplanner
+- Deleted entity page: tree-attention
+- Deleted entity page: tree-of-thoughts
+- Deleted entity page: ttrl
+- Deleted entity page: ttt-test-time-training
+- Deleted entity page: tulu-3
+- Deleted entity page: udio
+- Deleted entity page: ui-tars
+- Deleted entity page: ultradomain
+- Deleted entity page: ultrainteract
+- Deleted entity page: unitree-g1
+- Deleted entity page: unity
+- Deleted entity page: v-jepa
+- Deleted entity page: validation-negative-log-likelihood
+- Deleted entity page: value-based-care
+- Deleted entity page: value-model
+- Deleted entity page: value-network
+- Deleted entity page: vbench
+- Deleted entity page: vector-database
+- Deleted entity page: vector-quantization
+- Deleted entity page: veeva-systems
+- Deleted entity page: veo
+- Deleted entity page: verifiable-rewards
+- Deleted entity page: verifree
+- Deleted entity page: vertical-ai-agent
+- Deleted entity page: vertical-ai-moat
+- Deleted entity page: vertical-automation-solution
+- Deleted entity page: vertical-search
+- Deleted entity page: vibe-check
+- Deleted entity page: video-prediction-model
+- Deleted entity page: video-r1
+- Deleted entity page: videomme
+- Deleted entity page: videommmu
+- Deleted entity page: vila-u
+- Deleted entity page: vipergpt
+- Deleted entity page: virtual-cell
+- Deleted entity page: vision-language-action-model-vla
+- Deleted entity page: vision-language-action-model
+- Deleted entity page: vision-language-action-vla-model
+- Deleted entity page: vision-transformer
+- Deleted entity page: visual-grounding
+- Deleted entity page: visual-instruction-tuning
+- Deleted entity page: visualwebarena
+- Deleted entity page: vllm
+- Deleted entity page: vlm-r1
+- Deleted entity page: voice-agent
+- Deleted entity page: voice-cloning
+- Deleted entity page: vpt
+- Deleted entity page: vqgan
+- Deleted entity page: vsi-bench
+- Deleted entity page: warmup-stable-decay-wsd-learning-rate-schedule
+- Deleted entity page: wav2vec
+- Deleted entity page: weak-to-strong-supervision
+- Deleted entity page: webinstruct-verified
+- Deleted entity page: webvoyager
+- Deleted entity page: window-attention
+- Deleted entity page: windowsagentarena
+- Deleted entity page: wiz
+- Deleted entity page: working-memory
+- Deleted entity page: world-simulator
+- Deleted entity page: worldsense
+- Deleted entity page: wrap
+- Deleted entity page: write-actions
+- Deleted entity page: xbench-deepsearch
+- Deleted entity page: xlam-2
+- Deleted entity page: xlstm
+- Deleted entity page: xstest
+- Deleted entity page: z-score-reward-normalization
+- Deleted entity page: zero-1
+- Deleted entity page: zombie-unicorn
+- Deleted entity page: π0

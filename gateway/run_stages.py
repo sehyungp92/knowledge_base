@@ -138,6 +138,7 @@ SAVE_STAGES: list[tuple[str, str]] = [
     ("landscape", "Extracting landscape signals"),
     ("implications", "Cross-theme implications"),
     ("graph", "Computing edges"),
+    ("wiki", "Updating wiki"),
 ]
 
 REFLECT_TOPIC_STAGES: list[tuple[str, str]] = [

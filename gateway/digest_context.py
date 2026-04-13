@@ -50,16 +50,20 @@ def gather_landscape_briefing(get_conn_fn=None) -> str:
         # High-velocity themes
         with get_conn_fn() as conn:
             themes = conn.execute(
-                """SELECT id, name, velocity, LEFT(state_summary, 300) AS summary_excerpt
+                """SELECT id, name, velocity
                    FROM themes
                    WHERE velocity > 0
                    ORDER BY velocity DESC
                    LIMIT 5"""
             ).fetchall()
         if themes:
+            from retrieval.wiki_retrieval import gather_wiki_context, extract_section
+            wiki_ctx = gather_wiki_context(theme_ids=[t["id"] for t in themes])
             lines = ["### Active Themes (by velocity)"]
             for t in themes:
-                excerpt = (t["summary_excerpt"] or "").replace("\n", " ").strip()
+                narrative = wiki_ctx.theme_narratives.get(t["id"], "")
+                excerpt = extract_section(narrative, "Current State", max_chars=400) if narrative else ""
+                excerpt = excerpt.replace("\n", " ").strip() if excerpt else "(no summary)"
                 lines.append(
                     f"- **{t['name']}** (velocity {t['velocity']:.1f}): {excerpt}"
                 )
@@ -159,17 +163,20 @@ def gather_weekly_landscape_context(get_conn_fn=None) -> str:
     try:
         with get_conn_fn() as conn:
             themes = conn.execute(
-                """SELECT id, name, velocity, state_summary
+                """SELECT id, name, velocity
                    FROM themes
                    WHERE velocity > 0
                    ORDER BY velocity DESC"""
             ).fetchall()
         if themes:
+            from retrieval.wiki_retrieval import gather_wiki_context
+            wiki_ctx = gather_wiki_context(theme_ids=[t["id"] for t in themes], max_pages=20)
             lines = ["### Active Themes"]
             for t in themes:
-                summary = (t["state_summary"] or "No state summary yet.").strip()
+                narrative = wiki_ctx.theme_narratives.get(t["id"], "")
+                content = narrative[:4000] if narrative else "No state summary yet."
                 lines.append(
-                    f"#### {t['name']} (velocity {t['velocity']:.1f})\n{summary}"
+                    f"#### {t['name']} (velocity {t['velocity']:.1f})\n{content}"
                 )
             sections.append("\n\n".join(lines))
     except Exception:

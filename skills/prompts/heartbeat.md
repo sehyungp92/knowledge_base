@@ -111,6 +111,15 @@ For each stale theme meeting the minimum 3-source threshold:
   - Any resolved tensions
 - Write to memory/beliefs/epistemic_digest_{YYYY-MM}.md
 
+### Step 3g: Wiki Lint (automatic, pre-computed)
+
+Wiki lint runs automatically before each heartbeat. Read `wiki/.lint_report.md` for results.
+
+- If the file exists and was updated within the last hour, include findings in report
+- Report the health score, error count, and top 3 issues
+- If health score < 0.7: add "Run /lint full for comprehensive analysis" to suggested actions
+- If auto-fixes were applied: note count in report
+
 ### Step 4: Decision
 - If no checks triggered: respond `HEARTBEAT_OK`
 - If checks triggered: compose a brief Telegram-formatted report
@@ -169,10 +178,18 @@ For each stale theme meeting the minimum 3-source threshold:
 **Coverage gaps:**
 - {gap_type}: {theme} — {detail}
 
+{If wiki lint report exists:}
+**Wiki health:** {score}/1.00
+- Scanned {N} pages, found {issues} issues, auto-fixed {fixed}
+{If critical issues:}
+- Top issues: {list}
+
 {If suggestions:}
 **Suggested actions:**
 - Run /landscape {theme} for stale themes
 - Run /anticipate review {theme} for flagged anticipations
 - Run /beliefs review for stale beliefs
 - Run /gaps for coverage analysis
+- Run /lint fix for safe auto-remediation
+- Run /lint full for contradiction analysis
 ```

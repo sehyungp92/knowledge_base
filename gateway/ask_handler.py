@@ -85,12 +85,63 @@ def handle_ask_job(
     if on_progress:
         on_progress(f"Found {len(claims)} relevant claims, synthesizing answer...")
 
+    # Gather wiki context for richer synthesis (best-effort)
+    wiki_block = ""
+    graph_block = ""
+    theme_ids_for_filing: list[str] = []
+    try:
+        from retrieval.wiki_retrieval import gather_wiki_context, format_wiki_context_block
+        wctx = gather_wiki_context(
+            query=question, max_pages=3,
+            include_entities=True, include_sources=True,
+        )
+        if wctx.theme_narratives:
+            wiki_block = format_wiki_context_block(
+                wctx, header="Thematic Context", max_chars_per_theme=2000,
+            )
+            theme_ids_for_filing = list(wctx.theme_narratives.keys())
+    except Exception:
+        log.debug("ask_wiki_context_failed", exc_info=True)
+
+    # Graph structural context (bridge concepts, implications, contradictions)
+    try:
+        from retrieval.graph_context import query_graph_context, format_graph_context_block
+        gctx = query_graph_context(query=question, theme_ids=theme_ids_for_filing)
+        graph_block = format_graph_context_block(gctx, max_chars=1500)
+        if graph_block:
+            log.info("ask_graph_context", **gctx.stats)
+    except Exception:
+        log.debug("ask_graph_context_failed", exc_info=True)
+
     # Load voice for narrative output
     voice = _load_voice(config)
 
     # Try LLM synthesis
-    answer = _synthesize_with_llm(question, claims, executor, log, voice=voice)
+    combined_context = wiki_block
+    if graph_block:
+        combined_context = (combined_context + "\n\n" + graph_block) if combined_context else graph_block
+    answer = _synthesize_with_llm(question, claims, executor, log, voice=voice, wiki_context=combined_context)
     if answer:
+        # File answer to wiki (best-effort, background)
+        if len(answer) > 200:
+            try:
+                import threading
+
+                def _wiki_file():
+                    try:
+                        from reading_app.db import ensure_pool
+                        from retrieval.wiki_writer import create_question_page
+                        ensure_pool()
+                        page = create_question_page(question, answer, theme_ids_for_filing)
+                        if page and on_progress:
+                            on_progress("_Wiki updated: question page filed._")
+                    except Exception:
+                        logger.warning("ask_wiki_filing_failed", question=question[:80], exc_info=True)
+
+                threading.Thread(target=_wiki_file).start()
+            except Exception:
+                logger.warning("ask_wiki_thread_spawn_failed", exc_info=True)
+
         elapsed = time.monotonic() - t0
         log.info("ask_handler_complete", elapsed_s=round(elapsed, 1), mode="llm")
         return answer
@@ -323,6 +374,31 @@ Sources:
             timeout=120,
         )
         if result.text and len(result.text) > 20:
+            # File answer to wiki (best-effort, background) — same pattern as simple path
+            if len(result.text) > 200:
+                try:
+                    import threading
+
+                    answer_text = result.text
+
+                    def _wiki_file_complex():
+                        try:
+                            from reading_app.db import ensure_pool
+                            from retrieval.wiki_writer import create_question_page, extract_theme_ids_from_text
+                            ensure_pool()
+                            theme_ids = extract_theme_ids_from_text(question)
+                            page = create_question_page(question, answer_text, theme_ids)
+                            if page and on_progress:
+                                on_progress("_Wiki updated: question page filed._")
+                        except Exception:
+                            logger.debug(
+                                "ask_complex_wiki_filing_failed", question=question[:80], exc_info=True,
+                            )
+
+                    threading.Thread(target=_wiki_file_complex).start()
+                except Exception:
+                    pass
+
             elapsed = time.monotonic() - t0
             log.info("ask_handler_complete", elapsed_s=round(elapsed, 1), mode="lens")
             return result.text
@@ -457,24 +533,34 @@ def _load_voice(config) -> str:
         return ""
 
 
-def _synthesize_with_llm(question: str, claims: list[dict], executor, log, *, voice: str = "") -> str | None:
+def _synthesize_with_llm(question: str, claims: list[dict], executor, log, *, voice: str = "", wiki_context: str = "") -> str | None:
     """Use executor.run_raw() to synthesize an answer from retrieved claims."""
     # Format claims for the prompt
     evidence_block = _format_evidence_for_prompt(claims)
 
     voice_section = f"\n## Voice & Personality\n{voice}\n" if voice else ""
 
-    prompt = f"""You are a research assistant answering a question using ONLY the evidence provided below.
+    wiki_section = ""
+    if wiki_context:
+        wiki_section = f"""
+## Thematic Context
+The following wiki narratives provide broader context for the themes relevant to this question.
+Use this to ground your answer in the landscape of what is known.
+
+{wiki_context}
+"""
+
+    prompt = f"""You are a research assistant answering a question using the evidence provided below.
 {voice_section}
 
 ## Question
 {question}
-
+{wiki_section}
 ## Retrieved Evidence
 {evidence_block}
 
 ## Instructions
-1. Answer the question directly, grounding every statement in the evidence above.
+1. Answer the question directly, grounding every statement in the retrieved evidence and thematic context above.
 2. Cite sources using [source_id] inline.
 3. Note contradictions or uncertainty if present.
 4. If the evidence is insufficient, say so.

@@ -4,13 +4,15 @@ A personal knowledge engine that transforms passive reading into a constantly ev
 
 ## How It Works
 
-The system operates across three layers:
+The system operates across four layers:
 
-**Knowledge Graph** — what sources say. Claims extracted with verbatim evidence, concepts, and typed relationships between sources.
+**Knowledge Graph** — what sources say. Claims extracted with verbatim evidence, concepts linked by typed semantic edges (`builds_on`, `contrasts_with`, `enables`, `alternative_to`, `specializes`, `component_of`), and weighted relationships between sources. Graph algorithms (betweenness centrality, PageRank, Louvain community detection) identify structurally important concepts, bridge nodes between themes, and cluster boundaries.
 
 **Landscape Model** — what is true about AI right now. A temporal, evidence-traced representation organized by themes (as a DAG), tracking capabilities (with maturity), limitations (with type and trajectory), bottlenecks (with resolution horizons), breakthroughs (with implication cascades), anticipations (trackable predictions), and cross-theme implications.
 
 **Belief System** — what you think about what is true. Tracked positions with confidence levels, supporting/opposing evidence, and history. The system surfaces conflicts and challenges stale positions.
+
+**Wiki** — compiled reasoning, human-readable. Over 1,200 markdown pages (themes, entities, sources, syntheses, questions, beliefs) that compile raw graph and landscape data into navigable, interlinked narratives. The wiki is the primary context surface for LLM reasoning — handlers read wiki pages first, falling back to database queries only when pages are stale or missing. Pages are filed automatically after every `/save`, `/reflect`, `/challenge`, and `/implications`, and maintained by a deterministic index that tracks cross-references, staleness, and structural health without LLM calls.
 
 ## Architecture
 
@@ -175,19 +177,27 @@ When you `/save` a URL:
 ```
 URL
  ├─ Fetch & parse (article, arXiv, YouTube, podcast, PDF)
- ├─ Theme classification (Haiku — fast & cheap)
+ │   └─ Audio/video: domain-aware Whisper transcription (corpus concepts as initial prompt)
+ ├─ Theme classification
  │
  ├─ Phase 1 (parallel):
- │   ├─ Claims + evidence extraction (Sonnet)
- │   ├─ Deep theme-aware summary (Sonnet)
+ │   ├─ Claims + evidence extraction
+ │   ├─ Deep theme-aware summary
  │   ├─ Landscape signals: capabilities, limitations, bottlenecks, breakthroughs
  │   └─ Cross-theme implications
  │
- └─ Phase 2 (conditional):
-     ├─ Match against open anticipations
-     ├─ Propagate breakthrough effects to bottlenecks
-     ├─ Check against tracked beliefs
-     └─ Compute edges to existing sources
+ ├─ Phase 2 (conditional):
+ │   ├─ Match against open anticipations
+ │   ├─ Propagate breakthrough effects to bottlenecks
+ │   ├─ Check against tracked beliefs
+ │   └─ File wiki pages (source, entity, synthesis)
+ │
+ └─ Phase 3 — Post-processing (5-step pipeline):
+     ├─ Source edges: compute weighted connections to existing sources
+     ├─ Concept edges: classify typed semantic relationships (builds_on, contrasts_with, etc.)
+     ├─ Graph metrics: incremental betweenness centrality for affected neighborhoods
+     ├─ State summaries: regenerate landscape narratives for impacted themes
+     └─ Anticipation matching: review open predictions against new evidence
 ```
 
 ## Idea Generation Pipeline
@@ -208,6 +218,49 @@ Source
 
 Every idea must cite specific claims from specific sources. No idea passes without demonstrating it isn't a restatement of something already in the library.
 
+## Graph Intelligence
+
+Every handler that reasons over the knowledge base can inject structured graph context alongside wiki narratives. The shared `query_graph_context()` function assembles a compact block containing:
+
+- **Bridge concepts** — high-betweenness nodes that connect otherwise distant themes, surfacing non-obvious structural relationships in the corpus
+- **Concept edges** — typed semantic relationships between concepts (`builds_on`, `contrasts_with`, `enables`, `alternative_to`, `specializes`, `component_of`), classified by LLM during post-processing for high-confidence co-occurring concept pairs
+- **Cross-theme implications** — how a development in one theme affects another, with provenance and confidence
+- **Contradictions** — conflicting claims between sources, detected via claim-level analysis
+- **Suggested questions** — graph-topology-driven inquiry ("Why does X bridge themes Y and Z?", "High-centrality concepts lacking wiki pages")
+
+Graph context is budget-aware — each handler specifies a character budget, and the formatter prioritizes the most structurally informative signals. This unified composition replaces the previous fragmentation where some handlers had graph access, others had wiki access, and none combined both coherently.
+
+### Epistemic Status Vocabulary
+
+Every claim and landscape entity carries a human-readable confidence tier derived from its provenance and scoring:
+
+| Tier | Meaning |
+|------|---------|
+| `ESTABLISHED` | Multiple corroborating sources, high confidence |
+| `EXTRACTED` | Directly stated in a single source |
+| `INFERRED` | Derived from evidence patterns, not explicitly stated |
+| `AMBIGUOUS` | Conflicting evidence or unclear provenance |
+| `SPECULATIVE` | Low confidence, limited evidence |
+
+## Wiki as Compiled Reasoning
+
+The wiki is not documentation — it is the system's primary compiled reasoning surface. Raw database rows (claims, edges, metrics) are compiled into navigable markdown pages that LLM handlers read as context before generating responses.
+
+**Page types and their role:**
+
+| Type | Count | Purpose |
+|------|-------|---------|
+| Themes | 82 | Temporal narratives of how each AI theme evolved, with state summaries |
+| Entities | 504 | Concept-level pages compiling all claims, edges, and landscape signals for a single concept |
+| Sources | 614 | Per-source pages with extracted claims, summary, and cross-references |
+| Syntheses | — | Multi-source consolidated analyses filed after `/reflect` topic mode |
+| Questions | — | Open questions generated from graph topology and coverage gaps |
+| Beliefs | — | Tracked positions with evidence for/against and challenge history |
+
+**Context assembly:** When a handler like `/ask` or `/reflect` needs context, it calls `gather_wiki_context()` which reads theme narratives, entity pages for relevant concepts, source pages for cited sources, and any synthesis/belief/question pages matching the query scope. This wiki-first retrieval replaces direct database queries for most reasoning paths, providing richer, pre-compiled context with cross-references already resolved.
+
+**Automatic maintenance:** A deterministic wiki index tracks every page's cross-references, staleness, and structural integrity without LLM calls. Pages are filed automatically after ingestion and analysis. Stale pages are flagged and regenerated during heartbeat cycles.
+
 ## Project Structure
 
 ```
@@ -223,13 +276,25 @@ knowledge_base/
 ├── notify/            # Notification emitters
 ├── prompts/           # Claude instruction prompts for each skill
 ├── reading_app/       # Core runtime: config, DB pool, embeddings, scheduler
-├── retrieval/         # Hybrid search, graph algorithms, landscape queries
+├── retrieval/         # Hybrid search, graph context, wiki retrieval, landscape queries
+│   ├── graph_context.py   # Shared graph intelligence (bridge concepts, concept edges, questions)
+│   ├── wiki_retrieval.py  # Wiki-first context assembly (themes, entities, sources, syntheses)
+│   ├── wiki_writer.py     # Wiki page generation and filing (6 page types)
+│   ├── wiki_index.py      # Deterministic wiki health and cross-reference maintenance
+│   └── ...                # hybrid.py, graph.py, graph_algorithms.py, lenses.py, landscape.py
 ├── scripts/           # Bulk ingestion, reprocessing, edge computation
 ├── skills/            # Skills registry (YAML)
 ├── tests/             # Pytest test suite
 ├── webapp/
 │   ├── api/           # FastAPI backend (landscape, search, graph, beliefs, etc.)
 │   └── web/           # Next.js frontend
+├── wiki/              # Compiled reasoning pages (1,200+ markdown files)
+│   ├── themes/        # Theme narratives with state summaries
+│   ├── entities/      # Concept-level pages with claims, edges, signals
+│   ├── sources/       # Per-source pages with extractions and cross-references
+│   ├── syntheses/     # Multi-source consolidated analyses
+│   ├── questions/     # Open questions from graph topology and gaps
+│   └── beliefs/       # Tracked positions with evidence and challenges
 └── .env.example       # Environment configuration template
 ```
 
@@ -260,6 +325,20 @@ Where OpenClaw provided the structural blueprint, [Hermes](https://github.com/pl
 **Entity staleness as epistemic hygiene.** A landscape model that never forgets is a landscape model that lies. Capabilities described in a 2023 paper may have been superseded; bottlenecks may have been resolved. Hermes's approach to memory lifecycle — where information decays without reinforcement — inspired the staleness decay system. Every capability, limitation, and bottleneck now has an exponentially decaying `staleness_score` based on time since last corroboration. Entities that are re-confirmed during `/save` get refreshed; those that aren't gradually fade, ensuring the landscape model reflects current understanding rather than accumulated history.
 
 **The deeper lesson is that a knowledge system that doesn't learn from corrections is just a pipeline.** OpenClaw gave Knowledge Base its skeleton — the gateway, the adapters, the dispatch loop. Hermes gave it proprioception: the ability to sense its own performance, remember what its operator values, and improve its extractions based on feedback rather than just instructions. The combination — a linear, auditable pipeline that also closes learning loops — is what makes the system genuinely useful over months of accumulated sources rather than merely functional.
+
+## Lineage: What This Owes to Graphify
+
+[Graphify](https://github.com/sehnryr/graphify) is a code-understanding tool that builds knowledge graphs from codebases — analyzing structure, detecting clusters, identifying bridge nodes, and generating navigable reports. Knowledge Base adapted several of its most effective patterns for a fundamentally different domain: epistemically uncertain, temporally evolving knowledge about AI.
+
+**Shared graph context as a composable primitive.** Graphify's core insight was that graph intelligence shouldn't be scattered across individual features — it should be a single, queryable context block that any analysis can consume. Knowledge Base adopted this directly: `query_graph_context()` assembles bridge concepts, concept edges, cross-theme implications, contradictions, and suggested questions into a compact `GraphContext` dataclass that any handler can inject into its LLM prompt alongside wiki narratives. Before this, graph intelligence was fragmented — some handlers queried the graph directly, others used analytical lenses, and none composed both coherently.
+
+**Typed concept-level edges.** Graphify models explicit relationships between code entities (calls, imports, inherits). Knowledge Base adapted this into typed semantic edges between concepts — `builds_on`, `contrasts_with`, `enables`, `alternative_to`, `specializes`, `component_of` — classified by LLM during post-processing for high-confidence co-occurring concept pairs. These relationships are structurally different from claim-level embedding similarity: "RLHF contrasts_with DPO" captures a relationship that vector proximity alone cannot express.
+
+**Bridge concepts and structural surprise.** Graphify uses betweenness centrality to find "bridge nodes" that connect otherwise isolated clusters. Knowledge Base applies the same algorithm to its concept graph, surfacing concepts that structurally connect distant themes. These bridge concepts drive suggested questions ("Why does concept X connect themes Y and Z?") and enrich the graph context block with non-obvious cross-domain connections.
+
+**Incremental recomputation.** Graphify's watch mode recomputes only affected neighborhoods when files change. Knowledge Base adapted this for post-ingestion: after `/save`, betweenness centrality is recomputed only for the 2-hop neighborhood of newly connected concepts, with periodic full recomputation to prevent drift.
+
+**The translation cost was real.** Graphify operates on precise structural relationships (function calls, imports) where "bridge node" has an unambiguous meaning. In a knowledge graph with epistemically uncertain, temporally evolving relationships, "bridge" and "surprising connection" require domain-aware interpretation. The adaptation preserved the structural algorithms but added confidence tiers, temporal awareness, and provenance tracking that Graphify's domain doesn't require.
 
 ## Design Principles
 

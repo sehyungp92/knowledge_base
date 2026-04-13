@@ -71,11 +71,51 @@ def _download_audio(url: str, dest: Path, timeout: int = 300) -> Path:
     return audio_path
 
 
+def _build_whisper_prompt() -> str:
+    """Build a domain-aware initial prompt for Whisper from high-centrality corpus concepts."""
+    try:
+        from reading_app.db import get_conn, ensure_pool
+        ensure_pool()
+        with get_conn() as conn:
+            # Prefer high-betweenness concepts (structurally important terms)
+            rows = conn.execute(
+                """SELECT c.canonical_name
+                   FROM graph_metrics gm
+                   JOIN concepts c ON gm.entity_id = c.id::text
+                   WHERE gm.metric_type = 'betweenness' AND gm.entity_type = 'concept'
+                   ORDER BY gm.score DESC
+                   LIMIT 40"""
+            ).fetchall()
+            terms = [r["canonical_name"] for r in rows if r["canonical_name"]]
+            # Pad with recent concepts if graph metrics are sparse
+            if len(terms) < 20:
+                extra = conn.execute(
+                    """SELECT DISTINCT canonical_name FROM concepts
+                       ORDER BY created_at DESC LIMIT %s""",
+                    (40 - len(terms),),
+                ).fetchall()
+                seen = set(terms)
+                for r in extra:
+                    if r["canonical_name"] and r["canonical_name"] not in seen:
+                        terms.append(r["canonical_name"])
+                        seen.add(r["canonical_name"])
+        if terms:
+            return "AI, machine learning, " + ", ".join(terms[:40])
+    except Exception:
+        pass
+    return (
+        "AI, machine learning, large language models, LLM, transformer, "
+        "reinforcement learning, RLHF, chain of thought, GPT, Claude, "
+        "fine-tuning, inference, neural network, attention mechanism"
+    )
+
+
 def _transcribe_whisper(audio_path: Path) -> str:
-    """Transcribe audio using faster-whisper."""
+    """Transcribe audio using faster-whisper with domain-aware prompting."""
     from faster_whisper import WhisperModel
     model = WhisperModel("base", compute_type="int8")
-    segments, _ = model.transcribe(str(audio_path))
+    initial_prompt = _build_whisper_prompt()
+    segments, _ = model.transcribe(str(audio_path), initial_prompt=initial_prompt)
     return " ".join(seg.text.strip() for seg in segments)
 
 

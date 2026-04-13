@@ -23,7 +23,7 @@ import yaml
 from reading_app import db
 from reading_app.embeddings import embed_batch
 from retrieval.hybrid import hybrid_retrieve
-from retrieval.landscape import get_consolidated_implications, get_theme_state
+from retrieval.landscape import get_consolidated_implications
 
 logger = logging.getLogger(__name__)
 
@@ -658,25 +658,29 @@ def _get_themes_for_sources(source_ids: list[str]) -> list[str]:
 
 
 def _load_landscape_signals(theme_ids: list[str]) -> dict:
-    """Load capabilities, limitations, bottlenecks, and anticipations for themes."""
-    capabilities = []
-    limitations = []
-    bottlenecks = []
+    """Load wiki-based landscape context and open anticipations for themes."""
+    from retrieval.wiki_retrieval import gather_wiki_context
+    wiki_ctx = gather_wiki_context(theme_ids=theme_ids, include_syntheses=True)
+
     anticipations = []
+    if theme_ids:
+        try:
+            with db.get_conn() as conn:
+                anticipations = conn.execute(
+                    """SELECT a.prediction, a.confidence, a.timeline,
+                              t.name AS theme_name
+                       FROM anticipations a
+                       JOIN themes t ON a.theme_id = t.id
+                       WHERE a.theme_id = ANY(%s) AND a.status = 'open'
+                       ORDER BY a.confidence DESC
+                       LIMIT 20""",
+                    (theme_ids,),
+                ).fetchall()
+                anticipations = [dict(a) for a in anticipations]
+        except Exception:
+            logger.debug("Failed to load anticipations for synthesis", exc_info=True)
 
-    for tid in theme_ids:
-        state = get_theme_state(tid)
-        capabilities.extend(state.get("capabilities", []))
-        limitations.extend(state.get("limitations", []))
-        bottlenecks.extend(state.get("bottlenecks", []))
-        anticipations.extend(state.get("anticipations", []))
-
-    return {
-        "capabilities": capabilities,
-        "limitations": limitations,
-        "bottlenecks": bottlenecks,
-        "anticipations": anticipations,
-    }
+    return {"wiki_context": wiki_ctx, "anticipations": anticipations}
 
 
 def _load_consolidated_implications(theme_ids: list[str]) -> list[dict]:
@@ -765,11 +769,13 @@ def analyze_synthesis_context(ctx: dict, executor=None) -> str:
         f"- {s.get('title', s.get('source_id', '?'))}" for s in sources
     )
 
+    ants = landscape.get("anticipations", [])
     anticipations_text = "\n".join(
-        f"- {a['prediction']} (confidence: {a.get('confidence', '?')})"
-        for a in landscape.get("anticipations", [])
+        f"- {a['prediction'][:150]} (confidence: {a.get('confidence', '?')})"
+        for a in ants[:10]
     ) or "None active."
 
+    n_themes = len(landscape["wiki_context"].theme_narratives) if landscape.get("wiki_context") else 0
     total_evidence = sum(len(v) for v in evidence.values())
     prompt = SYNTHESIS_ANALYSIS_PROMPT.format(
         topic=ctx["topic"],
@@ -778,9 +784,9 @@ def analyze_synthesis_context(ctx: dict, executor=None) -> str:
         theme_count=len(ctx.get("theme_ids", [])),
         source_titles=source_titles,
         evidence_sample=evidence_sample,
-        n_caps=len(landscape.get("capabilities", [])),
-        n_lims=len(landscape.get("limitations", [])),
-        n_bns=len(landscape.get("bottlenecks", [])),
+        n_caps=f"{n_themes} theme narratives (wiki)" if n_themes else 0,
+        n_lims=f"(in {n_themes} wiki narratives)" if n_themes else 0,
+        n_bns=f"(in {n_themes} wiki narratives)" if n_themes else 0,
         n_impls=len(implications),
         anticipations_text=anticipations_text,
     )
@@ -894,23 +900,18 @@ def format_synthesis_context(ctx: dict, analysis: str = "") -> str:
                     evidence_block += f"  Verbatim: \"{ev['snippet'][:300]}\"{conf_str}\n"
     evidence_block = evidence_block or "No evidence snippets available."
 
-    capabilities_block = "\n".join(
-        f"- {c['description']} (maturity: {c.get('maturity', '?')}, confidence: {c.get('confidence', '?')})"
-        for c in landscape["capabilities"]
-    ) or "None recorded."
-
-    limitations_block = "\n".join(
-        f"- {l['description']} (type: {l.get('limitation_type', '?')}, severity: {l.get('severity', '?')}, "
-        f"trajectory: {l.get('trajectory', '?')}"
-        f"{', signal: ' + l['signal_type'] if l.get('signal_type', '').startswith('implicit') else ''})"
-        for l in landscape["limitations"]
-    ) or "None recorded."
-
-    bottlenecks_block = "\n".join(
-        f"- {b['description']} (type: {b.get('bottleneck_type', '?')}, "
-        f"horizon: {b.get('resolution_horizon', '?')}, blocking: {b.get('blocking_what', '?')})"
-        for b in landscape["bottlenecks"]
-    ) or "None recorded."
+    if landscape.get("wiki_context"):
+        from retrieval.wiki_retrieval import format_wiki_context_block
+        _wiki_block = format_wiki_context_block(
+            landscape["wiki_context"], header="Landscape Signals", max_chars_per_theme=4000
+        )
+        capabilities_block = _wiki_block
+        limitations_block = "(see Landscape Signals above)"
+        bottlenecks_block = "(see Landscape Signals above)"
+    else:
+        capabilities_block = "None recorded."
+        limitations_block = "None recorded."
+        bottlenecks_block = "None recorded."
 
     implications_block = "\n".join(
         f"- {imp['source_theme']} -> {imp['target_theme']}: {imp['top_implication']} "
@@ -1271,23 +1272,18 @@ def format_merge_context(ctx: dict) -> str:
                     evidence_block += f"  Verbatim: \"{ev['snippet'][:300]}\"{conf_str}\n"
     evidence_block = evidence_block or "No evidence snippets available."
 
-    capabilities_block = "\n".join(
-        f"- {c['description']} (maturity: {c.get('maturity', '?')}, confidence: {c.get('confidence', '?')})"
-        for c in landscape["capabilities"]
-    ) or "None recorded."
-
-    limitations_block = "\n".join(
-        f"- {l['description']} (type: {l.get('limitation_type', '?')}, severity: {l.get('severity', '?')}, "
-        f"trajectory: {l.get('trajectory', '?')}"
-        f"{', signal: ' + l['signal_type'] if l.get('signal_type', '').startswith('implicit') else ''})"
-        for l in landscape["limitations"]
-    ) or "None recorded."
-
-    bottlenecks_block = "\n".join(
-        f"- {b['description']} (type: {b.get('bottleneck_type', '?')}, "
-        f"horizon: {b.get('resolution_horizon', '?')}, blocking: {b.get('blocking_what', '?')})"
-        for b in landscape["bottlenecks"]
-    ) or "None recorded."
+    if landscape.get("wiki_context"):
+        from retrieval.wiki_retrieval import format_wiki_context_block
+        _wiki_block = format_wiki_context_block(
+            landscape["wiki_context"], header="Landscape Signals", max_chars_per_theme=4000
+        )
+        capabilities_block = _wiki_block
+        limitations_block = "(see Landscape Signals above)"
+        bottlenecks_block = "(see Landscape Signals above)"
+    else:
+        capabilities_block = "None recorded."
+        limitations_block = "None recorded."
+        bottlenecks_block = "None recorded."
 
     implications_block = "\n".join(
         f"- {imp['source_theme']} -> {imp['target_theme']}: {imp['top_implication']} "

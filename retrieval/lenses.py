@@ -126,8 +126,6 @@ def panorama_lens(
     Fetches theme states (capabilities, limitations, bottlenecks, breakthroughs,
     anticipations), generates cross-theme narrative.
     """
-    from retrieval.landscape import get_theme_state, get_bottleneck_ranking
-
     # If no theme_ids provided, search for matching themes
     if not theme_ids:
         theme_ids = _find_themes_for_query(query, get_conn_fn)
@@ -139,66 +137,22 @@ def panorama_lens(
             confidence=0.0,
         )
 
-    evidence_items: list[dict] = []
-    citations: set[str] = set()
-    counts: dict[str, int] = {}
+    from retrieval.wiki_retrieval import gather_wiki_context
+    wiki_ctx = gather_wiki_context(theme_ids=theme_ids[:5])
 
-    for tid in theme_ids[:5]:
-        try:
-            state = get_theme_state(tid)
-        except Exception:
-            logger.debug("panorama_lens: theme state failed for %s", tid, exc_info=True)
-            continue
+    # Build summary from wiki narratives
+    summary_parts = [f"Landscape across {min(len(theme_ids), 5)} themes:"]
+    for tid, narrative in wiki_ctx.theme_narratives.items():
+        first_para = narrative.split("\n\n")[0] if narrative else ""
+        summary_parts.append(f"\n**{tid}:** {first_para[:500]}")
 
-        theme_name = state.get("theme", {}).get("name", tid) if state.get("theme") else tid
+    # Minimal evidence_items for citation tracking
+    evidence_items = [
+        {"type": "theme_narrative", "theme_id": tid, "content": narrative[:200]}
+        for tid, narrative in wiki_ctx.theme_narratives.items()
+    ]
 
-        _SIGNAL_FIELDS = [
-            ("capabilities", 5, {"maturity": "?"}),
-            ("limitations", 5, {"severity": "?", "trajectory": "?"}),
-            ("bottlenecks", 3, {"resolution_horizon": "?", "bottleneck_type": "?"}),
-            ("breakthroughs", 3, {"significance": "?"}),
-            ("anticipations", 3, {"status": "?"}),
-        ]
-        for signal_key, max_items, extra_defaults in _SIGNAL_FIELDS:
-            for item in (state.get(signal_key) or [])[:max_items]:
-                entry: dict = {"type": signal_key.rstrip("s") if signal_key != "anticipations" else "anticipation", "theme": theme_name}
-                # Copy description or prediction field
-                if signal_key == "anticipations":
-                    entry["prediction"] = item.get("prediction", "")
-                else:
-                    entry["description"] = item.get("description", "")
-                for k, default in extra_defaults.items():
-                    entry[k] = item.get(k, default)
-                if "confidence" in item:
-                    entry["confidence"] = item["confidence"]
-                # Include staleness info for capabilities/limitations/bottlenecks
-                staleness = item.get("staleness_score")
-                if staleness is not None and staleness > 0.3:
-                    entry["staleness_score"] = round(staleness, 2)
-                evidence_items.append(entry)
-                counts[signal_key] = counts.get(signal_key, 0) + 1
-                for sid in (item.get("evidence_sources") or []):
-                    citations.add(sid)
-
-    # Build narrative summary
-    summary_parts = [f"Landscape across {len(theme_ids)} themes:"]
-    if counts.get("capabilities"):
-        maturities = {e.get("maturity", "?") for e in evidence_items if e["type"] == "capability"}
-        summary_parts.append(f"- {counts['capabilities']} capabilities (maturity range: {', '.join(maturities)})")
-    if counts.get("limitations"):
-        summary_parts.append(f"- {counts['limitations']} limitations")
-    if counts.get("bottlenecks"):
-        summary_parts.append(f"- {counts['bottlenecks']} bottlenecks")
-        near = [e for e in evidence_items if e["type"] == "bottleneck" and e.get("resolution_horizon") in ("months", "1-2_years")]
-        if near:
-            summary_parts.append(f"  Near-term bottlenecks: {', '.join(b['description'][:60] for b in near[:3])}")
-    if counts.get("breakthroughs"):
-        summary_parts.append(f"- {counts['breakthroughs']} recent breakthroughs")
-    if counts.get("anticipations"):
-        open_count = sum(1 for e in evidence_items if e["type"] == "anticipation" and e.get("status") == "open")
-        summary_parts.append(f"- {counts['anticipations']} anticipations ({open_count} open)")
-
-    has_data = bool(counts)
+    has_data = bool(wiki_ctx.theme_narratives)
     confidence = 0.7 if has_data else 0.2
 
     return LensResult(
@@ -206,7 +160,7 @@ def panorama_lens(
         query=query,
         summary="\n".join(summary_parts),
         confidence=confidence,
-        citations=list(citations),
+        citations=[],
         evidence_items=evidence_items,
     )
 
@@ -598,38 +552,11 @@ def format_lens_results_for_prompt(results: list[LensResult]) -> str:
                     line += f'\n   Evidence: "{snippet[:200]}"'
                 parts.append(line)
 
-        # Add panorama details
+        # Add panorama details — wiki narrative is in summary, skip individual items
         elif lr.lens_id == "theme_panorama":
             for item in lr.evidence_items:
-                item_type = item.get("type", "?")
-                staleness_tag = ""
-                if item.get("staleness_score", 0) > 0.5:
-                    staleness_tag = f" ⚠ stale ({item['staleness_score']:.0%})"
-                if item_type == "bottleneck":
-                    parts.append(
-                        f"- BOTTLENECK [{item.get('theme', '?')}]: {item.get('description', '')[:120]} "
-                        f"(horizon: {item.get('resolution_horizon', '?')}){staleness_tag}"
-                    )
-                elif item_type == "capability":
-                    parts.append(
-                        f"- CAPABILITY [{item.get('theme', '?')}]: {item.get('description', '')[:120]} "
-                        f"(maturity: {item.get('maturity', '?')}){staleness_tag}"
-                    )
-                elif item_type == "limitation":
-                    parts.append(
-                        f"- LIMITATION [{item.get('theme', '?')}]: {item.get('description', '')[:120]} "
-                        f"(severity: {item.get('severity', '?')}, trajectory: {item.get('trajectory', '?')}){staleness_tag}"
-                    )
-                elif item_type == "breakthrough":
-                    parts.append(
-                        f"- BREAKTHROUGH [{item.get('theme', '?')}]: {item.get('description', '')[:120]} "
-                        f"(significance: {item.get('significance', '?')})"
-                    )
-                elif item_type == "anticipation":
-                    parts.append(
-                        f"- ANTICIPATION [{item.get('theme', '?')}]: {item.get('prediction', '')[:120]} "
-                        f"(status: {item.get('status', '?')})"
-                    )
+                if item.get("type") == "theme_narrative":
+                    continue  # narrative already in summary
 
         # Add bridge details
         elif lr.lens_id == "bridge":

@@ -11,7 +11,7 @@ import logging
 from pathlib import Path
 
 from reading_app import db
-from retrieval.landscape import get_consolidated_implications, get_theme_state
+from retrieval.landscape import get_consolidated_implications
 
 logger = logging.getLogger(__name__)
 
@@ -22,7 +22,7 @@ def gather_implications_context(source_id: str) -> dict | None:
     """Gather all data needed for /implications Mode A — no LLM calls.
 
     Returns a dict with keys: source_id, source_meta, themes, claims,
-    deep_summary, landscape_json, theme_states, anticipations,
+    deep_summary, landscape_json, wiki_context, anticipations,
     consolidated_implications.  Returns None if the source doesn't exist.
     """
     # Source metadata
@@ -87,13 +87,9 @@ def gather_implications_context(source_id: str) -> dict | None:
         except Exception:
             logger.debug("Failed to read landscape.json for %s", source_id)
 
-    # Theme states (capabilities, limitations, bottlenecks, breakthroughs, anticipations)
-    theme_states = {}
-    for tid in theme_ids:
-        try:
-            theme_states[tid] = get_theme_state(tid)
-        except Exception:
-            logger.debug("Failed to load theme state for %s", tid, exc_info=True)
+    # Wiki-based theme context (replaces per-theme DB assembly)
+    from retrieval.wiki_retrieval import gather_wiki_context
+    wiki_ctx = gather_wiki_context(theme_ids=theme_ids)
 
     # Open anticipations for these themes
     anticipations = []
@@ -136,7 +132,7 @@ def gather_implications_context(source_id: str) -> dict | None:
         "claims": [dict(c) for c in claims],
         "deep_summary": deep_summary,
         "landscape_json": landscape_json,
-        "theme_states": theme_states,
+        "wiki_context": wiki_ctx,
         "anticipations": [dict(a) for a in anticipations],
         "consolidated_implications": deduped,
     }
@@ -160,8 +156,6 @@ def format_implications_context(ctx: dict) -> str:
     for t in ctx["themes"]:
         velocity = f", velocity: {t.get('velocity', '?')}" if t.get("velocity") else ""
         parts.append(f"- **{t['name']}** (ID: {t['id']}{velocity})")
-        if t.get("state_summary"):
-            parts.append(f"  State: {t['state_summary'][:200]}")
     parts.append("")
 
     # Claims
@@ -191,43 +185,10 @@ def format_implications_context(ctx: dict) -> str:
         parts.append(f"```json\n{lj}\n```")
         parts.append("")
 
-    # Theme states
-    for tid, state in ctx["theme_states"].items():
-        theme = state.get("theme")
-        if not theme:
-            continue
-        parts.append(f"### Theme State: {theme.get('name', tid)}")
-
-        caps = state.get("capabilities", [])
-        if caps:
-            parts.append("**Capabilities:**")
-            for c in caps[:10]:
-                parts.append(f"- {c['description']} (maturity: {c.get('maturity', '?')})")
-
-        lims = state.get("limitations", [])
-        if lims:
-            parts.append("**Limitations:**")
-            for l in lims[:10]:
-                parts.append(
-                    f"- {l['description']} (type: {l.get('limitation_type', '?')}, "
-                    f"severity: {l.get('severity', '?')})"
-                )
-
-        bns = state.get("bottlenecks", [])
-        if bns:
-            parts.append("**Bottlenecks:**")
-            for b in bns[:10]:
-                parts.append(
-                    f"- {b['description']} (horizon: {b.get('resolution_horizon', '?')}, "
-                    f"blocking: {b.get('blocking_what', '?')[:60]})"
-                )
-
-        bts = state.get("breakthroughs", [])
-        if bts:
-            parts.append("**Recent Breakthroughs:**")
-            for b in bts[:5]:
-                parts.append(f"- {b['description']} (significance: {b.get('significance', '?')})")
-
+    # Theme landscape (wiki-based narratives)
+    if ctx.get("wiki_context"):
+        from retrieval.wiki_retrieval import format_wiki_context_block
+        parts.append(format_wiki_context_block(ctx["wiki_context"], header="Theme Landscape"))
         parts.append("")
 
     # Open anticipations

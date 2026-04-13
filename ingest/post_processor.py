@@ -1,18 +1,20 @@
 """Post-processing orchestrator for /save.
 
-Runs 4 downstream steps after source ingestion completes:
+Runs 5 downstream steps after source ingestion completes:
   1. source_edges    — LLM-classified edges between the new source and neighbours
-  2. graph_metrics   — NetworkX PageRank, communities, betweenness, influence
-  3. state_summaries — temporal narrative for the source's themes
-  4. anticipations   — generate predictions for underpopulated themes
+  2. concept_edges   — Typed concept-level relationships for co-occurring concepts
+  3. graph_metrics   — Incremental betweenness + debounced full recomputation
+  4. state_summaries — temporal narrative for the source's themes
+  5. anticipations   — generate predictions for underpopulated themes
 
-Step 2 depends on 1. Steps 3-4 are independent.
+Steps 1-2 run first. Step 3 depends on 1-2. Steps 4-5 are independent.
 """
 
 from __future__ import annotations
 
 import json
 import logging
+import re
 import time
 from datetime import datetime, timezone
 
@@ -29,6 +31,7 @@ logger = logging.getLogger(__name__)
 
 STEPS = [
     "source_edges",
+    "concept_edges",
     "graph_metrics",
     "state_summaries",
     "anticipations",
@@ -127,6 +130,17 @@ def run_post_processing(
     else:
         results["source_edges"] = _run_step(
             source_id, "source_edges", _step_source_edges,
+            executor=executor, get_conn_fn=get_conn_fn,
+            theme_ids=theme_ids,
+        )
+
+    # Phase 1b: concept_edges (selective concept-level relationships)
+    status = step_status.get("concept_edges", {}).get("status")
+    if status == "completed":
+        results["concept_edges"] = {"skipped": True, "reason": "already_completed"}
+    else:
+        results["concept_edges"] = _run_step(
+            source_id, "concept_edges", _step_concept_edges,
             executor=executor, get_conn_fn=get_conn_fn,
             theme_ids=theme_ids,
         )
@@ -371,9 +385,142 @@ def _step_source_edges(*, source_id, executor, get_conn_fn, theme_ids) -> dict:
     return {"edges_created": edges_created, "candidates": len(candidates), "new_pairs": len(new_pairs)}
 
 
+def _step_concept_edges(*, source_id, executor, get_conn_fn, theme_ids) -> dict:
+    """Extract selective concept-level edges for high-confidence co-occurring concepts.
+
+    Only creates edges between concepts that co-occur in this source with high
+    frequency, using LLM classification for relationship type.
+    """
+    with get_conn_fn() as conn:
+        # Find concept pairs that co-occur in this source with at least 3 shared sources total
+        pairs = conn.execute(
+            """WITH source_concepts_here AS (
+                   SELECT concept_id FROM source_concepts WHERE source_id = %s
+               )
+               SELECT c1.id AS id_a, c1.canonical_name AS name_a,
+                      c2.id AS id_b, c2.canonical_name AS name_b,
+                      COUNT(DISTINCT sc1.source_id) AS cooccurrence_count
+               FROM source_concepts_here sch1
+               JOIN source_concepts_here sch2 ON sch1.concept_id < sch2.concept_id
+               JOIN concepts c1 ON sch1.concept_id = c1.id
+               JOIN concepts c2 ON sch2.concept_id = c2.id
+               JOIN source_concepts sc1 ON sc1.concept_id = c1.id
+               JOIN source_concepts sc2 ON sc2.concept_id = c2.id
+                    AND sc1.source_id = sc2.source_id
+               GROUP BY c1.id, c1.canonical_name, c2.id, c2.canonical_name
+               HAVING COUNT(DISTINCT sc1.source_id) >= 3
+               ORDER BY cooccurrence_count DESC
+               LIMIT 20""",
+            (source_id,),
+        ).fetchall()
+
+        if not pairs:
+            return {"edges_created": 0, "candidates": 0}
+
+        # Filter out existing concept edges
+        existing = set()
+        for p in pairs:
+            row = conn.execute(
+                """SELECT 1 FROM concept_edges
+                   WHERE (concept_a_id = %s AND concept_b_id = %s)
+                      OR (concept_a_id = %s AND concept_b_id = %s)""",
+                (p["id_a"], p["id_b"], p["id_b"], p["id_a"]),
+            ).fetchone()
+            if row:
+                existing.add((p["id_a"], p["id_b"]))
+
+        new_pairs = [p for p in pairs if (p["id_a"], p["id_b"]) not in existing]
+        if not new_pairs:
+            return {"edges_created": 0, "candidates": len(pairs), "all_exist": True}
+
+    # LLM classification for relationship types
+    pair_descriptions = "\n".join(
+        f"- {p['name_a']} <-> {p['name_b']} (co-occur in {p['cooccurrence_count']} sources)"
+        for p in new_pairs[:15]
+    )
+
+    prompt = f"""Classify the relationship between each concept pair. Use ONLY these types:
+- alternative_to: competing approaches to the same problem
+- builds_on: one concept extends or requires the other
+- contrasts_with: fundamentally different approaches or perspectives
+- enables: one concept makes the other possible
+- specializes: one is a specific instance of the other
+- component_of: one is a part or ingredient of the other
+- NONE: no meaningful direct relationship
+
+Return a JSON array with objects: {{"a": "name_a", "b": "name_b", "type": "edge_type", "confidence": 0.0-1.0}}
+Only include pairs with confidence >= 0.6. Omit NONE relationships.
+
+Concept pairs:
+{pair_descriptions}"""
+
+    try:
+        result = executor.run_raw(prompt, session_id="concept_edges", timeout=60)
+        if not result.text:
+            return {"edges_created": 0, "candidates": len(new_pairs), "llm_empty": True}
+
+        json_match = re.search(r"\[.*\]", result.text, re.DOTALL)
+        if not json_match:
+            return {"edges_created": 0, "candidates": len(new_pairs), "parse_failed": True}
+
+        edges = json.loads(json_match.group(0))
+        if not isinstance(edges, list):
+            return {"edges_created": 0, "parse_failed": True}
+
+        # Map names back to IDs
+        name_to_pair = {(p["name_a"], p["name_b"]): p for p in new_pairs}
+        name_to_pair.update({(p["name_b"], p["name_a"]): p for p in new_pairs})
+
+        valid_types = {"alternative_to", "builds_on", "contrasts_with", "enables", "specializes", "component_of"}
+        edges_created = 0
+
+        with get_conn_fn() as conn:
+            for edge in edges:
+                etype = edge.get("type", "")
+                if etype not in valid_types:
+                    continue
+                conf = edge.get("confidence", 0.5)
+                if conf < 0.6:
+                    continue
+
+                pair = name_to_pair.get((edge.get("a", ""), edge.get("b", "")))
+                if not pair:
+                    continue
+
+                conn.execute(
+                    """INSERT INTO concept_edges
+                           (concept_a_id, concept_b_id, edge_type, confidence, evidence_source)
+                       VALUES (%s, %s, %s, %s, %s)
+                       ON CONFLICT (concept_a_id, concept_b_id, edge_type) DO UPDATE
+                       SET confidence = GREATEST(concept_edges.confidence, EXCLUDED.confidence)""",
+                    (pair["id_a"], pair["id_b"], etype, conf, source_id),
+                )
+                edges_created += 1
+            conn.commit()
+
+        return {"edges_created": edges_created, "candidates": len(new_pairs)}
+    except Exception:
+        logger.debug("Concept edge classification failed", exc_info=True)
+        return {"edges_created": 0, "error": "classification_failed"}
+
+
 def _step_graph_metrics(*, source_id, executor, get_conn_fn, theme_ids) -> dict:
-    """Recompute graph metrics (PageRank, communities, betweenness, influence)."""
-    # Debounce: skip if last run was < 5 minutes ago
+    """Recompute graph metrics — incremental for affected neighborhood, full if stale.
+
+    Incremental mode: recompute betweenness only for concepts co-occurring with
+    the new source's concepts (the affected neighborhood). Full PageRank, communities,
+    and theme influence are debounced to every 5 minutes.
+    """
+    result = {}
+
+    # Always run incremental betweenness for affected concepts
+    try:
+        result["incremental"] = _incremental_betweenness(source_id, get_conn_fn)
+    except Exception:
+        logger.debug("Incremental betweenness failed", exc_info=True)
+        result["incremental"] = {"error": "failed"}
+
+    # Debounce full recomputation (PageRank, communities, theme influence)
     try:
         with get_conn_fn() as conn:
             last_run = conn.execute(
@@ -384,15 +531,92 @@ def _step_graph_metrics(*, source_id, executor, get_conn_fn, theme_ids) -> dict:
             if last_run and last_run["last_completed"]:
                 elapsed = (datetime.now(timezone.utc) - last_run["last_completed"]).total_seconds()
                 if elapsed < _GRAPH_METRICS_DEBOUNCE_S:
-                    return {"skipped": True, "reason": "debounce", "elapsed_s": round(elapsed)}
+                    result["full"] = {"skipped": True, "reason": "debounce", "elapsed_s": round(elapsed)}
+                    return result
     except Exception:
         pass
 
     from retrieval.graph_algorithms import KnowledgeGraphAnalyzer
 
     analyzer = KnowledgeGraphAnalyzer(get_conn_fn)
-    result = analyzer.materialize()
-    return {"materialize_result": result}
+    result["full"] = {"materialize_result": analyzer.materialize()}
+    return result
+
+
+def _incremental_betweenness(source_id: str, get_conn_fn) -> dict:
+    """Recompute betweenness centrality for concepts in the new source's neighborhood."""
+    try:
+        import networkx as nx
+    except ImportError:
+        return {"skipped": True, "reason": "networkx_unavailable"}
+
+    with get_conn_fn() as conn:
+        # Get concepts for this source
+        source_concepts = conn.execute(
+            "SELECT concept_id FROM source_concepts WHERE source_id = %s",
+            (source_id,),
+        ).fetchall()
+
+        if not source_concepts:
+            return {"skipped": True, "reason": "no_concepts"}
+
+        concept_ids = [r["concept_id"] for r in source_concepts]
+
+        # Get neighborhood: concepts that co-occur with any of this source's concepts
+        neighbor_rows = conn.execute(
+            """SELECT DISTINCT sc2.concept_id
+               FROM source_concepts sc1
+               JOIN source_concepts sc2 ON sc1.source_id = sc2.source_id
+               WHERE sc1.concept_id = ANY(%s)""",
+            (concept_ids,),
+        ).fetchall()
+
+        neighborhood = set(r["concept_id"] for r in neighbor_rows)
+        if len(neighborhood) < 2:
+            return {"skipped": True, "reason": "neighborhood_too_small"}
+
+        # Build subgraph for the neighborhood
+        edges = conn.execute(
+            """SELECT sc1.concept_id AS c1, sc2.concept_id AS c2, COUNT(*) AS weight
+               FROM source_concepts sc1
+               JOIN source_concepts sc2 ON sc1.source_id = sc2.source_id
+                    AND sc1.concept_id < sc2.concept_id
+               WHERE sc1.concept_id = ANY(%s) AND sc2.concept_id = ANY(%s)
+               GROUP BY sc1.concept_id, sc2.concept_id""",
+            (list(neighborhood), list(neighborhood)),
+        ).fetchall()
+
+    G = nx.Graph()
+    for e in edges:
+        G.add_edge(e["c1"], e["c2"], weight=e["weight"])
+
+    if G.number_of_nodes() < 2:
+        return {"skipped": True, "reason": "subgraph_too_small"}
+
+    # Compute betweenness on subgraph
+    if G.number_of_nodes() > 500:
+        scores = nx.betweenness_centrality(G, k=min(100, G.number_of_nodes()))
+    else:
+        scores = nx.betweenness_centrality(G)
+
+    # Upsert only the affected concepts
+    now = datetime.now(timezone.utc)
+    updated = 0
+    with get_conn_fn() as conn:
+        for node, score in scores.items():
+            if score > 0:
+                conn.execute(
+                    """INSERT INTO graph_metrics
+                           (metric_type, entity_type, entity_id, score, metadata, computed_at)
+                       VALUES ('betweenness', 'concept', %s, %s, %s, %s)
+                       ON CONFLICT (metric_type, entity_type, entity_id)
+                       DO UPDATE SET score = EXCLUDED.score, computed_at = EXCLUDED.computed_at""",
+                    (str(node), score, json.dumps({"incremental": True}), now),
+                )
+                updated += 1
+        conn.commit()
+
+    return {"nodes": G.number_of_nodes(), "edges": G.number_of_edges(), "updated": updated}
 
 
 def _step_state_summaries(*, source_id, executor, get_conn_fn, theme_ids) -> dict:

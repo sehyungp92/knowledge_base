@@ -302,16 +302,14 @@ def _handle_landscape_challenge(
     theme_id = entity.get("theme_id")
     theme_text = "(no theme linked)"
     if theme_id:
-        with get_conn() as conn:
-            theme = conn.execute(
-                "SELECT id, name, state_summary, velocity FROM themes WHERE id = %s",
-                (theme_id,),
-            ).fetchone()
-            if theme:
-                theme_text = (
-                    f"**{theme['name']}** (velocity: {theme.get('velocity', '?')})\n"
-                    f"{truncate_sentences(theme.get('state_summary') or 'no summary', 500)}"
-                )
+        from retrieval.wiki_retrieval import gather_wiki_context
+        wiki_ctx = gather_wiki_context(theme_ids=[theme_id])
+        wiki_narrative = wiki_ctx.theme_narratives.get(theme_id, "")
+        if wiki_narrative:
+            first_line = wiki_narrative.split("\n")[0].lstrip("# ").strip()
+            theme_text = f"**{first_line}** (`{theme_id}`)\n{wiki_narrative}"
+        else:
+            theme_text = "(no theme context available)"
 
     # Evidence search
     if on_progress:
@@ -452,6 +450,15 @@ def _handle_landscape_challenge(
                 entity_id, entity, changes, log,
             )
 
+    # --- Wiki update (best-effort) ---
+    _wiki_updated = False
+    try:
+        from retrieval.wiki_writer import file_challenge_to_wiki
+        file_challenge_to_wiki(entity_type, entity_id, entity, verdict, applied_changes, challenge_id)
+        _wiki_updated = True
+    except Exception:
+        log.debug("challenge_wiki_update_failed", exc_info=True)
+
     # Build response
     response_lines = [llm_text, "\n---\n"]
     response_lines.append(f"**Resolution:** {verdict}")
@@ -478,6 +485,8 @@ def _handle_landscape_challenge(
             response_lines.append(f"- {w}")
     if verdict == "ambiguous_flagged":
         response_lines.append("\nFlagged for future review when more evidence arrives.")
+    if _wiki_updated:
+        response_lines.append("\n_Wiki updated: challenge filed._")
 
     return "\n".join(response_lines)
 
@@ -564,7 +573,6 @@ def _handle_belief_challenge(
         update_belief_confidence,
     )
     from retrieval.hybrid import hybrid_retrieve
-    from retrieval.landscape import get_theme_state
 
     if not belief_id:
         return (
@@ -601,23 +609,21 @@ def _handle_belief_challenge(
         f"- {truncate_sentences(e.get('claim_text', str(e)), 250)}" for e in ev_against
     ) if ev_against else "(no evidence against)"
 
-    # Theme context — full descriptions, let budget_context allocate space
+    # Theme context — wiki narrative, let budget_context allocate space
     theme_name = "Unlinked"
     landscape_text = "(no landscape context)"
     if theme_id:
         try:
-            state = get_theme_state(theme_id)
-            theme_data = state.get("theme")
-            if theme_data:
-                theme_name = theme_data.get("name", theme_id)
-                parts = []
-                for cap in state.get("capabilities", [])[:3]:
-                    parts.append(f"- Cap: {cap['description']} ({cap.get('maturity', '?')})")
-                for lim in state.get("limitations", [])[:3]:
-                    parts.append(f"- Lim: {lim['description']} ({lim.get('severity', '?')})")
-                for bn in state.get("bottlenecks", [])[:2]:
-                    parts.append(f"- BN: {bn['description']} ({bn.get('resolution_horizon', '?')})")
-                landscape_text = "\n".join(parts) if parts else "(empty landscape)"
+            from retrieval.wiki_retrieval import gather_wiki_context
+            wiki_ctx = gather_wiki_context(theme_ids=[theme_id])
+            wiki_narrative = wiki_ctx.theme_narratives.get(theme_id, "")
+            if wiki_narrative:
+                first_line = wiki_narrative.split("\n")[0].lstrip("# ").strip()
+                theme_name = first_line or theme_id
+                landscape_text = wiki_narrative
+            else:
+                theme_name = theme_id
+                landscape_text = "(no landscape context)"
         except Exception as e:
             log.debug("challenge_landscape_load_failed", error=str(e)[:100])
 
@@ -734,6 +740,19 @@ def _handle_belief_challenge(
                 new=suggested_conf,
                 direction=direction,
             )
+
+            # --- Wiki update (best-effort) ---
+            try:
+                from retrieval.wiki_writer import file_belief_to_wiki
+                file_belief_to_wiki(
+                    belief_id, belief["claim"], suggested_conf,
+                    belief.get("belief_type"), belief.get("domain_theme_id"),
+                    is_update=True, trigger=f"{mode} challenge",
+                )
+                response_lines.append("\n_Wiki updated: belief page updated._")
+            except Exception:
+                log.warning("challenge_belief_wiki_failed", belief_id=belief_id, exc_info=True)
+
         except Exception as e:
             log.warning("belief_confidence_update_failed", error=str(e)[:200])
             response_lines.append(

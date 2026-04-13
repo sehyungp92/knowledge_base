@@ -319,13 +319,28 @@ def _handle_status_update(args: str, new_status: str, log) -> str:
 
     log.info("anticipation_resolved", id=ant_id, old=old_status, new=new_status)
 
+    # --- Wiki update (best-effort) ---
+    _wiki_updated = False
+    try:
+        from retrieval.wiki_writer import file_anticipation_to_wiki
+        file_anticipation_to_wiki(
+            ant["theme_id"], ant.get("prediction", ""), ant.get("confidence", "?"),
+            new_status=new_status, old_status=old_status,
+        )
+        _wiki_updated = True
+    except Exception:
+        log.debug("anticipation_wiki_status_failed", exc_info=True)
+
     prediction = ant.get("prediction", "?")[:120]
     confidence = ant.get("confidence", "?")
-    return (
+    result = (
         f"**Anticipation {new_status}:** `{ant_id}`\n\n"
         f"> {prediction}\n\n"
         f"Confidence was: {confidence} | Status: {old_status} → {new_status}"
     )
+    if _wiki_updated:
+        result += "\n\n_Wiki updated: anticipation status filed._"
+    return result
 
 
 # ---------------------------------------------------------------------------
@@ -445,7 +460,7 @@ def _handle_generate(theme_filter: str, executor, on_progress, log) -> str:
     """Generate new anticipations for a theme."""
     from reading_app.db import get_conn, insert_anticipation
     from retrieval.landscape import (
-        get_theme_state, get_recent_breakthroughs,
+        get_recent_breakthroughs,
         get_bottleneck_ranking, get_consolidated_implications,
     )
 
@@ -472,14 +487,14 @@ def _handle_generate(theme_filter: str, executor, on_progress, log) -> str:
     theme_name = theme["name"]
 
     # Gather context
-    state = get_theme_state(theme_id)
+    from retrieval.wiki_retrieval import gather_wiki_context
+    wiki_ctx = gather_wiki_context(theme_ids=[theme_id])
     breakthroughs = get_recent_breakthroughs(days=90, theme_id=theme_id)
     ranked_bottlenecks = get_bottleneck_ranking(theme_id=theme_id)
     implications = get_consolidated_implications(theme_id, limit=10)
 
-    theme_context = f"**{theme_name}** (`{theme_id}`)"
-    if state.get("theme", {}).get("state_summary"):
-        theme_context += f"\n{truncate_sentences(state['theme']['state_summary'], 600)}"
+    wiki_narrative = wiki_ctx.theme_narratives.get(theme_id, "")
+    theme_context = f"**{theme_name}** (`{theme_id}`)\n{wiki_narrative}" if wiki_narrative else f"**{theme_name}** (`{theme_id}`)"
 
     # Bottleneck descriptions kept full — core signal for predictions
     bottlenecks_text = "\n".join(
@@ -519,9 +534,14 @@ def _handle_generate(theme_filter: str, executor, on_progress, log) -> str:
         for c in top_claims
     ) or "(no claims available)"
 
+    with get_conn() as conn:
+        existing_ants = conn.execute(
+            "SELECT prediction, confidence FROM anticipations WHERE theme_id = %s AND status = 'open' ORDER BY confidence DESC LIMIT 10",
+            (theme_id,),
+        ).fetchall()
     existing_text = "\n".join(
         f"- {truncate_sentences(a.get('prediction', '?'), 200)} (conf: {a.get('confidence', '?')})"
-        for a in state.get("anticipations", [])[:10]
+        for a in existing_ants
     ) or "(no existing anticipations)"
 
     if on_progress:
@@ -607,6 +627,19 @@ def _handle_generate(theme_filter: str, executor, on_progress, log) -> str:
         except Exception as e:
             log.warning("anticipation_insert_failed", error=str(e)[:200])
 
+    # --- Wiki updates for new anticipations (best-effort) ---
+    _wiki_filed = 0
+    for c in created:
+        try:
+            from retrieval.wiki_writer import file_anticipation_to_wiki
+            file_anticipation_to_wiki(
+                theme_id, c.get("prediction", ""), c.get("confidence", "?"),
+                is_new=True,
+            )
+            _wiki_filed += 1
+        except Exception:
+            log.debug("anticipation_wiki_new_failed", exc_info=True)
+
     # Format response
     lines = [f"**Generated {len(created)} anticipations for {theme_name}**\n"]
 
@@ -624,6 +657,8 @@ def _handle_generate(theme_filter: str, executor, on_progress, log) -> str:
 
     if not created:
         lines.append("No anticipations could be created. Try a different theme.")
+    if _wiki_filed:
+        lines.append(f"\n_Wiki updated: {_wiki_filed} anticipation(s) filed._")
 
     return "\n".join(lines)
 
@@ -671,6 +706,7 @@ def _handle_evolve(theme_filter: str, executor, on_progress, log) -> str:
 
     retired = []
     kept = []
+    _wiki_expired = 0
 
     for a in stale_threshold:
         staleness = a["staleness"]
@@ -699,12 +735,26 @@ def _handle_evolve(theme_filter: str, executor, on_progress, log) -> str:
                     attribution="staleness_evolution",
                 )
                 retired.append(a)
+
+                # --- Wiki update for expired anticipation (best-effort) ---
+                try:
+                    from retrieval.wiki_writer import file_anticipation_to_wiki
+                    file_anticipation_to_wiki(
+                        theme_id, a.get("prediction", ""), a.get("confidence", "?"),
+                        new_status="expired", old_status="open",
+                    )
+                    _wiki_expired += 1
+                except Exception:
+                    log.debug("anticipation_wiki_expire_failed", exc_info=True)
+
             except Exception as e:
                 log.warning("evolve_retire_failed", id=a["id"], error=str(e)[:200])
         else:
             kept.append(a)
 
     lines.append(f"\n**Retired:** {len(retired)} | **Kept (monitoring):** {len(kept)}")
+    if _wiki_expired:
+        lines.append(f"\n_Wiki updated: {_wiki_expired} expiration(s) filed._")
 
     # Regenerate if we retired any
     if retired and executor:

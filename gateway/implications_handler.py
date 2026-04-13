@@ -330,7 +330,34 @@ def _claims_text(ctx: dict, limit: int = 30) -> str:
     return "\n".join(lines)
 
 
+def _wiki_section_text(ctx: dict, section_name: str, max_chars: int = 600) -> str:
+    """Extract a named section from wiki theme narratives."""
+    wiki_ctx = ctx.get("wiki_context")
+    if not wiki_ctx or not getattr(wiki_ctx, 'theme_narratives', None):
+        return ""
+    from retrieval.wiki_retrieval import extract_section
+    parts = []
+    for tid, narrative in wiki_ctx.theme_narratives.items():
+        section = extract_section(narrative, section_name, max_chars=max_chars)
+        if not section:
+            continue
+        # Extract theme name from first heading
+        name = tid
+        for line in narrative.split("\n"):
+            if line.strip().startswith("# "):
+                name = line.strip().lstrip("# ").strip()
+                break
+        parts.append(f"**{name}**:\n{section}")
+    return "\n\n".join(parts)
+
+
 def _theme_states_text(ctx: dict) -> str:
+    # Primary: wiki-based landscape narratives (pre-compiled)
+    wiki_ctx = ctx.get("wiki_context")
+    if wiki_ctx and getattr(wiki_ctx, 'theme_narratives', None):
+        from retrieval.wiki_retrieval import format_wiki_context_block
+        return format_wiki_context_block(wiki_ctx, header="Theme Landscape")
+    # Fallback: structured DB theme states
     parts = []
     for tid, state in ctx.get("theme_states", {}).items():
         theme = state.get("theme")
@@ -366,6 +393,11 @@ def _theme_states_text(ctx: dict) -> str:
 
 
 def _bottlenecks_text(ctx: dict) -> str:
+    # Primary: wiki section extraction
+    wiki_text = _wiki_section_text(ctx, "Bottlenecks")
+    if wiki_text:
+        return wiki_text
+    # Fallback: structured DB theme states
     lines = []
     for state in ctx.get("theme_states", {}).values():
         for b in state.get("bottlenecks", []):
@@ -379,6 +411,11 @@ def _bottlenecks_text(ctx: dict) -> str:
 
 
 def _limitations_text(ctx: dict) -> str:
+    # Primary: wiki section extraction
+    wiki_text = _wiki_section_text(ctx, "Limitations")
+    if wiki_text:
+        return wiki_text
+    # Fallback: structured DB theme states
     lines = []
     for state in ctx.get("theme_states", {}).values():
         for lim in state.get("limitations", []):
@@ -408,6 +445,11 @@ def _anticipations_text(ctx: dict) -> str:
 
 
 def _breakthroughs_text(ctx: dict) -> str:
+    # Primary: wiki section extraction
+    wiki_text = _wiki_section_text(ctx, "Breakthroughs")
+    if wiki_text:
+        return wiki_text
+    # Fallback: structured DB theme states
     lines = []
     for state in ctx.get("theme_states", {}).values():
         for b in state.get("breakthroughs", []):
@@ -524,6 +566,17 @@ def handle_implications_job(
 
     persist_summary = _persist_entries(structured, source_id, attribution, user_thesis, log)
 
+    # --- Wiki updates (best-effort) ---
+    _wiki_pages_updated = 0
+    try:
+        from retrieval.wiki_writer import file_implications_to_wiki
+        wiki_stats = file_implications_to_wiki(structured, attribution)
+        _wiki_pages_updated = wiki_stats.get("pages_updated", 0)
+        if _wiki_pages_updated:
+            log.info("implications_wiki_updated", **wiki_stats)
+    except Exception:
+        log.debug("implications_wiki_update_failed", exc_info=True)
+
     elapsed = time.monotonic() - t0
     log.info("implications_handler_complete", elapsed_s=round(elapsed, 1), **persist_summary)
 
@@ -538,6 +591,8 @@ def handle_implications_job(
     if persist_summary.get("errors"):
         summary_lines.append(f"- {persist_summary['errors']} errors (check logs)")
     summary_lines.append(f"\nAttribution: `{attribution}` | Completed in {elapsed:.0f}s")
+    if _wiki_pages_updated:
+        summary_lines.append(f"\n_Wiki updated: {_wiki_pages_updated} theme page(s) updated._")
 
     if on_progress:
         on_progress(

@@ -86,9 +86,30 @@ def handle_delete_job(event: Event, job: Job, config, executor, *, on_progress=N
     title = source.get("title", "(untitled)")
     log = log.bind(source_id=source_id, title=title[:80])
 
+    # Pre-fetch theme_ids before deletion (source_themes may cascade-delete)
+    theme_ids = []
+    try:
+        from reading_app.db import get_conn
+        with get_conn() as conn:
+            theme_ids = [
+                r["theme_id"] for r in conn.execute(
+                    "SELECT theme_id FROM source_themes WHERE source_id = %s",
+                    (source_id,),
+                ).fetchall()
+            ]
+    except Exception:
+        log.debug("wiki_prefetch_themes_failed", exc_info=True)
+
     # Delete
     from reading_app.db import delete_source
     summary = delete_source(source_id, library_path=config.library_path)
+
+    # Clean up wiki pages (best-effort)
+    try:
+        from retrieval.wiki_writer import delete_source_from_wiki
+        delete_source_from_wiki(source_id, theme_ids=theme_ids)
+    except Exception:
+        log.debug("wiki_delete_cleanup_failed", exc_info=True)
 
     elapsed = time.monotonic() - t0
     log.info("delete_handler_complete", elapsed_s=round(elapsed, 1), summary=summary)

@@ -809,21 +809,42 @@ class MultiBackendExecutor:
 
     def cleanup_session(self, session_id: str, backend_id: str | None = None) -> bool:
         import shutil
+        import stat
+        import sys
 
         directory = self.workspace / f"{normalize_provider_id(backend_id or self.default_backend_id)}__{session_id}"
-        if directory.exists():
+        if not directory.exists():
+            return False
+
+        def _onerror_windows(func, path, _exc_info):
+            """Clear read-only flag and retry on Windows."""
             try:
-                shutil.rmtree(directory)
+                os.chmod(path, stat.S_IWRITE | stat.S_IREAD)
+                func(path)
+            except OSError:
+                pass
+
+        onerror = _onerror_windows if sys.platform == "win32" else None
+        max_attempts = 4 if sys.platform == "win32" else 1
+
+        for attempt in range(max_attempts):
+            try:
+                shutil.rmtree(directory, onerror=onerror)
+            except OSError:
+                pass
+            # onerror swallows exceptions — check existence instead
+            if not directory.exists():
                 logger.debug("session_cleaned", backend_id=backend_id, session_id=session_id)
                 return True
-            except OSError as exc:
-                logger.warning(
-                    "session_cleanup_failed",
-                    backend_id=backend_id,
-                    session_id=session_id,
-                    error=str(exc),
-                )
-                return False
+            if attempt < max_attempts - 1:
+                time.sleep(1.0)
+
+        logger.warning(
+            "session_cleanup_failed",
+            backend_id=backend_id,
+            session_id=session_id,
+            error=f"dir still exists after {max_attempts} attempts",
+        )
         return False
 
     def health_check(self, model: str = "haiku", backend_id: str | None = None) -> ExecutionResult:

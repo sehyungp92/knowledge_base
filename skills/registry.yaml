@@ -176,6 +176,22 @@ skills:
     tools_allowed: [Read, Write, Glob, Grep]
     tools_denied: [Bash, WebFetch]
 
+  # --- Wiki Skills ---
+
+  file:
+    trigger_pattern: "^/file\\s*(.*)"
+    prompt: prompts/file.md
+    description: "File a recent chat answer as a wiki page"
+    timeout: 120
+    tools_allowed: [Read, Write, Glob, Grep]
+    tools_denied: [Bash, WebFetch]
+
+  lint:
+    trigger_pattern: "^/lint\\s*(.*)"
+    prompt: prompts/lint.md
+    description: "Wiki health check — staleness, broken links, contradictions, conventions"
+    timeout: 300
+
   # --- Topic Synthesis (Phase 4b) ---
 
   synthesis:

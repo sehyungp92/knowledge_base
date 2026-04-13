@@ -91,6 +91,28 @@ def handle_reflect_job(
         result_text = _run_topic_mode(topic, config, executor, log, on_progress)
         elapsed = time.monotonic() - t0
         log.info("reflect_handler_complete", elapsed_s=round(elapsed, 1))
+
+        # Wiki filing: create synthesis page for topic reflections (best-effort)
+        try:
+            import threading
+
+            def _wiki_file():
+                try:
+                    from reading_app.db import ensure_pool
+                    from retrieval.wiki_writer import create_synthesis_page, slugify, extract_theme_ids_from_text
+                    ensure_pool()
+                    slug = slugify(topic)
+                    theme_ids = extract_theme_ids_from_text(topic)
+                    page = create_synthesis_page(slug, result_text, theme_ids, executor=None)
+                    if page and on_progress:
+                        on_progress("_Wiki updated: synthesis page filed._")
+                except Exception:
+                    logger.warning("reflect_wiki_filing_failed", topic=topic, exc_info=True)
+
+            threading.Thread(target=_wiki_file).start()
+        except Exception:
+            logger.warning("reflect_wiki_thread_spawn_failed", exc_info=True)
+
         return result_text
 
     source_id, deep = _parse_command(text)
@@ -127,6 +149,37 @@ def handle_reflect_job(
     # Save result
     reflection_path = source_dir / "reflection.md"
     reflection_path.write_text(result_text, encoding="utf-8")
+
+    # Wiki filing: create synthesis page from deep tournament results (best-effort)
+    if deep:
+        try:
+            import threading
+
+            def _wiki_deep_file():
+                try:
+                    from reading_app.db import ensure_pool, get_conn
+                    from retrieval.wiki_writer import create_synthesis_page, slugify
+
+                    ensure_pool()
+                    # Get theme_ids for this source
+                    with get_conn() as conn:
+                        theme_rows = conn.execute(
+                            "SELECT theme_id FROM source_themes WHERE source_id = %s",
+                            (source_id,),
+                        ).fetchall()
+                    theme_ids = [row["theme_id"] for row in theme_rows]
+
+                    # Create synthesis page from tournament results
+                    slug = slugify(f"deep-reflect-{title[:60]}")
+                    page = create_synthesis_page(slug, result_text, theme_ids, executor=None)
+                    if page and on_progress:
+                        on_progress("_Wiki updated: synthesis page filed._")
+                except Exception:
+                    logger.warning("reflect_deep_wiki_filing_failed", source_id=source_id, exc_info=True)
+
+            threading.Thread(target=_wiki_deep_file).start()
+        except Exception:
+            logger.warning("reflect_deep_wiki_thread_spawn_failed", exc_info=True)
 
     elapsed = time.monotonic() - t0
     log.info("reflect_handler_complete", elapsed_s=round(elapsed, 1))
@@ -210,10 +263,9 @@ def _run_simple_mode(
     gr = GraphRetriever(get_conn)
     one_hop = gr.one_hop(source_id)
     two_hop_concepts = gr.two_hop_via_concepts(source_id)
-    two_hop_claims = gr.two_hop_via_claims(source_id)
     implications = gr.get_source_implications(source_id)
 
-    total_connections = len(one_hop) + len(two_hop_concepts) + len(two_hop_claims) + len(implications)
+    total_connections = len(one_hop) + len(two_hop_concepts) + len(implications)
     log.info("reflect_graph_done", connections=total_connections)
     if on_progress:
         on_progress(f"Found {total_connections} connections. Searching similar claims...")
@@ -248,13 +300,6 @@ def _run_simple_mode(
             connections_parts.append(
                 f"- **{r.get('title', '?')}** via [{concept_str}]"
             )
-    if two_hop_claims:
-        connections_parts.append("\n### Claim-linked connections (2-hop)")
-        for r in two_hop_claims[:10]:
-            connections_parts.append(
-                f"- [{r.get('edge_type', '?')}] **{r.get('title', '?')}**: "
-                f"\"{r.get('our_claim', '')[:80]}\" ↔ \"{r.get('their_claim', '')[:80]}\""
-            )
     if implications:
         connections_parts.append("\n### Cross-theme implications")
         for r in implications[:10]:
@@ -273,6 +318,33 @@ def _run_simple_mode(
     ) or "(no similar claims found)"
 
     summary_excerpt = summary[:2000] if summary else "(no summary available)"
+
+    # 3b. Graph structural context (bridge concepts, concept edges, suggested questions)
+    # Note: implications are already gathered above via gr.get_source_implications()
+    graph_context_text = ""
+    try:
+        from retrieval.graph_context import query_graph_context, format_graph_context_block
+        source_themes = []
+        try:
+            with get_conn() as conn:
+                rows = conn.execute(
+                    "SELECT theme_id FROM source_themes WHERE source_id = %s",
+                    (source_id,),
+                ).fetchall()
+                source_themes = [r["theme_id"] for r in rows]
+        except Exception:
+            pass
+        gctx = query_graph_context(
+            theme_ids=source_themes, source_ids=[source_id],
+        )
+        # Clear implications from graph context since they're already in connections_text
+        gctx.cross_theme_implications = []
+        graph_context_text = format_graph_context_block(gctx, max_chars=1500)
+    except Exception:
+        log.debug("reflect_simple_graph_context_failed", exc_info=True)
+
+    if graph_context_text:
+        connections_text = connections_text + "\n\n" + graph_context_text
 
     # 4. LLM synthesis
     if on_progress:
@@ -486,10 +558,7 @@ on a specific topic.
 
 ## Landscape Context
 {landscape_text}
-
-## Current Bottlenecks
-{bottlenecks_text}
-
+{bottlenecks_section}
 ## Instructions
 
 Generate 5-8 novel ideas that emerge from cross-source synthesis on this topic.
@@ -759,24 +828,23 @@ def _run_topic_mode_legacy(
 
     sources_text = "\n".join(sources_text_parts) or "(no claims found)"
 
-    # Landscape context
-    landscape_parts = []
-    for t in themes:
-        if t.get("state_summary"):
-            landscape_parts.append(
-                f"**{t['name']}**: {truncate_sentences(t['state_summary'], 500)}"
-            )
-    landscape_text = "\n".join(landscape_parts) or "(no landscape context)"
+    # Landscape context (wiki-based, now includes entities)
+    from retrieval.wiki_retrieval import gather_wiki_context, format_wiki_context_block
+    wiki_ctx = gather_wiki_context(
+        theme_ids=theme_ids[:5], include_syntheses=True,
+        include_entities=True,
+    )
+    landscape_text = format_wiki_context_block(wiki_ctx, header="Landscape Context", max_chars_per_theme=3000) or "(no landscape context)"
 
-    # Bottlenecks
-    bottlenecks = []
-    for tid in theme_ids:
-        bottlenecks.extend(get_bottleneck_ranking(theme_id=tid)[:3])
-    bottlenecks_text = "\n".join(
-        f"- {b['description']} (horizon: {b.get('resolution_horizon', '?')}, "
-        f"blocking: {truncate(b.get('blocking_what', '?'), 175)})"
-        for b in bottlenecks[:8]
-    ) or "(no bottlenecks)"
+    # Graph structural context (bridge concepts, implications, suggested questions)
+    try:
+        from retrieval.graph_context import query_graph_context, format_graph_context_block
+        gctx = query_graph_context(query=topic, theme_ids=theme_ids)
+        graph_block = format_graph_context_block(gctx, max_chars=2000)
+        if graph_block:
+            landscape_text = landscape_text + "\n\n" + graph_block
+    except Exception:
+        log.debug("reflect_topic_graph_context_failed", exc_info=True)
 
     # LLM synthesis
     if on_progress:
@@ -792,7 +860,7 @@ def _run_topic_mode_legacy(
         topic=topic,
         sources_text=sources_text,
         landscape_text=landscape_text,
-        bottlenecks_text=bottlenecks_text,
+        bottlenecks_section="",  # Bottlenecks are included in landscape wiki context
         voice_section=voice_section,
     )
 

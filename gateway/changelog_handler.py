@@ -8,7 +8,7 @@ from __future__ import annotations
 
 import re
 import time
-from datetime import datetime, timedelta, timezone
+from datetime import date, datetime, timedelta, timezone
 from typing import Callable
 
 import structlog
@@ -48,6 +48,11 @@ def handle_changelog_job(
         result = _changelog_for_theme(theme_id, days, on_progress, log)
     else:
         result = _changelog_global(days, on_progress, log)
+
+    # NOTE: We intentionally do NOT touch theme page staleness here.
+    # A /changelog read does not update page content, so resetting staleness
+    # would falsely make the page appear fresh to wiki_retrieval's freshness
+    # gating. Only actual content updates should reset staleness.
 
     elapsed = time.monotonic() - t0
     log.info("changelog_handler_complete", elapsed_s=round(elapsed, 1))
@@ -137,7 +142,22 @@ def _changelog_for_theme(
             f"No landscape changes recorded in this period."
         )
 
-    return _format_changelog(theme_name, days, history)
+    result = _format_changelog(theme_name, days, history)
+
+    # Best-effort wiki filing
+    _wiki_updated = False
+    try:
+        from retrieval.wiki_writer import file_changelog_to_wiki
+        wiki_stats = file_changelog_to_wiki(theme_id, result)
+        if wiki_stats.get("pages_updated"):
+            log.info("changelog_wiki_updated", **wiki_stats)
+            _wiki_updated = True
+    except Exception:
+        log.debug("changelog_wiki_filing_failed", exc_info=True)
+
+    if _wiki_updated:
+        result += "\n\n_Wiki updated: changelog filed._"
+    return result
 
 
 # ---------------------------------------------------------------------------

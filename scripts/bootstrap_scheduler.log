@@ -1,0 +1,1145 @@
+[2026-04-08 02:47:36] Starting bootstrap sources (Phase 1)...
+[2026-04-08 02:47:37] Sources before start: 21
+2026-04-08 02:47:40 [info     ] bootstrap_sources_start        total=611
+2026-04-08 02:47:40 [info     ] Skipping source 1/611: Movie Gen: A Cast of Media Foundation Models (already exists)
+2026-04-08 02:47:40 [info     ] Skipping source 2/611: Iconic Investor in Pinterest, LinkedIn and Shopify Reflects  (already exists)
+2026-04-08 02:47:40 [info     ] Skipping source 3/611: 2024 Year in Review: The Big Scaling Debate, the Four Wars o (already exists)
+2026-04-08 02:47:40 [info     ] Skipping source 4/611: Training Zamba: A Hybrid Model Master Class with Zyphra's Qu (already exists)
+2026-04-08 02:47:40 [info     ] Skipping source 5/611: The Legendary Mike Maples: What Makes Startups Win & The Fut (already exists)
+2026-04-08 02:47:40 [info     ] Skipping source 6/611: Josh Wolfe (Lux Capital): Predictions on Emerging Technologi (already exists)
+2026-04-08 02:47:40 [info     ] Skipping source 7/611: Cosmos World Foundation Model Platform for Physical AI (already exists)
+2026-04-08 02:47:40 [info     ] Skipping source 8/611: Top AI Investor Predicts How The AI Wave Will Play Out (already exists)
+2026-04-08 02:47:40 [info     ] Skipping source 9/611: Legendary Investor Bill Gurley on Investing Rules, Insights  (already exists)
+2026-04-08 02:47:40 [info     ] Skipping source 10/611: Everything You Wanted to Know About LLM Post-Training, with  (already exists)
+2026-04-08 02:47:40 [info     ] Skipping source 11/611: Memory in the Age of AI Agents (already exists)
+2026-04-08 02:47:40 [info     ] Skipping source 12/611: Miles Grimshaw: The 5 Pillars of Venture Capital & Why Co-Pi (already exists)
+2026-04-08 02:47:40 [info     ] Skipping source 13/611: Emergency Pod: Reinforcement Learning Works! Reflecting on C (already exists)
+2026-04-08 02:47:40 [info     ] Skipping source 14/611: A Survey of Reinforcement Learning for Large Reasoning Model (already exists)
+2026-04-08 02:47:40 [info     ] Skipping source 15/611: On the Fundamental Limits of LLMs at Scale (already exists)
+2026-04-08 02:47:40 [info     ] Skipping source 16/611: Thinking with Images for Multimodal Reasoning: Foundations,  (already exists)
+2026-04-08 02:47:40 [info     ] Bootstrapping source 17/611: Andrej Karpathy — “We’re summoning ghosts, not building anim
+2026-04-08 02:47:40 [info     ] api_semaphore_init             backend_id=claude limit=5
+2026-04-08 02:47:40 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 02:47:40 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 02:49:07 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVDZXXQ-andrej-karpathy-were-summoning-ghosts-not-building-animals.md
+2026-04-08 02:49:07 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVDZXXQ-andrej-karpathy-were-summoning-ghosts-not-building-animals.md source_id=01KJVDZXXQD7H9XJZG4GA60DEV
+2026-04-08 02:49:07 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJVDZXXQ'" session_id=wiki_source_01KJVDZXXQ
+2026-04-08 02:49:07 [info     ] Skipping source 18/611: Yann Lecun: Meta AI, Open Source, Limits of LLMs, AGI & the  (already exists)
+2026-04-08 02:49:07 [info     ] Skipping source 19/611: Nested Learning: The Illusion of Deep Learning Architecture (already exists)
+2026-04-08 02:49:07 [info     ] Skipping source 20/611: Superintelligence, Bubbles And Big Bets: AI Investing in 202 (already exists)
+2026-04-08 02:49:07 [info     ] Skipping source 21/611: Adaptation of Agentic AI (already exists)
+2026-04-08 02:49:07 [info     ] Skipping source 22/611: AI Semiconductor Landscape feat. Dylan Patel | BG2 w/ Bill G (already exists)
+2026-04-08 02:49:07 [info     ] Bootstrapping source 23/611: DeepSeek-V3 Technical Report
+2026-04-08 02:49:07 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 02:49:07 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 02:50:34 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJV5S7TQ-deepseek-v3-technical-report.md
+2026-04-08 02:50:34 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJV5S7TQ-deepseek-v3-technical-report.md source_id=01KJV5S7TQ43GW6XHHXNQ6EFCD
+2026-04-08 02:50:34 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJV5S7TQ'" session_id=wiki_source_01KJV5S7TQ
+2026-04-08 02:50:34 [info     ] Bootstrapping source 24/611: Shardul Shah: How Index Makes Decisions & Why Benchmarks & A
+2026-04-08 02:50:34 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 02:50:34 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 02:51:26 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVRMEQF-shardul-shah-how-index-makes-decisions-why-benchmarks-averages-in-vc-are-bs-e120.md
+2026-04-08 02:51:26 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVRMEQF-shardul-shah-how-index-makes-decisions-why-benchmarks-averages-in-vc-are-bs-e120.md source_id=01KJVRMEQFED9A5NCRZHQCDB2J
+2026-04-08 02:51:26 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJVRMEQF'" session_id=wiki_source_01KJVRMEQF
+2026-04-08 02:51:26 [info     ] Bootstrapping source 25/611: 2024: The Year the GPT Wrapper Myth Proved Wrong
+2026-04-08 02:51:26 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 02:51:26 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 02:52:01 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVTECVD-2024-the-year-the-gpt-wrapper-myth-proved-wrong.md
+2026-04-08 02:52:01 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVTECVD-2024-the-year-the-gpt-wrapper-myth-proved-wrong.md source_id=01KJVTECVD9692N9X8TS45JKXQ
+2026-04-08 02:52:01 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 32] 다른 프로세스가 파일을 사용 중이기 때문에 프로세스가 액세스 할 수 없습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJVTECVD'" session_id=wiki_source_01KJVTECVD
+2026-04-08 02:52:01 [info     ] Bootstrapping source 26/611: Perception, Reason, Think, and Plan: A Survey on Large Multi
+2026-04-08 02:52:01 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 02:52:01 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+[2026-04-08 02:52:04] Bootstrap finished before 03:15!
+[2026-04-08 02:52:05] Phase 1 complete. Sources created: 26
+[2026-04-08 02:52:06] Sleeping until 05:00 GMT...
+[2026-04-08 02:53:06] Scheduler started. Sources so far: 26
+[2026-04-08 02:53:07] Waiting until 05:00 GMT to start bootstrap...
+[2026-04-08 06:00:15] 05:00 reached. Starting bootstrap sources...
+[2026-04-08 06:00:17] Sources before start: 193
+2026-04-08 06:00:20 [info     ] bootstrap_sources_start        total=611
+2026-04-08 06:00:20 [info     ] Skipping source 1/611: Movie Gen: A Cast of Media Foundation Models (already exists)
+2026-04-08 06:00:20 [info     ] Skipping source 2/611: Iconic Investor in Pinterest, LinkedIn and Shopify Reflects  (already exists)
+2026-04-08 06:00:20 [info     ] Skipping source 3/611: 2024 Year in Review: The Big Scaling Debate, the Four Wars o (already exists)
+2026-04-08 06:00:20 [info     ] Skipping source 4/611: Training Zamba: A Hybrid Model Master Class with Zyphra's Qu (already exists)
+2026-04-08 06:00:20 [info     ] Skipping source 5/611: The Legendary Mike Maples: What Makes Startups Win & The Fut (already exists)
+2026-04-08 06:00:20 [info     ] Skipping source 6/611: Josh Wolfe (Lux Capital): Predictions on Emerging Technologi (already exists)
+2026-04-08 06:00:20 [info     ] Skipping source 7/611: Cosmos World Foundation Model Platform for Physical AI (already exists)
+2026-04-08 06:00:20 [info     ] Skipping source 8/611: Top AI Investor Predicts How The AI Wave Will Play Out (already exists)
+2026-04-08 06:00:20 [info     ] Skipping source 9/611: Legendary Investor Bill Gurley on Investing Rules, Insights  (already exists)
+2026-04-08 06:00:20 [info     ] Skipping source 10/611: Everything You Wanted to Know About LLM Post-Training, with  (already exists)
+2026-04-08 06:00:20 [info     ] Skipping source 11/611: Memory in the Age of AI Agents (already exists)
+2026-04-08 06:00:20 [info     ] Skipping source 12/611: Miles Grimshaw: The 5 Pillars of Venture Capital & Why Co-Pi (already exists)
+2026-04-08 06:00:20 [info     ] Skipping source 13/611: Emergency Pod: Reinforcement Learning Works! Reflecting on C (already exists)
+2026-04-08 06:00:20 [info     ] Skipping source 14/611: A Survey of Reinforcement Learning for Large Reasoning Model (already exists)
+2026-04-08 06:00:20 [info     ] Skipping source 15/611: On the Fundamental Limits of LLMs at Scale (already exists)
+2026-04-08 06:00:20 [info     ] Skipping source 16/611: Thinking with Images for Multimodal Reasoning: Foundations,  (already exists)
+2026-04-08 06:00:20 [info     ] Skipping source 17/611: Andrej Karpathy — “We’re summoning ghosts, not building anim (already exists)
+2026-04-08 06:00:20 [info     ] Skipping source 18/611: Yann Lecun: Meta AI, Open Source, Limits of LLMs, AGI & the  (already exists)
+2026-04-08 06:00:20 [info     ] Skipping source 19/611: Nested Learning: The Illusion of Deep Learning Architecture (already exists)
+2026-04-08 06:00:20 [info     ] Skipping source 20/611: Superintelligence, Bubbles And Big Bets: AI Investing in 202 (already exists)
+2026-04-08 06:00:20 [info     ] Skipping source 21/611: Adaptation of Agentic AI (already exists)
+2026-04-08 06:00:20 [info     ] Skipping source 22/611: AI Semiconductor Landscape feat. Dylan Patel | BG2 w/ Bill G (already exists)
+2026-04-08 06:00:20 [info     ] Skipping source 23/611: DeepSeek-V3 Technical Report (already exists)
+2026-04-08 06:00:20 [info     ] Skipping source 24/611: Shardul Shah: How Index Makes Decisions & Why Benchmarks & A (already exists)
+2026-04-08 06:00:20 [info     ] Skipping source 25/611: 2024: The Year the GPT Wrapper Myth Proved Wrong (already exists)
+2026-04-08 06:00:20 [info     ] Skipping source 26/611: Perception, Reason, Think, and Plan: A Survey on Large Multi (already exists)
+2026-04-08 06:00:20 [info     ] Skipping source 27/611: Best of 2024: Synthetic Data / Smol Models, Loubna Ben Allal (already exists)
+2026-04-08 06:00:20 [info     ] Skipping source 28/611: Josh Woodward: Google Labs is Rapidly Building AI Products f (already exists)
+2026-04-08 06:00:20 [info     ] Skipping source 29/611: Startup Ideas You Can Now Build With AI (already exists)
+2026-04-08 06:00:20 [info     ] Skipping source 30/611: Coatue’s Laffont Brothers. AI, Public & VC Mkts, Macro, US D (already exists)
+2026-04-08 06:00:20 [info     ] Skipping source 31/611: What has PMF Today, Google is Cooking & GPT Wrappers are Win (already exists)
+2026-04-08 06:00:20 [info     ] Skipping source 32/611: David Luan: DeepSeek’s Significance, What’s Next for Agents  (already exists)
+2026-04-08 06:00:20 [info     ] Skipping source 33/611: AI at the Intersection of Bio | Vijay Pande, Surya Ganguli & (already exists)
+2026-04-08 06:00:20 [info     ] Skipping source 34/611: Genome modeling and design (already exists)
+2026-04-08 06:00:20 [info     ] Skipping source 35/611: Deal Velocity, Not Billable Hours: How Crosby Uses AI to Red (already exists)
+2026-04-08 06:00:20 [info     ] Bootstrapping source 36/611: The Agent Network — Dharmesh Shah, Agent.ai + CTO of HubSpot
+2026-04-08 06:00:20 [info     ] api_semaphore_init             backend_id=claude limit=5
+2026-04-08 06:00:20 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:00:20 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:01:52 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVFMTTF-the-agent-network-dharmesh-shah-agentai-cto-of-hubspot.md
+2026-04-08 06:01:52 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVFMTTF-the-agent-network-dharmesh-shah-agentai-cto-of-hubspot.md source_id=01KJVFMTTF4CBT71368ZPGYCBY
+2026-04-08 06:01:52 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJVFMTTF'" session_id=wiki_source_01KJVFMTTF
+2026-04-08 06:01:52 [info     ] Skipping source 37/611: AI Talent Wars, xAI’s $200B Valuation, & Google’s Comeback (already exists)
+2026-04-08 06:01:52 [info     ] Skipping source 38/611: a16z's Anish Acharya on Consumer AI (already exists)
+2026-04-08 06:01:52 [info     ] Skipping source 39/611: Byte Latent Transformer: Patches Scale Better Than Tokens (already exists)
+2026-04-08 06:01:52 [info     ] Skipping source 40/611: A Masterclass in Building AI Applications From Legora's CEO (already exists)
+2026-04-08 06:01:52 [info     ] Skipping source 41/611: Grand Challenges in Healthcare AI with Vijay Pande and Julie (already exists)
+2026-04-08 06:01:52 [info     ] Skipping source 42/611: 4 AI Investors on What Separates Enduring AI Companies from  (already exists)
+2026-04-08 06:01:52 [info     ] Skipping source 43/611: Mercor CEO: Evals Will Replace Knowledge Work, AI x Hiring T (already exists)
+2026-04-08 06:01:52 [info     ] Skipping source 44/611: Legendary Consumer VC Predicts The Future Of AI Products (already exists)
+2026-04-08 06:01:52 [info     ] Skipping source 45/611: Getting the Most From AI With Multiple Custom Agents ft Dust (already exists)
+2026-04-08 06:01:52 [info     ] Skipping source 46/611: No Priors Ep. 63 | With Sarah Guo and Elad Gil (already exists)
+2026-04-08 06:01:52 [info     ] Skipping source 47/611: Combining Induction and Transduction for Abstract Reasoning (already exists)
+2026-04-08 06:01:52 [info     ] Skipping source 48/611: Identifying high-value use cases for AI | Tomasz Tunguz (Fou (already exists)
+2026-04-08 06:01:52 [info     ] Skipping source 49/611: Vertical AI Agents Could Be 10X Bigger Than SaaS (already exists)
+2026-04-08 06:01:52 [info     ] Bootstrapping source 50/611: Fully autonomous robots are much closer than you think – Ser
+2026-04-08 06:01:52 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:01:52 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:02:57 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVN12YG-fully-autonomous-robots-are-much-closer-than-you-think-sergey-levine.md
+2026-04-08 06:02:57 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVN12YG-fully-autonomous-robots-are-much-closer-than-you-think-sergey-levine.md source_id=01KJVN12YGX8RAPPKMD78XE889
+2026-04-08 06:02:57 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJVN12YG'" session_id=wiki_source_01KJVN12YG
+2026-04-08 06:02:57 [info     ] Skipping source 51/611: AI can't cross this line and we don't know why. (already exists)
+2026-04-08 06:02:57 [info     ] Skipping source 52/611: Elad Gil | Acting on Conviction, Future of AI, Biotech, Ambi (already exists)
+2026-04-08 06:02:57 [info     ] Skipping source 53/611: Robotics in the Age of Generative AI with Vincent Vanhoucke, (already exists)
+2026-04-08 06:02:57 [info     ] Skipping source 54/611: DeepL CEO on Specialized vs. General Models, Beating Google  (already exists)
+2026-04-08 06:02:57 [info     ] Skipping source 55/611: Ep20. AI Scaling Laws, DOGE, FSD 13, Trump Markets | BG2 w/  (already exists)
+2026-04-08 06:02:57 [info     ] Skipping source 56/611: Ep18. Jensen Recap - Competitive Moat, X.AI, Smart Assistant (already exists)
+2026-04-08 06:02:57 [info     ] Skipping source 57/611: Greg Brockman on OpenAI's Road to AGI (already exists)
+2026-04-08 06:02:57 [info     ] Skipping source 58/611: 2025-5-6 (already exists)
+2026-04-08 06:02:57 [info     ] Skipping source 59/611: Claude 4, Next Phase for AI Coding, and the Path to AI Cowor (already exists)
+2026-04-08 06:02:57 [info     ] Skipping source 60/611: Grok 3, AI Memory & Voice, China, DOGE, Public Market Pull B (already exists)
+2026-04-08 06:02:57 [info     ] Bootstrapping source 61/611: François Chollet on OpenAI o-models and ARC
+2026-04-08 06:02:57 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:02:57 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:04:02 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVDVYWF-françois-chollet-on-openai-o-models-and-arc.md
+2026-04-08 06:04:02 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVDVYWF-françois-chollet-on-openai-o-models-and-arc.md source_id=01KJVDVYWFCKN89G9QS87E4ST5
+2026-04-08 06:04:02 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJVDVYWF'" session_id=wiki_source_01KJVDVYWF
+2026-04-08 06:04:02 [info     ] Skipping source 62/611: Arc Institute's Patrick Hsu on Building an App Store for Bio (already exists)
+2026-04-08 06:04:02 [info     ] Skipping source 63/611: Sarah Guo and Elad Gil: The Future of AI Investing (already exists)
+2026-04-08 06:04:02 [info     ] Bootstrapping source 64/611: After LLMs: Spatial Intelligence and World Models — Fei-Fei
+2026-04-08 06:04:02 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:04:02 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:05:07 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVMH7JF-after-llms-spatial-intelligence-and-world-models-fei-fei-li-justin-johnson-world.md
+2026-04-08 06:05:07 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVMH7JF-after-llms-spatial-intelligence-and-world-models-fei-fei-li-justin-johnson-world.md source_id=01KJVMH7JFEX2PR1P5D2C80B55
+2026-04-08 06:05:07 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJVMH7JF'" session_id=wiki_source_01KJVMH7JF
+2026-04-08 06:05:07 [info     ] Skipping source 65/611: Kimi k1.5: Scaling Reinforcement Learning with LLMs (already exists)
+2026-04-08 06:05:07 [info     ] Skipping source 66/611: Pricing in the AI Era: From Inputs to Outcomes, with Paid CE (already exists)
+2026-04-08 06:05:07 [info     ] Skipping source 67/611: Behind The Scenes of Benchmark’s Boldest Bets (already exists)
+2026-04-08 06:05:07 [info     ] Skipping source 68/611: No Priors Ep. 80 | With Andrej Karpathy from OpenAI and Tesl (already exists)
+2026-04-08 06:05:07 [info     ] Skipping source 69/611: Robotics Research Update, with Keerthana Gopalakrishnan and  (already exists)
+2026-04-08 06:05:07 [info     ] Skipping source 70/611: Claude Code: Anthropic's CLI Agent (already exists)
+2026-04-08 06:05:07 [info     ] Skipping source 71/611: Lightcone: Consumer is back, What’s getting funded now, The  (already exists)
+2026-04-08 06:05:07 [info     ] Skipping source 72/611: Titans: Learning to Memorize at Test Time (already exists)
+2026-04-08 06:05:07 [info     ] Skipping source 73/611: No Priors Ep. 81 | With Sarah Guo & Elad Gil (already exists)
+2026-04-08 06:05:07 [info     ] Skipping source 74/611: Elad Gil on AI, Crypto, and What’s Next (already exists)
+2026-04-08 06:05:07 [info     ] Skipping source 75/611: The Zamba2 Suite: Technical Report (already exists)
+2026-04-08 06:05:07 [info     ] Skipping source 76/611: OpenAI Tests if GPT-5 Can Automate Your Job - 4 Unexpected F (already exists)
+2026-04-08 06:05:07 [info     ] Skipping source 77/611: The Quest to ‘Solve All Diseases’ with AI: Isomorphic Labs’  (already exists)
+2026-04-08 06:05:07 [info     ] Skipping source 78/611: Moshi: a speech-text foundation model for real-time dialogue (already exists)
+2026-04-08 06:05:07 [info     ] Skipping source 79/611: 2 Robotics Pioneers Unpack the Path to Generalist Robots (already exists)
+2026-04-08 06:05:07 [info     ] Skipping source 80/611: Google Titans: Learning to Memorize at Test Time (already exists)
+2026-04-08 06:05:07 [info     ] Skipping source 81/611: Ep19. State of Venture, AI Scaling, Elections | BG2 w/ Bill  (already exists)
+2026-04-08 06:05:07 [info     ] Skipping source 82/611: Expert AI Researcher Reacts to o1 and Shares What's Next in  (already exists)
+2026-04-08 06:05:07 [info     ] Skipping source 83/611: DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via  (already exists)
+2026-04-08 06:05:07 [info     ] Skipping source 84/611: State of Startups and AI 2025 - Sarah Guo, Conviction (already exists)
+2026-04-08 06:05:07 [info     ] Skipping source 85/611: Building the Easy Button for Generative AI | May Habib, CEO, (already exists)
+2026-04-08 06:05:07 [info     ] Skipping source 86/611: Building Agents with Model Context Protocol - Full Workshop  (already exists)
+2026-04-08 06:05:07 [info     ] Skipping source 87/611: Saam Motamedi: Why Series B Won’t Make Money & Why $1M ARR i (already exists)
+2026-04-08 06:05:07 [info     ] Skipping source 88/611: No Priors Ep. 72 | With Sarah Guo and Elad Gil (already exists)
+2026-04-08 06:05:07 [info     ] Bootstrapping source 89/611: “The Future of AI is Here” — Fei-Fei Li Unveils the Next Fro
+2026-04-08 06:05:07 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:05:07 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:06:00 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVMK38D-the-future-of-ai-is-here-fei-fei-li-unveils-the-next-frontier-of-ai.md
+2026-04-08 06:06:00 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVMK38D-the-future-of-ai-is-here-fei-fei-li-unveils-the-next-frontier-of-ai.md source_id=01KJVMK38DSVMQMZP6B1W5XF0W
+2026-04-08 06:06:00 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJVMK38D'" session_id=wiki_source_01KJVMK38D
+2026-04-08 06:06:00 [info     ] Skipping source 90/611: Implementation, Data, Impact of Healthcare AI with Julie and (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 91/611: World Models & General Intuition: Khosla's largest bet since (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 92/611: Vinod’s advice for entrepreneurs innovating with AI | Vinod  (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 93/611: The Gift and The Curse of Staying Private with Bill Gurley (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 94/611: Better AI Models, Better Startups (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 95/611: Stanford AI Researcher on What’s Next in Research, Reaction  (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 96/611: AI in Pharmaceutical R&D with Kim Branson (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 97/611: rStar-Math: Small LLMs Can Master Math Reasoning with Self-E (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 98/611: No Priors Ep. 103 | With Vevo Therapeutics and the Arc Insti (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 99/611: Self-Driving Expert Unpacks the Biggest Breakthroughs and Bo (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 100/611: Context Engineering for Agents - Lance Martin, LangChain (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 101/611: No Priors Ep. 116 | With Sarah and Elad (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 102/611: Jim Fan on Nvidia’s Embodied AI Lab and Jensen Huang’s Predi (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 103/611: No Priors Ep. 85 | CEO of Braintrust Ankur Goyal (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 104/611: Large Concept Models: Language Modeling in a Sentence Repres (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 105/611: The Vinod Khosla Interview | Turpentine VC (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 106/611: A Deep Dive into the Future of Voice in AI (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 107/611: OpenAI o1 - the biggest black box of all. Let’s break it ope (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 108/611: Eric Vishria: Where is the Value in AI - Chips, Models or Ap (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 109/611: LLM Attention That Expands At Inference? Test Time Training  (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 110/611: Towards Robust Agentic CUDA Kernel (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 111/611: Why Every Agent needs Open Source Cloud Sandboxes (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 112/611: Why The Next AI Breakthroughs Will Be In Reasoning, Not Scal (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 113/611: Google DeepMind Lead Researchers on Genie 3 & the Future of  (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 114/611: 10 People + AI = Billion Dollar Company? (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 115/611: o1 - What is Going On? Why o1 is a 3rd Paradigm of Model + 1 (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 116/611: Persona Vectors: Monitoring and Controlling Character Traits (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 117/611: O1 Replication Journey -- Part 2: Surpassing O1-preview thro (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 118/611: Autoregressive Image Generation without Vector Quantization (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 119/611: o1-Coder: an o1 Replication for Coding (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 120/611: Hierarchical Reasoning Model (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 121/611: HippoRAG: Neurobiologically Inspired Long-Term Memory for La (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 122/611: No Priors Ep. 59 | With Sarah Guo & Elad Gil (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 123/611: Pixtral 12B (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 124/611: The future of robotics (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 125/611: OpenVLA: An Open-Source Vision-Language-Action Model (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 126/611: Runway's Video Revolution: Empowering Creators with General  (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 127/611: Smoothie: Label Free Language Model Routing (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 128/611: How OpenClaw Works: The Real "Magic" (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 129/611: VinePPO: Refining Credit Assignment in RL Training of LLMs (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 130/611: Self-Improving AI Agents: Architecting LLM Memory with ACE,  (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 131/611: The 100x AI Breakthrough No One is Talking About (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 132/611: Generative Verifiers: Reward Modeling as Next-Token Predicti (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 133/611: KAG: Boosting LLMs in Professional Domains via Knowledge Aug (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 134/611: Differential Transformer (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 135/611: JanusFlow: Harmonizing Autoregression and Rectified Flow for (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 136/611: Deliberative Alignment: Reasoning Enables Safer Language Mod (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 137/611: Latent Action Pretraining from Videos (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 138/611: Long Live Context Engineering - with Jeff Huber of Chroma (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 139/611: Agent Workflow Memory (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 140/611: Mamba: Linear-Time Sequence Modeling with Selective State Sp (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 141/611: Why Vertical LLM Agents Are The New $1 Billion SaaS Opportun (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 142/611: Agent S: An Open Agentic Framework that Uses Computers Like  (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 143/611: Zep: A Temporal Knowledge Graph Architecture for Agent Memor (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 144/611: Diffusion Models Are Real-Time Game Engines (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 145/611: To CoT or not to CoT? Chain-of-thought helps mainly on math  (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 146/611: Hymba: A Hybrid-head Architecture for Small Language Models (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 147/611: Investing in AI for Hard Tech, with Eric Vishria of Benchmar (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 148/611: Sarah Tavel: Will Foundation Models Be Commoditised? | E1149 (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 149/611: AlphaGeometry: Solving olympiad geometry without human demon (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 150/611: System 2 Reasoning Capabilities Are Nigh (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 151/611: Training Language Models to Self-Correct via Reinforcement L (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 152/611: Large Language Monkeys: Scaling Inference Compute with Repea (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 153/611: Learning to (Learn at Test Time): RNNs with Expressive Hidde (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 154/611: ALR$^2$: A Retrieve-then-Reason Framework for Long-context Q (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 155/611: Luma's Dream Machine and Reasoning in Video Models (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 156/611: No Priors Ep.61 | OpenAI's Sora Leaders Aditya Ramesh, Tim B (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 157/611: Vertical AI shows potential to dwarf legacy SaaS | State of  (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 158/611: Thinking LLMs: General Instruction Following with Thought Ge (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 159/611: Transformer-Squared: Self-adaptive LLMs (already exists)
+2026-04-08 06:06:00 [info     ] Skipping source 160/611: LLM Pruning and Distillation in Practice: The Minitron Appro (already exists)
+2026-04-08 06:06:00 [info     ] Bootstrapping source 161/611: Andrej Karpathy and Dwarkesh Patel – Popping the AGI Bubble,
+2026-04-08 06:06:00 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:06:00 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:06:53 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVP8YZR-andrej-karpathy-and-dwarkesh-patel-popping-the-agi-bubble-building-the-ai-aristo.md
+2026-04-08 06:06:53 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVP8YZR-andrej-karpathy-and-dwarkesh-patel-popping-the-agi-bubble-building-the-ai-aristo.md source_id=01KJVP8YZR7DAPHXBV74Z84G17
+2026-04-08 06:06:53 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJVP8YZR'" session_id=wiki_source_01KJVP8YZR
+2026-04-08 06:06:53 [info     ] Skipping source 162/611: LMFusion: Adapting Pretrained Language Models for Multimodal (already exists)
+2026-04-08 06:06:53 [info     ] Bootstrapping source 163/611: ⚡️Math Olympiad gold medalist explains OpenAI and Google Dee
+2026-04-08 06:06:53 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:06:53 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:07:47 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVJ6D0C-math-olympiad-gold-medalist-explains-openai-and-google-deepmind-imo-gold-perform.md
+2026-04-08 06:07:47 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVJ6D0C-math-olympiad-gold-medalist-explains-openai-and-google-deepmind-imo-gold-perform.md source_id=01KJVJ6D0CCF5T2WR30GJ4N3ZC
+2026-04-08 06:07:47 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJVJ6D0C'" session_id=wiki_source_01KJVJ6D0C
+2026-04-08 06:07:47 [info     ] Skipping source 164/611: Tulu 3: Pushing Frontiers in Open Language Model Post-Traini (already exists)
+2026-04-08 06:07:47 [info     ] Skipping source 165/611: Can world models unlock general purpose robotics? (already exists)
+2026-04-08 06:07:47 [info     ] Skipping source 166/611: Generative Reward Models (already exists)
+2026-04-08 06:07:47 [info     ] Skipping source 167/611: TokenFormer: Rethinking Transformer Scaling with Tokenized M (already exists)
+2026-04-08 06:07:47 [info     ] Skipping source 168/611: Intelligence at the Edge of Chaos (already exists)
+2026-04-08 06:07:47 [info     ] Skipping source 169/611: KGARevion: An AI Agent for Knowledge-Intensive Biomedical QA (already exists)
+2026-04-08 06:07:47 [info     ] Skipping source 170/611: AI foundation models set the stage for Big Tech‘s battle-of- (already exists)
+2026-04-08 06:07:47 [info     ] Skipping source 171/611: How the Smartest Companies Use AI | Ankur Goyal, Braintrust (already exists)
+2026-04-08 06:07:47 [info     ] Skipping source 172/611: No Priors Ep. 86 | With Sarah Guo & Elad Gil (already exists)
+2026-04-08 06:07:47 [info     ] Skipping source 173/611: Scaling of Search and Learning: A Roadmap to Reproduce o1 fr (already exists)
+2026-04-08 06:07:47 [info     ] Bootstrapping source 174/611: Reinforcement Fine-Tuning—12 Days of OpenAI: Day 2
+2026-04-08 06:07:47 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:07:48 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:08:39 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVJDB5G-reinforcement-fine-tuning12-days-of-openai-day-2.md
+2026-04-08 06:08:39 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVJDB5G-reinforcement-fine-tuning12-days-of-openai-day-2.md source_id=01KJVJDB5G5CT52AENVJGX06SP
+2026-04-08 06:08:39 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJVJDB5G'" session_id=wiki_source_01KJVJDB5G
+2026-04-08 06:08:39 [info     ] Skipping source 175/611: Training Large Language Models to Reason in a Continuous Lat (already exists)
+2026-04-08 06:08:39 [info     ] Skipping source 176/611: How DeepSeek Changes the LLM Story (already exists)
+2026-04-08 06:08:39 [info     ] Skipping source 177/611: GenARM: Reward Guided Generation with Autoregressive Reward  (already exists)
+2026-04-08 06:08:39 [info     ] Skipping source 178/611: Test-Time Preference Optimization: On-the-Fly Alignment via  (already exists)
+2026-04-08 06:08:39 [info     ] Skipping source 179/611: Search-o1: Agentic Search-Enhanced Large Reasoning Models (already exists)
+2026-04-08 06:08:39 [info     ] Skipping source 180/611: LightRAG: Simple and Fast Retrieval-Augmented Generation (already exists)
+2026-04-08 06:08:39 [info     ] Skipping source 181/611: OpenAI o1's New Paradigm: Test-Time Compute Explained (already exists)
+2026-04-08 06:08:39 [info     ] Skipping source 182/611: Why AI Voice Feels More Human Than Ever (already exists)
+2026-04-08 06:08:39 [info     ] Skipping source 183/611: Ex-OpenAI Chief Research Officer: What Comes Next for AI? (already exists)
+2026-04-08 06:08:39 [info     ] Skipping source 184/611: Inference-Aware Fine-Tuning for Best-of-N Sampling in Large  (already exists)
+2026-04-08 06:08:39 [info     ] Bootstrapping source 185/611: Richard Sutton and Dwarkesh Patel – speaking two different l
+2026-04-08 06:08:39 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:08:39 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:09:31 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVP843V-richard-sutton-and-dwarkesh-patel-speaking-two-different-languages.md
+2026-04-08 06:09:31 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVP843V-richard-sutton-and-dwarkesh-patel-speaking-two-different-languages.md source_id=01KJVP843VKX3S3CDY4PP7SC8P
+2026-04-08 06:09:31 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJVP843V'" session_id=wiki_source_01KJVP843V
+2026-04-08 06:09:31 [info     ] Skipping source 186/611: 2025: The State of Consumer AI | Menlo Ventures (already exists)
+2026-04-08 06:09:31 [info     ] Skipping source 187/611: GraphRAG: LLM-Derived Knowledge Graphs for RAG (already exists)
+2026-04-08 06:09:31 [info     ] Skipping source 188/611: Lumine: An Open Recipe for Building Generalist Agents in 3D  (already exists)
+2026-04-08 06:09:31 [info     ] Skipping source 189/611: Critique-out-Loud Reward Models (already exists)
+2026-04-08 06:09:31 [info     ] Skipping source 190/611: 2025: The year in LLMs (already exists)
+2026-04-08 06:09:31 [info     ] Skipping source 191/611: LLaVA-CoT: Let Vision Language Models Reason Step-by-Step (already exists)
+2026-04-08 06:09:31 [info     ] Skipping source 192/611: GSM-Symbolic: Understanding the Limitations of Mathematical  (already exists)
+2026-04-08 06:09:31 [info     ] Skipping source 193/611: Janus: Decoupling Visual Encoding for Unified Multimodal Und (already exists)
+2026-04-08 06:09:31 [info     ] Skipping source 194/611: Google DeepMind CEO Demis Hassabis: The Path To AGI, Decepti (already exists)
+2026-04-08 06:09:31 [info     ] Skipping source 195/611: Toward Efficient Agents: Memory, Tool learning, and Planning (already exists)
+2026-04-08 06:09:31 [info     ] Skipping source 196/611: Chain-of-Agents: End-to-End Agent Foundation Models via Mult (already exists)
+2026-04-08 06:09:31 [info     ] Skipping source 197/611: The Rise of WebMCP (already exists)
+2026-04-08 06:09:31 [info     ] Skipping source 198/611: Energy-Based Transformers are Scalable Learners and Thinkers (already exists)
+2026-04-08 06:09:31 [info     ] Skipping source 199/611: The AI Scientist: Towards Fully Automated Open-Ended Scienti (already exists)
+2026-04-08 06:09:31 [info     ] Skipping source 200/611: Gemini Robotics: Bringing AI into the Physical (already exists)
+2026-04-08 06:09:31 [info     ] Skipping source 201/611: Where AI is headed in 2026 - Foundation Capital (already exists)
+2026-04-08 06:09:31 [info     ] Skipping source 202/611: Can 1B LLM Surpass 405B LLM? Rethinking Compute-Optimal Test (already exists)
+2026-04-08 06:09:31 [info     ] Skipping source 203/611: Voyager: An Open-Ended Embodied Agent with Large Language Mo (already exists)
+2026-04-08 06:09:31 [info     ] Skipping source 204/611: Qwen2.5-VL Technical Report (already exists)
+2026-04-08 06:09:31 [info     ] Skipping source 205/611: KIMI K2: OPEN AGENTIC INTELLIGENCE (already exists)
+2026-04-08 06:09:31 [info     ] Skipping source 206/611: From AlphaGo to AGI ft ReflectionAI Founder Ioannis Antonogl (already exists)
+2026-04-08 06:09:31 [info     ] Skipping source 207/611: ARC Prize 2024: Technical Report (already exists)
+2026-04-08 06:09:31 [info     ] Bootstrapping source 208/611: Anthropic’s Claude Computer Use Is A Game Changer | YC Decod
+2026-04-08 06:09:31 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:09:31 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:10:21 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVKFYWV-anthropics-claude-computer-use-is-a-game-changer-yc-decoded.md
+2026-04-08 06:10:21 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVKFYWV-anthropics-claude-computer-use-is-a-game-changer-yc-decoded.md source_id=01KJVKFYWVJ3JBJ3MHQKZJJRPS
+2026-04-08 06:10:21 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJVKFYWV'" session_id=wiki_source_01KJVKFYWV
+2026-04-08 06:10:21 [info     ] Bootstrapping source 209/611: Agents
+2026-04-08 06:10:21 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:10:21 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:11:36 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJSWNT7B-agents.md
+2026-04-08 06:11:36 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJSWNT7B-agents.md source_id=01KJSWNT7BDCEJNTQJWZ050N89
+2026-04-08 06:11:36 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJSWNT7B'" session_id=wiki_source_01KJSWNT7B
+2026-04-08 06:11:36 [info     ] Bootstrapping source 210/611: Supervised Reinforcement Learning: From Expert Trajectories
+2026-04-08 06:11:36 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:11:36 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:12:53 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTC6DXZ-supervised-reinforcement-learning-from-expert-trajectories-to-step-wise-reasonin.md
+2026-04-08 06:12:53 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTC6DXZ-supervised-reinforcement-learning-from-expert-trajectories-to-step-wise-reasonin.md source_id=01KJTC6DXZNAJ02MGPRGRHDWAW
+2026-04-08 06:12:53 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJTC6DXZ'" session_id=wiki_source_01KJTC6DXZ
+2026-04-08 06:12:53 [info     ] Bootstrapping source 211/611: Before you call Manus AI Agent, a GPT Wrapper!
+2026-04-08 06:12:53 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:12:53 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:14:14 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVP51TK-before-you-call-manus-ai-agent-a-gpt-wrapper.md
+2026-04-08 06:14:14 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVP51TK-before-you-call-manus-ai-agent-a-gpt-wrapper.md source_id=01KJVP51TK37X7T8GTJWH108QE
+2026-04-08 06:14:14 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJVP51TK'" session_id=wiki_source_01KJVP51TK
+2026-04-08 06:14:14 [info     ] Bootstrapping source 212/611: Are We Misreading the AI Exponential? Julian Schrittwieser o
+2026-04-08 06:14:14 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:14:14 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:15:21 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVF7136-are-we-misreading-the-ai-exponential-julian-schrittwieser-on-move-37-scaling-rl-.md
+2026-04-08 06:15:21 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVF7136-are-we-misreading-the-ai-exponential-julian-schrittwieser-on-move-37-scaling-rl-.md source_id=01KJVF7136PS8KW9RF0ZC6BW55
+2026-04-08 06:15:21 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJVF7136'" session_id=wiki_source_01KJVF7136
+2026-04-08 06:15:21 [info     ] Bootstrapping source 213/611: Optimizing Test-Time Compute via Meta Reinforcement Fine-Tun
+2026-04-08 06:15:21 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:15:21 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:17:22 [warning  ] cli_timeout                    backend_id=claude timeout_s=120
+2026-04-08 06:17:23 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJV3AME5-optimizing-test-time-compute-via-meta-reinforcement-fine-tuning.md
+2026-04-08 06:17:23 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJV3AME5-optimizing-test-time-compute-via-meta-reinforcement-fine-tuning.md source_id=01KJV3AME561KWT5RJ1EJ0BTQ3
+2026-04-08 06:17:23 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJV3AME5'" session_id=wiki_source_01KJV3AME5
+2026-04-08 06:17:23 [info     ] Skipping source 214/611: Marco-o1: Towards Open Reasoning Models for Open-Ended Solut (already exists)
+2026-04-08 06:17:23 [info     ] Bootstrapping source 215/611: Vision as a Dialect: Unifying Visual Understanding and Gener
+2026-04-08 06:17:23 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:17:23 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:18:41 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTPP5WB-vision-as-a-dialect-unifying-visual-understanding-and-generation-via-text-aligne.md
+2026-04-08 06:18:41 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTPP5WB-vision-as-a-dialect-unifying-visual-understanding-and-generation-via-text-aligne.md source_id=01KJTPP5WBNZNR9WY0VMZ7TH3T
+2026-04-08 06:18:41 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJTPP5WB'" session_id=wiki_source_01KJTPP5WB
+2026-04-08 06:18:41 [info     ] Bootstrapping source 216/611: Transfer between Modalities with MetaQueries
+2026-04-08 06:18:41 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:18:41 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:19:50 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJV0MQH7-transfer-between-modalities-with-metaqueries.md
+2026-04-08 06:19:50 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJV0MQH7-transfer-between-modalities-with-metaqueries.md source_id=01KJV0MQH72KZW1YBBJRGX2510
+2026-04-08 06:19:50 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJV0MQH7'" session_id=wiki_source_01KJV0MQH7
+2026-04-08 06:19:50 [info     ] Bootstrapping source 217/611: Andrej Karpathy: Software Is Changing (Again)
+2026-04-08 06:19:50 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:19:50 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:21:00 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVGFHX6-andrej-karpathy-software-is-changing-again.md
+2026-04-08 06:21:00 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVGFHX6-andrej-karpathy-software-is-changing-again.md source_id=01KJVGFHX6QP2QMDYB093S055Y
+2026-04-08 06:21:00 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJVGFHX6'" session_id=wiki_source_01KJVGFHX6
+2026-04-08 06:21:00 [info     ] Bootstrapping source 218/611: Scaling LLM Test-Time Compute Optimally can be More Effectiv
+2026-04-08 06:21:00 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:21:00 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:22:16 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJV8ZDJ2-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model.md
+2026-04-08 06:22:16 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJV8ZDJ2-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model.md source_id=01KJV8ZDJ2H3FJFSRW52DE18X7
+2026-04-08 06:22:16 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 32] 다른 프로세스가 파일을 사용 중이기 때문에 프로세스가 액세스 할 수 없습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJV8ZDJ2'" session_id=wiki_source_01KJV8ZDJ2
+2026-04-08 06:22:16 [info     ] Bootstrapping source 219/611: 2025-3-18
+2026-04-08 06:22:16 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:22:16 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:23:28 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KKT56P61-2025-3-18.md
+2026-04-08 06:23:28 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KKT56P61-2025-3-18.md source_id=01KKT56P61W0PGF8VQ7Q6B1C7T
+2026-04-08 06:23:28 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KKT56P61'" session_id=wiki_source_01KKT56P61
+2026-04-08 06:23:28 [info     ] Bootstrapping source 220/611: Demis Hassabis — Scaling, superhuman AIs, AlphaZero atop LLM
+2026-04-08 06:23:28 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:23:28 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:24:33 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVCGGY0-demis-hassabis-scaling-superhuman-ais-alphazero-atop-llms-alphafold.md
+2026-04-08 06:24:33 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVCGGY0-demis-hassabis-scaling-superhuman-ais-alphazero-atop-llms-alphafold.md source_id=01KJVCGGY0DBV1NBC5MNBHVGDG
+2026-04-08 06:24:33 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJVCGGY0'" session_id=wiki_source_01KJVCGGY0
+2026-04-08 06:24:33 [info     ] Bootstrapping source 221/611: Diffusion Language Models are Super Data Learners
+2026-04-08 06:24:33 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:24:33 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:25:54 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTAPFA4-diffusion-language-models-are-super-data-learners.md
+2026-04-08 06:25:54 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTAPFA4-diffusion-language-models-are-super-data-learners.md source_id=01KJTAPFA4MG3C5EDGF1E1YJ6G
+2026-04-08 06:25:54 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJTAPFA4'" session_id=wiki_source_01KJTAPFA4
+2026-04-08 06:25:54 [info     ] Bootstrapping source 222/611: Kimi-VL Technical Report
+2026-04-08 06:25:54 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:25:54 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:27:14 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTPMJBF-kimi-vl-technical-report.md
+2026-04-08 06:27:14 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTPMJBF-kimi-vl-technical-report.md source_id=01KJTPMJBF37SDX28VSNECG0AW
+2026-04-08 06:27:14 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJTPMJBF'" session_id=wiki_source_01KJTPMJBF
+2026-04-08 06:27:14 [info     ] Bootstrapping source 223/611: 29.4% ARC-AGI-2 🤯 (TOP SCORE!) - Jeremy Berman
+2026-04-08 06:27:14 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:27:14 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:28:20 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVDK1KQ-294-arc-agi-2-top-score-jeremy-berman.md
+2026-04-08 06:28:20 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVDK1KQ-294-arc-agi-2-top-score-jeremy-berman.md source_id=01KJVDK1KQBWP92KBFJF97NG36
+2026-04-08 06:28:20 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJVDK1KQ'" session_id=wiki_source_01KJVDK1KQ
+2026-04-08 06:28:20 [info     ] Skipping source 224/611: CWM: An Open-Weights LLM for Research on Code Generation wit (already exists)
+2026-04-08 06:28:20 [info     ] Bootstrapping source 225/611: Seed-Prover: Deep and Broad Reasoning for Automated Theorem
+2026-04-08 06:28:20 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:28:20 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:29:48 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTMRHHG-seed-prover-deep-and-broad-reasoning-for-automated-theorem-proving.md
+2026-04-08 06:29:48 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTMRHHG-seed-prover-deep-and-broad-reasoning-for-automated-theorem-proving.md source_id=01KJTMRHHGEJAPYKFBPHVV6MCE
+2026-04-08 06:29:48 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJTMRHHG'" session_id=wiki_source_01KJTMRHHG
+2026-04-08 06:29:48 [info     ] Skipping source 226/611: RIP to RPA: How AI Makes Operations Work (already exists)
+2026-04-08 06:29:48 [info     ] Bootstrapping source 227/611: Show-o2: Improved Native Unified Multimodal Models
+2026-04-08 06:29:48 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:29:48 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:31:06 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTPVSWT-show-o2-improved-native-unified-multimodal-models.md
+2026-04-08 06:31:06 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTPVSWT-show-o2-improved-native-unified-multimodal-models.md source_id=01KJTPVSWTK7XQS7HT1TQQVXV2
+2026-04-08 06:31:06 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJTPVSWT'" session_id=wiki_source_01KJTPVSWT
+2026-04-08 06:31:06 [info     ] Bootstrapping source 228/611: Search-R1: Training LLMs to Reason and Leverage Search Engin
+2026-04-08 06:31:06 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:31:06 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:32:02 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTMKZPA-search-r1-training-llms-to-reason-and-leverage-search-engines-with-reinforcement.md
+2026-04-08 06:32:02 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTMKZPA-search-r1-training-llms-to-reason-and-leverage-search-engines-with-reinforcement.md source_id=01KJTMKZPAPXSV9XW07NJW9KTR
+2026-04-08 06:32:02 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJTMKZPA'" session_id=wiki_source_01KJTMKZPA
+2026-04-08 06:32:02 [info     ] Bootstrapping source 229/611: Untitled Article
+2026-04-08 06:32:02 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:32:02 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:33:59 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KKTE8FZZ-untitled-article.md
+2026-04-08 06:33:59 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KKTE8FZZ-untitled-article.md source_id=01KKTE8FZZ18ZR8N3QDY457BC5
+2026-04-08 06:33:59 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KKTE8FZZ'" session_id=wiki_source_01KKTE8FZZ
+2026-04-08 06:33:59 [info     ] Bootstrapping source 230/611: DeepSeek-OCR: Contexts Optical Compression
+2026-04-08 06:33:59 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:33:59 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:35:07 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KKT3SS8Q-deepseek-ocr-contexts-optical-compression.md
+2026-04-08 06:35:07 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KKT3SS8Q-deepseek-ocr-contexts-optical-compression.md source_id=01KKT3SS8QNPF4DKKA749J3TFR
+2026-04-08 06:35:07 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KKT3SS8Q'" session_id=wiki_source_01KKT3SS8Q
+2026-04-08 06:35:07 [info     ] Bootstrapping source 231/611: Best of 2024 in Agents (from #1 on SWE-Bench Full, Prof. Gra
+2026-04-08 06:35:07 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:35:07 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:36:00 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVFQM7C-best-of-2024-in-agents-from-1-on-swe-bench-full-prof-graham-neubig-of-openhandsa.md
+2026-04-08 06:36:00 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVFQM7C-best-of-2024-in-agents-from-1-on-swe-bench-full-prof-graham-neubig-of-openhandsa.md source_id=01KJVFQM7CTX1HV5BZRMW72TH9
+2026-04-08 06:36:00 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJVFQM7C'" session_id=wiki_source_01KJVFQM7C
+2026-04-08 06:36:00 [info     ] Bootstrapping source 232/611: Small Language Models are the Future of Agentic AI
+2026-04-08 06:36:00 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:36:00 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:37:04 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTQRK41-small-language-models-are-the-future-of-agentic-ai.md
+2026-04-08 06:37:04 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTQRK41-small-language-models-are-the-future-of-agentic-ai.md source_id=01KJTQRK4149XWRK6QFSAHABQX
+2026-04-08 06:37:04 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJTQRK41'" session_id=wiki_source_01KJTQRK41
+2026-04-08 06:37:04 [info     ] Bootstrapping source 233/611: AI 101: What is LeJEPA? The Theory Upgrade JEPA Has Been Mis
+2026-04-08 06:37:04 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:37:05 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:38:03 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJS121AX-ai-101-what-is-lejepa-the-theory-upgrade-jepa-has-been-missing.md
+2026-04-08 06:38:03 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJS121AX-ai-101-what-is-lejepa-the-theory-upgrade-jepa-has-been-missing.md source_id=01KJS121AXT6P054GA6WR7XMSD
+2026-04-08 06:38:03 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJS121AX'" session_id=wiki_source_01KJS121AX
+2026-04-08 06:38:03 [info     ] Bootstrapping source 234/611: The State of AI 2025
+2026-04-08 06:38:03 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:38:03 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:39:16 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJSZ9SXV-the-state-of-ai-2025.md
+2026-04-08 06:39:16 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJSZ9SXV-the-state-of-ai-2025.md source_id=01KJSZ9SXVD86JCE15747DC7Y9
+2026-04-08 06:39:16 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJSZ9SXV'" session_id=wiki_source_01KJSZ9SXV
+2026-04-08 06:39:16 [info     ] Bootstrapping source 235/611: On Path to Multimodal Generalist: General-Level and General-
+2026-04-08 06:39:16 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:39:16 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:40:21 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTWFJBZ-on-path-to-multimodal-generalist-general-level-and-general-bench.md
+2026-04-08 06:40:21 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTWFJBZ-on-path-to-multimodal-generalist-general-level-and-general-bench.md source_id=01KJTWFJBZ1R2CNXHP7QK26YT4
+2026-04-08 06:40:21 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJTWFJBZ'" session_id=wiki_source_01KJTWFJBZ
+2026-04-08 06:40:21 [info     ] Bootstrapping source 236/611: The RLVR Revolution — with Nathan Lambert (AI2, Interconnect
+2026-04-08 06:40:21 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:40:21 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:42:22 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVHHPD9-the-rlvr-revolution-with-nathan-lambert-ai2-interconnectsai.md
+2026-04-08 06:42:22 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVHHPD9-the-rlvr-revolution-with-nathan-lambert-ai2-interconnectsai.md source_id=01KJVHHPD9443DJX68M6RQG9S5
+2026-04-08 06:42:22 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJVHHPD9'" session_id=wiki_source_01KJVHHPD9
+2026-04-08 06:42:22 [info     ] Skipping source 237/611: Continual Learning via Sparse Memory Finetuning (already exists)
+2026-04-08 06:42:22 [info     ] Bootstrapping source 238/611: Revisiting Reinforcement Learning for LLM Reasoning from A C
+2026-04-08 06:42:22 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:42:22 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:43:48 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTQ0XQR-revisiting-reinforcement-learning-for-llm-reasoning-from-a-cross-domain-perspect.md
+2026-04-08 06:43:48 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTQ0XQR-revisiting-reinforcement-learning-for-llm-reasoning-from-a-cross-domain-perspect.md source_id=01KJTQ0XQRB50VSN951C5WB06K
+2026-04-08 06:43:48 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJTQ0XQR'" session_id=wiki_source_01KJTQ0XQR
+2026-04-08 06:43:48 [info     ] Skipping source 239/611: End-to-End Test-Time Training for Long Context (already exists)
+2026-04-08 06:43:48 [info     ] Bootstrapping source 240/611: TiDAR: Think in Diffusion, Talk in Autoregression
+2026-04-08 06:43:49 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:43:49 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:44:59 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJT9KDWV-tidar-think-in-diffusion-talk-in-autoregression.md
+2026-04-08 06:44:59 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJT9KDWV-tidar-think-in-diffusion-talk-in-autoregression.md source_id=01KJT9KDWV6TTNJE8D2DTFH3FE
+2026-04-08 06:44:59 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJT9KDWV'" session_id=wiki_source_01KJT9KDWV
+2026-04-08 06:44:59 [info     ] Bootstrapping source 241/611: Mixture-of-Recursions: Learning Dynamic Recursive Depths for
+2026-04-08 06:44:59 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:44:59 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:46:10 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTN8HBD-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-token-level.md
+2026-04-08 06:46:10 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTN8HBD-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-token-level.md source_id=01KJTN8HBDDB552EK3Q950SYDQ
+2026-04-08 06:46:10 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJTN8HBD'" session_id=wiki_source_01KJTN8HBD
+2026-04-08 06:46:10 [info     ] Bootstrapping source 242/611: GLM-4.5: Agentic, Reasoning, and Coding (ARC) Foundation Mod
+2026-04-08 06:46:11 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:46:11 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:47:41 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTMGSTS-glm-45-agentic-reasoning-and-coding-arc-foundation-models.md
+2026-04-08 06:47:41 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTMGSTS-glm-45-agentic-reasoning-and-coding-arc-foundation-models.md source_id=01KJTMGSTSRJEV5VTV93WVW7P9
+2026-04-08 06:47:41 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJTMGSTS'" session_id=wiki_source_01KJTMGSTS
+2026-04-08 06:47:41 [info     ] Bootstrapping source 243/611: Why o1 is a BIG deal
+2026-04-08 06:47:41 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:47:41 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:48:31 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVHWJNM-why-o1-is-a-big-deal.md
+2026-04-08 06:48:31 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVHWJNM-why-o1-is-a-big-deal.md source_id=01KJVHWJNMSKRJGJF4T97SY0Y4
+2026-04-08 06:48:31 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 32] 다른 프로세스가 파일을 사용 중이기 때문에 프로세스가 액세스 할 수 없습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJVHWJNM'" session_id=wiki_source_01KJVHWJNM
+2026-04-08 06:48:31 [info     ] Bootstrapping source 244/611: DeepSeek-V3.2: Pushing the Frontier of Open Large Language M
+2026-04-08 06:48:31 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:48:31 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:49:41 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJT6M5JK-deepseek-v32-pushing-the-frontier-of-open-large-language-models.md
+2026-04-08 06:49:41 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJT6M5JK-deepseek-v32-pushing-the-frontier-of-open-large-language-models.md source_id=01KJT6M5JKBJ868294SBFCSXDV
+2026-04-08 06:49:41 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 32] 다른 프로세스가 파일을 사용 중이기 때문에 프로세스가 액세스 할 수 없습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJT6M5JK'" session_id=wiki_source_01KJT6M5JK
+2026-04-08 06:49:41 [info     ] Bootstrapping source 245/611: DeepDive: Advancing Deep Search Agents with Knowledge Graphs
+2026-04-08 06:49:42 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:49:42 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:50:57 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTJNWNW-deepdive-advancing-deep-search-agents-with-knowledge-graphs-and-multi-turn-rl.md
+2026-04-08 06:50:57 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTJNWNW-deepdive-advancing-deep-search-agents-with-knowledge-graphs-and-multi-turn-rl.md source_id=01KJTJNWNWQRBPG1F3AXSTPPMJ
+2026-04-08 06:50:57 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 32] 다른 프로세스가 파일을 사용 중이기 때문에 프로세스가 액세스 할 수 없습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJTJNWNW'" session_id=wiki_source_01KJTJNWNW
+2026-04-08 06:50:57 [info     ] Bootstrapping source 246/611: Edwin Chen: Why Frontier Labs Are Diverging, RL Environments
+2026-04-08 06:50:57 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:50:57 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:52:06 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVEVAZF-edwin-chen-why-frontier-labs-are-diverging-rl-environments-developing-model-tast.md
+2026-04-08 06:52:06 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVEVAZF-edwin-chen-why-frontier-labs-are-diverging-rl-environments-developing-model-tast.md source_id=01KJVEVAZFBRQD3REYVMV4KKSA
+2026-04-08 06:52:06 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJVEVAZF'" session_id=wiki_source_01KJVEVAZF
+2026-04-08 06:52:06 [info     ] Bootstrapping source 247/611: From Bytes to Ideas: Language Modeling with Autoregressive U
+2026-04-08 06:52:06 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:52:06 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:53:19 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTPVV11-from-bytes-to-ideas-language-modeling-with-autoregressive-u-nets.md
+2026-04-08 06:53:19 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTPVV11-from-bytes-to-ideas-language-modeling-with-autoregressive-u-nets.md source_id=01KJTPVV117TGWN29DZEAS90WA
+2026-04-08 06:53:19 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJTPVV11'" session_id=wiki_source_01KJTPVV11
+2026-04-08 06:53:19 [info     ] Bootstrapping source 248/611: Ilya Sutskever – We're moving from the age of scaling to the
+2026-04-08 06:53:19 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:53:20 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:54:29 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVEQ1YV-ilya-sutskever-were-moving-from-the-age-of-scaling-to-the-age-of-research.md
+2026-04-08 06:54:29 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVEQ1YV-ilya-sutskever-were-moving-from-the-age-of-scaling-to-the-age-of-research.md source_id=01KJVEQ1YVKVV8HEEVNSR41YTY
+2026-04-08 06:54:29 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJVEQ1YV'" session_id=wiki_source_01KJVEQ1YV
+2026-04-08 06:54:29 [info     ] Bootstrapping source 249/611: KAN: Kolmogorov-Arnold Networks
+2026-04-08 06:54:29 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:54:29 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:55:39 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJV95THR-kan-kolmogorov-arnold-networks.md
+2026-04-08 06:55:39 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJV95THR-kan-kolmogorov-arnold-networks.md source_id=01KJV95THR703F5DVYH4ERZZAJ
+2026-04-08 06:55:39 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 32] 다른 프로세스가 파일을 사용 중이기 때문에 프로세스가 액세스 할 수 없습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJV95THR'" session_id=wiki_source_01KJV95THR
+2026-04-08 06:55:39 [info     ] Bootstrapping source 250/611: GEPA: Reflective Prompt Evolution Can Outperform Reinforceme
+2026-04-08 06:55:39 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:55:39 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:56:52 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTMXXZG-gepa-reflective-prompt-evolution-can-outperform-reinforcement-learning.md
+2026-04-08 06:56:52 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTMXXZG-gepa-reflective-prompt-evolution-can-outperform-reinforcement-learning.md source_id=01KJTMXXZGZQAMKDR6N10JMD1M
+2026-04-08 06:56:52 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 32] 다른 프로세스가 파일을 사용 중이기 때문에 프로세스가 액세스 할 수 없습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJTMXXZG'" session_id=wiki_source_01KJTMXXZG
+2026-04-08 06:56:52 [info     ] Bootstrapping source 251/611: Hallucination-Free? Assessing the Reliability of Leading AI
+2026-04-08 06:56:52 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:56:52 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:57:50 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVKC8GK-hallucination-free-assessing-the-reliability-of-leading-ai-legal-research-tools-.md
+2026-04-08 06:57:50 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVKC8GK-hallucination-free-assessing-the-reliability-of-leading-ai-legal-research-tools-.md source_id=01KJVKC8GKRBRF3DBE1JEBGXQS
+2026-04-08 06:57:50 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 32] 다른 프로세스가 파일을 사용 중이기 때문에 프로세스가 액세스 할 수 없습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJVKC8GK'" session_id=wiki_source_01KJVKC8GK
+2026-04-08 06:57:50 [info     ] Bootstrapping source 252/611: Continuous Thought Machines
+2026-04-08 06:57:50 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:57:50 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:58:54 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTVJC6B-continuous-thought-machines.md
+2026-04-08 06:58:54 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTVJC6B-continuous-thought-machines.md source_id=01KJTVJC6BWQXDBZ1WNG48GEC6
+2026-04-08 06:58:54 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 32] 다른 프로세스가 파일을 사용 중이기 때문에 프로세스가 액세스 할 수 없습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJTVJC6B'" session_id=wiki_source_01KJTVJC6B
+2026-04-08 06:58:54 [info     ] Bootstrapping source 253/611: Gemini 2.0 and the evolution of agentic AI | Oriol Vinyals
+2026-04-08 06:58:54 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:58:54 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:59:48 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVCZDP7-gemini-20-and-the-evolution-of-agentic-ai-oriol-vinyals.md
+2026-04-08 06:59:48 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVCZDP7-gemini-20-and-the-evolution-of-agentic-ai-oriol-vinyals.md source_id=01KJVCZDP73VPE1VJ0WWPX91MR
+2026-04-08 06:59:48 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 32] 다른 프로세스가 파일을 사용 중이기 때문에 프로세스가 액세스 할 수 없습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJVCZDP7'" session_id=wiki_source_01KJVCZDP7
+2026-04-08 06:59:48 [info     ] Bootstrapping source 254/611: OpenAI's Noam Brown, Ilge Akkaya and Hunter Lightman on o1 a
+2026-04-08 06:59:48 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 06:59:48 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 07:00:53 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVGWEGP-openais-noam-brown-ilge-akkaya-and-hunter-lightman-on-o1-and-teaching-llms-to-re.md
+2026-04-08 07:00:53 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVGWEGP-openais-noam-brown-ilge-akkaya-and-hunter-lightman-on-o1-and-teaching-llms-to-re.md source_id=01KJVGWEGPG3S8AK3KEBP7MQJT
+2026-04-08 07:00:53 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 32] 다른 프로세스가 파일을 사용 중이기 때문에 프로세스가 액세스 할 수 없습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJVGWEGP'" session_id=wiki_source_01KJVGWEGP
+2026-04-08 07:00:53 [info     ] Bootstrapping source 255/611: ProRL: Prolonged Reinforcement Learning Expands Reasoning Bo
+2026-04-08 07:00:53 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 07:00:53 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 07:02:02 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTQXNA5-prorl-prolonged-reinforcement-learning-expands-reasoning-boundaries-in-large-lan.md
+2026-04-08 07:02:02 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTQXNA5-prorl-prolonged-reinforcement-learning-expands-reasoning-boundaries-in-large-lan.md source_id=01KJTQXNA5QQQPTXXWJTJ2RBM0
+2026-04-08 07:02:02 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 32] 다른 프로세스가 파일을 사용 중이기 때문에 프로세스가 액세스 할 수 없습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJTQXNA5'" session_id=wiki_source_01KJTQXNA5
+2026-04-08 07:02:02 [info     ] Bootstrapping source 256/611: How we built our multi-agent research system
+2026-04-08 07:02:02 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 07:02:02 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 07:03:11 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJSSFMZ0-how-we-built-our-multi-agent-research-system.md
+2026-04-08 07:03:11 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJSSFMZ0-how-we-built-our-multi-agent-research-system.md source_id=01KJSSFMZ0912J92PBT3Y9R709
+2026-04-08 07:03:11 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 32] 다른 프로세스가 파일을 사용 중이기 때문에 프로세스가 액세스 할 수 없습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJSSFMZ0'" session_id=wiki_source_01KJSSFMZ0
+2026-04-08 07:03:11 [info     ] Bootstrapping source 257/611: Continual Learning in Vision-Language Models via Aligned Mod
+2026-04-08 07:03:11 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 07:03:11 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 07:05:13 [warning  ] cli_timeout                    backend_id=claude timeout_s=120
+2026-04-08 07:05:13 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTQZ7NZ-continual-learning-in-vision-language-models-via-aligned-model-merging.md
+2026-04-08 07:05:13 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTQZ7NZ-continual-learning-in-vision-language-models-via-aligned-model-merging.md source_id=01KJTQZ7NZ2SYVQ3B1TP79G4RQ
+2026-04-08 07:05:13 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJTQZ7NZ'" session_id=wiki_source_01KJTQZ7NZ
+2026-04-08 07:05:13 [info     ] Bootstrapping source 258/611: Sample, Scrutinize and Scale: Effective Inference-Time Searc
+2026-04-08 07:05:13 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 07:05:13 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 07:06:31 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJV3X90H-sample-scrutinize-and-scale-effective-inference-time-search-by-scaling-verificat.md
+2026-04-08 07:06:31 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJV3X90H-sample-scrutinize-and-scale-effective-inference-time-search-by-scaling-verificat.md source_id=01KJV3X90H49CTVN35T1QDQR8V
+2026-04-08 07:06:31 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJV3X90H'" session_id=wiki_source_01KJV3X90H
+2026-04-08 07:06:31 [info     ] Bootstrapping source 259/611: Welcome to the Era of Experience
+2026-04-08 07:06:31 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 07:06:31 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 07:07:32 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KKT2RD0V-welcome-to-the-era-of-experience.md
+2026-04-08 07:07:32 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KKT2RD0V-welcome-to-the-era-of-experience.md source_id=01KKT2RD0VB7YHASW6CG1Y7GAX
+2026-04-08 07:07:32 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KKT2RD0V'" session_id=wiki_source_01KKT2RD0V
+2026-04-08 07:07:32 [info     ] Bootstrapping source 260/611: AToken: A Unified Tokenizer for Vision
+2026-04-08 07:07:32 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 07:07:32 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 07:08:50 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTHGA5B-atoken-a-unified-tokenizer-for-vision.md
+2026-04-08 07:08:50 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTHGA5B-atoken-a-unified-tokenizer-for-vision.md source_id=01KJTHGA5BCZVCN40DFCS6MMV8
+2026-04-08 07:08:50 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJTHGA5B'" session_id=wiki_source_01KJTHGA5B
+2026-04-08 07:08:50 [info     ] Bootstrapping source 261/611: ParaThinker: Native Parallel Thinking as a New Paradigm to S
+2026-04-08 07:08:50 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 07:08:50 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 07:09:51 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTM1K7F-parathinker-native-parallel-thinking-as-a-new-paradigm-to-scale-llm-test-time-co.md
+2026-04-08 07:09:51 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTM1K7F-parathinker-native-parallel-thinking-as-a-new-paradigm-to-scale-llm-test-time-co.md source_id=01KJTM1K7FTHXQE1VVYGNH182B
+2026-04-08 07:09:51 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJTM1K7F'" session_id=wiki_source_01KJTM1K7F
+2026-04-08 07:09:51 [info     ] Bootstrapping source 262/611: The $4.6T Services-as-Software opportunity: Lessons from the
+2026-04-08 07:09:51 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 07:09:51 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 07:10:59 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KKT3D2HY-the-46t-services-as-software-opportunity-lessons-from-the-first-year-foundation-.md
+2026-04-08 07:10:59 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KKT3D2HY-the-46t-services-as-software-opportunity-lessons-from-the-first-year-foundation-.md source_id=01KKT3D2HYXVQZJ7FS9DY10ESR
+2026-04-08 07:10:59 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KKT3D2HY'" session_id=wiki_source_01KKT3D2HY
+2026-04-08 07:10:59 [info     ] Bootstrapping source 263/611: Universal Reasoning Model
+2026-04-08 07:10:59 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 07:10:59 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 07:12:02 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJT367PQ-universal-reasoning-model.md
+2026-04-08 07:12:02 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJT367PQ-universal-reasoning-model.md source_id=01KJT367PQH5AMY5RR637P4TC2
+2026-04-08 07:12:02 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJT367PQ'" session_id=wiki_source_01KJT367PQ
+2026-04-08 07:12:02 [info     ] Bootstrapping source 264/611: OmniGen2: Exploration to Advanced Multimodal Generation
+2026-04-08 07:12:03 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 07:12:03 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 07:13:22 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTPFD62-omnigen2-exploration-to-advanced-multimodal-generation.md
+2026-04-08 07:13:22 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTPFD62-omnigen2-exploration-to-advanced-multimodal-generation.md source_id=01KJTPFD62H29TJN51149EYX48
+2026-04-08 07:13:22 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJTPFD62'" session_id=wiki_source_01KJTPFD62
+2026-04-08 07:13:22 [info     ] Bootstrapping source 265/611: Video models are zero-shot learners and reasoners
+2026-04-08 07:13:22 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 07:13:22 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 07:15:25 [warning  ] cli_timeout                    backend_id=claude timeout_s=120
+2026-04-08 07:15:25 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTG79VB-video-models-are-zero-shot-learners-and-reasoners.md
+2026-04-08 07:15:25 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTG79VB-video-models-are-zero-shot-learners-and-reasoners.md source_id=01KJTG79VBC96CY7VWVCFC7R79
+2026-04-08 07:15:25 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJTG79VB'" session_id=wiki_source_01KJTG79VB
+2026-04-08 07:15:25 [info     ] Bootstrapping source 266/611: JustRL: Scaling a 1.5B LLM with a Simple RL Recipe
+2026-04-08 07:15:25 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 07:15:25 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 07:16:24 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJT4HR3T-justrl-scaling-a-15b-llm-with-a-simple-rl-recipe.md
+2026-04-08 07:16:24 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJT4HR3T-justrl-scaling-a-15b-llm-with-a-simple-rl-recipe.md source_id=01KJT4HR3TEMPSE4GSAZTX81PK
+2026-04-08 07:16:24 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJT4HR3T'" session_id=wiki_source_01KJT4HR3T
+2026-04-08 07:16:24 [info     ] Bootstrapping source 267/611: REFRAG: Rethinking RAG based Decoding
+2026-04-08 07:16:24 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 07:16:24 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 07:18:25 [warning  ] cli_timeout                    backend_id=claude timeout_s=120
+2026-04-08 07:18:25 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTKWSMK-refrag-rethinking-rag-based-decoding.md
+2026-04-08 07:18:25 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTKWSMK-refrag-rethinking-rag-based-decoding.md source_id=01KJTKWSMKJ3SMNHSW8EDA0W5J
+2026-04-08 07:18:25 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJTKWSMK'" session_id=wiki_source_01KJTKWSMK
+2026-04-08 07:18:25 [info     ] Bootstrapping source 268/611: OpenClaw: The Viral AI Agent that Broke the Internet - Peter
+2026-04-08 07:18:25 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 07:18:25 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 07:20:26 [warning  ] cli_timeout                    backend_id=claude timeout_s=120
+2026-04-08 07:20:26 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KM251Q7Y-openclaw-the-viral-ai-agent-that-broke-the-internet-peter-steinberger-lex-fridma.md
+2026-04-08 07:20:26 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KM251Q7Y-openclaw-the-viral-ai-agent-that-broke-the-internet-peter-steinberger-lex-fridma.md source_id=01KM251Q7YS8AVZ865XHJ9XXAN
+2026-04-08 07:20:26 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KM251Q7Y'" session_id=wiki_source_01KM251Q7Y
+2026-04-08 07:20:26 [info     ] Skipping source 269/611: Scaling Agent Learning via Experience Synthesis (already exists)
+2026-04-08 07:20:26 [info     ] Bootstrapping source 270/611: Mem0: Building Production-Ready AI Agents with Scalable Long
+2026-04-08 07:20:26 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 07:20:26 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 07:21:26 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTX3SHM-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md
+2026-04-08 07:21:26 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTX3SHM-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md source_id=01KJTX3SHMY366241QS9H18VP9
+2026-04-08 07:21:26 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 32] 다른 프로세스가 파일을 사용 중이기 때문에 프로세스가 액세스 할 수 없습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJTX3SHM'" session_id=wiki_source_01KJTX3SHM
+2026-04-08 07:21:26 [info     ] Bootstrapping source 271/611: Thinking vs. Doing: Agents that Reason by Scaling Test-Time
+2026-04-08 07:21:26 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 07:21:26 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 07:22:27 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTQH657-thinking-vs-doing-agents-that-reason-by-scaling-test-time-interaction.md
+2026-04-08 07:22:27 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTQH657-thinking-vs-doing-agents-that-reason-by-scaling-test-time-interaction.md source_id=01KJTQH65719Z4P50D125AY4H2
+2026-04-08 07:22:27 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 32] 다른 프로세스가 파일을 사용 중이기 때문에 프로세스가 액세스 할 수 없습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJTQH657'" session_id=wiki_source_01KJTQH657
+2026-04-08 07:22:27 [info     ] Bootstrapping source 272/611: $π^{*}_{0.6}$: a VLA That Learns From Experience
+2026-04-08 07:22:27 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 07:22:27 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 07:24:29 [warning  ] cli_timeout                    backend_id=claude timeout_s=120
+2026-04-08 07:24:29 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJT838Q9-π-06-a-vla-that-learns-from-experience.md
+2026-04-08 07:24:29 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJT838Q9-π-06-a-vla-that-learns-from-experience.md source_id=01KJT838Q90YE4TNFW85BGDGQB
+2026-04-08 07:24:29 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 32] 다른 프로세스가 파일을 사용 중이기 때문에 프로세스가 액세스 할 수 없습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJT838Q9'" session_id=wiki_source_01KJT838Q9
+2026-04-08 07:24:29 [info     ] Bootstrapping source 273/611: A Comprehensive Survey of Self-Evolving AI Agents: A New Par
+2026-04-08 07:24:30 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 07:24:30 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 07:26:32 [warning  ] cli_timeout                    backend_id=claude timeout_s=120
+2026-04-08 07:26:32 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTKZK03-a-comprehensive-survey-of-self-evolving-ai-agents-a-new-paradigm-bridging-founda.md
+2026-04-08 07:26:32 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTKZK03-a-comprehensive-survey-of-self-evolving-ai-agents-a-new-paradigm-bridging-founda.md source_id=01KJTKZK03YVKP1SXPM67EFTWB
+2026-04-08 07:26:32 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 32] 다른 프로세스가 파일을 사용 중이기 때문에 프로세스가 액세스 할 수 없습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJTKZK03'" session_id=wiki_source_01KJTKZK03
+2026-04-08 07:26:32 [info     ] Bootstrapping source 274/611: Dynamic Cheatsheet: Test-Time Learning with Adaptive Memory
+2026-04-08 07:26:32 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 07:26:32 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 07:28:33 [warning  ] cli_timeout                    backend_id=claude timeout_s=120
+2026-04-08 07:28:33 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTZZW1M-dynamic-cheatsheet-test-time-learning-with-adaptive-memory.md
+2026-04-08 07:28:33 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJTZZW1M-dynamic-cheatsheet-test-time-learning-with-adaptive-memory.md source_id=01KJTZZW1MNKKNZCX5GTN3Y8RR
+2026-04-08 07:28:33 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 32] 다른 프로세스가 파일을 사용 중이기 때문에 프로세스가 액세스 할 수 없습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJTZZW1M'" session_id=wiki_source_01KJTZZW1M
+2026-04-08 07:28:33 [info     ] Bootstrapping source 275/611: Deep Learning with Python, Third Edition
+2026-04-08 07:28:33 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 07:28:33 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 07:30:36 [warning  ] cli_timeout                    backend_id=claude timeout_s=120
+2026-04-08 07:30:36 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJS2NG3H-deep-learning-with-python-third-edition.md
+2026-04-08 07:30:36 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJS2NG3H-deep-learning-with-python-third-edition.md source_id=01KJS2NG3HVY704JZB9PGN5ZGA
+2026-04-08 07:30:36 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJS2NG3H'" session_id=wiki_source_01KJS2NG3H
+2026-04-08 07:30:36 [info     ] Skipping source 276/611: ARE: Scaling Up Agent Environments and Evaluations (already exists)
+2026-04-08 07:30:36 [info     ] Skipping source 277/611: Why Language Models Hallucinate (already exists)
+2026-04-08 07:30:36 [info     ] Skipping source 278/611: The Markovian Thinker: Architecture-Agnostic Linear Scaling  (already exists)
+2026-04-08 07:30:36 [info     ] Skipping source 279/611: Reverse engineering OpenAI’s o1 (already exists)
+2026-04-08 07:30:36 [info     ] Skipping source 280/611: Inside OpenAI's New Agent Development Tools (already exists)
+2026-04-08 07:30:36 [info     ] Skipping source 281/611: Scaling Latent Reasoning via Looped Language Models (already exists)
+2026-04-08 07:30:36 [info     ] Skipping source 282/611: $π_{0.5}$: a Vision-Language-Action Model with Open-World Ge (already exists)
+2026-04-08 07:30:36 [info     ] Skipping source 283/611: Agent models: Internalizing Chain-of-Action Generation into  (already exists)
+2026-04-08 07:30:36 [info     ] Skipping source 284/611: Evolution Strategies at the Hyperscale (already exists)
+2026-04-08 07:30:36 [info     ] Skipping source 285/611: ATLAS: Learning to Optimally Memorize the Context at Test Ti (already exists)
+2026-04-08 07:30:36 [info     ] Skipping source 286/611: Generative AI’s Act o1 (already exists)
+2026-04-08 07:30:36 [info     ] Skipping source 287/611: Context Engineering (already exists)
+2026-04-08 07:30:36 [info     ] Skipping source 288/611: Darwin Godel Machine: Open-Ended Evolution of Self-Improving (already exists)
+2026-04-08 07:30:36 [info     ] Skipping source 289/611: HealthBench: Evaluating Large Language Models (already exists)
+2026-04-08 07:30:36 [info     ] Skipping source 290/611: ReasoningBank: Scaling Agent Self-Evolving with Reasoning Me (already exists)
+2026-04-08 07:30:36 [info     ] Skipping source 291/611: Agent Learning via Early Experience (already exists)
+2026-04-08 07:30:36 [info     ] Skipping source 292/611: e3: Learning to Explore Enables Extrapolation of Test-Time C (already exists)
+2026-04-08 07:30:36 [info     ] Skipping source 293/611: Qwen3 Technical Report (already exists)
+2026-04-08 07:30:36 [info     ] Skipping source 294/611: Thinking, Searching, and Acting (already exists)
+2026-04-08 07:30:36 [info     ] Skipping source 295/611: Genie: Generative Interactive Environments (already exists)
+2026-04-08 07:30:36 [info     ] Skipping source 296/611: The Universal Weight Subspace Hypothesis (already exists)
+2026-04-08 07:30:36 [info     ] Bootstrapping source 297/611: ⚡️ARC-AGI-3: The Interactive Reasoning Benchmark
+2026-04-08 07:30:36 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 07:30:36 [info     ] cli_resolved_direct            backend_id=claude cli_js=C:\Users\sehyu\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\cli.js node='C:\\Program Files\\nodejs\\node.EXE'
+2026-04-08 07:32:40 [warning  ] cli_timeout                    backend_id=claude timeout_s=120
+2026-04-08 07:32:40 [warning  ] circuit_breaker_opened         backend_id=claude consecutive_failures=5 cooldown_s=120.0
+2026-04-08 07:32:40 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVGT3EJ-arc-agi-3-the-interactive-reasoning-benchmark.md
+2026-04-08 07:32:40 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVGT3EJ-arc-agi-3-the-interactive-reasoning-benchmark.md source_id=01KJVGT3EJ8E8A41Y8JZAD685S
+2026-04-08 07:32:40 [warning  ] session_cleanup_failed         backend_id=None error="[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\sehyu\\\\Documents\\\\Other\\\\Projects\\\\knowledge_base\\\\workspace\\\\claude__wiki_source_01KJVGT3EJ'" session_id=wiki_source_01KJVGT3EJ
+2026-04-08 07:32:40 [info     ] Skipping source 298/611: 2025-3-18 (already exists)
+2026-04-08 07:32:40 [info     ] Skipping source 299/611: AGI, The Future of AI Agents And The Next Wave of Opportunit (already exists)
+2026-04-08 07:32:40 [info     ] Skipping source 300/611: Quiet-STaR: Language Models Can Teach Themselves to Think Be (already exists)
+2026-04-08 07:32:40 [info     ] Skipping source 301/611: Reflexion: Language Agents with Verbal Reinforcement Learnin (already exists)
+2026-04-08 07:32:40 [info     ] Skipping source 302/611: Building A Generative AI Platform (already exists)
+2026-04-08 07:32:40 [info     ] Skipping source 303/611: Writing-Zero: Bridge the Gap Between Non-verifiable Tasks an (already exists)
+2026-04-08 07:32:40 [info     ] Skipping source 304/611: Towards Conversational AI for Disease Management (already exists)
+2026-04-08 07:32:40 [info     ] Skipping source 305/611: Beyond Binary Rewards: Training LMs to Reason About Their Un (already exists)
+2026-04-08 07:32:40 [info     ] Skipping source 306/611: ColPali: Efficient Document Retrieval with Vision Language M (already exists)
+2026-04-08 07:32:40 [info     ] Skipping source 307/611: MEM1: Learning to Synergize Memory and Reasoning for Efficie (already exists)
+2026-04-08 07:32:40 [info     ] Skipping source 308/611: OmniHuman-1: Rethinking the Scaling-Up of One-Stage Conditio (already exists)
+2026-04-08 07:32:40 [info     ] Skipping source 309/611: Training Agents Inside of Scalable World Models (already exists)
+2026-04-08 07:32:40 [info     ] Skipping source 310/611: From Words to Worlds: Spatial Intelligence is AI’s Next Fron (already exists)
+2026-04-08 07:32:40 [info     ] Skipping source 311/611: The Unreasonable Effectiveness of Entropy Minimization in LL (already exists)
+2026-04-08 07:32:40 [info     ] Skipping source 312/611: SIMA 2: A Generalist Embodied Agent for Virtual Worlds (already exists)
+2026-04-08 07:32:40 [info     ] Skipping source 313/611: Speculations on Test-Time Scaling (o1) (already exists)
+2026-04-08 07:32:40 [info     ] Skipping source 314/611: What it takes to build AI agents that actually work - Founda (already exists)
+2026-04-08 07:32:40 [info     ] Skipping source 315/611: Qwen2.5-Omni Technical Report (already exists)
+2026-04-08 07:32:40 [info     ] Skipping source 316/611: Process Reinforcement through Implicit Rewards (already exists)
+2026-04-08 07:32:40 [info     ] Skipping source 317/611: Unified Vision-Language-Action Model (already exists)
+2026-04-08 07:32:40 [info     ] Skipping source 318/611: Reflection AI’s Misha Laskin on the AlphaGo Moment for LLMs  (already exists)
+2026-04-08 07:32:40 [info     ] Skipping source 319/611: New in Nature: Google Agents Beat Human Doctors, Make Scient (already exists)
+2026-04-08 07:32:40 [info     ] Skipping source 320/611: He Co-Invented the Transformer. Now: Continuous Thought Mach (already exists)
+2026-04-08 07:32:40 [info     ] Skipping source 321/611: What comes next with reinforcement learning (already exists)
+2026-04-08 07:32:40 [info     ] Skipping source 322/611: Math-Shepherd: Verify and Reinforce LLMs Step-by-step withou (already exists)
+2026-04-08 07:32:40 [info     ] Skipping source 323/611: NaturalThoughts: Selecting and Distilling Reasoning Traces f (already exists)
+2026-04-08 07:32:40 [info     ] Skipping source 324/611: The Path Not Taken: RLVR Provably Learns Off the Principals (already exists)
+2026-04-08 07:32:40 [info     ] Skipping source 325/611: PAN: A World Model for General, Interactable, and Long-Horiz (already exists)
+2026-04-08 07:32:40 [info     ] Skipping source 326/611: LLM-JEPA: Large Language Models Meet Joint Embedding Predict (already exists)
+2026-04-08 07:32:40 [info     ] Skipping source 327/611: AlphaEvolve: A coding agent for scientific and (already exists)
+2026-04-08 07:32:40 [info     ] Skipping source 328/611: h1: Bootstrapping LLMs to Reason over Longer Horizons via Re (already exists)
+2026-04-08 07:32:40 [info     ] Skipping source 329/611: Reinforcement Learning Improves Traversal of Hierarchical Kn (already exists)
+2026-04-08 07:32:40 [info     ] Skipping source 330/611: Agentic Context Engineering: Evolving Contexts for Self-Impr (already exists)
+2026-04-08 07:32:40 [info     ] Skipping source 331/611: Parallel Scaling Law for Language Models (already exists)
+2026-04-08 07:32:40 [info     ] Skipping source 332/611: Log-Linear Attention (already exists)
+2026-04-08 07:32:40 [info     ] Skipping source 333/611: Helix: A Vision-Language-Action Model for Generalist Humanoi (already exists)
+2026-04-08 07:32:40 [info     ] Skipping source 334/611: World and Human Action Models towards gameplay ideation - Na (already exists)
+2026-04-08 07:32:40 [info     ] Skipping source 335/611: Thinking Augmented Pre-training (already exists)
+2026-04-08 07:32:40 [info     ] Skipping source 336/611: Process Reward Models That Think (already exists)
+2026-04-08 07:32:40 [info     ] Bootstrapping source 337/611: Scaling Test Time Compute to Multi-Agent Civilizations — Noa
+2026-04-08 07:32:40 [warning  ] circuit_breaker_rejected       backend_id=claude session_id=wiki_source_01KJVH03BZ
+2026-04-08 07:32:40 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVH03BZ-scaling-test-time-compute-to-multi-agent-civilizations-noam-brown-openai.md
+2026-04-08 07:32:40 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVH03BZ-scaling-test-time-compute-to-multi-agent-civilizations-noam-brown-openai.md source_id=01KJVH03BZQ19MPYYZFNY9E9QE
+2026-04-08 07:32:40 [info     ] Skipping source 338/611: Voila: Voice-Language Foundation Models for Real-Time Autono (already exists)
+2026-04-08 07:32:40 [info     ] Skipping source 339/611: DiffuCoder: Understanding and Improving Masked Diffusion Mod (already exists)
+2026-04-08 07:32:40 [info     ] Skipping source 340/611: General agents contain world models (already exists)
+2026-04-08 07:32:40 [info     ] Skipping source 341/611: Proc4Gem: Foundation models for physical agency through proc (already exists)
+2026-04-08 07:32:40 [info     ] Skipping source 342/611: A taxonomy for next-generation reasoning models (already exists)
+2026-04-08 07:32:40 [info     ] Skipping source 343/611: A-MEM: Agentic Memory for LLM Agents (already exists)
+2026-04-08 07:32:40 [info     ] Skipping source 344/611: Reflect, Retry, Reward: Self-Improving LLMs via Reinforcemen (already exists)
+2026-04-08 07:32:40 [info     ] Skipping source 345/611: Agent0: Unleashing Self-Evolving Agents from Zero Data via T (already exists)
+2026-04-08 07:32:40 [info     ] Skipping source 346/611: Roadmap: Developer Tooling for Software 3.0 (already exists)
+2026-04-08 07:32:40 [info     ] Skipping source 347/611: The Diffusion Duality (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 348/611: Stream of Search (SoS): Learning to Search in Language (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 349/611: Test-Time Training Done Right (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 350/611: Open-o3 Video: Grounded Video Reasoning with Explicit Spatio (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 351/611: Building Effective AI Agents (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 352/611: Ming-Lite-Uni: Advancements in Unified Architecture for Natu (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 353/611: Robix: A Unified Model for Robot Interaction, Reasoning and  (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 354/611: Evolution Strategies at Scale: LLM Fine-Tuning Beyond Reinfo (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 355/611: LoongRL: Reinforcement Learning for Advanced Reasoning over  (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 356/611: Getting 50% (SoTA) on ARC-AGI with GPT-4o (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 357/611: The 2025 AI Search Race (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 358/611: Roadmap: Data 3.0 in the Lakehouse Era (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 359/611: RLAIF vs. RLHF: Scaling Reinforcement Learning from Human Fe (already exists)
+2026-04-08 07:32:41 [info     ] Bootstrapping source 360/611: How GPT-5 Thinks — OpenAI VP of Research Jerry Tworek
+2026-04-08 07:32:41 [warning  ] circuit_breaker_rejected       backend_id=claude session_id=wiki_source_01KJVF0TDN
+2026-04-08 07:32:41 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVF0TDN-how-gpt-5-thinks-openai-vp-of-research-jerry-tworek.md
+2026-04-08 07:32:41 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVF0TDN-how-gpt-5-thinks-openai-vp-of-research-jerry-tworek.md source_id=01KJVF0TDNJTX98GKVNDR444RS
+2026-04-08 07:32:41 [info     ] Skipping source 361/611: CoT-VLA: Visual Chain-of-Thought Reasoning for Vision-Langua (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 362/611: The Hidden Drivers of HRM's Performance on ARC-AGI (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 363/611: Diffusion Beats Autoregressive in Data-Constrained Settings (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 364/611: Self-Adapting Language Models (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 365/611: Toward Training Superintelligent Software Agents through Sel (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 366/611: Claude's extended thinking (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 367/611: Tiny Model, Big Logic: Diversity-Driven Optimization Elicits (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 368/611: Reinforcement Learning via Self-Distillation (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 369/611: Build the web for agents, not agents for the web (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 370/611: Some ideas for what comes next (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 371/611: ArcMemo: Abstract Reasoning Composition with Lifelong LLM Me (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 372/611: OpenAI's o3: Over-optimization is back and weirder than ever (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 373/611: Part I: The future of AI is vertical (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 374/611: Q*: Improving Multi-step Reasoning for LLMs with Deliberativ (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 375/611: WorldVLA: Towards Autoregressive Action World Model (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 376/611: Reinforcement learning with random rewards actually works wi (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 377/611: Emerging Properties in Unified Multimodal Pretraining (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 378/611: Multi-Agent Collaboration via Evolving Orchestration (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 379/611: Inference Time Compute (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 380/611: Reinforcement Learning on Pre-Training Data (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 381/611: RL's Razor: Why Online Reinforcement Learning Forgets Less (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 382/611: Virtual Worlds Mean Real Business: How Games Power the Futur (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 383/611: How Systems of Agents will collapse the enterprise stack - F (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 384/611: SkillWeaver: Web Agents can Self-Improve by Discovering and  (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 385/611: DON’T THROW THE BABY OUT WITH THE BATHWATER: HOW (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 386/611: Universal Deep Research: Bring Your Own Model and Strategy (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 387/611: Learning to Discover at Test Time (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 388/611: The Automated LLM Speedrunning Benchmark: Reproducing NanoGP (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 389/611: RL Environments and the Hierarchy of Agentic Capabilities (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 390/611: Reasoning Models Can Be Effective Without Thinking (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 391/611: RL backlog: OpenAI's many RLs, clarifying distillation, and  (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 392/611: Project Vend: Can Claude run a small shop? (And why does tha (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 393/611: Eureka: Human-Level Reward Design via Coding Large Language  (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 394/611: WMPO: World Model-based Policy Optimization for Vision-Langu (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 395/611: General-Reasoner: Advancing LLM Reasoning Across All Domains (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 396/611: Thoughts on AI progress (Dec 2025) (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 397/611: WorldGen: From Text to Traversable and Interactive 3D Worlds (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 398/611: Beyond Semantics: The Unreasonable Effectiveness of Reasonle (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 399/611: How much do language models memorize? (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 400/611: DrEureka: Language Model Guided Sim-To-Real Transfer (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 401/611: Monitoring Reasoning Models for Misbehavior and the Risks of (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 402/611: Does Math Reasoning Improve General LLM Capabilities? Unders (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 403/611: The Platonic Representation Hypothesis (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 404/611: How I came in first on ARC-AGI-Pub using Sonnet 3.5 with Evo (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 405/611: QLASS: Boosting Language Agent Inference via Q-Guided Stepwi (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 406/611: Demystifying Reinforcement Learning in Agentic Reasoning (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 407/611: Vision-R1: Incentivizing Reasoning Capability in Multimodal  (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 408/611: Chain-of-Thought Reasoning Without Prompting (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 409/611: ACEBench: Who Wins the Match Point in Tool Usage? (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 410/611: Spurious Rewards: Rethinking Training Signals in RLVR (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 411/611: ReTool: Reinforcement Learning for Strategic Tool Use in LLM (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 412/611: Where inference-time scaling pushes the market for AI compan (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 413/611: Visual Autoregressive Modeling: Scalable Image Generation vi (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 414/611: Recursive Language Models (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 415/611: rStar2-Agent: Agentic Reasoning Technical Report (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 416/611: The Majority is not always right: RL training for solution a (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 417/611: On the Theoretical Limitations of Embedding-Based Retrieval (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 418/611: Grounded Reinforcement Learning for Visual Reasoning (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 419/611: Reinforcement Learning for Reasoning in Large Language Model (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 420/611: ChatGPT: The Agentic App (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 421/611: Contra Dwarkesh on Continual Learning (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 422/611: New tools for building agents (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 423/611: RoboScape: Physics-informed Embodied World Model (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 424/611: 2025 LLM Year in Review (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 425/611: Skywork R1V2: Multimodal Hybrid Reinforcement Learning for R (already exists)
+2026-04-08 07:32:41 [info     ] Bootstrapping source 426/611: Why RL Won — Kyle Corbitt, OpenPipe (acq. CoreWeave)
+2026-04-08 07:32:41 [warning  ] circuit_breaker_rejected       backend_id=claude session_id=wiki_source_01KJVERVWW
+2026-04-08 07:32:41 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVERVWW-why-rl-won-kyle-corbitt-openpipe-acq-coreweave.md
+2026-04-08 07:32:41 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJVERVWW-why-rl-won-kyle-corbitt-openpipe-acq-coreweave.md source_id=01KJVERVWWKQ1EY0CX0E9RG165
+2026-04-08 07:32:41 [info     ] Skipping source 427/611: Paper2Code: Automating Code Generation from Scientific Paper (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 428/611: On the “ARC-AGI” $1 Million Reasoning Challenge (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 429/611: Thinking with Programming Vision: Towards a Unified View for (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 430/611: Gemini Deep Think: Redefining the Future of Scientific Resea (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 431/611: Thinkless: LLM Learns When to Think (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 432/611: Tina: Tiny Reasoning Models via LoRA (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 433/611: GPT-5 Hands-On: Welcome to the Stone Age (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 434/611: Titans + MIRAS: Helping AI have long-term memory (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 435/611: How AI agents will redefine market research - Foundation Cap (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 436/611: When model providers eat everything: A survival guide for Se (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 437/611: ToRL: Scaling Tool-Integrated RL (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 438/611: Beyond Bots: How AI Agents Are Driving the Next Wave of Ente (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 439/611: Inference-Time Scaling for Generalist Reward Modeling (already exists)
+2026-04-08 07:32:41 [info     ] Bootstrapping source 440/611: 🦸🏻#14: What Is MCP, and Why Is Everyone – Suddenly!– Talking
+2026-04-08 07:32:41 [warning  ] circuit_breaker_rejected       backend_id=claude session_id=wiki_source_01KJSVWTEZ
+2026-04-08 07:32:41 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJSVWTEZ-14-what-is-mcp-and-why-is-everyone-suddenly-talking-about-it.md
+2026-04-08 07:32:41 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJSVWTEZ-14-what-is-mcp-and-why-is-everyone-suddenly-talking-about-it.md source_id=01KJSVWTEZDFZAKWJR18MB2090
+2026-04-08 07:32:41 [info     ] Skipping source 441/611: Language Agent Tree Search Unifies Reasoning Acting and Plan (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 442/611: Token-Shuffle: Towards High-Resolution Image Generation with (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 443/611: Meta-RL Induces Exploration in Language Agents (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 444/611: V-Thinker: Interactive Thinking with Images (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 445/611: What Characterizes Effective Reasoning? Revisiting Length, R (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 446/611: Can Latent Program Networks Solve Abstract Reasoning? [Cleme (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 447/611: Kimi K2: Open Agentic Intelligence (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 448/611: Ring Attention with Blockwise Transformers for Near-Infinite (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 449/611: SWE-RL: Advancing LLM Reasoning via Reinforcement Learning o (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 450/611: MMaDA: Multimodal Large Diffusion Language Models (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 451/611: Sleep-time Compute: Beyond Inference Scaling at Test-time (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 452/611: The AI Scientist-v2: Workshop-Level Automated Scientific Dis (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 453/611: Beyond the 80/20 Rule: High-Entropy Minority Tokens Drive Ef (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 454/611: LLM Pretraining with Continuous Concepts (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 455/611: The Second Half (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 456/611: Vision-native AI opportunities: a precursor to intelligent r (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 457/611: Learning without training: The implicit dynamics of in-conte (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 458/611: OpenAI o3 Breakthrough High Score on ARC-AGI-Pub (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 459/611: Synthetic Data Generation & Multi-Step RL for Reasoning & To (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 460/611: When you give a Claude a mouse (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 461/611: Towards General Agentic Intelligence via Environment Scaling (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 462/611: ZebraLogic: On the Scaling Limits of LLMs for Logical Reason (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 463/611: Unlocking the Power of Multi-Agent LLM for Reasoning: From L (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 464/611: MobileLLM-R1: Exploring the Limits of Sub-Billion Language M (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 465/611: On the Interplay of Pre-Training, Mid-Training, and RL on Re (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 466/611: ColorAgent: Building A Robust, Personalized, and Interactive (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 467/611: The API Battleground: A New Era of Platform Wars | Andreesse (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 468/611: Scaling up Test-Time Compute with Latent Reasoning: A Recurr (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 469/611: Part II: Multimodal capabilities unlock new opportunities in (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 470/611: VideoExplorer: Think With Videos For Agentic Long-Video Unde (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 471/611: Agentic Memory: Learning Unified Long-Term and Short-Term Me (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 472/611: SkillRL: Evolving Agents via Recursive Skill-Augmented Reinf (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 473/611: Why I don’t think AGI is right around the corner (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 474/611: T5Gemma 2: Seeing, Reading, and Understanding Longer (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 475/611: Kimi K2 and when "DeepSeek Moments" become normal (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 476/611: Agentic Reasoning: A Streamlined Framework for Enhancing LLM (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 477/611: The paradox of self-building agents: teaching AI to teach it (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 478/611: Model Merging in Pre-training of Large Language Models (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 479/611: Language Models that Think, Chat Better (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 480/611: GPT-5 and the arc of progress (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 481/611: Tree Attention: Topology-aware Decoding for Long-Context Att (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 482/611: Crossing the Reward Bridge: Expanding RL with Verifiable Rew (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 483/611: Latent Collaboration in Multi-Agent Systems (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 484/611: Checklists Are Better Than Reward Models For Aligning Langua (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 485/611: Less is More: Recursive Reasoning with Tiny Networks (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 486/611: Tracing the thoughts of a large language model (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 487/611: TTRL: Test-Time Reinforcement Learning (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 488/611: Multi-Agent Tool-Integrated Policy Optimization (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 489/611: AgentGym-RL: Training LLM Agents for Long-Horizon Decision M (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 490/611: NextFlow: Unified Sequential Modeling Activates Multimodal U (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 491/611: WebVoyager: Building an End-to-End Web Agent with Large Mult (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 492/611: Continuous Autoregressive Language Models (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 493/611: MindJourney: Test-Time Scaling with World Models for Spatial (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 494/611: ThinkMorph: Emergent Properties in Multimodal Interleaved Ch (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 495/611: How AI Will Transform Accounting: A $100B Opportunity Explai (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 496/611: s1: Simple test-time scaling (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 497/611: Generative Modeling via Drifting (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 498/611: Roadmap: AI systems of action (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 499/611: mHC: Manifold-Constrained Hyper-Connections (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 500/611: OpenAI's o1 using "search" was a PSYOP (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 501/611: The Era of Agentic Organization: Learning to Organize with L (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 502/611: AdaWorld: Learning Adaptable World Models with Latent Action (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 503/611: Evo-Memory: Benchmarking LLM Agent Test-time Learning with S (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 504/611: In-the-Flow Agentic System Optimization for Effective Planni (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 505/611: The Missing Layer of AGI: From Pattern Alchemy to Coordinati (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 506/611: Reinforcement Learning with Rubric Anchors (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 507/611: Crossing the uncanny valley of conversational voice (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 508/611: TrustJudge: Inconsistencies of LLM-as-a-Judge and How to All (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 509/611: AdaptThink: Reasoning Models Can Learn When to Think (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 510/611: GTR: Guided Thought Reinforcement Prevents Thought Collapse  (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 511/611: How I got the highest score on ARC-AGI again swapping Python (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 512/611: RIP to RPA: The Rise of Intelligent Automation | Andreessen  (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 513/611: X-Fusion: Introducing New Modality to Frozen Large Language  (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 514/611: The Illusion of Thinking: (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 515/611: GUI-G1: Understanding R1-Zero-Like Training for Visual Groun (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 516/611: AI leads a service as software paradigm shift - Foundation C (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 517/611: AI Horseless Carriages | koomen.dev (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 518/611: Context Engineering for AI Agents: Lessons from Building Man (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 519/611: The Entropy Mechanism of Reinforcement Learning for Reasonin (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 520/611: AI Agents: A New Architecture for Enterprise Automation | Me (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 521/611: Mixture of States: Routing Token-Level Dynamics for Multimod (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 522/611: Learning to Reason without External Rewards (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 523/611: Consumer AI's tipping point (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 524/611: Reinforcement Learning with Verifiable Rewards Implicitly In (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 525/611: The Free Transformer (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 526/611: Announcing the Agent2Agent Protocol (A2A)- Google Developers (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 527/611: MemAgent: Reshaping Long-Context LLM with Multi-Conv RL-base (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 528/611: Let's (not) just put things in Context: Test-Time Training f (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 529/611: GPT-5's Vision Checkup: a frontier Vision Reasoning Model, b (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 530/611: Part III: Business model invention in the AI era (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 531/611: Deep Researcher with Test-Time Diffusion (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 532/611: The Surprising Effectiveness of Test-Time Training for Few-S (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 533/611: Hybrid Reinforcement: When Reward Is Sparse, It's Better to  (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 534/611: Winning Gold at IMO 2025 with a Model-Agnostic Verification- (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 535/611: START: Self-taught Reasoner with Tools (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 536/611: Emergent Hierarchical Reasoning in LLMs through Reinforcemen (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 537/611: AI’s $600B Question (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 538/611: Optimas: Optimizing Compound AI Systems with Globally Aligne (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 539/611: Climbing the Ladder of Reasoning: What LLMs Can-and Still Ca (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 540/611: The Invisible Leash: Why RLVR May or May Not Escape Its Orig (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 541/611: Memory-R1: Enhancing Large Language Model Agents to Manage a (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 542/611: Nex-N1: Agentic Models Trained via a Unified Ecosystem for L (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 543/611: 5 Thoughts on Kimi K2 Thinking (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 544/611: RM-R1: Reward Modeling as Reasoning (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 545/611: Equipping agents for the real world with Agent Skills \ Anth (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 546/611: Rubrics as Rewards: Reinforcement Learning Beyond Verifiable (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 547/611: Reinforcing General Reasoning without Verifiers (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 548/611: DeepSeek-Prover-V2: Advancing Formal Mathematical Reasoning  (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 549/611: From $f(x)$ and $g(x)$ to $f(g(x))$: LLMs Learn New Skills i (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 550/611: Improving Interactive In-Context Learning from Natural Langu (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 551/611: ToolOrchestra: Elevating Intelligence via Efficient Model an (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 552/611: Maestro: Self-Improving Text-to-Image Generation via Agent O (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 553/611: RLPR: Extrapolating RLVR to General Domains without Verifier (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 554/611: Seeing, Listening, Remembering, and Reasoning: A Multimodal  (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 555/611: MemSearcher: Training LLMs to Reason, Search and Manage Memo (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 556/611: Absolute Zero: Reinforced Self-play Reasoning with Zero Data (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 557/611: Quantum mechanics of inverted potential well -- Hermitian Ha (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 558/611: MemRL: Self-Evolving Agents via Runtime Reinforcement Learni (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 559/611: The Bitter Lesson (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 560/611: Reasoning + RL: A new recipe for AI apps - Foundation Capita (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 561/611: Code execution with MCP: building more efficient AI agents (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 562/611: Memp: Exploring Agent Procedural Memory (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 563/611: Reinforcement Pre-Training (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 564/611: IterResearch: Rethinking Long-Horizon Agents with Interactio (already exists)
+2026-04-08 07:32:41 [info     ] Skipping source 565/611: Chain of Draft: Thinking Faster by Writing Less (already exists)
+2026-04-08 07:32:41 [info     ] Bootstrapping source 566/611: How Hugging Face Is Using E2B to Replicate DeepSeek-R1 — E2B
+2026-04-08 07:32:42 [warning  ] circuit_breaker_rejected       backend_id=claude session_id=wiki_source_01KJSVF89A
+2026-04-08 07:32:42 [debug    ] wiki_index_page_created        page_type=source path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJSVF89A-how-hugging-face-is-using-e2b-to-replicate-deepseek-r1-e2b-blog.md
+2026-04-08 07:32:42 [info     ] wiki_source_created            path=C:\Users\sehyu\Documents\Other\Projects\knowledge_base\wiki\sources\01KJSVF89A-how-hugging-face-is-using-e2b-to-replicate-deepseek-r1-e2b-blog.md source_id=01KJSVF89AC5SD4TVRMZP07V8E
+2026-04-08 07:32:42 [info     ] Skipping source 567/611: RLVE: Scaling Up Reinforcement Learning for Language Models  (already exists)
+2026-04-08 07:32:42 [info     ] Skipping source 568/611: Training Proactive and Personalized LLM Agents (already exists)
+2026-04-08 07:32:42 [info     ] Skipping source 569/611: Failing to Understand the Exponential, Again (already exists)
+2026-04-08 07:32:42 [info     ] Skipping source 570/611: Why Do MLLMs Struggle with Spatial Understanding? A Systemat (already exists)
+2026-04-08 07:32:42 [info     ] Skipping source 571/611: Stateful Agents: The Missing Link in LLM Intelligence  | Let (already exists)
+2026-04-08 07:32:42 [info     ] Skipping source 572/611: The "think" tool: Enabling Claude to stop and think (already exists)
+2026-04-08 07:32:42 [info     ] Skipping source 573/611: Cognition | Don’t Build Multi-Agents (already exists)
+2026-04-08 07:32:42 [info     ] Skipping source 574/611: Demystifying Long Chain-of-Thought Reasoning in LLMs (already exists)
+2026-04-08 07:32:42 [info     ] Skipping source 575/611: Does Reinforcement Learning Really Incentivize Reasoning Cap (already exists)
+2026-04-08 07:32:42 [info     ] Skipping source 576/611: Direct Reasoning Optimization: Constrained RL with Token-Lev (already exists)
+2026-04-08 07:32:42 [info     ] Skipping source 577/611: Stabilizing Reinforcement Learning with LLMs: Formulation an (already exists)
+2026-04-08 07:32:42 [info     ] Skipping source 578/611: OpenPipe | RL For Agents (already exists)
+2026-04-08 07:32:42 [info     ] Skipping source 579/611: PathRAG: Pruning Graph-based Retrieval Augmented Generation  (already exists)
+2026-04-08 07:32:42 [info     ] Skipping source 580/611: Reasoning LLMs are Wandering Solution Explorers (already exists)
+2026-04-08 07:32:42 [info     ] Skipping source 581/611: How a Gemma model helped discover a new potential cancer the (already exists)
+2026-04-08 07:32:42 [info     ] Skipping source 582/611: Executable Code Actions Elicit Better LLM Agents (already exists)
+2026-04-08 07:32:42 [info     ] Skipping source 583/611: MemInsight: Autonomous Memory Augmentation for LLM Agents (already exists)
+2026-04-08 07:32:42 [info     ] Skipping source 584/611: Monet: Reasoning in Latent Visual Space Beyond Images and La (already exists)
+2026-04-08 07:32:42 [info     ] Skipping source 585/611: Mitigating Overthinking through Reasoning Shaping (already exists)
+2026-04-08 07:32:42 [info     ] Skipping source 586/611: Agent-R1: Training Powerful LLM Agents with End-to-End Reinf (already exists)
+2026-04-08 07:32:42 [info     ] Skipping source 587/611: Advances in Generative AI Latent Space Reasoning: Comparing  (already exists)
+2026-04-08 07:32:42 [info     ] Skipping source 588/611: Reasoning to Learn from Latent Thoughts (already exists)
+2026-04-08 07:32:42 [info     ] Skipping source 589/611: FlowRL: Matching Reward Distributions for LLM Reasoning (already exists)
+2026-04-08 07:32:42 [info     ] Skipping source 590/611: ReSearch: Learning to Reason with Search for LLMs via Reinfo (already exists)
+2026-04-08 07:32:42 [info     ] Skipping source 591/611: Real-Time Reasoning Agents in Evolving Environments (already exists)
+2026-04-08 07:32:42 [info     ] Skipping source 592/611: Part IV: Ten principles for building strong vertical AI busi (already exists)
+2026-04-08 07:32:42 [info     ] Skipping source 593/611: Reasoning with Exploration: An Entropy Perspective (already exists)
+2026-04-08 07:32:42 [info     ] Skipping source 594/611: What Is Power Retention? - Manifest AI (already exists)
+2026-04-08 07:32:42 [info     ] Skipping source 595/611: A Law Reasoning Benchmark for LLM with Tree-Organized Struct (already exists)
+2026-04-08 07:32:42 [info     ] Skipping source 596/611: AgentEvolver: Towards Efficient Self-Evolving Agent System (already exists)
+2026-04-08 07:32:42 [info     ] Skipping source 597/611: LightMem: Lightweight and Efficient Memory-Augmented Generat (already exists)
+2026-04-08 07:32:42 [info     ] Skipping source 598/611: Visual-RFT: Visual Reinforcement Fine-Tuning (already exists)
+2026-04-08 07:32:42 [info     ] Skipping source 599/611: Simulating Environments with Reasoning Models for Agent Trai (already exists)
+2026-04-08 07:32:42 [info     ] Skipping source 600/611: Vertical SaaS: Now with AI Inside | Andreessen Horowitz (already exists)
+2026-04-08 07:32:42 [info     ] Skipping source 601/611: Scaling Test-Time Compute: A New Paradigm in LLM Performance (already exists)
+2026-04-08 07:32:42 [info     ] Skipping source 602/611: RLAD: Training LLMs to Discover Abstractions for Solving Rea (already exists)
+2026-04-08 07:32:42 [info     ] Skipping source 603/611: Base Models Know How to Reason, Thinking Models Learn When (already exists)
+2026-04-08 07:32:42 [info     ] Skipping source 604/611: In Prospect and Retrospect: Reflective Memory Management for (already exists)
+2026-04-08 07:32:42 [info     ] Skipping source 605/611: ThetaEvolve: Test-time Learning on Open Problems (already exists)
+2026-04-08 07:32:42 [info     ] Skipping source 606/611: Downscaling Intelligence: Exploring Perception and Reasoning (already exists)
+2026-04-08 07:32:42 [info     ] Skipping source 607/611: Interleaved Thinking Unlocks Reliable MiniMax-M2 Agentic Cap (already exists)
+2026-04-08 07:32:42 [info     ] Skipping source 608/611: Compute as Teacher: Turning Inference Compute Into Reference (already exists)
+2026-04-08 07:32:42 [info     ] Skipping source 609/611: Video: The $10 Trillion AI Revolution (already exists)
+2026-04-08 07:32:42 [info     ] Skipping source 610/611: Report: autonomous agents (already exists)
+2026-04-08 07:32:42 [info     ] Skipping source 611/611: Sarah Tavel's Newsletter | Substack (already exists)
+2026-04-08 07:32:42 [info     ] bootstrap_sources_complete     created=611
+2026-04-08 07:32:42 [info     ] bootstrap_timelines_start      total=80
+2026-04-08 07:32:42 [info     ] Populating timeline 1/80: adaptive_computation (27 sources)
+2026-04-08 07:32:42 [info     ] Populating timeline 2/80: agent_evaluation (22 sources)
+2026-04-08 07:32:42 [info     ] Populating timeline 3/80: agent_memory_systems (41 sources)
+2026-04-08 07:32:42 [info     ] Populating timeline 4/80: agent_self_evolution (32 sources)
+2026-04-08 07:32:42 [info     ] Populating timeline 5/80: agent_systems (186 sources)
+2026-04-08 07:32:42 [info     ] Populating timeline 6/80: ai_business_and_economics (84 sources)
+2026-04-08 07:32:42 [info     ] Populating timeline 7/80: ai_for_scientific_discovery (16 sources)
+2026-04-08 07:32:42 [info     ] Populating timeline 8/80: ai_governance (13 sources)
+2026-04-08 07:32:42 [info     ] Populating timeline 9/80: ai_market_dynamics (79 sources)
+2026-04-08 07:32:42 [info     ] Populating timeline 10/80: ai_pricing_and_business_models (29 sources)
+2026-04-08 07:32:42 [info     ] Populating timeline 11/80: ai_software_engineering (4 sources)
+2026-04-08 07:32:42 [info     ] Populating timeline 12/80: alignment_and_safety (48 sources)
+2026-04-08 07:32:43 [info     ] Populating timeline 13/80: alignment_methods (16 sources)
+2026-04-08 07:32:43 [info     ] Populating timeline 14/80: audio_and_speech_models (8 sources)
+2026-04-08 07:32:43 [info     ] Populating timeline 15/80: benchmark_design (46 sources)
+2026-04-08 07:32:43 [info     ] Populating timeline 16/80: chain_of_thought (95 sources)
+2026-04-08 07:32:43 [info     ] Populating timeline 17/80: code_and_software_ai (22 sources)
+2026-04-08 07:32:43 [info     ] Populating timeline 18/80: code_generation (19 sources)
+2026-04-08 07:32:43 [info     ] Populating timeline 19/80: compute_and_hardware (14 sources)
+2026-04-08 07:32:43 [info     ] Populating timeline 20/80: computer_use_and_gui_agents (23 sources)
+2026-04-08 07:32:43 [info     ] Populating timeline 21/80: context_engineering (21 sources)
+2026-04-08 07:32:43 [info     ] Populating timeline 22/80: continual_learning (12 sources)
+2026-04-08 07:32:43 [info     ] Populating timeline 23/80: creative_content_generation (6 sources)
+2026-04-08 07:32:43 [info     ] Populating timeline 24/80: evaluation_and_benchmarks (63 sources)
+2026-04-08 07:32:43 [info     ] Populating timeline 25/80: finetuning_and_distillation (61 sources)
+2026-04-08 07:32:43 [info     ] Populating timeline 26/80: frontier_lab_competition (52 sources)
+2026-04-08 07:32:43 [info     ] Populating timeline 27/80: generative_media (53 sources)
+2026-04-08 07:32:43 [info     ] Populating timeline 28/80: hallucination_and_reliability (22 sources)
+2026-04-08 07:32:43 [info     ] Populating timeline 29/80: image_generation_models (23 sources)
+2026-04-08 07:32:43 [info     ] Populating timeline 30/80: in_context_and_meta_learning (15 sources)
+2026-04-08 07:32:43 [info     ] Populating timeline 31/80: interpretability (21 sources)
+2026-04-08 07:32:43 [info     ] Populating timeline 32/80: knowledge_and_memory (72 sources)
+2026-04-08 07:32:43 [info     ] Populating timeline 33/80: latent_reasoning (22 sources)
+2026-04-08 07:32:43 [info     ] Populating timeline 34/80: long_context_and_attention (32 sources)
+2026-04-08 07:32:43 [info     ] Populating timeline 35/80: mathematical_and_formal_reasoning (55 sources)
+2026-04-08 07:32:43 [info     ] Populating timeline 36/80: mechanistic_interpretability (11 sources)
+2026-04-08 07:32:43 [info     ] Populating timeline 37/80: medical_and_biology_ai (17 sources)
+2026-04-08 07:32:43 [info     ] Populating timeline 44/80: model_architecture (99 sources)
+2026-04-08 07:32:43 [info     ] Populating timeline 45/80: model_behavior_analysis (12 sources)
+2026-04-08 07:32:43 [info     ] Populating timeline 46/80: model_commoditization_and_open_source (22 sources)
+2026-04-08 07:32:43 [info     ] Populating timeline 47/80: multi_agent_coordination (41 sources)
+2026-04-08 07:32:43 [info     ] Populating timeline 48/80: multimodal_models (67 sources)
+2026-04-08 07:32:44 [info     ] Populating timeline 49/80: policy_optimization (78 sources)
+2026-04-08 07:32:44 [info     ] Populating timeline 50/80: post_training_methods (117 sources)
+2026-04-08 07:32:44 [info     ] Populating timeline 51/80: pretraining_and_scaling (91 sources)
+2026-04-08 07:32:44 [info     ] Populating timeline 52/80: pretraining_data (18 sources)
+2026-04-08 07:32:44 [info     ] Populating timeline 53/80: reasoning_and_planning (215 sources)
+2026-04-08 07:32:44 [info     ] Populating timeline 54/80: reinforcement_learning (209 sources)
+2026-04-08 07:32:44 [info     ] Populating timeline 55/80: representation_learning (22 sources)
+2026-04-08 07:32:44 [info     ] Populating timeline 56/80: retrieval_augmented_generation (37 sources)
+2026-04-08 07:32:44 [info     ] Populating timeline 57/80: reward_modeling (64 sources)
+2026-04-08 07:32:44 [info     ] Populating timeline 58/80: rl_for_llm_reasoning (169 sources)
+2026-04-08 07:32:44 [info     ] Populating timeline 59/80: rl_theory_and_dynamics (25 sources)
+2026-04-08 07:32:44 [info     ] Populating timeline 60/80: robotics_and_embodied_ai (44 sources)
+2026-04-08 07:32:44 [info     ] Populating timeline 61/80: robot_learning (29 sources)
+2026-04-08 07:32:44 [info     ] Populating timeline 62/80: scaling_laws (61 sources)
+2026-04-08 07:32:44 [info     ] Populating timeline 63/80: scientific_and_medical_ai (28 sources)
+2026-04-08 07:32:44 [info     ] Populating timeline 64/80: search_and_tree_reasoning (26 sources)
+2026-04-08 07:32:44 [info     ] Populating timeline 65/80: software_engineering_agents (52 sources)
+2026-04-08 07:32:44 [info     ] Populating timeline 66/80: spatial_and_3d_intelligence (11 sources)
+2026-04-08 07:32:44 [info     ] Populating timeline 67/80: startup_and_investment (71 sources)
+2026-04-08 07:32:44 [info     ] Populating timeline 68/80: startup_formation_and_gtm (48 sources)
+2026-04-08 07:32:44 [info     ] Populating timeline 69/80: synthetic_data_generation (32 sources)
+2026-04-08 07:32:44 [info     ] Populating timeline 71/80: test_time_compute_scaling (101 sources)
+2026-04-08 07:32:44 [info     ] Populating timeline 72/80: test_time_learning (24 sources)
+2026-04-08 07:32:44 [info     ] Populating timeline 73/80: tool_use_and_agent_protocols (67 sources)
+2026-04-08 07:32:44 [info     ] Populating timeline 74/80: transformer_alternatives (34 sources)
+2026-04-08 07:32:44 [info     ] Populating timeline 75/80: unified_multimodal_models (32 sources)
+2026-04-08 07:32:44 [info     ] Populating timeline 76/80: vc_and_startup_ecosystem (45 sources)
+2026-04-08 07:32:44 [info     ] Populating timeline 77/80: vertical_ai_and_saas_disruption (75 sources)
+2026-04-08 07:32:44 [info     ] Populating timeline 78/80: video_and_world_models (36 sources)
+2026-04-08 07:32:44 [info     ] Populating timeline 79/80: vision_language_action_models (25 sources)
+2026-04-08 07:32:44 [info     ] Populating timeline 80/80: vision_language_models (38 sources)
+2026-04-08 07:32:45 [info     ] bootstrap_timelines_complete   entries=0
+2026-04-08 07:32:51 [info     ] wiki_index_rebuilt             counts={'entity': 183, 'source': 613, 'theme': 78, 'unknown': 2}
+2026-04-08 07:32:51 [info     ] bootstrap_index_rebuilt        counts={'entity': 183, 'source': 613, 'theme': 78, 'unknown': 2}
+2026-04-08 07:32:51 [info     ] bootstrap_complete             elapsed_s=5551.7 entities=0 errors=0 sources=611 themes=0 timeline_entries=0
+{
+  "themes": 0,
+  "sources": 611,
+  "entities": 0,
+  "timeline_entries": 0,
+  "errors": []
+}
+[2026-04-08 07:32:53] Bootstrap complete. Total source pages: 614

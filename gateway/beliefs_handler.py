@@ -351,6 +351,18 @@ def _handle_add(statement: str, executor, on_progress, log) -> str:
     log.info("belief_inserted", belief_id=belief_id, belief_type=belief_type,
              theme=domain_theme_id, confidence=confidence)
 
+    # --- Wiki page creation (best-effort) ---
+    _wiki_updated = False
+    try:
+        from retrieval.wiki_writer import file_belief_to_wiki
+        file_belief_to_wiki(
+            belief_id, statement, confidence, belief_type,
+            domain_theme_id, evidence_for, evidence_against,
+        )
+        _wiki_updated = True
+    except Exception:
+        log.warning("belief_wiki_create_failed", belief_id=belief_id, exc_info=True)
+
     # 6. Format response
     theme_name = domain_theme_id or "None"
     if domain_theme_id:
@@ -374,6 +386,9 @@ def _handle_add(statement: str, executor, on_progress, log) -> str:
             "Consider creating anticipations to track it: "
             "`/beliefs synthesis` on its theme to explore implications."
         )
+
+    if _wiki_updated:
+        response_lines.append("\n_Wiki updated: beliefs page filed._")
 
     return "\n".join(response_lines)
 
@@ -413,6 +428,19 @@ def _handle_update(args: str, on_progress, log) -> str:
     if not updated:
         return f"Failed to update belief `{belief_id}`."
 
+    # --- Wiki page update (best-effort) ---
+    _wiki_updated = False
+    try:
+        from retrieval.wiki_writer import file_belief_to_wiki
+        file_belief_to_wiki(
+            belief_id, current["claim"], new_conf,
+            current.get("belief_type"), current.get("domain_theme_id"),
+            is_update=True, trigger=trigger,
+        )
+        _wiki_updated = True
+    except Exception:
+        log.warning("belief_wiki_update_failed", belief_id=belief_id, exc_info=True)
+
     direction = "↑" if new_conf > old_conf else "↓" if new_conf < old_conf else "→"
     response = (
         f"**Belief updated** `{belief_id}`\n\n"
@@ -425,6 +453,8 @@ def _handle_update(args: str, on_progress, log) -> str:
         response += "\n\n⚠ Low confidence — consider archiving with `/beliefs archive`."
     if new_conf > 0.8 and old_conf <= 0.8:
         response += "\n\n💡 High confidence reached — check for counter-evidence gaps."
+    if _wiki_updated:
+        response += "\n\n_Wiki updated: belief page updated._"
 
     return response
 
@@ -602,11 +632,13 @@ def _handle_synthesis(topic: str, executor, on_progress, log) -> str:
         for b in beliefs
     )
 
-    theme_context = "\n".join(
-        f"- **{s['theme_name']}** (velocity: {s.get('velocity', '?')}): "
-        f"{(s.get('summary') or 'no summary')[:200]}"
-        for s in ctx.get("state_summaries", [])
-    ) or "(no theme context)"
+    theme_ids = list(set(s.get("theme_id") for s in ctx.get("state_summaries", []) if s.get("theme_id")))
+    if theme_ids:
+        from retrieval.wiki_retrieval import gather_wiki_context, format_wiki_context_block
+        wiki_ctx = gather_wiki_context(theme_ids=theme_ids[:5])
+        theme_context = format_wiki_context_block(wiki_ctx, header="Theme Context", max_chars_per_theme=2000) or "(no theme context)"
+    else:
+        theme_context = "(no theme context)"
 
     breakthroughs_text = "\n".join(
         f"- {b.get('description', '?')} ({b.get('theme_name', '?')})"

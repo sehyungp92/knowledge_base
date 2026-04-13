@@ -89,6 +89,21 @@ def _landscape_for_theme(theme_query: str, on_progress, log) -> str:
             return f"Theme not found: `{theme_query}`"
 
     theme_id = theme["id"]
+
+    # Try wiki-first: if theme page is fresh, serve from wiki
+    try:
+        from retrieval.wiki_retrieval import gather_wiki_context
+        wctx = gather_wiki_context(theme_ids=[theme_id], max_pages=1)
+        staleness = wctx.freshness.get(theme_id, 1.0)
+        if wctx.theme_narratives.get(theme_id) and staleness < 0.6:
+            log.info("landscape_wiki_hit", theme_id=theme_id, staleness=staleness)
+            wiki_body = wctx.theme_narratives[theme_id]
+            header = f"**{theme.get('name', theme_query)}**: State of AI *(from wiki, freshness: {staleness:.2f})*\n"
+            return header + "\n" + wiki_body
+    except Exception:
+        log.debug("landscape_wiki_fallback", theme_id=theme_id, exc_info=True)
+
+    # DB fallback: original path
     state = get_theme_state(theme_id)
     t = state.get("theme") or {}
     lines = [f"**{t.get('name', theme_query)}**: State of AI\n"]

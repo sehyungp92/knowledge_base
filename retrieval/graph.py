@@ -52,41 +52,6 @@ class GraphRetriever:
             """, (source_id, source_id, min_overlap)).fetchall()
         return rows
 
-    def two_hop_via_claims(self, source_id: str) -> list[dict]:
-        """Find sources connected via claim relationships.
-
-        The legacy `claim_edges` table was removed from the main schema, so this
-        query now degrades to an empty result if that table is unavailable.
-        """
-        with self._get_conn() as conn:
-            try:
-                rows = conn.execute("""
-                    SELECT DISTINCT s2.id, s2.title, ce.edge_type,
-                           c1.claim_text AS our_claim,
-                           c2.claim_text AS their_claim
-                    FROM claims c1
-                    JOIN claim_edges ce ON c1.id = ce.claim_a
-                    JOIN claims c2 ON ce.claim_b = c2.id
-                    JOIN sources s2 ON c2.source_id = s2.id
-                    WHERE c1.source_id = %s
-
-                    UNION
-
-                    SELECT DISTINCT s2.id, s2.title, ce.edge_type,
-                           c2.claim_text AS our_claim,
-                           c1.claim_text AS their_claim
-                    FROM claims c1
-                    JOIN claim_edges ce ON c1.id = ce.claim_b
-                    JOIN claims c2 ON ce.claim_a = c2.id
-                    JOIN sources s2 ON c2.source_id = s2.id
-                    WHERE c1.source_id = %s
-                    ORDER BY title ASC
-                """, (source_id, source_id)).fetchall()
-                return rows
-            except Exception:
-                logger.debug("Claim-edge traversal unavailable", exc_info=True)
-                return []
-
     def explain_path(self, source_a: str, source_b: str, max_hops: int = 3) -> list[dict]:
         """Find and explain paths between two sources using recursive CTE."""
         with self._get_conn() as conn:

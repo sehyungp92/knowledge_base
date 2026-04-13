@@ -532,6 +532,21 @@ class TournamentPipeline:
             elif ant_text:
                 context["synthesis"] = f"**Open Anticipations:**\n{ant_text}"
 
+            # Enrich with wiki landscape narratives (pre-compiled theme context)
+            try:
+                from retrieval.wiki_retrieval import gather_wiki_context, format_wiki_context_block
+                wiki_ctx = gather_wiki_context(theme_ids=theme_ids)
+                if wiki_ctx.theme_narratives:
+                    wiki_text = format_wiki_context_block(
+                        wiki_ctx,
+                        header="Theme Landscape Narratives",
+                        max_chars_per_theme=2000,
+                    )
+                    if wiki_text:
+                        context["_all"] = wiki_text
+            except Exception:
+                logger.debug("wiki_context_for_tournament_failed", exc_info=True)
+
             return context if context else None
 
         except Exception:

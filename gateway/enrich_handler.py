@@ -203,6 +203,19 @@ def _load_source_context(source_id: str, source_dir: Path, log) -> dict:
         except Exception:
             pass
 
+    # Wiki theme background for richer enrichment context
+    theme_ids = [t["id"] for t in ctx.get("themes", [])]
+    if theme_ids:
+        try:
+            from retrieval.wiki_retrieval import gather_wiki_context, format_wiki_context_block
+            ctx["wiki_theme_background"] = format_wiki_context_block(
+                gather_wiki_context(theme_ids=theme_ids[:3]),
+                header="Theme Background",
+                max_chars_per_theme=2000,
+            )
+        except Exception:
+            log.debug("enrich_wiki_background_failed", exc_info=True)
+
         try:
             ctx["implications"] = conn.execute(
                 """SELECT cti.*, ts.name AS source_theme, tt.name AS target_theme
@@ -576,6 +589,11 @@ def _process_enrichment(
         user_input=user_input,
     )
 
+    # Inject wiki theme background for richer context
+    theme_bg = ctx.get("wiki_theme_background", "")
+    if theme_bg:
+        prompt = f"## Thematic Background\n{theme_bg}\n\n{prompt}"
+
     try:
         result = executor.run_raw(
             prompt,
@@ -598,6 +616,17 @@ def _process_enrichment(
         source_id, source_dir, ctx, parsed, user_input,
         valid_theme_ids, log,
     )
+
+    # --- Wiki updates (best-effort) ---
+    _wiki_themes_updated = []
+    try:
+        from retrieval.wiki_writer import file_enrichment_to_wiki
+        wiki_stats = file_enrichment_to_wiki(parsed)
+        _wiki_themes_updated = wiki_stats.get("themes_updated", [])
+        if _wiki_themes_updated:
+            log.info("enrich_wiki_updated", **wiki_stats)
+    except Exception:
+        log.debug("enrich_wiki_update_failed", exc_info=True)
 
     elapsed_note = parsed.get("summary", "")
     response_lines = [f"**Enrichment applied to \"{title}\"**\n"]
@@ -637,6 +666,8 @@ def _process_enrichment(
             response_lines.append(f"- {d}")
 
     response_lines.append(f"\n**Attribution:** All changes recorded as `user_enrichment`")
+    if _wiki_themes_updated:
+        response_lines.append(f"\n_Wiki updated: {len(_wiki_themes_updated)} theme page(s) updated._")
 
     return "\n".join(response_lines)
 
